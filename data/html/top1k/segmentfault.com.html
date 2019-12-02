@@ -1,0 +1,755 @@
+
+<!DOCTYPE HTML><html lang="zh-CN"><head><meta charset="UTF-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/><meta name="renderer" content="webkit"/><meta property="qc:admins" content="15317273575564615446375"/><meta property="og:image" content="https://cdn.segmentfault.com/v-5dcd2518/global/img/touch-icon.png"/><meta name="viewport"
+              content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/><meta name="alexaVerifyID" content="LkzCRJ7rPEUwt6fVey2vhxiw1vQ"/><meta name="apple-itunes-app" content="app-id=958101793, app-argument="><title>SegmentFault 思否</title><meta name="description" content="SegmentFault 思否是中国领先的新一代开发者社区和专业的技术媒体。我们为中文开发者提供纯粹、高质的技术交流平台以及最前沿的技术行业动态，帮助更多的开发者获得认知和能力的提升。自社区上线以来在广大开发者群体中享有极高的口碑及影响力，以技术问答、技术专栏、技术课程、技术资讯为核心的产品形态，目前已经覆盖和服务了超过 300 万开发者，同时 SegmentFault 思否团队也是中国区最大的黑客马拉松 Hackathon 创新力赛事组织者。 腾讯、阿里、百度、美团、京东、滴滴、360等上千个技术团队已经入驻思否社区，我们也欢迎热爱技术的你一起加入交流与学习。"/><meta name="keywords" content="SegmentFault,思否,开发者社区,技术新闻资讯,技术问答社区,技术博客专栏,技术笔记,技术号,技术圈,技术直播,在线编程,开源社区,开源项目,程序员,云计算,AI,区块链,前端,后端,小程序,安全,运维,软件开发,编程,cto,javascript,php,python,java,ios,android"/><link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="SegmentFault"/><link rel="shortcut icon" href="https://cdn.segmentfault.com/v-5dcd2518/global/img/favicon.ico"/><link rel="apple-touch-icon" href="https://cdn.segmentfault.com/v-5dcd2518/global/img/touch-icon.png"><meta name="msapplication-TileColor" content="#009a61"/><meta name="msapplication-square150x150logo" content="https://cdn.segmentfault.com/v-5dcd2518/global/img/touch-icon.png"/><meta name="baidu_union_verify" content="bcf7fd80dca60d53d46d5b46e1b990ca"><link rel="alternate" type="application/atom+xml" title="SegmentFault 最新问题" href="/feeds/questions"><link rel="alternate" type="application/atom+xml" title="SegmentFault 最新文章" href="/feeds/blogs"><link rel="stylesheet" href="https://cdn.segmentfault.com/v-5dcd2518/global/css/global.css"/><link rel="stylesheet" href="https://cdn.segmentfault.com/v-5dcd2518/index/css/index.css"/><link rel="stylesheet" href="https://cdn.segmentfault.com/v-5dcd2518/global/css/responsive.css"/><script>
+var _oa = [], OA_google = true;
+
+function OA_script(src, cb) {
+    var s = document.createElement('script'), m = document.getElementsByTagName('script')[0];
+    
+    if (cb) {
+        s.onload = cb;
+    }
+    
+    s.async = 1;
+    s.defer = 1;
+    s.src = src;
+    m.parentNode.insertBefore(s, m);
+}
+
+function OA_show(name) {
+    _oa.push(name);
+    document.write('<div id="OA_holder_' + name + '"></div>');
+}
+
+OA_script('https://sponsor.segmentfault.com/spcjs.php?id=1&block=1&repu=0&v=5dcd2518');
+</script></head><body data-mod="index"
+    class="index-index "><!--[if lt IE 9]><div class="alert alert-danger topframe" role="alert">你的浏览器实在<strong>太太太太太太旧了</strong>，放学别走，升级完浏览器再说 <a target="_blank" class="alert-link" href="http://browsehappy.com">立即升级</a></div><![endif]--><img id="icon4weChat" style="height: 0;width: 0;" data-src="https://cdn.segmentfault.com/v-5dcd2518/global/img/touch-icon-512.png"><div id="gridMapHoverBox" style="position:absolute; border: 1px solid #009a61; z-index:99; font-size: 10px; background:#fff"></div><div class="global-nav sf-header sf-header--index"><div class="bottom-nav visible-xs visible-sm "><div class="opts"><a class="opts-group active" href="/"><i class="fa fa-home" aria-hidden="true"></i><span>首页</span></a><a class="opts-group " href="/questions"><i class="fa fa-comments" aria-hidden="true"></i><span>问答</span></a><a class="opts-group " href="/blogs"><i class="fa fa-pencil-square" aria-hidden="true"></i><span>专栏</span></a><a class="opts-group " href="/lives"><i class="fa fa-play-circle" aria-hidden="true"></i><span>讲堂</span></a><div class="opts-group"><div class="btn-group dropup"><i class="fa fa-bars dropdown hoverDropdown" data-toggle="dropdown" aria-hidden="true"><span>更多</span></i><ul class="dropdown-menu"><li><a href="/jobs">职位</a></li><li><a href="/events">活动</a></li><li><a href="/tags">标签</a></li><li><a href="/badges">徽章</a></li></ul></div></div></div></div><nav class="container nav"><div class="visible-xs visible-sm header-response"><a href="/search" style="display:block"><i class="fa fa-search" aria-hidden="true"></i></a><div class="sf-header__logo sf-header__logo--response"><h1><a href="/" style="height:24px; background-size: auto 24px;"></a></h1></div><a href="/user/login" class="pull-right login-btn"><i class="fa fa-user" aria-hidden="true"></i></a></div><script>
+mobileScroll(
+    function(direction) { 
+        try {
+            if (direction === 'down') {
+                document.querySelector('.bottom-nav').classList.add('hidden')
+            } else {
+                document.querySelector('.bottom-nav').classList.remove('hidden')
+            }
+        } catch(err) {}
+    }
+);    
+function mobileScroll( fn ) {
+    var beforeScrollTop = document.documentElement.scrollTop || document.body.scrollTop,
+        fn = fn || function() {};
+    window.addEventListener("scroll", function() {
+        var afterScrollTop = document.documentElement.scrollTop || document.body.scrollTop,
+            delta = afterScrollTop - beforeScrollTop;
+        if( delta === 0 ) return false;
+        fn( delta > 0 ? "down" : "up" );
+        beforeScrollTop = afterScrollTop;
+    }, false);
+}
+</script><div class="row hidden-xs hidden-sm"><div class="col-sm-8 col-md-9 col-lg-9"><div class="sf-header__logo"><h1><a href="/">SegmentFault</a></h1></div><div><ul class="menu list-inline pull-left hidden-xs"><li class="menu__item"><a href="/" class="active-nav">首页</a></li><li class="menu__item"><a href="/questions" class="">问答</a></li><li class="menu__item"><a href="/blogs" class="">专栏</a></li><li class="menu__item"><a class=" " href="/lives" class="">课程</a></li><li class="menu__item"><a href="/events" class="">活动</a></li><li class="menu__item menu__item--more dropdown"><a href="##" class="dropdown-toggle dropdownBtn" data-toggle="dropdown">
+                                        发现<i class="fa fa-caret-down" style="font-size: 14px;margin-left: 5px;" aria-hidden="true"></i></a><div class="dropdown-block hidden"><ul class="dropdown-content-menu"><li><a href="/groups">圈子</a></li><li><a href="/tags">标签</a></li><li><a href="/groups?tab=jobs">酷工作</a></li><li><a href="/users">排行榜</a></li><li><a href="/badges">徽章</a></li><li><a href="/notes">笔记</a></li><li><a href="https://docs.segmentfault.com" target="_blank">开发手册<i style="line-height: 20px;font-size: 12px;color: #F5A623;" class="ml10 fa fa-external-link-square"></i></a></li><li><a href="https://business.segmentfault.com/ads?utm_source=sf-header" target="_blank">广告投放<i style="line-height: 20px;font-size: 12px;color: #F5A623;" class="ml10 fa fa-external-link-square"></i></a></li></ul></div></li><li class="menu__item visible-sm-inline-block"><a href="/search"><span class="glyphicon glyphicon-search" style="vertical-align: middle;"></span></a></li></ul><form action="/search" class="header-search  hidden-sm hidden-xs pull-right" ><button class="btn btn-link"><span class="sr-only">搜索</span><span class="glyphicon glyphicon-search"></span></button><input id="searchBox" name="q" type="text"  placeholder="搜索问题或关键字" class="form-control" value="" /></form></div></div><div class="col-sm-4 col-md-3 col-lg-3 text-right"><ul class="opts list-inline hidden-xs"><li class="opts__item"><a href="/user/login" class="SFRegister btn-signin" style="margin-bottom:2px;">立即登录</a><a href="/user/register" class="SFLogin ml10 btn-signup"
+                                       onClick="_gaq.push(['_trackEvent', 'Button', 'Click', 'Login']);">免费注册</a></li></ul></div></div></nav></div>
+<div class="wrapper">
+      <div id="loginBanner"  class="hidden-sm hidden-xs loginBanner">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-7">
+                <h1 class="title">在 SegmentFault，学习技能、解决问题</h1>
+                <p class="desc">每个月，我们帮助 1000 万的开发者解决各种各样的技术问题。并助力他们在技术能力、职业生涯、影响力上获得提升。</p>
+            </div>
+            <div class="col-lg-3 col-lg-offset-3 col-md-4 col-md-offset-1">
+                <form class="register-form clearfix" action="/api/user/phone/register">
+
+                    
+                    <a href="/user/register" class="SFLogin btn btn-lg btn-primary mr15">免费注册</a>
+                    <a href="/user/login" class="SFRegister btn btn-lg btn-primary">立即登录</a>
+                </form>
+            </div>
+        </div>
+    </div>
+        <i class="fa fa-times-circle" aria-hidden="true"></i>
+    </div>
+
+    <div class="container mt30">
+    <div class="row">
+      <div class="col-md-2 left">
+        <div class="router-box">
+          <a class="router-box-item active" href="/">
+            <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+            <span class="name">为你推荐</span>
+          </a>
+          <a class="router-box-item " href="/hottest">
+            <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+            <span class="name">近期热门</span>
+          </a>
+          <a class="router-box-item " href="/newest">
+            <i class="fa fa-globe" aria-hidden="true"></i>
+            <span class="name">最新内容</span>
+          </a>
+          <a class="router-box-item showChannels visible-xs-block" href="/">
+            <i class="fa fa-server" aria-hidden="true"></i>
+            <span class="name">技术频道</span>
+          </a>
+        </div>
+
+        <div class="tech-square hidden-xs mb15">
+          <h5 class="tech-square-title mt0 mb15">极术社区</h5>
+          <a class="tech-square-item " href="https://aijishu.com/channel/ai" target="_blank">
+            <span class="tech-square-item-icon">
+              <img src="https://avatar-static.segmentfault.com/194/030/1940304143-5a72802e507db_small">
+            </span>
+            <span>人工智能</span>
+          </a>
+          <a class="tech-square-item " href="https://aijishu.com/channel/server" target="_blank">
+            <span class="tech-square-item-icon">
+              <img src="https://avatar-static.segmentfault.com/861/000/861000683-5d7ef19e16178_small">
+            </span>
+            <span>Arm in Cloud</span>
+          </a>
+        </div>
+
+        <div class="tech-square hidden-xs">
+          <h5 class="tech-square-title mt0 mb15">技术频道</h5>
+        </div>
+      </div>
+
+      <div class="col-md-7 middle">
+        
+        <div class="ad-wrapper" id="mm_124884735_33830642_184038395">
+          <div class="loading">
+            <i class="fa fa-spinner fa-spin fa-2x" aria-hidden="true"></i>
+          </div>
+          <div id="carousel-example-generic" class="carousel slide mb5" data-ride="carousel">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+              </ol>
+              <div class="carousel-inner" role="listbox">
+              </div>
+            </div>
+            <div class="mask"></div>
+          </div>
+        </div>
+        
+        
+                    <div class="feed-option">
+                <h5>为你推荐</h5>
+            </div>
+        
+        <div class="alert alert-info mt15 mb0 hidden" role="alert" id="notice-update"></div>
+
+                <div class="news-list"><div class="news-item stream__item clearfix mt15" data-id="1190000021167250"><div class="news__item-info clearfix"><a href="/a/1190000021167250" class="news-img" style="background-image:url(https://segmentfault.com/img/remote/1460000021167254)"></a><a target="_blank" href="/a/1190000021167250"><div class="mb5 mt5"><h4 class="news__item-title mt0">前端模块化的今生</h4></div><div class="article-excerpt">
+                      众所周知，早期 JavaScript 原生并不支持模块化，直到 2015 年，TC39 发布 ES6，其中有一个规范就是 ES modules（为了方便表述，后面统一简称 ESM）。但是在 ES6 规范提出前，就已经存在了一些模块化方案，比如 C...
+                    </div></a><div class="news__item-meta"><span class="pr20 votes-operation " data-id="1190000021167250" data-type="article"><span class="wrap"><i class="fa fa-thumbs-up "></i></span><span class="votes-num  ">7</span><span class="dot ">·</span><span class="votes-word">赞</span></span><span class="bookmark-operation pr20 hidden" data-id="1190000021167250" data-type="article"><i class="fa fa-bookmark pr5"></i><span class="bookmark-word">收藏</span></span><span class="author pr20"><a href="/u/shenfq">Shenfq</a><span class="dot">·</span>今天 10:38 </span></div></div></div><div class="news-item stream__item clearfix mt15" data-id="1190000021158736"><div class="news__item-info clearfix"><a href="/a/1190000021158736" class="news-img" style="background-image:url(https://segmentfault.com/img/remote/1460000021158739)"></a><a target="_blank" href="/a/1190000021158736"><div class="mb5 mt5"><h4 class="news__item-title mt0">一文说清「VirtualDOM」的含义与实现</h4></div><div class="article-excerpt">
+                      随着 React 的兴起，Virtual DOM 的原理和实现也开始出现在各大厂面试和社区的文章中。其实这种做法早在 d3.js 中就有实现，是 react 生态的快速建立让它正式进入了广大开发者的视角。
+                    </div></a><div class="news__item-meta"><span class="pr20 votes-operation " data-id="1190000021158736" data-type="article"><span class="wrap"><i class="fa fa-thumbs-up "></i></span><span class="votes-num  ">12</span><span class="dot ">·</span><span class="votes-word">赞</span></span><span class="bookmark-operation pr20 hidden" data-id="1190000021158736" data-type="article"><i class="fa fa-bookmark pr5"></i><span class="bookmark-word">收藏</span></span><span class="author pr20"><a href="/u/godbmw">心谭</a><span class="dot">·</span>11月30日</span></div></div></div><div class="news-item stream__item clearfix mt15" data-id="1190000021154451"><div class="news__item-info clearfix"><a target="_blank" href="/a/1190000021154451"><div class="mb5 mt5"><h4 class="news__item-title mt0">我们悄悄优化了页面载入速度</h4></div><div class="article-excerpt">
+                      随着访问量的增大，我们发现在高峰时期 SegmentFault 的载入速度越来越慢，而且还时不时会出现 502 的问题。而优化载入速度是一个很庞大的系统工程，它不仅涉及到系统设计，前端改造还包括业务逻辑的优化等等。但...
+                    </div></a><div class="news__item-meta"><span class="pr20 votes-operation " data-id="1190000021154451" data-type="article"><span class="wrap"><i class="fa fa-thumbs-up hot"></i></span><span class="votes-num hot ">17</span><span class="dot ">·</span><span class="votes-word">赞</span></span><span class="bookmark-operation pr20 hidden" data-id="1190000021154451" data-type="article"><i class="fa fa-bookmark pr5"></i><span class="bookmark-word">收藏</span></span><span class="author pr20"><a href="/u/joyqi">joyqi</a><i class="fa fa-check-circle userauth ml5" title="SegmentFault CTO，Typecho 作者" data-toggle="tooltip"></i><span class="dot">·</span>11月29日</span></div></div></div><div class="news-item stream__item clearfix mt15" data-id="1190000021150498"><div class="news__item-info clearfix"><a href="/a/1190000021150498" class="news-img" style="background-image:url(https://segmentfault.com/img/bVbAUmE)"></a><a target="_blank" href="/a/1190000021150498"><div class="mb5 mt5"><h4 class="news__item-title mt0">极致用户体验与品牌运营的背后是什么？从前端开发角度看 Pornhub</h4></div><div class="article-excerpt">
+                      按照文化传统，国人向来不太愿意大张旗鼓地谈论与成人内容有关的话题。但从技术的角度来看，情色文化与全球性的成人网站却是推动 Web 开发技术发展的重要力量。
+                    </div></a><div class="news__item-meta"><span class="pr20 votes-operation " data-id="1190000021150498" data-type="article"><span class="wrap"><i class="fa fa-thumbs-up "></i></span><span class="votes-num  ">8</span><span class="dot ">·</span><span class="votes-word">赞</span></span><span class="bookmark-operation pr20 hidden" data-id="1190000021150498" data-type="article"><i class="fa fa-bookmark pr5"></i><span class="bookmark-word">收藏</span></span><span class="author pr20"><a href="/u/vectre">羽飞</a><i class="fa fa-check-circle userauth ml5" title="SegmentFault 编辑" data-toggle="tooltip"></i><span class="dot">·</span>11月29日</span></div></div></div><div class="news-item stream__item clearfix mt15" data-id="1190000021136424"><div class="news__item-info clearfix"><a href="/a/1190000021136424" class="news-img" style="background-image:url(https://segmentfault.com/img/bVbAQEd)"></a><a target="_blank" href="/a/1190000021136424"><div class="mb5 mt5"><h4 class="news__item-title mt0">布隆过滤器你值得拥有的开发利器</h4></div><div class="article-excerpt">
+                      在程序的世界中，布隆过滤器是程序员的一把利器，利用它可以快速地解决项目中一些比较棘手的问题。如网页 URL 去重、垃圾邮件识别、大集合中重复元素的判断和缓存穿透等问题。
+                    </div></a><div class="news__item-meta"><span class="pr20 votes-operation " data-id="1190000021136424" data-type="article"><span class="wrap"><i class="fa fa-thumbs-up hot"></i></span><span class="votes-num hot ">27</span><span class="dot ">·</span><span class="votes-word">赞</span></span><span class="bookmark-operation pr20 hidden" data-id="1190000021136424" data-type="article"><i class="fa fa-bookmark pr5"></i><span class="bookmark-word">收藏</span></span><span class="author pr20"><a href="/u/angular4">semlinker</a><span class="dot">·</span>11月28日</span></div></div></div><div class="news-item stream__item clearfix mt15" data-id="1190000021145990"><div class="news__item-info clearfix"><a href="/a/1190000021145990" class="news-img" style="background-image:url(https://segmentfault.com/img/remote/1460000021145994)"></a><a target="_blank" href="/a/1190000021145990"><div class="mb5 mt5"><h4 class="news__item-title mt0">Ubuntu中使用Nginx+rtmp模块搭建流媒体视频点播服务</h4></div><div class="article-excerpt">
+                      不知不觉来到流媒体部门已经一年半多了，也算积攒了不少的流媒体知识，平时工作比较忙，到没有对流媒体技术进行系统性的梳理；最近刚完成一个Git实用指南的技术专栏，放松一周之后，觉得还是得让自己充实起来，准...
+                    </div></a><div class="news__item-meta"><span class="pr20 votes-operation " data-id="1190000021145990" data-type="article"><span class="wrap"><i class="fa fa-thumbs-up hot"></i></span><span class="votes-num hot ">21</span><span class="dot ">·</span><span class="votes-word">赞</span></span><span class="bookmark-operation pr20 hidden" data-id="1190000021145990" data-type="article"><i class="fa fa-bookmark pr5"></i><span class="bookmark-word">收藏</span></span><span class="author pr20"><a href="/u/songboy">汤青松</a><i class="fa fa-check-circle userauth ml5" title="PHP 技术专家" data-toggle="tooltip"></i><span class="dot">·</span>11月28日</span></div></div></div><div class="news-item stream__item clearfix mt15" data-id="1190000021145901"><div class="news__item-info clearfix"><a href="/a/1190000021145901" class="news-img" style="background-image:url(https://segmentfault.com/img/remote/1460000021145905)"></a><a target="_blank" href="/a/1190000021145901"><div class="mb5 mt5"><h4 class="news__item-title mt0">写给前端的正则表达式入门</h4></div><div class="article-excerpt">
+                      在 JavaScript 中，使用 // 即可创建一个正则表达式对象，当然也可以使用 new RegExp()
+                    </div></a><div class="news__item-meta"><span class="pr20 votes-operation " data-id="1190000021145901" data-type="article"><span class="wrap"><i class="fa fa-thumbs-up hot"></i></span><span class="votes-num hot ">58</span><span class="dot ">·</span><span class="votes-word">赞</span></span><span class="bookmark-operation pr20 hidden" data-id="1190000021145901" data-type="article"><i class="fa fa-bookmark pr5"></i><span class="bookmark-word">收藏</span></span><span class="author pr20"><a href="/u/savokiss">savokiss</a><i class="fa fa-check-circle userauth ml5" title="好未来 前端开发工程师" data-toggle="tooltip"></i><span class="dot">·</span>11月29日</span></div></div></div><div class="news-item stream__item clearfix mt15" data-id="1190000018631142"><div class="news__item-info clearfix"><a href="/a/1190000018631142" class="news-img" style="background-image:url(https://segmentfault.com/img/remote/1460000018631145)"></a><a target="_blank" href="/a/1190000018631142"><div class="mb5 mt5"><h4 class="news__item-title mt0">正经的我，做了个不正经的项目 —— Pornhub 风格 Logo 生成器</h4></div><div class="article-excerpt">
+                      Logoly.Pro 是一个在线的 PornHub 风格 Logo 生成工具，可以帮助你快速生成类似 PornHub 风格的 Logo
+                    </div></a><div class="news__item-meta"><span class="pr20 votes-operation " data-id="1190000018631142" data-type="article"><span class="wrap"><i class="fa fa-thumbs-up hot"></i></span><span class="votes-num hot ">66</span><span class="dot ">·</span><span class="votes-word">赞</span></span><span class="bookmark-operation pr20 hidden" data-id="1190000018631142" data-type="article"><i class="fa fa-bookmark pr5"></i><span class="bookmark-word">收藏</span></span><span class="author pr20"><a href="/u/xiqingongzi">Bestony</a><span class="dot">·</span>3月24日</span></div></div></div><div class="news-item stream__item clearfix mt15" data-id="1190000021138998"><div class="news__item-info clearfix"><a href="/a/1190000021138998" class="news-img" style="background-image:url(https://segmentfault.com/img/bVbARmZ)"></a><a target="_blank" href="/a/1190000021138998"><div class="mb5 mt5"><h4 class="news__item-title mt0">真的，Kafka 入门一篇文章就够了</h4></div><div class="article-excerpt">
+                      Kafka 是由 Linkedin 公司开发的，它是一个分布式的，支持多分区、多副本，基于 Zookeeper 的分布式消息流平台，它同时也是一款开源的基于发布订阅模式的消息引擎系统。
+                    </div></a><div class="news__item-meta"><span class="pr20 votes-operation " data-id="1190000021138998" data-type="article"><span class="wrap"><i class="fa fa-thumbs-up hot"></i></span><span class="votes-num hot ">39</span><span class="dot ">·</span><span class="votes-word">赞</span></span><span class="bookmark-operation pr20 hidden" data-id="1190000021138998" data-type="article"><i class="fa fa-bookmark pr5"></i><span class="bookmark-word">收藏</span></span><span class="author pr20"><a href="/u/cxuan">cxuan</a><span class="dot">·</span>11月28日</span></div></div></div><div class="news-item stream__item clearfix mt15" data-id="1190000021140396"><div class="news__item-info clearfix"><a href="/a/1190000021140396" class="news-img" style="background-image:url(https://segmentfault.com/img/bVbARq1)"></a><a target="_blank" href="/a/1190000021140396"><div class="mb5 mt5"><h4 class="news__item-title mt0">SFKP • 计算机百科丨IPv4 地址，到底没没没？</h4></div><div class="article-excerpt">
+                      犹记得上大学的时候，教计算机原理的老师就告诉我们“IPv4 地址一共有 42.9 亿个，随着互联网的发展现在已经耗尽了。”
+                    </div></a><div class="news__item-meta"><span class="pr20 votes-operation " data-id="1190000021140396" data-type="article"><span class="wrap"><i class="fa fa-thumbs-up "></i></span><span class="votes-num  ">13</span><span class="dot ">·</span><span class="votes-word">赞</span></span><span class="bookmark-operation pr20 hidden" data-id="1190000021140396" data-type="article"><i class="fa fa-bookmark pr5"></i><span class="bookmark-word">收藏</span></span><span class="author pr20"><a href="/u/weepie">徐九</a><i class="fa fa-check-circle userauth ml5" title="SegmentFault 编辑" data-toggle="tooltip"></i><span class="dot">·</span>11月28日</span></div></div></div><div class="news-item stream__item clearfix mt15" data-id="1190000021136228"><div class="news__item-info clearfix"><a href="/a/1190000021136228" class="news-img" style="background-image:url(https://segmentfault.com/img/remote/1460000021136232)"></a><a target="_blank" href="/a/1190000021136228"><div class="mb5 mt5"><h4 class="news__item-title mt0">Three.js - 走进3D的奇妙世界</h4></div><div class="article-excerpt">
+                      文章来源：宜信技术学院 &amp; 宜信支付结算团队技术分享第6期-支付结算部支付研发团队前端研发高级工程师-刘琳《three.js - 走进3D的奇妙世界》分享者：宜信支付结算部支付研发团队前端研发高级工程师-刘琳 原文...
+                    </div></a><div class="news__item-meta"><span class="pr20 votes-operation " data-id="1190000021136228" data-type="article"><span class="wrap"><i class="fa fa-thumbs-up hot"></i></span><span class="votes-num hot ">51</span><span class="dot ">·</span><span class="votes-word">赞</span></span><span class="bookmark-operation pr20 hidden" data-id="1190000021136228" data-type="article"><i class="fa fa-bookmark pr5"></i><span class="bookmark-word">收藏</span></span><span class="author pr20"><a href="/u/gaoleihan">宜信技术学院</a><span class="dot">·</span>11月28日</span></div></div></div><div class="news-item stream__item clearfix mt15" data-id="1190000021126576"><div class="news__item-info clearfix"><a href="/a/1190000021126576" class="news-img" style="background-image:url(https://segmentfault.com/img/remote/1460000021126606)"></a><a target="_blank" href="/a/1190000021126576"><div class="mb5 mt5"><h4 class="news__item-title mt0">走进Golang之运行与Plan9汇编</h4></div><div class="article-excerpt">
+                      本文目录速览： Golang的运行环境 内存 操作系统、CPU、内存互相配合 Go程序的调用规约 函数在栈上的分布 Go的调用实例 Go的汇编plan9 查看go应用代码对应的翻译函数 逃逸分析 传值还是传指针 总结 通过上一篇走...
+                    </div></a><div class="news__item-meta"><span class="pr20 votes-operation " data-id="1190000021126576" data-type="article"><span class="wrap"><i class="fa fa-thumbs-up "></i></span><span class="votes-num  ">14</span><span class="dot ">·</span><span class="votes-word">赞</span></span><span class="bookmark-operation pr20 hidden" data-id="1190000021126576" data-type="article"><i class="fa fa-bookmark pr5"></i><span class="bookmark-word">收藏</span></span><span class="author pr20"><a href="/u/helei112g">大愚Talk</a><span class="dot">·</span>11月27日</span></div></div></div><div class="news-item stream__item clearfix mt15" data-id="1190000021127828"><div class="news__item-info clearfix"><a href="/a/1190000021127828" class="news-img" style="background-image:url(https://segmentfault.com/img/bVbAOtr)"></a><a target="_blank" href="/a/1190000021127828"><div class="mb5 mt5"><h4 class="news__item-title mt0">带你涨姿势的认识一下 Kafka Consumer</h4></div><div class="article-excerpt">
+                      之前我们介绍过了 Kafka 整体架构，Kafka 生产者，Kafka 生产的消息最终流向哪里呢？当然是需要消费了，要不只产生一系列数据没有任何作用啊，如果把 Kafka 比作餐厅的话，那么生产者就是厨师的角色，消费者就是...
+                    </div></a><div class="news__item-meta"><span class="pr20 votes-operation " data-id="1190000021127828" data-type="article"><span class="wrap"><i class="fa fa-thumbs-up "></i></span><span class="votes-num  ">10</span><span class="dot ">·</span><span class="votes-word">赞</span></span><span class="bookmark-operation pr20 hidden" data-id="1190000021127828" data-type="article"><i class="fa fa-bookmark pr5"></i><span class="bookmark-word">收藏</span></span><span class="author pr20"><a href="/u/cxuan">cxuan</a><span class="dot">·</span>11月27日</span></div></div></div><div class="news-item stream__item clearfix mt15" data-id="1190000010220247"><div class="news__item-info clearfix"><a href="/a/1190000010220247" class="news-img" style="background-image:url(https://segmentfault.com/img/bVOqxK?w=1519&amp;amp;h=889)"></a><a target="_blank" href="/a/1190000010220247"><div class="mb5 mt5"><h4 class="news__item-title mt0">怎样写好业务代码——那些年领域建模教会我的东西</h4></div><div class="article-excerpt">
+                      本文主要作为笔者阅读Eric Evans的《Domain-Driven Design领域驱动设计》一书，同时拜读了我司大神针对业务代码封装的一套业务框架后，对于如何编写复杂业务代码的一点粗浅理解和思考。
+                    </div></a><div class="news__item-meta"><span class="pr20 votes-operation " data-id="1190000010220247" data-type="article"><span class="wrap"><i class="fa fa-thumbs-up hot"></i></span><span class="votes-num hot ">56</span><span class="dot ">·</span><span class="votes-word">赞</span></span><span class="bookmark-operation pr20 hidden" data-id="1190000010220247" data-type="article"><i class="fa fa-bookmark pr5"></i><span class="bookmark-word">收藏</span></span><span class="author pr20"><a href="/u/thehope">TheHope</a><span class="dot">·</span>2017-07-17 </span></div></div></div><div class="news-item stream__item clearfix mt15" data-id="1190000021116868"><div class="news__item-info clearfix"><a href="/a/1190000021116868" class="news-img" style="background-image:url(https://segmentfault.com/img/bVbALB3)"></a><a target="_blank" href="/a/1190000021116868"><div class="mb5 mt5"><h4 class="news__item-title mt0">《Flappy Bird》开发者：游戏爆红之后，觉得“这个世界突然疯了”...</h4></div><div class="article-excerpt">
+                      从默默无闻到一夜爆红，《Flappy BIrd》在当年创造手机游戏的一个奇迹，iOS 免费游戏下载榜单第一名、2014年"美国及中国 iTunes 最受欢迎免费应用软件"、被Cnet 评为“21世纪初全球最具影响力的 25 个 App 之一”。
+                    </div></a><div class="news__item-meta"><span class="pr20 votes-operation " data-id="1190000021116868" data-type="article"><span class="wrap"><i class="fa fa-thumbs-up "></i></span><span class="votes-num  ">5</span><span class="dot ">·</span><span class="votes-word">赞</span></span><span class="bookmark-operation pr20 hidden" data-id="1190000021116868" data-type="article"><i class="fa fa-bookmark pr5"></i><span class="bookmark-word">收藏</span></span><span class="author pr20"><a href="/u/weepie">徐九</a><i class="fa fa-check-circle userauth ml5" title="SegmentFault 编辑" data-toggle="tooltip"></i><span class="dot">·</span>11月26日</span></div></div></div><div class="news-item stream__item clearfix mt15" data-id="1190000021106806"><div class="news__item-info clearfix"><a href="/a/1190000021106806" class="news-img" style="background-image:url(https://segmentfault.com/img/bVbAI1L)"></a><a target="_blank" href="/a/1190000021106806"><div class="mb5 mt5"><h4 class="news__item-title mt0">Lombok 使用详解，简化Java编程</h4></div><div class="article-excerpt">
+                      在 Java 应用程序中存在许多重复相似的、生成之后几乎不对其做更改的代码，但是我们还不得不花费很多精力编写它们来满足 Java 的编译需求
+                    </div></a><div class="news__item-meta"><span class="pr20 votes-operation " data-id="1190000021106806" data-type="article"><span class="wrap"><i class="fa fa-thumbs-up hot"></i></span><span class="votes-num hot ">28</span><span class="dot ">·</span><span class="votes-word">赞</span></span><span class="bookmark-operation pr20 hidden" data-id="1190000021106806" data-type="article"><i class="fa fa-bookmark pr5"></i><span class="bookmark-word">收藏</span></span><span class="author pr20"><a href="/u/tanrigongyibing">日拱一兵</a><i class="fa fa-check-circle userauth ml5" title="JAVA 开发工程师" data-toggle="tooltip"></i><span class="dot">·</span>11月25日</span></div></div></div><div class="news-item stream__item clearfix mt15" data-id="1190000004823207"><div class="news__item-info clearfix"><a href="/a/1190000004823207" class="news-img" style="background-image:url(https://segmentfault.com/img/bVuD2E)"></a><a target="_blank" href="/a/1190000004823207"><div class="mb5 mt5"><h4 class="news__item-title mt0">我的编程之路：从好玩到玩好</h4></div><div class="article-excerpt">
+                      我最早接触电脑是小学四年级的时候，一九九几年，那是一个秋天，有一位老人在中国的南海边写下诗篇，我坐在学校机房的386电脑前照着一张A4纸上的代码敲入一连串的命令，经过若干次失败、重启后，成功进入了DOS系...
+                    </div></a><div class="news__item-meta"><span class="pr20 votes-operation " data-id="1190000004823207" data-type="article"><span class="wrap"><i class="fa fa-thumbs-up hot"></i></span><span class="votes-num hot ">25</span><span class="dot ">·</span><span class="votes-word">赞</span></span><span class="bookmark-operation pr20 hidden" data-id="1190000004823207" data-type="article"><i class="fa fa-bookmark pr5"></i><span class="bookmark-word">收藏</span></span><span class="author pr20"><a href="/u/delai">德来</a><span class="dot">·</span>2016-03-31 </span></div></div></div><div class="news-item stream__item clearfix mt15" data-id="1190000021104829"><div class="news__item-info clearfix"><a href="/a/1190000021104829" class="news-img" style="background-image:url(https://segmentfault.com/img/bVbAHcp)"></a><a target="_blank" href="/a/1190000021104829"><div class="mb5 mt5"><h4 class="news__item-title mt0">11月初的美国之旅 -- 参加微软的 Microsoft Ignite 2019</h4></div><div class="article-excerpt">
+                      国外大厂的大会，国内开发者比较熟悉的可能是苹果的WWDC，以及谷歌的Google IO。其实微软也有自己一年一度的大会，那就是 Microsoft Ignite，不过它的定位并不单单是面向开发者，而是面向 IT 业界的盛会。
+                    </div></a><div class="news__item-meta"><span class="pr20 votes-operation " data-id="1190000021104829" data-type="article"><span class="wrap"><i class="fa fa-thumbs-up "></i></span><span class="votes-num  ">5</span><span class="dot ">·</span><span class="votes-word">赞</span></span><span class="bookmark-operation pr20 hidden" data-id="1190000021104829" data-type="article"><i class="fa fa-bookmark pr5"></i><span class="bookmark-word">收藏</span></span><span class="author pr20"><a href="/u/joyqi">joyqi</a><i class="fa fa-check-circle userauth ml5" title="SegmentFault CTO，Typecho 作者" data-toggle="tooltip"></i><span class="dot">·</span>11月25日</span></div></div></div><div class="news-item stream__item clearfix mt15" data-id="1190000021102359"><div class="news__item-info clearfix"><a target="_blank" href="/a/1190000021102359"><div class="mb5 mt5"><h4 class="news__item-title mt0">GoJS</h4></div><div class="article-excerpt">
+                      GoJS是用于实现交互式图的JavaScript库。GoJS是依赖HTML5功能的JavaScript库，
+                    </div></a><div class="news__item-meta"><span class="pr20 votes-operation " data-id="1190000021102359" data-type="article"><span class="wrap"><i class="fa fa-thumbs-up "></i></span><span class="votes-num  ">7</span><span class="dot ">·</span><span class="votes-word">赞</span></span><span class="bookmark-operation pr20 hidden" data-id="1190000021102359" data-type="article"><i class="fa fa-bookmark pr5"></i><span class="bookmark-word">收藏</span></span><span class="author pr20"><a href="/u/yang_5c8f63fe0d5aa">yang</a><span class="dot">·</span>11月25日</span></div></div></div><div class="news-item stream__item clearfix mt15" data-id="1190000020945770"><div class="news__item-info clearfix"><a href="/a/1190000020945770" class="news-img" style="background-image:url(https://segmentfault.com/img/bVbz225)"></a><a target="_blank" href="/a/1190000020945770"><div class="mb5 mt5"><h4 class="news__item-title mt0">推荐系统中模型训练及使用流程的标准化</h4></div><div class="article-excerpt">
+                      文章作者：梁超 腾讯 高级工程师 编辑整理：Hoh Xil 内容来源：DataFun AI Talk 出品社区：DataFun 注：欢迎转载，转载请在留言区内留言。 导读：本次分享的主题为推荐系统中模型训练及使用流程的标准化。在整个...
+                    </div></a><div class="news__item-meta"><span class="pr20 votes-operation " data-id="1190000020945770" data-type="article"><span class="wrap"><i class="fa fa-thumbs-up "></i></span><span class="votes-num  ">15</span><span class="dot ">·</span><span class="votes-word">赞</span></span><span class="bookmark-operation pr20 hidden" data-id="1190000020945770" data-type="article"><i class="fa fa-bookmark pr5"></i><span class="bookmark-word">收藏</span></span><span class="author pr20"><a href="/u/datafun">DataFun</a><span class="dot">·</span>11月8日</span></div></div></div><div class="news-item stream__item clearfix mt15" data-id="1190000021051021"><div class="news__item-info clearfix"><a target="_blank" href="/a/1190000021051021"><div class="mb5 mt5"><h4 class="news__item-title mt0">Golang 容器部署</h4></div><div class="article-excerpt">
+                      由于 go 最终是编译为一个二进制可执行文件，没有运行时依赖，也不需要管理库，丢到服务器上就可以直接运行。所以，如果你有一个二进制文件，那么在容器中打包二进制文件的要点是什么？如果使用 docker 的话，还...
+                    </div></a><div class="news__item-meta"><span class="pr20 votes-operation " data-id="1190000021051021" data-type="article"><span class="wrap"><i class="fa fa-thumbs-up hot"></i></span><span class="votes-num hot ">30</span><span class="dot ">·</span><span class="votes-word">赞</span></span><span class="bookmark-operation pr20 hidden" data-id="1190000021051021" data-type="article"><i class="fa fa-bookmark pr5"></i><span class="bookmark-word">收藏</span></span><span class="author pr20"><a href="/u/isgiker">维子</a><span class="dot">·</span>11月19日</span></div></div></div><div class="news-item stream__item clearfix mt15" data-id="1190000021086680"><div class="news__item-info clearfix"><a href="/a/1190000021086680" class="news-img" style="background-image:url(https://segmentfault.com/img/bVbADKv)"></a><a target="_blank" href="/a/1190000021086680"><div class="mb5 mt5"><h4 class="news__item-title mt0">对话微软小冰三位首席科学家：微软小冰的成长之路</h4></div><div class="article-excerpt">
+                      2010 年，苹果公司花费 2 亿美金收购了第三方文字聊天服务应用 Siri，正式拉开了语音助手开发争夺战的序幕。
+                    </div></a><div class="news__item-meta"><span class="pr20 votes-operation " data-id="1190000021086680" data-type="article"><span class="wrap"><i class="fa fa-thumbs-up "></i></span><span class="votes-num  ">7</span><span class="dot ">·</span><span class="votes-word">赞</span></span><span class="bookmark-operation pr20 hidden" data-id="1190000021086680" data-type="article"><i class="fa fa-bookmark pr5"></i><span class="bookmark-word">收藏</span></span><span class="author pr20"><a href="/u/weepie">徐九</a><i class="fa fa-check-circle userauth ml5" title="SegmentFault 编辑" data-toggle="tooltip"></i><span class="dot">·</span>11月22日</span></div></div></div><div class="news-item stream__item clearfix mt15" data-id="1190000021086582"><div class="news__item-info clearfix"><a href="/a/1190000021086582" class="news-img" style="background-image:url(https://segmentfault.com/img/bVbADGq)"></a><a target="_blank" href="/a/1190000021086582"><div class="mb5 mt5"><h4 class="news__item-title mt0">每 10 个 IP 地址，就有一个受过网络攻击，网上冲浪这么危险了么？</h4></div><div class="article-excerpt">
+                      为规范发布网络安全威胁信息的行为，有效应对网络安全威胁和风险，保障网络运行安全，国家互联网信息办公室会同公安部等有关部门向社会公开征求意见。
+                    </div></a><div class="news__item-meta"><span class="pr20 votes-operation " data-id="1190000021086582" data-type="article"><span class="wrap"><i class="fa fa-thumbs-up "></i></span><span class="votes-num  ">7</span><span class="dot ">·</span><span class="votes-word">赞</span></span><span class="bookmark-operation pr20 hidden" data-id="1190000021086582" data-type="article"><i class="fa fa-bookmark pr5"></i><span class="bookmark-word">收藏</span></span><span class="author pr20"><a href="/u/weepie">徐九</a><i class="fa fa-check-circle userauth ml5" title="SegmentFault 编辑" data-toggle="tooltip"></i><span class="dot">·</span>11月22日</span></div></div></div><div class="news-item stream__item clearfix mt15" data-id="1190000021047811"><div class="news__item-info clearfix"><a href="/a/1190000021047811" class="news-img" style="background-image:url(https://image-static.segmentfault.com/299/636/2996362002-5dd318cf56ff6_articlex)"></a><a target="_blank" href="/a/1190000021047811"><div class="mb5 mt5"><h4 class="news__item-title mt0">Spring Security 实战干货：基于注解的接口角色访问控制</h4></div><div class="article-excerpt">
+                      欢迎阅读 Spring Security 实战干货 系列文章 。在上一篇 基于配置的接口角色访问控制 我们讲解了如何通过 javaConfig 的方式配置接口的角色访问控制。其实还有一种更加灵活的配置方式 基于注解 。今天我们就来探...
+                    </div></a><div class="news__item-meta"><span class="pr20 votes-operation " data-id="1190000021047811" data-type="article"><span class="wrap"><i class="fa fa-thumbs-up "></i></span><span class="votes-num  ">11</span><span class="dot ">·</span><span class="votes-word">赞</span></span><span class="bookmark-operation pr20 hidden" data-id="1190000021047811" data-type="article"><i class="fa fa-bookmark pr5"></i><span class="bookmark-word">收藏</span></span><span class="author pr20"><a href="/u/10000000">码农小胖哥</a><span class="dot">·</span>11月19日</span></div></div></div><div class="news-item stream__item clearfix mt15" data-id="1190000021052139"><div class="news__item-info clearfix"><a href="/a/1190000021052139" class="news-img" style="background-image:url(https://segmentfault.com/img/bVbAuI9)"></a><a target="_blank" href="/a/1190000021052139"><div class="mb5 mt5"><h4 class="news__item-title mt0">SFKP • 计算机百科丨存储介质发展史</h4></div><div class="article-excerpt">
+                      我们生活在一个信息爆炸的时代，据 IDC 预测 2020 年全球产生数据量将超过 40ZB，相当于地球上每个人每年将产生 5200GB 的数据。
+                    </div></a><div class="news__item-meta"><span class="pr20 votes-operation " data-id="1190000021052139" data-type="article"><span class="wrap"><i class="fa fa-thumbs-up hot"></i></span><span class="votes-num hot ">16</span><span class="dot ">·</span><span class="votes-word">赞</span></span><span class="bookmark-operation pr20 hidden" data-id="1190000021052139" data-type="article"><i class="fa fa-bookmark pr5"></i><span class="bookmark-word">收藏</span></span><span class="author pr20"><a href="/u/weepie">徐九</a><i class="fa fa-check-circle userauth ml5" title="SegmentFault 编辑" data-toggle="tooltip"></i><span class="dot">·</span>11月19日</span></div></div></div><div class="news-item stream__item clearfix mt15" data-id="1190000021047028"><div class="news__item-info clearfix"><a href="/a/1190000021047028" class="news-img" style="background-image:url(https://segmentfault.com/img/bVbAtsz)"></a><a target="_blank" href="/a/1190000021047028"><div class="mb5 mt5"><h4 class="news__item-title mt0">程序员需要了解的硬核知识之操作系统和应用</h4></div><div class="article-excerpt">
+                      利用计算机运行程序大部分都是为了提高处理效率。例如，Microsoft Word 这样的文字处理软件，是用来提高文本文件处理效率的程序，Microsoft Excel 等表格计算软件，是用来提高账本处理效率的程序。这种为了提高特...
+                    </div></a><div class="news__item-meta"><span class="pr20 votes-operation " data-id="1190000021047028" data-type="article"><span class="wrap"><i class="fa fa-thumbs-up hot"></i></span><span class="votes-num hot ">26</span><span class="dot ">·</span><span class="votes-word">赞</span></span><span class="bookmark-operation pr20 hidden" data-id="1190000021047028" data-type="article"><i class="fa fa-bookmark pr5"></i><span class="bookmark-word">收藏</span></span><span class="author pr20"><a href="/u/cxuan">cxuan</a><span class="dot">·</span>11月18日</span></div></div></div><div class="news-item stream__item clearfix mt15" data-id="1190000021048879"><div class="news__item-info clearfix"><a href="/a/1190000021048879" class="news-img" style="background-image:url(https://segmentfault.com/img/bVbAtP1)"></a><a target="_blank" href="/a/1190000021048879"><div class="mb5 mt5"><h4 class="news__item-title mt0">科技向善！全网黑客帮脑瘫女孩破解软件，搜狗接棒后续研发</h4></div><div class="article-excerpt">
+                      近日，有微博网友 @冷敏寒子夜 在微博上发文，希望网友可以帮忙破解一款输入法或者帮忙寻找该输入法的开发者。
+                    </div></a><div class="news__item-meta"><span class="pr20 votes-operation " data-id="1190000021048879" data-type="article"><span class="wrap"><i class="fa fa-thumbs-up hot"></i></span><span class="votes-num hot ">27</span><span class="dot ">·</span><span class="votes-word">赞</span></span><span class="bookmark-operation pr20 hidden" data-id="1190000021048879" data-type="article"><i class="fa fa-bookmark pr5"></i><span class="bookmark-word">收藏</span></span><span class="author pr20"><a href="/u/weepie">徐九</a><i class="fa fa-check-circle userauth ml5" title="SegmentFault 编辑" data-toggle="tooltip"></i><span class="dot">·</span>11月19日</span></div></div></div><div class="news-item stream__item clearfix mt15" data-id="1190000021037771"><div class="news__item-info clearfix"><a href="/a/1190000021037771" class="news-img" style="background-image:url(https://image-static.segmentfault.com/244/236/244236213-5dd1e89dba6dd_articlex)"></a><a target="_blank" href="/a/1190000021037771"><div class="mb5 mt5"><h4 class="news__item-title mt0">Java升级那么快，多个版本如何灵活切换和管理？</h4></div><div class="article-excerpt">
+                      近两年，Java 版本升级频繁，感觉刚刚掌握 Java8，写本文时，已听到 java14 的消息，无论是尝鲜新特性(Java12 中 Collectors.teeing 超强功能使用)，还是由于项目升级/兼容需要，我们可能都要面临管理多个 Java ...
+                    </div></a><div class="news__item-meta"><span class="pr20 votes-operation " data-id="1190000021037771" data-type="article"><span class="wrap"><i class="fa fa-thumbs-up "></i></span><span class="votes-num  ">14</span><span class="dot ">·</span><span class="votes-word">赞</span></span><span class="bookmark-operation pr20 hidden" data-id="1190000021037771" data-type="article"><i class="fa fa-bookmark pr5"></i><span class="bookmark-word">收藏</span></span><span class="author pr20"><a href="/u/tanrigongyibing">日拱一兵</a><i class="fa fa-check-circle userauth ml5" title="JAVA 开发工程师" data-toggle="tooltip"></i><span class="dot">·</span>11月18日</span></div></div></div><div class="news-item stream__item clearfix mt15" data-id="1190000021040201"><div class="news__item-info clearfix"><a href="/a/1190000021040201" class="news-img" style="background-image:url(https://segmentfault.com/img/bVbArAs)"></a><a target="_blank" href="/a/1190000021040201"><div class="mb5 mt5"><h4 class="news__item-title mt0">从零手写逐步实现Promise A+标准的所有方法</h4></div><div class="article-excerpt">
+                      GitHub仓库更有自己实现的webpack、mini-react、redux、react-redux、websocket , Electron跨平台桌面端、React-native移动端开源项目等
+                    </div></a><div class="news__item-meta"><span class="pr20 votes-operation " data-id="1190000021040201" data-type="article"><span class="wrap"><i class="fa fa-thumbs-up hot"></i></span><span class="votes-num hot ">47</span><span class="dot ">·</span><span class="votes-word">赞</span></span><span class="bookmark-operation pr20 hidden" data-id="1190000021040201" data-type="article"><i class="fa fa-bookmark pr5"></i><span class="bookmark-word">收藏</span></span><span class="author pr20"><a href="/u/jerrytanjinjie">Peter谭金杰</a><span class="dot">·</span>11月18日</span></div></div></div><div class="news-item stream__item clearfix mt15" data-id="1190000019964176"><div class="news__item-info clearfix"><a target="_blank" href="/a/1190000019964176"><div class="mb5 mt5"><h4 class="news__item-title mt0">在 OpenResty 里实现进程间通讯</h4></div><div class="article-excerpt">
+                      在 Nginx 里面，每个 worker 进程都是平等的。但是有些时候，我们需要给它们分配不同的角色，这时候就需要实现进程间通讯的功能。
+                    </div></a><div class="news__item-meta"><span class="pr20 votes-operation " data-id="1190000019964176" data-type="article"><span class="wrap"><i class="fa fa-thumbs-up "></i></span><span class="votes-num  ">15</span><span class="dot ">·</span><span class="votes-word">赞</span></span><span class="bookmark-operation pr20 hidden" data-id="1190000019964176" data-type="article"><i class="fa fa-bookmark pr5"></i><span class="bookmark-word">收藏</span></span><span class="author pr20"><a href="/u/spacewander">spacewander</a><span class="dot">·</span>8月3日</span></div></div></div></div>
+                <div class="text-center">
+          <ul class="pager">
+            <li id="btn-load-more" class="hidden"><a href="javascript:;">点击载入更多</a></li>
+            <li id="btn-loading" class="hidden"><a href="javascript:;"><i class="fa fa-spinner fa-spin" aria-hidden="true"></i> 载入中</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-3 right">
+                        
+            <div id="notices" class="hidden">
+        <div class="alert alert-warning" role="alert">
+            <small><a class="report"></a></small>
+        </div>
+    </div>
+
+
+        <div class="mb25 hidden-md hidden-sm hidden-xs">
+    <img src="https://static.segmentfault.com/sponsor/20191202.png" alt="Planets" usemap ="#gridsMap" width=255 height=136>
+    <map name="gridsMap" id="gridsMap"></map>
+    <div style="text-align: center;"><a style="text-align:center; color:#9E9E9E; font-size:12px" href="/sponsor">广告位促销，月曝光三千万，10 元/天</a></div>
+            <script async src="https://static.segmentfault.com/sponsor/20191202.js"></script>
+    </div>
+        
+
+                <div class="sf-live-recommend">
+    <div class="live-recommend">
+        <div class="live-recommend-header">
+        <h4><a href="/lives">课程推荐</a></h4>
+        <span class="live-recommend-operation">
+            <i class="fa fa-chevron-circle-left arrow-left arrow" aria-hidden="true"></i>
+            <i class="fa fa-chevron-circle-right arrow-right arrow" aria-hidden="true"></i>
+        </span>
+        </div>
+
+        <div class="live-recommend-wrapper">
+        <div class="live-recommend-detail"></div>
+        </div>
+    </div>
+</div>
+                        
+                <div class="activity-recommend mb30">
+          <a href="/events" class="more-btn pull-right">更多</a>
+          <div class="activity-title">活动推荐</div>
+          <div class="activity-recommend-area"></div>
+        </div>
+
+        <div class="mb20 ad-should-be-fixed">
+            <script type='text/javascript'>
+                OA_show(1);
+            </script>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  window.livePngUrl = "https://cdn.segmentfault.com/v-5dcd2518/index/img/live.svg";
+  window.pageType = "recommend";
+  window.pageParam = "";
+  window.timelineOffset = 0;
+  window.timelineBefore = 0;
+  window.timelineRecommendFollow = false;
+  window.timelineStream = 1;
+</script>
+
+
+
+
+
+
+
+
+
+<script type='text/javascript'>
+    OA_show(4);
+</script>
+
+<footer id="footer">
+    <div class="container">
+        <div class="row hidden-xs">
+            <dl class="col-sm-2 site-link">
+                <dt>产品</dt>
+                                <dd><a href="/questions/hottest?utm_source=sf-footer" target="_blank">热门问答</a></dd>
+                                <dd><a href="/blogs/hottest?utm_source=sf-footer" target="_blank">热门专栏</a></dd>
+                                <dd><a href="/lives?utm_source=sf-footer" target="_blank">热门课程</a></dd>
+                                <dd><a href="/events?utm_source=sf-footer" target="_blank">最新活动</a></dd>
+                                <dd><a href="/groups?utm_source=sf-footer" target="_blank">技术圈</a></dd>
+                                <dd><a href="/groups?tab=jobs&amp;utm_source=sf-footer" target="_blank">酷工作</a></dd>
+                                <dd><a href="/app?utm_source=sf-footer" target="_blank">移动客户端</a></dd>
+                            </dl>
+            
+            <dl class="col-sm-2 site-link">
+                <dt>课程</dt>
+                                <dd><a href="/lives/edu?tag=java&amp;sort=hottest&amp;utm_source=sf-footer" target="_blank">Java 开发课程</a></dd>
+                                <dd><a href="/lives/edu?tag=php&amp;sort=hottest&amp;utm_source=sf-footer" target="_blank">PHP 开发课程</a></dd>
+                                <dd><a href="/lives/edu?tag=python&amp;sort=hottest&amp;utm_source=sf-footer" target="_blank">Python 开发课程</a></dd>
+                                <dd><a href="/lives/edu?category=1&amp;sort=hottest&amp;utm_source=sf-footer" target="_blank">前端开发课程</a></dd>
+                                <dd><a href="/lives/study?category=3&amp;sort=hottest&amp;utm_source=sf-footer" target="_blank">移动开发课程</a></dd>
+                            </dl>
+
+            <dl class="col-sm-2 site-link">
+                <dt>资源</dt>
+                                <dd><a href="/weekly?utm_source=sf-footer" target="_blank">每周精选</a></dd>
+                                <dd><a href="/users?utm_source=sf-footer" target="_blank">用户排行榜</a></dd>
+                                <dd><a href="/badges?utm_source=sf-footer" target="_blank">徽章</a></dd>
+                                <dd><a href="/faq?utm_source=sf-footer" target="_blank">帮助中心</a></dd>
+                                <dd><a href="/repu?utm_source=sf-footer" target="_blank">声望与权限</a></dd>
+                                <dd><a href="/community?utm_source=sf-footer" target="_blank">社区服务中心</a></dd>
+                            </dl>
+            
+            <dl class="col-sm-2 site-link">
+                <dt>合作</dt>
+                                <dd><a href="https://about.segmentfault.com/?utm_source=sf-footer" target="_blank">关于我们</a></dd>
+                                <dd><a href="https://business.segmentfault.com/ads?utm_source=sf-footer" target="_blank">广告投放</a></dd>
+                                <dd><a href="/groups?tab=jobs&amp;utm_source=sf-footer" target="_blank">职位发布</a></dd>
+                                <dd><a href="/lives/apply?utm_source=sf-footer" target="_blank">讲师招募</a></dd>
+                                <dd><a href="https://about.segmentfault.com/contact.html?utm_source=sf-footer" target="_blank">联系我们</a></dd>
+                                <dd><a href="/link?utm_source=sf-footer" target="_blank">合作伙伴</a></dd>
+                            </dl>
+
+            <dl class="col-sm-2 site-link">
+                <dt>关注</dt>
+                                <dd><a href="/blog/segmentfault?utm_source=sf-footer" target="_blank">产品技术日志</a></dd>
+                                <dd><a href="/blog/community_admin?utm_source=sf-footer" target="_blank">社区运营日志</a></dd>
+                                <dd><a href="/blog/segmentfault_news?utm_source=sf-footer" target="_blank">市场运营日志</a></dd>
+                                <dd><a href="/blog/segmentfault_team?utm_source=sf-footer" target="_blank">团队日志</a></dd>
+                                <dd><a href="/blog/interview?utm_source=sf-footer" target="_blank">社区访谈</a></dd>
+                                <dd>
+                    <ul class="sn-inline">
+                        <li>
+                            <a class="entypo-wechart icon-sn-weixin weixin-popover-qrcode" data-toggle="popover" data-placement="top"  data-content="">微信</a>
+                        </li>
+                        <li>
+                            <a href="http://weibo.com/segmentfault" target="_blank" class="entypo-weibo icon-sn-weibo" >新浪微博</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/SegmentFault" target="_blank" class="entypo-facebook icon-sn-github">Github</a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/segment_fault" target="_blank" class="entypo-twitter icon-sn-twitter">Twitter</a>
+                        </li>
+                    </ul>
+                </dd>
+            </dl>
+
+            <dl class="col-sm-2 site-link" id="license">
+                <dt>条款</dt>
+                                <dd><a href="/tos?utm_source=sf-footer" target="_blank">服务条款</a></dd>
+                                <dd><a href="/privacy?utm_source=sf-footer" target="_blank">隐私政策</a></dd>
+                                <dd>
+                    <a href="/app" class="clearfix mt10 block"><img src="https://cdn.segmentfault.com/v-5dcd2518/page/img/app/appQrcode.png" class="app-qrcode"></a>
+                    <div class="app-download-desc">
+                        <p>扫一扫下载 App</p>
+                    </div>
+                    
+                </dd>
+            </dl>
+        </div>
+        <div class="copyright">
+            Copyright &copy; 2011-2019 SegmentFault. 当前呈现版本 19.02.27<br>
+            <a href="http://beian.miit.gov.cn" rel="nofollow">浙ICP备 15005796号-2</a> &nbsp;
+            <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33010602002000" rel="nofollow">浙公网安备 33010602002000号</a>
+            <span class="ml5">杭州堆栈科技有限公司版权所有</span>
+            <P class="mt30">CDN 存储服务由 <a target="_blank" href="https://www.upyun.com/?utm_source=segmentfault&utm_medium=link&utm_campaign=upyun&md=segmentfault">又拍云</a> 赞助提供 </p>
+        </div>
+        <p class="text-center">
+            <a class="js__view--selector hidden-sm hidden-md hidden-lg" data-action="mobile" href="javascript:;">移动版</a>
+            <a class="js__view--selector hidden-sm hidden-md hidden-lg" data-action="desktop" href="javascript:;">桌面版</a>
+        </p>
+    </div>
+</footer>
+
+<div id="fixedTools" class="hidden-xs hidden-sm">
+    <a id="backtop" class="hidden border-bottom" href="#">回顶部</a>
+</div>
+
+    <script id="loginModal" type="text/template">
+    <div class="row bg-white login-modal">
+        <div class="col-md-12 login-wrap">
+            <form action="/api/user/login" method="POST" role="form" class="mt15">
+                <div class="form-group hidden">
+                                        <input type="text" class="form-control" name="remember" value="1"
+                           autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label for="username" class="control-label">手机号 或 Email</label>
+                    <input type="text" class="form-control" name="username" tabindex="1" required placeholder="11 位手机号 或 Email"
+                           autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label class="control-label">密码</label><span class="pull-right"><a
+                                href="/user/forgot" tabindex="4">忘记密码</a></span>
+                    <input type="password" class="form-control" name="password" tabindex="2" required placeholder="请输入密码">
+                </div>
+                <div class="form-group">
+                    <a
+                            
+                                                    href="/user/phoneLogin"
+                            class="phoneLogin"
+                                            >手机验证码登录</a>
+                </div>
+                <div class="form-group clearfix">
+                    <button type="submit" class="btn-block btn btn-primary pull-right pl20 pr20" tabindex="3"
+                            onclick='ga("send", "event", "email login button", "clicked", "login modal");'>登录
+                    </button>
+                </div>
+            </form>
+            <div class="text-muted text-center more-login-area">
+    <span class="more-login-words">更多登录方式</span>
+</div>
+<div class="widget-login mb15 text-center">
+    <a href="/user/oauth/google" class=""
+       onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "google"});'><span
+                class="icon-sn-google"></span></a>
+    <a href="/user/oauth/github" class=""
+       onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "github"});");'><span
+                class="icon-sn-github"></span></a>
+    <a href="/user/oauth/weibo" class=""
+       onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "weibo"});'><span
+                class="icon-sn-weibo"></span></a>
+    <a href="/user/oauth/qq" class=""
+       onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "qq"});'><span
+                class="icon-sn-qq"></span></a>
+    <a href="/user/oauth/weixin" class=""
+       onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "qq"});'><span
+                class="icon-sn-weixin"></span></a>
+    <a href="/user/oauth/linkedin" class=""
+       onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "linkedin"});'><span
+                class="icon-sn-linkedin"></span></a>
+    <span id="loginShowMore" style="cursor: pointer" class="mb5"><span class="icon-sn-dotted"></span></span>
+    <a href="/user/oauth/twitter" class=" hidden"
+       onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "twitter"});'><span
+                class="icon-sn-twitter"></span></a>
+    <a href="/user/oauth/facebook" class=" hidden"
+       onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "facebook"});'><span
+                class="icon-sn-facebook"></span></a>
+    <a href="/user/oauth/douban" class=" hidden"
+       onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "douban"});'><span
+                class="icon-sn-douban"></span></a>
+</div>
+<div class="form-group clearfix">
+    <a class="btn-block btn btn-default pull-right pl20 pr20 
+                        SFLogin
+             "
+
+            
+        onclick='ga("send", "event", "email login button", "clicked", "login modal");'>
+                    注册新账号
+            </a>
+</div>
+<p class="text-muted text-center mb15">继续即表示你同意<a href="/tos" target="_blank">《服务条款》</a>和<a href="/privacy" target="_blank">《隐私政策》</a></p>        </div>
+    </div>
+</script>
+    <script id="registerModal" type="text/template">
+    <div class="row bg-white login-modal">
+        <div class="col-md-12 login-wrap">
+            
+            <form action="/api/user/register" method="POST" role="form" class="mt15">
+                <div class="form-group">
+                    <label for="name" class="control-label">你的名字</label>
+                    <input type="text" class="form-control" name="name" required placeholder="真实姓名或常用昵称">
+                </div>
+                
+                <div class="form-group">
+                    <label for="mail" class="control-label">手机号</label>
+                    <input type="text" class="form-control" id="login-name" name="mail" required placeholder="11 位手机号">
+                </div>
+                
+                <input type="text" class="hidden" name="register_type" value="mail">
+
+                <div class="form-group">
+                    <div class="captchaInput mb10">
+                        <input type="text" class="form-control" name="cap" placeholder="右侧的验证码" style="width:50%; display: inline; margin-right: 15px;">
+                        <span class="mt10">
+                                <a id="loginReloadCaptcha" href="javascript:void(0)">
+                                <img src="/user/captcha?w=135&h=34" class="cap" width="135" height="34"/></a>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="phone-register-only hidden">
+                        <div class="input-group">
+                            <input name="code" type="text" class="form-control js-user-login__phone-code-value" placeholder="短信验证码">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default js-user-login__phone-vaild-btn" style="width:96px;" type="button">
+                                获取验证码</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password" class="control-label">密码</label>
+                    <input type="password" class="form-control" name="password" required placeholder="不少于 6 位的密码">
+                </div>
+                <div class="form-group clearfix">
+                    <button type="submit" class="btn-block btn btn-primary pl20 pr20 pull-right"
+                            onclick='ga("send", "event", "email register button", "clicked", "login modal");'>注册
+                    </button>
+                </div>
+                                <div class="text-muted text-center more-login-area">
+    <span class="more-login-words">更多登录方式</span>
+</div>
+<div class="widget-login mb15 text-center">
+    <a href="/user/oauth/google" class=""
+       onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "google"});'><span
+                class="icon-sn-google"></span></a>
+    <a href="/user/oauth/github" class=""
+       onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "github"});");'><span
+                class="icon-sn-github"></span></a>
+    <a href="/user/oauth/weibo" class=""
+       onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "weibo"});'><span
+                class="icon-sn-weibo"></span></a>
+    <a href="/user/oauth/qq" class=""
+       onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "qq"});'><span
+                class="icon-sn-qq"></span></a>
+    <a href="/user/oauth/weixin" class=""
+       onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "qq"});'><span
+                class="icon-sn-weixin"></span></a>
+    <a href="/user/oauth/linkedin" class=""
+       onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "linkedin"});'><span
+                class="icon-sn-linkedin"></span></a>
+    <span id="loginShowMore" style="cursor: pointer" class="mb5"><span class="icon-sn-dotted"></span></span>
+    <a href="/user/oauth/twitter" class=" hidden"
+       onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "twitter"});'><span
+                class="icon-sn-twitter"></span></a>
+    <a href="/user/oauth/facebook" class=" hidden"
+       onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "facebook"});'><span
+                class="icon-sn-facebook"></span></a>
+    <a href="/user/oauth/douban" class=" hidden"
+       onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "douban"});'><span
+                class="icon-sn-douban"></span></a>
+</div>
+<div class="form-group clearfix">
+    <a class="btn-block btn btn-default pull-right pl20 pr20 
+                        SFRegister
+             "
+
+            
+        onclick='ga("send", "event", "email login button", "clicked", "login modal");'>
+                    已有账号登录
+            </a>
+</div>
+<p class="text-muted text-center mb15">继续即表示你同意<a href="/tos" target="_blank">《服务条款》</a>和<a href="/privacy" target="_blank">《隐私政策》</a></p>            </form>
+        </div>
+    </div>
+</script>
+    <script id="phoneLoginModal" type="text/template">
+
+    <div class="row bg-white login-modal phonelogin-modal">
+        <div class="col-md-12 login-wrap">
+            <form action="/api/user/phonelogin" method="POST" role="form" class="mt15">
+                <div class="form-group">
+                    <label for="phone" class="control-label required">手机号</label>
+                    <input type="text" class="form-control phonelogin--phone" name="phone" tabindex="1" required placeholder="11 位手机号"
+                           autocomplete="off">
+                    <span class="help-block"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="authCode" class="control-label required">验证码</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control bindphone--code" name="authCode" placeholder="短信验证码">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default user-bind__phone-vaild-btn" type="button">获取验证码</button>
+                        </span>
+                    </div>
+                    <div class="col-sm-3"></div>
+                </div>
+
+                <div class="form-group">
+                    <a 
+                                                            href="/user/login"
+                                class="SFRegister"
+                                                >密码登录（手机号或 Email）</a>
+                </div>
+                <div class="form-group clearfix">
+                    <button type="submit" class="btn-block btn btn-primary pull-right pl20 pr20" tabindex="3"
+                            onclick='ga("send", "event", "email login button", "clicked", "login modal");'>登录
+                    </button>
+                </div>
+            </form>
+            <div class="text-muted text-center more-login-area">
+    <span class="more-login-words">更多登录方式</span>
+</div>
+<div class="widget-login mb15 text-center">
+    <a href="/user/oauth/google" class=""
+       onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "google"});'><span
+                class="icon-sn-google"></span></a>
+    <a href="/user/oauth/github" class=""
+       onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "github"});");'><span
+                class="icon-sn-github"></span></a>
+    <a href="/user/oauth/weibo" class=""
+       onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "weibo"});'><span
+                class="icon-sn-weibo"></span></a>
+    <a href="/user/oauth/qq" class=""
+       onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "qq"});'><span
+                class="icon-sn-qq"></span></a>
+    <a href="/user/oauth/weixin" class=""
+       onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "qq"});'><span
+                class="icon-sn-weixin"></span></a>
+    <a href="/user/oauth/linkedin" class=""
+       onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "linkedin"});'><span
+                class="icon-sn-linkedin"></span></a>
+    <span id="loginShowMore" style="cursor: pointer" class="mb5"><span class="icon-sn-dotted"></span></span>
+    <a href="/user/oauth/twitter" class=" hidden"
+       onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "twitter"});'><span
+                class="icon-sn-twitter"></span></a>
+    <a href="/user/oauth/facebook" class=" hidden"
+       onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "facebook"});'><span
+                class="icon-sn-facebook"></span></a>
+    <a href="/user/oauth/douban" class=" hidden"
+       onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "douban"});'><span
+                class="icon-sn-douban"></span></a>
+</div>
+<div class="form-group clearfix">
+    <a class="btn-block btn btn-default pull-right pl20 pr20 
+                        SFLogin
+             "
+
+            
+        onclick='ga("send", "event", "email login button", "clicked", "login modal");'>
+                    注册新账号
+            </a>
+</div>
+<p class="text-muted text-center mb15">继续即表示你同意<a href="/tos" target="_blank">《服务条款》</a>和<a href="/privacy" target="_blank">《隐私政策》</a></p>        </div>
+    </div>
+</script>
+
+
+<script>
+    window.serverTime = 1575262691000;
+</script>
+
+<script>
+    (function (w) {
+        w.SF = {
+            staticUrl: "https://cdn.segmentfault.com/v-5dcd2518"
+        };
+        w.SF.token = (function () {
+    var _KNS = '034'//'FW'
++'55'//'O'
++//'4'
+'e'+''///*'NFl'*/'NFl'
++'b9'//'gaq'
++//'R'
+'1'+//'fTB'
+'81'+//'Z'
+'494'+'d'//'Z'
++//'C'
+'b2'+'6k'//'6k'
++//'0'
+'76'+'acb'//'l2l'
++'a09'//'8'
++/* '2dY'//'2dY' */''+'2c'//'xOb'
++'a'//'FZ'
++''///*'dln'*/'dln'
++'6'//'b'
++'ca'//'hmk'
++'f'//'v'
+, _eca3 = [[17,19]];
+
+    for (var i = 0; i < _eca3.length; i ++) {
+        _KNS = _KNS.substring(0, _eca3[i][0]) + _KNS.substring(_eca3[i][1]);
+    }
+
+    return _KNS;
+})();;
+    })(window);
+
+                var lock = {
+        type: "",
+        text: '',
+        table: {"ban_post":[1,"\u4f60\u5df2\u7ecf\u88ab\u7981\u8a00, \u65e0\u6cd5\u8fdb\u884c\u6b64\u64cd\u4f5c, \u5982\u6709\u7591\u4e49\u8bf7\u63d0\u4ea4\u7533\u8bc9, \u6216\u8005\u53d1\u90ae\u4ef6\u5230pr@segmentfault.com"]}
+    };
+
+        var ddosMode = false;
+    
+        (function (currentUrl) {
+        if (typeof URL != 'undefined') {
+            var baseUrl = new URL('https://segmentfault.com');
+
+            if (baseUrl.protocol != currentUrl.protocol
+                || baseUrl.host != currentUrl.host) {
+                window.location.href = baseUrl.protocol + '//' + baseUrl.host
+                    + currentUrl.pathname + currentUrl.search + currentUrl.hash;
+            }
+        }
+    })(window.location);
+    </script>
+
+             <script crossorigin src="https://cdn.segmentfault.com/v-5dcd2518/3rd/assets.js"></script>
+                 
+        <script crossorigin src="https://cdn.segmentfault.com/v-5dcd2518/index/script/index.min.js"></script>
+            
+
+
+<script src="https://cdn.segmentfault.com/v-5dcd2518/global/script/ads.min.js" type="text/javascript"></script>
+
+<script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-918487-8']);
+    _gaq.push(['_trackPageview']);
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+                
+        
+
+                
+
+    ga('create', 'UA-918487-8', 'auto', {
+        'userID'
+    : 0,
+        'createdTime'
+    : 0,
+        'now'
+    : 1575262691,
+        'allowLinker'
+    : true });
+    ga('require', 'linker');
+    ga('linker:autoLink', ['docs.segmentfault.com'] );
+    ga('set', 'dimension1', 'guest');
+    ga('send', 'pageview');
+
+        if(document.getElementById('UGTKzPZbRoOS')){
+        UGTKzPZbRoOS='No';
+    } else {
+        UGTKzPZbRoOS='Yes';
+    }
+
+    if(typeof ga !=='undefined'){
+        ga('send','event','Blocking Ads',UGTKzPZbRoOS,{'nonInteraction':1});
+    } else if(typeof _gaq !=='undefined'){
+        _gaq.push(['_trackEvent','Blocking Ads',UGTKzPZbRoOS,undefined,undefined,true]);
+    }
+
+</script>
+
+
+
+</body>
+</html>

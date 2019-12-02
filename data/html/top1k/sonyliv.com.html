@@ -1,0 +1,258 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" ng-app="tveWebApp">
+<!--<![endif]-->
+
+<head>
+  <link rel="manifest" href="/manifest.json">
+  <script type="text/javascript">
+    var clevertap = { event: [], profile: [], account: [], onUserLogin: [], notifications: [], privacy: [] };
+    // replace with the CLEVERTAP_ACCOUNT_ID with the actual ACCOUNT ID value from your Dashboard-> Settings page
+    clevertap.account.push({ 'id': '48K-8WW-754Z' });
+    clevertap.privacy.push({ optOut: false }); //set the flag to true, if the user of the device opts out of sharing their data
+    clevertap.privacy.push({ useIP: false }); //set the flag to true, if the user agrees to share their IP data
+    var XBuildHeader = Object.freeze({ value: '1e2f1b8ff0eb2e79b57f0246f6c743477c736c846c92dc7bbd779bf5d2ce4f2ead589deebbd542f09183b22b5e720de729b1ae1fdb678beb6577fb5197f5c3940e6190cd9fdef7ff80287022cc512b410513ebcee73c084e230597b2fa8e23709dd0da1bf0c27381c50678bfe00305a1' });
+    var SegmentKey = Object.freeze({ value: 'f8A0Z90NslNzH2dDdETtwZFE8Ivgx9Z2' });
+    var comscoreIdValue = Object.freeze({ value: '30385880' });
+    var comscoreId = comscoreIdValue.value;
+    var appgridAppKey = Object.freeze({ value: '55cc94d2e4b07acafadc9b3c' });
+    (function () {
+      var wzrk = document.createElement('script');
+      wzrk.type = 'text/javascript';
+      wzrk.async = true;
+      wzrk.src = ('https:' == document.location.protocol ?
+        'https://d2r1yp2w7bby2u.cloudfront.net' : 'http://static.clevertap.com') + '/js/a.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wzrk, s);
+    })();
+  </script>
+
+  <title>Sony LIV</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <base href="/">
+  <!--<script type="text/javascript" src="extensions/new-relic.js"></script>-->
+  <meta name="title" content="Sony LIV">
+  <meta name="description" content="Watch Indian TV Serials, Online Movies, Live Sports Updates, Original Shows, Music | Sony LIV">
+  <meta name="keywords" content="Watch Indian TV Serials, Online Movies, Live Sports Updates, Original Shows, Music | Sony LIV">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+  <meta name="author" content="Sony Pictures Networks India Pvt. Ltd">
+  <!-- social sharing meta tags -->
+  <meta property="fb:app_id" content="1189525214395413">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sony LIV">
+  <meta name="twitter:image" content="http://sonyliv.com/asset/socialShareLogo">
+  <meta name="twitter:description" content="Watch Indian TV Serials, Online Movies, Live Sports Updates, Original Shows, Music | Sony LIV">
+  <meta property="og:title" content="Sony LIV" name="twitter:title">
+  <meta property="og:image" content="http://sonyliv.com/asset/socialShareLogo" name="twitter:image">
+  <meta property="og:description" content="Watch Indian TV Serials, Online Movies, Live Sports Updates, Original Shows, Music | Sony LIV" name="twitter:description">
+  <!-- social sharing meta tags ends -->
+  <!-- <meta name="apple-itunes-app" content="app-id=370144476"> -->
+  <!-- <meta name="google-play-app" content="app-id=com.google.android.youtube"> -->
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="favicon.png" type="image/x-icon">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet">
+  <link href="//players.brightcove.net/videojs-ima3/2/videojs.ima3.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="//assets-sonyliv.sportz.io/video-player/css/player-events.min.css">
+
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/4f416289.slider.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script type="text/javascript" src="extensions/gpt.js"></script>
+  <script type="text/javascript" src="extensions/webview.js"></script>
+  <!--<script type="text/javascript" src="//wurfl.io/wurfl.js"></script>-->
+  <script type="text/javascript" src="extensions/libphonenumber.js"></script>
+  <script type="text/javascript" src="extensions/akamai/js/amp.premier.js"></script>
+
+  <script src="https://apis.google.com/js/platform.js"></script>
+  <!-- <script type="text/javascript" src="//wurfl.io/wurfl.js"></script> -->
+  <script>
+    window.asyncSportzSDK = function () {
+      window.SISDK = new SportzSDK({ "clientId": 21 });
+    }
+  </script>
+  <script type="text/javascript" src="https://sportz.sonyliv.com/wl/js/siwl-init.js"></script>
+  <script type="text/javascript" src="https://sportz.sonyliv.com/si-sdk/js/sports-sdk.js"></script>
+  <script type="text/javascript" src="//assets-sonyliv.sportz.io/video-player/js/markers.min.js"></script>
+  <script type="text/javascript" src="//79423.analytics.edgekey.net/ma_library/html5/html5_malibrary.js"></script>
+  <script type="text/javascript" src="extensions/charmboard.js"></script>
+
+  <script type="text/javascript">
+
+    gapi.load('auth2', function () {
+      gapi.auth2.init({
+        client_id: '159799352625-rg89d99kqb2qdabo99lv822gsie7jgr5.apps.googleusercontent.com',
+        scope: 'profile email'
+      });
+    });
+
+    function readCookie(cname) {
+      var name = cname + "=";
+      var decodedCookie = decodeURIComponent(document.cookie);
+      var ca = decodedCookie.split(';');
+      for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+          c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+        }
+      }
+      return null;
+    }
+  </script>
+  <!-- Begin comScore Tag -->
+  <script>
+    var _comscore = _comscore || [];
+    _comscore.push({ c1: "2", c2: comscoreId });
+    (function() {
+      var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+      s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+      el.parentNode.insertBefore(s, el);
+    })();
+  </script>
+  <noscript>
+    <img src="https://sb.scorecardresearch.com/p?c1=2&c2=30385880&cv=2.0&cj=1">
+  </noscript>
+  <!-- End comScore Tag -->
+  
+    <link href="https://www.sonyliv.com/" rel="canonical" ng-if="canonicalUrl">
+  
+</head>
+
+<body class="{{screenClass}}" ng-class="">
+
+  <!-- Google Tag Manager -->
+  <noscript>
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-MNT9LL" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) }
+        ; if (!f._fbq) f._fbq = n;
+      n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
+    }(window,
+      document, 'script', '//connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '183554881983963');
+    fbq('track', "PageView");</script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=183554881983963&ev=PageView&noscript=1"></noscript>
+  <script>(function (w, d, s, l, i) {
+    w[l] = w[l] || []; w[l].push({
+      'gtm.start':
+        new Date().getTime(), event: 'gtm.js'
+    }); var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+        '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-MNT9LL');</script>
+
+  <script>
+      /*!function () {
+        var analytics = window.analytics = window.analytics || []; if (!analytics.initialize) if (analytics.invoked) window.console && console.error && console.error("Segment snippet included twice."); else {
+        analytics.invoked = !0; analytics.methods = ["trackSubmit", "trackClick", "trackLink", "trackForm", "pageview", "identify", "reset", "group", "track", "ready", "alias", "debug", "page", "once", "off", "on"]; analytics.factory = function (t) { return function () { var e = Array.prototype.slice.call(arguments); e.unshift(t); analytics.push(e); return analytics } }; for (var t = 0; t < analytics.methods.length; t++) { var e = analytics.methods[t]; analytics[e] = analytics.factory(e) } analytics.load = function (t) { var e = document.createElement("script"); e.type = "text/javascript"; e.async = !0; e.src = ("https:" === document.location.protocol ? "https://" : "http://") + "cdn.segment.com/analytics.js/v1/" + t + "/analytics.min.js"; var n = document.getElementsByTagName("script")[0]; n.parentNode.insertBefore(e, n) }; analytics.SNIPPET_VERSION = "4.0.0";
+          analytics.load("f8A0Z90NslNzH2dDdETtwZFE8Ivgx9Z2");
+          analytics.page();
+        }
+      }();*/    
+  </script>
+  <!--<script type="text/javascript">-->
+  <!--googletag.cmd.push(function() {-->
+  <!--googletag.defineSlot('/6062/iab_vast_samples', [728, 90], 'companionDiv')-->
+  <!--.addService(googletag.companionAds())-->
+  <!--.addService(googletag.pubads());-->
+  <!--googletag.companionAds().setRefreshUnfilledSlots(true);-->
+  <!--googletag.pubads().enableVideoAds();-->
+  <!--googletag.enableServices();-->
+  <!--});-->
+  <!--</script>-->
+  <!--segment-test-key: ztkZ2QkTIvlcDhNJDlRv0rq5IgFUy6kP -->
+  <!--segment-test-key: f8A0Z90NslNzH2dDdETtwZFE8Ivgx9Z2-->
+  <!--segment-prod-key: ztkZ2QkTIvlcDhNJDlRv0rq5IgFUy6kP-->
+
+  <!-- End Google Tag Manager -->
+  <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+  <div style="position: fixed; top: -25px; height: 25px; width: 100%; background-color: white; z-index:1111111111111;">
+  </div>
+  <div ng-show="offline" ng-include="'/partials/modals/offlineAlertModal.html'">
+
+  </div>
+  <div class="outerspace-container" ng-click="onOuterContainerClick($event);" ng-style="{'margin-top': bannerHeight}">
+    <div ng-if="!isMaintenancePage">
+      <via-navbar></via-navbar>
+    </div>
+    <!-- Add your site or application content here -->
+    <div class="main-container">
+      <div ui-view=""></div>
+    </div>
+
+    <div ng-controller="FooterCtrl" ng-if="!isMaintenancePage" ng-include="'/partials/footer'"></div>
+
+  </div>
+  <!--<script src="http://platform.twitter.com/widgets.js"></script>-->
+
+  <!-- here we load moment languages -->
+  <!--<moment-lang-loader></moment-lang-loader>-->
+
+  <!--[if lt IE 9]>
+        <script src="bower_components/es5-shim/es5-shim.js"></script>
+        <script src="bower_components/json3/lib/json3.min.js"></script>
+        <![endif]-->
+
+        <!-- JS ReCaptcha API -->
+        <script src="//www.google.com/recaptcha/api.js?render=explicit&onload=vcRecaptchaApiLoaded" async defer="defer"></script>
+
+        <script src="scripts/9beb8cda.vendor.js"></script>
+
+        <script src="extensions/angularRecaptcha.js"></script>
+        <script src="extensions/owlcarousel/owl.carousel.js"></script>
+        <script src="extensions/branchio.js"></script>
+        <script src="extensions/catchMedia/CMSDK-sonyliv-latest.min.js"></script>
+        <script src="extensions/catchmedia.js"></script>
+
+
+        <!-- ADD PLURALIZATION RULES IN THE BELOW BLOCK -->
+        <script src="scripts/c0c00db9.messageFormatLangs.js"></script>
+
+        <script src="scripts/e67b3848.scripts.js"></script>
+
+        <!-- configure constants -->
+        <script>
+        angular.module('tveWebApp').config(['tveConstantsProvider', function(tveConstants) {
+            tveConstants.set({
+                blurmaster: 'http://blurmaster.apps.accedo.tv/'
+            });
+        }]).config(['FacebookProvider', function(Facebook) {
+            var fbSettings = {
+              appId: '1189525214395413',
+              status: true,
+              cookie: true,
+              xfbml: true,
+              version: 'v2.4'
+            };
+          console.log(fbSettings);
+            Facebook.init(fbSettings);
+            //Facebook.init('1189525214395413');
+        }])
+          .config(['GooglePlusProvider', function(GooglePlusProvider) {
+          GooglePlusProvider.init({
+            clientId: '159799352625-rg89d99kqb2qdabo99lv822gsie7jgr5.apps.googleusercontent.com',
+            apiKey: ''
+          });
+            GooglePlusProvider.setScopes('profile email');
+        }]);
+        </script>
+    <!-- <div ng-if="linkExpToastMsg" class="toast-link-expired"><span>{{'link_exp_toast_msg' | translate}}</span></div> -->
+    </body>
+
+</html>

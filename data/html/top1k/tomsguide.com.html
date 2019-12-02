@@ -1,0 +1,1674 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-locale="US">
+<head>
+<script>
+if(window&&!("Promise"in window)){var xhr=new XMLHttpRequest;xhr.open("GET",'/media/shared/js/promise.js',false);xhr.onerror=function(){console.log(xhr.statusText)};xhr.send("");eval(xhr.responseText);}
+</script> <script>window.usingBordeauxAds = true</script>
+<!-- Consent Manager Tag : Stubbed (minified) (updated 2018-04-27T17:00) -->
+<script type="text/javascript">
+/*! CMP 2.18.0 Copyright 2018 Oath Holdings, Inc. */
+!function(e){var t={};function n(r){if(t[r])return t[r].exports;var o=t[r]={i:r,l:!1,exports:{}};return e[r].call(o.exports,o,o.exports,n),o.l=!0,o.exports}n.m=e,n.c=t,n.d=function(e,t,r){n.o(e,t)||Object.defineProperty(e,t,{configurable:!1,enumerable:!0,get:r})},n.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(t,"a",t),t},n.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},n.p="/",n(n.s=2)}({2:function(e,t){!function(){var e=!1;function t(e){var t="string"==typeof e.data,n=e.data;if(t)try{n=JSON.parse(e.data)}catch(e){}if(n&&n.__cmpCall){var r=n.__cmpCall;window.__cmp(r.command,r.parameter,function(n,o){var a={__cmpReturn:{returnValue:n,success:o,callId:r.callId}};e&&e.source&&e.source.postMessage(t?JSON.stringify(a):a,"*")})}}"function"==typeof __cmp||(window.__cmp=function(){var t=arguments;if(__cmp.a=__cmp.a||[],!t.length)return __cmp.a;"ping"===t[0]?t[2]({gdprAppliesGlobally:e,cmpLoaded:!1},!0):__cmp.a.push([].slice.apply(t))},function e(){if(document.body&&document.body.firstChild){var t=document.body,n=document.createElement("iframe");n.style.display="none",n.height=n.width=0,n.name="__cmpLocator",t.insertBefore(n,t.firstChild)}else setTimeout(e,5)}(),window.addEventListener?window.addEventListener("message",t,!1):window.attachEvent("onmessage",t))}()}});
+</script>
+<!-- End Consent Manager Tag : Stubbed (minified) -->
+<script>
+window.askForConsent = true;
+window.waitForConsent = true;
+window.indexExchangeEnabled = true;
+window.amazonA9Enabled = true;
+window.rampS2SEnabled = null;
+window.iasOptimiseEnabled = true;
+window.bluekaiEnabled = true;
+window.cmpConfig = {"gdprAppliesGlobally":false,"uiUrl":"https:\/\/consent.cmp.tomsguide.com\/cmpui.html"};
+/*! begin dom-promises (v1.0.0) */
+(function(){function v(a){n||(n=!0,w.forEach(m(a)))}function x(a){p||(p=!0,y.forEach(m(a)))}function g(){return q&&q.now&&q.now()||0}function m(){for(var a=arguments.length,c=Array(a),b=0;b<a;b++)c[b]=arguments[b];return function(a){return a.apply(void 0,c)}}function B(a){"cmp_request_translation_data"===a.data&&Promise.resolve(window.reliablePageLoad).then(function(){var a=window.__translator.trans;a={tag:"cmp_translations_data",main:{heading:a("cmp_main_heading"),description:a("cmp_main_description"),
+btnAccept:a("cmp_main_btn_accept"),btnMoreInfo:a("cmp_main_btn_moreinfo")},confirm:{heading:a("cmp_confirm_heading"),description:a("cmp_confirm_description"),btnGoBack:a("cmp_confirm_btn_goback"),btnLeave:a("cmp_confirm_btn_leave")},purposes:{heading:a("cmp_purposes_heading"),description:a("cmp_purposes_description"),btnAcceptAll:a("cmp_purposes_btn_acceptall"),btnRejectAll:a("cmp_purposes_btn_rejectall"),btnSave:a("cmp_purposes_btn_save"),btnAndContinue:a("cmp_purposes_btn_andcontinue"),btnAndContinueShort:a("cmp_purposes_btn_andcontinueshort"),
+list:{1:a("cmp_purposes_list_1"),"1_description":a("cmp_purposes_list_1_description"),2:a("cmp_purposes_list_2"),"2_description":a("cmp_purposes_list_2_description"),3:a("cmp_purposes_list_3"),"3_description":a("cmp_purposes_list_3_description"),4:a("cmp_purposes_list_4"),"4_description":a("cmp_purposes_list_4_description"),5:a("cmp_purposes_list_5"),"5_description":a("cmp_purposes_list_5_description")}},vendors:{heading:a("cmp_vendors_heading"),description:a("cmp_vendors_description"),btnAcceptAll:a("cmp_vendors_btn_acceptall"),
+btnRejectAll:a("cmp_vendors_btn_rejectall"),btnSave:a("cmp_vendors_btn_save"),btnBack:a("cmp_vendors_btn_back"),privacyPolicy:a("cmp_vendors_privacy_policy")}};document.getElementById("cmp-ui-iframe").contentWindow.postMessage(a,"*")});"cmp_request_ffte_data"===a.data&&Promise.resolve(window.reliablePageLoad).then(function(){var a={tag:"cmp_ffte_data",ffte:window.ffte||{}};document.getElementById("cmp-ui-iframe").contentWindow.postMessage(a,"*")})}function C(a,c,b){a.performance&&a.performance.timing&&
+Date.now();a.__cmp("init",a.cmpConfig);a.__cmp("getVendorConsents",null,function(e,D){D?(c({askedForConsent:!0,consent:e}),a.reliablePageLoad.then(function(){if(e.gdprApplies&&.33>Math.random()){var b=E(e.vendorConsents);a.ga&&a.ga("send","event","CMP","getVendorConsents",b.label,b.consented,{nonInteraction:!0,dimension123:b.consented})}})):b(Error("Failed to get vendor consents"))})}function F(a,c,b){function e(a,b){return null===b||void 0===b?a:b}JSON.parse(e("true",h("mock_consent_success")(a)))?
+(b=parseInt(h("mock_consent_timeout")(a),10),a={askedForConsent:!0,consent:{gdprApplies:JSON.parse(e("true",h("mock_gdpr_applies")(a))),hasGlobalScope:JSON.parse(e("false",h("mock_has_global_scope")(a))),metadata:"AAAAAAA",purposeConsents:JSON.parse(e(JSON.stringify({1:!0,2:!0,3:!0,4:!0,5:!0}),h("mock_purpose_consents")(a))),vendorConsents:JSON.parse(e("{}",h("mock_vendor_consents")(a)))}},isNaN(b)?c(a):setTimeout(c,b,a)):b(Error("Failed to get vendor consents"))}function E(a){var c=1<arguments.length&&
+void 0!==arguments[1]?arguments[1]:"none";if(!(a instanceof Object))return a?{label:"all",total:0,consented:0}:{label:c,total:0,consented:0};var b=G(a);b.label=0===b.total?"n/a":0===b.consented?c:b.consented===b.total?"all":"some";return b}function G(a){if(!(a instanceof Object))return{total:0,consented:0};var c=Object.keys(a),b=c.length;c=c.filter(function(b){return a[b]}).length;return{total:b,consented:c}}function r(a){return function(c){return 0<=c.location.search.indexOf(a)}}function h(a){return function(c){return z(a,
+c.location.search)}}function z(a,c){var b=2<arguments.length&&void 0!==arguments[2]?arguments[2]:"\x26";if(""===a)return!1;var e=c.indexOf(a+"\x3d");return 0<=e?(e=c.indexOf("\x3d",e),b=c.indexOf(b,e+1),0<=b?c.substring(e+1,b):c.substring(e+1)):!1}function H(a){return a.split("").map(function(a){return I(J.call(a,0)-1)}).join("")}var K=function(a){return a.split("").map(function(a){return String.fromCharCode(a.charCodeAt(0)+1)}).join("")}("sp.blocking"),f=String,I=f.fromCharCode,J=f.prototype.charCodeAt,
+d=window,A=d.document,q=d.performance;f=d.Promise;var t=g();performance.mark("DOMPromises - Initialising");d.resolveFEP=null;d.processFEP=f?new f(function(a){d.resolveFEP=a}):{then:function(){}};var k=!(-1<window.location.href.indexOf("disable_dom_promise_timeouts")),p=!1,y=[];k&&setTimeout(function(){return x({timeStamp:g()})},5E3);A.addEventListener("DOMContentLoaded",x);d.reliableDOMContentLoaded=f?new f(function(a){k&&setTimeout(function(){return a({timeStamp:g()})},5E3);A.addEventListener("DOMContentLoaded",
+a)}):{then:function(a){p?a():y.push(a)}};d.reliableDOMContentLoaded.then(function(a){console.log("DOMContentLoaded at",a.timeStamp-t|0)});var n=!1,w=[];k&&setTimeout(function(){return v({timeStamp:g()})},7E3);d.addEventListener("load",v);d.reliablePageLoad=f?new f(function(a){k&&setTimeout(function(){return a({timeStamp:g()})},7E3);d.addEventListener("load",a)}):{then:function(a){n?a():w.push(a);return d.reliablePageLoad},catch:function(){return d.reliablePageLoad}};d.reliablePageLoad.then(function(a){console.log("PageLoad at",
+a.timeStamp-t|0)});var l=!1,u=[];k&&setTimeout(function(){var a={timeStamp:g()};l||(l=!0,u.forEach(m(a)))},1E4);d.resolveBordeauxDone=function(){var a={timeStamp:g()};l||(l=!0,u.forEach(m(a)))};d.bordeauxDone=f?new f(function(a){k&&setTimeout(function(){return a({timeStamp:g()})},1E4);d.resolveBordeauxDone=function(){return a({timeStamp:g()})}}):{then:function(a){l?a():u.push(a)}};d.bordeauxDone.then(function(a){console.log("BordeauxDone at",a.timeStamp-t|0)});(function(a){var c=a.Promise;a.addEventListener("message",
+B,!1);a.reliableConsentGiven=c?c.resolve(a.reliableDOMContentLoaded).then(function(){return new c(function(b,c){r("force_clear_consent")(a)&&(document.cookie="EuConsent\x3d; path\x3d/; Max-Age\x3d0",document.cookie="cmp\x3d; path\x3d/; Max-Age\x3d0",document.cookie="TestingHideEUConsent\x3d; path\x3d/; Max-Age\x3d0");r("force_hide_consent")(a)&&(document.cookie="TestingHideEUConsent\x3dtrue;");var e=r("mock_consent")(a);"true"===z("TestingHideEUConsent",document.cookie,";")?b({askedForConsent:!1}):
+e?F(a,b,c):a.askForConsent?C(a,b,c):b({askedForConsent:!1})})}):{then:function(){}};a.reliableConsentGiven.then(function(){a.bdx&&a.bdx.metrics&&a.bdx.metrics.mark("Reliable consent")});a.reliableConsentGiven.then(function(b){b.askedForConsent&&b.consent.gdprApplies&&a.reliablePageLoad.then(function(){var b=a.document.querySelector("#document-footer-content \x3e nav \x3e ul");if(b){var c=a.document.createElement("a");c.addEventListener("click",function(){a.__cmp("renderConsents",function(){})});c.href=
+"#";c.textContent=a.__translator.trans("cmp_footer_link");var d=a.document.createElement("li");d.appendChild(c);b.appendChild(d)}if(b=a.document.querySelector("ul.footer__listcontainer"))c=a.document.createElement("a"),c.className="footer__link",c.addEventListener("click",function(){a.__cmp("renderConsents",function(){})}),c.href="#",c.textContent=a.__translator.trans("cmp_footer_link"),d=a.document.createElement("li"),d.className="footer__list-item",d.appendChild(c),b.appendChild(d);if(b=a.document.querySelector("#gawker-contact-block ul"))c=
+a.document.createElement("a"),c.className="is-reversed",c.addEventListener("click",function(){a.__cmp("renderConsents",function(){})}),c.href="#",c.textContent=a.__translator.trans("cmp_footer_link"),d=a.document.createElement("li"),d.appendChild(c),b.appendChild(d)})})})(d);(function(){var a=window,c=a.document,b=a.Promise;a.wadoinawdoijzxioznelknsdf=b?new b(function(a){var b=parseInt(h("mock_tiberius")(window),10);isNaN(b)||setTimeout(a,b,!0);c.addEventListener(H(K),function(){a(!0)})}):{then:function(){}}})()})();
+/*! end dom-promises (v1.0.0) */</script>
+<script>
+window.hawk_css_endpoint = "https://widgets.fie-data.co.uk";
+</script>
+<script id="hawk-script">
+function loadHawk(src) {
+!function (e, f, u) {
+e.async = 1;
+e.src = u;
+f.parentNode.insertBefore(e, f);
+}(document.createElement('script'),
+document.getElementsByTagName('script')[0],
+src);
+}
+window.reliableDOMContentLoaded.then(function() {
+loadHawk("https://widgets.fie-data.co.uk/js/w/tg.js");
+});
+</script>
+<link rel="preload" href="https://widgets.fie-data.co.uk/js/w/tg.js" as="script">
+<script>
+window.adParameters = {
+site: 'tomsguide',
+content: 'unknown',
+type: 'homepage',
+};
+</script>
+<script>window.gaCookieSet=/(?:^|;\\s*)_ga/.test(document.cookie);</script>
+<script>window.vanilla = window.vanilla || {}</script>
+<script>'use strict';(function(){function g(c,a){return function(){return setTimeout(c,a)}}function h(c,a,b){b=void 0===b?function(){}:b;return function(){var d=c.createElement("script"),e=c.getElementsByTagName("script")[0],f=k({},a,{async:1});Object.keys(f).forEach(function(a){return d.setAttribute(a,f[a])});e.parentNode.insertBefore(d,e);b()}}var k=Object.assign||function(c){for(var a=1;a<arguments.length;a++){var b=arguments[a],d;for(d in b)Object.prototype.hasOwnProperty.call(b,d)&&(c[d]=b[d])}return c};
+window.vanilla.addJs=function(c,a,b,d){b=void 0===b?!1:b;c=h(document,c,d);a=null!==a?g(c,a):c;b?window.reliablePageLoad.then(a):a()}})();</script>
+<script>'use strict';(function(){function f(a,d){return function(){var c=a.createElement("link"),b=g({},d,{rel:"stylesheet",type:"text/css"});Object.keys(b).forEach(function(a){return c.setAttribute(a,b[a])});var e=a.getElementsByTagName("head")[0];e.parentNode.insertBefore(c,e)}}var g=Object.assign||function(a){for(var d=1;d<arguments.length;d++){var c=arguments[d],b;for(b in c)Object.prototype.hasOwnProperty.call(c,b)&&(a[b]=c[b])}return a},h=window.requestAnimationFrame||window.webkitRequestAnimationFrame||
+window.mozRequestAnimationFrame||window.msRequestAnimationFrame||function(a){return window.reliablePageLoad.then(a)};window.vanilla.addCss=function(a){return h(f(document,a))}})();</script>
+<script>
+function handleHeaderError() {
+if (window.amIIE && !window.amIIE()) {
+window.wadoinawdoijzxioznelknsdf.then(function () {
+window._sp_ = window._sp_ || {};
+window._sp_.config = window._sp_.config || {};
+if (window._sp_.bootstrap && !window.headerExecuted) {
+window._sp_.bootstrap('//vanilla.futurecdn.net/tomsguide/147371/media/js/header/header.js');
+}
+})
+}
+}
+</script>
+<script>
+window.bordeaux = window.bordeaux || {};
+window.bordeaux.cmd = window.bordeaux.cmd || [];
+window.bordeaux.cmd.push(function(){
+window.bordeaux.setPlacement(null);
+});
+</script>
+<script defer src="//vanilla.futurecdn.net/tomsguide/147371/media/js/header/header.js" onerror="handleHeaderError()" crossorigin="anonymous"></script>
+<!-- tag factory //-->
+<meta charset="utf-8">
+<link rel="dns-prefetch" href="//cdn.mos.cms.futurecdn.net">
+<meta data-static-host="//vanilla.futurecdn.net/tomsguide/147371" id="static-host-pattern">
+<script async="1" src="https://consent.cmp.oath.com/cmp3p.js"></script>
+<meta id="gpt-api-script-location" data-src="//securepubads.g.doubleclick.net/tag/js/gpt.js">
+<meta id="index-exchange-script-location" data-src="//js-sec.indexww.com/ht/p/184056-162089139745422.js">
+<meta id="amazon-a9-script-location" data-src="//c.amazon-adsystem.com/aax2/apstag.js">
+<meta id="ias-optimise-script-location" data-src="//cdn.adsafeprotected.com/iasPET.1.js">
+<meta id="bluekai-script-location" data-src="//tags.bkrtx.com/js/bk-coretag.js">
+<script>
+var vanFontLoader=function(e){if("undefined"==typeof e||"object"!=typeof e)return!1;var t=document.getElementsByTagName("head")[0],n=function(e,n){var o=document.createElement("style");o.type="text/css","undefined"!=typeof n&&(o.id=n,o.classList.add("font-style")),o.styleSheet?o.styleSheet.cssText=e:o.appendChild(document.createTextNode(e)),t.appendChild(o)},o=function(){"undefined"!=typeof e.hideKey&&n(e.hideKey+"{visibility:visible}")};if("undefined"!=typeof e.hideKey&&n(e.hideKey+"{visibility:hidden}"),"undefined"!=typeof e.fontKey&&"undefined"!=typeof e.staticHost&&"undefined"!=typeof e.version&&"undefined"!=typeof e.woff2Version){var i=e.fontKey,a=e.version,f=e.woff2Version,r=e.staticHost,d="woff",s=!1;f&&(s=function(e){if(!("FontFace"in e))return!1;var t=new e.FontFace("t",'url( "data:application/font-woff2," ) format( "woff2" )',{});try{var n=t.load();"undefined"!=typeof n.then&&n.then(function(){},function(){})}catch(o){return!1}return"loading"==t.status}(window)),s?d="woff2":navigator.userAgent.indexOf("Android")>-1&&(d="ttf");var c="vanFont-"+i+"-"+d,u=c+".json",y=function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="//"+r+"/"+a+"/media/fonts/json/"+u,t.appendChild(e)},l=!1,v=!1;try{if(l=localStorage.getItem(c)){var v=JSON.parse(l);v.version!=a&&(localStorage.removeItem(c),v=!1)}}catch(p){console.error("Error when parsing font in vanFontLoader",p)}v&&"undefined"!=typeof v.value?(n(v.value,i),o()):y()}this.store=function(e){e.version=a;var t=JSON.stringify(e);localStorage.setItem(c,t),n(e.value),o()}}; try {
+var OpenSans_vanFontLoader = new vanFontLoader({fontKey: 'OpenSans', version: 1, woff2Version: true, staticHost: 'vanilla.futurecdn.net/tomsguide' });
+var tomsguide_vanFontLoader = new vanFontLoader({fontKey: 'tomsguide', version: 2, woff2Version: false, staticHost: 'vanilla.futurecdn.net/tomsguide' ,hideKey: '.icon' });
+} catch(e) {
+console.warn('Failed to load fonts: '+ e.message);
+}
+</script>
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta content="" name="news_keywords">
+<title>Tom's Guide | Tech Product Reviews, Top Picks and How To</title>
+<meta name="pub_date" content="">
+<meta name="description" content="Tom's Guide upgrades your life by helping you decide what tech to buy, showing you how to get the most out of it and solving problems as they arise. Tom's Guide is here to help you.... ">
+<link rel="canonical" href="https://www.tomsguide.com">
+<style id="critical-styles">.newsletter-signup,.mag-banner-wrap,.popular-box{display:none;}html,body,div,span,iframe,h1,h2,h3,h4,p,pre,a,abbr,img,small,i,ul,li,form{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:baseline}label,article,aside,figure,figcaption,footer,header,nav,section,time{padding:0;border:0;font:inherit;font-size:100%;vertical-align:baseline}article,aside,figure,figcaption,footer,header,nav,section,time{margin:0}html{line-height:1}ul{list-style:none}a img{border:none}article,aside,figcaption,figure,footer,header,nav,section{display:block}.container{margin:auto}.container:after{content:"";display:table;clear:both}.container.full{clear:both;max-width:100%}@media screen and (min-width:1000px){.container.full{max-width:970px}}@media screen and (min-width:1574px){.container.full{max-width:1200px}body.limit-width .container.full{max-width:970px}}#main{background:#fff;outline:none}@media screen and (min-width:1000px){.impact #main .listingResults{overflow:visible}.impact #main .trending-wrapper{max-width:922px;margin-left:24px;margin-right:24px}}@media screen and (min-width:1000px){#content{width:600px}}@media screen and (min-width:700px){#content{padding-left:1.5em;padding-right:1.5em;padding-top:.9375em}}@media screen and (min-width:900px){#content{float:left}}@media screen and (min-width:900px){.impact #content{position:relative;border-top:none}}@media screen and (min-width:1000px){.impact #content{padding-left:0;padding-right:0;padding-top:1.25em;width:100%;max-width:922px;margin-left:24px;margin-right:24px}}#sidebar{width:100%}@media screen and (min-width:1000px){#sidebar{width:300px;margin-top:.875em}}@media only screen and (min-width:700px){html{font-size:100%}}html{font-family:"Open Sans",sans-serif;color:#333}h1,h2,h3,h4{font-weight:700}.block-link{display:block;position:relative;color:#333;background:#ddd;line-height:22px;padding:11px 12px;margin:0 12px 12px 0;text-align:center;font-size:14px;font-weight:600;text-transform:uppercase}.block-link:hover{color:#333;text-decoration:none;background:#666}.block-link:visited{color:#333;text-decoration:none}.block-link.full{width:-webkit-calc(100% - 24px);width:calc(100% - 24px)}.separator-heading{border-top:1px solid #ccc;border-bottom:1px solid #ccc}#content>header h1{font-weight:600;font-size:24px;line-height:30px;margin-bottom:.25rem}@media (min-width:700px){#content>header h1{margin-bottom:.5rem;font-size:28px;line-height:34px}}@media (min-width:1574px){#content>header h1{margin-bottom:.75rem;font-size:34px;line-height:42px}body.limit-width #content>header h1{margin-bottom:.5rem;font-size:28px;line-height:34px}}#content>header h2{font-size:18px;line-height:26px;font-weight:300;margin-bottom:20px}@media (min-width:1000px){#content>header h2{font-size:20px;line-height:28px}}@media (min-width:1574px){#content>header h2{font-size:24px;line-height:30px}body.limit-width #content>header h2{font-size:20px;line-height:28px}}.fallback{display:none}.icon:before{font-family:"tomsguide",arial;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;text-transform:none}.icon-arrow-down:before{content:"\f103"}.icon-arrow-right:before{content:"\f105"}.icon-envelope:before{content:"\f11b"}.icon-facebook:before{content:"\f11d"}.icon-filled-envelope:before{content:"\f11e"}.icon-home:before{content:"\f122"}.icon-instagram:before{content:"\f123"}.icon-search:before{content:"\f12c"}.list-text-links .list-title:before{content:"\f12f"}.icon-tick:before{content:"\f132"}.icon-twitter:before{content:"\f133"}.icon-youtube:before{content:"\f136"}.icon-circle{border-radius:50%;display:block}.impact header a{color:#333}article figure{margin-bottom:15px}figure{position:relative}figure img{top:0;left:0}.image-remove-reflow-container{position:relative;height:0;overflow:hidden}.image-remove-reflow-container img{width:100%;position:absolute;top:0;left:0}.dfp-leaderboard-container{margin:auto;max-width:970px;height:auto}.dfp-leaderboard-container:empty{display:none}#burgerbar-none{display:none}#burgerbar{background:#fff}#burgerbar,#burgerbar~.burgerbar .button-menu.checked{display:none}@media only screen and (max-width:699px){#burgerbar:checked~.burgerbar .button-menu.unchecked{display:none}#burgerbar:checked~.burgerbar .button-menu.checked,#burgerbar:checked~.wrapper .menuitems{display:block}}.button-search{position:absolute;top:0;right:0;min-width:60px;height:60px;margin-bottom:0;line-height:60px}@media only screen and (min-width:700px){.button-search{position:relative}}*:checked+.button-search{background-color:#1A98EE}.search-box{z-index:1000001;position:absolute;right:0;top:60px;width:100%;border:2px solid #1A98EE;-webkit-box-sizing:border-box;box-sizing:border-box;background-color:#fff;padding:1em 18px;font-size:16px;display:none;line-height:44px}.search-box .search-submit{position:absolute;right:18px;top:16px;width:44px;height:44px;background-color:#333;color:#fff;border:none;padding:0}.search-box .search-submit .icon:before{font-size:20px}*:checked~.search-box{display:block}.burgerbar .burgerbar-small .search-box{width:100%}@media screen and (min-width:575px){.burgerbar .burgerbar-small .search-box{width:480px}}.search-checkbox{display:none}.masthead-item{width:auto;text-align:center;font-size:0}@media only screen and (min-width:700px){.masthead-item{padding-right:1rem;padding-left:1rem;position:relative;height:100%;float:right}}.masthead-item .desktop-text{display:none}@media only screen and (min-width:700px){.masthead-item .desktop-text{display:inline-block;zoom:1;*display:inline;padding-right:8px;font-size:14px;vertical-align:middle;line-height:60px}}.masthead-item .icon-search{display:inline-block;zoom:1;*display:inline;vertical-align:middle;font-size:1.4rem}@media only screen and (min-width:700px){.masthead-item .icon-search{font-size:1rem}}.burgerbar{background-color:#fff;font-size:24px;line-height:60px;max-height:60px;height:60px}.pro .burgerbar{background-color:#8c2b5e}@media only screen and (min-width:700px){.burgerbar{border-bottom:1px solid #fff}.pro .burgerbar{border-bottom:1px solid #8c2b5e}}.burgerbar .other-links{display:none}@media only screen and (min-width:700px){.burgerbar .other-links{display:block;float:right;clear:none;margin-right:10px;height:24px;line-height:24px;margin-top:18px;font-size:14px}.burgerbar .other-links a{float:left;-webkit-box-sizing:border-box;box-sizing:border-box;color:#fff}.burgerbar .other-links a:visited{color:#fff}}.burgerbar .buttons-social{display:none}@media only screen and (min-width:700px){.burgerbar .buttons-social{display:block}.burgerbar .buttons-social a{float:left;border:1px solid #fff;width:24px;height:24px;margin-top:18px;-webkit-box-sizing:border-box;box-sizing:border-box;color:#fff;margin-right:10px}.burgerbar .buttons-social a:visited{color:#fff}.burgerbar .buttons-social a:before{font-size:12px;line-height:22px;-webkit-box-sizing:border-box;box-sizing:border-box;float:left;width:22px;text-align:center}}.burgerbar .buttons-social .icon-youtube{display:none}@media screen and (min-width:750px){.burgerbar .buttons-social .icon-youtube{display:block}}.burgerbar .logo{text-align:left}.burgerbar .logo .site-logo{vertical-align:middle;line-height:25px;display:inline-block}.pro .burgerbar .logo .site-logo{line-height:16px}.pro .burgerbar .logo .site-logo:after{bottom:-1px}.burgerbar .logo .site-logo:after{position:absolute;content:'';text-transform:uppercase;font-size:9.11px;bottom:-4px;left:3px;line-height:0}@media only screen and (max-width:360px){.pro .burgerbar .logo svg{width:185px}.pro .burgerbar .logo svg path{-webkit-transform:scale(.93);-ms-transform:scale(.93);transform:scale(.93)}}.burgerbar .logo h1,.burgerbar .logo .hidden-header{display:none}.burgerbar .logo .strapline{font-size:13px;font-weight:400;text-transform:uppercase;float:right;line-height:13px;margin-top:27px;margin-left:13px}@media only screen and (max-width:699px){.burgerbar .logo{text-align:center;margin:auto}.burgerbar .logo .strapline{display:none}}.burgerbar .logo a{color:#fff}.burgerbar .logo a:hover{color:#fff;text-decoration:none}.burgerbar .logo a:visited{color:#fff}.burgerbar .logo a:visited:hover{color:#fff}.burgerbar .button-menu{-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-o-user-select:none;-ms-user-select:none;user-select:none;position:absolute;left:0;width:60px}.burgerbar .burgerbar-small{width:100%;max-height:60px;height:60px}@media only screen and (min-width:700px){.burgerbar .burgerbar-small{position:relative}.burgerbar .burgerbar-small>.button-menu{display:none}.burgerbar .burgerbar-small .logo{padding:0 16px;position:absolute}}.burgerbar .site-logo{position:relative}.trending-wrapper{margin:30px 24px 0;display:block;font-weight:600}.trending-wrapper .trending-bar{*zoom:1;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;background-color:transparent;position:relative;clear:both;white-space:nowrap;width:100%;height:40px;font-size:14px;background:#ededed;overflow:hidden}.trending-wrapper .trending-items{overflow:hidden;height:100%;display:inline-block;text-align:center}.trending-wrapper .trending-items:hover{overflow:auto;overflow-y:hidden}@media screen and (max-width:900px){.trending-wrapper .trending-items{overflow:auto;overflow-y:hidden}.trending-wrapper .trending-items::-webkit-scrollbar-track{-webkit-box-shadow:inset 0 0 2px rgba(0,0,0,.3);background-color:#F5F5F5;border-radius:10px}.trending-wrapper .trending-items::-webkit-scrollbar{height:6px;background-color:#F5F5F5}.trending-wrapper .trending-items::-webkit-scrollbar-thumb{background-color:#1A98EE;border-radius:10px}}.trending-wrapper .trending-lead{text-transform:uppercase;margin:0 0 0 10px;padding:0 10px 0 0;display:inline-block;line-height:40px;cursor:pointer;background:#ededed;color:#1A98EE;vertical-align:top}.trending-wrapper .trending-item{display:inline-block;*display:inline;margin-left:-2px;line-height:40px}.trending-wrapper .trending-item:first-of-type{margin-left:0}.trending-wrapper .trending-item a{line-height:40px;padding:0 14px;display:block}.trending-wrapper .trending-item a,.trending-wrapper .trending-item a:hover,.trending-wrapper .trending-item a:visited,.trending-wrapper .trending-item a:hover:visited{color:#333}@media screen and (min-width:1000px){.impact .trending-wrapper{margin-left:0;margin-right:0}}.trending.pro{width:100%;max-width:927px;display:table;overflow:hidden;border-collapse:separate;border-spacing:2px;margin-left:22px;margin-top:30px}@media only screen and (max-width:999px){.trending.pro{display:none}}.trending.pro .menu-item-container{background:#ededed;padding:0 12px;line-height:40px;font-size:13px;display:table-cell;text-align:center}.trending.pro .menu-item-container a{color:#333}.trending.pro .menu-item{font-size:inherit;display:inline}.trending.pro .menu-item a{font-size:inherit;padding-left:0;padding-right:0;line-height:40px}.trending.pro .menu-item a:hover{background-color:inherit}.optional-content-checkbox,.optional-content-checkbox+.contains-optional-content .optional-row,.optional-content-checkbox+.contains-optional-content+label .checked{display:none}.optional-content-checkbox+.contains-optional-content+label .unchecked{display:block}.optional-content-checkbox:checked+.contains-optional-content .optional-row{display:inline-block;zoom:1;*display:inline}.optional-content-checkbox:checked+.contains-optional-content+label .checked{display:block}.optional-content-checkbox:checked+.contains-optional-content+label .unchecked{display:none}.contains-optional-content{margin-bottom:0!important}.btn-reveal{text-align:center}.box{display:table;margin-bottom:40px;float:left;clear:both;width:100%}.box h3,.box h4{font-weight:600;font-size:16px;line-height:40px;text-transform:uppercase;vertical-align:middle}.box p{font-size:16px;line-height:24px;margin-bottom:1rem;color:#333}#sidebar .box,.btn-reveal{margin-bottom:30px}.btn-reveal{width:100%;height:44px;line-height:44px;padding:0;color:#333;background-color:#ddd;border:none;position:relative}.btn-reveal:hover{background-color:#666;color:#fff}.btn-reveal{font-size:.875em}.btn-reveal,.list-heading-link{text-transform:uppercase;font-weight:700}.list-heading-link:hover{text-decoration:none}input[type="search"]{-webkit-appearance:none;border:1px solid #ddd;font-size:1em;padding-right:3em;line-height:2.5em;padding-left:.75em;width:100%;-webkit-box-sizing:border-box;box-sizing:border-box;outline-offset:0;border-radius:0;margin-top:0;margin-bottom:0}input[type="search"]:focus{outline-offset:0}@media screen and (min-width:700px){input[type="search"]{padding-right:0}}@media screen and (min-width:900px){input[type="search"]{padding-right:54px;padding-top:13px;padding-bottom:11px;line-height:16px;font-size:16px}}select{line-height:44px}label{line-height:1.4;display:block;margin:0 0 5px}.search-form{position:relative}.search-form button{position:absolute;top:0;right:0;line-height:1.75em;padding-right:.8em;padding-left:.8em;height:100%}#content>.search-form{border:solid 1em #ededed}#searchfilter{display:none;overflow:hidden;background:#ededed;padding:15px;margin-bottom:20px}#searchfilter input{display:none}#searchfilter .header,#searchfilter h3{text-transform:uppercase;font-size:13px;line-height:16px}#searchfilter .header{background:#666;color:#fff;padding:18px;font-weight:700}@media screen and (min-width:575px){#searchfilter .header{padding:7px}}#searchfilter .header h2{display:inline-block}#searchfilter .header .show-hide{display:inline-block;float:right}@media screen and (min-width:575px){#searchfilter .header .show-hide{display:none}}#searchfilter .header i{font-size:12px;padding-left:7px}#searchfilter h3{color:#333;padding:0 0 12px}@media screen and (min-width:575px){#searchfilter h3{padding:0 0 15px}}#searchfilter .dropdown-container{position:relative}#searchfilter .dropdown-container .icon{position:absolute;font-size:13px;width:42px;height:100%;background:#666;color:#fff;right:0;top:0;pointer-events:none;text-align:center;padding-top:14px;-webkit-box-sizing:border-box;box-sizing:border-box}@media screen and (min-width:575px){#searchfilter .dropdown-container .icon{width:34px;padding-top:10px}}#searcharticletype{float:left;margin-bottom:8px;width:100%}@media screen and (min-width:575px){#searcharticletype{border-right:solid 2px #fff;padding-right:3px;margin-bottom:0;max-width:361px}}@media screen and (min-width:800px){#searcharticletype{max-width:50%}}@media screen and (min-width:1000px){#searcharticletype{max-width:361px}}#searcharticletype ul{width:100%}#searcharticletype li{display:inline-block;width:100%;margin-bottom:6px;vertical-align:top}@media screen and (min-width:575px){#searcharticletype li{margin-right:7px;margin-bottom:7px;min-width:22%;width:auto}}#searcharticletype .icon-tick{display:none}#searcharticletype input[type=radio]:checked+label{font-weight:600;border:1px solid #666;color:#333}#searcharticletype input[type=radio]:checked+label .icon-tick{display:inline-block;float:right;font-size:1em}@media screen and (min-width:575px){#searcharticletype input[type=radio]:checked+label .icon-tick{display:none}}#searcharticletype label{border:1px solid #ccc;text-align:left}#searcharticletype label,#advancedsearchsort{font-family:'Open Sans',sans-serif;display:inline-block;padding:9px 18px;width:100%;-webkit-box-sizing:border-box;box-sizing:border-box;margin:0;font-size:16px;line-height:22px;font-weight:400;background:#fff}@media screen and (min-width:575px){#searcharticletype label,#advancedsearchsort{font-size:13px;padding:5px;text-align:center}}@media screen and (min-width:575px){#searchorder{padding-left:10px;overflow:hidden}}#searchorder select{width:100%}.filter-container{overflow:hidden}.mobile-toggle{margin-top:14px}.mobile-toggle.invisible{display:none}@media screen and (min-width:575px){.mobile-toggle{margin-top:20px}.mobile-toggle.invisible{display:block}}#advancedsearchsort{-webkit-appearance:none;-moz-appearance:none;appearance:none;border-radius:0;border:1px solid #666;text-align:left}.clear-filters{font-size:16px;text-align:right;margin-top:20px}@media screen and (min-width:575px){.clear-filters{font-size:13px;margin-top:13px}}.clear-filters label{margin:0;display:inline-block;vertical-align:top}.clear-filters .clear-cross{float:right;width:16px;height:16px;padding:2px 0 0 6px;line-height:0}@media screen and (min-width:575px){.clear-filters .clear-cross{width:13px;height:13px}}@media screen and (min-width:700px){#content>.search-form,.listingResultsWrapper,.feature-block,.list-grid,.product-brands{margin-bottom:40px}}.listingResultsWrapper header{position:relative;overflow:hidden}@media screen and (min-width:900px){.impact .listingResultsWrapper{clear:left}}@media screen and (min-width:900px){.impact .listingResults{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-flow:row wrap;-ms-flex-flow:row wrap;flex-flow:row wrap;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-content:flex-start;-ms-flex-line-pack:start;align-content:flex-start;overflow:hidden}}.feature-block{overflow:hidden;*zoom:1}@media screen and (min-width:700px){.feature-block.top-featured{background-color:#ccc;position:relative}.feature-block.top-featured:before{content:"";width:2%;height:100%;background-color:#fff;position:absolute;left:49%;top:0}}.feature-block .image-remove-reflow-container{padding-bottom:56.25%}.list-title{padding-left:20px;padding-right:20px;border-top:1px solid #1A98EE;border-bottom:1px solid #1A98EE;text-transform:uppercase;line-height:42px;position:relative}@media screen and (min-width:700px){.list-title{padding-left:0;padding-right:0;margin-bottom:0}}@media screen and (min-width:900px){.list-title{margin-bottom:0}}@media screen and (min-width:900px){.impact .list-title{text-align:center;margin-bottom:20px}}.list-heading-link{padding-left:20px;padding-right:20px;line-height:37px;color:#333;display:block;font-size:.84em;padding-top:2px}@media screen and (min-width:700px){.list-heading-link{padding-left:0;padding-right:0;position:absolute;border-bottom:none;top:0;right:0;padding-top:4px}}.list-heading-link:visited{color:#333}.optional-image-wrapper .optional-image{display:none}@media screen and (min-width:700px){.optional-image-wrapper .optional-image{display:inherit}}.list-grid{background-color:#ededed;padding:9px 20px;position:relative}.list-grid:before{content:'';border-left:1px solid #fff;left:45.7%;height:-webkit-calc(100% - 46px);height:calc(100% - 46px);top:23px;position:absolute}@media screen and (min-width:700px){.list-grid:before{border-right:1px solid #fff;left:32%;width:31%;margin-left:10px;margin-right:10px}}@media screen and (min-width:900px){.list-grid:before{left:31%;width:31%}}.list-grid li{position:relative;margin-left:0;margin-right:10px;padding-right:10px;-webkit-box-sizing:border-box;box-sizing:border-box;vertical-align:top;display:inline-block;zoom:1;*display:inline;width:45.7%}@media screen and (min-width:575px){.list-grid li{margin-left:10px;padding:0}}@media screen and (min-width:699px){.list-grid li:first-child,.list-grid li:nth-child(2n+1){margin-left:10px}.list-grid li:nth-child(2n){margin-right:10px}}@media screen and (min-width:700px){.list-grid li{width:30%}.list-grid li:first-child,.list-grid li:nth-child(3n+1){margin-left:0}.list-grid li:first-child a,.list-grid li:nth-child(3n+1) a{padding-left:0}.list-grid li:nth-child(3n){margin-right:0}}.list-grid li a{color:#333;padding:11px 0 11px 4px;display:block;line-height:1.38}.list-text-links{margin-bottom:20px}@media screen and (max-width:699px){.list-text-links{margin-top:20px}}@media screen and (min-width:700px){.list-text-links{margin-top:0}}@media screen and (min-width:900px){.list-text-links{float:right;width:-webkit-calc((100% - (2 * 15px))/3);width:calc((100% - (2 * 15px))/3);padding-left:15px}.impact .list-text-links{position:absolute;z-index:98;left:66.2%}}.list-text-links .content .byline{display:none}.list-text-links .list-title{line-height:55px}.list-text-links .list-title a{color:#333}@media screen and (min-width:900px){.list-text-links .list-title{text-align:left;margin-bottom:0;line-height:56px}}.list-text-links .list-title:before{font-family:tomsguide;border-radius:50%;background-color:#ccc;display:inline-block;zoom:1;*display:inline;width:38px;line-height:38px;text-align:center;color:#fff;margin-right:11px;font-size:25px;font-weight:lighter;vertical-align:middle}.impact #homePageCarousel{margin-right:0;margin-bottom:30px;background-color:transparent}@media screen and (min-width:575px){.impact #homePageCarousel{margin-right:-15px}}@media screen and (min-width:900px){.impact #homePageCarousel{overflow:visible}}#content header h1{margin-bottom:20px}.image-remove-flow-width-setter{width:100%}.image-remove-flow-width-setter .image-remove-reflow-container{padding-bottom:56.25%;position:relative;height:0;overflow:hidden}.image-remove-flow-width-setter .image-remove-reflow-container img{position:absolute!important;height:100%;object-fit:cover;float:none;max-width:none;left:0;right:0;margin-left:auto;margin-right:auto}.listingResult,.feature-block.top-featured .feature-block-item-wrapper{overflow:hidden;*zoom:1;position:relative}.listingResult a,.feature-block.top-featured .feature-block-item-wrapper a{text-decoration:none;color:inherit}.listingResult a:hover,.feature-block.top-featured .feature-block-item-wrapper a:hover{color:inherit}.listingResult a:visited,.feature-block.top-featured .feature-block-item-wrapper a:visited{text-decoration:none;color:inherit}.listingResult a:hover,.feature-block.top-featured .feature-block-item-wrapper a:hover,.listingResult a:hover:hover,.feature-block.top-featured .feature-block-item-wrapper a:hover:hover,.listingResult a:visited:hover,.feature-block.top-featured .feature-block-item-wrapper a:visited:hover,.listingResult a:hover .article-name,.feature-block.top-featured .feature-block-item-wrapper a:hover .article-name,.feature-block.top-featured .feature-block-item-wrapper a:hover figcaption,.listingResult a:hover:hover .article-name,.feature-block.top-featured .feature-block-item-wrapper a:hover:hover .article-name,.feature-block.top-featured .feature-block-item-wrapper a:hover:hover figcaption,.listingResult a:visited:hover .article-name,.feature-block.top-featured .feature-block-item-wrapper a:visited:hover .article-name,.feature-block.top-featured .feature-block-item-wrapper a:visited:hover figcaption{text-decoration:none}.listingResult img{height:100%;object-fit:cover;float:none;width:100%}.feature-block.top-featured .feature-block-item-wrapper img{width:100%}@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){.listingResult img,.feature-block.top-featured .feature-block-item-wrapper img{width:auto}}@supports (-ms-accelerator:true){.listingResult img,.feature-block.top-featured .feature-block-item-wrapper img{width:auto}}.listingResult .content{padding-left:20px;padding-right:20px}.feature-block.top-featured .feature-block-item-wrapper .article-name{line-height:1.25;margin-top:12px;margin-bottom:0}.listingResult .synopsis{color:#333;line-height:1.375}@media screen and (min-width:1000px){.listingResult:hover .article-name,.feature-block.top-featured .feature-block-item-wrapper:hover .article-name{color:#1A98EE;text-decoration:none}}.listingResult a.category-link{position:absolute;left:0;top:0;text-transform:uppercase;padding:.65em .7em}.impact .feature-block.top-featured .feature-block-item-wrapper a.category-link{position:absolute;left:0;top:0;text-transform:uppercase;color:#fff;padding:.65em .7em}.mainCarousel a.category-link{position:absolute;left:0;top:0;text-transform:uppercase;padding:.65em .7em}@media screen and (min-width:700px){.listingResult a.category-link,.impact .feature-block.top-featured .feature-block-item-wrapper a.category-link,.mainCarousel a.category-link{font-size:.8125em}}.article-name{color:#333;font-weight:700;text-decoration:none}.listingResult{background-color:#fff;border-bottom:1px solid #ccc}@media screen and (min-width:700px){.listingResult{margin-bottom:0}}@media screen and (min-width:900px){.listingResult{margin-left:0;margin-right:0}}.listingResult article{overflow:hidden;*zoom:1}@media screen and (min-width:700px){.listingResult .content{padding-top:0;padding-left:0;padding-right:0;overflow:hidden;min-width:13em}}.listingResult .content header{overflow:hidden;*zoom:1}.listingResult a.category-link{background-color:#ccc;color:#fff;display:none;font-size:.8125em!important}@media screen and (min-width:700px){.listingResult a.category-link{top:20px;display:block;max-width:200px;line-height:1.4em}}@media screen and (min-width:900px){.impact .listingResult a.category-link{top:0}}.listingResult:first-child a.category-link{display:block}@media screen and (min-width:700px){.listingResult .image{float:left;width:250px;margin-right:20px}}.listingResult .article-name{margin-top:0;font-size:1.25em;line-height:1.4;margin-bottom:4px}@media screen and (min-width:700px){.listingResult .article-name{margin-top:-6px}}@media screen and (min-width:900px){.listingResult .article-name{padding:0}}@media screen and (min-width:900px){.impact .listingResult{display:inline-block;zoom:1;*display:inline;vertical-align:top;text-align:left;font-size:1rem;word-spacing:normal;width:-webkit-calc((100% - 30px)/3);width:calc((100% - 30px)/3);-webkit-box-sizing:border-box;box-sizing:border-box;border-bottom:none;margin-bottom:20px}}@media screen and (min-width:900px){.impact .listingResult .article-name{margin-bottom:7px;font-size:20px;line-height:26px;margin-top:0}}@media screen and (min-width:900px){.impact .listingResult .image{margin-right:0;float:none;width:100%;margin-bottom:15px;height:0;padding-bottom:56.16%;overflow:hidden}.impact .listingResult .image img{height:100%;object-fit:cover;display:block}}@media screen and (min-width:900px) and (-ms-high-contrast:active),screen and (min-width:900px) and (-ms-high-contrast:none){.impact .listingResult .image img{width:auto}}@media screen and (min-width:900px){@supports (-ms-accelerator:true){.impact .listingResult .image img{width:auto}}}@media screen and (min-width:900px){.list-text-links .listingResult{margin-bottom:0;margin-right:0;display:block}}@media screen and (min-width:900px){.list-text-links .listingResult,.list-text-links .listingResult:nth-of-type(2),.list-text-links .listingResult:nth-of-type(3){width:100%}}.list-text-links .listingResult:first-of-type,.list-text-links .listingResult:nth-of-type(2),.list-text-links .listingResult:nth-of-type(3){border-bottom:1px dotted #999}.list-text-links .listingResult:first-of-type .article-name{font-size:20px;line-height:26px}.list-text-links .listingResult:nth-of-type(2) .article-name,.list-text-links .listingResult:nth-of-type(3) .article-name{font-size:18px;line-height:24px}.list-text-links .listingResult:nth-of-type(n+4){border-bottom:none}@media screen and (max-width:699px){.list-text-links .listingResult:nth-of-type(n+4) .content{padding-bottom:0}}.list-text-links .listingResult:nth-of-type(n+4) .article-name{font-size:1rem;line-height:22px;font-weight:400}@media screen and (max-width:699px){.list-text-links .listingResult:nth-of-type(n+5) .search-result{padding-top:0}}@media screen and (min-width:700px){.list-text-links .listingResult:nth-of-type(n+5) .content{padding-top:0}}.list-text-links .listingResult .content{padding:8px 20px}@media screen and (min-width:700px){.list-text-links .listingResult .content{background-color:#fff;padding-left:0;padding-right:0}}.list-text-links .listingResult .content header{margin-bottom:0}.list-text-links .listingResult .image,.list-text-links .listingResult .published-date,.list-text-links .listingResult .synopsis{display:none}.list-text-links .listingResult .article-name{margin-top:0;margin-bottom:0}@media screen and (min-width:900px){.list-text-links .listingResult .article-name{margin-top:0}}.search-result{padding-top:20px;padding-bottom:20px}@media screen and (min-width:900px){.impact .search-result{padding-top:0;padding-bottom:0}}.list-text-links .search-result{padding-top:0;padding-bottom:0}.search-result .image{margin-top:-20px;margin-bottom:20px}@media screen and (min-width:700px){.search-result .image{margin-top:0;margin-bottom:7.5px}}body:not(.vertical-home) .search-result .image{overflow:hidden}@media screen and (min-width:700px){body:not(.vertical-home) .search-result .image{max-height:140px}}body:not(.vertical-home) .search-result .image figure img{position:absolute;top:0;left:0}@media screen and (min-width:700px){body:not(.vertical-home) .search-result .image figure{height:140px;padding-top:0}body:not(.vertical-home) .search-result .image figure img{position:relative}}.feature-block-item-wrapper,.feature-block-item-wrapper .article-name{color:#fff}.feature-block-item{min-height:85px}.feature-block-item:first-child:before{font-size:13px}.feature-block-item figcaption{overflow:hidden;padding:10px 20px 13px;margin-bottom:0;text-decoration:none}.feature-block-item .article-strapline{display:none;font-size:1rem;line-height:22px}.top-featured .feature-block-item-wrapper.item-1 .article-strapline{display:block;margin-top:.3em}.top-featured .feature-block-item{background-color:#333}.top-featured .feature-block-item img{display:block}@media screen and (min-width:700px){.top-featured .feature-block-item img{width:100%}}.curatedCarousel .top-featured .feature-block-item span{color:inherit}.list-text-links .listingResult{background-color:#fff}.feature-block.top-featured{position:relative;z-index:1;border:none;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-align-content:stretch;-ms-flex-line-pack:stretch;align-content:stretch;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;margin-bottom:30px}.feature-block.top-featured:before{display:none}.feature-block.top-featured .feature-block-item-wrapper{width:100%;z-index:999;background-color:#333;border-bottom:solid 15px #fff;font-size:1.125em}.feature-block.top-featured .feature-block-item-wrapper img{height:100%;object-fit:cover;float:none;max-width:none;left:0;right:0;margin-left:auto;margin-right:auto}@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){.feature-block.top-featured .feature-block-item-wrapper img{width:auto}}@supports (-ms-accelerator:true){.feature-block.top-featured .feature-block-item-wrapper img{width:auto}}.feature-block.top-featured .feature-block-item-wrapper .image-remove-flow-width-setter{float:left;width:151px}@media screen and (min-width:575px){.feature-block.top-featured .feature-block-item-wrapper .image-remove-flow-width-setter{float:none;width:100%}}.feature-block.top-featured .feature-block-item-wrapper.item-1 .image-remove-flow-width-setter{width:100%}.feature-block.top-featured .feature-block-item-wrapper:nth-of-type(1){font-size:1.25em}@media screen and (min-width:575px){.feature-block.top-featured .feature-block-item-wrapper:nth-of-type(1){font-size:1.5em}}@media screen and (min-width:575px){.feature-block.top-featured .feature-block-item-wrapper{border:none;margin:0}.feature-block.top-featured .feature-block-item-wrapper:nth-of-type(1){border-bottom:solid 15px #fff}.feature-block.top-featured .feature-block-item-wrapper:nth-of-type(2){border-right:solid 15px #fff}.feature-block.top-featured .feature-block-item-wrapper:nth-of-type(2),.feature-block.top-featured .feature-block-item-wrapper:nth-of-type(3){width:-webkit-calc(50% - 7.5px);width:calc(50% - 7.5px);border-bottom:solid 15px #fff}}.impact .feature-block.top-featured .feature-block-item-wrapper{border:none;margin-right:0;margin-bottom:15px;min-width:-webkit-calc(100% - 15px);min-width:calc(100% - 15px);-webkit-flex:1;-webkit-box-flex:1;-webkit-flex:1 1 -webkit-calc(100% - 15px);-ms-flex:1 1 calc(100% - 15px);flex:1 1 calc(100% - 15px)}.impact .feature-block.top-featured .feature-block-item-wrapper a.category-link{background-color:#1A98EE;z-index:1;font-size:13px}@media screen and (min-width:575px){.impact .feature-block.top-featured .feature-block-item-wrapper{margin-right:15px}}@media screen and (min-width:575px){.impact .feature-block.top-featured .feature-block-item-wrapper{min-width:-webkit-calc(50% - 15px);min-width:calc(50% - 15px);-webkit-flex:1;-webkit-box-flex:1;-webkit-flex:1 1 -webkit-calc(50% - 15px);-ms-flex:1 1 calc(50% - 15px);flex:1 1 calc(50% - 15px)}}@media screen and (min-width:900px){.impact .feature-block.top-featured .feature-block-item-wrapper{min-width:-webkit-calc(33.33% - 15px);min-width:calc(33.33% - 15px);-webkit-flex:1;-webkit-box-flex:1;-webkit-flex:1 1 -webkit-calc(33.33% - 15px);-ms-flex:1 1 calc(33.33% - 15px);flex:1 1 calc(33.33% - 15px)}}.impact .feature-block.top-featured .feature-block-item-wrapper.item-1{min-width:100%;-webkit-box-flex:0;-webkit-flex:0;-ms-flex:0;flex:0}@media screen and (min-width:575px){.impact .feature-block.top-featured .feature-block-item-wrapper.item-1{min-width:-webkit-calc(100% - 15px);min-width:calc(100% - 15px);-webkit-flex:1;-webkit-box-flex:1;-webkit-flex:1 1 -webkit-calc(100% - 15px);-ms-flex:1 1 calc(100% - 15px);flex:1 1 calc(100% - 15px)}}@media screen and (min-width:900px){.impact .feature-block.top-featured .feature-block-item-wrapper.item-1{min-width:-webkit-calc(66.66% - 15px);min-width:calc(66.66% - 15px);-webkit-flex:1;-webkit-box-flex:1;-webkit-flex:1 1 -webkit-calc(66.66% - 15px);-ms-flex:1 1 calc(66.66% - 15px);flex:1 1 calc(66.66% - 15px);max-width:-webkit-calc(66.66% - 15px);max-width:calc(66.66% - 15px);margin-right:30px}}@media screen and (max-width:699px){.listingResults .listingResult:not(.result1) .image{display:none}}.byline{display:block;margin-bottom:4px;line-height:23px;font-size:13px}.byline .relative-date{margin-left:4px}.listingResult .published-date{line-height:23px;font-size:13px}.listingResult:not(.small) .byline{display:none}.mainCarousel a.category-link{background-color:#ccc;color:#fff!important;display:none;font-size:13px!important}@media screen and (min-width:700px){.mainCarousel a.category-link{top:20px;display:block;max-width:200px;line-height:1.4em}}@media screen and (min-width:900px){.mainCarousel a.category-link{top:0}}.primary-nav.pro .wrapper,.primary-nav.pro .menuitems.container,.primary-nav.pro .wrapper .menu-item-container a{background:#601948!important}.primary-nav{position:relative;z-index:1600}.primary-nav .wrapper{background:#1A98EE}.primary-nav .menuitems{display:none;position:absolute;width:100%;left:0;top:60px;z-index:999}.primary-nav .menuitems:hover{z-index:999}@media screen and (min-width:700px){.primary-nav .menuitems{z-index:auto;display:block;position:relative;top:0}}.nav-list{font-size:0}@media screen and (min-width:700px){.nav-list{height:44px;overflow:hidden}}.nav-list.component-loaded{height:auto;overflow:visible}.menu-item{background-color:#1A98EE}@media screen and (min-width:700px){.menu-item{display:inline-block;zoom:1;*display:inline;vertical-align:top;font-size:0;background-color:transparent}}.menu-item a{display:block;line-height:44px;font-size:1rem;padding-left:1rem}.menu-item a:not(.maglink){padding-right:1rem}@media screen and (min-width:700px){.menu-item a{display:inline-block;zoom:1;*display:inline;vertical-align:top}}.menu-item a,.menu-item a:visited,.menu-item a:hover,.menu-item a:visited:hover{color:#fff;display:block}@media screen and (min-width:700px){.menu-item a:not(.menu-item-magazines):hover{background-color:#1A98EE}}.menu-item a:not(.menu-item-magazines):active{background-color:#666}.menu-item .icon-home{font-size:1.3em;line-height:1}.pro .menu-item{background-color:transparent}.menu-item.menu-item-main-pro{background-color:#8c2b5e}@media screen and (min-width:700px){.menu-item.menu-item-main-pro{min-width:70px;text-align:center}}.menu-item.menu-item-main-pro a{background-color:transparent}.pro .menu-item.menu-item-main-pro{background-color:#2f6e91}.sub-menu{vertical-align:top;display:none;background-color:#1A98EE;font-size:0}.sub-menu-item{font-size:1rem}.menu-hamburger{height:60px;margin-bottom:0}.menu-hamburger:before,.menu-hamburger:after{content:"";position:absolute;width:18px;margin-left:-9px;top:50%;left:50%}.menu-hamburger:before{height:8px;border-top:2px solid #fff;border-bottom:2px solid #fff;margin-top:-6px}.menu-hamburger:after{height:2px;background:#fff;margin-top:-1px}.menu-hamburger.checked:before{border-top:none;border-bottom:none;width:8px;height:18px;margin-top:-9px;margin-left:-6px}.menu-hamburger.checked:after{width:2px;height:18px;margin-top:-9px;margin-left:-1px}.menu-item-hover-reveal,.menu-item-magazines{line-height:44px;color:#fff;padding-left:1rem;padding-right:1rem;white-space:nowrap;cursor:default}.menu-item-hover-reveal.menu-item,.menu-item-magazines.menu-item{font-size:1rem}@media screen and (min-width:700px){.menu-item-hover-reveal:hover .sub-menu,.menu-item-hover-reveal:focus .sub-menu,.menu-item-magazines:hover .sub-menu,.menu-item-magazines:focus .sub-menu{display:block;position:absolute;margin-left:-16px}}.menu-item-hover-reveal .icon,.menu-item-magazines .icon{font-size:11px;line-height:1;position:relative;top:-1px;left:1px}@media screen and (min-width:700px){.menu-item-hover-reveal .icon-arrow-right,.menu-item-magazines .icon-arrow-right{display:none}}.menu-item-hover-reveal .icon-arrow-down,.menu-item-magazines .icon-arrow-down{display:none}@media screen and (min-width:700px){.menu-item-hover-reveal .icon-arrow-down,.menu-item-magazines .icon-arrow-down{display:inline}}@media screen and (min-width:700px){.nav-sub-set-container{position:absolute;top:0;right:0}}@media screen and (min-width:700px){.menu-item-nav-sub-set{float:right}}#content h1{font-weight:600;font-size:24px;line-height:30px;margin-bottom:.25rem}@media (min-width:700px){#content h1{margin-bottom:.5rem;font-size:28px;line-height:34px}}@media (min-width:1574px){#content h1{margin-bottom:.75rem;font-size:34px;line-height:42px}body.limit-width #content h1{margin-bottom:.5rem;font-size:28px;line-height:34px}}#content>header{margin:30px 20px}@media screen and (min-width:700px){#content>header{margin-top:0;margin-left:0;margin-right:0}}#content>header p{font-size:18px;line-height:26px;font-weight:300}@media (min-width:700px){#content>header p{font-size:20px;line-height:28px}}@media (min-width:1574px){#content>header p{font-size:24px;line-height:30px}body.limit-width #content>header p{font-size:20px;line-height:28px}}#sidebar{-webkit-box-sizing:border-box;box-sizing:border-box;float:left}@media screen and (min-width:700px){#sidebar{padding-left:20px;padding-right:20px}}@media screen and (min-width:1000px){#sidebar{padding-left:0;padding-right:0;width:300px}#sidebar>*:first-child{margin-top:1em}}.buttons-social .icon-facebook{background:#3B5998}.buttons-social .icon-facebook:hover{background:#4c70ba}.buttons-social .icon-twitter{background:#4099FF}.buttons-social .icon-twitter:hover{background:#73b4ff}.buttons-social .icon-youtube{background:#CD201F}.buttons-social .icon-youtube:hover{background:#e23e3d}.buttons-social .icon-instagram{background:#de3073}.buttons-social .icon-instagram:hover{background:#e55c91}.buttons-social .icon-envelope{background:#1A98EE}.burgerbar .buttons-social a{border:none}.burgerbar .buttons-social a:before{font-size:14px;line-height:24px;width:100%;height:100%}.newsletter-signup{display:block!important;background-color:#ededed;border-bottom:1px solid #ccc}@media (max-width:900px){.newsletter-signup{float:none!important}}.newsletter-signup .grey-box{color:#666}.newsletter-signup>h3{min-height:36px;font-size:16px;line-height:1.25em;font-family:"Open Sans",Arial,sans-serif;padding:8px 0;border-top:1px solid #ccc;border-bottom:1px solid #ccc}.newsletter-signup>h3 span{display:block;-webkit-box-sizing:border-box;box-sizing:border-box;width:300px;margin:0 auto}.newsletter-signup .icon-envelope{float:left;background-color:#1A98EE;color:#fff;text-align:center;border-radius:50%;font-size:25px;line-height:36px;width:38px;height:38px;margin-right:10px;margin-left:10px}.newsletter-signup small{font-size:10px;line-height:12px}@media screen and (min-width:700px){.newsletter-signup{float:none}}@media screen and (min-width:900px){.newsletter-signup{float:none;width:100%}}@media screen and (min-width:900px){.impact .newsletter-signup{float:right;width:-webkit-calc((100% - (2 * 15px))/3);width:calc((100% - (2 * 15px))/3);clear:none;margin-bottom:0;height:0;padding-bottom:-webkit-calc(((100% - (2 * 15px))/3)* .93);padding-bottom:calc(((100% - (2 * 15px))/3)* .93)}}@media screen and (min-width:900px){.impact .newsletter-signup .grey-box{width:auto;padding-top:2px}}@media screen and (min-width:1000px){.impact .newsletter-signup .grey-box{padding-top:1ex}}@media screen and (min-width:900px){.impact .newsletter-signup .grey-box p{margin-bottom:3px}}@media screen and (min-width:1000px){.impact .newsletter-signup .grey-box p{margin-bottom:1rem}}@media screen and (min-width:900px){.impact .newsletter-signup footer{margin-top:-6px}}@media screen and (min-width:1000px){.impact .newsletter-signup footer{margin-top:0}}@media screen and (max-width:900px){.newsletter-signup .icon-envelope{margin-left:0}.newsletter-signup .grey-box{padding-left:0;padding-right:0}.newsletter-signup h3 span{width:300px;margin:0 auto}}.newsletter-signup .newsletter-logo{text-align:center}.newsletter-signup .newsletter-logo img{height:20px;padding-top:2px}.newsletter-signup.product-newsletter{border:solid 1px #333;-webkit-box-sizing:border-box;box-sizing:border-box}.newsletter-signup.product-newsletter h3,.newsletter-signup.product-newsletter h4{color:#fff;text-transform:none;font-family:"Open Sans",sans-serif}.newsletter-signup.product-newsletter h3{background:#333;font-size:15px;line-height:20px;border-top:none;border-bottom:none}.newsletter-signup.product-newsletter .icon-filled-envelope{float:left}.newsletter-signup.product-newsletter .product-cta{font-weight:700;display:inline}.newsletter-signup.product-newsletter .product-info{font-weight:400;display:inline}.newsletter-signup.product-newsletter .reduce{font-size:80%;display:inline}.newsletter-signup.product-newsletter h4{background-color:#666;font-size:.75em;line-height:33px}.newsletter-signup.product-newsletter p{color:#333;text-align:center;font-size:13px;line-height:17px;width:58%;margin-top:.5rem;display:inline-block;margin-left:5px}.newsletter-signup.product-newsletter p .jump-out-text{font-weight:700;display:block}.newsletter-signup.product-newsletter footer{color:#666;margin:.75rem 0 .5rem}.newsletter-signup .newsletter-image{display:inline-block;height:102px;width:35%;margin-left:8px;background:url("/media/img/newsletter-image.png") no-repeat;background-size:auto 102px;background-repeat:no-repeat;image-rendering:-moz-crisp-edges;image-rendering:-o-crisp-edges;image-rendering:-webkit-optimize-contrast;image-rendering:crisp-edges;-ms-interpolation-mode:nearest-neighbor}.newsletter-signup .newsletter-button{-webkit-box-sizing:border-box;box-sizing:border-box;width:100%;padding:0 17px;background:-webkit-gradient(linear,left bottom,left top,color-stop(50%,#E94E1B),color-stop(50%,#ed724a));background:-webkit-linear-gradient(bottom,#E94E1B 50%,#ed724a 50%);background:linear-gradient(to top,#E94E1B 50%,#ed724a 50%);height:44px;text-align:center}.newsletter-signup .newsletter-button a{color:#fff;font-size:1em;font-weight:900;display:inline-block;padding-top:14px;height:100%;width:100%;-webkit-box-sizing:border-box;box-sizing:border-box}.newsletter-signup .newsletter-button a:hover,.newsletter-signup .newsletter-button a:visited{color:#fff;text-decoration:none}.newsletter-signup .newsletter-button .icon{color:#fff;font-size:12px;position:relative;top:-2px;padding-left:3px}.newsletter-signup .subtitle{display:block;padding-left:10px;width:300px;margin:auto}.icon-filled-envelope{float:left;text-align:center;border-radius:50%;font-size:40px;line-height:36px;width:38px;height:38px;margin-right:10px;margin-left:10px;background-color:#1A98EE;color:#fff}.link-columns{background-color:#ededed;border-bottom:solid 1ex #ededed;border-top:solid 1ex #ededed;padding-left:20px;padding-right:20px;-webkit-box-sizing:border-box;box-sizing:border-box;position:relative}@media screen and (min-width:700px){.link-columns{padding-left:0;padding-right:0}}@media screen and (max-width:700px){.link-columns:before{content:"";position:absolute;left:46%;border-left:1px solid #fff;height:-webkit-calc(100% - 11px - 8px);height:calc(100% - 11px - 8px);top:11px}}.link-columns .table-row{font-size:0}.link-columns .table-row li{display:inline-block;zoom:1;*display:inline;font-size:1rem;width:50%}.link-columns .table-row a{font-weight:600;color:#333;display:block;line-height:44px;text-decoration:none}.link-columns .table-row a:active{text-decoration:underline}@media screen and (min-width:700px){.link-columns .table-row li{display:table-cell;padding:0 0 0 1em;border:1px solid #ddd;border-top:0;border-bottom:0;width:auto}.link-columns .table-row li:first-child{border-left:none}.link-columns .table-row li:last-child{border-right:none}.link-columns .table-row a:hover,.link-columns .table-row a:visited,.link-columns .table-row a:visited:hover{text-decoration:none}.link-columns .table-row a:visited{color:#333}}.menu-item.menu-item-nextup a,.menu-item.menu-item-nextup a:hover{background-color:#1DAFEC}@media screen and (min-width:700px){.menu-item.menu-item-nextup a,.menu-item.menu-item-nextup a:hover{background-color:#1DAFEC}}.mfmwidget{margin:20px 20px 0}.mfmwidget img{max-width:100%}.mfmwidget .magazinelogo img{height:50px;margin-bottom:10px}.mfmwidget a.more:link{color:#fff}.mfmwidget a.more:visited{color:#fff}.mfmwidget a.more:hover{text-decoration:underline}.mfmwidget .container{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;text-align:center;padding:15px 10px 10px;height:100%}@media screen and (min-width:600px){.mfmwidget .container{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row}.mfmwidget .container .left,.mfmwidget .container .right{width:33.33%}}.mfmwidget .headerLine{background:#333;width:100%;height:1px}.mfmwidget .left,.mfmwidget .right{-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;-webkit-align-self:center;-ms-flex-item-align:center;align-self:center}.mfmwidget .text{padding:0 5px 10px;line-height:20px}.mfmwidget .ViewMoreButton{margin-top:20px;margin-left:auto;margin-right:auto;width:100%;height:44px;font-size:.813em;font-weight:700;line-height:38px;text-align:center;color:#333;text-transform:uppercase}.mfmwidget .buttonBackground{background-color:#1A98EE;margin:40px}@media only screen and (min-width:599px){.mfmwidget .text{padding:10px 15px 0 10px;line-height:28px}.mfmwidget .buttonBackground{width:195px;margin-left:auto;margin-right:auto}}.newsletter-signup,.newsletter-signup>h3{background-color:#fff}.newsletter-signup .grey-box{padding:1ex;margin:0 auto;width:300px;-webkit-box-sizing:border-box;box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}body{background-color:#fff;-webkit-text-size-adjust:100%}a{color:#1A98EE;text-decoration:none}a:hover{text-decoration:underline}a:visited{color:#8A9FAD}a:visited:hover{color:#8A9FAD}button{font-size:.875em;line-height:3em;border:solid 1px #333;color:#fff;background-color:#333;text-transform:uppercase;font-family:"Open Sans",sans-serif;margin:0;padding:1ex 1em}button:focus{outline:0}button::-moz-focus-inner{border:0}.table{display:table;width:100%}.table-row{display:table-row}#affiliateDisclaimer{text-align:left;font-size:12px;line-height:16px;padding:0;margin:15px 24px 0;color:#333}@media screen and (min-width:700px){#affiliateDisclaimer{font-size:13px;line-height:18px;margin-top:15px}}@media screen and (min-width:1000px){#affiliateDisclaimer{font-size:13px;line-height:18px;margin-top:20px}}#affiliateDisclaimer a{color:#333;text-decoration:underline}.burgerbar{color:#333}.burgerbar .logo .site-logo{height:30px}.burgerbar .other-links a{color:#333}.burgerbar .other-links a:visited{color:#333}.menu-hamburger.unchecked:before{border-top:2px solid #333;border-bottom:2px solid #333}.menu-hamburger.unchecked:after{border-top:2px solid #333}.menu-hamburger.checked:before{border-left:2px solid #333;border-right:2px solid #333}.menu-hamburger.checked:after{border-left:2px solid #333}#content>.search-form,.listingResultsWrapper,.feature-block,.list-grid,.product-brands{margin-bottom:25px}@media screen and (min-width:700px){#content>.search-form,.listingResultsWrapper,.feature-block,.list-grid,.product-brands{margin-bottom:40px}}</style>
+<link rel="apple-touch-icon" href="https://vanilla.futurecdn.net/tomsguide/147371/apple-touch-icon.png">
+<link rel="shortcut icon" href="https://vanilla.futurecdn.net/tomsguide/147371/favicon.ico">
+<meta name="msapplication-TileColor" content="#000000">
+<meta name="msapplication-TileImage" content="https://vanilla.futurecdn.net/tomsguide/147371/apple-touch-icon.png">
+<meta property="og:title" content="">
+<meta property="og:site_name" content="Tom's Guide">
+<meta property="og:url" content="https://www.tomsguide.com">
+<meta property="og:description" content="">
+<meta property="og:image" content="">
+<meta property="og:image:width" content="1200">
+<meta property="og:type" content="article">
+<meta property="article:publisher" content=" https://www.facebook.com/Tomsguide/">
+<meta property="article:author" content=" https://www.facebook.com/Tomsguide/">
+<meta property="fb:app_id" content="">
+<meta property="fb:pages" content="">
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:site" content="@tomsguide">
+<meta property="twitter:title" content="">
+<meta property="twitter:description" content="">
+<meta property="twitter:creator" content="@tomsguide">
+<meta property="twitter:image" content="">
+<meta property="twitter:account_id" content="9696142">
+<meta name="google-site-verification" content="AXmk3QRU_rEstMST70XJGrMWcFZaH8xG9J-C3FskFEs">
+<meta name="taboola:url" content="https://www.tomsguide.com">
+<meta name="msvalidate.01" content="CC462E6DF91492086145CA5EBDCB615E">
+<script type="text/javascript">
+window.missingImage = function(){var missingImage = document.createElement('img');missingImage.src = '//vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg';return missingImage;}
+VAN={};
+var FEP_object;
+;
+VAN.gaDimensions=function(e,i,a,o){ga("create",e,"auto",{useAmpClientId:!0}),null!=a&&ga("set",{dimension57:a}),ga("require","displayfeatures"),o.fepPrimaryProduct&&ga("set",{dimension40:o.fepPrimaryProduct}),o.fepSecondaryProducts.length&&ga("set",{dimension41:o.fepSecondaryProducts.join("|")}),o.fepPrimaryProduct[0]&&ga("set",{dimension42:o.fepPrimaryCompany}),o.fepCompanies.length>=1&&ga("set",{dimension43:o.fepCompanies.join("|")}),o.fepPrimaryProduct&&ga("set",{dimension45:o.fepPrimaryProduct}),o.fepCategory&&ga("set",{dimension46:o.fepCategory}),o.fepArticleName.length>0&&ga("set",{dimension47:o.fepArticleName}),o.fepAlgorithm&&ga("set",{dimension50:o.fepAlgorithm}),o.fepNullified?ga("set",{dimension51:"true"}):ga("set",{dimension51:"false"}),"object"==typeof o.fepGroups&&Array.isArray(o.fepGroups)&&ga("set",{dimension58:o.fepGroups.join("|")}),o.thirdCategories&&ga("set",{dimension74:o.thirdCategories.join("|")}),void 0!==VAN.abTest&&void 0!==VAN.abTest.variationId&&ga("set",{dimension26:VAN.abTest.variationId});var t="false";try{void 0!==window.vanilla&&void 0!==window.vanilla.aft&&(t=!0===window.vanilla.aft.logged_in?"true":"false")}catch(e){console.error("Badly structured aft object",e)}ga("set",{dimension13:t}),ga("set",{dimension10:document.querySelector("html").getAttribute("data-locale").replace("_","-")});try{var n=document.cookie.replace(/(?:(?:^|.*;\s*)_ga\s*\=\s*([^;]*).*$)|^.*$/,"$1");n&&ga("set",{dimension59:n})}catch(e){console.log("GA ID error: ",e)}ga("send","pageview",i)}; VAN.assignFep=function(a){try{var e=e||{fepPrimaryProduct:"",fepSecondaryProducts:Array(),fepCompanies:Array(),fepHawk:{},fepCategory:"",fepGroups:Array(),kwMunge:Array(),fepArticleName:"",fepPrimaryCompany:"",fepAlgorithm:"",fepNullified:"",ready:!1,primaryCategory:"",secondaryCategories:Array(),thirdCategories:Array()};if(window.FEP=e,!e.ready){if("undefined"==typeof a)throw"FEPNotReady";e.fepPrimaryProduct=a[0].adTags.primaryProduct,e.fepSecondaryProducts=a[0].adTags.secondaryProducts,e.fepCompanies=a[0].adTags.companies,e.fepCategory="object"==typeof a[0].adTags.category?"":a[0].adTags.category,e.fepGroups="undefined"!=typeof a[0].adTags.groups?a[0].adTags.groups:Array(),e.fepArticleName=a[0].articleName,e.fepAlgorithm=a[0].strategy,e.fepNullified=a[0].nullified,e.fepPrimaryCompany=null!==a[0].adTags.primaryCompany&&a[0].adTags.primaryCompany.length>=1?a[0].adTags.primaryCompany:" ","undefined"!=typeof a[0].adTags.primaryCategory&&"undefined"!=typeof a[0].adTags.secondaryCategories&&"undefined"!=typeof a[0].adTags.thirdCategories&&(e.primaryCategory=a[0].adTags.primaryCategory,e.secondaryCategories=a[0].adTags.secondaryCategories,e.thirdCategories=a[0].adTags.thirdCategories),e.fepIAB=[],e.ready=!0;var r=["fepPrimaryProduct","fepSecondaryProducts","fepCompanies","fepCategory"];r.forEach(function(a){var r=e[a];"object"==typeof r&&(r=r),e.kwMunge=e.kwMunge.concat(r)}),e.kwMunge=e.kwMunge.filter(function(a,r){return e.kwMunge.indexOf(a)==r}),"undefined"!=typeof a[0].hawkTags.primaryProduct&&(e.fepHawk.primaryProduct=a[0].hawkTags.primaryProduct),"undefined"!=typeof a[0].hawkTags.secondaryProducts&&(e.fepHawk.secondaryProducts=a[0].hawkTags.secondaryProducts),"undefined"!=typeof a[0].hawkTags.companies&&(e.fepHawk.companies=a[0].hawkTags.companies),"undefined"!=typeof a[0].hawkTags.groups&&(e.fepHawk.groups=a[0].hawkTags.groups),"undefined"!=typeof a[0].hawkTags.category&&(e.fepHawk.category=a[0].hawkTags.category)}return window.FEP=e,e}catch(o){console.log("fep ga exc "+o.message)}};;
+</script>
+<script>
+try{
+var FEP_object = {};
+}catch(ex){
+if (typeof console == "object") {
+console.log(ex);
+}
+}
+</script>
+<!-- GA TPL PREMIUM -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+// Optimizely Universal Analytics Integration
+window.optimizely = window.optimizely || [];
+window.optimizely.push("activateUniversalAnalytics");
+// Setup the FEP global object form the FEP_object
+// @TODO - can the format of FEP_object be changed server side?
+VAN.assignFep(FEP_object);
+var ga_code = 'UA-72111741-10';
+var analytics_ga_data = {"dimension9":"1","dimension27":"21.7.5","dimension95":"homepage"};
+var version = 'null';
+// Make sure all the GA dimensions are setup and correct
+VAN.gaDimensions(ga_code, analytics_ga_data, version, window.FEP);
+</script>
+<!-- END GA PREMIUM -->
+<script>
+var trailingSlash = false;
+</script>
+<link rel="manifest" href="/manifest.json">
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script id="onesignal_tag" data-app-id-https="44fa1f98-aba9-444f-8afb-c0b9e42a6aff" src="https://vanilla.futurecdn.net/tomsguide/147371/media/shared/js/onesignal.js" async></script>
+<script type="text/javascript">
+piAId = '263762';
+piCId = '1816';
+piHostname = 'pi.pardot.com';
+(function() {
+function async_load(){
+var s = document.createElement('script'); s.type = 'text/javascript';
+s.src = ('https:' == document.location.protocol ? 'https://pi' : 'http://cdn') + '.pardot.com/pd.js';
+var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
+}
+if(window.attachEvent) { window.attachEvent('onload', async_load); }
+else { window.addEventListener('load', async_load, false); }
+})();
+</script>
+</head>
+<body class="limit-width vertical-home impact ">
+<script>window.isIE = false</script>
+<!--[IE]><script>window.isIE = true</script><![endif]-->
+<script>
+window.amIIE = function() {
+return navigator.userAgent.indexOf('MSIE') !== -1 || navigator.appVersion.indexOf('Trident/') !== -1 || window.isIE;
+}
+</script>
+<a href="#main" class="skip-to-main-content" style="position:absolute;">Skip to main content</a>
+<nav class="primary-nav">
+<input type="radio" name="burgerbar-expand" class="burgerbar-none-radio" id="burgerbar-none" checked>
+<input type="radio" name="burgerbar-expand" class="burgerbar-radio" id="burgerbar">
+<div class="burgerbar ">
+<div class="container full burgerbar-small">
+<label class="button-menu unchecked menu-hamburger" for="burgerbar" onclick></label>
+<label class="button-menu checked menu-hamburger" for="burgerbar-none" onclick></label>
+<div class="logo" itemprop="publisher" itemscope itemtype="https://schema.org/Organization" id="publisherDetails">
+<a href="https://www.tomsguide.com/" itemprop="url">
+<span class="site-logo" itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+<svg width="203px" height="36px" viewbox="0 0 203 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+<title>logo</title>
+<desc>Created with Sketch.</desc>
+<g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+<g id="branding/ttr_primary_nav" transform="translate(-240.000000, -12.000000)" fill="#1A98EE">
+<g id="Header">
+<g id="logo" transform="translate(240.000000, 12.000000)">
+<path d="M66.5927009,5.1483633 L71.181545,5.1483633 L71.181545,8.61790459 C71.293178,9.73720734 70.9576183,10.7445468 70.3978018,11.6399229 C69.614389,12.5352991 68.7190128,13.2067486 67.6000404,13.6542716 L66.5927009,11.7518862 C67.2641505,11.5279596 67.823967,11.0801064 68.2714899,10.6325835 C68.6073798,10.2966936 68.7190128,9.84917064 68.8309761,9.2896844 L66.7046642,9.2896844 L66.7046642,5.1483633 L66.5927009,5.1483633 Z" id="Fill-1"></path>
+<path d="M0,9.40144954 L2.0146789,9.40144954 L2.0146789,5.93190826 L8.95376147,3.69330275 L8.95376147,9.40144954 L12.5352661,9.40144954 L12.5352661,14.3258532 L8.95376147,14.3258532 L8.95376147,21.0410092 L8.95376147,21.6008257 L8.95376147,22.1603119 C8.95376147,22.6078349 9.06572477,23.0556881 9.17768807,23.503211 C9.2893211,23.9510642 9.62521101,24.0630275 10.1846972,24.0630275 C10.5205872,24.0630275 10.9681101,23.9510642 11.304,23.8391009 C11.7518532,23.7271376 12.1993761,23.6151743 12.5352661,23.3912477 L12.5352661,28.092055 L11.5279266,28.4276147 C11.0800734,28.539578 10.6325505,28.539578 10.1846972,28.6515413 L8.95376147,28.7635046 L8.05805505,28.7635046 C6.93908257,28.7635046 5.81977982,28.6515413 4.81244037,28.2040183 C4.02902752,27.8681284 3.46954128,27.3086422 3.02168807,26.6371927 C2.57416514,25.8534495 2.35023853,25.0700367 2.23827523,24.1746606 C2.12631193,23.1676514 2.12631193,22.1603119 2.0146789,20.9290459 L2.0146789,14.2138899 L0,14.2138899 L0,9.40144954 Z" id="Fill-3"></path>
+<path d="M23.7270716,23.8390679 C24.1745945,23.8390679 24.5104844,23.7271046 24.8463743,23.503178 C25.1822642,23.1676183 25.5178239,22.8317284 25.6297872,22.4961688 C25.8537138,21.9363523 26.0776404,21.4888294 26.1896037,20.9290128 C26.3012367,20.2575633 26.4132,19.5861138 26.3012367,18.9146642 C26.3012367,18.2432147 26.1896037,17.5714349 26.0776404,16.8999853 C25.9656771,16.3404991 25.7417505,15.7810128 25.5178239,15.3331596 C25.2942275,14.8856367 25.0703009,14.5497468 24.6224477,14.2138569 C24.2865578,13.9902606 23.8390349,13.8782972 23.3911817,13.8782972 C23.055622,13.8782972 22.6077688,13.9902606 22.3841725,14.2138569 C22.0482826,14.5497468 21.7123927,14.8856367 21.6007596,15.2211963 C21.376833,15.6690495 21.2648697,16.2285358 21.1529064,16.788022 C21.0409431,17.4598018 20.9289798,18.0192881 20.9289798,18.6907376 C20.9289798,19.9220037 21.1529064,21.2649028 21.7123927,22.3842055 C22.0482826,23.1676183 22.8316954,23.7271046 23.7270716,23.8390679 M23.7270716,28.6515083 C22.3841725,28.6515083 21.0409431,28.4279119 19.8100073,28.092022 C18.5787413,27.6441688 17.4594385,27.0846826 16.4524294,26.1893064 C15.4450899,25.2939303 14.6616771,24.2865908 14.1018606,23.055655 C13.5423743,21.712756 13.2064844,20.1456 13.2064844,18.6907376 C13.2064844,17.2358752 13.5423743,15.8926459 14.1018606,14.5497468 C14.6616771,13.430444 15.4450899,12.3114716 16.4524294,11.5280587 C17.4594385,10.7446459 18.5787413,10.0728661 19.698044,9.62534312 C20.9289798,9.17748991 22.2722092,8.95389358 23.503145,8.95389358 C24.9583376,8.95389358 26.3012367,9.17748991 27.6444661,9.62534312 C28.8754018,10.0728661 29.9947046,10.7446459 31.002044,11.6396917 C32.0093835,12.5350679 32.680833,13.5424073 33.2403193,14.7736734 C33.8001358,16.1165725 34.0237321,17.5714349 34.0237321,19.0266275 C34.0237321,20.4814899 33.8001358,21.824389 33.2403193,23.1676183 C32.680833,24.2865908 32.0093835,25.4058936 31.002044,26.1893064 C29.9947046,26.9727193 28.8754018,27.6441688 27.7564294,27.9800587 C26.4132,28.4279119 25.0699706,28.6515083 23.7270716,28.6515083" id="Fill-5"></path>
+<path d="M45.8874495,28.091989 L34.6954128,28.091989 L34.6954128,23.1675853 L36.2622385,23.1675853 L36.2622385,14.3257872 L34.8073761,14.3257872 L34.8073761,9.40138349 L41.8580917,9.40138349 L42.6418349,11.639989 L43.3132844,10.9682092 C43.6491743,10.6326495 43.9847339,10.2967596 44.3206239,10.072833 C44.7681468,9.73727339 45.216,9.51334679 45.6635229,9.28942018 C46.2233394,9.06582385 46.7828257,8.95353028 47.3423119,8.95353028 C48.1257248,8.95353028 48.9091376,9.06582385 49.6925505,9.28942018 C50.252367,9.40138349 50.8118532,9.73727339 51.2597064,9.9612 C51.5952661,10.1847963 52.0431193,10.5206862 52.2667156,10.8562459 C52.4906422,11.1921358 52.7145688,11.4160624 52.8265321,11.639989 C53.4979817,10.9682092 54.2813945,10.2967596 55.0648073,9.8492367 C56.0721468,9.28942018 57.1914495,8.95353028 58.4227156,8.95353028 C59.6536514,8.84156697 60.9968807,9.17745688 62.1158532,9.73727339 C63.0112294,10.1847963 63.6826789,10.8562459 64.2424954,11.751622 C64.6900183,12.6469982 65.0259083,13.5423743 65.1378716,14.5497138 C65.2498349,15.6690165 65.3614679,16.787989 65.3614679,17.9072917 L65.3614679,23.055622 L67.1522202,23.055622 L67.1522202,28.091989 L57.6389725,28.091989 L57.6389725,18.9146312 L57.6389725,18.1312183 L57.6389725,17.2358422 L57.6389725,16.1165394 C57.6389725,15.7809798 57.5270092,15.4450899 57.4150459,15.1092 C57.3030826,14.8856037 57.1914495,14.6616771 56.9675229,14.4377505 C56.7435963,14.2138239 56.5196697,14.2138239 56.1841101,14.2138239 C55.5126606,14.1021908 54.952844,14.4377505 54.6172844,14.997567 C54.2813945,15.6690165 54.1694312,16.3404661 54.2813945,17.0119156 L54.2813945,23.055622 L56.5196697,23.055622 L56.5196697,28.091989 L46.894789,28.091989 L46.894789,18.5787413 C46.894789,17.4597688 46.894789,16.3404661 46.6708624,15.3331266 C46.5588991,14.6616771 45.9994128,14.2138239 45.3279633,14.3257872 C44.8801101,14.3257872 44.3206239,14.4377505 43.9847339,14.8856037 C43.6491743,15.4450899 43.537211,16.0045761 43.537211,16.5643927 L43.537211,23.2795486 L45.7754862,23.2795486 L45.7754862,28.091989 L45.8874495,28.091989 Z" id="Fill-7"></path>
+<path d="M71.2933431,28.091989 L71.2933431,21.376833 L76.3297101,21.376833 C76.3297101,21.824356 76.4416734,22.2722092 76.7775633,22.6080991 C77.1134532,22.9436587 77.4490128,23.1675853 77.8968661,23.3915119 C78.344389,23.6151083 78.7922422,23.7270716 79.2397651,23.8390349 C79.575655,23.9509982 80.023178,23.9509982 80.3590679,23.9509982 C80.6946275,23.9509982 81.1424807,23.8390349 81.4780404,23.7270716 C81.8139303,23.503145 82.0378569,23.1675853 82.0378569,22.7197321 C82.0378569,22.3841725 81.8139303,22.0482826 81.254444,21.824356 C80.5826642,21.6007596 80.023178,21.376833 79.3517284,21.2648697 C78.5683156,21.0409431 77.6729394,20.8173468 76.7775633,20.5934202 C75.8821872,20.3694936 74.986811,19.9219706 74.2033982,19.4741174 C73.419655,19.0265945 72.7482055,18.355145 72.3006826,17.5714018 C71.7408661,16.676356 71.5172697,15.5570532 71.5172697,14.5497138 C71.5172697,13.6543376 71.7408661,12.8709248 72.1887193,12.0875119 C72.6362422,11.4160624 73.1960587,10.8562459 73.8675083,10.4087229 C74.5389578,9.9612 75.2104073,9.62531009 75.9941505,9.40138349 C76.6656,9.06582385 77.3370495,8.95386055 78.0088294,8.95386055 C79.2397651,8.95386055 80.3590679,9.28942018 81.4780404,9.8492367 C82.3734165,10.2967596 83.1568294,10.9682092 83.6046826,11.8635853 L83.9402422,9.40138349 L88.5290862,9.40138349 L88.5290862,16.1165394 L83.6046826,16.1165394 C83.6046826,15.6690165 83.4927193,15.3331266 83.2687927,14.997567 C83.0451963,14.6616771 82.7093064,14.3257872 82.3734165,14.1021908 C82.0378569,13.8782642 81.5900037,13.6543376 81.1424807,13.430411 C80.6946275,13.318778 80.2471046,13.2068147 79.7992514,13.2068147 C79.4636917,13.2068147 79.0158385,13.318778 78.7922422,13.5423743 C78.4563523,13.7663009 78.344389,14.2138239 78.344389,14.5497138 C78.344389,14.997567 78.6802789,15.4450899 79.1278018,15.5570532 C79.7992514,15.8926128 80.4710312,16.1165394 81.1424807,16.2285028 L83.7166459,17.0119156 C84.612022,17.2358422 85.5073982,17.6833651 86.290811,18.1312183 C87.0742239,18.5787413 87.7456734,19.2501908 88.3051596,20.0339339 C88.8649761,20.8173468 89.0885725,21.824356 89.0885725,22.8316954 C89.0885725,23.6151083 88.8649761,24.3985211 88.5290862,25.1819339 C88.1931963,25.8537138 87.6337101,26.5251633 86.9622606,26.9726862 C86.290811,27.5325028 85.5073982,27.8680624 84.7239853,28.091989 C83.8286092,28.3159156 82.933233,28.4278789 82.1498202,28.4278789 C80.9185541,28.4278789 79.6876183,28.2039523 78.5683156,27.6444661 C77.6729394,27.1966128 76.8895266,26.5251633 76.3300404,25.7417505 L75.9941505,27.9800257 L71.2933431,28.091989 Z" id="Fill-9"></path>
+<path d="M107.107861,18.5788404 C107.107861,19.1383266 107.219824,19.6981431 107.331787,20.2576294 C107.44375,20.8171156 107.667347,21.2649688 107.891273,21.7124917 C108.1152,22.160345 108.339127,22.4959046 108.78665,22.7198312 C109.122539,22.9437578 109.458099,23.1676844 109.905952,23.1676844 C110.689365,23.1676844 111.360815,22.7198312 111.808338,22.0483817 C112.368154,21.0410422 112.703714,20.0337028 112.59175,18.802767 C112.59175,18.1313174 112.480117,17.4595376 112.368154,16.9000514 C112.256191,16.3405651 112.032264,15.7807486 111.808338,15.3332257 C111.584741,14.8853725 111.360815,14.5498128 110.912961,14.3258862 C110.577402,14.1019596 110.241512,13.9899963 109.793989,13.9899963 C109.010576,13.9899963 108.227163,14.5498128 107.891273,15.2212624 C107.219824,16.2286018 106.995897,17.3475743 107.107861,18.5788404 L107.107861,18.5788404 Z M101.623971,28.3156844 L102.63098,28.9874642 C103.078833,29.3230239 103.638319,29.5469505 104.197806,29.7708771 C104.757622,29.9944734 105.429072,30.2184 106.100521,30.4423266 C106.771971,30.6662532 107.555383,30.6662532 108.227163,30.6662532 C108.898613,30.6662532 109.682026,30.5542899 110.353475,30.3303633 C110.801328,30.1064367 111.248851,29.8828404 111.696705,29.4349872 C112.032264,29.0994275 112.256191,28.7635376 112.368154,28.3156844 C112.480117,27.8681615 112.59175,27.5322716 112.59175,27.0847486 L112.59175,25.8534826 C112.480117,26.0774092 112.256191,26.3013358 112.032264,26.4132991 C111.808338,26.6368954 111.472778,26.860822 111.136888,27.0847486 C110.689365,27.3086752 110.353475,27.5322716 109.905952,27.6442349 C109.346136,27.7561982 108.78665,27.8681615 108.227163,27.8681615 C106.771971,27.8681615 105.429072,27.6442349 104.086172,27.0847486 C102.96687,26.6368954 102.071494,25.8534826 101.288081,24.9581064 C100.616631,24.0627303 100.056815,23.0557211 99.721255,21.9364183 C99.3853651,20.8171156 99.1614385,19.6981431 99.2734018,18.4668771 C99.2734018,17.123978 99.4973284,15.7807486 99.8332183,14.5498128 C100.168778,13.4305101 100.840228,12.4231706 101.623971,11.5277945 C102.407383,10.6324183 103.414393,9.96096881 104.533695,9.62540917 C105.764961,9.17755596 107.107861,8.95362936 108.45076,8.95362936 C109.234172,8.95362936 110.017916,9.17755596 110.801328,9.51344587 C111.360815,9.7370422 111.920301,10.0729321 112.480117,10.5207853 L113.26353,9.40148257 L122.217292,9.40148257 L122.217292,14.3258862 L119.979017,14.3258862 L119.979017,25.5179229 C119.979017,26.9727853 119.75509,28.4276477 119.307567,29.7708771 C118.859714,31.0018128 118.075971,32.1211156 117.180594,33.0164917 C116.173255,33.9118679 114.830356,34.6952807 113.487127,35.1428037 C111.808338,35.7029505 110.129549,35.9265468 108.339127,35.9265468 C107.331787,35.9265468 106.436411,35.8149138 105.429072,35.5909872 C104.645659,35.3667303 103.750283,35.1428037 102.96687,34.6952807 C102.29542,34.3597211 101.623971,34.0238312 101.064154,33.575978 L99.721255,32.5686385 L101.623971,28.3156844 Z" id="Fill-11"></path>
+<path d="M123.672253,9.40144954 L132.737648,9.40144954 L132.737648,18.466844 C132.737648,19.6981101 132.849611,20.9290459 133.185501,22.0483486 C133.409097,22.7197982 134.080877,23.1676514 134.752327,23.1676514 C135.423776,23.1676514 135.983262,22.8317615 136.431116,22.3842385 C136.878639,21.824422 137.102565,21.0410092 137.102565,20.3695596 L137.102565,14.4378165 L134.640363,14.4378165 L134.640363,9.40144954 L144.377207,9.40144954 L144.377207,23.1676514 L146.16796,23.1676514 L146.16796,28.2040183 L139.117244,28.2040183 L138.109905,25.8534495 L137.326492,26.7488257 C136.655042,27.5322385 135.759666,28.092055 134.752327,28.4276147 C134.080877,28.6515413 133.409097,28.7635046 132.737648,28.7635046 C131.506712,28.7635046 130.275446,28.6515413 129.156143,28.2040183 C128.261097,27.8681284 127.477354,27.3086422 126.805905,26.5252294 C126.134455,25.6298532 125.686932,24.7344771 125.574969,23.6151743 C125.351042,22.2722752 125.239079,20.9290459 125.239079,19.5861468 L125.239079,14.4378165 L123.672253,14.4378165 L123.672253,9.40144954 Z" id="Fill-13"></path>
+<polygon id="Fill-15" points="158.143772 28.091989 147.734818 28.091989 147.734818 23.1675853 149.301974 23.1675853 149.301974 14.2138239 147.734818 14.2138239 147.734818 9.40138349 156.464983 9.40138349 156.464983 23.2795486 158.255736 23.2795486"></polygon>
+<path d="M166.985406,18.5788404 C166.985406,19.1383266 167.097369,19.6981431 167.209332,20.2576294 C167.321295,20.8171156 167.544892,21.2649688 167.768818,21.7124917 C167.992745,22.160345 168.216672,22.4959046 168.664194,22.7198312 C169.000084,22.9437578 169.335644,23.1676844 169.783497,23.1676844 C170.56691,23.1676844 171.23836,22.7198312 171.685883,22.0483817 C172.245699,21.0410422 172.581259,20.0337028 172.469295,18.802767 C172.469295,18.1313174 172.357662,17.4595376 172.245699,16.9000514 C172.133736,16.3405651 171.909809,15.7807486 171.685883,15.3332257 C171.462286,14.8853725 171.23836,14.5498128 170.790506,14.3258862 C170.454947,14.1019596 170.119057,13.9899963 169.671534,13.9899963 C168.888121,13.9899963 168.104708,14.5498128 167.768818,15.2212624 C167.209332,16.2286018 166.873442,17.3475743 166.985406,18.5788404 L166.985406,18.5788404 Z M172.357662,4.92460183 L170.678873,4.92460183 L170.678873,0.000198165138 L179.968194,0.000198165138 L179.968194,23.2793174 L181.758617,23.2793174 L181.758617,28.2040514 L173.029112,28.2040514 L172.357662,26.860822 C172.133736,27.0847486 172.021772,27.1967119 171.797846,27.3086752 C171.462286,27.5322716 171.126396,27.7561982 170.790506,27.8681615 C170.342983,28.0920881 169.895461,28.2040514 169.447607,28.3156844 C168.888121,28.4276477 168.328305,28.539611 167.656855,28.539611 C166.425919,28.539611 165.194653,28.3156844 164.07535,27.7561982 C163.068341,27.1967119 162.061002,26.5252624 161.389552,25.6298862 C160.606139,24.7345101 160.046323,23.6152073 159.5988,22.4959046 C159.150947,21.2649688 158.92735,20.0337028 158.92735,18.6908037 C158.92735,17.3475743 159.150947,16.0046752 159.5988,14.7737394 C160.046323,13.6544367 160.717772,12.6470972 161.501516,11.7517211 C162.284928,10.9683083 163.180305,10.2968587 164.299277,9.8490055 C165.306617,9.40148257 166.425919,9.17755596 167.544892,9.17755596 C168.552231,9.17755596 169.671534,9.28951927 170.678873,9.7370422 C171.23836,9.96096881 171.797846,10.2968587 172.357662,10.6324183 L172.357662,4.92460183 Z" id="Fill-17"></path>
+<path d="M192.839119,13.8782312 C192.391596,13.8782312 191.83178,13.9901945 191.384257,14.2141211 C191.048367,14.4377174 190.712807,14.661644 190.488881,14.9975339 C190.264954,15.3330936 190.152991,15.6689835 190.041028,16.0045431 C189.929064,16.340433 189.929064,16.5643596 189.929064,16.8999193 L195.637211,16.8999193 C195.637211,16.5643596 195.637211,16.1165064 195.525248,15.7809468 C195.413284,15.4450569 195.301321,15.1094972 195.077394,14.7736073 C194.853798,14.4377174 194.629872,14.2141211 194.293982,14.1021578 C193.846459,13.9901945 193.398606,13.8782312 192.839119,13.8782312 L192.839119,13.8782312 Z M202.12844,25.5177908 C200.785541,26.6370936 199.330349,27.5324697 197.65156,28.091956 C195.972771,28.6514422 194.182018,28.8753688 192.391596,28.7634055 C191.16033,28.7634055 190.041028,28.5398092 188.922055,28.2039193 C187.802752,27.8680294 186.68345,27.1965798 185.788073,26.413167 C184.780734,25.5177908 183.997321,24.5104514 183.437505,23.2795156 C182.766055,21.8246532 182.542128,20.2574972 182.542128,18.6906716 C182.542128,17.2358092 182.766055,15.8929101 183.325541,14.5496807 C183.773394,13.4307083 184.556807,12.3114055 185.452183,11.4160294 C186.34756,10.5206532 187.466532,9.84920367 188.698128,9.51331376 C189.929064,9.06579083 191.272294,8.84153394 192.727156,8.84153394 C194.070385,8.84153394 195.525248,9.06579083 196.868147,9.51331376 C197.98745,9.96116697 198.994789,10.5206532 199.890165,11.4160294 C200.673578,12.1994422 201.345028,13.2067817 201.680917,14.2141211 C202.12844,15.3330936 202.240404,16.5643596 202.240404,17.7952954 C202.240404,18.2431486 202.240404,18.8026349 202.12844,19.2504881 L201.79255,20.5933872 L189.928734,20.5933872 C190.041028,20.9292771 190.041028,21.1528734 190.152661,21.4887633 C190.264954,21.8246532 190.488881,22.1602128 190.712807,22.4961028 C191.048367,22.8316624 191.384257,23.1675523 191.83178,23.2795156 C192.391596,23.5034422 193.063046,23.6150752 193.734495,23.6150752 L194.853798,23.6150752 C195.301321,23.6150752 195.749174,23.5034422 196.084734,23.3914789 C196.532587,23.2795156 197.092073,23.055589 197.539596,22.8316624 C198.099413,22.6080661 198.546936,22.2721761 198.994789,21.8246532 L202.12844,25.5177908 Z" id="Fill-19"></path>
+</g>
+</g>
+</g>
+</g>
+</svg>
+<img class="fallback" src="" data-fallback-src="https://vanilla.futurecdn.net/tomsguide/media/img/brand_logo.svg">
+<meta itemprop="url" content="https://vanilla.futurecdn.net/tomsguide/media/img/brand_logo.svg">
+</span>
+<h1 itemprop="name">Tom's Guide</h1> <span class="strapline"></span>
+</a>
+</div>
+<input type="checkbox" name="burgerbar-expand" class="search-checkbox" id="search-checkbox">
+<label class="button-search masthead-item " for="search-checkbox" onclick="">
+<span class="desktop-text">Search</span><span class="icon icon-search"></span>
+</label>
+<form class="search-box" action="https://www.tomsguide.com/search" method="GET">
+<input type="search" name="searchTerm" placeholder="Search Tom's Guide" class="search-input">
+<button type="submit" class="search-submit">
+<span class="icon icon-search"></span>
+</button>
+</form>
+<div class="other-links">
+<a href="https://www.tomsguide.com/feeds/all">
+<abbr title="Really Simple Syndication">RSS</abbr>
+</a>
+</div>
+<div class="buttons-social masthead-item">
+<a target="_blank" href="https://www.facebook.com/Tomsguide/" class="icon icon-circle icon-facebook" aria-label="Facebook"></a>
+<a target="_blank" href="https://twitter.com/tomsguide" class="icon icon-circle icon-twitter" aria-label="Twitter"></a>
+<a target="_blank" href="https://www.instagram.com/tomsguide/?hl=en" rel="nofollow" class="icon icon-circle icon-instagram" aria-label="Instagram"></a>
+<a target="_blank" href="https://www.youtube.com/channel/UCik8xvfR6s8GQ74QNEGNzwg" class="icon icon-circle icon-youtube" aria-label="YouTube"></a>
+<a target="_blank" href="https://www.pinterest.com/tomsguidepurch/" class="icon icon-circle icon-pinterest" aria-label="Pinterest"></a>
+</div>
+</div>
+</div>
+<div class="wrapper">
+<div class="menuitems container full">
+<ul class="nav-list">
+<li class="menu-item menu-item-home">
+<a class="home" href="https://www.tomsguide.com/" aria-label="home">
+<i class="icon icon-home"></i> </a>
+</li>
+<li class="menu-item menu-item-cyber monday deals">
+<a class="" href="https://www.tomsguide.com/news/cyber-monday" aria-label="Cyber Monday deals">
+Cyber Monday deals
+</a>
+</li>
+<li class="menu-item menu-item-best picks">
+<a class="" href="https://www.tomsguide.com/best-picks" aria-label="Best Picks">
+Best Picks
+</a>
+</li>
+<li class="menu-item menu-item-news">
+<a class="" href="https://www.tomsguide.com/news" aria-label="News">
+News
+</a>
+</li>
+<li class="menu-item menu-item-phones">
+<a class="" href="https://www.tomsguide.com/topics/smartphones" aria-label="Phones">
+Phones
+</a>
+</li>
+<li class="menu-item menu-item-tvs">
+<a class="" href="https://www.tomsguide.com/topics/tv" aria-label="TVs">
+TVs
+</a>
+</li>
+<li class="menu-item menu-item-security">
+<a class="" href="https://www.tomsguide.com/topics/security" aria-label="Security">
+Security
+</a>
+</li>
+<li class="menu-item menu-item-reviews">
+<a class="" href="https://www.tomsguide.com/reviews" aria-label="Reviews">
+Reviews
+</a>
+</li>
+<li class="menu-item menu-item-more menu-level-1 has-submenu
+menu-item-hover-reveal ">
+<span tabindex="0">More <i class="icon icon-arrow-down"></i><i class="icon icon-arrow-right"></i></span>
+<ul class="sub-menu">
+<li class="sub-menu-item menu-level-2"><a href="https://www.tomsguide.com/us/best-antivirus,review-2588.html">Antivirus</a></li>
+<li class="sub-menu-item menu-level-2"><a href="https://www.tomsguide.com/topics/audio">Audio</a></li>
+<li class="sub-menu-item menu-level-2"><a href="https://www.tomsguide.com/topics/cameras">Cameras</a></li>
+<li class="sub-menu-item menu-level-2"><a href="https://www.tomsguide.com/topics/gaming">Gaming</a></li>
+<li class="sub-menu-item menu-level-2"><a href="https://www.tomsguide.com/topics/wifi">Home Networking</a></li>
+<li class="sub-menu-item menu-level-2"><a href="https://www.tomsguide.com/topics/smart-home">Smart Home</a></li>
+<li class="sub-menu-item menu-level-2"><a href="https://www.tomsguide.com/topics/software">Software</a></li>
+<li class="sub-menu-item menu-level-2"><a href="https://www.tomsguide.com/topics/streaming">Streaming</a></li>
+<li class="sub-menu-item menu-level-2"><a href="https://www.tomsguide.com/best-picks/best-vpn">VPN</a></li>
+<li class="sub-menu-item menu-level-2"><a href="https://www.tomsguide.com/topics/wearables">Wearables</a></li>
+<li class="sub-menu-item menu-level-2"><a href="https://www.tomsguide.com/best-picks/best-web-hosting">Web hosting</a></li>
+<li class="sub-menu-item menu-level-2"><a href="https://www.tomsguide.com/topics/what-to-watch">What To Watch</a></li>
+<li class="sub-menu-item menu-level-2"><a href="https://www.tomsguide.com/how-to">How To</a></li>
+</ul>
+</li>
+</ul>
+<div class="nav-sub-set-container">
+<div class="menu-item menu-item-none menu-item-main-pro menu-item-nav-sub-set">
+<a href="https://forums.tomsguide.com" target="_blank">Forums</a>
+</div>
+<div class="menu-item menu-item-none menu-item-nextup menu-item-nav-sub-set">
+<a href="https://www.tomsguide.com/holiday-guide-2019">Holiday Guide 2019</a>
+</div>
+</div> </div>
+</div>
+</nav>
+<div class="dfp-leaderboard-container"></div>
+<div id="main" class="container full lightbox1" tabindex="-1">
+<div class="trending-wrapper ">
+<div class="trending-bar container full">
+<div class="trending-lead brands-disabled">
+Trending
+</div>
+<ul class="trending-items ">
+<li class="trending-item"> <a href="https://www.tomsguide.com/news/100-best-black-friday-deals-2019-all-the-unmissable-deals-in-one-place">Black Friday</a></li>
+<li class="trending-item"> <a href="https://www.tomsguide.com/news/cyber-monday">Cyber Monday</a></li>
+<li class="trending-item"> <a href="https://www.tomsguide.com/news/the-best-amazon-black-friday-deals-nov-2019">Amazon</a></li>
+<li class="trending-item"> <a href="https://www.tomsguide.com/news/the-best-walmart-black-friday-deals-2019">Walmart</a></li>
+<li class="trending-item"> <a href="https://www.tomsguide.com/news/best-buy-black-friday-deals-apple-watch-tablets-tvs">Best Buy</a></li>
+<li class="trending-item black-friday"> <a href="https://www.tomsguide.com/news/black-friday-airpods-deals">AirPods Deals</a></li>
+<!-- Start Trending Subset //-->
+<!-- End Trending Subset //-->
+</ul>
+</div>
+</div>
+<aside id="affiliateDisclaimer"><small>Tom's Guide is supported by its audience. When you purchase through links on our site, we may earn an affiliate commission. <a href="https://www.futureplc.com/terms-conditions/">Learn more</a></small></aside>
+<div id="content">
+<div class="list-text-links list-text-links-trending-panel">
+<h2 class="list-title">
+<a href="https://www.tomsguide.com/news">Latest News</a>
+</h2>
+<div class="listingResult small result1 " data-page="1">
+<a href="https://www.tomsguide.com/deals/best-cyber-monday-tv-deals-for-2019" class="article-link" aria-label="Best Cyber Monday TV deals for 2019">
+<article class="search-result search-result-deals has-rating">
+<div class="image">
+<figure class="article-lead-image-wrap" data-original="https://cdn.mos.cms.futurecdn.net/zjDap6dmFQx2xc32Ej96DJ.jpg">
+<div class="image-remove-flow-width-setter">
+<div class="image-remove-reflow-container landscape" data-original="https://cdn.mos.cms.futurecdn.net/zjDap6dmFQx2xc32Ej96DJ.jpg">
+<img src="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" alt="Best Cyber Monday TV deals 2019" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="if(this.src &amp;&amp; this.src.indexOf('missing-image.svg') !== -1){return true;};this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/zjDap6dmFQx2xc32Ej96DJ-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/zjDap6dmFQx2xc32Ej96DJ-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/zjDap6dmFQx2xc32Ej96DJ-450-80.jpg 450w, https://cdn.mos.cms.futurecdn.net/zjDap6dmFQx2xc32Ej96DJ-970-80.jpg 970w, https://cdn.mos.cms.futurecdn.net/zjDap6dmFQx2xc32Ej96DJ-1024-80.jpg 1024w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/zjDap6dmFQx2xc32Ej96DJ.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/zjDap6dmFQx2xc32Ej96DJ.jpg" data-pin-nopin="true">
+</div>
+</div>
+</figure>
+</div>
+<div class="content">
+<header>
+<h3 class="article-name">Best Cyber Monday TV deals for 2019</h3>
+<p class="byline">
+<span class="by-author">
+By
+<span style="white-space:nowrap">
+Brian Westover </span>
+</span>
+<time class="published-date relative-date" datetime="2019-12-02T04:36:38Z" data-published-date="2019-12-02T04:36:38Z"></time>
+</p>
+</header>
+<p class="synopsis">
+Score great TV deals during Cyber Monday sales. Here are the best deals available now.
+</p>
+</div>
+</article>
+</a>
+<!-- Cats: -->
+</div>
+<div class="listingResult small result2 " data-page="1">
+<a href="https://www.tomsguide.com/news/dollar229-ipad-deal-sells-out-on-amazon-but-target-has-it-right-now" class="article-link" aria-label="Look sharp: the lowest-priced iPad is still available">
+<article class="search-result search-result-news optional-image-wrapper has-rating">
+<div class="image">
+<figure class="article-lead-image-wrap" data-original="https://cdn.mos.cms.futurecdn.net/hT4G9G2ERKsL87UqSRfVfP.png">
+<div class="image-remove-flow-width-setter">
+<div class="image-remove-reflow-container landscape" data-original="https://cdn.mos.cms.futurecdn.net/hT4G9G2ERKsL87UqSRfVfP.png">
+<img src="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" alt="ipad 7th gen 10.2 inch" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="if(this.src &amp;&amp; this.src.indexOf('missing-image.svg') !== -1){return true;};this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/hT4G9G2ERKsL87UqSRfVfP-320-80.png" data-srcset="https://cdn.mos.cms.futurecdn.net/hT4G9G2ERKsL87UqSRfVfP-320-80.png 320w, https://cdn.mos.cms.futurecdn.net/hT4G9G2ERKsL87UqSRfVfP-450-80.png 450w, https://cdn.mos.cms.futurecdn.net/hT4G9G2ERKsL87UqSRfVfP-970-80.png 970w, https://cdn.mos.cms.futurecdn.net/hT4G9G2ERKsL87UqSRfVfP-1024-80.png 1024w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/hT4G9G2ERKsL87UqSRfVfP.png" data-pin-media="https://cdn.mos.cms.futurecdn.net/hT4G9G2ERKsL87UqSRfVfP.png" data-pin-nopin="true">
+</div>
+</div>
+</figure>
+</div>
+<div class="content">
+<header>
+<h3 class="article-name">Look sharp: the lowest-priced iPad is still available</h3>
+<p class="byline">
+<span class="by-author">
+By
+<span style="white-space:nowrap">
+Mark Spoonauer </span>
+</span>
+<time class="published-date relative-date" datetime="2019-12-02T04:13:07Z" data-published-date="2019-12-02T04:13:07Z"></time>
+</p>
+</header>
+<p class="synopsis">
+Target has the iPad 10.2 inch for $229, which is the lowest price ever
+</p>
+</div>
+</article>
+</a>
+<!-- Cats: -->
+</div>
+<div class="listingResult small result3 " data-page="1">
+<a href="https://www.tomsguide.com/news/cyber-monday" class="article-link" aria-label="The best Cyber Monday deals 2019">
+<article class="search-result search-result-news optional-image-wrapper has-rating">
+<div class="image">
+<figure class="article-lead-image-wrap" data-original="https://cdn.mos.cms.futurecdn.net/f9AnxZ62aieawCTRMYuvJ7.jpg">
+<div class="image-remove-flow-width-setter">
+<div class="image-remove-reflow-container landscape" data-original="https://cdn.mos.cms.futurecdn.net/f9AnxZ62aieawCTRMYuvJ7.jpg">
+<img src="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" alt="Cyber Monday" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="if(this.src &amp;&amp; this.src.indexOf('missing-image.svg') !== -1){return true;};this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/f9AnxZ62aieawCTRMYuvJ7-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/f9AnxZ62aieawCTRMYuvJ7-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/f9AnxZ62aieawCTRMYuvJ7-450-80.jpg 450w, https://cdn.mos.cms.futurecdn.net/f9AnxZ62aieawCTRMYuvJ7-970-80.jpg 970w, https://cdn.mos.cms.futurecdn.net/f9AnxZ62aieawCTRMYuvJ7-1024-80.jpg 1024w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/f9AnxZ62aieawCTRMYuvJ7.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/f9AnxZ62aieawCTRMYuvJ7.jpg" data-pin-nopin="true">
+</div>
+</div>
+</figure>
+</div>
+<div class="content">
+<header>
+<h3 class="article-name">The best Cyber Monday deals 2019</h3>
+<p class="byline">
+<span class="by-author">
+By
+<span style="white-space:nowrap">
+Louis Ramirez </span>
+</span>
+<time class="published-date relative-date" datetime="2019-12-02T04:00:36Z" data-published-date="2019-12-02T04:00:36Z"></time>
+</p>
+</header>
+<p class="synopsis">
+Cyber Monday deals are already popping up this weekend, and here's everything you need to know right now.
+</p>
+</div>
+</article>
+</a>
+<!-- Cats: -->
+</div>
+<div class="listingResult small result4 " data-page="1">
+<a href="https://www.tomsguide.com/news/holy-crap-hps-dollar1299-touchscreen-laptop-is-dollar399-right-now-for-black-friday" class="article-link" aria-label="Holy crap! HP's $1,299 touchscreen laptop is $449 right now for Cyber Monday">
+<article class="search-result search-result-news optional-image-wrapper has-rating">
+<div class="image">
+<figure class="article-lead-image-wrap" data-original="https://cdn.mos.cms.futurecdn.net/b9rE2p6aZUWcwmsfNf2hY3.png">
+<div class="image-remove-flow-width-setter">
+<div class="image-remove-reflow-container landscape" data-original="https://cdn.mos.cms.futurecdn.net/b9rE2p6aZUWcwmsfNf2hY3.png">
+<img src="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" alt="" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="if(this.src &amp;&amp; this.src.indexOf('missing-image.svg') !== -1){return true;};this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/b9rE2p6aZUWcwmsfNf2hY3-320-80.png" data-srcset="https://cdn.mos.cms.futurecdn.net/b9rE2p6aZUWcwmsfNf2hY3-320-80.png 320w, https://cdn.mos.cms.futurecdn.net/b9rE2p6aZUWcwmsfNf2hY3-450-80.png 450w, https://cdn.mos.cms.futurecdn.net/b9rE2p6aZUWcwmsfNf2hY3-970-80.png 970w, https://cdn.mos.cms.futurecdn.net/b9rE2p6aZUWcwmsfNf2hY3-1024-80.png 1024w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/b9rE2p6aZUWcwmsfNf2hY3.png" data-pin-media="https://cdn.mos.cms.futurecdn.net/b9rE2p6aZUWcwmsfNf2hY3.png" data-pin-nopin="true">
+</div>
+</div>
+</figure>
+</div>
+<div class="content">
+<header>
+<h3 class="article-name">Holy crap! HP's $1,299 touchscreen laptop is $449 right now for Cyber Monday</h3>
+<p class="byline">
+<span class="by-author">
+By
+<span style="white-space:nowrap">
+Kate Kozuch </span>
+</span>
+<time class="published-date relative-date" datetime="2019-12-02T03:50:56Z" data-published-date="2019-12-02T03:50:56Z"></time>
+</p>
+</header>
+<p class="synopsis">
+Score the $1,299 HP 15z Touch laptop for a ridiculous $399 when you buy now.
+</p>
+</div>
+</article>
+</a>
+<!-- Cats: -->
+</div>
+<div class="listingResult small result5 " data-page="1">
+<a href="https://www.tomsguide.com/news/best-ipad-cyber-monday-deals-in-2019" class="article-link" aria-label="The best iPad deals for Cyber Monday">
+<article class="search-result search-result-news optional-image-wrapper has-rating">
+<div class="image">
+<figure class="article-lead-image-wrap" data-original="https://cdn.mos.cms.futurecdn.net/S9ncDeSeABnzxHReXvE3cF.jpg">
+<div class="image-remove-flow-width-setter">
+<div class="image-remove-reflow-container landscape" data-original="https://cdn.mos.cms.futurecdn.net/S9ncDeSeABnzxHReXvE3cF.jpg">
+<img src="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" alt="ipad cyber monday" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="if(this.src &amp;&amp; this.src.indexOf('missing-image.svg') !== -1){return true;};this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/S9ncDeSeABnzxHReXvE3cF-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/S9ncDeSeABnzxHReXvE3cF-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/S9ncDeSeABnzxHReXvE3cF-450-80.jpg 450w, https://cdn.mos.cms.futurecdn.net/S9ncDeSeABnzxHReXvE3cF-970-80.jpg 970w, https://cdn.mos.cms.futurecdn.net/S9ncDeSeABnzxHReXvE3cF-1024-80.jpg 1024w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/S9ncDeSeABnzxHReXvE3cF.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/S9ncDeSeABnzxHReXvE3cF.jpg" data-pin-nopin="true">
+</div>
+</div>
+</figure>
+</div>
+<div class="content">
+<header>
+<h3 class="article-name">The best iPad deals for Cyber Monday</h3>
+<p class="byline">
+<span class="by-author">
+By
+<span style="white-space:nowrap">
+Henry T. Casey </span>
+</span>
+<time class="published-date relative-date" datetime="2019-12-02T03:45:14Z" data-published-date="2019-12-02T03:45:14Z"></time>
+</p>
+</header>
+<p class="synopsis">
+We're tracking the best Cyber Monday iPad deals here, to help you find the best iPad sales around.
+</p>
+</div>
+</article>
+</a>
+<!-- Cats: -->
+</div>
+<div class="listingResult small result6 " data-page="1">
+<a href="https://www.tomsguide.com/news/the-best-chromebook-deals-for-cyber-monday-2019" class="article-link" aria-label="The best Chromebook deals for Cyber Monday 2019 ">
+<article class="search-result search-result-news optional-image-wrapper has-rating">
+<div class="image">
+<figure class="article-lead-image-wrap" data-original="https://cdn.mos.cms.futurecdn.net/dwK5EMasAatKdLqmu5BDng.jpg">
+<div class="image-remove-flow-width-setter">
+<div class="image-remove-reflow-container landscape" data-original="https://cdn.mos.cms.futurecdn.net/dwK5EMasAatKdLqmu5BDng.jpg">
+<img src="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" alt="Cyber Monday Chromebook deals" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="if(this.src &amp;&amp; this.src.indexOf('missing-image.svg') !== -1){return true;};this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/dwK5EMasAatKdLqmu5BDng-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/dwK5EMasAatKdLqmu5BDng-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/dwK5EMasAatKdLqmu5BDng-450-80.jpg 450w, https://cdn.mos.cms.futurecdn.net/dwK5EMasAatKdLqmu5BDng-970-80.jpg 970w, https://cdn.mos.cms.futurecdn.net/dwK5EMasAatKdLqmu5BDng-1024-80.jpg 1024w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/dwK5EMasAatKdLqmu5BDng.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/dwK5EMasAatKdLqmu5BDng.jpg" data-pin-nopin="true">
+</div>
+</div>
+</figure>
+</div>
+<div class="content">
+<header>
+<h3 class="article-name">The best Chromebook deals for Cyber Monday 2019 </h3>
+<p class="byline">
+<span class="by-author">
+By
+<span style="white-space:nowrap">
+Henry T. Casey </span>
+</span>
+<time class="published-date relative-date" datetime="2019-12-02T03:26:38Z" data-published-date="2019-12-02T03:26:38Z"></time>
+</p>
+</header>
+<p class="synopsis">
+Trying to tell the difference between lemons and lemonade? Our Cyber Monday Chromebook deals guide has you covered.
+</p>
+</div>
+</article>
+</a>
+<!-- Cats: -->
+</div>
+</div>
+<div class="mainCarousel curatedCarousel">
+<section class="feature-block top-featured" id="homePageCarousel">
+<div id="Item1" class="feature-block-item-wrapper item-1 ">
+<a class="article-link" aria-label="The best Cyber Monday deals 2019" href="https://www.tomsguide.com/news/cyber-monday">
+<figure class="feature-block-item">
+<div class="image-remove-flow-width-setter">
+<div class="image-remove-reflow-container landscape">
+<img src="https://cdn.mos.cms.futurecdn.net/f9AnxZ62aieawCTRMYuvJ7-320-80.jpg" alt="Your guide to scoring the best Cyber Monday deals " class="" onerror="if(this.src &amp;&amp; this.src.indexOf('missing-image.svg') !== -1){return true;};this.parentNode.replaceChild(window.missingImage(),this)" srcset="https://cdn.mos.cms.futurecdn.net/f9AnxZ62aieawCTRMYuvJ7-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/f9AnxZ62aieawCTRMYuvJ7-600-80.jpg 600w, https://cdn.mos.cms.futurecdn.net/f9AnxZ62aieawCTRMYuvJ7-970-80.jpg 970w, https://cdn.mos.cms.futurecdn.net/f9AnxZ62aieawCTRMYuvJ7-1024-80.jpg 1024w" sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/f9AnxZ62aieawCTRMYuvJ7.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/f9AnxZ62aieawCTRMYuvJ7.jpg" data-pin-nopin="true">
+</div>
+</div>
+<figcaption>
+<span class="article-name">The best Cyber Monday deals 2019</span>
+<span class="article-strapline">Your guide to scoring the best Cyber Monday deals </span>
+</figcaption>
+</figure>
+</a>
+</div><div id="Item2" class="feature-block-item-wrapper item-2 optional-image-wrapper ">
+<a class="article-link" aria-label="This $189 50-inch 4K TV just won Cyber Monday " href="https://www.tomsguide.com/news/this-dollar189-50-inch-4k-tv-just-won-cyber-monday-with-a-bonkers-cheap-price">
+<figure class="feature-block-item">
+<div class="image-remove-flow-width-setter">
+<div class="image-remove-reflow-container landscape">
+<img src="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" alt="It doesn't get cheaper than this" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="if(this.src &amp;&amp; this.src.indexOf('missing-image.svg') !== -1){return true;};this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/6Ck3vY9UD9VSUJCnLu8cLC-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/6Ck3vY9UD9VSUJCnLu8cLC-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/6Ck3vY9UD9VSUJCnLu8cLC-450-80.jpg 450w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/6Ck3vY9UD9VSUJCnLu8cLC.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/6Ck3vY9UD9VSUJCnLu8cLC.jpg" data-pin-nopin="true">
+</div>
+</div>
+<figcaption>
+<span class="article-name">This $189 50-inch 4K TV just won Cyber Monday </span>
+<span class="article-strapline">It doesn't get cheaper than this</span>
+</figcaption>
+</figure>
+</a>
+</div><div id="Item3" class="feature-block-item-wrapper item-3 optional-image-wrapper ">
+<a class="article-link" aria-label="Lenovo&rsquo;s $89 Chromebook is a ridiculously cheap Cyber Monday deal" href="https://www.tomsguide.com/news/lenovos-dollar89-chromebook-is-ridiculously-low-even-for-a-cyber-monday-deal">
+<figure class="feature-block-item">
+<div class="image-remove-flow-width-setter">
+<div class="image-remove-reflow-container landscape">
+<img src="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" alt="This deal blows the competition away" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="if(this.src &amp;&amp; this.src.indexOf('missing-image.svg') !== -1){return true;};this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/ZncfgRwdYSf3t3AYcHnf4k-320-80.jpeg" data-srcset="https://cdn.mos.cms.futurecdn.net/ZncfgRwdYSf3t3AYcHnf4k-320-80.jpeg 320w, https://cdn.mos.cms.futurecdn.net/ZncfgRwdYSf3t3AYcHnf4k-450-80.jpeg 450w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/ZncfgRwdYSf3t3AYcHnf4k.jpeg" data-pin-media="https://cdn.mos.cms.futurecdn.net/ZncfgRwdYSf3t3AYcHnf4k.jpeg" data-pin-nopin="true">
+</div>
+</div>
+<figcaption>
+<span class="article-name">Lenovo&rsquo;s $89 Chromebook is a ridiculously cheap Cyber Monday deal</span>
+<span class="article-strapline">This deal blows the competition away</span>
+</figcaption>
+</figure>
+</a>
+</div><div id="Item4" class="feature-block-item-wrapper item-4 optional-image-wrapper ">
+<a class="article-link" aria-label="Hurry! Apple Watch Series 5 hits lowest price ever with this Amazon trick" href="https://www.tomsguide.com/news/apple-watch-series-5-drops-to-lowest-price-ever-with-this-amazon-trick">
+<figure class="feature-block-item">
+<div class="image-remove-flow-width-setter">
+<div class="image-remove-reflow-container landscape">
+<img src="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" alt="The 40mm Apple Watch Series 5 is now just $354" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="if(this.src &amp;&amp; this.src.indexOf('missing-image.svg') !== -1){return true;};this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/imVBYWgJGE6KdaVxXpzRnL-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/imVBYWgJGE6KdaVxXpzRnL-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/imVBYWgJGE6KdaVxXpzRnL-450-80.jpg 450w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/imVBYWgJGE6KdaVxXpzRnL.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/imVBYWgJGE6KdaVxXpzRnL.jpg" data-pin-nopin="true">
+</div>
+</div>
+<figcaption>
+<span class="article-name">Hurry! Apple Watch Series 5 hits lowest price ever with this Amazon trick</span>
+<span class="article-strapline">The 40mm Apple Watch Series 5 is now just $354</span>
+</figcaption>
+</figure>
+</a>
+</div><div id="Item5" class="feature-block-item-wrapper item-5 optional-image-wrapper ">
+<a class="article-link" aria-label="The best iPhone Cyber Monday deals: iPhone 11, iPhone Pro and more" href="https://www.tomsguide.com/deals/best-iphone-cyber-monday-deals">
+<figure class="feature-block-item">
+<div class="image-remove-flow-width-setter">
+<div class="image-remove-reflow-container landscape">
+<img src="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" alt="Find big savings on Apple's latest smartphones for the holidays" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="if(this.src &amp;&amp; this.src.indexOf('missing-image.svg') !== -1){return true;};this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/3vDdPZbKpaUGGEYS6tDw63-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/3vDdPZbKpaUGGEYS6tDw63-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/3vDdPZbKpaUGGEYS6tDw63-450-80.jpg 450w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/3vDdPZbKpaUGGEYS6tDw63.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/3vDdPZbKpaUGGEYS6tDw63.jpg" data-pin-nopin="true">
+</div>
+</div>
+<figcaption>
+<span class="article-name">The best iPhone Cyber Monday deals: iPhone 11, iPhone Pro and more</span>
+<span class="article-strapline">Find big savings on Apple's latest smartphones for the holidays</span>
+</figcaption>
+</figure>
+</a>
+</div><div id="Item6" class="feature-block-item-wrapper item-6 optional-image-wrapper ">
+<a class="article-link" aria-label="Best Nintendo Switch Cyber Monday deals of 2019" href="https://www.tomsguide.com/news/nintendo-switch-cyber-monday-deals">
+<figure class="feature-block-item">
+<div class="image-remove-flow-width-setter">
+<div class="image-remove-reflow-container landscape">
+<img src="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" alt="The best Nintendo Switch deals of Cyber Monday" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="if(this.src &amp;&amp; this.src.indexOf('missing-image.svg') !== -1){return true;};this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/Z7326aakZJy6PjqPcGWoRV-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/Z7326aakZJy6PjqPcGWoRV-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/Z7326aakZJy6PjqPcGWoRV-450-80.jpg 450w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/Z7326aakZJy6PjqPcGWoRV.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/Z7326aakZJy6PjqPcGWoRV.jpg" data-pin-nopin="true">
+</div>
+</div>
+<figcaption>
+<span class="article-name">Best Nintendo Switch Cyber Monday deals of 2019</span>
+<span class="article-strapline">The best Nintendo Switch deals of Cyber Monday</span>
+</figcaption>
+</figure>
+</a>
+</div> </section>
+</div>
+<section data-next="latest" data-total-count="26554" data-list="mixedPrimary/home/latest" class="listingResultsWrapper mixedPrimary mixedPrimary">
+<header>
+<h2 class="list-title"> News</h2>
+<a class="list-heading-link" href="https://www.tomsguide.com/news">View more <i class="icon icon-arrow-right"></i></a> </header>
+<div class="listingResults mixedPrimary" data-sort="page" data-listkey="mixedPrimary">
+<div class="listingResult small result1 " data-page="1">
+<a href="https://www.tomsguide.com/news/dollar229-ipad-deal-sells-out-on-amazon-but-target-has-it-right-now" class="article-link" aria-label="Look sharp: the lowest-priced iPad is still available">
+<article class="search-result search-result-news has-rating">
+<div class="image">
+<figure class="article-lead-image-wrap" data-original="https://cdn.mos.cms.futurecdn.net/hT4G9G2ERKsL87UqSRfVfP.png">
+<div class="image-remove-flow-width-setter">
+<div class="image-remove-reflow-container landscape" data-original="https://cdn.mos.cms.futurecdn.net/hT4G9G2ERKsL87UqSRfVfP.png">
+<img src="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" alt="ipad 7th gen 10.2 inch" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="if(this.src &amp;&amp; this.src.indexOf('missing-image.svg') !== -1){return true;};this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/hT4G9G2ERKsL87UqSRfVfP-320-80.png" data-srcset="https://cdn.mos.cms.futurecdn.net/hT4G9G2ERKsL87UqSRfVfP-320-80.png 320w, https://cdn.mos.cms.futurecdn.net/hT4G9G2ERKsL87UqSRfVfP-450-80.png 450w, https://cdn.mos.cms.futurecdn.net/hT4G9G2ERKsL87UqSRfVfP-970-80.png 970w, https://cdn.mos.cms.futurecdn.net/hT4G9G2ERKsL87UqSRfVfP-1024-80.png 1024w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/hT4G9G2ERKsL87UqSRfVfP.png" data-pin-media="https://cdn.mos.cms.futurecdn.net/hT4G9G2ERKsL87UqSRfVfP.png" data-pin-nopin="true">
+</div>
+</div>
+</figure>
+</div>
+<div class="content">
+<header>
+<h3 class="article-name">Look sharp: the lowest-priced iPad is still available</h3>
+<p class="byline">
+<span class="by-author">
+By
+<span style="white-space:nowrap">
+Mark Spoonauer </span>
+</span>
+<time class="published-date relative-date" datetime="2019-12-02T04:13:07Z" data-published-date="2019-12-02T04:13:07Z"></time>
+</p>
+</header>
+<p class="synopsis">
+Target has the iPad 10.2 inch for $229, which is the lowest price ever
+</p>
+</div>
+</article>
+</a>
+<!-- Cats: -->
+</div>
+<div class="listingResult small result2 sponsored-post">
+<!-- stuffs -->
+<div style="width:100%"></div>
+</div>
+<div class="listingResult small result3 lightbox2" data-page="1">
+<a href="https://www.tomsguide.com/news/holy-crap-hps-dollar1299-touchscreen-laptop-is-dollar399-right-now-for-black-friday" class="article-link" aria-label="Holy crap! HP's $1,299 touchscreen laptop is $449 right now for Cyber Monday">
+<article class="search-result search-result-news optional-image-wrapper has-rating">
+<div class="image">
+<figure class="article-lead-image-wrap" data-original="https://cdn.mos.cms.futurecdn.net/b9rE2p6aZUWcwmsfNf2hY3.png">
+<div class="image-remove-flow-width-setter">
+<div class="image-remove-reflow-container landscape" data-original="https://cdn.mos.cms.futurecdn.net/b9rE2p6aZUWcwmsfNf2hY3.png">
+<img src="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" alt="" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="if(this.src &amp;&amp; this.src.indexOf('missing-image.svg') !== -1){return true;};this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/b9rE2p6aZUWcwmsfNf2hY3-320-80.png" data-srcset="https://cdn.mos.cms.futurecdn.net/b9rE2p6aZUWcwmsfNf2hY3-320-80.png 320w, https://cdn.mos.cms.futurecdn.net/b9rE2p6aZUWcwmsfNf2hY3-450-80.png 450w, https://cdn.mos.cms.futurecdn.net/b9rE2p6aZUWcwmsfNf2hY3-970-80.png 970w, https://cdn.mos.cms.futurecdn.net/b9rE2p6aZUWcwmsfNf2hY3-1024-80.png 1024w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/b9rE2p6aZUWcwmsfNf2hY3.png" data-pin-media="https://cdn.mos.cms.futurecdn.net/b9rE2p6aZUWcwmsfNf2hY3.png" data-pin-nopin="true">
+</div>
+</div>
+</figure>
+</div>
+<div class="content">
+<header>
+<h3 class="article-name">Holy crap! HP's $1,299 touchscreen laptop is $449 right now for Cyber Monday</h3>
+<p class="byline">
+<span class="by-author">
+By
+<span style="white-space:nowrap">
+Kate Kozuch </span>
+</span>
+<time class="published-date relative-date" datetime="2019-12-02T03:50:56Z" data-published-date="2019-12-02T03:50:56Z"></time>
+</p>
+</header>
+<p class="synopsis">
+Score the $1,299 HP 15z Touch laptop for a ridiculous $399 when you buy now.
+</p>
+</div>
+</article>
+</a>
+<!-- Cats: -->
+</div>
+<section class="popular-box">
+<div id="popular-box-wrapper" class="style1">
+<div class="most-popular-tab-bar">
+<div id="popularcontent">
+<div class="flex-row">
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</section>
+<section data-next="latest" data-total-count="562" data-list="mixedSecondary/home/latest" class="listingResultsWrapper mixedSecondary mixedSecondary">
+<header>
+<h2 class="list-title"> Best Picks</h2>
+<a class="list-heading-link" href="https://www.tomsguide.com/best-picks">View more <i class="icon icon-arrow-right"></i></a> </header>
+<div class="listingResults mixedSecondary" data-sort="page" data-listkey="mixedSecondary">
+<div class="listingResult small result1 " data-page="1">
+<a href="https://www.tomsguide.com/us/best-wireless-earbuds,review-6160.html" class="article-link" aria-label="Best wireless earbuds 2019">
+<article class="search-result search-result-best-pick has-rating">
+<div class="image">
+<figure class="article-lead-image-wrap" data-original="https://cdn.mos.cms.futurecdn.net/8EbRHEhcUKzNJKg9PRkC8.jpg">
+<div class="image-remove-flow-width-setter">
+<div class="image-remove-reflow-container landscape" data-original="https://cdn.mos.cms.futurecdn.net/8EbRHEhcUKzNJKg9PRkC8.jpg">
+<img src="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" alt="" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="if(this.src &amp;&amp; this.src.indexOf('missing-image.svg') !== -1){return true;};this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/8EbRHEhcUKzNJKg9PRkC8-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/8EbRHEhcUKzNJKg9PRkC8-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/8EbRHEhcUKzNJKg9PRkC8-450-80.jpg 450w, https://cdn.mos.cms.futurecdn.net/8EbRHEhcUKzNJKg9PRkC8-970-80.jpg 970w, https://cdn.mos.cms.futurecdn.net/8EbRHEhcUKzNJKg9PRkC8-1024-80.jpg 1024w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/8EbRHEhcUKzNJKg9PRkC8.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/8EbRHEhcUKzNJKg9PRkC8.jpg" data-pin-nopin="true">
+</div>
+</div>
+</figure>
+</div>
+<div class="content">
+<header>
+<h3 class="article-name">Best wireless earbuds 2019</h3>
+<p class="byline">
+<span class="by-author">
+By
+<span style="white-space:nowrap">
+Sherri L. Smith </span>
+</span>
+<time class="published-date relative-date" datetime="2019-12-01T22:38:05Z" data-published-date="2019-12-01T22:38:05Z"></time>
+</p>
+</header>
+<p class="synopsis">
+From the AirPods to a wave of great alternatives, these are the best wireless earbuds you can buy based on our testing.
+</p>
+</div>
+</article>
+</a>
+<!-- Cats: -->
+</div>
+<div class="listingResult small result2 " data-page="1">
+<a href="https://www.tomsguide.com/us/best-identity-theft-protection,review-2083.html" class="article-link" aria-label="Best Identity-Theft Protection 2019">
+<article class="search-result search-result-best-pick optional-image-wrapper has-rating">
+<div class="image">
+<figure class="article-lead-image-wrap" data-original="https://cdn.mos.cms.futurecdn.net/qazzPHHhS5CjysVPSXyUAa.jpg">
+<div class="image-remove-flow-width-setter">
+<div class="image-remove-reflow-container landscape" data-original="https://cdn.mos.cms.futurecdn.net/qazzPHHhS5CjysVPSXyUAa.jpg">
+<img src="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" alt="" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="if(this.src &amp;&amp; this.src.indexOf('missing-image.svg') !== -1){return true;};this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/qazzPHHhS5CjysVPSXyUAa-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/qazzPHHhS5CjysVPSXyUAa-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/qazzPHHhS5CjysVPSXyUAa-450-80.jpg 450w, https://cdn.mos.cms.futurecdn.net/qazzPHHhS5CjysVPSXyUAa-970-80.jpg 970w, https://cdn.mos.cms.futurecdn.net/qazzPHHhS5CjysVPSXyUAa-1024-80.jpg 1024w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/qazzPHHhS5CjysVPSXyUAa.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/qazzPHHhS5CjysVPSXyUAa.jpg" data-pin-nopin="true">
+</div>
+</div>
+</figure>
+</div>
+<div class="content">
+<header>
+<h3 class="article-name">Best Identity-Theft Protection 2019</h3>
+<p class="byline">
+<span class="by-author">
+By
+<span style="white-space:nowrap">
+Paul Wagenseil, </span>
+<span style="white-space:nowrap">
+Brian Nadel </span>
+</span>
+<time class="published-date relative-date" datetime="2019-12-01T20:05:54Z" data-published-date="2019-12-01T20:05:54Z"></time>
+</p>
+</header>
+<p class="synopsis">
+We tested the five most popular identity theft protection services over a three-month process. Here are the services that protect you the best.
+</p>
+</div>
+</article>
+</a>
+<!-- Cats: -->
+</div>
+<div class="listingResult small result3 " data-page="1">
+<a href="https://www.tomsguide.com/us/best-password-managers,review-3785.html" class="article-link" aria-label="Best Password Managers 2019">
+<article class="search-result search-result-best-pick optional-image-wrapper has-rating">
+<div class="image">
+<figure class="article-lead-image-wrap" data-original="https://cdn.mos.cms.futurecdn.net/ffZPeRFjQZ2QnPdHZd3i5Q.jpg">
+<div class="image-remove-flow-width-setter">
+<div class="image-remove-reflow-container landscape" data-original="https://cdn.mos.cms.futurecdn.net/ffZPeRFjQZ2QnPdHZd3i5Q.jpg">
+<img src="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" alt="" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="if(this.src &amp;&amp; this.src.indexOf('missing-image.svg') !== -1){return true;};this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/ffZPeRFjQZ2QnPdHZd3i5Q-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/ffZPeRFjQZ2QnPdHZd3i5Q-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/ffZPeRFjQZ2QnPdHZd3i5Q-450-80.jpg 450w, https://cdn.mos.cms.futurecdn.net/ffZPeRFjQZ2QnPdHZd3i5Q-970-80.jpg 970w, https://cdn.mos.cms.futurecdn.net/ffZPeRFjQZ2QnPdHZd3i5Q-1024-80.jpg 1024w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/ffZPeRFjQZ2QnPdHZd3i5Q.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/ffZPeRFjQZ2QnPdHZd3i5Q.jpg" data-pin-nopin="true">
+</div>
+</div>
+</figure>
+</div>
+<div class="content">
+<header>
+<h3 class="article-name">Best Password Managers 2019</h3>
+<p class="byline">
+<span class="by-author">
+By
+<span style="white-space:nowrap">
+Paul Wagenseil </span>
+</span>
+<time class="published-date relative-date" datetime="2019-12-01T19:59:55Z" data-published-date="2019-12-01T19:59:55Z"></time>
+</p>
+</header>
+<p class="synopsis">
+To fully protect yourself online, you need a password manager. We've used and tested seven top brands to determine the best one.
+</p>
+</div>
+</article>
+</a>
+<!-- Cats: -->
+</div>
+</div>
+</section>
+<section data-next="latest" data-total-count="414" data-list="mixedTertiary/home/latest" class="listingResultsWrapper mixedTertiary mixedTertiary">
+<header>
+<h2 class="list-title"> Phones</h2>
+<a class="list-heading-link" href="https://www.tomsguide.com/topics/smartphones">View more <i class="icon icon-arrow-right"></i></a> </header>
+<div class="listingResults mixedTertiary" data-sort="page" data-listkey="mixedTertiary">
+<div class="listingResult small result1 " data-page="1">
+<a href="https://www.tomsguide.com/us/best-smartphones,review-2223.html" class="article-link" aria-label="Best phones of 2019">
+<article class="search-result search-result-best-pick has-rating">
+<div class="image">
+<figure class="article-lead-image-wrap" data-original="https://cdn.mos.cms.futurecdn.net/qheNa9824oNdkntooVj2hm.jpg">
+<div class="image-remove-flow-width-setter">
+<div class="image-remove-reflow-container landscape" data-original="https://cdn.mos.cms.futurecdn.net/qheNa9824oNdkntooVj2hm.jpg">
+<img src="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" alt="iphone 11 pro vs galaxy note 10" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="if(this.src &amp;&amp; this.src.indexOf('missing-image.svg') !== -1){return true;};this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/qheNa9824oNdkntooVj2hm-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/qheNa9824oNdkntooVj2hm-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/qheNa9824oNdkntooVj2hm-450-80.jpg 450w, https://cdn.mos.cms.futurecdn.net/qheNa9824oNdkntooVj2hm-970-80.jpg 970w, https://cdn.mos.cms.futurecdn.net/qheNa9824oNdkntooVj2hm-1024-80.jpg 1024w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/qheNa9824oNdkntooVj2hm.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/qheNa9824oNdkntooVj2hm.jpg" data-pin-nopin="true">
+</div>
+</div>
+</figure>
+</div>
+<div class="content">
+<header>
+<h3 class="article-name">Best phones of 2019</h3>
+<p class="byline">
+<span class="by-author">
+By
+<span style="white-space:nowrap">
+Mark Spoonauer </span>
+</span>
+<time class="published-date relative-date" datetime="2019-11-30T18:49:44Z" data-published-date="2019-11-30T18:49:44Z"></time>
+</p>
+</header>
+<p class="synopsis">
+Here are the best smartphones that we&rsquo;ve tested, with the top Android phones and iPhones, and our favorites for budget shoppers.
+</p>
+</div>
+</article>
+</a>
+<!-- Cats: -->
+</div>
+<div class="listingResult small result2 " data-page="1">
+<a href="https://www.tomsguide.com/best-picks/best-small-phones" class="article-link" aria-label="Best Small Phones 2019: Top Picks Under 6 Inches">
+<article class="search-result search-result-best-pick optional-image-wrapper has-rating">
+<div class="image">
+<figure class="article-lead-image-wrap" data-original="https://cdn.mos.cms.futurecdn.net/opK9GmKLmALUPM2BXhwBNP.jpg">
+<div class="image-remove-flow-width-setter">
+<div class="image-remove-reflow-container landscape" data-original="https://cdn.mos.cms.futurecdn.net/opK9GmKLmALUPM2BXhwBNP.jpg">
+<img src="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" alt="" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="if(this.src &amp;&amp; this.src.indexOf('missing-image.svg') !== -1){return true;};this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/opK9GmKLmALUPM2BXhwBNP-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/opK9GmKLmALUPM2BXhwBNP-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/opK9GmKLmALUPM2BXhwBNP-450-80.jpg 450w, https://cdn.mos.cms.futurecdn.net/opK9GmKLmALUPM2BXhwBNP-970-80.jpg 970w, https://cdn.mos.cms.futurecdn.net/opK9GmKLmALUPM2BXhwBNP-1024-80.jpg 1024w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/opK9GmKLmALUPM2BXhwBNP.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/opK9GmKLmALUPM2BXhwBNP.jpg" data-pin-nopin="true">
+</div>
+</div>
+</figure>
+</div>
+<div class="content">
+<header>
+<h3 class="article-name">Best Small Phones 2019: Top Picks Under 6 Inches</h3>
+<p class="byline">
+<span class="by-author">
+By
+<span style="white-space:nowrap">
+Adam Ismail </span>
+</span>
+<time class="published-date relative-date" datetime="2019-11-30T07:15:50Z" data-published-date="2019-11-30T07:15:50Z"></time>
+</p>
+</header>
+<p class="synopsis">
+Don't want an oversized screen that makes one-handed use difficult? Here are the best smartphones with displays under 6 inches.
+</p>
+</div>
+</article>
+</a>
+<!-- Cats: -->
+</div>
+<div class="listingResult small result3 " data-page="1">
+<a href="https://www.tomsguide.com/deals/save-big-on-this-galaxy-note-10-plus-galaxy-buds-bundle" class="article-link" aria-label="Save big on this Galaxy Note 10 Plus-Galaxy Buds bundle">
+<article class="search-result search-result-deals optional-image-wrapper has-rating">
+<div class="image">
+<figure class="article-lead-image-wrap" data-original="https://cdn.mos.cms.futurecdn.net/zys8ZiTPxgRAWunjQ443gG.jpeg">
+<div class="image-remove-flow-width-setter">
+<div class="image-remove-reflow-container landscape" data-original="https://cdn.mos.cms.futurecdn.net/zys8ZiTPxgRAWunjQ443gG.jpeg">
+<img src="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" alt="" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="if(this.src &amp;&amp; this.src.indexOf('missing-image.svg') !== -1){return true;};this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/zys8ZiTPxgRAWunjQ443gG-320-80.jpeg" data-srcset="https://cdn.mos.cms.futurecdn.net/zys8ZiTPxgRAWunjQ443gG-320-80.jpeg 320w, https://cdn.mos.cms.futurecdn.net/zys8ZiTPxgRAWunjQ443gG-450-80.jpeg 450w, https://cdn.mos.cms.futurecdn.net/zys8ZiTPxgRAWunjQ443gG-970-80.jpeg 970w, https://cdn.mos.cms.futurecdn.net/zys8ZiTPxgRAWunjQ443gG-1024-80.jpeg 1024w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/zys8ZiTPxgRAWunjQ443gG.jpeg" data-pin-media="https://cdn.mos.cms.futurecdn.net/zys8ZiTPxgRAWunjQ443gG.jpeg" data-pin-nopin="true">
+</div>
+</div>
+</figure>
+</div>
+<div class="content">
+<header>
+<h3 class="article-name">Save big on this Galaxy Note 10 Plus-Galaxy Buds bundle</h3>
+<p class="byline">
+<span class="by-author">
+By
+<span style="white-space:nowrap">
+Philip Michaels </span>
+</span>
+<time class="published-date relative-date" datetime="2019-11-30T04:39:50Z" data-published-date="2019-11-30T04:39:50Z"></time>
+</p>
+</header>
+<p class="synopsis">
+The Galaxy Note 10 Plus can be a pricey phone, but Amazon lets you save $330 by bundling the phablet with a pair of Galaxy Buds.
+</p>
+</div>
+</article>
+</a>
+<!-- Cats: -->
+</div>
+</div>
+</section>
+<section data-next="latest" data-total-count="1362" data-list="mixed4/home/latest" class="listingResultsWrapper mixed4 mixed4">
+<header>
+<h2 class="list-title"> TVs</h2>
+<a class="list-heading-link" href="https://www.tomsguide.com/topics/tv">View more <i class="icon icon-arrow-right"></i></a> </header>
+<div class="listingResults mixed4" data-sort="page" data-listkey="mixed4">
+<div class="listingResult small result1 " data-page="1">
+<a href="https://www.tomsguide.com/deals/best-cyber-monday-tv-deals-for-2019" class="article-link" aria-label="Best Cyber Monday TV deals for 2019">
+<article class="search-result search-result-deals has-rating">
+<div class="image">
+<figure class="article-lead-image-wrap" data-original="https://cdn.mos.cms.futurecdn.net/zjDap6dmFQx2xc32Ej96DJ.jpg">
+<div class="image-remove-flow-width-setter">
+<div class="image-remove-reflow-container landscape" data-original="https://cdn.mos.cms.futurecdn.net/zjDap6dmFQx2xc32Ej96DJ.jpg">
+<img src="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" alt="Best Cyber Monday TV deals 2019" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="if(this.src &amp;&amp; this.src.indexOf('missing-image.svg') !== -1){return true;};this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/zjDap6dmFQx2xc32Ej96DJ-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/zjDap6dmFQx2xc32Ej96DJ-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/zjDap6dmFQx2xc32Ej96DJ-450-80.jpg 450w, https://cdn.mos.cms.futurecdn.net/zjDap6dmFQx2xc32Ej96DJ-970-80.jpg 970w, https://cdn.mos.cms.futurecdn.net/zjDap6dmFQx2xc32Ej96DJ-1024-80.jpg 1024w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/zjDap6dmFQx2xc32Ej96DJ.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/zjDap6dmFQx2xc32Ej96DJ.jpg" data-pin-nopin="true">
+</div>
+</div>
+</figure>
+</div>
+<div class="content">
+<header>
+<h3 class="article-name">Best Cyber Monday TV deals for 2019</h3>
+<p class="byline">
+<span class="by-author">
+By
+<span style="white-space:nowrap">
+Brian Westover </span>
+</span>
+<time class="published-date relative-date" datetime="2019-12-02T04:36:38Z" data-published-date="2019-12-02T04:36:38Z"></time>
+</p>
+</header>
+<p class="synopsis">
+Score great TV deals during Cyber Monday sales. Here are the best deals available now.
+</p>
+</div>
+</article>
+</a>
+<!-- Cats: -->
+</div>
+<div class="listingResult small result2 " data-page="1">
+<a href="https://www.tomsguide.com/news/huge-4k-tv-deal-samsungs-massive-70-incher-just-dropped-to-dollar549" class="article-link" aria-label="HUGE 4K TV deal: Samsung's massive 70-incher just dropped to $549 ">
+<article class="search-result search-result-news optional-image-wrapper has-rating">
+<div class="image">
+<figure class="article-lead-image-wrap" data-original="https://cdn.mos.cms.futurecdn.net/Wja4oczBC9WpKfbirxCKuF.jpg">
+<div class="image-remove-flow-width-setter">
+<div class="image-remove-reflow-container landscape" data-original="https://cdn.mos.cms.futurecdn.net/Wja4oczBC9WpKfbirxCKuF.jpg">
+<img src="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" alt="Samsung 6 Series 4K TV" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="if(this.src &amp;&amp; this.src.indexOf('missing-image.svg') !== -1){return true;};this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/Wja4oczBC9WpKfbirxCKuF-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/Wja4oczBC9WpKfbirxCKuF-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/Wja4oczBC9WpKfbirxCKuF-450-80.jpg 450w, https://cdn.mos.cms.futurecdn.net/Wja4oczBC9WpKfbirxCKuF-970-80.jpg 970w, https://cdn.mos.cms.futurecdn.net/Wja4oczBC9WpKfbirxCKuF-1024-80.jpg 1024w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/Wja4oczBC9WpKfbirxCKuF.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/Wja4oczBC9WpKfbirxCKuF.jpg" data-pin-nopin="true">
+</div>
+</div>
+</figure>
+</div>
+<div class="content">
+<header>
+<h3 class="article-name">HUGE 4K TV deal: Samsung's massive 70-incher just dropped to $549 </h3>
+<p class="byline">
+<span class="by-author">
+By
+<span style="white-space:nowrap">
+TJ Fink </span>
+</span>
+<time class="published-date relative-date" datetime="2019-12-01T20:42:05Z" data-published-date="2019-12-01T20:42:05Z"></time>
+</p>
+</header>
+<p class="synopsis">
+Best Buy is dropping the price from $899 to $549 on this massive 70-inch smart TV.
+</p>
+</div>
+</article>
+</a>
+<!-- Cats: -->
+</div>
+<div class="listingResult small result3 " data-page="1">
+<a href="https://www.tomsguide.com/us/fire-tv-stick-differences,news-19962.html" class="article-link" aria-label="Amazon Fire TV Cube vs. Fire TV Stick vs. Fire TV Stick 4K: What Should You Buy?">
+<article class="search-result search-result-buying-guide optional-image-wrapper has-rating">
+<div class="image">
+<figure class="article-lead-image-wrap" data-original="https://cdn.mos.cms.futurecdn.net/M4bwsQ5fKYi8VH3RjHsmAE.jpg">
+<div class="image-remove-flow-width-setter">
+<div class="image-remove-reflow-container landscape" data-original="https://cdn.mos.cms.futurecdn.net/M4bwsQ5fKYi8VH3RjHsmAE.jpg">
+<img src="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" alt="" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="if(this.src &amp;&amp; this.src.indexOf('missing-image.svg') !== -1){return true;};this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/M4bwsQ5fKYi8VH3RjHsmAE-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/M4bwsQ5fKYi8VH3RjHsmAE-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/M4bwsQ5fKYi8VH3RjHsmAE-450-80.jpg 450w, https://cdn.mos.cms.futurecdn.net/M4bwsQ5fKYi8VH3RjHsmAE-970-80.jpg 970w, https://cdn.mos.cms.futurecdn.net/M4bwsQ5fKYi8VH3RjHsmAE-1024-80.jpg 1024w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/M4bwsQ5fKYi8VH3RjHsmAE.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/M4bwsQ5fKYi8VH3RjHsmAE.jpg" data-pin-nopin="true">
+</div>
+</div>
+</figure>
+</div>
+<div class="content">
+<header>
+<h3 class="article-name">Amazon Fire TV Cube vs. Fire TV Stick vs. Fire TV Stick 4K: What Should You Buy?</h3>
+<p class="byline">
+<span class="by-author">
+By
+<span style="white-space:nowrap">
+Marshall Honorof </span>
+</span>
+<time class="published-date relative-date" datetime="2019-11-30T08:53:45Z" data-published-date="2019-11-30T08:53:45Z"></time>
+</p>
+</header>
+<p class="synopsis">
+The Amazon Fire TVs differ primarily in whether they offer 4K resolution, and how much they lean into the Alexa ecosystem.
+</p>
+</div>
+</article>
+</a>
+<!-- Cats: -->
+</div>
+</div>
+</section>
+<section data-next="latest" data-total-count="3208" data-list="mixed5/home/latest" class="listingResultsWrapper mixed5 mixed5">
+<header>
+<h2 class="list-title"> Security</h2>
+<a class="list-heading-link" href="https://www.tomsguide.com/topics/security">View more <i class="icon icon-arrow-right"></i></a> </header>
+<div class="listingResults mixed5" data-sort="page" data-listkey="mixed5">
+<div class="listingResult small result1 " data-page="1">
+<a href="https://www.tomsguide.com/news/best-antivirus-deals-for-cyber-monday-2019" class="article-link" aria-label="Best antivirus deals for Cyber Monday 2019">
+<article class="search-result search-result-news has-rating">
+<div class="image">
+<figure class="article-lead-image-wrap" data-original="https://cdn.mos.cms.futurecdn.net/WSUtULGgF8pNEHcAeLGFWC.jpg">
+<div class="image-remove-flow-width-setter">
+<div class="image-remove-reflow-container landscape" data-original="https://cdn.mos.cms.futurecdn.net/WSUtULGgF8pNEHcAeLGFWC.jpg">
+<img src="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" alt="Antivirus deals Cyber Monday 2019 splash" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="if(this.src &amp;&amp; this.src.indexOf('missing-image.svg') !== -1){return true;};this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/WSUtULGgF8pNEHcAeLGFWC-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/WSUtULGgF8pNEHcAeLGFWC-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/WSUtULGgF8pNEHcAeLGFWC-450-80.jpg 450w, https://cdn.mos.cms.futurecdn.net/WSUtULGgF8pNEHcAeLGFWC-970-80.jpg 970w, https://cdn.mos.cms.futurecdn.net/WSUtULGgF8pNEHcAeLGFWC-1024-80.jpg 1024w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/WSUtULGgF8pNEHcAeLGFWC.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/WSUtULGgF8pNEHcAeLGFWC.jpg" data-pin-nopin="true">
+</div>
+</div>
+</figure>
+</div>
+<div class="content">
+<header>
+<h3 class="article-name">Best antivirus deals for Cyber Monday 2019</h3>
+<p class="byline">
+<span class="by-author">
+By
+<span style="white-space:nowrap">
+Paul Wagenseil </span>
+</span>
+<time class="published-date relative-date" datetime="2019-12-01T20:22:42Z" data-published-date="2019-12-01T20:22:42Z"></time>
+</p>
+</header>
+<p class="synopsis">
+Our top antivirus brands are having big sales for Cyber Monday.
+</p>
+</div>
+</article>
+</a>
+<!-- Cats: -->
+</div>
+<div class="listingResult small result2 " data-page="1">
+<a href="https://www.tomsguide.com/us/best-identity-theft-protection,review-2083.html" class="article-link" aria-label="Best Identity-Theft Protection 2019">
+<article class="search-result search-result-best-pick optional-image-wrapper has-rating">
+<div class="image">
+<figure class="article-lead-image-wrap" data-original="https://cdn.mos.cms.futurecdn.net/qazzPHHhS5CjysVPSXyUAa.jpg">
+<div class="image-remove-flow-width-setter">
+<div class="image-remove-reflow-container landscape" data-original="https://cdn.mos.cms.futurecdn.net/qazzPHHhS5CjysVPSXyUAa.jpg">
+<img src="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" alt="" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="if(this.src &amp;&amp; this.src.indexOf('missing-image.svg') !== -1){return true;};this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/qazzPHHhS5CjysVPSXyUAa-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/qazzPHHhS5CjysVPSXyUAa-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/qazzPHHhS5CjysVPSXyUAa-450-80.jpg 450w, https://cdn.mos.cms.futurecdn.net/qazzPHHhS5CjysVPSXyUAa-970-80.jpg 970w, https://cdn.mos.cms.futurecdn.net/qazzPHHhS5CjysVPSXyUAa-1024-80.jpg 1024w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/qazzPHHhS5CjysVPSXyUAa.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/qazzPHHhS5CjysVPSXyUAa.jpg" data-pin-nopin="true">
+</div>
+</div>
+</figure>
+</div>
+<div class="content">
+<header>
+<h3 class="article-name">Best Identity-Theft Protection 2019</h3>
+<p class="byline">
+<span class="by-author">
+By
+<span style="white-space:nowrap">
+Paul Wagenseil, </span>
+<span style="white-space:nowrap">
+Brian Nadel </span>
+</span>
+<time class="published-date relative-date" datetime="2019-12-01T20:05:54Z" data-published-date="2019-12-01T20:05:54Z"></time>
+</p>
+</header>
+<p class="synopsis">
+We tested the five most popular identity theft protection services over a three-month process. Here are the services that protect you the best.
+</p>
+</div>
+</article>
+</a>
+<!-- Cats: -->
+</div>
+<div class="listingResult small result3 " data-page="1">
+<a href="https://www.tomsguide.com/us/best-password-managers,review-3785.html" class="article-link" aria-label="Best Password Managers 2019">
+<article class="search-result search-result-best-pick optional-image-wrapper has-rating">
+<div class="image">
+<figure class="article-lead-image-wrap" data-original="https://cdn.mos.cms.futurecdn.net/ffZPeRFjQZ2QnPdHZd3i5Q.jpg">
+<div class="image-remove-flow-width-setter">
+<div class="image-remove-reflow-container landscape" data-original="https://cdn.mos.cms.futurecdn.net/ffZPeRFjQZ2QnPdHZd3i5Q.jpg">
+<img src="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" alt="" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="if(this.src &amp;&amp; this.src.indexOf('missing-image.svg') !== -1){return true;};this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/ffZPeRFjQZ2QnPdHZd3i5Q-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/ffZPeRFjQZ2QnPdHZd3i5Q-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/ffZPeRFjQZ2QnPdHZd3i5Q-450-80.jpg 450w, https://cdn.mos.cms.futurecdn.net/ffZPeRFjQZ2QnPdHZd3i5Q-970-80.jpg 970w, https://cdn.mos.cms.futurecdn.net/ffZPeRFjQZ2QnPdHZd3i5Q-1024-80.jpg 1024w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/ffZPeRFjQZ2QnPdHZd3i5Q.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/ffZPeRFjQZ2QnPdHZd3i5Q.jpg" data-pin-nopin="true">
+</div>
+</div>
+</figure>
+</div>
+<div class="content">
+<header>
+<h3 class="article-name">Best Password Managers 2019</h3>
+<p class="byline">
+<span class="by-author">
+By
+<span style="white-space:nowrap">
+Paul Wagenseil </span>
+</span>
+<time class="published-date relative-date" datetime="2019-12-01T19:59:55Z" data-published-date="2019-12-01T19:59:55Z"></time>
+</p>
+</header>
+<p class="synopsis">
+To fully protect yourself online, you need a password manager. We've used and tested seven top brands to determine the best one.
+</p>
+</div>
+</article>
+</a>
+<!-- Cats: -->
+</div>
+</div>
+</section>
+<section data-next="latest" data-total-count="1071" data-list="mixed6/home/latest" class="listingResultsWrapper mixed6 hawk-target-tomsguide-deals-section mixed6">
+<header>
+<h2 class="list-title"> Deals</h2>
+<a class="list-heading-link" href="https://www.tomsguide.com/deals">View more <i class="icon icon-arrow-right"></i></a> </header>
+<div class="listingResults mixed6" data-sort="page" data-listkey="mixed6">
+<div class="listingResult small result1 " data-page="1">
+<a href="https://www.tomsguide.com/deals/best-cyber-monday-tv-deals-for-2019" class="article-link" aria-label="Best Cyber Monday TV deals for 2019">
+<article class="search-result search-result-deals has-rating">
+<div class="image">
+<figure class="article-lead-image-wrap" data-original="https://cdn.mos.cms.futurecdn.net/zjDap6dmFQx2xc32Ej96DJ.jpg">
+<div class="image-remove-flow-width-setter">
+<div class="image-remove-reflow-container landscape" data-original="https://cdn.mos.cms.futurecdn.net/zjDap6dmFQx2xc32Ej96DJ.jpg">
+<img src="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" alt="Best Cyber Monday TV deals 2019" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="if(this.src &amp;&amp; this.src.indexOf('missing-image.svg') !== -1){return true;};this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/zjDap6dmFQx2xc32Ej96DJ-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/zjDap6dmFQx2xc32Ej96DJ-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/zjDap6dmFQx2xc32Ej96DJ-450-80.jpg 450w, https://cdn.mos.cms.futurecdn.net/zjDap6dmFQx2xc32Ej96DJ-970-80.jpg 970w, https://cdn.mos.cms.futurecdn.net/zjDap6dmFQx2xc32Ej96DJ-1024-80.jpg 1024w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/zjDap6dmFQx2xc32Ej96DJ.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/zjDap6dmFQx2xc32Ej96DJ.jpg" data-pin-nopin="true">
+</div>
+</div>
+</figure>
+</div>
+<div class="content">
+<header>
+<h3 class="article-name">Best Cyber Monday TV deals for 2019</h3>
+<p class="byline">
+<span class="by-author">
+By
+<span style="white-space:nowrap">
+Brian Westover </span>
+</span>
+<time class="published-date relative-date" datetime="2019-12-02T04:36:38Z" data-published-date="2019-12-02T04:36:38Z"></time>
+</p>
+</header>
+<p class="synopsis">
+Score great TV deals during Cyber Monday sales. Here are the best deals available now.
+</p>
+</div>
+</article>
+</a>
+<!-- Cats: -->
+</div>
+<div class="listingResult small result2 " data-page="1">
+<a href="https://www.tomsguide.com/news/holy-crap-hps-dollar1299-touchscreen-laptop-is-dollar399-right-now-for-black-friday" class="article-link" aria-label="Holy crap! HP's $1,299 touchscreen laptop is $449 right now for Cyber Monday">
+<article class="search-result search-result-news optional-image-wrapper has-rating">
+<div class="image">
+<figure class="article-lead-image-wrap" data-original="https://cdn.mos.cms.futurecdn.net/b9rE2p6aZUWcwmsfNf2hY3.png">
+<div class="image-remove-flow-width-setter">
+<div class="image-remove-reflow-container landscape" data-original="https://cdn.mos.cms.futurecdn.net/b9rE2p6aZUWcwmsfNf2hY3.png">
+<img src="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" alt="" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="if(this.src &amp;&amp; this.src.indexOf('missing-image.svg') !== -1){return true;};this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/b9rE2p6aZUWcwmsfNf2hY3-320-80.png" data-srcset="https://cdn.mos.cms.futurecdn.net/b9rE2p6aZUWcwmsfNf2hY3-320-80.png 320w, https://cdn.mos.cms.futurecdn.net/b9rE2p6aZUWcwmsfNf2hY3-450-80.png 450w, https://cdn.mos.cms.futurecdn.net/b9rE2p6aZUWcwmsfNf2hY3-970-80.png 970w, https://cdn.mos.cms.futurecdn.net/b9rE2p6aZUWcwmsfNf2hY3-1024-80.png 1024w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/b9rE2p6aZUWcwmsfNf2hY3.png" data-pin-media="https://cdn.mos.cms.futurecdn.net/b9rE2p6aZUWcwmsfNf2hY3.png" data-pin-nopin="true">
+</div>
+</div>
+</figure>
+</div>
+<div class="content">
+<header>
+<h3 class="article-name">Holy crap! HP's $1,299 touchscreen laptop is $449 right now for Cyber Monday</h3>
+<p class="byline">
+<span class="by-author">
+By
+<span style="white-space:nowrap">
+Kate Kozuch </span>
+</span>
+<time class="published-date relative-date" datetime="2019-12-02T03:50:56Z" data-published-date="2019-12-02T03:50:56Z"></time>
+</p>
+</header>
+<p class="synopsis">
+Score the $1,299 HP 15z Touch laptop for a ridiculous $399 when you buy now.
+</p>
+</div>
+</article>
+</a>
+<!-- Cats: -->
+</div>
+<div class="listingResult small result3 " data-page="1">
+<a href="https://www.tomsguide.com/news/best-ipad-cyber-monday-deals-in-2019" class="article-link" aria-label="The best iPad deals for Cyber Monday">
+<article class="search-result search-result-news optional-image-wrapper has-rating">
+<div class="image">
+<figure class="article-lead-image-wrap" data-original="https://cdn.mos.cms.futurecdn.net/S9ncDeSeABnzxHReXvE3cF.jpg">
+<div class="image-remove-flow-width-setter">
+<div class="image-remove-reflow-container landscape" data-original="https://cdn.mos.cms.futurecdn.net/S9ncDeSeABnzxHReXvE3cF.jpg">
+<img src="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" alt="ipad cyber monday" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="if(this.src &amp;&amp; this.src.indexOf('missing-image.svg') !== -1){return true;};this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/S9ncDeSeABnzxHReXvE3cF-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/S9ncDeSeABnzxHReXvE3cF-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/S9ncDeSeABnzxHReXvE3cF-450-80.jpg 450w, https://cdn.mos.cms.futurecdn.net/S9ncDeSeABnzxHReXvE3cF-970-80.jpg 970w, https://cdn.mos.cms.futurecdn.net/S9ncDeSeABnzxHReXvE3cF-1024-80.jpg 1024w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/S9ncDeSeABnzxHReXvE3cF.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/S9ncDeSeABnzxHReXvE3cF.jpg" data-pin-nopin="true">
+</div>
+</div>
+</figure>
+</div>
+<div class="content">
+<header>
+<h3 class="article-name">The best iPad deals for Cyber Monday</h3>
+<p class="byline">
+<span class="by-author">
+By
+<span style="white-space:nowrap">
+Henry T. Casey </span>
+</span>
+<time class="published-date relative-date" datetime="2019-12-02T03:45:14Z" data-published-date="2019-12-02T03:45:14Z"></time>
+</p>
+</header>
+<p class="synopsis">
+We're tracking the best Cyber Monday iPad deals here, to help you find the best iPad sales around.
+</p>
+</div>
+</article>
+</a>
+<!-- Cats: -->
+</div>
+</div>
+</section>
+<section data-next="latest" data-total-count="2554" data-list="mixed7/home/latest" class="listingResultsWrapper mixed7 mixed7">
+<header>
+<h2 class="list-title"> Reviews</h2>
+<a class="list-heading-link" href="reviews">View more <i class="icon icon-arrow-right"></i></a> </header>
+<div class="listingResults mixed7" data-sort="page" data-listkey="mixed7">
+<div class="listingResult small result1 " data-page="1">
+<a href="https://www.tomsguide.com/reviews/jabra-elite-75t" class="article-link" aria-label="Jabra Elite 75t True Wireless Earbuds review: Beats the AirPods Pro in design, sound and battery life">
+<article class="search-result search-result-review has-rating">
+<div class="image">
+<figure class="article-lead-image-wrap" data-original="https://cdn.mos.cms.futurecdn.net/d7sZn5uPdxAXuQKdMrUP2P.jpg">
+<div class="image-remove-flow-width-setter">
+<div class="image-remove-reflow-container landscape" data-original="https://cdn.mos.cms.futurecdn.net/d7sZn5uPdxAXuQKdMrUP2P.jpg">
+<img src="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" alt="Jabra Elite 75t" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="if(this.src &amp;&amp; this.src.indexOf('missing-image.svg') !== -1){return true;};this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/d7sZn5uPdxAXuQKdMrUP2P-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/d7sZn5uPdxAXuQKdMrUP2P-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/d7sZn5uPdxAXuQKdMrUP2P-450-80.jpg 450w, https://cdn.mos.cms.futurecdn.net/d7sZn5uPdxAXuQKdMrUP2P-970-80.jpg 970w, https://cdn.mos.cms.futurecdn.net/d7sZn5uPdxAXuQKdMrUP2P-1024-80.jpg 1024w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/d7sZn5uPdxAXuQKdMrUP2P.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/d7sZn5uPdxAXuQKdMrUP2P.jpg" data-pin-nopin="true">
+</div>
+</div>
+</figure>
+</div>
+<div class="content">
+<header>
+<h3 class="article-name">Jabra Elite 75t True Wireless Earbuds review: Beats the AirPods Pro in design, sound and battery life</h3>
+<p class="byline">
+<span class="by-author">
+By
+<span style="white-space:nowrap">
+Alex Bracetti </span>
+</span>
+<time class="published-date relative-date" datetime="2019-12-01T11:00:00Z" data-published-date="2019-12-01T11:00:00Z"></time>
+</p>
+<span class="chunk rating">
+<span class="icon icon-star"> </span>
+<span class="icon icon-star"> </span>
+<span class="icon icon-star"> </span>
+<span class="icon icon-star"> </span>
+<span class="icon icon-star half"></span>
+</span>
+</header>
+<p class="synopsis">
+The Jabra Elite 75t upholds the series&rsquo; dynamic performance, while improving on design and battery life. It&rsquo;s also very buggy.
+</p>
+</div>
+</article>
+</a>
+<!-- Cats: -->
+</div>
+<div class="listingResult small result2 " data-page="1">
+<a href="https://www.tomsguide.com/reviews/tap-strap-2-wearable-keyboard-and-mouse" class="article-link" aria-label="Tap Strap 2 review: Who is this $200 wearable keyboard for?">
+<article class="search-result search-result-review optional-image-wrapper has-rating">
+<div class="image">
+<figure class="article-lead-image-wrap" data-original="https://cdn.mos.cms.futurecdn.net/TXJhhKUDoSHNyFineDVhzg.jpg">
+<div class="image-remove-flow-width-setter">
+<div class="image-remove-reflow-container landscape" data-original="https://cdn.mos.cms.futurecdn.net/TXJhhKUDoSHNyFineDVhzg.jpg">
+<img src="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" alt="" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="if(this.src &amp;&amp; this.src.indexOf('missing-image.svg') !== -1){return true;};this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/TXJhhKUDoSHNyFineDVhzg-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/TXJhhKUDoSHNyFineDVhzg-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/TXJhhKUDoSHNyFineDVhzg-450-80.jpg 450w, https://cdn.mos.cms.futurecdn.net/TXJhhKUDoSHNyFineDVhzg-970-80.jpg 970w, https://cdn.mos.cms.futurecdn.net/TXJhhKUDoSHNyFineDVhzg-1024-80.jpg 1024w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/TXJhhKUDoSHNyFineDVhzg.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/TXJhhKUDoSHNyFineDVhzg.jpg" data-pin-nopin="true">
+</div>
+</div>
+</figure>
+</div>
+<div class="content">
+<header>
+<h3 class="article-name">Tap Strap 2 review: Who is this $200 wearable keyboard for?</h3>
+<p class="byline">
+<span class="by-author">
+By
+<span style="white-space:nowrap">
+Kate Kozuch </span>
+</span>
+<time class="published-date relative-date" datetime="2019-11-30T11:00:01Z" data-published-date="2019-11-30T11:00:01Z"></time>
+</p>
+<span class="chunk rating">
+<span class="icon icon-star"> </span>
+<span class="icon icon-star"> </span>
+<span class="icon icon-star"> </span>
+</span>
+</header>
+<p class="synopsis">
+This wearable keyboard is for the few, not the many
+</p>
+</div>
+</article>
+</a>
+<!-- Cats: -->
+</div>
+<div class="listingResult small result3 " data-page="1">
+<a href="https://www.tomsguide.com/reviews/ring-fit-adventure" class="article-link" aria-label="Ring Fit Adventure review: A bizarre and fun way to sweat with your Switch">
+<article class="search-result search-result-review optional-image-wrapper has-rating">
+<div class="image">
+<figure class="article-lead-image-wrap" data-original="https://cdn.mos.cms.futurecdn.net/hY6NYnNd6gQPmNZMZv8bva.jpg">
+<div class="image-remove-flow-width-setter">
+<div class="image-remove-reflow-container landscape" data-original="https://cdn.mos.cms.futurecdn.net/hY6NYnNd6gQPmNZMZv8bva.jpg">
+<img src="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" alt="Ring Fit Adventure" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="if(this.src &amp;&amp; this.src.indexOf('missing-image.svg') !== -1){return true;};this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/hY6NYnNd6gQPmNZMZv8bva-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/hY6NYnNd6gQPmNZMZv8bva-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/hY6NYnNd6gQPmNZMZv8bva-450-80.jpg 450w, https://cdn.mos.cms.futurecdn.net/hY6NYnNd6gQPmNZMZv8bva-970-80.jpg 970w, https://cdn.mos.cms.futurecdn.net/hY6NYnNd6gQPmNZMZv8bva-1024-80.jpg 1024w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/hY6NYnNd6gQPmNZMZv8bva.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/hY6NYnNd6gQPmNZMZv8bva.jpg" data-pin-nopin="true">
+</div>
+</div>
+</figure>
+</div>
+<div class="content">
+<header>
+<h3 class="article-name">Ring Fit Adventure review: A bizarre and fun way to sweat with your Switch</h3>
+<p class="byline">
+<span class="by-author">
+By
+<span style="white-space:nowrap">
+Henry T. Casey </span>
+</span>
+<time class="published-date relative-date" datetime="2019-11-29T11:00:00Z" data-published-date="2019-11-29T11:00:00Z"></time>
+</p>
+<span class="chunk rating">
+<span class="icon icon-star"> </span>
+<span class="icon icon-star"> </span>
+<span class="icon icon-star"> </span>
+<span class="icon icon-star"> </span>
+</span>
+</header>
+<p class="synopsis">
+Nintendo's Ring Fit Adventure is a new tool for Switch owners looking to shed some pounds and make some gains.
+</p>
+</div>
+</article>
+</a>
+<!-- Cats: -->
+</div>
+<div class="listingResult small result4 lightbox3" data-page="1">
+<a href="https://www.tomsguide.com/us/insignia-4k-fire-edition,review-5869.html" class="article-link" aria-label="Insignia 43-Inch 4K Fire TV Edition Review: The First Good Amazon TV">
+<article class="search-result search-result-review optional-image-wrapper has-rating">
+<div class="image">
+<figure class="article-lead-image-wrap" data-original="https://cdn.mos.cms.futurecdn.net/C5cUdk9ynTfYps5gkgFfkL.jpg">
+<div class="image-remove-flow-width-setter">
+<div class="image-remove-reflow-container landscape" data-original="https://cdn.mos.cms.futurecdn.net/C5cUdk9ynTfYps5gkgFfkL.jpg">
+<img src="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" alt="" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="if(this.src &amp;&amp; this.src.indexOf('missing-image.svg') !== -1){return true;};this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/C5cUdk9ynTfYps5gkgFfkL-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/C5cUdk9ynTfYps5gkgFfkL-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/C5cUdk9ynTfYps5gkgFfkL-450-80.jpg 450w, https://cdn.mos.cms.futurecdn.net/C5cUdk9ynTfYps5gkgFfkL-970-80.jpg 970w, https://cdn.mos.cms.futurecdn.net/C5cUdk9ynTfYps5gkgFfkL-1024-80.jpg 1024w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/C5cUdk9ynTfYps5gkgFfkL.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/C5cUdk9ynTfYps5gkgFfkL.jpg" data-pin-nopin="true">
+</div>
+</div>
+</figure>
+</div>
+<div class="content">
+<header>
+<h3 class="article-name">Insignia 43-Inch 4K Fire TV Edition Review: The First Good Amazon TV</h3>
+<p class="byline">
+<span class="by-author">
+By
+<span style="white-space:nowrap">
+Brian Westover </span>
+</span>
+<time class="published-date relative-date" datetime="2019-11-29T08:01:03Z" data-published-date="2019-11-29T08:01:03Z"></time>
+</p>
+<span class="chunk rating">
+<span class="icon icon-star"> </span>
+<span class="icon icon-star"> </span>
+<span class="icon icon-star"> </span>
+<span class="icon icon-star half"></span>
+</span>
+</header>
+<p class="synopsis">
+The Insignia Fire TV Edition is a solid smart TV, with good picture quality and sound. It's the best Amazon-powered TV yet.
+</p>
+</div>
+</article>
+</a>
+<!-- Cats: -->
+</div>
+<div class="listingResult small result5 " data-page="1">
+<a href="https://www.tomsguide.com/reviews/nintendo-switch" class="article-link" aria-label="Nintendo Switch review: A great console that's only getting better">
+<article class="search-result search-result-review optional-image-wrapper has-rating">
+<div class="image">
+<figure class="article-lead-image-wrap" data-original="https://cdn.mos.cms.futurecdn.net/wHSSTRQj5TGQgSYZj9jWRA.jpg">
+<div class="image-remove-flow-width-setter">
+<div class="image-remove-reflow-container landscape" data-original="https://cdn.mos.cms.futurecdn.net/wHSSTRQj5TGQgSYZj9jWRA.jpg">
+<img src="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" alt="" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="if(this.src &amp;&amp; this.src.indexOf('missing-image.svg') !== -1){return true;};this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/wHSSTRQj5TGQgSYZj9jWRA-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/wHSSTRQj5TGQgSYZj9jWRA-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/wHSSTRQj5TGQgSYZj9jWRA-450-80.jpg 450w, https://cdn.mos.cms.futurecdn.net/wHSSTRQj5TGQgSYZj9jWRA-970-80.jpg 970w, https://cdn.mos.cms.futurecdn.net/wHSSTRQj5TGQgSYZj9jWRA-1024-80.jpg 1024w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/wHSSTRQj5TGQgSYZj9jWRA.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/wHSSTRQj5TGQgSYZj9jWRA.jpg" data-pin-nopin="true">
+</div>
+</div>
+</figure>
+</div>
+<div class="content">
+<header>
+<h3 class="article-name">Nintendo Switch review: A great console that's only getting better</h3>
+<p class="byline">
+<span class="by-author">
+By
+<span style="white-space:nowrap">
+Richard Priday </span>
+</span>
+<time class="published-date relative-date" datetime="2019-11-28T14:44:45Z" data-published-date="2019-11-28T14:44:45Z"></time>
+</p>
+<span class="chunk rating">
+<span class="icon icon-star"> </span>
+<span class="icon icon-star"> </span>
+<span class="icon icon-star"> </span>
+<span class="icon icon-star"> </span>
+<span class="icon icon-star half"></span>
+</span>
+<span class="award editors-choice editors-choice_2019">Editor's Choice</span> </header>
+<p class="synopsis">
+Since launch, the Nintendo Switch has grown significantly, gaining more battery life, an online subscription and a handheld-only "Lite" edition.
+</p>
+</div>
+</article>
+</a>
+<!-- Cats: -->
+</div>
+<div class="listingResult small result6 " data-page="1">
+<a href="https://www.tomsguide.com/reviews/amazon-echo-show-8" class="article-link" aria-label="Amazon Echo Show 8 review: The best Alexa best smart display yet">
+<article class="search-result search-result-review optional-image-wrapper has-rating">
+<div class="image">
+<figure class="article-lead-image-wrap" data-original="https://cdn.mos.cms.futurecdn.net/4xmU8QLEjEW46ePavNRKrL.jpg">
+<div class="image-remove-flow-width-setter">
+<div class="image-remove-reflow-container landscape" data-original="https://cdn.mos.cms.futurecdn.net/4xmU8QLEjEW46ePavNRKrL.jpg">
+<img src="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" alt="" class=" lazy-image lazy-image-loading lazyload optional-image" onerror="if(this.src &amp;&amp; this.src.indexOf('missing-image.svg') !== -1){return true;};this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" data-normal="https://vanilla.futurecdn.net/tomsguide/media/img/missing-image.svg" data-src="https://cdn.mos.cms.futurecdn.net/4xmU8QLEjEW46ePavNRKrL-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/4xmU8QLEjEW46ePavNRKrL-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/4xmU8QLEjEW46ePavNRKrL-450-80.jpg 450w, https://cdn.mos.cms.futurecdn.net/4xmU8QLEjEW46ePavNRKrL-970-80.jpg 970w, https://cdn.mos.cms.futurecdn.net/4xmU8QLEjEW46ePavNRKrL-1024-80.jpg 1024w" data-sizes="auto" data-original-mos="https://cdn.mos.cms.futurecdn.net/4xmU8QLEjEW46ePavNRKrL.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/4xmU8QLEjEW46ePavNRKrL.jpg" data-pin-nopin="true">
+</div>
+</div>
+</figure>
+</div>
+<div class="content">
+<header>
+<h3 class="article-name">Amazon Echo Show 8 review: The best Alexa best smart display yet</h3>
+<p class="byline">
+<span class="by-author">
+By
+<span style="white-space:nowrap">
+Kate Kozuch </span>
+</span>
+<time class="published-date relative-date" datetime="2019-11-27T20:36:43Z" data-published-date="2019-11-27T20:36:43Z"></time>
+</p>
+<span class="chunk rating">
+<span class="icon icon-star"> </span>
+<span class="icon icon-star"> </span>
+<span class="icon icon-star"> </span>
+<span class="icon icon-star"> </span>
+<span class="icon icon-star half"></span>
+</span>
+<span class="award editors-choice editors-choice_2019">Editor's Choice</span> </header>
+<p class="synopsis">
+The Amazon Echo Show is a capable and great-sounding Alexa smart home display at an affordable price.
+</p>
+</div>
+</article>
+</a>
+<!-- Cats: -->
+</div>
+</div>
+</section>
+</div> </div>
+<script type="text/javascript">
+if (!window.amIIE()) {
+var targeting = {};
+var siteTargeting = [];
+for (var attrname in siteTargeting) { targeting[attrname] = siteTargeting[attrname]; }
+var pageTags = "";
+targeting.tags = pageTags;
+window.reliablePageLoad.then(function(){
+(function(){
+/* bootstrap---start */
+var _sp_=function(n){function t(e){if(o[e])return o[e].exports;var r=o[e]={i:e,l:!1,exports:{}};return n[e].call(r.exports,r,r.exports,t),r.l=!0,r.exports}var o={};return t.m=n,t.c=o,t.i=function(n){return n},t.d=function(n,o,e){t.o(n,o)||Object.defineProperty(n,o,{configurable:!1,enumerable:!0,get:e})},t.n=function(n){var o=n&&n.__esModule?function(){return n["default"]}:function(){return n};return t.d(o,"a",o),o},t.o=function(n,t){return Object.prototype.hasOwnProperty.call(n,t)},t.p="",t(t.s=2)}([function(n,t){function o(n,t){e&&console[n].apply(console,["[bootstrap]"].concat(Array.prototype.slice.call(t)))}var e=!1;n.exports={debug:function(){o("debug",arguments)},info:function(){o("info",arguments)},time:function(){o("time",arguments)},warn:function(){o("warn",arguments)},error:function(){o("error",arguments)},useDefaults:function(){e=!0},DEBUG:1}},function(n,t,o){"use strict";function e(){S||(S=!0,D=b.config=b.config||{},s(),F=D.bootstrap&&D.bootstrap.contentControlCallback||D.content_control_callback,q=D.accountId||D.account_id||D.client_id||window.sp_cid,N=D.beacon&&D.beacon.contentControlEndpoint||D.content_control_beacon_endpoint||v.a,D.debug_level&&"OFF"!==D.debug_level.toString().toUpperCase()||D.debug&&D.debug.level&&"OFF"!==D.debug.level.toString().toUpperCase()?j=!0:window.location.search&&null!=window.location.search.match(/_sp_debug_level=(?!off|OFF)/)&&(j=!0),j&&m.useDefaults({defaultLevel:m.DEBUG}))}function r(n,t,e){function r(o,e){var r=new Image;r.src="//"+N+"/cct?v="+encodeURIComponent(v.b)+"&ct="+h+"&cid="+encodeURIComponent(q)+"&l="+encodeURIComponent(n.toString())+"&rc="+encodeURIComponent(t)+(o?"&d1="+encodeURIComponent(o):"")+(null==e?"":"&d2="+encodeURIComponent(e)),g.info("sending beacon: "+r.src),a&&a()}var i=(arguments.length>3&&void 0!==arguments[3]&&arguments[3],arguments[4]),a=arguments[5];if(i){var c=e.lastIndexOf("."),d=e.lastIndexOf("/"),u=-1===c||d>c?e+".png":e.substring(0,c)+".png",s=new Image;s.addEventListener("load",function(){r("1",u)}),s.addEventListener("error",function(){o.i(f.a)(u,function(n,t,o){r("0",u+"::"+o)})}),s.src=u}else r()}function i(n,t,o,e){var r=arguments.length>4&&void 0!==arguments[4]?arguments[4]:{},a=arguments.length>5&&void 0!==arguments[5]&&arguments[5],c=function(){i(n,t,o,e,r,!0)};n(t,a?o:c,e,r)}function a(n,t,o,e){function r(o,r){t(o,n,r,e.enableImageLoad)}function i(t,r){o(t,n,r,e.enableImageLoad),e.onError&&e.onError(r)}var a=document.createElement("script");a.src=n,a.onload=function(){e.onLoad&&e.onLoad()},a.onerror=function(){function t(n){return o.indexOf(n)>-1}var o=(navigator.userAgent||navigator.vendor||window.opera).toLowerCase();t("mobi")||t("ipad")||t("android")||t("iphone")?i(L):t("exabot")?i(O):t("bingbot")||t("bingpreview")?i(k):t("googlebot")||t("adsbot-google")||t("mediapartners-google")?i(C):t("googleweblight")?i(E):window.location.host===w?i(x):t("msie 10")||t("msie 9")||t("msie 8")?i(I):c(n,r,i)},document.head.appendChild(a)}function c(n,t,e){o.i(f.a)(n,function(o,r,i,a){(o||r?t:e)(a,n+"::"+i)})}function d(n,t,o,e){if(R)return void u(U+"::"+n,o);r(y,n,t,o,e,function(){if(F){if(j){g.error("bootstrap locking",y,n,t,o,e);debugger}setTimeout(function(){F()},250)}})}function u(n,t,o,e){r(_,n,t,o,e)}function s(){b._networkListenerData||(b._networkListenerData=o.i(p.a)())}function l(n,t){e(),g.info("bootstrap called with",n,t),i(a,n,d,u,t)}Object.defineProperty(t,"__esModule",{value:!0});var f=o(4),p=o(5),v=o(3),g=o(0),m=void 0;m=o(0);var w=["w","e","b","c","a","c","h","e",".","g","o","o","g","l","e","u","s","e","r","c","o","n","t","e","n","t",".","c","o","m"].join(""),b=window._sp_||{},h=1,_=0,y=1,L="m",C="g",x="gw",E="gl",I="i",k="b",O="e",U="n",S=!1,R=!1,j=!1,D=void 0,F=void 0,q=void 0,N=void 0;window.addEventListener("beforeunload",function(){R=!0}),window._sp_=b,b.setupNetworkListeners=s,b.bootstrap=l,window.spBootstrap=l,t["default"]=b},function(n,t,o){o(0);n.exports=o(1)["default"]},function(n,t,o){"use strict";function e(n){return n.join("")}o.d(t,"b",function(){return r}),o.d(t,"a",function(){return i});var r=(o(0),"2.0.1195"),i=(e(["w","w","w",".","s","u","m","m","e","r","h","a","m","s","t","e","r",".","c","o","m"]),e(["w","w","w",".","r","o","o","s","t","e","r","f","i","r","e","w","o","r","k",".","c","o","m"]));e(["/","/","f","s","m","1","0","1","9",".","g","l","o","b","a","l",".","s","s","l",".","f","a","s","t","l","y",".","n","e","t","/","f","s","m","/","d","s"]),e(["h","t","t","p","s",":","/","/","d","2","z","v","5","r","k","i","i","4","6","m","i","q",".","c","l","o","u","d","f","r","o","n","t",".","n","e","t","/","0","/","2",".","0",".","1","1","9","5","/","r","e","c","o","v","e","r","y","_","d","f","p","_","i","n","t","e","r","n","a","l","-","v","2",".","0",".","1","1","9","5",".","j","s"]),e(["h","t","t","p","s",":","/","/","d","2","z","v","5","r","k","i","i","4","6","m","i","q",".","c","l","o","u","d","f","r","o","n","t",".","n","e","t","/","0","/","2",".","0",".","1","1","9","5","/","r","e","c","o","v","e","r","y","_","l","i","b","_","a","p","i","_","i","f","r","a","m","e","-","v","2",".","0",".","1","1","9","5",".","h","t","m","l"]),e(["h","t","t","p","s",":","/","/","d","2","z","v","5","r","k","i","i","4","6","m","i","q",".","c","l","o","u","d","f","r","o","n","t",".","n","e","t","/","0","/","2",".","0",".","1","1","9","5","/","r","e","c","o","v","e","r","y","_","l","i","b","_","r","i","d","_","i","f","r","a","m","e","-","v","2",".","0",".","1","1","9","5",".","h","t","m","l"])},function(n,t,o){"use strict";function e(n,t){function o(n){try{return n&&n.timeStamp?n.timeStamp:window.performance.now()}catch(n){return Date.now()}}var e=arguments.length>2&&void 0!==arguments[2]?arguments[2]:window.location,l=arguments.length>3&&void 0!==arguments[3]?arguments[3]:window.navigator,f=arguments.length>4&&void 0!==arguments[4]?arguments[4]:{},p=document.createElement("a");if(p.href=n,"https:"===e.protocol&&p.protocol&&p.protocol!==e.protocol)return r.debug("location.protocol",e.protocol),r.error("protocol mismatch in https environment, standing down"),void t(!1,!1,p.protocol,u);var v=new XMLHttpRequest,g=f.withCredentials;null!=g&&(v.withCredentials=g);try{v.open(f.method||"GET",n)}catch(n){return void t(!0,!1,n.toString(),c,v)}if(null!=f.headers){var m=f.headers;Object.keys(m).forEach(function(n){v.setRequestHeader(n,m[n])})}var w=void 0,b=void 0;v.onloadstart=function(n){w=o(n)},v.onreadystatechange=function(n){if(4===this.readyState){b=o(n)-w;var e=0===this.status&&!1!==l.onLine,r="2"===this.status.toString()[0],c=void 0;return c=r?a:!1===l.onLine?s:i,void t(e,r,this.status+"::"+b,c,v)}};try{v.send(f.body)}catch(n){return void t(!0,!1,n.toString(),d,v)}}t.a=e;var r=o(0),i="n",a="nx",c="xo",d="xs",u="p",s="of"},function(n,t,o){"use strict";function e(){var n=arguments.length>0&&void 0!==arguments[0]?arguments[0]:document,t=[],o=[],e=r.bind(null,t),i=r.bind(null,o);return n.addEventListener("load",e,!0),n.addEventListener("error",i,!0),{load:{events:t,listener:e},error:{events:o,listener:i}}}function r(n,t){if(t.target){var o="string"==typeof t.target.tagName?t.target.tagName.toLowerCase():"",e="string"==typeof t.target.src?t.target.src:"";"iframe"!==o&&n.push({tagName:o,src:e})}}t.a=e;o(0)}]);
+//# sourceMappingURL=https://s3.amazonaws.com/d3jlsadfjkuern/2.0.1195/Ym9vdHN0cmFwLmpz.map
+/* bootstrap---end */
+})();
+(function(){
+(function(){ return (function(){function t(a){window._sp_.config.content_control_callback=function(){u[k("mpdbujpo")][k("isfg")]="//"+a+k("0dd/iunm")};window._sp_.config.enable_rid=!0;window._sp_.config.enable_vid=!0;window._sp_.config.vid_control_callback=function(){console.warn("vid detected")}}function k(a){return a.split("").map(function(a){return v(w.call(a,0)-1)}).join("")}function x(a,b){return"choice"===b?Promise.resolve(a):"off"===b?Promise.resolve(a).then(function(a){return"recovery"===a?"continue-with-adblocker":
+a}):"force"===b?Promise.resolve("recovery"):Promise.reject(Error("Invalid recovery mode: "+b))}function y(){window.pppasoeommmsmzrvbr=new Promise(function(a){window.hiriyyyteetaqgthyu=a})}function z(){window.asdinwawisuihzejsahzl=new Promise(function(a){window.zkckcosdoiaioawqnmzsdqw=a})}function A(a,b){a.then(function(a){a=a.info;n(a)&&(q.sendEvent("tiberius","seen",a.msg_desc),window.localStorage.setItem("adblock","disabled"))});Promise.all([a,b]).then(function(a){var b=a[0].info;q.sendEvent("tiberius",
+a[1],n(b)?b.msg_desc:"")})}function n(a){a=a.msg_id;return 0!==(void 0===a?0:a)}function B(a,b,c){window._sp_.config.mms_domain=a;window._sp_.mms=window._sp_.mms||{};window._sp_.mms.cmd=window._sp_.mms.cmd||[];window._sp_.mms.cmd.push(function(){Object.keys(b).forEach(function(a){window._sp_.mms.setTargeting(a,b[a])});window.vanilla&&window.vanilla.aft?window._sp_.mms.setTargeting("club_loggedin",window.vanilla.aft.logged_in):window._sp_.mms.setTargeting("club_loggedin",!1)});var d=parseInt(g("mock_tiberius_choice")(window),
+10),e=!isNaN(d)&&d in l;a={choice:new Promise(function(a){if(e){var b=l[d]||"choice-"+d,c=parseInt(g("mock_tiberius_choice_timeout")(window),10);isNaN(c)?a(b):window.setTimeout(a,c,b)}else window._sp_.config.mms_choice_selected_callback=function(b){a(l[b]||"choice-"+b)}}),message:new Promise(function(a){function b(a){var b=1<arguments.length&&void 0!==arguments[1]?arguments[1]:0;return isNaN(a)?b:a}var d=parseInt(g("mock_tiberius_campaign_id")(window),10),c=parseInt(g("mock_tiberius_message_id")(window),
+10);isNaN(d)&&isNaN(c)?window._sp_.config.mms_client_data_callback=function(b){a(b)}:(d={msgID:b(c),info:{cmpgn_id:b(d),msg_id:b(c)}},c=parseInt(g("mock_tiberius_campaign_timeout")(window),10),isNaN(c)?a(d):window.setTimeout(a,c,d))})};c&&!e&&window._sp_.mms.cmd.push(function(){return window._sp_.mms.startMsg()});return a}function g(a){return function(b){return C(a,b.location.search)}}function C(a,b){var c=2<arguments.length&&void 0!==arguments[2]?arguments[2]:"\x26";if(""===a)return!1;var d=b.indexOf(a+
+"\x3d");return 0<=d?(d=b.indexOf("\x3d",d),c=b.indexOf(c,d+1),0<=c?b.substring(d+1,c):b.substring(d+1)):!1}var l={1:"whitelist",2:"recovery",3:"alt-ad",4:"publisher-custom",5:"redirect",6:"continue-with-adblocker"},D=Object.assign||function(a){for(var b=1;b<arguments.length;b++){var c=arguments[b],d;for(d in c)Object.prototype.hasOwnProperty.call(c,d)&&(a[d]=c[d])}return a},q={sendEvent:function(a,b,c){if("undefined"!==typeof window.ga){var d=window.ga,e=window.analytics_ga_data||{};d("set","nonInteraction",
+!0);d("send",D({},e,{hitType:"event",eventCategory:a,eventAction:b,eventLabel:c}))}}},r=String,v=r.fromCharCode,w=r.prototype.charCodeAt,u=window;return function(a,b,c,d,e,k,l){var h=7<arguments.length&&void 0!==arguments[7]?arguments[7]:"off";window._sp_=window._sp_||{};window._sp_.config=window._sp_.config||{};window._sp_.config.account_id=a;var p=h,f=g("force_recovery_mode")(window);h="force"===f||"choice"===f||"off"===f?f:p;p="choice"===h||"force"===h;t(b);var m=B(d,l,"force"!==h);f=m.message;
+m=m.choice;A(f,m);void 0===window.asdinwawisuihzejsahzl&&z();var n=window.zkckcosdoiaioawqnmzsdqw;x(m,h).then(n);void 0===window.pppasoeommmsmzrvbr&&y();f.then(window.hiriyyyteetaqgthyu);p&&(window._sp_.config.gpt_auto_load=!1,window._sp_.config.publisher_base=k);p?(window._sp_.bootstrap(c+"/media/js/b"+e+"-gb.js"),window._sp_.bootstrap(c+"/media/js/c"+e+"-gb.js")):(window._sp_.bootstrap(c+"/media/js/a"+e+"-gb.js"),window._sp_.bootstrap(c+"/media/js/b"+e+"-gb.js"))}})(); })()(
+200,
+"www.tomsguide.com",
+"https://www.tomsguide.com/147371",
+"ttauri.tomsguide.com",
+"tomsguide",
+"",
+targeting,
+"off"
+);
+})();
+});
+window.vanilla.tiberius = {
+enabled: true,
+}
+} else {
+window.vanilla.tiberius = {
+enabled: false,
+}
+}
+</script>
+<footer id="document-footer" class="container full">
+<div id="document-footer-content">
+<p>Tom's Guide is part of Future US Inc, an international media group and leading digital publisher. <a href="http://www.futureus.com" target="_blank">Visit our corporate site</a>.</p>
+<nav>
+<ul>
+<li><a href="http://www.futureplc.com/terms-conditions/" target="_blank">Terms and conditions</a></li>
+<li><a href="http://www.futureplc.com/privacy-policy/" target="_blank">Privacy policy</a></li>
+<li><a href="http://www.futureplc.com/cookies-policy/" target="_blank">Cookies policy</a></li>
+<li><a href="http://www.futureplc.com/accessibility-statement/" target="_blank">Accessibility Statement</a></li>
+<li><a href="https://www.futureplc.com/services/advertising/" target="_blank">Advertise</a></li>
+<li><a href="https://www.tomsguide.com/us/toms-guide-who-we-are,review-4166.html" target="_blank">About us</a></li>
+<li><a href="https://www.futureplc.com/brand/toms-guide/" target="_blank">Contact us</a></li>
+<li><a href="https://www.tomsguide.com/archives" target="_blank">Archives</a></li>
+</ul>
+</nav>
+<p>&copy;
+<span>
+<span>
+<span>Future US, Inc.</span> </span>
+<span>11 West 42nd Street, 15th Floor</span>,
+<span>New York,</span>
+<span class="region">NY</span> <span>10036</span></span>. </p>
+</div>
+</footer>
+<script>
+window.vanL10N = [];
+</script><script>
+if (document.cookie.indexOf("EuConsent") < 0) {
+if (!window._comscore) {
+window._comscore = window._comscore || [];
+}
+window._comscore.push({
+c1: "2",
+c2: "10055482",
+cs_ucfr: '' });
+(function() {
+var s = document.createElement("script"), el = document.getElementsByTagName("script")[0];
+s.async = true;
+s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+el.parentNode.insertBefore(s, el);
+})();
+} else {
+window.reliableConsentGiven.then(function(value) {
+if (!window._comscore) {
+window._comscore = window._comscore || [];
+}
+var cs_ucfr_value = '';
+if (value.consent && value.consent.purposeConsents[5]) {
+cs_ucfr_value = 1;
+} else {
+cs_ucfr_value = 0;
+}
+window._comscore.push({
+c1: "2",
+c2: "10055482",
+cs_ucfr: cs_ucfr_value });
+(function() {
+var s = document.createElement("script"), el = document.getElementsByTagName("script")[0];
+s.async = true;
+s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+el.parentNode.insertBefore(s, el);
+})();
+});
+}
+</script>
+<script>
+var dfp_config = {
+"keystone": "",
+"ad_unit": "10518929/Tech_Toms_Guide/home",
+"live_ad_unit": "10518929/Tech_Toms_Guide/",
+"test_ad_unit": "10518929/Tech_Toms_Guide_Test/",
+"recovery_ad_unit": "",
+"recovery_test_ad_unit": "",
+"incremental": true,
+"gptBeta": "",
+"max_incremental_ads": 20,
+"max_incremental_ads_mobile": 20,
+"max_concurrent_ads": 4,
+"refresh": true,
+"site_platform": "vanilla",
+"tiberius": true,
+"tiberius_mode": "off",
+"keywords": "",
+"article_id": "",
+"vanilla_article_id": "",
+"page_type": "homepage",
+"product_brand": "",
+"product_category": "",
+"product": "",
+"vertical": "home",
+"source": "",
+"provertical": "",
+"single_request": true,
+"onscroll": {
+"refresh" : "",
+"mpu": ""
+},
+"jwplayer": ""
+}
+</script> <script>window.vanillaComponents = [{"trackable":[{"type":"click","identifier":".menuitems a","name":"Link clicked","countTotal":true}],"name":"Primary Nav","excludeHidden":false,"identifier":".primary-nav"},{"trackable":[{"type":"click","identifier":".feature-block-item-wrapper a","name":"Article clicked","countTotal":false}],"name":"Featured articles","excludeHidden":false,"identifier":".top-featured"},{"trackable":[{"type":"click","identifier":"a","name":"Logo clicked","countTotal":false}],"name":"Site Logo","identifier":".logo"},{"trackable":[{"type":"click","identifier":".most-popular-item","name":"Most read article clicked","countTotal":true}],"name":"Most Popular - Popular","identifier":"#poplist-1"},{"trackable":[{"type":"click","identifier":".most-popular-item","name":"Most shared article clicked","countTotal":true}],"name":"Most Popular - Shared","identifier":"#poplist-2"},{"trackable":[{"type":"click","identifier":"a","name":"Link clicked","countTotal":false}],"name":"Prev/Next","identifier":".next-prev-container"},{"trackable":[{"type":"click","identifier":"a","name":"Number clicked","countTotal":true}],"name":"Paginated Review Numerical pagination - Number","identifier":".pagination-numerical-list"},{"trackable":[{"type":"click","identifier":".prev,.next","name":"Prev/Next clicked","countTotal":false}],"name":"Paginated Review Numerical pagination - Prev/Next","identifier":".navigation-sequential"},{"trackable":[{"type":"click","identifier":"a","name":"Link clicked","countTotal":true}],"name":"Inline Pagination","identifier":".swipe-pages-wrapper"},{"trackable":[{"type":"click","identifier":"a","name":"Link clicked","countTotal":true}],"name":"Article Tags","identifier":"#articleTag"},{"trackable":[{"type":"click","identifier":".recommended-article a","name":"Link clicked","countTotal":true}],"name":"Recommended article","identifier":".recommendation-articles"},{"trackable":[{"type":"click","identifier":"a","name":"Link clicked","countTotal":true}],"name":"Trending bar","identifier":".trending-items"},{"trackable":[{"type":"click","identifier":"a","name":"Link clicked","countTotal":true}],"name":"Boilerplate-1","identifier":".club-boilerplate-1"},{"trackable":[{"type":"click","identifier":"a","name":"Link clicked","countTotal":true}],"name":"Boilerplate-2","identifier":".club-boilerplate-2"},{"trackable":[{"type":"click","identifier":"a","name":"Link clicked","countTotal":true}],"name":"Boilerplate-3","identifier":".club-boilerplate-3"},{"trackable":[{"type":"click","identifier":"a","name":"Link clicked","countTotal":true}],"name":"Boilerplate-4","identifier":".club-boilerplate-4"},{"trackable":[{"type":"click","identifier":"a","name":"Link clicked","countTotal":true}],"name":"Inline links","identifier":"#article-body"},{"trackable":[{"type":"click","identifier":"a","name":"Link clicked","countTotal":true}],"name":"Social links","identifier":".socialite-widget"},{"trackable":[{"type":"click","identifier":"a","name":"Link clicked","countTotal":true}],"name":"Avatar","identifier":"#club-login"},{"trackable":[{"type":"click","identifier":".fwd-link","name":"FWD link clicked","countTotal":true}],"name":"Forward Linker","identifier":"#article-body"},{"trackable":[{"type":"click","identifier":"div .brands-lead","name":"Extending Trending Bar","countTotal":true}],"name":"Trending Bar Parent","excludeHidden":false,"identifier":"div .trending-bar"},{"trackable":[{"type":"click","identifier":"a[data-event-label=elkInjectedRelatedBlock]","name":"Link clicked","countTotal":true}],"name":"ELK Injected Related Block","identifier":"#article-body"}]</script> <script>
+var require = {waitSeconds:0};
+</script> <!-- Google Tag Manager -->
+<script>
+(function(){
+function loadGTM(){
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.defer=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TPBZDKD');
+}
+// Can't be in asset loader until we can call custom loader functions
+;(window.Promise
+? Promise.all([
+window.reliablePageLoad,
+window.reliableConsentGiven
+])
+: window.reliableConsentGiven
+).then(function(){
+setTimeout(loadGTM, 1500);
+});
+})();
+</script>
+<!-- End Google Tag Manager -->
+<script>window.addEventListener("load",function(){if(!window.askForConsent){var e=document.createElement("script");e.src="https://vanilla.futurecdn.net/tomsguide/cookieconsent.min.js",e.onload=function(){var e=window.innerWidth>=700?"bottom":"top";window.cookieconsent.initialise({palette:{popup:{background:"#000"},button:{background:"#666666"}},position:e,content:{message:"We use cookies on this website to deliver content to you, personalise content and ads, provide social media features, and analyse our traffic. Click 'I accept' to consent to the use of cookies. More information on cookies and how to manage them",link:"click here",href:"http://www.futureplc.com/cookies-policy/",dismiss:"I accept"}})},document.body.appendChild(e);var o=document.createElement("link");o.rel="stylesheet",o.type="text/css",o.href="https://vanilla.futurecdn.net/tomsguide/cookieconsent.min.css",document.body.appendChild(o);var t=document.createElement("style");t.appendChild(document.createTextNode(".cc-window {z-index:10000000}")),document.body.appendChild(t)}});</script>
+<!-- document assets - added by the article itself -->
+<script>
+window.vanilla.addJs({"id":"main-js","src":"\/\/vanilla.futurecdn.net\/tomsguide\/147371\/media\/js\/main.min.js"}, null, 0)
+window.vanilla.addJs({"id":"responsive-js","src":"\/responsive.d911f142.js"}, null, 0)
+window.vanilla.addJs({"id":"ffte-js","src":"\/\/vanilla.futurecdn.net\/tomsguide\/147371\/media\/shared\/js\/app.js"}, 2000, 1)
+window.vanilla.addCss({"href":"\/\/vanilla.futurecdn.net\/tomsguide\/147371\/media\/css\/tomsguide.min.css"})
+</script> <script>
+window.ffte = {"site":"tomsguide","endpoint":"\/\/api.vanilla.futurecdn.net\/article","locale":"US","gaCode":"UA-72111741-10","debug":[],"serverEnvironment":"live","regionLink":"","isGlobal":false}
+</script>
+<script id="parsely-cfg" src="//cdn.parsely.com/keys/tomsguide.com/p.js"></script>
+<script>
+window.xkeys = ["tomsguide-platform-responsive","tomsguide-core-version-21.7.5","tomsguide-core-ftefrontprodblue","tomsguide-page-homepage","tomsguide-region-US"];
+window.templateVariables = {};
+</script>
+</body>
+<script>
+window.ftr_request_id = "";
+</script> </html>

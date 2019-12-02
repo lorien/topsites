@@ -1,0 +1,1817 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+		
+	
+	<title>League of Legends Strategy Build Guides :: LoL Strategy Building Tool by MOBAFire</title>
+
+	<meta name="msvalidate.01" content="ACDC96EA63C27350066E10591B267C47" />
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+
+	<!-- Paypal Payments -->
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<!-- END -->
+
+	<meta name="keyword" content="League of Legends,Builds,Guides,Strategy,LoL,League of Legends Builds,LoL Guides,Champion Builds,Champion Guides,LoL Champions,League of Legends Champion Strategy,League of Legends Champion Builds" />
+	<meta name="description" content="Create, share and discuss strategy builds for the multi-player online battle arena, League of Legends. Fans can create team strategies, single strategies, vs strategies or theories including champion guides and rune builds. Start sharing your favorite League of Legends strategy now!" />
+
+	<meta property="og:title" content="MOBAFire"/>	<meta property="og:site_name" content="MOBAFire"/>	<meta property="og:description"  content="Find up-to-date builds and guides for every LoL champion, or create your own!"/>	<meta property="og:type" content="website" />	<meta property="og:image" content="https://www.mobafire.com/images/social/home.jpg" />	<meta property="twitter:card" content="summary_large_image" />	<meta property="twitter:creator" content="@MOBAFire" />
+	
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
+	<!-- HEADER CANONICAL LINKS -->
+	
+		<link rel="preload" href="/css/fonts/open-sans-v14-latin-300.woff" as="font" type="font/woff" crossorigin="anonymous">
+	<link rel="preload" href="/css/fonts/open-sans-v14-latin-300.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" href="/css/fonts/open-sans-v14-latin-regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+	<link rel="preload" href="/css/fonts/open-sans-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" href="/css/fonts/open-sans-v14-latin-700.woff" as="font" type="font/woff" crossorigin="anonymous">
+	<link rel="preload" href="/css/fonts/open-sans-v14-latin-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+			<script src="/js/merged.header.13177.js" type="text/javascript"></script>
+		<link href="/css/merged.header.13177.css" rel="stylesheet" type="text/css" media="all" />
+
+	
+		<script type="text/javascript">
+		(function(i,s,o,g,r,a,m){ i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments) },i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+					ga('create', 'UA-9932520-2', 'auto');
+				ga('send', 'pageview');
+	</script>
+	<script type="text/javascript">
+		(function(i,s,o,g,r,a,m){ i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments) },i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-9932520-23', 'auto', { 'name': 'networkWide' } );
+		ga('networkWide.send', 'pageview');
+	</script>
+
+</head>
+
+<body class="site-mobafire tooltip-redesign">
+
+	
+	<script src="/js/ads.min.js" type="text/javascript"></script>
+<div class="adblock-plea">
+	<div class="adblock-plea__overlay">
+		<i class="far fa-times-circle"></i>
+		<div class="creature"></div>
+		<div class="adblock-plea__overlay__main">
+			<h1>Help Support</h1>
+			<h2>Our Growing Community</h2>
+			<p class="top">
+				MOBAFire is a community that lives to help every LoL player take their game to the next level by having open access to all our tools and resources. Please consider supporting us by whitelisting us in your ad blocker!
+			</p>
+			<div class="site-image">
+				<img src="/images/adblock/site.png">
+				<div class="site-image__bottom"></div>
+			</div>
+			<p class="bottom">
+				Want to support MOBAFire with an ad-free experience? You can support us ad-free for less than $1 a month!
+			</p>
+			<a href="/prime" class="button">
+				Go Ad-Free
+			</a>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+$(document).mouseup(function(e) 
+{
+    var container = $(".adblock-plea__overlay");
+    var close = $(".adblock-plea__overlay .far");
+
+    // if the target of the click isn't the container nor a descendant of the container
+    if ( ( !container.is(e.target) && container.has(e.target).length === 0 ) || close.is(e.target) ) 
+    {
+        $('.adblock-plea').fadeOut(500);
+    }
+});
+
+if( isNaN( sessionStorage.pagecount ) )
+{
+	sessionStorage.pagecount = 1;
+}
+else
+{
+	sessionStorage.pagecount = Number(sessionStorage.pagecount) + 1;
+	if (Number(sessionStorage.pagecount) > 5)
+	{
+		var viewed = localStorage.getItem("adblockMessageViewed");
+		var currentTime = new Date().getTime();
+		var difference = currentTime - viewed;
+		if( window.canRunAds === undefined && (viewed == 'null' || difference > 86400000)){
+			// adblocker detected, show fallback
+			$('.adblock-plea').show();
+			localStorage.setItem("adblockMessageViewed", currentTime);
+		}
+	}
+}
+</script>
+
+<div id="collapsing-header" >
+	<div id="net-menu" class="member-nav self-clear collapse member-nav--new">
+		<div class="network-menu-container float-left" id="network-menu-target">
+			<ul class="megamenu collapse" style="display: block">
+				<li class="mm-item">
+					<a class="site-logo" href="/">
+						<em class="logo-ico"></em>
+						<span class="mfn">MFN</span>
+						<span class="triangle"></span>
+					</a>
+				</li>
+			</ul>
+		</div>
+				<div class="prime-menu-container" id="prime-menu-target">
+			<a href="/prime">Become a Prime Member</a>
+		</div>
+				<div class="member-menu-container float-right" id="member-menu-target">
+						<ul class="megamenu logged-out collapse">
+				<li class="mm-item join">
+					<a href="/network-registration">Join Now</a>
+				</li>
+				<li class="mm-item">
+					<a href="/network-log-in">Log In</a>
+				</li>
+			</ul>
+					</div>
+	</div>
+	<div id="header-logo-new" class="tft">
+		<a href="/"><img src="/images/header-logo-small-offset.png" alt="Mobafire League of Legends Build Guides"></a>
+		<a href="/"><img src="/images/header-logo-small.png" alt="Mobafire League of Legends Build Guides"></a>
+	</div>
+	<div id="header" class="self-clear header-new tft">
+		<div id="header__wrap">
+			<div id="header__logo" class="logo">
+				<span>League of Legends Champion Guides</span><a href="/"></a>
+			</div>
+			<nav id="menu-target">
+				<ul>
+					<li class="top">
+						<a href="/edit/guide">
+							Create Guide							<div>The Builder</div>
+						</a>
+					</li>
+					<li class="top">
+						<a href="/league-of-legends/browse">
+							Builds &amp; Guides  
+							<div>League of Legends</div>
+						</a>
+					</li>					
+					<li class="top">
+						<a href="/league-of-legends/champions">
+							Champions							<div>Build Stats</div>
+						</a>
+					</li>
+										<li class="craft top">
+						<a href="/teamfight-tactics">
+							TFT							<div>TeamFight Tactics</div>
+						</a>
+					</li>
+										<li class="top">
+						<a href="/league-of-legends/tier-lists">
+							Tier Lists							<div>Rank Champions</div>
+						</a>
+					</li>
+					<li class="top">
+						<a href="/league-of-legends/community">
+							Community							<div>MOBAFire</div>
+						</a>
+					</li>
+					<li class="search top">
+						<span class="search__normal"><img src="/images/header-search.png" alt="Search MOBAFire"></span>
+						<span class="search__active"><src="/images/spacer.png" data-original="/images/header-search-close.png" alt="Close Search"></span>
+					</li>
+				</ul> 
+			</nav>		
+		</div>	
+	</div>
+</div>
+<div id="headerHolder"></div>
+<div class="fade-bg" style="display:none"></div>
+<div class="login-popup prompt" style="display:none">
+	<div class="close"></div>
+	<div class="logo"></div>
+	<p>You must be logged in or register before you can<br />cast your vote.</p>
+	<form method="post" action="/network-log-in?return=https%253A%252F%252Fwww.mobafire.com%252F">
+	<input type="text" name="email" class="text" placeholder="Email"> <input type="password" name="password" class="text" placeholder="Password"> <button type="submit" class="login-btn">LOGIN</button> <a href="/network-registration"><button type="button" class="register-btn">REGISTER</button></a>
+	</form>
+	<p>You may also Sign In using your Social Media.</p>
+	<div class="social-links">
+		<a href="/network-log-in?service=google&return=https%253A%252F%252Fwww.mobafire.com%252F"><img src="/images/spacer.png" data-original="/images/social/google.png"></a>
+		<a href="/network-log-in?service=facebook&return=https%253A%252F%252Fwww.mobafire.com%252F"><img src="/images/spacer.png" data-original="/images/social/facebook.png"></a>
+		<a href="/network-log-in?service=twitter&return=https%253A%252F%252Fwww.mobafire.com%252F"><img src="/images/spacer.png" data-original="/images/social/twitter.png"></a>
+		<a href="/network-log-in?service=steam&return=https%253A%252F%252Fwww.mobafire.com%252F"><img src="/images/spacer.png" data-original="/images/social/steam.png"></a>
+		<a href="/network-log-in?service=battlenet&return=https%253A%252F%252Fwww.mobafire.com%252F"><img src="/images/spacer.png" data-original="/images/social/battlenet.png"></a>		
+	</div>
+</div>
+<div class="captcha-popup prompt" style="display:none">
+	<div class="close"></div>
+	<p>Please verify that you are not a bot to cast your vote.</p>
+	<div class="captcha-container" id="vote-recaptcha-container"></div>
+</div>
+<div class="ads-popup thank-you" style="display:none">
+		<span class="close"></span>
+		<div class="logo"></div>
+		<h2>Thanks for your feedback.</h2>
+		<p>We take these reports seriously <br/> and will look into it soon.</p>
+</div>
+<div class="ads-popup adblock mf" style="display:none">
+	<span class="close"></span>
+	<img class="sad-face" src="/images/spacer.png" data-original="/images/mf-sadface.png"/>
+	<h2>We see you are <br/> running AdBlock...</h2>
+	<p>MOBAFire is free and advertising <br/>
+		supported. Please consider whitelisting us<br/>
+		or signing up for <a href="https://www.mobafire.com/prime" >MFN Prime</a>.
+	</p>
+</div>
+<div class="ads-popup report" style="display:none">
+	<form method="post" action="/report-ad">
+		<span class="close"></span>
+		<h2>Report this Ad</h2>
+		<h3>Found a bad ad? Let us know... </h3>
+		<h4>What is the main problem with this ad? <span>*</span></h4>
+		<div><input type="checkbox" name="sound"/><label>It plays sound.</label></div>
+		<div><input type="checkbox" name="slow"/><label>It slows down the site.</label></div>
+		<div><input type="checkbox" name="adult"/><label>It contains adult content.</label></div>
+		<div><input type="checkbox" name="cover"/><label>It covers the page.</label></div>
+		<div><input type="checkbox" name="break"/><label>It breaks the site layout.</label></div>
+		<div><input type="checkbox" name="other"/><label>Something else.</label></div>
+		<div><input type="text" style="display:none;" name="adid" id="report-ad-id" /></div>
+		<br/>
+		<h4>What does the ad say? <span>*</span></h4>
+		<textarea name="feedback" class="gf-input"></textarea>
+		<h5>Be sure to include the name of the advertiser.</h5>
+		<button id="ad-report-submit" type="submit" style="display:none;" class="btn hf-grey">Report Ad</button>
+	</form>
+</div>
+
+<script type="text/javascript">
+		$(document).ready(function() {
+		if( !sessionStorage.getItem('nico') ) {
+			$('#twitch-exposure-placeholder').show(); 
+		}
+		$('.twitch-exposure__close').on( 'click', function() { 
+			$('#twitch-exposure-placeholder').slideUp(700);
+			sessionStorage.setItem( 'nico', true );
+		});
+		$.getJSON( '/json/menus?return=%2F', function( data ) {
+			$('#menu-target').html( data.main_menu_html );
+			$('.menu-container .megamenu').megamenu({
+				'show_method': 'simple',
+				'hide_method': 'simple'
+			});
+
+			$('#member-menu-target').html( data.member_menu_html );
+			$('.member-menu-container .megamenu').megamenu({
+				'show_method': 'simple',
+				'hide_method': 'simple'
+				,
+				'left':-5
+			});
+
+			$('#network-menu-target').html( data.network_menu_html );
+			$('.network-menu-container .megamenu').megamenu({
+				'show_method': 'simple',
+				'hide_method': 'simple'
+			});
+
+			if (!data.broadcast_messages) return;
+			for( var x = 0; x < data.broadcast_messages.length; x++ )
+			{
+				var haveSeenMessage = store.get('has_seen_broadcast_message-' + data.broadcast_messages[x].broadcast_message_id );
+				if( !haveSeenMessage ){
+					var messageElement = $(data.broadcast_messages[x].html);
+					messageElement.hide();
+					$('._broadcast-message-container').prepend( messageElement );
+					messageElement.slideDown('fast');
+				}
+			}
+
+			$('#net-menu img[data-original]').each(function(){
+				$(this).hide().attr('src',$(this).attr('data-original')).fadeIn();
+			});
+		});
+	});
+</script>
+
+	<script type="text/javascript" src="/ajax/html-cache.js?c=header-search&t=1575259200"></script>
+
+	
+	
+		<div id="wrapper">		
+		<!-- google_ad_section_end(weight=ignore) -->
+				<div id="content">
+						<div class="wrap-row-d self-clear" >
+				<div class="_broadcast-message-container"></div>
+				
+
+
+    <h1 class="home-h1">League of Legends Strategy Build Guides (LoL)</h1>
+    <div class="self-clear">
+      <div class="float-left box-shadow-lb" id="home-champs">
+          
+    <div id="new-champ">
+        <a href="/league-of-legends/champion/senna-151" class="champ-pic {t:'Champion',i:'151'} tooltip-ajax" style="background-image: url(/images/champion/big-head/senna.jpg)">
+            <h2>Senna <span> Marksman</span></h2>
+            <h3>The Redeemer</h3>
+        </a>    
+                <div class="champ-selection">
+            <div class="champs self-clear">
+                <div class="champs__header self-clear">
+                    <h4>Weekly Free Champions</h4>
+                    <a href="/league-of-legends/champions">View All</a>
+                </div>
+                                    <a class="{t:'Champion',i:'67'} tooltip-ajax" href="/league-of-legends/champion/caitlyn-67">
+                        <img src="/images/champion/icon/caitlyn.png" alt="Caitlyn Build Guides"/>
+                    </a>
+                                    <a class="{t:'Champion',i:'122'} tooltip-ajax" href="/league-of-legends/champion/kalista-122">
+                        <img src="/images/champion/icon/kalista.png" alt="Kalista Build Guides"/>
+                    </a>
+                                    <a class="{t:'Champion',i:'132'} tooltip-ajax" href="/league-of-legends/champion/kled-132">
+                        <img src="/images/champion/icon/kled.png" alt="Kled Build Guides"/>
+                    </a>
+                                    <a class="{t:'Champion',i:'62'} tooltip-ajax" href="/league-of-legends/champion/lux-62">
+                        <img src="/images/champion/icon/lux.png" alt="Lux Build Guides"/>
+                    </a>
+                                    <a class="{t:'Champion',i:'93'} tooltip-ajax" href="/league-of-legends/champion/nautilus-93">
+                        <img src="/images/champion/icon/nautilus.png" alt="Nautilus Build Guides"/>
+                    </a>
+                                    <a class="{t:'Champion',i:'12'} tooltip-ajax" href="/league-of-legends/champion/nunu-amp-willump-12">
+                        <img src="/images/champion/icon/nunu-amp-willump.png" alt="Nunu &amp; Willump Build Guides"/>
+                    </a>
+                                    <a class="{t:'Champion',i:'77'} tooltip-ajax" href="/league-of-legends/champion/orianna-77">
+                        <img src="/images/champion/icon/orianna.png" alt="Orianna Build Guides"/>
+                    </a>
+                                    <a class="{t:'Champion',i:'103'} tooltip-ajax" href="/league-of-legends/champion/rengar-103">
+                        <img src="/images/champion/icon/rengar.png" alt="Rengar Build Guides"/>
+                    </a>
+                                    <a class="{t:'Champion',i:'75'} tooltip-ajax" href="/league-of-legends/champion/rumble-75">
+                        <img src="/images/champion/icon/rumble.png" alt="Rumble Build Guides"/>
+                    </a>
+                                    <a class="{t:'Champion',i:'151'} tooltip-ajax" href="/league-of-legends/champion/senna-151">
+                        <img src="/images/champion/icon/senna.png" alt="Senna Build Guides"/>
+                    </a>
+                                    <a class="{t:'Champion',i:'82'} tooltip-ajax" href="/league-of-legends/champion/talon-82">
+                        <img src="/images/champion/icon/talon.png" alt="Talon Build Guides"/>
+                    </a>
+                                    <a class="{t:'Champion',i:'65'} tooltip-ajax" href="/league-of-legends/champion/trundle-65">
+                        <img src="/images/champion/icon/trundle.png" alt="Trundle Build Guides"/>
+                    </a>
+                                    <a class="{t:'Champion',i:'33'} tooltip-ajax" href="/league-of-legends/champion/veigar-33">
+                        <img src="/images/champion/icon/veigar.png" alt="Veigar Build Guides"/>
+                    </a>
+                                    <a class="{t:'Champion',i:'118'} tooltip-ajax" href="/league-of-legends/champion/velkoz-118">
+                        <img src="/images/champion/icon/velkoz.png" alt="Vel&#039;Koz Build Guides"/>
+                    </a>
+                                    <a class="{t:'Champion',i:'90'} tooltip-ajax" href="/league-of-legends/champion/viktor-90">
+                        <img src="/images/champion/icon/viktor.png" alt="Viktor Build Guides"/>
+                    </a>
+                            </div>
+        </div>
+    </div>
+
+
+      </div>
+      <div class="float-right" id="home-feature">
+	<div class="box-shadow">
+    	<div class="box-shadow-inner-lb">
+		    <div id="rotator">
+		    						<a href="/league-of-legends/forum/news/mobafire-weekly-challenge-8-blood-thirsty-44027" ><img src="/images/news/weekly-challenge-8-slider.jpg" alt="/league-of-legends/forum/news/mobafire-weekly-challenge-8-blood-thirsty-44027"/></a>
+									<a href="https://discord.gg/cRN4kqt"  target="_blank" rel="noopener" ><img src="/images/news/x-gamer-slider.jpg" alt="https://discord.gg/cRN4kqt"/></a>
+									<a href="/league-of-legends/forum/news/december-monthly-giveaway-snowdown-showdown-44041" ><img src="/images/news/december-2019-raffle-slider.jpg" alt="/league-of-legends/forum/news/december-monthly-giveaway-snowdown-showdown-44041"/></a>
+									<a href="/edit/guide" ><img src="/images/mf-guide-slider3.jpg" alt="/edit/guide"/></a>
+									<a href="/league-of-legends/forum/community-games/mobafire-discord-server-24581" ><img src="/images/discord-slider.jpg" alt="/league-of-legends/forum/community-games/mobafire-discord-server-24581"/></a>
+					        </div>
+		</div>
+	    <ul class="pager">
+	    </ul>
+	</div>
+</div>
+
+<script type="text/javascript">
+	$("#home-feature #rotator").carouFredSel({
+		items: {
+			visible: 1,
+			minimum: 2,
+			height: 178,
+			width: 408
+		},
+		scroll: {
+			duration: 500,
+			pauseOnHover: true
+		},
+		auto: 5000,
+		pagination: {
+		    container: "#home-feature .pager",
+		    anchorBuilder: function( nr ) {
+		        return "<li><a class='pagenum' href=''><div></div></a></li>";
+		    }
+		}
+	});
+</script> 
+    </div>
+  </div>
+
+  <div class="wrap-row-break"></div>
+
+  <div class="wrap-row-l self-clear">
+    <div id="home-featured-guides" class="box-shadow-db home-guides self-clear">
+  <h3 class="feature-hdr"><img src="/images/star.png"/>Featured Guides      </h3>
+  <div class="guides">
+        <a class="guide-row" href="/league-of-legends/build/patch-9-23-the-wounds-of-betrayal-never-heal-554067">
+      <div>
+        <div class="pic browse-icon platinum">
+                    <img alt="Kalista Build Guide" src="/images/champion/icon/kalista.png">
+                  </div>
+      </div>
+      <div class="desc">
+        <h4>[Patch 9.23]  The wounds of betrayal never heal!</h4>
+        <h5>
+          <span class="user-level ajax-tooltip { t:'User',i:'885510' }">Setting Fires</span>
+        </h5>
+        <div class="guide-items">
+                    <span><img src="/images/item/berserkers-greaves.gif"/></span>
+                    <span><img src="/images/item/blade-of-the-ruined-king.gif"/></span>
+                    <span><img src="/images/item/runaans-hurricane.gif"/></span>
+                    <span><img src="/images/item/bloodthirster.gif"/></span>
+                    <span><img src="/images/item/lord-dominiks-regards.gif"/></span>
+                    <span><img src="/images/item/guardian-angel.gif"/></span>
+                  </div>
+      </div>
+    </a>
+        <a class="guide-row" href="/league-of-legends/build/yeagers-master-orianna-guide-550591">
+      <div>
+        <div class="pic browse-icon diamond">
+                    <img alt="Orianna Build Guide" src="/images/champion/icon/orianna.png">
+                  </div>
+      </div>
+      <div class="desc">
+        <h4>Yeager&#039;s Master Orianna guide</h4>
+        <h5>
+          <span class="veteran-level ajax-tooltip { t:'User',i:'864998' }">Yeager</span>
+        </h5>
+        <div class="guide-items">
+                    <span><img src="/images/item/ludens-echo.gif"/></span>
+                    <span><img src="/images/item/sorcerers-shoes.gif"/></span>
+                    <span><img src="/images/item/morellonomicon.gif"/></span>
+                    <span><img src="/images/item/rabadons-deathcap.gif"/></span>
+                    <span><img src="/images/item/void-staff.gif"/></span>
+                    <span><img src="/images/item/zhonyas-hourglass.gif"/></span>
+                  </div>
+      </div>
+    </a>
+        <a class="guide-row" href="/league-of-legends/build/pre-season-mid-light-em-up-im-on-fiyaa-luxe-n-style-460573">
+      <div>
+        <div class="pic browse-icon diamond">
+                    <img alt="Lux Build Guide" src="/images/champion/icon/lux.png">
+                  </div>
+      </div>
+      <div class="desc">
+        <h4>[Pre-Season: Mid] Light &#039;Em Up (I&#039;m on fiyaa): Luxeøn Style</h4>
+        <h5>
+          <span class="user-level ajax-tooltip { t:'User',i:'630043' }">LuxTheGreyWarden</span>
+        </h5>
+        <div class="guide-items">
+                    <span><img src="/images/item/sorcerers-shoes.gif"/></span>
+                    <span><img src="/images/item/ludens-echo.gif"/></span>
+                    <span><img src="/images/item/rabadons-deathcap.gif"/></span>
+                    <span><img src="/images/item/morellonomicon.gif"/></span>
+                    <span><img src="/images/item/void-staff.gif"/></span>
+                    <span><img src="/images/item/zhonyas-hourglass.gif"/></span>
+                  </div>
+      </div>
+    </a>
+      </div>
+</div>
+<div id="home-weekly-guides" class="box-shadow-db home-guides self-clear">
+  <div class="exhibit">
+    	<div class="c self-clear exhibit-narrow">
+		<div class="vm-placement" data-id="58d925ff46e0fb000179051c"></div>
+	</div>
+
+  </div>
+  <h3 class="feature-hdr"><img src="/images/cup.png"/>Popular Guides This Week      </h3>
+  <div class="guides">
+        <a class="guide-row" href="/league-of-legends/build/yamikazes-challenger-ekko-guide-544524">
+      <div>
+      <div class="pic browse-icon grandmaster">
+                <img alt="Ekko Build Guide" src="/images/champion/icon/ekko.png">
+              </div>
+    </div>
+      <div class="desc">
+        <h4>Yamikaze&#039;s Challenger Ekko Guide</h4>
+        <h5>
+          <span class="veteran-level ajax-tooltip { t:'User',i:'746758' }">Yamikaze</span>
+        </h5>
+        <div class="guide-items">
+                    <span><img src="/images/item/hextech-protobelt-01.gif"/></span>
+                    <span><img src="/images/item/sorcerers-shoes.gif"/></span>
+                    <span><img src="/images/item/lich-bane.gif"/></span>
+                    <span><img src="/images/item/morellonomicon.gif"/></span>
+                    <span><img src="/images/item/zhonyas-hourglass.gif"/></span>
+                    <span><img src="/images/item/rabadons-deathcap.gif"/></span>
+                  </div>
+      </div>
+    </a>
+        <a class="guide-row" href="/league-of-legends/build/the-trundle-bundle-jungle-top-and-support-528149">
+      <div>
+      <div class="pic browse-icon gold">
+                <img alt="Trundle Build Guide" src="/images/champion/icon/trundle.png">
+              </div>
+    </div>
+      <div class="desc">
+        <h4>THE TRUNDLE BUNDLE [Jungle, Top, and Support]</h4>
+        <h5>
+          <span class="user-level ajax-tooltip { t:'User',i:'818593' }">McDank</span>
+        </h5>
+        <div class="guide-items">
+                  </div>
+      </div>
+    </a>
+        <a class="guide-row" href="/league-of-legends/build/where-men-fall-saplings-rise-maokai-jungle-amp-top-s9-517408">
+      <div>
+      <div class="pic browse-icon gold">
+                <img alt="Maokai Build Guide" src="/images/champion/icon/maokai.png">
+              </div>
+    </div>
+      <div class="desc">
+        <h4>Where Men Fall, Saplings Rise! Maokai Jungle &amp; Top S9</h4>
+        <h5>
+          <span class="veteran-level ajax-tooltip { t:'User',i:'792409' }">Silverman43</span>
+        </h5>
+        <div class="guide-items">
+                    <span><img src="/images/item/stalkers-blade-cinderhulk.gif"/></span>
+                    <span><img src="/images/item/mercurys-treads.gif"/></span>
+                    <span><img src="/images/item/righteous-glory.gif"/></span>
+                    <span><img src="/images/item/iceborn-gauntlet.gif"/></span>
+                    <span><img src="/images/item/spirit-visage.gif"/></span>
+                    <span><img src="/images/item/gargoyle-stoneplate.gif"/></span>
+                  </div>
+      </div>
+    </a>
+      </div>
+</div>
+
+  </div>
+
+  <div class="wrap-row-break"></div>
+
+  <div class="wrap-row-d self-clear">
+    	<div class="home-exhibit">
+    			<div class="vm-placement" data-id="58d9264d46e0fb0001790524"></div>
+
+    	</div>
+  	
+    <div id="home-questions" class="box-shadow-db">
+    <div class="bg">
+            <div class="pic">
+                <a href="/league-of-legends/questions">
+                    <img src="/images/qa.png"/>
+                </a>
+            </div>    
+            <div class="arrows">
+                <a href="#" id='question-rotator-up'></a>
+                <a href="#" id='question-rotator-down'></a>
+            </div>
+            <div class="desc">
+                <div id='question-content'>
+                    <h3><a href="/league-of-legends/question/how-do-you-play-shaco-2493">How do you play Shaco..</a></h3>
+                    <span>
+                       New Question
+                                              | Asked by <a 
+		href="/profile/hrypex-911194" 
+		class="user-level		 
+		ajax-tooltip { t:'User',i:'911194' }"
+	>Hrypex</a>
+                                          </span>
+               </div>
+           </div>
+           <div class="ask">
+            <a href="/league-of-legends/question/how-do-you-play-shaco-2493" id='answer-question' class="btn">Answer Question</a>
+            <a href="/edit/question">Ask A Question</a>
+        </div>
+    </div>
+
+    <div style='display:none' id='questions-rotator'>
+        eyIyIjp7InF1ZXN0aW9uX2lkIjoiMjQ4NiIsImRpc3BsYXlfbmFtZSI6IldoYXQgcm9sZSBzaG91bGQgSSBwdXRzIGFzIG15IHNlY29uZGFyeT8iLCJjYXRlZ29yeSI6IkdlbmVyYWwiLCJxdWVzdGlvbl9jb250ZW50X2NvdW50IjoiOCIsInR5cGUiOiJQb3B1bGFyIFF1ZXN0aW9uIiwidXJsIjoid2hhdC1yb2xlLXNob3VsZC1pLXB1dHMtYXMtbXktc2Vjb25kYXJ5In0sIjMiOnsicXVlc3Rpb25faWQiOiIyNDk3IiwidXNlcl9pZCI6IjUyNTM2OSIsImRpc3BsYXlfbmFtZSI6IlRhaG0gS2VuY2giLCJjYXRlZ29yeSI6IiIsInF1ZXN0aW9uX2NvbnRlbnRfY291bnQiOiIxIiwidHlwZSI6Ik5ldyBRdWVzdGlvbiIsInVybCI6InRhaG0ta2VuY2giLCJ1c2VyIjp7ImFjY2Vzc19sZXZlbCI6InVzZXIiLCJuaWNrbmFtZSI6IlNocmV3ZG8iLCJ1cmwiOiJzaHJld2RvIiwidXNlcl9pZCI6IjUyNTM2OSJ9fSwiNCI6eyJxdWVzdGlvbl9pZCI6IjI0ODciLCJ1c2VyX2lkIjoiMzg5NjU2IiwiZGlzcGxheV9uYW1lIjoiSG93IGRvIHlvdSBwbGF5IFNlbm5hPyIsImNhdGVnb3J5IjoiQ2hhbXBpb25zIiwicXVlc3Rpb25fY29udGVudF9jb3VudCI6IjQiLCJ0eXBlIjoiUG9wdWxhciBRdWVzdGlvbiIsInVybCI6Imhvdy1kby15b3UtcGxheS1zZW5uYSIsInVzZXIiOnsiYWNjZXNzX2xldmVsIjoidXNlciIsIm5pY2tuYW1lIjoiTXlzdHJhbCIsInVybCI6Im15c3RyYWwiLCJ1c2VyX2lkIjoiMzg5NjU2In19LCI1Ijp7InF1ZXN0aW9uX2lkIjoiMjQ5NCIsInVzZXJfaWQiOiI5MTE5ODciLCJkaXNwbGF5X25hbWUiOiJ3aGVyZSBjYW4gaSBmaW5kIGNoYW1waW9uIHBvcHVsYXJpdHkgbGlzdD8iLCJjYXRlZ29yeSI6IkNoYW1waW9ucyIsInF1ZXN0aW9uX2NvbnRlbnRfY291bnQiOiIzIiwidHlwZSI6Ik5ldyBRdWVzdGlvbiIsInVybCI6IndoZXJlLWNhbi1pLWZpbmQtY2hhbXBpb24tcG9wdWxhcml0eS1saXN0IiwidXNlciI6eyJhY2Nlc3NfbGV2ZWwiOiJ1c2VyIiwibmlja25hbWUiOiJuYWplbmRhIiwidXJsIjoibmFqZW5kYSIsInVzZXJfaWQiOiI5MTE5ODcifX0sIjYiOnsicXVlc3Rpb25faWQiOiIyNDk1IiwidXNlcl9pZCI6IjczMDAzNiIsImRpc3BsYXlfbmFtZSI6Ik1JU1MgRk9SVFVORSIsImNhdGVnb3J5IjoiQ2hhbXBpb25zIiwicXVlc3Rpb25fY29udGVudF9jb3VudCI6IjQiLCJ0eXBlIjoiTmV3IFF1ZXN0aW9uIiwidXJsIjoibWlzcy1mb3J0dW5lIiwidXNlciI6eyJhY2Nlc3NfbGV2ZWwiOiJ1c2VyIiwibmlja25hbWUiOiJkYW55bHA4OCIsInVybCI6ImRhbnlscDg4IiwidXNlcl9pZCI6IjczMDAzNiJ9fSwiNyI6eyJxdWVzdGlvbl9pZCI6IjI0OTIiLCJ1c2VyX2lkIjoiOTA5NzAyIiwiZGlzcGxheV9uYW1lIjoiSG93IHRvIHBsYXkgeWFzdW8/IiwiY2F0ZWdvcnkiOiJDaGFtcGlvbnMiLCJxdWVzdGlvbl9jb250ZW50X2NvdW50IjoiNSIsInR5cGUiOiJQb3B1bGFyIFF1ZXN0aW9uIiwidXJsIjoiaG93LXRvLXBsYXkteWFzdW8iLCJ1c2VyIjp7ImFjY2Vzc19sZXZlbCI6InVzZXIiLCJuaWNrbmFtZSI6IjAxM2JsYWNrIiwidXJsIjoiMDEzYmxhY2siLCJ1c2VyX2lkIjoiOTA5NzAyIn19LCI4Ijp7InF1ZXN0aW9uX2lkIjoiMjQ5MyIsInVzZXJfaWQiOiI5MTExOTQiLCJkaXNwbGF5X25hbWUiOiJIb3cgZG8geW91IHBsYXkgU2hhY28uLiIsImNhdGVnb3J5IjoiQ2hhbXBpb25zIiwicXVlc3Rpb25fY29udGVudF9jb3VudCI6IjEiLCJ0eXBlIjoiUG9wdWxhciBRdWVzdGlvbiIsInVybCI6Imhvdy1kby15b3UtcGxheS1zaGFjbyIsInVzZXIiOnsiYWNjZXNzX2xldmVsIjoidXNlciIsIm5pY2tuYW1lIjoiSHJ5cGV4IiwidXJsIjoiaHJ5cGV4IiwidXNlcl9pZCI6IjkxMTE5NCJ9fSwiOSI6eyJxdWVzdGlvbl9pZCI6IjI0OTgiLCJkaXNwbGF5X25hbWUiOiJIb3cgdG8gUGxheSBlYXJseSBnYW1lIGFzIEEgdG9wIGxhbmVyIChEYXJpdXMpIiwiY2F0ZWdvcnkiOiJDaGFtcGlvbnMiLCJxdWVzdGlvbl9jb250ZW50X2NvdW50IjoiMSIsInR5cGUiOiJOZXcgUXVlc3Rpb24iLCJ1cmwiOiJob3ctdG8tcGxheS1lYXJseS1nYW1lLWFzLWEtdG9wLWxhbmVyLWRhcml1cyJ9LCIxMCI6eyJxdWVzdGlvbl9pZCI6IjI0ODQiLCJ1c2VyX2lkIjoiOTA4NjIzIiwiZGlzcGxheV9uYW1lIjoiV2h5IG15IHNhdmVkIGFuZCB1bnB1Ymxpc2hlZCBndWlkZSBvbiBXdyBpcydudCBpbiBteSBsaWJyYXJ5ID8iLCJjYXRlZ29yeSI6IiIsInF1ZXN0aW9uX2NvbnRlbnRfY291bnQiOiIxIiwidHlwZSI6IlBvcHVsYXIgUXVlc3Rpb24iLCJ1cmwiOiJ3aHktbXktc2F2ZWQtYW5kLXVucHVibGlzaGVkLWd1aWRlLW9uLXd3LWlzbnQtaW4tbXktbGlicmFyeSIsInVzZXIiOnsiYWNjZXNzX2xldmVsIjoidXNlciIsIm5pY2tuYW1lIjoiRGV2aWxldmlMIiwidXJsIjoiZGV2aWxldmlsIiwidXNlcl9pZCI6IjkwODYyMyJ9fX0=
+    </div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var qPos = 0;
+            var qCount = 0;
+            var data = '';
+            var firstRun = true;
+            var rotate = true;
+
+            $('#question-rotator-up').on('click', function(e)
+            {
+                e.preventDefault();
+                rotate = false;
+
+                if(firstRun == true)
+                {
+                    data = atob($('#questions-rotator').text());
+                    data = jQuery.parseJSON(data);
+
+                    var i;
+                    for (i in data) {
+                        if (data.hasOwnProperty(i)) {
+                            qCount++;
+                        }
+                    }
+
+                    qPos = qCount - 1;
+                    firstRun = false;
+                }
+
+                qPos = qPos - 1;
+                if(qPos < 1) qPos = qCount;
+
+                var newHtml = '<h3><a href="/league-of-legends/question/' + data[qPos].url + '-' + data[qPos].question_id + '">' + data[qPos].display_name + '</a></h3>'
+                + '<span>' + data[qPos].type;
+                if( data[qPos].user )
+                {
+                    newHtml = newHtml + ' | Asked by <a class="' + data[qPos].user.access_level + '-level ajax-tooltip { t:"User",i:"' + data[qPos].user.user_id + '" }" href="/profile/' + data[qPos].user.url + '-' + data[qPos].user.user_id + '">' + data[qPos].user.nickname + '</a>';
+                }
+                newHtml = newHtml + '</span>';
+
+                $('#question-content').fadeTo("slow", 0, function()
+                {
+                    $('#question-content').html(newHtml);
+                    $('#answer-question').prop('href', '/league-of-legends/question/' + data[qPos].url + '-' + data[qPos].question_id);
+                    $('#question-content').fadeTo("slow", 1);
+                });
+            });
+
+        $('#question-rotator-down').on('click', function(e)
+        {
+            e.preventDefault();
+            rotate = false;
+
+            if(firstRun == true)
+            {
+                data = atob($('#questions-rotator').text());
+                data = jQuery.parseJSON(data);
+
+                var i;
+                for (i in data) {
+                    if (data.hasOwnProperty(i)) {
+                        qCount++;
+                    }
+                }
+
+                firstRun = false;
+            }
+
+            qPos = qPos + 1;
+            if(qPos > qCount) qPos = 1;
+
+            var newHtml = '<h3><a href="/league-of-legends/question/' + data[qPos].url + '-' + data[qPos].question_id + '">' + data[qPos].display_name + '</a></h3>'
+            + '<span>' + data[qPos].type;
+            if( data[qPos].user )
+            {
+                newHtml = newHtml + ' | Asked by <a class="' + data[qPos].user.access_level + '-level ajax-tooltip { t:"User",i:"' + data[qPos].user.user_id + '" }" href="/profile/' + data[qPos].user.url + '-' + data[qPos].user.user_id + '">' + data[qPos].user.nickname + '</a>';
+            }
+            newHtml = newHtml + '</span>';
+
+            $('#question-content').fadeTo("slow", 0, function()
+            {
+                $('#question-content').html(newHtml);
+                $('#answer-question').prop('href', '/league-of-legends/question/' + data[qPos].url + '-' + data[qPos].question_id);
+                $('#question-content').fadeTo("slow", 1);
+            });
+        });
+
+        setInterval(rotateQuestion, 5000);
+
+        function rotateQuestion()
+        {
+            if(rotate == true)
+            {
+                if(firstRun == true)
+                {
+                    data = atob($('#questions-rotator').text());
+                    data = jQuery.parseJSON(data);
+
+                    var i;
+                    for (i in data) {
+                        if (data.hasOwnProperty(i)) {
+                            qCount++;
+                        }
+                    }
+
+                    firstRun = false;
+                }
+
+                qPos = qPos + 1;
+                if(qPos > qCount) qPos = 1;
+
+                var newHtml = '<h3><a href="/league-of-legends/question/' + data[qPos].url + '-' + data[qPos].question_id + '">' + data[qPos].display_name + '</a></h3>'
+                + '<span>' + data[qPos].type;
+                if( data[qPos].user )
+                {
+                   newHtml = newHtml + ' | Asked by <a class="' + data[qPos].user.access_level + '-level ajax-tooltip { t:"User",i:"' + data[qPos].user.user_id + '" }" href="/profile/' + data[qPos].user.url + '-' + data[qPos].user.user_id + '">' + data[qPos].user.nickname + '</a>';
+               }
+               newHtml = newHtml + '</span>';
+
+               $('#question-content').fadeTo("slow", 0, function()
+               {
+                $('#question-content').html(newHtml);
+                $('#answer-question').prop('href', '/league-of-legends/question/' + data[qPos].url + '-' + data[qPos].question_id);
+                $('#question-content').fadeTo("slow", 1);
+            });
+           }
+        }
+        });
+    </script>
+
+
+  </div>
+
+  <div class="wrap-row-break"></div>
+
+  <div class="wrap-row-l self-clear">
+    <div class="self-clear float-right">
+      <div id="home-discussion" class="home-area">
+        <div class="box-shadow-db">
+              <div class="activity-title">
+	<h3 class="feature-hdr3">RECENT COMMENTS</h3><span class="topnavigation-comments"><a id='activity-log-all' href="#">All</a><tab2>|<tab2><a id='activity-log-guides' href="#">Guides</a><tab2>|<tab2><a id='activity-log-forum' href="#">Forum</a></span>
+    </div>
+			<div class="btn-more c self-clear">
+			<div class='page-holder'><span class="activity-log-prev-button cursor disabled _ajax-previous-page { target:'._discussion',module:'HomepageDiscussion' }">PREV 10</span></div>
+		</div>
+		<div style="max-height:750px;overflow:hidden;">
+<div class="_discussion">
+						<div class="discuss-link self-clear">
+				<div class="pic">
+					<img src="https://www.gravatar.com/avatar/045e69d949f4cabdb241ae214cf0d2d1.jpg?d=http%3A%2F%2Fwww.mobafire.com%2Fimages%2Fnoavatar.png&amp;t=1481756340" alt="LuxTheGreyWarden's MOBAFire Avatar" class="{t:'User',i:'630043'} tooltip-ajax" />
+				</div>
+				<div class="desc">
+					<a 
+		href="/profile/luxthegreywarden-630043" 
+		class="user-level		 
+		ajax-tooltip { t:'User',i:'630043' }"
+	>LuxTheGreyWarden</a> said: 
+					"<a href="/comment-link?comment_id=1167300">Thanks Psi!! It's so easy to miss stuff like this, I went ahead and...</a>"
+					<div class="discuss-sublink"><span class="localized-datetime tooltip" data-timestamp="1575260807" data-format="F j, Y" title="December 2, 2019 4:26am GMT/UTC">December 1, 2019</span> in: <a href="/league-of-legends/build/pre-season-mid-light-em-up-im-on-fiyaa-luxe-n-style-460573" class="ajax-tooltip { t:'Build',i:'460573' }">[Pre-Season: Mid] Light &#039;Em Up (I&#039;m on fiyaa): Luxeøn Style</a></div>
+				</div>
+			</div>
+					<div class="discuss-link self-clear">
+				<div class="pic">
+					<img src="/images/avatars/summoner-icon-team-builder-mage.png" alt="PanPancraboo's MOBAFire Avatar" class="{t:'User',i:'913614'} tooltip-ajax" />
+				</div>
+				<div class="desc">
+					<a 
+		href="/profile/panpancraboo-913614" 
+		class="user-level		 
+		ajax-tooltip { t:'User',i:'913614' }"
+	>PanPancraboo</a> said: 
+					"<a href="/comment-link?comment_id=1167299">how to join?  </a>"
+					<div class="discuss-sublink"><span class="localized-datetime tooltip" data-timestamp="1575260382" data-format="F j, Y" title="December 2, 2019 4:19am GMT/UTC">December 1, 2019</span> in: <a href="/league-of-legends/forum/news/december-monthly-giveaway-snowdown-showdown-44041" class="ajax-tooltip { t:'ForumThread',i:'44041' }">December Monthly Giveaway - Snowdown Showdown!</a></div>
+				</div>
+			</div>
+					<div class="discuss-link self-clear">
+				<div class="pic">
+					<img src="/images/avatars/ahri-elderwood.png" alt="SkellyBirb's MOBAFire Avatar" class="{t:'User',i:'811520'} tooltip-ajax" />
+				</div>
+				<div class="desc">
+					<a 
+		href="/profile/skellybirb-811520" 
+		class="user-level		 
+		ajax-tooltip { t:'User',i:'811520' }"
+	>SkellyBirb</a> said: 
+					"<a href="/comment-link?comment_id=1167298">You may want to remove/replace Zz'rot from the build since it doesn't...</a>"
+					<div class="discuss-sublink"><span class="localized-datetime tooltip" data-timestamp="1575260213" data-format="F j, Y" title="December 2, 2019 4:16am GMT/UTC">December 1, 2019</span> in: <a href="/league-of-legends/build/split-king-solo-queue-shen-510466" class="ajax-tooltip { t:'Build',i:'510466' }">Split King: Solo Queue Shen</a></div>
+				</div>
+			</div>
+					<div class="discuss-link self-clear">
+				<div class="pic">
+					<img src="/images/avatars/braum-mafia.png" alt="Wand17's MOBAFire Avatar" class="{t:'User',i:'907895'} tooltip-ajax" />
+				</div>
+				<div class="desc">
+					<a 
+		href="/profile/wand17-907895" 
+		class="user-level		 
+		ajax-tooltip { t:'User',i:'907895' }"
+	>Wand17</a> said: 
+					"<a href="/comment-link?comment_id=1167297">...</a>"
+					<div class="discuss-sublink"><span class="localized-datetime tooltip" data-timestamp="1575254592" data-format="F j, Y" title="December 2, 2019 2:43am GMT/UTC">December 1, 2019</span> in: <a href="/league-of-legends/forum/news/mobafire-weekly-challenge-8-bloodthirsty-44027" class="ajax-tooltip { t:'ForumThread',i:'44027' }">MOBAFire Weekly Challenge #8 - Bloodthirsty!</a></div>
+				</div>
+			</div>
+					<div class="discuss-link self-clear">
+				<div class="pic">
+					<img src="/images/avatars/blitzcrank-riot.png" alt="acidicVine's MOBAFire Avatar" class="{t:'User',i:'741113'} tooltip-ajax" />
+				</div>
+				<div class="desc">
+					<a 
+		href="/profile/acidicvine-741113" 
+		class="user-level		 
+		ajax-tooltip { t:'User',i:'741113' }"
+	>acidicVine</a> said: 
+					"<a href="/comment-link?comment_id=1167296">...</a>"
+					<div class="discuss-sublink"><span class="localized-datetime tooltip" data-timestamp="1575254241" data-format="F j, Y" title="December 2, 2019 2:37am GMT/UTC">December 1, 2019</span> in: <a href="/league-of-legends/forum/news/mobafire-weekly-challenge-8-bloodthirsty-44027" class="ajax-tooltip { t:'ForumThread',i:'44027' }">MOBAFire Weekly Challenge #8 - Bloodthirsty!</a></div>
+				</div>
+			</div>
+					<div class="discuss-link self-clear">
+				<div class="pic">
+					<img src="/images/avatars/heimerdinger-hazmat.png" alt="NewEleven's MOBAFire Avatar" class="{t:'User',i:'898118'} tooltip-ajax" />
+				</div>
+				<div class="desc">
+					<a 
+		href="/profile/neweleven-898118" 
+		class="user-level		 
+		ajax-tooltip { t:'User',i:'898118' }"
+	>NewEleven</a> said: 
+					"<a href="/comment-link?comment_id=1167295">I love your guide! It is very informative and detailed. The only nitpick...</a>"
+					<div class="discuss-sublink"><span class="localized-datetime tooltip" data-timestamp="1575250348" data-format="F j, Y" title="December 2, 2019 1:32am GMT/UTC">December 1, 2019</span> in: <a href="/league-of-legends/build/ssms-gold-aatrox-guide-season-10-562315" class="ajax-tooltip { t:'Build',i:'562315' }">SSM&#039;s Gold Aatrox Guide Season 10</a></div>
+				</div>
+			</div>
+					<div class="discuss-link self-clear">
+				<div class="pic">
+					<img src="/images/avatars/heimerdinger-hazmat.png" alt="NewEleven's MOBAFire Avatar" class="{t:'User',i:'898118'} tooltip-ajax" />
+				</div>
+				<div class="desc">
+					<a 
+		href="/profile/neweleven-898118" 
+		class="user-level		 
+		ajax-tooltip { t:'User',i:'898118' }"
+	>NewEleven</a> said: 
+					"<a href="/comment-link?comment_id=1167294">You can rush either a Kindlegem or a Warhammer, it only matters to rush...</a>"
+					<div class="discuss-sublink"><span class="localized-datetime tooltip" data-timestamp="1575249771" data-format="F j, Y" title="December 2, 2019 1:22am GMT/UTC">December 1, 2019</span> in: <a href="/league-of-legends/build/win-lane-win-game-562268" class="ajax-tooltip { t:'Build',i:'562268' }">Win lane? Win game</a></div>
+				</div>
+			</div>
+					<div class="discuss-link self-clear">
+				<div class="pic">
+					<img src="https://www.gravatar.com/avatar/4c6b13e280e2c8a349f25a00919e8ea5.jpg?d=http%3A%2F%2Fwww.mobafire.com%2Fimages%2Fnoavatar.png&amp;t=1510688590" alt="Ron The Pun's MOBAFire Avatar" class="{t:'User',i:'793323'} tooltip-ajax" />
+				</div>
+				<div class="desc">
+					<a 
+		href="/profile/ron-the-pun-793323" 
+		class="user-level		 
+		ajax-tooltip { t:'User',i:'793323' }"
+	>Ron The Pun</a> said: 
+					"<a href="/comment-link?comment_id=1167293">There's a misspell in the abilities section, when it talks about Venom...</a>"
+					<div class="discuss-sublink"><span class="localized-datetime tooltip" data-timestamp="1575249336" data-format="F j, Y" title="December 2, 2019 1:15am GMT/UTC">December 1, 2019</span> in: <a href="/league-of-legends/build/vapora-dark-in-depth-adc-twitch-guide-9-22-season-9-497018" class="ajax-tooltip { t:'Build',i:'497018' }"> Vapora Dark In-Depth ADC Twitch Guide 9.22 Season 9</a></div>
+				</div>
+			</div>
+					<div class="discuss-link self-clear">
+				<div class="pic">
+					<img src="/images/avatars/summoner-icon-snowdown-showdown-icon-of-the-poro-king.png" alt="raphelmadeira's MOBAFire Avatar" class="{t:'User',i:'845096'} tooltip-ajax" />
+				</div>
+				<div class="desc">
+					<a 
+		href="/profile/raphelmadeira-845096" 
+		class="user-level		 
+		ajax-tooltip { t:'User',i:'845096' }"
+	>raphelmadeira</a> said: 
+					"<a href="/comment-link?comment_id=1167292">@Vapora Dark should already have all the skins in the game, lol, but he...</a>"
+					<div class="discuss-sublink"><span class="localized-datetime tooltip" data-timestamp="1575246565" data-format="F j, Y" title="December 2, 2019 12:29am GMT/UTC">December 1, 2019</span> in: <a href="/league-of-legends/forum/news/november-raffle-winners-44040" class="ajax-tooltip { t:'ForumThread',i:'44040' }">November Raffle Winners!</a></div>
+				</div>
+			</div>
+					<div class="discuss-link self-clear">
+				<div class="pic">
+					<img src="https://www.gravatar.com/avatar/2cb93fa1e41f008e18bf67400ef7a22d.jpg?d=https%3A%2F%2Fwww.mobafire.com%2Fimages%2Fnoavatar.png&amp;t=1570297276" alt="Fruxo's MOBAFire Avatar" class="{t:'User',i:'844131'} tooltip-ajax" />
+				</div>
+				<div class="desc">
+					<a 
+		href="/profile/fruxo-844131" 
+		class="administrator-level		 
+		ajax-tooltip { t:'User',i:'844131' }"
+	>Fruxo</a> said: 
+					"<a href="/comment-link?comment_id=1167291">Since this is the final support item, the tribute passive goes away when...</a>"
+					<div class="discuss-sublink"><span class="localized-datetime tooltip" data-timestamp="1575246374" data-format="F j, Y" title="December 2, 2019 12:26am GMT/UTC">December 1, 2019</span> in: <a href="/league-of-legends/item/shard-of-true-ice-398" class="ajax-tooltip { t:'Item',i:'398' }">Shard of True Ice</a></div>
+				</div>
+			</div>
+			</div>
+	</div>
+		<div class="btn-more c self-clear">
+        <div class='page-holder'><span class="activity-log-next-button cursor _ajax-next-page { target:'._discussion',module:'HomepageDiscussion' }">NEXT 10</span></div>
+	</div>
+		<span class="activity-log-same-button _ajax-same-page { target:'._discussion',module:'HomepageDiscussion' }" style='display:none'></span>
+	<input type='hidden' id='activity-log-pagenum' value='1' />
+
+	<script>
+	$(document).ready(function() {
+		var page = 1;
+
+		if(store.get('activity-log-content') == 'all')
+		{
+			$('.activity-log-next-button').metadata().content_type = 'all';
+			$('.activity-log-prev-button').metadata().content_type = 'all';
+			$('.activity-log-same-button').metadata().content_type = 'all';
+			$('#activity-log-all').addClass('active');
+
+		} else if(store.get('activity-log-content') == 'guides') {
+			$('.activity-log-next-button').metadata().content_type = 'guides';
+			$('.activity-log-prev-button').metadata().content_type = 'guides';
+			$('.activity-log-same-button').metadata().content_type = 'guides';
+
+			$('#activity-log-guides').addClass('active');
+			$('.activity-log-same-button').trigger( 'click' );
+		} else if(store.get('activity-log-content') == 'forum') {
+			$('.activity-log-next-button').metadata().content_type = 'forum'
+			$('.activity-log-prev-button').metadata().content_type = 'forum';
+			$('.activity-log-same-button').metadata().content_type = 'forum';
+
+			$('#activity-log-forum').addClass('active');
+			$('.activity-log-same-button').trigger( 'click' );
+		}
+
+		$(document).on('click', '#activity-log-all', function(e) {
+			e.preventDefault();
+			$('#activity-log-all').addClass('active');
+			$('#activity-log-guides').removeClass('active');
+			$('#activity-log-forum').removeClass('active');
+
+			$('.activity-log-next-button').metadata().content_type = 'all';
+			$('.activity-log-prev-button').metadata().content_type = 'all';
+			$('.activity-log-same-button').metadata().content_type = 'all';
+			store.set('activity-log-content', 'all');
+			$('.activity-log-same-button').trigger( 'click' );
+		});
+
+		$(document).on('click', '#activity-log-guides', function(e) {
+			e.preventDefault();
+			$('#activity-log-all').removeClass('active');
+			$('#activity-log-guides').addClass('active');
+			$('#activity-log-forum').removeClass('active');
+
+			$('.activity-log-next-button').metadata().content_type = 'guides';
+			$('.activity-log-prev-button').metadata().content_type = 'guides';
+			$('.activity-log-same-button').metadata().content_type = 'guides';
+			store.set('activity-log-content', 'guides');
+			$('.activity-log-same-button').trigger( 'click' );
+		});
+
+		$(document).on('click', '#activity-log-forum', function(e) {
+			e.preventDefault();
+			$('#activity-log-all').removeClass('active');
+			$('#activity-log-guides').removeClass('active');
+			$('#activity-log-forum').addClass('active');
+
+			$('.activity-log-next-button').metadata().content_type = 'forum';
+			$('.activity-log-prev-button').metadata().content_type = 'forum';
+			$('.activity-log-same-button').metadata().content_type = 'forum';
+			store.set('activity-log-content', 'forum');
+			$('.activity-log-same-button').trigger( 'click' );
+		});
+	});
+	</script>
+
+<script type="text/javascript">
+	var ajaxPagedModuleIsBusy = false;
+
+	$(document).on('click','._ajax-previous-page',function(){
+		if( ajaxPagedModuleIsBusy ) return false;
+		ajaxPagedModuleIsBusy = true;
+
+		var oldDiv = $($(this).metadata().target);
+		var page = $(oldDiv).metadata().page;
+		var allowOverflow = $(this).metadata().overflow;
+		var that = this;
+
+		if( !page ) page = 1;
+		if( !allowOverflow && page == 1 )
+		{
+			ajaxPagedModuleIsBusy = false;
+			return false;
+		}
+
+		var url = '/ajax/module?page=' + (page-1);
+		for( key in $(this).metadata() ) url += '&' + key + '=' + $(this).metadata()[ key ];
+
+		var scroll = $(this).metadata().scroll;
+
+		$.get(url,function(data){
+			var newDiv = $(String(data));
+			if( !allowOverflow ){
+				$(newDiv).metadata().page = page-1;
+			}
+
+			if( scroll == 'none' )
+			{
+				$(oldDiv).before($(newDiv));
+				$(oldDiv).remove();
+				ajaxPagedModuleIsBusy = false;
+			}
+			else if( scroll == 'horizontal' )
+			{
+				var width = $(oldDiv).width();
+
+				//shift _viewport left to make room
+				$('._viewport', $(that).parent() ).css('left','-'+width+'px');
+				//add the new div before the old
+				$(oldDiv).before($(newDiv));
+				//animate _viewport to the right
+				$('._viewport', $(that).parent()).animate({left: '0px'},500,function(){
+					$(oldDiv).remove();
+					ajaxPagedModuleIsBusy = false;
+				});
+				/*
+				var width = $(oldDiv).width();
+				$(newDiv).css('position','relative');
+				$(newDiv).css('left','-'+width+'px');
+				$(oldDiv).before($(newDiv));
+				$(newDiv).animate({left: '0px'},500,function(){
+					$(oldDiv).remove();
+					ajaxPagedModuleIsBusy = false;
+				});
+				*/
+			}
+			else
+			{
+				var height = $(oldDiv).height();
+				$(newDiv).css( 'margin-top', '-' + height + 'px' );
+				$(oldDiv).before($(newDiv));
+				$(newDiv).animate({marginTop: 0},500,function(){
+					$(oldDiv).remove();
+					ajaxPagedModuleIsBusy = false;
+				});
+			}
+		});
+	});
+
+	$(document).on('click','._ajax-next-page',function(){
+		if( ajaxPagedModuleIsBusy ) return false;
+		ajaxPagedModuleIsBusy = true;
+
+		var oldDiv = $($(this).metadata().target);
+		var page = $(oldDiv).metadata().page;
+		var allowOverflow = $(this).metadata().overflow;
+		if( !page ) page = 1;
+		var scroll = $(this).metadata().scroll;
+		var that = this;
+
+		var url = '/ajax/module?page=' + (page+1);
+		for( key in $(this).metadata() ) url += '&' + key + '=' + $(this).metadata()[ key ];
+
+		$.get(url,function(data){
+			var newDiv = $(String(data));
+			if( !allowOverflow ){
+				$(newDiv).metadata().page = page+1;
+			}
+
+			if( scroll == 'none' )
+			{
+				$(oldDiv).after($(newDiv));
+				$(oldDiv).remove();
+				ajaxPagedModuleIsBusy = false;
+			}
+			else if( scroll == 'horizontal' )
+			{
+				var width = $(oldDiv).width();
+
+				//shift _viewport right to make room
+				$('._viewport', $(that).parent()).css('left','0px');
+				//add in new div
+				$(oldDiv).after($(newDiv));
+				//shift _viewport left
+				$('._viewport', $(that).parent()).animate({left: '-=' + width + 'px'},500,function(){
+					//delete old div
+					$(oldDiv).remove();
+					//shift _viewport back to 0
+					$('._viewport', $(that).parent()).css('left','0px');
+					ajaxPagedModuleIsBusy = false;
+				});
+			}
+			else
+			{
+				var height = $(oldDiv).height();
+				$(oldDiv).after($(newDiv));
+				$(oldDiv).animate({marginTop: '-' + height + 'px'},500,function(){
+					$(oldDiv).remove();
+					ajaxPagedModuleIsBusy = false;
+				});
+			}
+		});
+	});
+
+	$(document).on('click','._ajax-same-page',function(){
+		if( ajaxPagedModuleIsBusy ) return false;
+		ajaxPagedModuleIsBusy = true;
+
+		var oldDiv = $($(this).metadata().target);
+		var page = $(oldDiv).metadata().page;
+		var allowOverflow = $(this).metadata().overflow;
+		if( !page ) page = 1;
+		var that = this;
+
+		var url = '/ajax/module?page=' + (page);
+		for( key in $(this).metadata() ) url += '&' + key + '=' + $(this).metadata()[ key ];
+
+		$.get(url,function(data){
+			var newDiv = $(String(data));
+			if( !allowOverflow ){
+				$(newDiv).metadata().page = page;
+			}
+
+			$(oldDiv).after($(newDiv));
+			$(oldDiv).remove();
+			ajaxPagedModuleIsBusy = false;
+		});
+	});
+</script>
+
+
+        </div>
+      </div>
+      <br />
+      <div class="self-clear">
+        	<div class="box-shadow-db exhibits exhibit-vertical">
+		<div class="exhibit-narrow">
+			<div class="vm-placement" data-id="58d9260c46e0fb000179051e"></div>
+		</div>
+	</div>
+
+      </div>
+    </div>
+
+    <div class="self-clear box-shadow-db" id="home-news">
+    	
+		<article>
+		<div class="news-head">
+
+						<h2><a href="/league-of-legends/forum/news/december-monthly-giveaway-snowdown-showdown-44041">December Monthly Giveaway - Snowdown Showdown!</a></h2>
+						<div class="hdr-sub">
+				<div class="float-right">
+					<span class="localized-datetime tooltip" data-timestamp="1575214276" data-format="F d, Y" title="December 1, 2019 3:31pm GMT/UTC">December 01, 2019</span>
+				</div>
+				By <a 
+		href="/profile/hades4u-532138" 
+		class="administrator-level		 
+		ajax-tooltip { t:'User',i:'532138' }"
+	>Hades4u</a>
+			</div>
+		</div>
+		<div class="self-clear news-inner ">
+			<div class="self-clear">
+<div class="bbcode_center" style="text-align:center">
+<a href="/league-of-legends/forum/news/december-monthly-giveaway-snowdown-showdown-44041#comment-1167264" target="_blank" rel="noopener nofollow" class="bbcode_url"><img class="bbcode_img"
+										src="/images/news/december-prizes-2019.jpg"
+							style="
+			"
+/></a>
+</div>
+<br />
+Hey everyone, it's a new month which means it's time once again for another <a href="/league-of-legends/rewards-leaderboard" target="_blank" rel="noopener nofollow" class="bbcode_url">monthly giveaway</a>! If you're unfamiliar with the way our reward points and how our giveaways work check out the <a href="/league-of-legends/forum/news/monthly-guide-rewards-and-point-system-40863" target="_blank" rel="noopener nofollow" class="bbcode_url">announcement post</a>.<br />
+<br />
+<table
+		style="background-color:#0a1220;border:4px solid #152034;">
+	<tr
+		style=""
+>
+	<td
+		style="padding:5px 15px 15px 15px;"
+>
+	<a name="monthly-giveaway"></a><div></div><img class="bbcode_img"
+										src="/images/news/rewards-monthly-giveaway.png"
+							style="
+			"
+/><br />
+<br />
+Get decked out for the holiday season! For this month's giveaway, we'll be handing out the wintry Snowdown skins! Be sure to check out the <a href="https://leagueoflegends.fandom.com/wiki/Snowdown_Showdown" target="_blank" rel="noopener nofollow" class="bbcode_url">complete list of Snowdown skins</a>. This </td></tr></table>&hellip;
+			</div>
+			<span class="disappear"></span>
+			<a class="read-more" href="/league-of-legends/forum/news/december-monthly-giveaway-snowdown-showdown-44041"> read more</a>
+		</div>
+	</article>
+		<article>
+		<div class="news-head">
+
+						<h2><a href="/league-of-legends/forum/news/november-raffle-winners-44040">November Raffle Winners!</a></h2>
+						<div class="hdr-sub">
+				<div class="float-right">
+					<span class="localized-datetime tooltip" data-timestamp="1575211946" data-format="F d, Y" title="December 1, 2019 2:52pm GMT/UTC">December 01, 2019</span>
+				</div>
+				By <a 
+		href="/profile/hades4u-532138" 
+		class="administrator-level		 
+		ajax-tooltip { t:'User',i:'532138' }"
+	>Hades4u</a>
+			</div>
+		</div>
+		<div class="self-clear news-inner ">
+			<div class="self-clear">
+<div class="bbcode_center" style="text-align:center">
+<a href="/league-of-legends/forum/news/november-raffle-winners-44040" target="_blank" rel="noopener nofollow" class="bbcode_url"><img class="bbcode_img"
+										src="/images/news/monthly-raffle/november-2019-winners.jpg"
+							style="
+			"
+/></a>
+</div>
+<br />
+Hey everyone, we're happy to announce the November winners from our <a href="/league-of-legends/rewards-leaderboard" target="_blank" rel="noopener nofollow" class="bbcode_url">MOBAFire Monthly Raffle</a>!<br />
+<table
+		style="width:100%;">
+	<tr
+		style=""
+>
+	<td
+		style="width:20%;"
+>
+	
+<ul class="bbcode_list">
+<li><span class="mention-area" style="color:#879cb8">@ <span class="user-level"><a href="/profile/x3pher-911527" data-item-id="911527" class="user-level" style="text-decoration: underline;">x3pher</a></span></span></li>
+<li><span class="mention-area" style="color:#879cb8">@ <span class="user-level"><a href="/profile/atonementblade-854418" data-item-id="854418" class="user-level" style="text-decoration: underline;">atonementblade</a></span></span></li>
+<li><span class="mention-area" style="color:#879cb8">@ <span class="user-level"><a href="/profile/juggeroo-769853" data-item-id="769853" class="user-level" style="text-decoration: underline;">Juggeroo</a></span></span></li>
+<li><span class="mention-area" style="color:#879cb8">@ <span class="user-level"><a href="/profile/kamikz-819370" data-item-id="819370" class="user-level" style="text-decoration: underline;">KamiKZ</a></span></span></li>
+<li><span class="mention-area" style="color:#879cb8">@ <span class="user-level"><a href="/profile/miss-erizzle-861317" data-item-id="861317" class="user-level" style="text-decoration: underline;">Miss Erizzle</a></span></span></li>
+</ul>
+</td><td
+		style="width:20%;"
+>
+	
+<ul class="bbcode_list">
+<li><span class="mention-area" style="color:#879cb8">@ <span class="user-level"><a href="/profile/frostbitemw-834433" data-item-id="834433" class="user-level" style="text-decoration: underline;">FrostbiteMW</a></span></span></li>
+<li><span class="mention-area" style="color:#879cb8">@ <span class="user-level"><a href="/profile/nuadha-894554" data-item-id="894554" class="user-level" style="text-decoration: underline;">Nuadha</a></span></span></li>
+<li><span class="mention-area" style="color:#879cb8">@ <span class="user-level"><a href="/profile/ellesmere-652405" data-item-id="652405" class="user-level" style="text-decoration: underline;">Ellesmere</a></span></span></li>
+<li><span class="mention-area" style="color:#879cb8">@ <span class="user-level"><a href="/profile/theblueimperial-826224" data-item-id="826224" class="user-level" style="text-decoration: underline;">TheBlueImperial</a></span></span></li>
+<li><span class="mention-area" style="color:#879cb8">@ <span class="user-level"><a href="/profile/otto222-864233" data-item-id="864233" class="user-level" style="text-decoration: underline;">otto222</a></span></span></li>
+</ul>
+</td><td
+		style="width:20%;"
+>
+	
+<ul class="bbcode_list">
+<li><span class="mention-area" style="color:#879cb8">@ <span class="veteran-level"><a href="/profile/yeager-864998" data-item-id="864998" class="veteran-level" style="text-decoration: underline;">Yeager</a></span></span></li>
+<li><span class="mention-area" style="color:#879cb8">@ <span class="user-level"><a href="/profile/j-2-the-roc-527079" data-item-id="527079" class="user-level" style="text-decoration: underline;">J 2 the ROC</a></span></span></li>
+<li><span class="mention-area" style="color:#879cb8">@ <span class="user-level"><a href="/profile/lastlee-854614" data-item-id="854614" class="user-level" style="text-decoration: underline;">LastLee</a></span></span></li>
+<li><span class="mention-area" style="color:#879cb8">@ <span class="user-level"><a href="/profile/gnarzing-832195" data-item-id="832195" class="user-level" style="text-decoration: underline;">GnarZing</a></span></span></li>
+<li><span class="mention-area" style="color:#879cb8">@ <span class="user-level"><a href="/profile/veigarv2-865878" data-item-id="865878" class="user-level" style="text-decoration: underline;">Veigarv2</a></span></span></li>
+</ul>
+</td><td
+		style="width:20%;"
+>
+	
+<ul class="bbcode_list">
+<li><span class="mention-area" style="color:#879cb8">@ <span class="user-level"><a href="/profile/kalrex-905372" data-item-id="905372" class="user-level" style="text-decoration: underline;">Kalrex</a></span></span></li>
+<li><span class="mention-area" style="color:#879cb8">@ <span class="user-level"><a href="/profile/hanjaro-540658" data-item-id="540658" class="user-level" style="text-decoration: underline;">Hanjaro</a></span></span></li>
+<li><span class="mention-area" style="color:#879cb8">@ <span class="user-level"><a href="/profile/johnysalvador16-765930" data-item-id="765930" class="user-level" style="text-decoration: underline;">JohnySalvador16</a></span></span></li>
+<li><span class="mention-area" style="color:#879cb8">@ <span class="user-level"><a href="/profile/terroronyou-307254" data-item-id="307254" class="user-level" style="text-decoration: underline;">Terroronyou</a></span></span></li>
+<li><span class="mention-area" style="color:#879cb8">@ <span class="user-level"><a href="/profile/swelteringmuffin-618788" data-item-id="618788" class="user-level" style="text-decoration: underline;">SwelteringMuffin</a></span></span></li>
+</ul>
+</td><td
+		style="width:20%;"
+>
+	
+<ul class="bbcode_list">
+<li><span class="mention-area" style="color:#879cb8">@ <span class="veteran-level"><a href="/profile/vapora-dark-137406" data-item-id="137406" class="veteran-level" style="text-decoration: underline;">Vapora Dark</a></span></span></li>
+<li><span class="mention-area" style="color:#879cb8">@ <span class="user-level"><a href="/profile/rto-746855" data-item-id="746855" class="user-level" style="text-decoration: underline;">RT</a></span></span></li></ul></td></tr></table>&hellip;
+			</div>
+			<span class="disappear"></span>
+			<a class="read-more" href="/league-of-legends/forum/news/november-raffle-winners-44040"> read more</a>
+		</div>
+	</article>
+		<article>
+		<div class="news-head">
+
+						<h2><a href="/league-of-legends/forum/news/guides-of-the-week-s9-week-48-44038">Guides of the Week! (S9 Week 48)</a></h2>
+						<div class="hdr-sub">
+				<div class="float-right">
+					<span class="localized-datetime tooltip" data-timestamp="1575086641" data-format="F d, Y" title="November 30, 2019 4:04am GMT/UTC">November 29, 2019</span>
+				</div>
+				By <a 
+		href="/profile/psiguard-85214" 
+		class="administrator-level		 
+		ajax-tooltip { t:'User',i:'85214' }"
+	>PsiGuard</a>
+			</div>
+		</div>
+		<div class="self-clear news-inner ">
+			<div class="self-clear">
+<div class="bbcode_center" style="text-align:center">
+<img class="bbcode_img"
+										src="/images/news/guides-s9-week-48.jpg"
+							style="
+			"
+/>
+</div>
+<br />
+<br />
+<table
+		style="">
+	<tr
+		style=""
+>
+	<td
+		style="width:130px;"
+>
+	
+<div class="bbcode_center" style="text-align:center">
+<img class="bbcode_img"
+										src="/images/champion/skins/portrait/kalista-skt.jpg"
+							style="
+									width:100px;
+														"
+/>
+</div>
+</td><td
+		style="vertical-align:top;"
+>
+	<span style="font-size:2.0em"><b><a href="/league-of-legends/build/patch-9-23-the-wounds-of-betrayal-never-heal-554067" target="_blank" rel="noopener nofollow" class="bbcode_url">The wounds of betrayal never heal!</a></b></span> by <span class="mention-area" style="color:#879cb8">@ <span class="user-level"><a href="/profile/setting-fires-885510" data-item-id="885510" class="user-level" style="text-decoration: underline;">Setting Fires</a></span></span><hr class='bbcode_rule2' />Looking to add a bit of variety to your ADC pool? Try out Setting Fires' <span class="ajax-tooltip {t:'Champion',i:'122'}" title="Kalista"><a href="/league-of-legends/champion/kalista-122" ><img
+	width="16" height="16" style="vertical-align:middle; position: relative; top: -2px;"
+			src="/images/champion/icon-small/kalista.png"
+	/> Kalista</a></span> guide to master this mechanically demanding Marksman. Utilize the early game power of <span class="ajax-tooltip {t:'ReforgedRune',i:'71'}" title="Hail of Blades"><a href="/league-of-legends/reforged-rune/hail-of-blades-71" ><img
+	width="16" height="16"
+			src="/images/reforged-rune/hail-of-blades.png"
+	/> Hail of Blades</a></span> or the scaling DPS from <span class="ajax-tooltip {t:'ReforgedRune',i:'2'}" title="Lethal Tempo"><a href="/league-of-legends/reforged-rune/lethal-tempo-2" ><img
+	width="16" height="16"
+			src="/images/reforged-rune/lethal-tempo.png"
+	/> Lethal Tempo</a></span> combined with Settings Fires' custom keybindings to outmaneuver and chase down your targets. Other mech</td></tr></table>&hellip;
+			</div>
+			<span class="disappear"></span>
+			<a class="read-more" href="/league-of-legends/forum/news/guides-of-the-week-s9-week-48-44038"> read more</a>
+		</div>
+	</article>
+		<article>
+		<div class="news-head">
+
+						<h2><img src="/images/riot-s.png" alt="Official Riot News" /><a href="/league-of-legends/forum/news/aphelios-kit-primer-44031">Aphelios Kit Primer</a></h2>
+						<div class="hdr-sub">
+				<div class="float-right">
+					<span class="localized-datetime tooltip" data-timestamp="1574725502" data-format="F d, Y" title="November 25, 2019 11:45pm GMT/UTC">November 25, 2019</span>
+				</div>
+				By <a 
+		href="/profile/psiguard-85214" 
+		class="administrator-level		 
+		ajax-tooltip { t:'User',i:'85214' }"
+	>PsiGuard</a>
+			</div>
+		</div>
+		<div class="self-clear news-inner news-riot">
+			<div class="self-clear">
+<div class="bbcode_center" style="text-align:center">
+<img class="bbcode_img"
+										src="https://na.leagueoflegends.com/sites/default/files/styles/wide_medium/public/upload/aphelios-ability-article.jpg?itok=zg4mnE_K"
+							style="
+			"
+/>
+</div>
+<br />
+
+<div class="bbcode_right" style="text-align:right">
+<span style="font-size:1.0em"><a href="https://na.leagueoflegends.com/en/news/champions-skins/champion-preview/aphelios-kit-primer" target="_blank" rel="noopener nofollow" class="bbcode_url">Source by RiotAether</a></span>
+</div>
+<br />
+Most champions can be summarized relatively quickly, but Aphelios isn't most champions. Learning to wield the Weapon of the Faithful demands discipline, focus, and mental acuity, so consider this primer your first test of faith along the path to mastering a champion with one of the highest skill ceilings in the game. (But really, this page has a ton of info to process&hellip;
+			</div>
+			<span class="disappear"></span>
+			<a class="read-more" href="/league-of-legends/forum/news/aphelios-kit-primer-44031"> read more</a>
+		</div>
+	</article>
+		<article>
+		<div class="news-head">
+
+						<h2><a href="/league-of-legends/forum/news/mobafire-weekly-challenge-8-bloodthirsty-44027">MOBAFire Weekly Challenge #8 - Bloodthirsty!</a></h2>
+						<div class="hdr-sub">
+				<div class="float-right">
+					<span class="localized-datetime tooltip" data-timestamp="1574698730" data-format="F d, Y" title="November 25, 2019 4:18pm GMT/UTC">November 25, 2019</span>
+				</div>
+				By <a 
+		href="/profile/hades4u-532138" 
+		class="administrator-level		 
+		ajax-tooltip { t:'User',i:'532138' }"
+	>Hades4u</a>
+			</div>
+		</div>
+		<div class="self-clear news-inner ">
+			<div class="self-clear">
+<div class="bbcode_center" style="text-align:center">
+<a href="/league-of-legends/forum/news/mobafire-weekly-challenge-8-blood-thirsty-44027" target="_blank" rel="noopener nofollow" class="bbcode_url"><img class="bbcode_img"
+										src="/images/news/weekly-challenge-8-banner.jpg"
+							style="
+			"
+/></a>
+</div>
+<br />
+Hey everyone! We're excited to announce our latest MOBAFire Weekly Challenge, a new type of community event that will spice up your League matches! We all know that nothing's better than a good match of League, but now it will be even more exciting with our weekly challenges that anyone can take a shot at. Check out this week's challenge and good luck in trying it out! :D<br />
+<br />
+More information on&hellip;
+			</div>
+			<span class="disappear"></span>
+			<a class="read-more" href="/league-of-legends/forum/news/mobafire-weekly-challenge-8-bloodthirsty-44027"> read more</a>
+		</div>
+	</article>
+	
+
+    </div> 
+
+ 
+
+			</div> <!-- END CONTENT ROW -->	
+		</div> <!-- END #CONTENT -->
+	</div> <!-- END #WRAPPER -->
+	  <div id="footer" class="footer-new"> 
+        <div class="wrap-row-d self-clear">
+            <div id="footer-cal" class="footer-cal">
+	<div class="carousel-wrap">
+																		<div class="footer-cal__square" data-url="https://www.mobafire.com/league-of-legends/build/how-to-play-teamfight-tactics-tft-553575">
+			<img class="footer-cal__square__background" src="https://www.mobafire.com/images/footer-cal/how-to-play-team-fight-tactics.jpg">
+			<label class="footer-cal__square__headline">How to Play Teamfight Tactics</label>
+			<span class="footer-cal__square__button">
+				<a href="https://www.mobafire.com/league-of-legends/build/how-to-play-teamfight-tactics-tft-553575" class="cal-button" target="_blank" >Learn TFT</a>
+			</span>
+			<div class="footer-cal__square__bottom"></div>
+		</div>
+														<div class="footer-cal__square" data-url="https://www.leaguespy.net/league-of-legends/champions">
+			<img class="footer-cal__square__background" src="/images/footer-cal/lol-build-stats.jpg">
+			<label class="footer-cal__square__headline">Champ Stats on LeagueSpy</label>
+			<span class="footer-cal__square__button">
+				<a href="https://www.leaguespy.net/league-of-legends/champions" class="cal-button" target="_blank" rel="noopener nofollow">Power Up</a>
+			</span>
+			<div class="footer-cal__square__bottom"></div>
+		</div>
+																													<div class="footer-cal__square">
+										<div class="vm-placement" data-id="5c8a829d46e0fb0001ac28a9"></div>
+									</div>
+										<div class="footer-cal__square" data-url="https://www.mobafire.com/league-of-legends/forum/news/patch-9-22-summary-43992">
+			<img class="footer-cal__square__background" src="https://www.mobafire.com/images/footer-cal/lol-patch-9-22-summary.jpg">
+			<label class="footer-cal__square__headline">Patch 9.22 Summary</label>
+			<span class="footer-cal__square__button">
+				<a href="https://www.mobafire.com/league-of-legends/forum/news/patch-9-22-summary-43992" class="cal-button" target="_blank" >Read Now</a>
+			</span>
+			<div class="footer-cal__square__bottom"></div>
+		</div>
+																													<div class="footer-cal__square">
+										<div class="vm-placement" data-id="5c8a829d46e0fb0001ac28a9"></div>
+									</div>
+										<div class="footer-cal__square" data-url="https://www.counterstats.net/">
+			<img class="footer-cal__square__background" src="/images/footer-cal/lol-counters.jpg">
+			<label class="footer-cal__square__headline">CounterStats</label>
+			<span class="footer-cal__square__button">
+				<a href="https://www.counterstats.net/" class="cal-button" target="_blank" rel="noopener nofollow">Play Smart</a>
+			</span>
+			<div class="footer-cal__square__bottom"></div>
+		</div>
+														<div class="footer-cal__square" data-url="https://www.mobafire.com/league-of-legends/tier-lists?t=top">
+			<img class="footer-cal__square__background" src="/images/footer-cal/lol-tier-lists.jpg">
+			<label class="footer-cal__square__headline">Champion Tier Lists</label>
+			<span class="footer-cal__square__button">
+				<a href="https://www.mobafire.com/league-of-legends/tier-lists?t=top" class="cal-button" target="_blank" >View Tier Lists</a>
+			</span>
+			<div class="footer-cal__square__bottom"></div>
+		</div>
+																													<div class="footer-cal__square">
+										<div class="vm-placement" data-id="5c8a829d46e0fb0001ac28a9"></div>
+									</div>
+										<div class="footer-cal__square" data-url="/league-of-legends/build/fundamentals-for-the-new-player-league-beginner-guide-371292">
+			<img class="footer-cal__square__background" src="/images/footer-cal/lol-beginners-guide.jpg">
+			<label class="footer-cal__square__headline">Beginner&#039;s Guide to LoL</label>
+			<span class="footer-cal__square__button">
+				<a href="/league-of-legends/build/fundamentals-for-the-new-player-league-beginner-guide-371292" class="cal-button" target="_blank" rel="noopener nofollow">Learn the Basics</a>
+			</span>
+			<div class="footer-cal__square__bottom"></div>
+		</div>
+																													<div class="footer-cal__square">
+										<div class="vm-placement" data-id="5c8a829d46e0fb0001ac28a9"></div>
+									</div>
+										<div class="footer-cal__square" data-url="https://www.leaguespy.net/">
+			<img class="footer-cal__square__background" src="/images/footer-cal/lol-player-stats.jpg">
+			<label class="footer-cal__square__headline">Player Stats on LeagueSpy</label>
+			<span class="footer-cal__square__button">
+				<a href="https://www.leaguespy.net/" class="cal-button" target="_blank" rel="noopener nofollow">Up Your Game</a>
+			</span>
+			<div class="footer-cal__square__bottom"></div>
+		</div>
+														<div class="footer-cal__square" data-url="https://www.mobafire.com/league-of-legends/champions">
+			<img class="footer-cal__square__background" src="/images/footer-cal/lol-champs.jpg">
+			<label class="footer-cal__square__headline">Find Info on Every Champion</label>
+			<span class="footer-cal__square__button">
+				<a href="https://www.mobafire.com/league-of-legends/champions" class="cal-button" target="_blank" >View Champs</a>
+			</span>
+			<div class="footer-cal__square__bottom"></div>
+		</div>
+			</div>
+	<i class="fal fa-arrow-circle-left" style="display:block;"></i>
+	<i class="fal fa-arrow-circle-right"></i>
+</div>
+
+            <div style="padding:10px;"></div>
+        <div class="mb20 c">
+            	<div class="vm-placement" data-id="58d9264d46e0fb0001790524"></div>
+
+        </div>  
+        <div class="self-clear">
+            <h3>League of Legends Champions:</h3>
+<div class="footer-links">
+		<a href="/league-of-legends/aatrox-guide">Aatrox</a>
+		<a href="/league-of-legends/ahri-guide">Ahri</a>
+		<a href="/league-of-legends/akali-guide">Akali</a>
+		<a href="/league-of-legends/alistar-guide">Alistar</a>
+		<a href="/league-of-legends/amumu-guide">Amumu</a>
+		<a href="/league-of-legends/anivia-guide">Anivia</a>
+		<a href="/league-of-legends/annie-guide">Annie</a>
+		<a href="/league-of-legends/aphelios-guide">Aphelios</a>
+		<a href="/league-of-legends/ashe-guide">Ashe</a>
+		<a href="/league-of-legends/aurelion-sol-guide">Aurelion Sol</a>
+		<a href="/league-of-legends/azir-guide">Azir</a>
+		<a href="/league-of-legends/bard-guide">Bard</a>
+		<a href="/league-of-legends/blitzcrank-guide">Blitzcrank</a>
+		<a href="/league-of-legends/brand-guide">Brand</a>
+		<a href="/league-of-legends/braum-guide">Braum</a>
+		<a href="/league-of-legends/caitlyn-guide">Caitlyn</a>
+		<a href="/league-of-legends/camille-guide">Camille</a>
+		<a href="/league-of-legends/cassiopeia-guide">Cassiopeia</a>
+		<a href="/league-of-legends/chogath-guide">Cho&#039;Gath</a>
+		<a href="/league-of-legends/corki-guide">Corki</a>
+		<a href="/league-of-legends/darius-guide">Darius</a>
+		<a href="/league-of-legends/diana-guide">Diana</a>
+		<a href="/league-of-legends/dr-mundo-guide">Dr. Mundo</a>
+		<a href="/league-of-legends/draven-guide">Draven</a>
+		<a href="/league-of-legends/ekko-guide">Ekko</a>
+		<a href="/league-of-legends/elise-guide">Elise</a>
+		<a href="/league-of-legends/evelynn-guide">Evelynn</a>
+		<a href="/league-of-legends/ezreal-guide">Ezreal</a>
+		<a href="/league-of-legends/fiddlesticks-guide">Fiddlesticks</a>
+		<a href="/league-of-legends/fiora-guide">Fiora</a>
+		<a href="/league-of-legends/fizz-guide">Fizz</a>
+		<a href="/league-of-legends/galio-guide">Galio</a>
+		<a href="/league-of-legends/gangplank-guide">Gangplank</a>
+		<a href="/league-of-legends/garen-guide">Garen</a>
+		<a href="/league-of-legends/gnar-guide">Gnar</a>
+		<a href="/league-of-legends/gragas-guide">Gragas</a>
+		<a href="/league-of-legends/graves-guide">Graves</a>
+		<a href="/league-of-legends/hecarim-guide">Hecarim</a>
+		<a href="/league-of-legends/heimerdinger-guide">Heimerdinger</a>
+		<a href="/league-of-legends/illaoi-guide">Illaoi</a>
+		<a href="/league-of-legends/irelia-guide">Irelia</a>
+		<a href="/league-of-legends/ivern-guide">Ivern</a>
+		<a href="/league-of-legends/janna-guide">Janna</a>
+		<a href="/league-of-legends/jarvan-iv-guide">Jarvan IV</a>
+		<a href="/league-of-legends/jax-guide">Jax</a>
+		<a href="/league-of-legends/jayce-guide">Jayce</a>
+		<a href="/league-of-legends/jhin-guide">Jhin</a>
+		<a href="/league-of-legends/jinx-guide">Jinx</a>
+		<a href="/league-of-legends/kaisa-guide">Kai&#039;Sa</a>
+		<a href="/league-of-legends/kalista-guide">Kalista</a>
+		<a href="/league-of-legends/karma-guide">Karma</a>
+		<a href="/league-of-legends/karthus-guide">Karthus</a>
+		<a href="/league-of-legends/kassadin-guide">Kassadin</a>
+		<a href="/league-of-legends/katarina-guide">Katarina</a>
+		<a href="/league-of-legends/kayle-guide">Kayle</a>
+		<a href="/league-of-legends/kayn-guide">Kayn</a>
+		<a href="/league-of-legends/kennen-guide">Kennen</a>
+		<a href="/league-of-legends/khazix-guide">Kha&#039;Zix</a>
+		<a href="/league-of-legends/kindred-guide">Kindred</a>
+		<a href="/league-of-legends/kled-guide">Kled</a>
+		<a href="/league-of-legends/kogmaw-guide">Kog&#039;Maw</a>
+		<a href="/league-of-legends/leblanc-guide">LeBlanc</a>
+		<a href="/league-of-legends/lee-sin-guide">Lee Sin</a>
+		<a href="/league-of-legends/leona-guide">Leona</a>
+		<a href="/league-of-legends/lissandra-guide">Lissandra</a>
+		<a href="/league-of-legends/lucian-guide">Lucian</a>
+		<a href="/league-of-legends/lulu-guide">Lulu</a>
+		<a href="/league-of-legends/lux-guide">Lux</a>
+		<a href="/league-of-legends/malphite-guide">Malphite</a>
+		<a href="/league-of-legends/malzahar-guide">Malzahar</a>
+		<a href="/league-of-legends/maokai-guide">Maokai</a>
+		<a href="/league-of-legends/master-yi-guide">Master Yi</a>
+		<a href="/league-of-legends/miss-fortune-guide">Miss Fortune</a>
+		<a href="/league-of-legends/mordekaiser-guide">Mordekaiser</a>
+		<a href="/league-of-legends/morgana-guide">Morgana</a>
+		<a href="/league-of-legends/nami-guide">Nami</a>
+		<a href="/league-of-legends/nasus-guide">Nasus</a>
+		<a href="/league-of-legends/nautilus-guide">Nautilus</a>
+		<a href="/league-of-legends/neeko-guide">Neeko</a>
+		<a href="/league-of-legends/nidalee-guide">Nidalee</a>
+		<a href="/league-of-legends/nocturne-guide">Nocturne</a>
+		<a href="/league-of-legends/nunu-amp-willump-guide">Nunu &amp; Willump</a>
+		<a href="/league-of-legends/olaf-guide">Olaf</a>
+		<a href="/league-of-legends/orianna-guide">Orianna</a>
+		<a href="/league-of-legends/ornn-guide">Ornn</a>
+		<a href="/league-of-legends/pantheon-guide">Pantheon</a>
+		<a href="/league-of-legends/poppy-guide">Poppy</a>
+		<a href="/league-of-legends/pyke-guide">Pyke</a>
+		<a href="/league-of-legends/qiyana-guide">Qiyana</a>
+		<a href="/league-of-legends/quinn-guide">Quinn</a>
+		<a href="/league-of-legends/rakan-guide">Rakan</a>
+		<a href="/league-of-legends/rammus-guide">Rammus</a>
+		<a href="/league-of-legends/reksai-guide">Rek&#039;Sai</a>
+		<a href="/league-of-legends/renekton-guide">Renekton</a>
+		<a href="/league-of-legends/rengar-guide">Rengar</a>
+		<a href="/league-of-legends/riven-guide">Riven</a>
+		<a href="/league-of-legends/rumble-guide">Rumble</a>
+		<a href="/league-of-legends/ryze-guide">Ryze</a>
+		<a href="/league-of-legends/sejuani-guide">Sejuani</a>
+		<a href="/league-of-legends/senna-guide">Senna</a>
+		<a href="/league-of-legends/shaco-guide">Shaco</a>
+		<a href="/league-of-legends/shen-guide">Shen</a>
+		<a href="/league-of-legends/shyvana-guide">Shyvana</a>
+		<a href="/league-of-legends/singed-guide">Singed</a>
+		<a href="/league-of-legends/sion-guide">Sion</a>
+		<a href="/league-of-legends/sivir-guide">Sivir</a>
+		<a href="/league-of-legends/skarner-guide">Skarner</a>
+		<a href="/league-of-legends/sona-guide">Sona</a>
+		<a href="/league-of-legends/soraka-guide">Soraka</a>
+		<a href="/league-of-legends/swain-guide">Swain</a>
+		<a href="/league-of-legends/sylas-guide">Sylas</a>
+		<a href="/league-of-legends/syndra-guide">Syndra</a>
+		<a href="/league-of-legends/tahm-kench-guide">Tahm Kench</a>
+		<a href="/league-of-legends/taliyah-guide">Taliyah</a>
+		<a href="/league-of-legends/talon-guide">Talon</a>
+		<a href="/league-of-legends/taric-guide">Taric</a>
+		<a href="/league-of-legends/teemo-guide">Teemo</a>
+		<a href="/league-of-legends/thresh-guide">Thresh</a>
+		<a href="/league-of-legends/tristana-guide">Tristana</a>
+		<a href="/league-of-legends/trundle-guide">Trundle</a>
+		<a href="/league-of-legends/tryndamere-guide">Tryndamere</a>
+		<a href="/league-of-legends/twisted-fate-guide">Twisted Fate</a>
+		<a href="/league-of-legends/twitch-guide">Twitch</a>
+		<a href="/league-of-legends/udyr-guide">Udyr</a>
+		<a href="/league-of-legends/urgot-guide">Urgot</a>
+		<a href="/league-of-legends/varus-guide">Varus</a>
+		<a href="/league-of-legends/vayne-guide">Vayne</a>
+		<a href="/league-of-legends/veigar-guide">Veigar</a>
+		<a href="/league-of-legends/velkoz-guide">Vel&#039;Koz</a>
+		<a href="/league-of-legends/vi-guide">Vi</a>
+		<a href="/league-of-legends/viktor-guide">Viktor</a>
+		<a href="/league-of-legends/vladimir-guide">Vladimir</a>
+		<a href="/league-of-legends/volibear-guide">Volibear</a>
+		<a href="/league-of-legends/warwick-guide">Warwick</a>
+		<a href="/league-of-legends/wukong-guide">Wukong</a>
+		<a href="/league-of-legends/xayah-guide">Xayah</a>
+		<a href="/league-of-legends/xerath-guide">Xerath</a>
+		<a href="/league-of-legends/xin-zhao-guide">Xin Zhao</a>
+		<a href="/league-of-legends/yasuo-guide">Yasuo</a>
+		<a href="/league-of-legends/yorick-guide">Yorick</a>
+		<a href="/league-of-legends/yuumi-guide">Yuumi</a>
+		<a href="/league-of-legends/zac-guide">Zac</a>
+		<a href="/league-of-legends/zed-guide">Zed</a>
+		<a href="/league-of-legends/ziggs-guide">Ziggs</a>
+		<a href="/league-of-legends/zilean-guide">Zilean</a>
+		<a href="/league-of-legends/zoe-guide">Zoe</a>
+		<a href="/league-of-legends/zyra-guide">Zyra</a>
+	</div>
+<br/>
+<a href="/teamfight-tactics/guides" class='tft'>Teamfight Tactics Guides</a>
+        </div>
+    </div>
+        <div id="foot">
+        <div class="network">
+            <div class="site-logo">
+                <?xml version="1.0" encoding="utf-8"?><!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 75 75" style="enable-background:new 0 0 75 75;" xml:space="preserve">
+<path class="st0" d="M71.07,36.61c-0.98-6.69-3.84-14.28-8.48-19.17c-4.29-4.54-9.72-7.91-15.78-9.48c-5-1.26-10.4-1.39-15.48-0.33
+	c0.48-3.71,2.81-4.89,5.53-7.24c-3.21,1.29-6.33,2.8-8.99,5.02c-1.82,1.49-3.07,2.19-3.9,4.41c-0.2,0.43-0.23,1.01-0.71,1.21
+	c-6.66,3.48-12.45,10.33-15.45,17.22c-2.17,4.95-3.05,10.4-2.65,15.77c0.4,5.78,2.4,11.43,5.68,16.23
+	c3.74,5.48,9.14,9.79,15.29,12.22c5.7,2.25,12.04,2.88,18.07,1.79c4.95-0.86,9.67-2.88,13.73-5.83C64,64.07,68.49,57.66,70.46,50.46
+	C71.72,46.02,71.75,41.22,71.07,36.61z M36.36,24.59c-1.06-3.18-2.83-5.83-4.09-8.83c-0.56-1.34-0.86-1.67-0.96-3.13
+	c6.92-2.12,14.66-0.96,20.7,3.05c3.96,2.62,7.17,5.4,9.04,9.79c1.97,4.54,2.5,9.67,1.54,14.51c-1.41,7.34-6.33,13.83-13,17.19
+	c-3.03,1.59-6.31,2.35-9.69,2.7c4.14-1.16,8-4.11,9.82-8.05c0.96-2.07,1.29-4.64,0.45-6.79c-0.68-1.79-1.92-3-3.31-4.27
+	c1.51,2.25,1.94,5.25,0.73,7.72c-0.71,1.29-1.92,2.32-3.21,3c-1.34,0.66-2.93,0.88-4.27,0.1c-0.86-0.5-1.82-1.34-2.02-2.35
+	c-0.23-1.11,0.4-2.17,1.03-3.03c1.56-2.09,3.99-3.99,5.35-6.31c1.11-1.72,1.03-4.11,0.45-6.01c-0.66-2.02-2.22-3.36-4.09-4.24
+	c0.56,0.5,1.09,0.98,1.51,1.62c0.96,1.46,1.09,3.46,0.25,5c-0.63,1.24-1.72,2.3-2.8,3.15c-1.62,1.29-3.51,1.97-5.3,3.13
+	c-1.62,0.98-3.03,2.25-4.24,3.71c-1.44,1.62-2.5,3.79-2.27,6.01c0.15,1.62,0.98,3,2.15,4.09c-2.12-1.09-3.76-2.88-4.47-5.15
+	c-0.56-1.74-0.53-3.66,0.28-5.33c1.64-3.63,4.54-6.97,7.12-9.97c1.51-1.72,3.05-3.71,3.61-5.96C37.1,28.13,36.89,26.33,36.36,24.59z
+	 M25.94,23.33c0.68,1.44,1.44,3.23,1.26,4.85c-0.23,1.59-1.36,2.7-2.47,3.74c0.68-1.09,1.21-2.2,1.36-3.48
+	c0.28-1.99-0.38-4.01-1.69-5.55c-1.36-1.64-3.21-2.62-5.25-3.18c1.16-1.39,2.42-2.6,3.79-3.76C23.31,18.69,24.8,20.83,25.94,23.33z
+	 M21.27,30.55c-1.24,2.6-3,4.74-4.54,7.17c-0.88,1.41-1.56,2.93-2.07,4.52c-0.88-3.1-1.21-6.36-0.86-9.59
+	c0.45-4.59,2.27-9.09,5.17-12.7c1.49,0.88,2.6,2.35,3,4.04C22.56,26.18,22.23,28.53,21.27,30.55z M65.49,51.95
+	c-3.23,6.79-9.09,12.22-16.08,14.97c-7.87,3.13-17.01,2.73-24.58-1.11c-5.58-2.8-10.25-7.37-13.12-12.9
+	C9.38,48.52,8.2,43.55,8.3,38.57c0.05-6.16,2.09-12.49,5.73-17.47c2.4-3.31,5.45-6.03,8.93-8.18c-0.05,0.48-0.1,1.21-0.13,1.67
+	c-4.62,3.05-8.33,7.42-10.5,12.52c-2.2,5.07-2.83,10.75-1.84,16.18c0.86,4.77,2.95,9.29,6.06,13.02c3.05,3.68,7.07,6.59,11.51,8.33
+	c5.05,1.97,10.63,2.45,15.93,1.39c4.06-0.81,7.9-2.52,11.23-5c4.27-3.15,7.65-7.52,9.57-12.49c1.97-5.02,2.2-10.63,1.11-15.9
+	c-0.98-4.97-3.15-9.67-6.59-13.4c-3.53-3.86-8.13-6.74-13.17-8.15c-4.82-1.36-9.99-1.44-14.84-0.18c0-0.35-0.06-1.23-0.06-1.58
+	c6.99-1.69,15.02-0.67,21.4,2.69c5.88,3.05,10.31,7.46,13.06,13.49C69.4,33.46,69.33,44.03,65.49,51.95z"/>
+</svg>
+
+            </div>
+            <nav class="foot-nav">
+                <div class="foot-nav__center">
+                    <h3>Mobafire Network</h3>
+                    <div class="items">
+                        <span><a href="https://www.mobafire.com" target="_blank">MOBAFire.com</a></span>
+                        <span><a href="https://www.leaguespy.gg/" target="_blank">leaguespy.gg</a></span>
+                        <span><a href="https://www.counterstats.net" target="_blank">CounterStats.net</a></span>
+                        <span><a href="https://www.runeterrafire.com/" target="_blank">RuneterraFire.com</a></span>   
+                        <span><a href="https://www.mobafire.com/teamfight-tactics" target="_blank">TeamFight Tactics</a></span>               
+                    </div>
+                    <div class="items">
+                        <span><a href="https://www.smitefire.com" target="_blank">SMITEFire.com</a></span>  
+                        <span><a href="https://www.dotafire.com" target="_blank">DOTAFire.com</a></span>
+                        <span><a href="https://www.artifactfire.com/" target="_blank">ArtifactFire.com</a></span>
+                        <span><a href="https://www.vaingloryfire.com" target="_blank">VaingloryFire.com</a></span>
+                        <span><a href="https://www.heroesfire.com" target="_blank">HeroesFire.com</a></span>
+                    </div>
+                                        <div class="light-links">
+                        <a href="/advertising">Advertising</a>
+                        <a href="https://www.mobafire.com/jobs" target="_blank">@jobs</a>
+                        <a href="mailto:partnerships@mobafire.com">Partnerships</a>
+                    </div>
+                </div>
+                <div class="foot-nav__side foot-nav__side--switch">
+                                            <a href='/network-registration' class="foot-btn">Join MFN<i></i></a>
+                        <span class="foot-nav__side__social--common">
+                            <a href="/network-log-in?service=google&amp;return=%2F"><img src="/images/footer-cal/google.png"></a>
+                            <a href="/network-log-in?service=facebook&amp;return=%2F"><img src="/images/footer-cal/facebook.png"></a>
+                            <a href="/network-log-in?service=steam&amp;return=%2F"><img src="/images/footer-cal/steam.png"></a>
+                            <a href="/network-log-in?service=battlenet&amp;return=%2F"><img src="/images/footer-cal/battlenet.png"></a>
+                            <a href="/network-log-in?service=twitter&amp;return=%2F"><img src="/images/footer-cal/twitter.png"></a>
+                        </span>
+                                       <div class="light-links">
+                        <a href="/user-agreement">User Agreement</a>
+                        <a href="/privacy-policy">Privacy Policy</a>
+                    </div>
+                </div>                      
+                <div class="foot-nav__side">
+                    <h3>#Social</h3>
+                                        <a class="foot-nav__side__logo discord" href="https://discordapp.com/invite/CqTU3rJ" target="_blank" rel="noopener"><img data-original="/images/footer-logo-discord.png"  src="/images/footer-logo-discord.png" alt="MOBAFire Discord"></a>
+                                                            <a class="foot-nav__side__logo" href="https://twitter.com/mobafire" target="_blank" rel="noopener"><img data-original="/images/footer-logo-tw.png"  src="/images/footer-logo-tw.png" alt="MOBAFire Twitter"></a>
+                                                            <a class="foot-nav__side__logo facebook" href="https://www.facebook.com/MOBAFire" target="_blank" rel="noopener"><img data-original="/images/footer-logo-fb.png"  src="/images/footer-logo-fb.png" alt="MOBAFire Facebook"></a>
+                                        <div class="light-links">
+                        <a href="/feedback">Contact @Support</a>
+                    </div>     
+                    <div class="light-links-mobile">
+                        <a href="/advertising">Advertising</a>
+                        <a href="/jobs">@jobs</a>
+                        <a href="mailto:partnerships@mobafire.com">Partnerships</a>
+                        <a href="/user-agreement">User Agreement</a>
+                        <a href="/privacy-policy">Privacy Policy</a>
+                        <a href="/feedback">Contact @Support</a>
+                    </div>                   
+                </div>                      
+            </nav>
+        </div>
+    </div>
+</div> 
+</div>
+<style>
+	@media all and (-ms-high-contrast:none)
+	{
+		*::-ms-backdrop, .grayscale { opacity: 0.2; } /* IE11 */
+	}
+</style>
+
+
+	
+	
+	<style>
+		html body {
+			background:black url(/images/main-bg-pattern.png);
+		}
+	</style>
+
+<script type="text/javascript">
+	$('select.chosen').chosen({ disable_search_threshold:10 });
+
+	$('span.localized-datetime').localizeDateTime();
+
+	var _qevents = _qevents || [];
+
+	(function() {
+		var elem = document.createElement('script');
+		elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+		elem.async = true;
+		elem.type = "text/javascript";
+		var scpt = document.getElementsByTagName('script')[0];
+		scpt.parentNode.insertBefore(elem, scpt);
+	})();
+
+	_qevents.push({
+		qacct:"p-bksEyPk2TA-w5"
+	});
+</script>
+<noscript>
+	<div style="display:none;">
+		<img src="//pixel.quantserve.com/pixel/p-bksEyPk2TA-w5.gif" border="0" height="1" width="1" alt="Quantcast"/>
+	</div>
+</noscript>
+
+
+
+<script type="text/javascript">
+	$('input[type="checkbox"].checkable, input[type="radio"].checkable ').prettyCheckable();
+</script>
+
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+	<div class="vm-placement" data-id="58d925de46e0fb0001b87590" style="display:none"></div>
+ 
+
+<!-- Venatus Market v3 -->
+<script type="text/javascript">
+(function(){
+document.write('<div id="vmv3-ad-manager" style="display:none"></div>');
+document
+.getElementById("vmv3-ad-manager")
+.innerHTML = '<iframe id="vmv3-frm" src="javascript:\'<html><body></body></html>\'" width="0" height="0" data-mode="scan" data-site-id="58d925be46e0fb0001790515"></iframe>';
+var loaderFrame = document.getElementById("vmv3-frm");
+var loaderFrameWindow = loaderFrame.contentWindow ? loaderFrame.contentWindow :
+loaderFrame.contentDocument;
+loaderFrameWindow.document.open();
+loaderFrameWindow.document.write('<scr'+'ipt src="//hb.vntsm.com/v3/live/ad-manager.min.js" type="text/javascript" async>'+'</scr'+'ipt>');
+loaderFrameWindow.document.close();
+})();
+</script>
+<!-- / Venatus Market v3 -->
+</body>
+</html>

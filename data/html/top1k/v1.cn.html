@@ -1,0 +1,2365 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="第一视频,短视频，秒评">
+<meta name="description" content="第一视频,一个以秒评为特色的短视频聚合平台。聚焦热点短视频。并着力打造一个人人都有话语权的评论阵地，同时对PGC及专业评论员采取定向扶持政策，重点培养草根评论员，孵化评论界网红。">
+<title>第一视频-中国短视频新闻媒体平台</title>
+<link href="http://static.v1.cn/v1cn/web2017/css/v1commStyle.css" rel="stylesheet" type="text/css">
+<link href="http://static.v1.cn/v1cn/web2017/css/v1channelStyle.css" rel="stylesheet" type="text/css">
+<link href="http://static.v1.cn/v1cn/web2017/css/v1reg_loginStyle.css" rel="stylesheet" type="text/css">
+<link href="http://static.v1.cn/v1cn/web2017/css/v1specialStyle.css" rel="stylesheet" type="text/css">
+<script src="http://static.v1.cn/js/jquery-1.11.3.min.js"></script>
+<script src="http://static.v1.cn/act/liulianvr/app2.0/layer/layer.js"></script>
+<script src="/static/js/jquery.lazyload.js"></script>                              <!--jquery懒加载-->
+<meta property="wb:webmaster" content="7353887df60c36c5" />
+</head>
+<body>
+<div class="wrapper">
+  <div class="headerWrap">
+    <div class="header">
+      <div class="headerL">
+<!--      <span class="icoBt sideMenuBt"></span>-->
+        <a href="/" class="logo">第一视频</a>
+        <a href="http://toujiang.v1.cn/" class="toujiangLogo" target="_blank">投将</a>
+        <div class="searchBox" style="display: block;">
+          <input class="searchInp" type="text" id="searchWordNew" value="搜你喜欢" onfocus="if (value =='搜你喜欢'){value =''}" onblur="if (value ==''){value='搜你喜欢'}">
+          <a href="javascript:void(0)" class="searchBt"></a></div>
+      </div>
+      <div class="headerR">
+          <ul class="operation">
+                            <li><a href="/user/login" class="icoBt icoUser">登录</a></li>
+                        <li><a href="javascript:void(0)" class="icoBt icoBt1" id="cyy_upload">上传</a></li>
+            <li><a target="_blank" href="http://weibo.com/myv1" class="icoBt icoBt2">微博</a></li>
+            <li><a target="_blank" href="http://apps.v1.cn/" class="icoBt icoBt3">APP</a></li>
+            <li id="moreMenu"><a href="javascript:" class="icoBt icoBt4">更多</a>
+              <div class="moreMenuList">
+                <ul>
+                  <li><a href="http://ir.v1.cn/index/#/business">关于我们</a></li>
+                  <li><a href="http://ir.v1.cn/index/#/investor/investor#ContactInfo">联系我们</a></li>
+                  <li><a href="https://www.liepin.com/company/9113901/">加入我们</a></li>
+                  <li><a href="http://www.12377.cn/" target="_blank">廉洁举报</a></li>
+                  <li><a href="http://pc.v1.cn/vodone/aboutus/law/protocol.html">用户协议</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+                 </div>
+    </div>
+  </div>
+    
+<script>
+    $(function(){
+        $("#cyy_logut").click(function(){
+            $.ajax({
+                type:'get',
+                url:'/user/signOut',//路径
+                dataType:'json',
+                data:{
+                },
+                success:function(msg){
+                    if(msg.code==200){
+                        window.location.href = '/index';
+                    }else{
+//                        alert('删除失败');
+                    }
+                }  
+            })
+        });
+        $("#cyy_upload").click(function(){
+//            if(//){
+//                isauth = "//";
+//                if(isauth=='1'){
+                    window.location.href='/uploadtx/upload';
+//                }else{
+//                    window.location.href='/authStatus/authOne';
+//                }
+//            }else{
+//                window.location.href='/user/login';
+//            }
+            
+        });
+
+		$('.searchBt').click(function(){
+			var val = $.trim($('#searchWordNew').val());
+			if(val && val != '搜你喜欢')
+			{
+				window.open('/search/getList?keyword='+val)
+			}
+			return false;
+		})
+        
+    });
+</script>
+
+  <!-- <div class="sideMenuNull"></div>-->
+  <div class="wrapIndex">
+    <div class="mainWrap">
+	
+	  <div class="sideMenu">
+    <ul class="menuList">
+      <li><a href="/" class="curr">头条</a></li>
+<!--      <li><a href="http://toujiang.v1.cn/" target="_blank">投将</a></li>-->
+<!--      <li><a href="/miaoping/" --><!--秒评</a></li>-->
+                 	<li><a href="/xinwen/" >
+     		新闻     		</a>
+     	</li>
+                       	<li><a href="/shehui/" >
+     		社会     		</a>
+     	</li>
+                       	<li><a href="/yule/" >
+     		娱乐     		</a>
+     	</li>
+                       	<li><a href="/gaoxiao/" >
+     		搞笑     		</a>
+     	</li>
+                       	<li><a href="/lvyou/" >
+     		旅游     		</a>
+     	</li>
+                       	<li><a href="/caijing/" >
+     		财经     		</a>
+     	</li>
+                       	<li><a href="/meishi/" >
+     		美食     		</a>
+     	</li>
+                       	<li><a href="/qiche/" >
+     		汽车     		</a>
+     	</li>
+                       	<li><a href="/yinyue/" >
+     		音乐     		</a>
+     	</li>
+                       	<li><a href="/yingshi/" >
+     		影视     		</a>
+     	</li>
+                  <li><a href="http://vr.v1.cn/" target="_blank">VR</a></li>
+      <li><a href="http://www.liangziport.com/" target="_blank">量子港</a></li>
+ <!--     <li><a href="http://www.v1.cn/dongman/index.html" target="_blank">动漫</a></li>
+      <li><a href="http://www.v1.cn/v1zhibo.html" target="_blank">v1秀</a></li> -->
+    </ul>
+  </div>
+      
+
+      <div class="mainBox">
+      <!-- focusBox begin -->
+              <div class="focusBox">
+          <div class="pagination">
+            <p class="numP"></p>
+          </div>
+          <ul class="focusList">
+                    	<li style="display: block" >
+        	        		<div class="pic">
+		        	<a target="_blank" href="/video/15988747.shtml">
+		        		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.app.v1.cn/image/newapp/images/201912/2019120210003106975645.jpg" alt="">
+		        	</a>
+		        </div>
+		        <div class="txt">
+		          <div class="tit">
+		          	<a target="_blank" href="/video/15988747.shtml">
+		          		习近平主持中央政治局第十九次集体学习		          	</a>
+		          </div>
+		          <p class="gray">
+		          	<a target="_blank" href="/video/15988747.shtml">
+		          		中共中央总书记习近平在主持学习时强调，要发挥我国应急管理体系的特色和优势，借鉴国外应急管理有益做法，积极推进我国应急管理体系和能力现代化。		          	</a>
+		          </p>
+		        </div>
+        		        </li>
+	                	<li  >
+        	        		<div class="pic">
+                            <a target="_blank" href="http://news.cctv.com/2019/11/25/ARTIplM9yGCcMLRQ4mB5iRkS191125.shtml?spm=C96370.PsikHJQ1ICOX.Em32AuyOHUeL.13">
+                                <img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.app.v1.cn/image/newapp/images/201912/2019120210001428641626.jpg" alt="">
+                            </a>
+		        </div>
+		        <div class="txt">
+		          <div class="tit">
+		          	<a target="_blank" href="http://news.cctv.com/2019/11/25/ARTIplM9yGCcMLRQ4mB5iRkS191125.shtml?spm=C96370.PsikHJQ1ICOX.Em32AuyOHUeL.13">
+		          		习近平引领自信中国阔步走向世界		          	</a>
+		          </div>
+		          <p class="gray">
+		          	<a target="_blank" href="http://news.cctv.com/2019/11/25/ARTIplM9yGCcMLRQ4mB5iRkS191125.shtml?spm=C96370.PsikHJQ1ICOX.Em32AuyOHUeL.13">
+		          		当前，世界多极化、经济全球化、文化多样化、社会信息化深入发展，人类社会充满希望。同时，国际形势的不稳定性不确定性更加突出，需要世界各国齐心协力、共同应对。		          	</a>
+		          </p>
+		        </div>
+        		        </li>
+	                	<li  >
+        	        		<div class="pic">
+		        	<a target="_blank" href="/video/15988689.shtml">
+		        		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.app.v1.cn/image/newapp/images/201912/2019120210000285309040.jpg" alt="">
+		        	</a>
+		        </div>
+		        <div class="txt">
+		          <div class="tit">
+		          	<a target="_blank" href="/video/15988689.shtml">
+		          		广州地铁施工区域地面塌陷，3人被困		          	</a>
+		          </div>
+		          <p class="gray">
+		          	<a target="_blank" href="/video/15988689.shtml">
+		          		广东广州。十一号线沙河站施工区域发生地面塌陷，一辆清污车和一部电瓶车陷入。据羊城晚报，现场医护称有3人被困。目前现场正救援。		          	</a>
+		          </p>
+		        </div>
+        		        </li>
+	                	<li  >
+        	        		<div class="pic">
+		        	<a target="_blank" href="/video/15988694.shtml">
+		        		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.app.v1.cn/image/newapp/images/201912/2019120210001265832647.jpg" alt="">
+		        	</a>
+		        </div>
+		        <div class="txt">
+		          <div class="tit">
+		          	<a target="_blank" href="/video/15988694.shtml">
+		          		民居起火老人孩子被困 消防员让出呼吸器救人		          	</a>
+		          </div>
+		          <p class="gray">
+		          	<a target="_blank" href="/video/15988694.shtml">
+		          		广东罗定消防中队接到火情，一栋七层民房着火有人被困。楼房堆满废弃塑料瓶和纸皮，屋内浓烟滚滚。消防员进入火场后为被困老人和孩子戴上呼吸器，成功将人员救出。		          	</a>
+		          </p>
+		        </div>
+        		        </li>
+	                	<li  >
+        	        		<div class="pic">
+		        	<a target="_blank" href="/video/15988688.shtml">
+		        		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.app.v1.cn/image/newapp/images/201912/2019120210000542155383.jpg" alt="">
+		        	</a>
+		        </div>
+		        <div class="txt">
+		          <div class="tit">
+		          	<a target="_blank" href="/video/15988688.shtml">
+		          		买的优信奥迪二手车，上路1小时熄火		          	</a>
+		          </div>
+		          <p class="gray">
+		          	<a target="_blank" href="/video/15988688.shtml">
+		          		辽宁沈阳。孔先生称，刚买的优信奥迪二手车，提车开上路1小时熄火，发现发动机变速箱有拆卸痕迹；优信允许退车，但不赔偿保养拖车等费用。优信公关拒绝接受采访。		          	</a>
+		          </p>
+		        </div>
+        		        </li>
+	                  </ul>
+        </div>
+                <!-- focusBox end --> 
+        
+        <!-- 一带一路begin -->
+                <div class="colBar">
+        	<span class="colTit">辉煌70年</span>
+        	        </div>
+        <div class="colConBox">
+          <ul class="infoList">
+                      <li>
+              <div class="pic">
+              	<span class="tipTime">05:24</span>
+            	<a target="_blank" href="/video/15883803.shtml">
+            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://f10.v1.cn/site/15883803.mp4.0_0.p0.jpg" >
+            	</a>
+              </div>
+              <div class="tit">
+              	<a target="_blank" href="/video/15883803.shtml">
+            		《全景CG大片：史诗70年》            	</a>
+              </div>
+              <div class="uploadUser">
+	            <p class="userName gray2">新闻速递</p>
+              </div>
+              <span class="icoPv">9021</span> 
+              </li>
+                          <li>
+              <div class="pic">
+              	<span class="tipTime">00:45</span>
+            	<a target="_blank" href="/video/15876492.shtml">
+            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-09-29/201909291724518938.jpg" >
+            	</a>
+              </div>
+              <div class="tit">
+              	<a target="_blank" href="/video/15876492.shtml">
+            		第一视频集团主席张力军参加国庆七十周年庆祝招待会            	</a>
+              </div>
+              <div class="uploadUser">
+	            <p class="userName gray2">坐视天下</p>
+              </div>
+              <span class="icoPv">8313</span> 
+              </li>
+                          <li>
+              <div class="pic">
+              	<span class="tipTime">01:02</span>
+            	<a target="_blank" href="/video/15874975.shtml">
+            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-09-28/201909282032259509.jpg" >
+            	</a>
+              </div>
+              <div class="tit">
+              	<a target="_blank" href="/video/15874975.shtml">
+            		第一视频集团主席张力军博士应邀参加建国七十周年庆典            	</a>
+              </div>
+              <div class="uploadUser">
+	            <p class="userName gray2">九州遨游</p>
+              </div>
+              <span class="icoPv">28043</span> 
+              </li>
+                          <li>
+              <div class="pic">
+              	<span class="tipTime">01:00</span>
+            	<a target="_blank" href="/video/15848046.shtml">
+            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-09-12/201909122009502392.jpg" >
+            	</a>
+              </div>
+              <div class="tit">
+              	<a target="_blank" href="/video/15848046.shtml">
+            		用歌声祝福祖国之南京快闪《红旗飘飘》            	</a>
+              </div>
+              <div class="uploadUser">
+	            <p class="userName gray2">看见事件</p>
+              </div>
+              <span class="icoPv">13265</span> 
+              </li>
+                        </ul>
+          <div class="colConBoxLine"></div>
+        </div>
+                <!-- 一带一路 end --> 
+        <!-- 广告 begin -->
+        <div class="bannerTl">
+        	<script type='text/javascript'><!--//<![CDATA[ 
+var m3_u = (location.protocol=='https:'?'http://luckstatic.v1.cn/st/10000/1500/1461.js':'http://luckstatic.v1.cn/st/10000/1500/1461.js');
+document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+document.write ("?rand="+new Date().getTime());
+document.write ("'><\/scr"+"ipt>");
+//]]>--></script>
+        </div>
+        <!-- 广告 end -->
+        
+        <!-- miaoping begin -->
+                <!-- miaoping end -->
+        
+         <!-- 广告 begin -->
+        <div class="bannerTl">
+        	<script type='text/javascript'><!--//<![CDATA[ 
+var m3_u = (location.protocol=='https:'?'http://luckstatic.v1.cn/st/10000/1500/1471.js':'http://luckstatic.v1.cn/st/10000/1500/1471.js');
+document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+document.write ("?rand="+new Date().getTime());
+document.write ("'><\/scr"+"ipt>");
+//]]>--></script>
+        </div>
+        <!-- 广告 end -->
+        
+<!--        <div class="bannerTl"><a href="#"><img src="http://static.v1.cn/v1cn/web2017/images/temp_pic2.jpg"></a></div>-->
+        
+        <!-- 新闻 begin -->
+              	                  <div class="colBar">
+        	<span class="colTit">新闻</span>
+        	        	        	<a target="_blank" href="/xinwen/" class="colMore gray2">更多</a>
+        	        </div>
+        <div class="colConBox">
+                    		<ul class="infoList">
+          			            <li>
+	              <div class="pic">
+	              	<span class="tipTime">00:46</span>
+	            	<a target="_blank" href="/video/15982624.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-11-28/201911281457508877.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15982624.shtml">
+	            		财政部就增值税法公开征求意见	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">新闻资讯</p>
+	              </div>
+	              <span class="icoPv">11379</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">01:28</span>
+	            	<a target="_blank" href="/video/15982625.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-11-28/201911281456133895.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15982625.shtml">
+	            		公安部刑侦局发布紧急预警 “携号转网”已有新型诈骗	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">新闻资讯</p>
+	              </div>
+	              <span class="icoPv">8075</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">00:39</span>
+	            	<a target="_blank" href="/video/15982626.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-11-28/201911281454313156.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15982626.shtml">
+	            		广西靖西 发生4.3级地震 震源深度10千米	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">新闻资讯</p>
+	              </div>
+	              <span class="icoPv">10868</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">01:06</span>
+	            	<a target="_blank" href="/video/15982627.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-11-28/201911281453236690.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15982627.shtml">
+	            		教育部 招收香港学生的内地高校明年增至122所	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">新闻资讯</p>
+	              </div>
+	              <span class="icoPv">10278</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">01:05</span>
+	            	<a target="_blank" href="/video/15979028.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-11-26/201911261325499184.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15979028.shtml">
+	            		2019未来教育大会举行	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">新闻资讯</p>
+	              </div>
+	              <span class="icoPv">11330</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">00:50</span>
+	            	<a target="_blank" href="/video/15979030.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-11-26/201911261325389458.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15979030.shtml">
+	            		黑龙江漠河 最低温-35℃ 湖泊出现冰冻气泡	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">新闻资讯</p>
+	              </div>
+	              <span class="icoPv">11385</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">02:12</span>
+	            	<a target="_blank" href="/video/15979031.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-11-26/201911261325265149.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15979031.shtml">
+	            		聚焦国办督查：百姓过冬暖不暖？ 督查各地供暖	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">新闻资讯</p>
+	              </div>
+	              <span class="icoPv">8643</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">02:18</span>
+	            	<a target="_blank" href="/video/15979032.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-11-26/201911261325171416.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15979032.shtml">
+	            		意大利 “水患”持续 威尼斯再迎高水位	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">新闻资讯</p>
+	              </div>
+	              <span class="icoPv">8345</span> 
+	              </li>
+	              	              </ul>
+                    <div class="colConBoxLine"></div>
+        </div>
+                <div class="bannerTl">
+        <script type='text/javascript'><!--//<![CDATA[ 
+var m3_u = (location.protocol=='https:'?'http://luckstatic.v1.cn/st/10000/1500/1472.js':'http://luckstatic.v1.cn/st/10000/1500/1472.js');
+document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+document.write ("?rand="+new Date().getTime());
+document.write ("'><\/scr"+"ipt>");
+//]]>--></script> 
+		</div> 
+                                  <div class="colBar">
+        	<span class="colTit">社会</span>
+        	        	        	<a target="_blank" href="/xinwen/" class="colMore gray2">更多</a>
+        	        </div>
+        <div class="colConBox">
+                    		<ul class="infoList">
+          			            <li>
+	              <div class="pic">
+	              	<span class="tipTime">01:28</span>
+	            	<a target="_blank" href="/video/15988740.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-12-02/201912021022499290.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15988740.shtml">
+	            		福州多名幼儿疑遭保育员针扎 警方已介入调查	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">热点追踪</p>
+	              </div>
+	              <span class="icoPv">1600</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">03:29</span>
+	            	<a target="_blank" href="/video/15981086.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://f10.v1.cn/site/15981086.mp4.0_0.p0.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15981086.shtml">
+	            		女子花近40万美容反显老，店员大笑嘲讽：你无理取闹	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">快看新闻</p>
+	              </div>
+	              <span class="icoPv">11789</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">01:05</span>
+	            	<a target="_blank" href="/video/15981087.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://f10.v1.cn/site/15981087.mp4.0_0.p0.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15981087.shtml">
+	            		情侣因彩礼分手，女子拿红漆怒喷男友车	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">快看新闻</p>
+	              </div>
+	              <span class="icoPv">10782</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">01:50</span>
+	            	<a target="_blank" href="/video/15986205.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-11-30/201911301031448182.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15986205.shtml">
+	            		女子伪造病重假象 1人饰4角骗朋友13万	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">快看新闻</p>
+	              </div>
+	              <span class="icoPv">12330</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">01:10</span>
+	            	<a target="_blank" href="/video/15986206.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-11-30/201911301007499592.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15986206.shtml">
+	            		女逃犯劳荣枝落网：曾与男友四处流窜杀害7人	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">快看新闻</p>
+	              </div>
+	              <span class="icoPv">11636</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">02:17</span>
+	            	<a target="_blank" href="/video/15984514.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-11-29/201911291655339914.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15984514.shtml">
+	            		女子称2.69万矫牙换3医生,越矫越歪	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">今日news</p>
+	              </div>
+	              <span class="icoPv">11445</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">01:33</span>
+	            	<a target="_blank" href="/video/15984515.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-11-29/201911291655261500.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15984515.shtml">
+	            		李国庆谈俞渝最大伤害：公开发隐私	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">今日news</p>
+	              </div>
+	              <span class="icoPv">12083</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">01:01</span>
+	            	<a target="_blank" href="/video/15984516.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-11-29/201911291655178658.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15984516.shtml">
+	            		衡中学生早晨5点跑操背书：这样减压	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">今日news</p>
+	              </div>
+	              <span class="icoPv">9328</span> 
+	              </li>
+	              	              </ul>
+                    <div class="colConBoxLine"></div>
+        </div>
+                <div class="bannerTl">
+        <script type='text/javascript'><!--//<![CDATA[ 
+var m3_u = (location.protocol=='https:'?'http://luckstatic.v1.cn/st/10000/1500/1473.js':'http://luckstatic.v1.cn/st/10000/1500/1473.js');
+document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+document.write ("?rand="+new Date().getTime());
+document.write ("'><\/scr"+"ipt>");
+//]]>--></script> 
+		</div> 
+                                    <!-- 广告 begin -->
+          <div class="bannerTl">
+              <script type='text/javascript'><!--//<![CDATA[
+                  var m3_u = (location.protocol=='https:'?'http://luckstatic.v1.cn/st/10000/1500/1472.js':'http://luckstatic.v1.cn/st/10000/1500/1472.js');
+                  document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+                  document.write ("?rand="+new Date().getTime());
+                  document.write ("'><\/scr"+"ipt>");
+                  //]]>--></script>
+          </div>
+          <!-- 广告 end -->
+                  <div class="colBar">
+        	<span class="colTit">娱乐</span>
+        	        	        	<a target="_blank" href="/yule/" class="colMore gray2">更多</a>
+        	        </div>
+        <div class="colConBox">
+                    		<ul class="infoList">
+          			            <li>
+	              <div class="pic">
+	              	<span class="tipTime">01:08</span>
+	            	<a target="_blank" href="/video/15988734.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-12-02/201912021017303003.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15988734.shtml">
+	            		王一博自称王鸭脖，解锁相声首秀	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">娱老头</p>
+	              </div>
+	              <span class="icoPv">2055</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">01:06</span>
+	            	<a target="_blank" href="/video/15988735.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-12-02/201912021016062172.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15988735.shtml">
+	            		胡歌现身赵本山女儿直播间，直呼认不出自己	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">娱乐小组长</p>
+	              </div>
+	              <span class="icoPv">2742</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">01:04</span>
+	            	<a target="_blank" href="/video/15988732.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-12-02/201912021014461713.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15988732.shtml">
+	            		高强度舞蹈跳到苍白无力 宇宙少女直接累倒舞台	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">娱老头</p>
+	              </div>
+	              <span class="icoPv">1249</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">01:13</span>
+	            	<a target="_blank" href="/video/15988729.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-12-02/201912021013429618.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15988729.shtml">
+	            		张鲁一打扮成胡歌的样子称累了我可以替他	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">娱老头</p>
+	              </div>
+	              <span class="icoPv">2159</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">01:06</span>
+	            	<a target="_blank" href="/video/15988736.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-12-02/201912021004338660.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15988736.shtml">
+	            		马丽怀孕沈腾送祝福，马丽回复：装啥呢	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">娱乐小组长</p>
+	              </div>
+	              <span class="icoPv">2973</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">08:21</span>
+	            	<a target="_blank" href="/video/15988727.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-12-02/201912021002553782.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15988727.shtml">
+	            		王一博自称王鸭脖 与孟鹤堂周九良同台说相声	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">奇乐无穷</p>
+	              </div>
+	              <span class="icoPv">1558</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">00:29</span>
+	            	<a target="_blank" href="/video/15987457.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://f10.v1.cn/site/15987457.mp4.0_0.p0.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15987457.shtml">
+	            		太拼！高以翔抢救现场视频曝光	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">娱乐小组长</p>
+	              </div>
+	              <span class="icoPv">9330</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">01:55</span>
+	            	<a target="_blank" href="/video/15987459.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://f10.v1.cn/site/15987459.mp4.0_0.p0.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15987459.shtml">
+	            		央视报道高以翔去世：生命的警示	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">娱乐小组长</p>
+	              </div>
+	              <span class="icoPv">10143</span> 
+	              </li>
+	              	              </ul>
+                    <div class="colConBoxLine"></div>
+        </div>
+                <div class="bannerTl">
+        <script type='text/javascript'><!--//<![CDATA[ 
+var m3_u = (location.protocol=='https:'?'http://luckstatic.v1.cn/st/10000/1500/1474.js':'http://luckstatic.v1.cn/st/10000/1500/1474.js');
+document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+document.write ("?rand="+new Date().getTime());
+document.write ("'><\/scr"+"ipt>");
+//]]>--></script> 
+		</div> 
+                                  <div class="colBar">
+        	<span class="colTit">搞笑</span>
+        	        	        	<a target="_blank" href="/gaoxiao/" class="colMore gray2">更多</a>
+        	        </div>
+        <div class="colConBox">
+                    		<ul class="infoList">
+          			            <li>
+	              <div class="pic">
+	              	<span class="tipTime">02:49</span>
+	            	<a target="_blank" href="/video/15987570.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-12-01/201912011840482854.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15987570.shtml">
+	            		大型撒糖现场！影视剧中的怂萌男主太有爱	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">DS女老诗</p>
+	              </div>
+	              <span class="icoPv">10376</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">01:29</span>
+	            	<a target="_blank" href="/video/15987519.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-12-01/201912011627143892.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15987519.shtml">
+	            		用余年打开肖战古装个人向，英气十足的样子太可	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">DS女老诗</p>
+	              </div>
+	              <span class="icoPv">8227</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">02:14</span>
+	            	<a target="_blank" href="/video/15987481.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-12-01/201912011006375856.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15987481.shtml">
+	            		《暹罗密码》跨国追凶太难了？罗云熙谢彬彬为你	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">DS女老诗</p>
+	              </div>
+	              <span class="icoPv">9567</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">02:29</span>
+	            	<a target="_blank" href="/video/15986213.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-11-30/201911301022415104.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15986213.shtml">
+	            		庆余年：范思辙被怼合辑！小财迷爱耍宝笑到上头	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">DS女老诗</p>
+	              </div>
+	              <span class="icoPv">6533</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">01:15</span>
+	            	<a target="_blank" href="/video/15984521.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-11-29/201911291627314289.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15984521.shtml">
+	            		为什么现在的男生都不愿意追女生了？	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">长安外传</p>
+	              </div>
+	              <span class="icoPv">6423</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">01:48</span>
+	            	<a target="_blank" href="/video/15984506.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-11-29/201911291518189120.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15984506.shtml">
+	            		嘴炮强者张若昀！《庆余年》行走的弹幕范闲	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">DS女老诗</p>
+	              </div>
+	              <span class="icoPv">8388</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">02:12</span>
+	            	<a target="_blank" href="/video/15982602.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-11-28/201911281138151691.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15982602.shtml">
+	            		女生会和吵架后摔东西的人在一起吗？	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">长安外传</p>
+	              </div>
+	              <span class="icoPv">9708</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">01:46</span>
+	            	<a target="_blank" href="/video/15982511.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-11-28/201911280910306020.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15982511.shtml">
+	            		奇遇人生：这些女明星的制服装最吸睛	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">DS女老诗</p>
+	              </div>
+	              <span class="icoPv">7465</span> 
+	              </li>
+	              	              </ul>
+                    <div class="colConBoxLine"></div>
+        </div>
+                                  <div class="colBar">
+        	<span class="colTit">旅游</span>
+        	        	        	<a target="_blank" href="/lvyou/" class="colMore gray2">更多</a>
+        	        </div>
+        <div class="colConBox">
+                    		<ul class="infoList">
+          			            <li>
+	              <div class="pic">
+	              	<span class="tipTime">02:01</span>
+	            	<a target="_blank" href="/video/15988168.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://f10.v1.cn/site/15988168.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15988168.shtml">
+	            		印度职业掏耳人，技术到底有多牛？一勺下去让你怀疑人生	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">快旅游</p>
+	              </div>
+	              <span class="icoPv">10964</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">01:03</span>
+	            	<a target="_blank" href="/video/15988164.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://f10.v1.cn/site/15988164.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15988164.shtml">
+	            		在动物园,孩子失足落入了猩猩手里,孩子没事猩猩却死了！	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">天地在我心</p>
+	              </div>
+	              <span class="icoPv">9436</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">02:07</span>
+	            	<a target="_blank" href="/video/15977240.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-11-25/201911251437036063.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15977240.shtml">
+	            		《自游观》第二季丝绸之路篇 预告片	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">萝卜报告</p>
+	              </div>
+	              <span class="icoPv">7812</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">02:07</span>
+	            	<a target="_blank" href="/video/15973351.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://f10.v1.cn/site/15973351.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15973351.shtml">
+	            		非洲黄金白菜价，却令游客不敢购买，中国大妈理性回应：太不值！	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">走出一片天地</p>
+	              </div>
+	              <span class="icoPv">10077</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">01:29</span>
+	            	<a target="_blank" href="/video/15973350.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://f10.v1.cn/site/15973350.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15973350.shtml">
+	            		白鲸吓唬人从没失手过，万万没想到，却败在这个小女孩手上	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">快旅游</p>
+	              </div>
+	              <span class="icoPv">9370</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">03:55</span>
+	            	<a target="_blank" href="/video/15972008.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://f10.v1.cn/site/15972008.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15972008.shtml">
+	            		中国最隐秘村庄，专家花了三十年，才找到入口！	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">快旅游</p>
+	              </div>
+	              <span class="icoPv">10702</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">01:07</span>
+	            	<a target="_blank" href="/video/15969764.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://f10.v1.cn/site/15969764.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15969764.shtml">
+	            		小伙作死挑战超刺激太空碗，掉入瞬间，隔着屏幕都觉得疼！	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">爱自由</p>
+	              </div>
+	              <span class="icoPv">11018</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">01:16</span>
+	            	<a target="_blank" href="/video/15969763.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://f10.v1.cn/site/15969763.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15969763.shtml">
+	            		中国最牛“钉子户”，给200亿都不拆，内部装饰曝光：谁敢拆？	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">天地在我心</p>
+	              </div>
+	              <span class="icoPv">10594</span> 
+	              </li>
+	              	              </ul>
+                    <div class="colConBoxLine"></div>
+        </div>
+                                  <div class="colBar">
+        	<span class="colTit">财经</span>
+        	        	        	<a target="_blank" href="/caijing/" class="colMore gray2">更多</a>
+        	        </div>
+        <div class="colConBox">
+                    		<ul class="infoList">
+          			            <li>
+	              <div class="pic">
+	              	<span class="tipTime">03:41</span>
+	            	<a target="_blank" href="/video/15982667.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-11-28/201911281801097948.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15982667.shtml">
+	            		小黄车开始退押金了，但要先消费	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">学股网出品</p>
+	              </div>
+	              <span class="icoPv">9907</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">03:30</span>
+	            	<a target="_blank" href="/video/15981122.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-11-27/201911271811149609.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15981122.shtml">
+	            		格力再打价格战，空调行业不行了？	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">学股网出品</p>
+	              </div>
+	              <span class="icoPv">7567</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">03:39</span>
+	            	<a target="_blank" href="/video/15977312.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-11-25/201911251831208395.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15977312.shtml">
+	            		横店开机率锐减45%，迪丽热巴都无戏	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">学股网出品</p>
+	              </div>
+	              <span class="icoPv">9175</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">03:34</span>
+	            	<a target="_blank" href="/video/15972267.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-11-22/201911221743279817.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15972267.shtml">
+	            		王思聪会还钱么?其房产汽车存款已被查封	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">学股网出品</p>
+	              </div>
+	              <span class="icoPv">8189</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">03:41</span>
+	            	<a target="_blank" href="/video/15970611.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-11-21/201911211910497586.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15970611.shtml">
+	            		蔚来李斌：新拐点出现，电动车的春天不远了	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">学股网出品</p>
+	              </div>
+	              <span class="icoPv">11246</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">03:33</span>
+	            	<a target="_blank" href="/video/15960661.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-11-15/201911151802402673.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15960661.shtml">
+	            		王健林不管了？王思聪债务可没那么简单	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">学股网出品</p>
+	              </div>
+	              <span class="icoPv">12693</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">03:30</span>
+	            	<a target="_blank" href="/video/15958691.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-11-14/201911141758526948.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15958691.shtml">
+	            		马云：希望双十一放半天假，就不怕熬夜购物了	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">学股网出品</p>
+	              </div>
+	              <span class="icoPv">11308</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">03:35</span>
+	            	<a target="_blank" href="/video/15954851.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-11-12/201911121811001643.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15954851.shtml">
+	            		华为发放20亿奖金，人均十万起	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">学股网出品</p>
+	              </div>
+	              <span class="icoPv">9146</span> 
+	              </li>
+	              	              </ul>
+                    <div class="colConBoxLine"></div>
+        </div>
+                                  <div class="colBar">
+        	<span class="colTit">美食</span>
+        	        	        	<a target="_blank" href="/meishi/" class="colMore gray2">更多</a>
+        	        </div>
+        <div class="colConBox">
+                    		<ul class="infoList">
+          			            <li>
+	              <div class="pic">
+	              	<span class="tipTime">02:31</span>
+	            	<a target="_blank" href="/video/15984952.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-11-29/201911292145082061.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15984952.shtml">
+	            		「广式窝蛋生滚牛肉粥」学会窍门很简单！	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">食语集</p>
+	              </div>
+	              <span class="icoPv">11903</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">03:55</span>
+	            	<a target="_blank" href="/video/15984529.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-11-29/201911291641521301.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15984529.shtml">
+	            		野哥东京一日游推荐，爆辣拉面挑战遭“打脸”	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">办公室小野</p>
+	              </div>
+	              <span class="icoPv">10820</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">06:25</span>
+	            	<a target="_blank" href="/video/15984403.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-11-29/201911290910001836.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15984403.shtml">
+	            		【一起来吃吧】名创优品10元零食清单	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">华数TV原创</p>
+	              </div>
+	              <span class="icoPv">11592</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">04:56</span>
+	            	<a target="_blank" href="/video/15982628.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-11-28/201911281446039906.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15982628.shtml">
+	            		简版胡萝卜蛋糕：果蔬齐备，营养聚能	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">落甜视频</p>
+	              </div>
+	              <span class="icoPv">11946</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">03:37</span>
+	            	<a target="_blank" href="/video/15979237.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-11-26/201911261856359288.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15979237.shtml">
+	            		用一公斤黄油做成的黄油火锅，我居然吃出了肥皂	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">馋音仙子</p>
+	              </div>
+	              <span class="icoPv">12921</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">03:10</span>
+	            	<a target="_blank" href="/video/15979042.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-11-26/201911261223554105.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15979042.shtml">
+	            		酥脆酸甜又麻辣，煳辣糖醋小酥鸡一菜就搞定	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">食语集</p>
+	              </div>
+	              <span class="icoPv">12729</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">03:36</span>
+	            	<a target="_blank" href="/video/15976310.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-11-24/201911242305575935.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15976310.shtml">
+	            		新疆羊肉揪片子，热热来一碗真是美到心尖里！	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">食语集</p>
+	              </div>
+	              <span class="icoPv">10185</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">07:34</span>
+	            	<a target="_blank" href="/video/15975329.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://f10.v1.cn/site/15975329.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15975329.shtml">
+	            		第一次吃鳄鱼大餐，没想到最好吃的是这个部位？	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">爱吃的小鲸鱼</p>
+	              </div>
+	              <span class="icoPv">10206</span> 
+	              </li>
+	              	              </ul>
+                    <div class="colConBoxLine"></div>
+        </div>
+                                  <div class="colBar">
+        	<span class="colTit">汽车</span>
+        	        	        	<a target="_blank" href="/qiche/" class="colMore gray2">更多</a>
+        	        </div>
+        <div class="colConBox">
+                    		<ul class="infoList">
+          			            <li>
+	              <div class="pic">
+	              	<span class="tipTime">04:35</span>
+	            	<a target="_blank" href="/video/15988671.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://f10.v1.cn/site/15988671.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15988671.shtml">
+	            		好看好开全新马自达3 1.5L微试车	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">一路随行</p>
+	              </div>
+	              <span class="icoPv">6444</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">13:51</span>
+	            	<a target="_blank" href="/video/15984485.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-11-29/201911291355352643.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15984485.shtml">
+	            		双重“车格”的AMG GT 50来了！	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">萝卜报告</p>
+	              </div>
+	              <span class="icoPv">10474</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">06:41</span>
+	            	<a target="_blank" href="/video/15984471.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-11-29/201911291153141760.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15984471.shtml">
+	            		你们总说GL8商务，这下满足了吧？	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">爽爽侃车</p>
+	              </div>
+	              <span class="icoPv">12522</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">28:32</span>
+	            	<a target="_blank" href="/video/15984457.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-11-29/201911291101374238.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15984457.shtml">
+	            		ES200铁粉引发回忆杀  自如走心回应感谢	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">ZEALER</p>
+	              </div>
+	              <span class="icoPv">11851</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">03:30</span>
+	            	<a target="_blank" href="/video/15982663.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-11-28/201911281738399431.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15982663.shtml">
+	            		大炮评车：眼花缭乱的故障灯	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">大炮评车</p>
+	              </div>
+	              <span class="icoPv">8477</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">21:58</span>
+	            	<a target="_blank" href="/video/15982611.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-11-28/201911281338388846.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15982611.shtml">
+	            		古都西安千载路 危崖麦积百余窟-丝路篇01	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">萝卜报告</p>
+	              </div>
+	              <span class="icoPv">9109</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">12:48</span>
+	            	<a target="_blank" href="/video/15982604.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-11-28/201911281151442178.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15982604.shtml">
+	            		逛完广州车展 再带大家逛逛洛杉矶车展	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">萝卜报告</p>
+	              </div>
+	              <span class="icoPv">11569</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">05:15</span>
+	            	<a target="_blank" href="/video/15982598.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-11-28/201911281124273157.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15982598.shtml">
+	            		日产全新概念车提前公布参数？能否保留到量产？	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">汽车女魔头</p>
+	              </div>
+	              <span class="icoPv">10639</span> 
+	              </li>
+	              	              </ul>
+                    <div class="colConBoxLine"></div>
+        </div>
+                                  <div class="colBar">
+        	<span class="colTit">音乐</span>
+        	        	        	<a target="_blank" href="/yinyue/" class="colMore gray2">更多</a>
+        	        </div>
+        <div class="colConBox">
+                    		<ul class="infoList">
+          			            <li>
+	              <div class="pic">
+	              	<span class="tipTime">02:00</span>
+	            	<a target="_blank" href="/video/15988725.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://f10.v1.cn/site/15988725.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15988725.shtml">
+	            		周深李克勤《野狼disco》	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">看过么</p>
+	              </div>
+	              <span class="icoPv">2923</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">04:23</span>
+	            	<a target="_blank" href="/video/15984481.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-11-29/201911291341073749.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15984481.shtml">
+	            		《WYTB》MV 乐华NEXT在挑战中收获成长	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">娱乐先锋</p>
+	              </div>
+	              <span class="icoPv">12126</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime"></span>
+	            	<a target="_blank" href="/video/15982578.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://f10.v1.cn/site/15982578.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15982578.shtml">
+	            		EXO回归！新歌《OBSESSION》MV	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">奇妙馆</p>
+	              </div>
+	              <span class="icoPv">8014</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">05:22</span>
+	            	<a target="_blank" href="/video/15977168.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-11-25/201911251056594599.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15977168.shtml">
+	            		那英肖战《爱上你等于爱上寂寞》	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">奇妙馆</p>
+	              </div>
+	              <span class="icoPv">10248</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">04:04</span>
+	            	<a target="_blank" href="/video/15972228.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://f10.v1.cn/site/15972228.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15972228.shtml">
+	            		G.E.M.邓紫棋《句号 Full Stop》Official MV	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">眼界君</p>
+	              </div>
+	              <span class="icoPv">10323</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime"></span>
+	            	<a target="_blank" href="/video/15972233.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://f10.v1.cn/site/15972233.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15972233.shtml">
+	            		你的男孩T_T 《天顶一粒星》Official MV	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">世界贼奇妙</p>
+	              </div>
+	              <span class="icoPv">10561</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">03:09</span>
+	            	<a target="_blank" href="/video/15964535.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-11-18/201911181026031529.png" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15964535.shtml">
+	            		蔡佳灵-Butterfly	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">声音丛林</p>
+	              </div>
+	              <span class="icoPv">13284</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">04:18</span>
+	            	<a target="_blank" href="/video/15964536.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-11-18/201911181032515596.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15964536.shtml">
+	            		那英肖战男女合唱版《跟着感觉走》	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">请开眼</p>
+	              </div>
+	              <span class="icoPv">9645</span> 
+	              </li>
+	              	              </ul>
+                    <div class="colConBoxLine"></div>
+        </div>
+                                  <div class="colBar">
+        	<span class="colTit">影视</span>
+        	        	        	<a target="_blank" href="/yingshi/" class="colMore gray2">更多</a>
+        	        </div>
+        <div class="colConBox">
+                    		<ul class="infoList">
+          			            <li>
+	              <div class="pic">
+	              	<span class="tipTime">01:54</span>
+	            	<a target="_blank" href="/video/15931761.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://f10.v1.cn/site/15931761.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15931761.shtml">
+	            		余生请多指教首发先导预告片《余生·宿命篇》	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">奇妙馆</p>
+	              </div>
+	              <span class="icoPv">11716</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">00:15</span>
+	            	<a target="_blank" href="/video/15977189.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-11-25/201911251122102695.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15977189.shtml">
+	            		《浮士德》花絮 尹铸胜廖凡挑战世界文学经典	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">娱乐小队长</p>
+	              </div>
+	              <span class="icoPv">12216</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">01:16</span>
+	            	<a target="_blank" href="/video/15958621.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-11-14/201911141009473499.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15958621.shtml">
+	            		《囧妈》预告 徐峥双面身份再上囧途	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">娱乐先锋</p>
+	              </div>
+	              <span class="icoPv">9722</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">01:26</span>
+	            	<a target="_blank" href="/video/15957664.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-11-13/201911132320307114.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15957664.shtml">
+	            		狂飙荷尔蒙！电影《特警队》强势定档12.29	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">娱乐先锋</p>
+	              </div>
+	              <span class="icoPv">9414</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">00:17</span>
+	            	<a target="_blank" href="/video/15931762.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-10-30/201910301757503092.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15931762.shtml">
+	            		电视剧《有翡》曝光周翡谢允人物小片	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">奇妙馆</p>
+	              </div>
+	              <span class="icoPv">10161</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">02:05</span>
+	            	<a target="_blank" href="/video/15979006.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-11-26/201911261052112307.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15979006.shtml">
+	            		电影《解放·终局营救》发布“殊途同归”版预告	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">娱乐小队长</p>
+	              </div>
+	              <span class="icoPv">9476</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">03:11</span>
+	            	<a target="_blank" href="/video/15978998.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-11-26/201911261034055591.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15978998.shtml">
+	            		电视剧《庆余年》预告片	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">产视官</p>
+	              </div>
+	              <span class="icoPv">12504</span> 
+	              </li>
+	              	            <li>
+	              <div class="pic">
+	              	<span class="tipTime">02:29</span>
+	            	<a target="_blank" href="/video/15970392.shtml">
+	            		<img src="http://static.v1.cn/v1cn/web2017/images/video_default.gif" data-original="http://img.mms.v1.cn/static/mms/images/2019-11-21/201911211021501018.jpg" >
+	            	</a>
+	              </div>
+	              <div class="tit">
+	              	<a target="_blank" href="/video/15970392.shtml">
+	            		电影《解放·终局营救》发布“安排”特辑	            	</a>
+	              </div>
+	              <div class="uploadUser">
+<!--	              	<p class="userPic">-->
+<!--		            	<img src="" >-->
+<!--		            </p>-->
+		            <p class="userName gray2">娱乐小队长</p>
+	              </div>
+	              <span class="icoPv">9300</span> 
+	              </li>
+	              	              </ul>
+                    <div class="colConBoxLine"></div>
+        </div>
+                      	        <!-- 新闻 end --> 
+        <div class="hr20"></div>
+      </div>
+    </div>
+    
+    <!--indexSideR begin-->
+    <div class="indexSideR">
+      <div id="indexScrollBox">
+        <div class="jubaoBox"><a href="http://report.12377.cn:13225/toreportinputNormal_anis.do" target="_blank" class="jubao"><img src="http://static.v1.cn/v1cn/web2017/images/jubao_12377.jpg"alt=""></a> <a href="http://net.china.com.cn/index.htm" target="_blank" class="jubao" style="display: none;"><img src="http://static.v1.cn/v1cn/web2017/images/jubao_baokong.jpg" alt=""></a> 
+          <script>
+		var _curIndex = 0, 
+				imgLen = $(".jubao").length;
+		var autoChange = setInterval(function(){
+			if(_curIndex < imgLen-1){
+				_curIndex ++;
+			}else{
+				_curIndex = 0;
+			}
+			changeTo(_curIndex);
+		},5000);
+		function changeTo(num){
+			$(".jubao").hide().eq(num).show();
+		}
+	</script> 
+        </div>
+        
+                <div class="sideNewsBox zhuanti">
+          <div class="sideColTit">专题</div>
+          <ul class="newsList">
+                    <li>
+              <div class="pic">
+              	<a target="_blank" href="http://www.v1.cn/zhuanti/60.shtml">
+              		<img src="http://img.app.v1.cn/image/newapp/images/201909/2019092915004217972441.jpg">
+              	</a>
+              </div>
+              <div class="txt">
+              	<a target="_blank" href="http://www.v1.cn/zhuanti/60.shtml">
+              		辉煌70年              	</a>
+              </div>
+          </li>
+                    <li>
+              <div class="pic">
+              	<a target="_blank" href="http://www.v1.cn/zhuanti/63.shtml">
+              		<img src="http://img.app.v1.cn/image/newapp/images/201911/2019110614004120014880.jpg">
+              	</a>
+              </div>
+              <div class="txt">
+              	<a target="_blank" href="http://www.v1.cn/zhuanti/63.shtml">
+              		千年韵 万河情              	</a>
+              </div>
+          </li>
+                    <li>
+              <div class="pic">
+              	<a target="_blank" href="http://topics.gmw.cn/node_123698.htm">
+              		<img src="http://img.app.v1.cn/image/newapp/images/201911/2019111810003892144877.jpg">
+              	</a>
+              </div>
+              <div class="txt">
+              	<a target="_blank" href="http://topics.gmw.cn/node_123698.htm">
+              		知法懂法依法办网              	</a>
+              </div>
+          </li>
+                    </ul>
+        </div>
+                
+        <div class="indexBannerSideR indexS1">
+<!--        	<a href="#" target="_blank">-->
+<!--        		<img src="http://static.v1.cn/v1cn/web2017/images/temp_pic2.jpg">-->
+<!--        	</a>-->
+<!--          <p class="tit">-->
+<!--          	<span class="gray2">指南针炒股软件</span>-->
+<!--          	<span class="blue">广告</span>-->
+<!--          </p>-->
+		<script type='text/javascript'><!--//<![CDATA[ 
+var m3_u = (location.protocol=='https:'?'http://luckstatic.v1.cn/st/10000/1500/1459.js':'http://luckstatic.v1.cn/st/10000/1500/1459.js');
+document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+document.write ("?rand="+new Date().getTime());
+document.write ("'><\/scr"+"ipt>");
+//]]>--></script>
+        </div>
+        <div class="sideNewsBox">
+          <div class="sideColTit">热门视频</div>
+          <ul class="newsList" id="hotVideo"></ul>
+        </div>
+        <div class="indexBannerSideR indexS2">
+<!--        	<a href="#" target="_blank">-->
+<!--        		<img src="http://static.v1.cn/v1cn/web2017/images/temp_pic2.jpg">-->
+<!--        	</a>-->
+<!--        	<p class="tit">-->
+<!--        		<span class="gray2">指南针炒股软件</span>-->
+<!--        		<span class="blue">广告</span>-->
+<!--        	</p>-->
+		<script type='text/javascript'><!--//<![CDATA[ 
+var m3_u = (location.protocol=='https:'?'http://luckstatic.v1.cn/st/10000/1500/1460.js':'http://luckstatic.v1.cn/st/10000/1500/1460.js');
+document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+document.write ("?rand="+new Date().getTime());
+document.write ("'><\/scr"+"ipt>");
+//]]>--></script>
+        </div>
+        <div class="sideNewsBox lastNews">
+          <div class="sideColTit">最新更新</div>
+          <ul class="newsList" id="lastVideo"></ul>
+        </div>
+      </div>
+    </div>
+    <!--indexSideR end--> 
+    
+  </div>
+  
+<!--20170516 begin-->
+<div class="loginBox" style="display: none;" id="loginBox"> 
+      <!--<div class="prompt error" style="visibility: hidden;"><span>账号/密码错误</span></div>     不显示时用style="visibility: hidden;" -->
+      <div class="prompt error" style="display: none"><span>账号/密码错误</span></div>
+      <ul class="loginForm">
+        <li>
+          <input type="text" class="input" id="username"  placeholder="账号/手机号" >
+        </li>
+        <li>
+          <div class="placeholder">密码</div>
+          <input type="password" class="input passwordInput" id="password" placeholder="密码">
+        </li>
+        <li class="yzm">
+          <input type="text" class="input2" id="code" placeholder="验证码">
+          <p class="yzmBox">
+          <img  width="120" height="50" src="/user/getValidateCode" alt="" onclick= this.src="/user/getValidateCode?tm="+Math.random() style="cursor: pointer;" title="看不清？点击更换另一个验证码。"/>  
+          </p>
+        </li>
+        <li class="gray"><a href="/user/forgetPass" class="fr">忘记密码</a>
+          <input type="checkbox" class="checkbox" id="checkbox">
+          &nbsp;一个月内免登录</li>
+        <li><a href="javascript:;" class="loginBt white">登录</a></li>
+      </ul>
+      <div class="loginType">
+          <a target="_blank" href="" class="t1"> 微博</a>
+
+          <a href="javascript:" target="_blank" class="t2" onclick="window.open('/ThirdLogin/qqReq','TencentLogin','')"> QQ</a>
+
+<!--          <a href="#" class="t3"> 微信</a>-->
+      </div>
+      <div class="loginEnd blue"><a href="/user/reg">我要注册</a></div>
+    </div>
+<script src="http://static.v1.cn/v1cn/web2017/js/v1Site_login.js"></script>
+<script>
+$(function(){
+    $(".loginBt").click(function(){
+          var username = $("#username").val();
+          var password = $("#password").val();
+          var code = $("#code").val();
+          var checkbox = $("#checkbox").is(':checked');
+          if(username==''){
+              $(".error").show().find('span').html("手机号或用户名不能为空");
+              return false;
+          }
+          if(password==''){
+              $(".error").show().find('span').html("密码不能为空");
+              return false;
+          }
+          if(code==''){
+              $(".error").show().find('span').html("验证码不能为空");
+              return false;
+          }
+          $.ajax({
+                type:'POST',
+                url:'/user/loginOper',//路径
+                data:{  
+                    username:username,
+                    password:password,
+                    code:code,
+                    checkbox_status:checkbox,                              //是否选中1个月登录有效
+                },  
+                dataType:'json',
+                success:function(msg){
+                    if(msg.code==200)
+                    {
+                    	location.reload();
+                    	return false;
+                    }else{
+                        $(".error").show().find('span').html(msg.info);
+                        return false;
+                    }
+                }  
+            })
+    });
+      
+})
+
+function loginPop() 
+{
+	layer.open({
+	  type: 1, 
+	  title: "登录",
+	 // area: ['402px', '533px'],
+	  content: $('#loginBox')
+	}); 	
+}
+</script>
+<!--20170516 end-->  
+  
+<script>
+$(function(){
+	$(".options-box .text").one("click", function(){
+		var sid = $(this).parents('.pk-box').attr('id');
+		var obj = $(this);
+		var objId = $(this).parents("li").attr("id");
+		var tip = $(this).parents('.options-box').siblings('.pic').find('.tip span');
+		
+		var num = $(this).parents('.options-box').attr('data');
+		if(num > 0)
+			return false;
+		
+		$.ajax({
+			    url: "/second/vote",
+			    type: "post",
+			    data: {sid: sid,  type: obj.attr('type')},
+			    dataType: "json",
+			    success: function(data) {
+					if(data.msg == 1)
+					{
+						var b2Padding = 32;
+					    $("#"+objId).find(".left").css({height:"6px",width:data.list.support_percentage+"%",paddingRight:"0px",borderRadius:"50px 0 0 50px"});
+					    $("#"+objId).find(".right").css({height:"6px",width:data.list.oppose_percentage+"%",paddingLeft:"0px",borderRadius:"0 50px 50px 0"});
+					    $("#"+objId).find(".center,.option-img").hide();
+					  
+					    $("#"+objId).find(".pk-box .text-left").css({ "text-align": "left"});
+					    $("#"+objId).find(".pk-box .text-right").css({ "text-align": "right"});
+
+					    obj.parents('.options-box').attr('data', eval(num+"+1"));
+
+					    tip.text(eval(tip.text()+"+1"));
+
+					    obj.parents('.pk-box').find('.text-left').append('<span class="percent">'+data.list.support_percentage+'%</span>');
+					    obj.parents('.pk-box').find('.text-right').prepend('<span class="percent">'+data.list.oppose_percentage+'%</span>');
+					}
+					else if(data.msg == 3)
+					{
+						loginPop();
+						return false;
+					}
+					else if(data.msg == 4)
+					{
+						alert(data.list);
+						obj.parents('.options-box').attr('data', eval(num+"+1"));
+						return false;
+					}
+
+			    }
+		});	
+		
+	});
+	
+	getCommentList(8);
+	getCommentList(9);
+
+})
+
+function getCommentList(type)
+{
+	if(!type)
+		return false;		
+
+	$.post("/index/getCommendList4Ajax", {type: type},function(data){
+	     if(data.msg == 1)
+	     {
+	    	 var html = '';
+	    		$.each(data.list, function(i){
+	    			html += '<li><div class="pic">';
+	    			html += '<a href="/video/'+data.list[i].vid+'.shtml"  target="_blank">';
+	    			html += '<img src="'+data.list[i].pic+'"></a>';
+	    			html += '</div><div class="txt"><a href="/video/'+data.list[i].vid+'.shtml" target="_blank">'+data.list[i].title+'</a></div></li>';
+	    		})
+
+	    		if(type == 8)
+	    		{
+	    			$('#hotVideo').append(html);
+		    	}
+	    		else if(type == 9)
+	    		{
+	    			$('#lastVideo').append(html);
+		    	}
+		 }
+	   }, "json");
+}
+</script>
+<!--下边的函数是为了懒加载使用的，没有这个函数会报错-->
+<script>
+    
+    function checkbrowse() {   
+    var ua = navigator.userAgent.toLowerCase();   
+    var is = (ua.match(/\b(chrome|opera|safari|msie|firefox)\b/) || ['', 'mozilla'])[1];   
+    var r = '(?:' + is + '|version)[\\/: ]([\\d.]+)';   
+    var v = (ua.match(new RegExp(r)) || [])[1];   
+    jQuery.browser.is = is;   
+    jQuery.browser.ver = v;   
+    return {   
+    'is': jQuery.browser.is,   
+    'ver': jQuery.browser.ver   
+    }   
+    }  
+     $("img").lazyload({
+        effect:"fadeIn"
+     });
+</script>
+<script src="http://static.v1.cn/v1cn/web2017/js/ph.js"></script>
+
+ <!--footer begin-->
+  <div class="footerWrap">
+    <div class="footerIndexMain">
+    <div class="footerNav">
+      <ul>
+        <li><a target="_blank" href="http://v1group.com/about/intro/">集团介绍</a></li>
+        <li><a target="_blank" href="http://v1group.com/trends/news/">新闻中心</a></li>
+        <!--<li><a target="_blank" href="http://pc.v1.cn/sitemap/">网站地图</a></li>-->
+        <li><a target="_blank" href="http://v1group.com/business/new/">关于我们</a></li>
+        <li><a target="_blank" href="https://www.liepin.com/company/9113901/">诚聘英才</a></li>
+        <li><a target="_blank" href="http://www.v1.cn/Qualification/privacy.html">隐私政策</a></li>
+        <li><a target="_blank" href="http://www.v1group.com/contact/">联系我们</a></li>
+      </ul>
+    </div>
+    © 2019  第一视频公司版权所有<br>
+    <a target="_blank" href="http://www.v1.cn/Qualification/xinwen.html?from=v1">互联网新闻信息服务许可证(国新网许可证编号11220180006)</a>　<a target="_blank" href="http://www.v1.cn/Qualification/icp.html" >电信与信息服务业务经营许可证(京ICP证050390号)</a>　<a href="http://www.v1.cn/Qualification/jmzz.shtml">广播电视节目制作经营许可证 (广媒)字第150号</a><br>
+    统一社会信用代码：911101087754533048  <a target="_blank" href="http://sq.ccm.gov.cn:80/ccnt/sczr/service/business/emark/toDetail/57DBA3B393E0C00EE0530140A8C0691D"> 网络文化经营许可证：京网文【2018】10244-931号</a>　　网络出版服务许可证：（总）网出证（京）字第194号<br><a target="_blank" href="http://www.v1.cn/Qualification/shiting.html" >信息网络传播视听节目许可证(0105136)</a>  测绘资质证书(甲测资字1100561)  增值电信业务经营许可证B2-20050381<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11000002002116" class="gonganBei">京公网安备：11000002002116</a><br>
+    邮箱:service@v1.cn　　热线: 400-006-4571　　不良信息举报: 010-64706601
+    <div class="wanganList"> <a target="_blank" href="http://www.itrust.org.cn/home/index/itrust_certifi/wm/2775453304"><img src="http://static.v1.cn/v1cn/web2017/images/footer_wa_logo1.jpg" ></a> <a target="_blank" href="http://www.hd315.gov.cn/beian/view.asp?bianhao=010202005121600020"><img src="http://static.v1.cn/v1cn/web2017/images/footer_wa_logo2.jpg" ></a> <a target="_blank" href="http://www.12377.cn/"><img src="http://static.v1.cn/v1cn/web2017/images/footer_wa_logo3.jpg" ></a> <a target="_blank" href="http://www.bnia.cn/"><img src="http://static.v1.cn/v1cn/web2017/images/footer_wa_logo4.jpg" ></a> <a target="_blank"  href="http://www.cyberpolice.cn"><img src="http://static.v1.cn/v1cn/web2017/images/footer_wa_logo5.jpg" ></a> <a target="_blank" href="https://credit.szfw.org/CX20141125005630005718.html"><img src="http://static.v1.cn/v1cn/web2017/images/footer_wa_logo6.jpg" ></a> <a target="_blank"  href="http://www.bjwhzf.gov.cn/accuse.do"><img src="http://static.v1.cn/v1cn/web2017/images/footer_wa_logo7.jpg" ></a> <a target="_blank"  href="http://www.bjjubao.org/index.htm"><img src="http://static.v1.cn/v1cn/web2017/images/footer_wa_logo8.jpg" ></a> <a target="_blank"  href="https://ss.knet.cn/verifyseal.dll?sn=e15101011010860803dsde000000&ct=df&a=1&pa=0.917555071164685"><img src="http://static.v1.cn/v1cn/web2017/images/footer_wa_logo9.jpg" ></a></div>
+    </div>
+  </div>
+  <!--footer end-->
+
+</div>
+<script src="http://static.v1.cn/v1cn/web2017/js/v1Site_comm.js"></script>
+<script src="http://static.v1.cn/v1cn/web2017/js/v1Site_miaoping.js"></script>
+<script src="http://static.v1.cn/v1cn/web2017/js/v1Site_focus.js"></script>
+
+<!-- v1统计代码 -->
+<script type="text/javascript">
+cookie={
+set:function(cookieName, cookieValue, expires, path, domain, secure) {
+document.cookie =
+escape(cookieName) + '=' + escape(cookieValue)
++ (expires ? '; expires=' + expires.toGMTString() : '')
++ (path ? '; path=' + path : '')
++ (domain ? '; domain=' + domain : '')
++ (secure ? '; secure' : '');
+},
+get:function(cookieName) {
+var cookieValue = '';
+var posName = document.cookie.indexOf(escape(cookieName) + '=');
+if (posName != 1) {
+var posValue = posName + (escape(cookieName) + '=').length;
+var endPos = document.cookie.indexOf(';', posValue);
+if (endPos != -1) cookieValue = unescape(document.cookie.substring(posValue, endPos));
+else cookieValue = unescape(document.cookie.substring(posValue));
+}
+return (cookieValue);
+}
+}
+if(cookie.get('CookieV1Log')==""){
+v1log=new Date();
+cValue = Math.ceil(((v1log.getTime()*9321+49297) % 233280 /(233280.0)) * 9999999999999999);
+v1log.setTime(v1log.getTime() + 86400000);
+cookie.set('CookieV1Log',cValue,v1log,'','','');
+}
+path = "http://v1log.v1.cn/log.js?page=wap_jrtt&yu="+cookie.get('CookieV1Log')+"&tmp="+Math.round(Math.random()*100000)+"&referer="+document.referrer+"&customSort=wap";
+document.write("<script type=text/javascript src ="+path+" ><\/script> ");
+</script>
+<!-- v1统计代码end -->
+
+<!-- START baidu v1.0 -->
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fcb44eb450c53c91a1cc1d2511f5919b3' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<!-- END baidu v1.0 -->
+<!-- cnzz  -->
+<div style="display:none">
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1255096340'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1255096340%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+</div>
+<style>
+            .layui-layer { background-color:gray; }
+        </style>
+<!-- end cnzz -->
+</body>
+</html>

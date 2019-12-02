@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>都市客 - 白领互动交流平台</title>
+ <meta name="keywords" content="都市客,白领,试用,社区,美容,护肤,时装,搭配,生活方式,旅游美食,资讯,优家画报"/>
+ <meta name="description" content="都市客作为一家轻白领网站，致力于为年轻白领一族提供新潮的美妆资讯、时尚风向及生活方式，打造聚集美妆达人、时尚大咖及生活领袖的互动交流平台。" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=1200">
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<script type="text/javascript" src="http://wwwimg.metroer.com/templates/default/js/jquery-1.8.0.min.js?v=43"></script>
+<script type="text/javascript" src="http://wwwimg.metroer.com/templates/default/js/jquery.nicescroll.js"></script>
+<script type="text/javascript" src="http://wwwimg.metroer.com/templates/default/js/jquery.lazyload.min.js"></script>
+<script type="text/javascript" src="http://wwwimg.metroer.com/templates/default/js/jquery-scrolltofixed-min.js"></script>
+<link href="http://wwwimg.metroer.com/templates/default/css/idangerous.swiper.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://wwwimg.metroer.com/templates/default/js/idangerous.swiper-2.1.min.js"></script>
+<script type="text/javascript" src="http://wwwimg.metroer.com/templates/default/js/jquery.cookie.js"></script>
+<link href="http://wwwimg.metroer.com/templates/default/js/jBox/Skins/Gray/jbox.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://wwwimg.metroer.com/templates/default/js/jBox/jquery.jBox-2.3.min.js"></script>
+<script type="text/javascript" src="http://wwwimg.metroer.com/templates/default/js/jBox/i18n/jquery.jBox-zh-CN.js"></script>
+<link href="/templates/default/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="http://wwwimg.metroer.com/templates/default/css/style.css?v=19101101" rel="stylesheet" type="text/css" />
+<!--[if IE 7]>
+<link href="/templates/default/css/font-awesome-ie7.min.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<script>
+var userinfo = {'uid':0, 'username':''};
+
+$(document).ready(function () {
+    if($.cookie('login_uid')) {
+        $.post("/index.php?m=user&a=check_login", {'id':0}, function (data) {
+            var result = eval('('+data+')');
+            if(result.status == 0) {
+                $("#top-user").html(result.content);
+                userinfo = {'uid':result.uid, 'username':result.username};
+                $("#top-username, #top-user-menu").hover(function () {
+                    $("#top-user-menu").show();
+                    }, function () {
+                    if(!$("#top-user-menu").hasClass('active')) {
+                        $("#top-user-menu").hide();
+                    }
+                });
+            }
+        });
+    }
+});
+</script>
+<script type="text/javascript" src="http://wwwimg.metroer.com/templates/default/js/default.js?v=190311"></script>
+<meta property="qc:admins" content="2363373426655427526375" />
+<script>
+    if (system.win || system.mac || system.xll||system.ipad) {
+        // PC
+    } else {
+        // Mobile
+        // window.location.href = "http://m.metroer.com";
+    }
+</script>
+</head>
+
+<body>
+<div class="metroer-top" id="metroer-top">
+    <div class="container container1200">
+        <div class="top-left">
+            <span>关注我们：</span>
+            <a href="http://weibo.com/metroercom" target="_blank"><img src="http://wwwimg.metroer.com/templates/default/images/icon-weibo.png" style="position: relative;top: 2px;"></a>
+            <a href="javascript:;" id="show-qrcode"><img src="http://wwwimg.metroer.com/templates/default/images/icon-weixin.png" style="position: relative;top: 3px;"></a>
+            <div class="clear"></div>
+        </div>
+        <div id="weixin-qrcode"><img src="http://wwwimg.metroer.com/templates/default/images/qrcode.jpg?v=2"></div>
+
+        <div class="top-user" id="top-user">
+                        <a href="http://passport.metroer.com/login.php?forward=http://metroer.com/" style="margin-right: 0;">登录</a>
+            OR <a href="http://passport.metroer.com/reg.php?forward=http://metroer.com/" style="margin-left: 0;">注册</a>
+                    </div>
+        <form action="http://ilady.metroer.com/search" id="top-search">
+            <input type="text" id="search-keyword" name="keyword" placeholder="搜索" value="">
+            <input type="submit" id="top-search-btn" value="">
+        </form>
+        <div class="clear"></div>
+    </div>
+</div>
+<div class="metroer-header">
+    <div class="container container1200">
+        <div class="metroer-logo">
+            <a href="http://www.metroer.com"><img src="http://wwwimg.metroer.com/templates/default/images/logo.jpg?v=0327"></a>
+        </div>
+        <div class="main-nav">
+            <a href="http://www.metroer.com" style="margin-left: 20px;">首页</a>
+                        <a href="http://ilady.metroer.com/beauty" style="margin-left: 40px;" class="show-sub-nav" cat-id="9">Beauty</a>
+                        <a href="http://ilady.metroer.com/zdm" style="margin-left: 40px;" class="show-sub-nav" cat-id="13">值得买</a>
+                        <a href="http://try.metroer.com" style="margin-left: 40px;">优品试用</a>
+            <a href="http://camp.metroer.com/camp" style="margin-left: 40px;">美妆教室</a>
+            <a href="http://brand.metroer.com/brand" style="margin-left: 40px;">品牌专区</a>
+            <a href="http://shop.metroer.com" class="shop">福利社</a>
+            <a href="http://bbs.metroer.com" class="bbs">社区</a>
+
+                        <div class="sub-nav" id="sub-nav-9" cat-id="9">
+                                <a href="http://ilady.metroer.com/test">测评</a>
+                                <a href="http://ilady.metroer.com/skincare">护肤</a>
+                                <a href="http://ilady.metroer.com/makeup">彩妆</a>
+                                <a href="http://ilady.metroer.com/body">美体</a>
+                                <a href="http://ilady.metroer.com/fashion">时尚</a>
+                                <a href="http://ilady.metroer.com/lifestyle">生活</a>
+                                <a href="http://ilady.metroer.com/star">明星</a>
+                                <a href="http://ilady.metroer.com/travel">旅游</a>
+                                <span></span>
+            </div>
+                        <div class="sub-nav" id="sub-nav-13" cat-id="13">
+                                <a href="http://ilady.metroer.com/ygss">优购时尚</a>
+                                <a href="http://ilady.metroer.com/mfmm">美分美秒</a>
+                                <a href="http://ilady.metroer.com/yxsh">优享生活</a>
+                                <a href="http://ilady.metroer.com/jyxx">家用心选</a>
+                                <a href="http://ilady.metroer.com/dsqd">剁手清单</a>
+                                <span></span>
+            </div>
+                    </div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+<!-- div class="app-tip">
+    <img class="app-logo" src="http://wwwimg.metroer.com/templates/default/images/app-logo.png">
+    <span class="app-tip-text">免费试用，演出门票，精彩活动</span>
+    <a href="javascript:openapp();" target="_blank" class="go-app">立即体验</a>
+</div -->
+
+<div class="container container1200" style="padding-bottom: 70px;">
+    <div class="swiper-container home-banner">
+        <div class="swiper-wrapper">
+                                                                                    <div class="swiper-slide">
+                <a href="http://ilady.metroer.com/fashion/22412" target="_blank"><img src="http://wwwimg.metroer.com/upload/1912/02/2651888055de48ca1079960.06252205.jpg"></a>
+            </div>
+                        <div class="swiper-slide">
+                <a href="http://try.metroer.com/" target="_blank"><img src="http://wwwimg.metroer.com/upload/1911/28/10771754405ddf7442c6c4e4.67025481.jpg"></a>
+            </div>
+                        <div class="swiper-slide">
+                <a href="http://ilady.metroer.com/body/22402" target="_blank"><img src="http://wwwimg.metroer.com/upload/1911/28/13520744735ddf3a569e1da9.52020687.jpg"></a>
+            </div>
+                        <div class="swiper-slide">
+                <a href="http://ilady.metroer.com/test/22363" target="_blank"><img src="http://wwwimg.metroer.com/upload/1911/26/15417628855ddc141709c046.99141636.jpg"></a>
+            </div>
+                        <div class="swiper-slide">
+                <a href="http://try.metroer.com/" target="_blank"><img src="http://wwwimg.metroer.com/upload/1911/26/10837232315ddcce506e3047.58373207.jpg"></a>
+            </div>
+                    </div>
+        <div class="pagination"></div>
+    </div>
+
+    <div class="home-feature">
+        <div class="home-feature-item">
+            <p class="title"><span></span><a href="http://try.metroer.com/" target="_blank">优品试用</a></p>
+            <p class="cover">
+            <a href="http://try.metroer.com/" target="_blank"><img src="http://wwwimg.metroer.com/upload/1911/28/3054530335ddf746095e183.45910590.jpg"><span class="home-feature-pop-title">赫妍魅感致彩唇釉(小黑钻唇釉)</span></a>
+            </p>
+        </div>
+        <div class="home-feature-item">
+            <p class="title"><span></span><a href="http://shop.metroer.com/" target="_blank">福利社</a></p>
+            <p class="cover"><a href="http://shop.metroer.com/" target="_blank"><img src="http://wwwimg.metroer.com/upload/1901/07/11453668005c32b0ed5657e2.42640969.jpg"><span class="home-feature-pop-title">都市客福利社，精彩礼品等你来换</span></a></p>
+        </div>
+        <div class="home-feature-item">
+                        <p class="title"><span></span><a href="http://ilady.metroer.com/lifestyle/22374" target="_blank">精选推荐</a></p>
+            <p class="cover"><a href="http://ilady.metroer.com/lifestyle/22374" target="_blank"><img src="http://wwwimg.metroer.com/upload/1911/25/11384225905ddb4a9aa74a03.26373040.jpg"><span class="home-feature-pop-title">不允许吝啬使用“炸裂”这个词！</span></a></p>
+                    </div>
+        <div class="home-feature-item">
+                        <p class="title"><span></span><a href="http://ilady.metroer.com/ygss/22410" target="_blank">精选推荐</a></p>
+            <p class="cover"><a href="http://ilady.metroer.com/ygss/22410" target="_blank"><img src="http://wwwimg.metroer.com/upload/1912/01/6902054185de3a43ddec920.47889565.jpg"><span class="home-feature-pop-title">冬季质感搭配，你pick哪一款拼接单品！</span></a></p>
+                    </div>
+        <div class="clear"></div>
+    </div>
+
+    <div class="home-banner-goto">
+        <script src="/goto/19"></script>
+    </div>
+    <div class="home-banner-goto">
+        <script src="/goto/24"></script>
+    </div>
+
+    <div class="home-category-title">
+        <img src="http://wwwimg.metroer.com/templates/default/images/home-category-1.jpg">
+    </div>
+    <div class="home-sub-category">
+                <a href="http://ilady.metroer.com/test">测评</a>
+                <a href="http://ilady.metroer.com/skincare">护肤</a>
+                <a href="http://ilady.metroer.com/makeup">彩妆</a>
+                <a href="http://ilady.metroer.com/body">美体</a>
+                <a href="http://ilady.metroer.com/fashion">时尚</a>
+                <a href="http://ilady.metroer.com/lifestyle">生活</a>
+                <a href="http://ilady.metroer.com/star">明星</a>
+                <a href="http://ilady.metroer.com/travel">旅游</a>
+            </div>
+    <div class="home-category-recommend">
+                <div class="recommend-banner"><a href="http://ilady.metroer.com/lifestyle/22397" target="_blank"><img src="http://wwwimg.metroer.com/upload/1911/28/8053613155ddf227e0542f3.41339692.jpg"></a></div>
+                <div class="recommend-hot">
+            <p class="title"><span>热点</span> 排行榜</p>
+            <ul>
+                                                <li><a href="http://ilady.metroer.com/test/22363" target="_blank">都市客测评 | 论奶白肌 很少有人比得过赖冠霖吧？</a></li>
+                                                                <li><a href="http://ilady.metroer.com/test/22382" target="_blank">试用体验精选 | 经典小蓝管 泡沫超绵密 SENKA珊珂绵润泡沫洁面乳</a></li>
+                                                                <li><a href="http://ilady.metroer.com/test/22394" target="_blank">试用体验精选 | 让你的头皮会呼吸 ChristopheRobin海盐舒缓头皮洁净霜</a></li>
+                                                                <li><a href="http://ilady.metroer.com/fashion/22388" target="_blank">粉彩艺术</a></li>
+                                                                                <li><a href="http://ilady.metroer.com/body/22402">颜值加油站 | 天天护肤护唇护发，怎么不见你护牙？</a></li>
+                                                                                                <li><a href="http://ilady.metroer.com/makeup/22409">Vol.28美妆教室开课啦 | 是时候给你的梳妆台来一次2019“断舍离”</a></li>
+                                                                                                <li><a href="http://ilady.metroer.com/test/22396">试用体验精选 | 适你的，也适肌肤的 悠莱肌能定律匀润乳-0号</a></li>
+                                                                                <span class="icon1"><span class="icon2"></span></span>
+            </ul>
+        </div>
+
+        <div class="home-category-recommend-article">
+            <p class="cover"><a href="http://ilady.metroer.com/test/22373" target="_blank"><img src="http://wwwimg.metroer.com/upload/1911/26/16266187985ddc1565299186.42777350.jpg"></a></p>
+            <p class="title"><a href="http://ilady.metroer.com/test/22373" target="_blank">显老第一条眼纹 消灭！</a></p>
+            <p class="description">断崖式降温直接将肌肤冻成了沙漠皮，眼周肌肤都被干出了小细纹。SOS显老警告！在干天干地的冬天，如何躲过显老眼纹的追击？</p>
+            <p class="home-more"><a href="http://ilady.metroer.com/test/22373" class="more" target="_blank">MORE</a></p>
+        </div>
+        <div class="home-category-recommend-article">
+            <p class="cover"><a href="http://ilady.metroer.com/dsqd/22404" target="_blank"><img src="http://wwwimg.metroer.com/upload/1911/27/12122674495dde498b4b2958.56059655.jpg"></a></p>
+            <p class="title"><a href="http://ilady.metroer.com/dsqd/22404" target="_blank">相信我，卫衣叠穿更好看</a></p>
+            <p class="description">最近各地都进入降温模式，单穿一件卫衣已经无法起到最基本的御寒作用了，于是潮人们纷纷在卫衣里内搭或者在卫衣外面套一件外套。</p>
+            <p class="home-more"><a href="http://ilady.metroer.com/dsqd/22404" class="more" target="_blank">MORE</a></p>
+        </div>
+        <div class="home-category-recommend-article">
+            <p class="cover"><a href="http://ilady.metroer.com/test/22396" target="_blank"><img src="http://wwwimg.metroer.com/upload/1911/29/16243766165de0e7e70e3255.00582054.jpg"></a></p>
+            <p class="title"><a href="http://ilady.metroer.com/test/22396" target="_blank">悠莱肌能定律匀润乳-0号</a></p>
+            <p class="description">悠莱肌能定律匀润乳-0号添加温和草本精粹、木糖醇成分与双重玻尿酸，能够修护肌肤屏障，强韧肌肤，赋予肌肤水润透亮。</p>
+            <p class="home-more"><a href="http://ilady.metroer.com/test/22396" class="more" target="_blank">MORE</a></p>
+        </div>
+        <div class="home-category-recommend-goto">
+                        <p class="goto1"><a href="http://ilady.metroer.com/star/22408" target="_blank"><img src="http://wwwimg.metroer.com/upload/1911/28/3652221355ddf9c47d2d7f3.59521353.jpg"><span class="recommend-pop-title">这些盐系小哥哥怎么辣么好看鸭！</span></a></p>
+            
+                        <p class="goto2"><a href="http://ilady.metroer.com/lifestyle/22400" target="_blank"><img src="http://wwwimg.metroer.com/upload/1911/27/13840215455dde33e0d804c0.96885295.jpg"><span class="recommend-pop-title">母胎solo28年，一个人甭提多爽了？！</span></a></p>
+                    </div>
+        <div class="clear"></div>
+    </div>
+
+    <div class="home-category-title">
+        <img src="http://wwwimg.metroer.com/templates/default/images/home-meizhuang.jpg">
+    </div>
+    <div class="home-category-recommend">
+                <div class="recommend-banner"><a href="http://ilady.metroer.com/makeup/22409" target="_blank"><img src="http://wwwimg.metroer.com/upload/1911/29/6015802325de0d6e44d0ae4.60295320.jpg"></a></div>
+                <div class="recommend-hot">
+            <p class="title"><span>达人</span> 课堂</p>
+            <ul>
+                                                <li><a href="http://camp.metroer.com/camp/question/1269" target="_blank">黛珂水乳</a></li>
+                                                                <li><a href="http://camp.metroer.com/camp/question/1268" target="_blank">眼角周边的斑</a></li>
+                                                                <li><a href="http://camp.metroer.com/camp/question/1267" target="_blank">一到秋冬就感觉脸色发黄，季节对肤色有影响吗</a></li>
+                                                                <li><a href="http://camp.metroer.com/camp/question/1266" target="_blank">大家来分享好用又平价的护手霜吧~~~</a></li>
+                                                                                <li><a href="http://camp.metroer.com/camp/question/1265">林清轩的山茶花精油大家用过么，效果咋样？</a></li>
+                                                                                                <li><a href="http://camp.metroer.com/camp/question/1264">用了隔离产品还需要再用防晒么？</a></li>
+                                                                                                <li><a href="http://camp.metroer.com/camp/question/1263">冬天大家是选择唇膏还是唇釉产品？</a></li>
+                                                                                <span class="icon1"><span class="icon2"></span></span>
+            </ul>
+        </div>
+
+        <div class="home-category-recommend-article">
+            <p class="cover"><a href="http://ilady.metroer.com/body/22338" target="_blank"><img src="http://wwwimg.metroer.com/upload/1911/22/12297302795dd739116c9be0.77425111.jpg"></a></p>
+            <p class="title"><a href="http://ilady.metroer.com/body/22338" target="_blank">看上去显瘦增发量的发型</a></p>
+            <p class="description">过完厮杀血拼的双十一，在公司等快递的都小客闲着无聊刷微博看看有啥新鲜事（八卦），没想到竟然看到微博热搜TOP2竟然是：#假发 成交数#！</p>
+            <p class="home-more"><a href="http://ilady.metroer.com/body/22338" class="more" target="_blank">MORE</a></p>
+        </div>
+        <div class="home-category-recommend-article">
+            <p class="cover"><a href="http://ilady.metroer.com/star/22380" target="_blank"><img src="http://wwwimg.metroer.com/upload/1911/25/21150064435ddb55c1132db0.83641520.jpg"></a></p>
+            <p class="title"><a href="http://ilady.metroer.com/star/22380" target="_blank">在边界之外寻找惊喜</a></p>
+            <p class="description">提起Alexander Wang（以下简称AW），你会想到什么？他穿着黑色T恤奔跑着谢幕的场景，还是他极具年轻活力又代表着当代奢侈的设计？</p>
+            <p class="home-more"><a href="http://ilady.metroer.com/star/22380" class="more" target="_blank">MORE</a></p>
+        </div>
+        <div class="home-category-recommend-article">
+            <p class="cover"><a href="http://ilady.metroer.com/fashion/22391" target="_blank"><img src="http://wwwimg.metroer.com/upload/1911/27/21026810795dde49bf47bc50.16695232.jpg"></a></p>
+            <p class="title"><a href="http://ilady.metroer.com/fashion/22391" target="_blank">明亮的冬日搭配</a></p>
+            <p class="description">没有色彩的冬日搭配是平淡而乏味的，奇妙而丰富的色彩语言犹如女人多样的性格，外向的黄、温润的紫或是睿智的蓝……</p>
+            <p class="home-more"><a href="http://ilady.metroer.com/fashion/22391" class="more" target="_blank">MORE</a></p>
+        </div>
+        <div class="home-category-recommend-goto">
+                        <p class="goto1"><a href="http://camp.metroer.com/camp/question/1226" target="_blank"><img src="http://wwwimg.metroer.com/upload/1910/16/1123816535da6df627cd3c9.85296501.jpg"><span class="recommend-pop-title">求推荐适合秋天的香水</span></a></p>
+            
+                        <p class="goto2"><a href="http://camp.metroer.com/camp/question/1236" target="_blank"><img src="http://wwwimg.metroer.com/upload/1910/16/10428169495da6dfa7e98066.22813277.jpg"><span class="recommend-pop-title">怎么越保养觉得皮肤越差呢？</span></a></p>
+                    </div>
+        <div class="clear"></div>
+    </div>
+
+    <div class="home-banner-goto">
+        <script src="/goto/23"></script>
+    </div>
+    <div class="home-category-title">
+        <img src="http://wwwimg.metroer.com/templates/default/images/home-brand.jpg">
+    </div>
+    <div class="top-brand-list" style="padding: 0 15px;">
+                <div class="top-brand-item">
+            <p class="cover">
+            <a href="http://brand.metroer.com/brand/164"><img src="http://wwwimg.metroer.com/upload/1610/31/19421754635816aa37b163e4.57437299.jpg" /></a>
+            <span>TOP1</span>
+            </p>
+            <p class="title"><a href="http://brand.metroer.com/brand/164">Dior 迪奥</a></p>
+            <p class="fields">
+            <span class="comments"><a href="http://brand.metroer.com/brand/164#comment">30个点评</a></span>
+            <span class="goods"><a href="http://brand.metroer.com/brand/164/goods">78个产品</a></span>
+            </p>
+        </div>
+                <div class="top-brand-item">
+            <p class="cover">
+            <a href="http://brand.metroer.com/brand/201"><img src="http://wwwimg.metroer.com/upload/1611/15/665410335582ab77275bd99.30429528.jpg" /></a>
+            <span>TOP2</span>
+            </p>
+            <p class="title"><a href="http://brand.metroer.com/brand/201">DHC 蝶翠诗</a></p>
+            <p class="fields">
+            <span class="comments"><a href="http://brand.metroer.com/brand/201#comment">3个点评</a></span>
+            <span class="goods"><a href="http://brand.metroer.com/brand/201/goods">117个产品</a></span>
+            </p>
+        </div>
+                <div class="top-brand-item">
+            <p class="cover">
+            <a href="http://brand.metroer.com/brand/68"><img src="http://wwwimg.metroer.com/upload/1610/28/13969557745812b4ee895660.98530758.jpg" /></a>
+            <span>TOP3</span>
+            </p>
+            <p class="title"><a href="http://brand.metroer.com/brand/68">Whoo 后</a></p>
+            <p class="fields">
+            <span class="comments"><a href="http://brand.metroer.com/brand/68#comment">3个点评</a></span>
+            <span class="goods"><a href="http://brand.metroer.com/brand/68/goods">9个产品</a></span>
+            </p>
+        </div>
+                <div class="top-brand-item">
+            <p class="cover">
+            <a href="http://brand.metroer.com/brand/197"><img src="http://wwwimg.metroer.com/upload/1611/03/787461438581ab0a037caf1.45658529.jpg" /></a>
+            <span>TOP4</span>
+            </p>
+            <p class="title"><a href="http://brand.metroer.com/brand/197">ESTHEDERM 雅诗敦</a></p>
+            <p class="fields">
+            <span class="comments"><a href="http://brand.metroer.com/brand/197#comment">10个点评</a></span>
+            <span class="goods"><a href="http://brand.metroer.com/brand/197/goods">20个产品</a></span>
+            </p>
+        </div>
+                <div class="top-brand-item">
+            <p class="cover">
+            <a href="http://brand.metroer.com/brand/235"><img src="http://wwwimg.metroer.com/upload/1612/19/196744825158574d3fde4dc0.36771178.png" /></a>
+            <span>TOP5</span>
+            </p>
+            <p class="title"><a href="http://brand.metroer.com/brand/235">CHOW TAI FOOK 周大福</a></p>
+            <p class="fields">
+            <span class="comments"><a href="http://brand.metroer.com/brand/235#comment">3个点评</a></span>
+            <span class="goods"><a href="http://brand.metroer.com/brand/235/goods">22个产品</a></span>
+            </p>
+        </div>
+                <div class="top-brand-item">
+            <p class="cover">
+            <a href="http://brand.metroer.com/brand/178"><img src="http://wwwimg.metroer.com/upload/1611/03/1153400926581ade21995913.35125867.jpg" /></a>
+            <span>TOP6</span>
+            </p>
+            <p class="title"><a href="http://brand.metroer.com/brand/178">Sisley 希思黎</a></p>
+            <p class="fields">
+            <span class="comments"><a href="http://brand.metroer.com/brand/178#comment">4个点评</a></span>
+            <span class="goods"><a href="http://brand.metroer.com/brand/178/goods">117个产品</a></span>
+            </p>
+        </div>
+                <div class="top-brand-item">
+            <p class="cover">
+            <a href="http://brand.metroer.com/brand/182"><img src="http://wwwimg.metroer.com/upload/1610/27/20496247265811a9f7df64f5.49101492.gif" /></a>
+            <span>TOP7</span>
+            </p>
+            <p class="title"><a href="http://brand.metroer.com/brand/182">IPSA 茵芙莎</a></p>
+            <p class="fields">
+            <span class="comments"><a href="http://brand.metroer.com/brand/182#comment">6个点评</a></span>
+            <span class="goods"><a href="http://brand.metroer.com/brand/182/goods">83个产品</a></span>
+            </p>
+        </div>
+                <div class="top-brand-item">
+            <p class="cover">
+            <a href="http://brand.metroer.com/brand/185"><img src="http://wwwimg.metroer.com/upload/1611/17/1898760253582d2b5c9214f2.34018857.jpg" /></a>
+            <span>TOP8</span>
+            </p>
+            <p class="title"><a href="http://brand.metroer.com/brand/185">AUPRES 欧珀莱</a></p>
+            <p class="fields">
+            <span class="comments"><a href="http://brand.metroer.com/brand/185#comment">8个点评</a></span>
+            <span class="goods"><a href="http://brand.metroer.com/brand/185/goods">58个产品</a></span>
+            </p>
+        </div>
+                <div class="top-brand-item">
+            <p class="cover">
+            <a href="http://brand.metroer.com/brand/58"><img src="http://wwwimg.metroer.com/upload/1911/27/14453628985dddfbf0139d40.22391529.jpg" /></a>
+            <span>TOP9</span>
+            </p>
+            <p class="title"><a href="http://brand.metroer.com/brand/58">urara 悠莱</a></p>
+            <p class="fields">
+            <span class="comments"><a href="http://brand.metroer.com/brand/58#comment">15个点评</a></span>
+            <span class="goods"><a href="http://brand.metroer.com/brand/58/goods">15个产品</a></span>
+            </p>
+        </div>
+                <div class="top-brand-item">
+            <p class="cover">
+            <a href="http://brand.metroer.com/brand/222"><img src="http://wwwimg.metroer.com/upload/1611/03/1959766744581ab36ad7e851.92277434.jpg" /></a>
+            <span>TOP10</span>
+            </p>
+            <p class="title"><a href="http://brand.metroer.com/brand/222">L'Occitane 欧舒丹</a></p>
+            <p class="fields">
+            <span class="comments"><a href="http://brand.metroer.com/brand/222#comment">7个点评</a></span>
+            <span class="goods"><a href="http://brand.metroer.com/brand/222/goods">171个产品</a></span>
+            </p>
+        </div>
+                <div class="clear"></div>
+    </div>
+
+    <div class="home-category-title" style="margin-top: 50px;">
+        <img src="http://wwwimg.metroer.com/templates/default/images/home-recommend-bbs.jpg?v=1121">
+    </div>
+    <div class="home-hot-list">
+        <div class="home-hot-item">
+            <p class="cover"><a href="http://bbs.metroer.com/t-1109609-1-1.html" target="_blank"><img src="http://wwwimg.metroer.com/upload/1909/06/15499606745d722818bbdfd6.62767239.jpg"></a></p>
+            <p class="avatar"><a href="http://my.metroer.com/3331271" target="_blank"><img src="http://myimg.metroer.com/images/face/7/5/3331271_s.jpg"></a></p>
+            <div class="description" style="margin-left: 5px;"><p>提前和小舞约好，在周六的时候来澜沫吃一顿下午茶。</p><span class="arrow"></span></div>
+            <div class="clear"></div>
+        </div>
+        <div class="home-hot-item">
+            <p class="avatar"><a href="http://my.metroer.com/3328946" target="_blank"><img src="http://myimg.metroer.com/images/face/0/55/3328946_s.jpg"></a></p>
+            <div class="description" style="margin-left: 5px;"><p>护肤品必须必要带平时自己在用的！</p><span class="arrow"></span></div>
+            <div class="clear"></div>
+            <p class="cover"><a href="http://bbs.metroer.com/t-1109868-1-1.html" target="_blank"><img src="http://wwwimg.metroer.com/upload/1910/09/21273445965d9d83b4ab73c3.53054049.jpg"></a></p>
+        </div>
+        <div class="home-hot-item">
+            <p class="cover"><a href="http://bbs.metroer.com/t-1109488-1-1.html" target="_blank"><img src="http://wwwimg.metroer.com/upload/1909/06/2758178655d72285b3b5260.80107377.jpg"></a></p>
+            <div class="description"><p>和同事结伴出去打牙祭，几个女生，最常选择的可能就是轻食了。</p><span class="arrow2"></span></div>
+            <p class="avatar" style="margin-left: 5px;"><a href="http://my.metroer.com/3332653" target="_blank"><img src="http://myimg.metroer.com/images/face/b/33/3332653_s.jpg"></a></p>
+            <div class="clear"></div>
+        </div>
+        <div class="home-hot-top">
+                        <div class="top-list">
+                <p class="title"><span>话题</span> 排行榜</p>
+                <ul>
+                                        <li><a href="https://weibo.com/1661748403/IgktMEnFO" target="_blank">都市客小编教你怎样赢试用</a></li>
+                                        <li><a href="http://bbs.metroer.com/t-1110319-1-1.html" target="_blank">关注都市客微博微信赢厚礼</a></li>
+                                        <li><a href="http://bbs.metroer.com/t-1066928-1-1.html" target="_blank">都市客M币赚取全攻略</a></li>
+                                        <li><a href="http://bbs.metroer.com/t-1092054-1-1.html" target="_blank">玩转品牌专区的攻略大全！</a></li>
+                                        <span class="icon1"><span class="icon2"></span></span>
+                </ul>
+            </div>
+            <div class="goto">
+                <a href="https://weibo.com/1661748403/IgktMEnFO"><img src="http://wwwimg.metroer.com/upload/1911/15/10131830405dce5b32c19af6.09417833.jpg"></a>
+                            </div>
+                    </div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+<div class="metroer-bottom">
+    <div class="friendlink" style="font-size: 14px;">
+        友情链接：
+        <a href="http://www.modernweekly.com/" target="_blank">周末画报</a>
+        <span>│</span>
+        <a href="http://www.cityhowwhy.com.hk/" target="_blank">CityMagazine</a>
+        <span>│</span>
+        <a href="http://www.ilohas.com/" target="_blank">Lohas乐活</a>
+        <span>│</span>
+        <a href="http://www.chinalifemagazine.com/" target="_blank">生活月刊</a>
+        <span>│</span>
+        <a href="http://www.theoutlookmagazine.com/" target="_blank">新视线</a>
+        <span>│</span>
+        <a href="http://www.milanquan.com/" target="_blank">米兰圈</a>
+        <span>│</span>
+        <a href="http://www.guoli.com/" target="_blank">果粒网</a>
+        <span>│</span>
+        <a href="http://www.vcbeat.net/" target="_blank">动脉网</a>
+    </div>
+</div>
+<div class="metroer-footer">
+    <div class="container container1200" style="background: #393b3a;">
+        <div class="footer-left"><img src="http://wwwimg.metroer.com/templates/default/images/footer-logo.jpg" style="margin-top: 15px;"></div>
+        <div class="footer-right">
+            <div class="home-footer-nav">
+                <a href="http://ilady.metroer.com/html/right.html">授权声明</a>
+                <a href="http://ilady.metroer.com/html/hr.html">招聘信息</a>
+                <a href="http://ilady.metroer.com/html/contact.html">联系信息</a>
+                <a href="http://ilady.metroer.com/html/ads.html">广告服务</a>
+                <a href="http://ilady.metroer.com/html/coop.html">合作媒体</a>
+                <a href="http://ilady.metroer.com/html/mtdt.html">媒体动态</a>
+            </div>
+            <div class="footer-copyright">
+                <p>电话：（+86）60707252 （工作日 09：00-18:00）</p>
+                <p>版权所有：上海森音信息技术有限公司</p>
+                <p>Copyright Metroer.com All Rights Reseved <a href="http://beian.miit.gov.cn" target="_blank">沪ICP备05019890号-1</a> <img src="http://wwwimg.metroer.com/templates/default/images/icon-beian.png"> 沪公网安备 31010102004646号</p>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<div style="display: none;">
+    <script src="http://s11.cnzz.com/z_stat.php?id=1257733249&web_id=1257733249" language="JavaScript"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?6f4e6aa3b03cc72e8345d5e1a08b1c8a";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+
+        $(document).ready(function () {
+            $("[data-track]").on("click", function () {
+                var label = $(this).data("track");
+                _hmt && _hmt.push(['_trackEvent', label, 'click']);
+            });
+        });
+    </script>
+</div>
+<a id="gotop" title="回到顶部" data-track="回到顶部" href="javascript:;"><span>&#9650;</span></a>
+</body>
+</html>

@@ -1,0 +1,1867 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+
+
+
+<head>
+
+	<script>
+	// QOS start time must be as early as possible.
+	var QOS_PAGE_START_MS = Date.now ? Date.now() : +new Date();
+	</script>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<meta name="google-site-verification" content="1Qh3vOiXB3qeXdLNFz3xnaBvEtDEWy54WGrZcgETHFQ" />
+	
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0" />
+	
+	<meta name='format-detection' content='telephone=no'>
+	
+	
+	
+
+	
+		
+			<meta name="apple-mobile-web-app-capable" content="yes">
+			<meta name="apple-mobile-web-app-status-bar-style" content="white">
+			<meta name="apple-mobile-web-app-title" content="">
+			<link rel="apple-touch-icon" href="/static/images/logo-152x152.png">
+		
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+	
+
+
+
+	<link href="/static/css/common.css?03de8b40d5f2" rel="stylesheet">
+	<link href="/static/css/icons.css?601bc084c065" rel="stylesheet">
+	
+	<link href="/static/css/fonts.css?25a358e3467e" rel="stylesheet">
+	
+	
+	<link rel="stylesheet" href="/static/css/common/web_popup.css?ff9073462c34">
+	<link rel="stylesheet" href="/static/css/common/web_popup_box.css?c436f8ffc5cb">
+	
+	
+
+
+
+
+
+	
+		<meta name="title" content="Shopee Indonesia Jual Beli di Ponsel dan Online"/>
+		<meta name="description" content="Jelajahi pusat perbelanjaan mobile, Shopee! Jual Beli dalam 30 detik. Kapanpun, Dimanapun. Garansi Shopee | Gratis Ongkir | 100% Bebas Biaya"/>
+		<link rel="canonical" href="https://shopee.co.id//"/>
+
+
+	
+
+
+	<title>Shopee</title>
+
+
+
+	
+	<link rel="stylesheet" href="/static/css/shop/simple-item-card.css?5828a8ca2e4b">
+	<link rel="stylesheet" href="/static/css/home/category/category_cards.css?25fb5487edfc">
+	<link rel="stylesheet" href="/static/css/home/banners.css?4902e3568217">
+	
+	<link rel="stylesheet" href="/static/css/swiper.min.css?0b2d1de8faf5">
+	<link rel="stylesheet" href="/static/css/gswiper.css?e28437b6a4a6">
+	<link rel="stylesheet" href="/static/css/home/item-cards-domify.css?79c853368700">
+	<link rel="stylesheet" href="/static/css/home/home_circles/home_circles_cards.css?1e43d143e7fb">
+	
+	<link rel="stylesheet" href="/static/css/home/home_v2.5.css?ca125a9c65e5">
+
+	
+
+	
+		<link rel="stylesheet" href="/static/css/home/category/official_shops.css?6caa0e2f20c4">
+	
+
+	
+
+
+
+
+
+    <script type="text/javascript">
+    ;(function() {
+        var SCRIPT_FAIL_THRESHOLD = 90000;
+        setTimeout(function() {
+            if (window.$ || window.jQuery) {
+                // console.log("jquery has been loaded successfully");
+                return true;
+            } else {
+                // jquery is not loaded after max timeout, we considered the script has fail to load
+                // it's time to show error message
+
+                // clear whatever dom content we have
+                document.body.innerHTML = document.getElementById("tap-to-reload").innerHTML;
+                document.body.addEventListener("touchend", function() {
+                    window.location.reload(true); // reload from server, not cache
+                }, false);
+
+                // set alert message to vertical center
+                var alertMessageDom = document.getElementsByClassName("alert-message")[0];
+                var viewportHeight = document.documentElement.clientHeight;
+                alertMessageDom.style.marginTop
+                        = Math.floor((viewportHeight - alertMessageDom.style.lineHeight)/2) + "px";
+            }
+        }, SCRIPT_FAIL_THRESHOLD);
+    })();
+</script>
+<script id="tap-to-reload" type="text/template">
+    <style>
+        body {
+            vertical-align : middle;
+            text-align : center;
+        }
+        .alert-message {
+            font-size : 18px;
+            vertical-align : middle;
+            display : inline-block;
+        }
+    </style>
+    <p class="alert-message">
+        Tap to reload again
+    </p>
+</script>
+
+	<script type="text/javascript">
+	var ORIGIN_WHITE_LIST = ['www.facebook.com', 'facebook.com'];
+	function isSameOrigin() {
+		var selfHost = window.self.location.hostname;
+		var topHost = window.top.location.hostname;
+
+		if (topHost in ORIGIN_WHITE_LIST) {
+			return true;
+		}
+		// same domain, including 127.0.0.1, localhost etc
+		if (selfHost === topHost) {
+			return true;
+		}
+		// other domain not contain shopee keyword
+		if (topHost.indexOf('shopee') === -1) {
+			return false;
+		}
+		var topRootDomain = topHost.slice(topHost.indexOf('shopee'));
+		var selfRootDomain = selfHost.slice(selfHost.indexOf('shopee'));
+		return topRootDomain == selfRootDomain;
+	}
+
+	if (!isSameOrigin()) {
+		document.body.style.display = 'none';
+	} else { }
+</script>
+	<script type="text/javascript">
+
+
+
+{
+	function _getGlobals_()
+	{
+		var toRet = {};
+		try
+		{
+			for(var k in window)
+			{
+				if(window.hasOwnProperty(k))
+					toRet[k]= true;
+			}
+		}
+		catch(e){}
+		return toRet;
+	}
+	window._resetGlobals_ = function(resetTo)
+	{
+		var vars = resetTo;
+		for(var k in window)
+		{
+			if(window.hasOwnProperty(k) && vars[k] == null)
+			{
+				window[k] = null; //Note: delete doesn't work for window's fields.
+			}
+		}
+	};
+	if(navigator.userAgent.indexOf('Shopee') >= 0 && (navigator.userAgent.indexOf('iPhone') >= 0 || navigator.userAgent.indexOf('iPad') >= 0 || navigator.userAgent.indexOf('iPod') >= 0))
+	{
+		window.ORIGINAL_GLOBAL_VARS = _getGlobals_();
+	}
+	window.GTimeoutAndInterval = (function(){
+		var idsTimeout = {};
+		var idsInterval = {};
+		var funcSetTimeout = window.setTimeout;
+		var funcClearTimeout = window.clearTimeout;
+		var funcSetInterval = window.setInterval;
+		var funcClearInterval = window.clearInterval;
+
+		window.setTimeout = function(func, delay){
+			var id = funcSetTimeout(func, delay);
+			idsTimeout[id] = id;
+			return id;
+		};
+		window.clearTimeout = function(id){
+			funcClearTimeout(id);
+			delete idsTimeout[id];
+		};
+
+		window.setInterval = function(func, interval){
+			var id = funcSetInterval(func, interval);
+			idsInterval[id] = id;
+			return id;
+		};
+		window.clearInterval = function(id){
+			funcClearInterval(id);
+			delete idsInterval[id];
+		};
+
+		function clearAll(skipSelf)
+		{
+			for(var k in idsTimeout)
+				funcClearTimeout(k);
+			for(var k in idsInterval)
+				funcClearInterval(k);
+			idsTimeout = {};
+			idsInterval = {};
+			if(skipSelf) return;
+
+			window.setTimeout = funcSetTimeout;
+			window.setInterval = funcSetInterval;
+			window.clearTimeout = funcClearTimeout;
+			window.clearInterval = funcClearInterval;
+			funcSetTimeout = null;
+			funcClearTimeout = null;
+			funcClearInterval = null;
+			funcSetInterval = null;
+		}
+
+		return {
+			clearAll: clearAll,
+		};
+	})();
+
+	function hookEventTarget(target)
+	{
+		var p = target.prototype || target.__proto__;
+		if(!p) return;
+
+		p.addEventListenerBase = p.addEventListener;
+		p.addEventListener = function(type, listener)
+		{
+			if(!this.EventList) { this.EventList = {}; }
+			// This condition prevents the crash when jQueryMobile is re-evaluated after iOS cache invalidation. (Comment out this condition and force cache invalidation in iOS to see the crash in action.)
+			if(this.addEventListenerBase)
+				this.addEventListenerBase.apply(this, arguments);
+			if(!this.EventList[type]) { this.EventList[type] = []; }
+			var list = this.EventList[type];
+			for(var index = 0; index != list.length; index++)
+			{
+				if(list[index] === listener) { return; }
+			}
+			list.push(listener);
+		};
+
+		p.removeEventListenerBase = p.removeEventListener;
+		p.removeEventListener = function(type, listener)
+		{
+			if(!this.EventList) { this.EventList = {}; }
+			// This second condition prevents the crash when jQueryMobile is re-evaluated after iOS cache invalidation.
+			if((listener instanceof Function) && this.removeEventListenerBase)
+			{
+				this.removeEventListenerBase.apply(this, arguments);
+			}
+			if(!this.EventList[type]) { return; }
+			var list = this.EventList[type];
+			for(var index = 0; index != list.length;)
+			{
+				var item = list[index];
+				if(!listener)
+				{
+					this.removeEventListenerBase(type, item);
+					list.splice(index, 1); continue;
+				}
+				else if(item === listener)
+				{
+					list.splice(index, 1); break;
+				}
+				index++;
+			}
+			if(list.length == 0) { delete this.EventList[type]; }
+		};
+
+		p.removeAllEvents = function()
+		{
+			if(!this.EventList) return;
+			for(var type in this.EventList)
+			{
+				if(!this.EventList.hasOwnProperty(type)) continue;
+				var list = this.EventList[type];
+				if(!list) continue;
+				for(var j=0; j<list.length; j++)
+				{
+					this.removeEventListenerBase(type, list[j]);
+				}
+				delete this.EventList[type];
+			}
+		};
+	}
+
+	function unhookEventTarget(target)
+	{
+		var p = target.prototype || target.__proto__;
+		if(!p) return;
+
+		if(p.addEventListenerBase)
+			p.addEventListener = p.addEventListenerBase;
+		if(p.removeEventListenerBase)
+			p.removeEventListener = p.removeEventListenerBase;
+	}
+
+	try
+	{
+		// Note: Originally I wanted to do this with EventTarget.prototype...., but seems iOS doesn't expose EventTarget interface. So we have to do it one by one.
+		hookEventTarget(Window);
+		hookEventTarget(Document);
+		hookEventTarget(Element);
+	}
+	catch(e)
+	{
+		console.log('hookEventTarget.ex', e);
+	}
+}
+</script>
+
+
+
+
+	
+	
+	
+	<script type="application/ld+json">
+	{
+	  "@context": "http://schema.org",
+	  "@type": "WebSite",
+	  "url": "http://shopee.co.id/", 
+	  "potentialAction": {
+		"@type": "SearchAction",
+		"target": "http://shopee.co.id/search/?keyword={search_term_string}",
+		"query-input": "required name=search_term_string"
+	  }
+	}
+	</script>
+	
+
+
+	
+
+	<link rel="alternate" href="android-app://com.shopee.id/shopeeid/home" />
+	<link rel="alternate" href="ios-app://959841443/shopeeid/home" />
+
+	
+	
+	<meta property="al:ios:url" content="shopeeid://home" />
+    <meta property="al:ios:app_store_id" content="959841443" />
+    <meta property="al:android:url" content="shopeeid://home" />
+    <meta property="al:android:package" content="com.shopee.id" />
+
+</head>
+<body>
+
+
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WJZQSJF" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
+
+
+
+
+	
+		
+
+<div class="header with_site_header">
+	
+		
+<div class='site_header'>
+	<ul class='site_header_list middle-centered-div L12'>
+		<li class='active'><a href='/'>Mall</a></li>
+		
+		
+		<li><a href='//seller.shopee.co.id' target='_blank'>Seller Centre</a></li>
+		<li><a href='//shopee.co.id/ig/' target='_blank'>Import IG</a></li>
+		
+		<li><a class='apps' href='//shopee.co.id/web/' target='_blank'></a></li>
+	</ul>
+</div>
+
+	
+	<div class='inner middle-centered-div'>
+		
+        <a href="/"><div class='ic_logo clickable_area'>
+            </div></a>
+		
+
+		
+		<div class="search-bar flex1 hidden">
+			<div class="search-bar-input-wrapper middle-centered-div flex1">
+				<div class="ic_search ic_icon"></div>
+				<form class='search_form flex1' action='.'>
+					<input class="search-input flex1 L12" type='search'>
+				</form>
+				<div class='dropdown-holder'>
+					<div class='dropdown-content one r12'>
+					</div>
+					<div class='dropdown-content two r12'>
+					</div>
+				</div>
+			</div>
+			<div class="search-bar-space-holder flex1 hidden page_name L16">
+				
+			</div>
+			<div class="ic_search_red ic_icon hidden clickable_area"></div>
+		</div>
+		<div class="no-search-bar-holder center-nav flex1">
+			<div class="search-bar-space-holder flex1 page_name L16 truncate">
+			</div>
+		</div>
+		
+
+		
+
+		
+			
+				<div class='hold user_avatar ic_web_profile clickable_area'>
+				</div>
+			
+		
+		
+		<div class='second-panel'>
+			<a href='/buyer/login/signup/'>
+				<div class='signup-btn'>Daftar</div>
+			</a>
+			<a href='/buyer/login/'>
+				<div class='login-btn'>Login</div>
+			</a>
+		</div>
+		
+        <div class="clearfix"></div>
+	</div>
+</div>
+<div class='header-holder with_site_header'>
+</div>
+<div class='body-mask'>
+</div>
+<div class='lure-hold'>
+	<div class='close_btn but_no_close' onclick='hideProm()'>
+	</div>
+
+    <div class='dogi-logo'>
+        <div class='ic_logo_get'></div>
+    </div>
+
+	<div class='show-text L13'>
+	</div>
+	<div class='bottom'>
+
+
+        <div class="get_app_btns_wrapper">
+            <div class="full">
+                <a id='get_app_link' target='_blank' href='' class='btn'>Download Sekarang</a>
+            </div>
+            <div class="half"><a id='get_ios_app_link' target='_blank' href='' class='btn' onclick="_track_download_ios();">
+                    <div class="ic_IPhone icon"></div>
+                    <div>iPhone</div>
+                </a>
+            </div><div class="half"><a id='get_android_app_link' target='_blank' href='' class='btn' onclick="_track_download_android();">
+                    <div class="ic_Android icon"></div>
+                    <div>Android</div>
+                </a></div>
+
+        </div>
+
+	</div>
+</div>
+
+	
+
+	<div class="shopee-confirm-modal hidden">
+</div>
+<div class="shopee-confirm hidden">
+	<div class="confirm-title">
+		<div class="content"></div>
+	</div>
+	<div class="confirm-message">
+		<div class="content"></div>
+	</div>
+	<div class="confirm-button-holder middle-centered-div">
+		<div class="confirm-button cancel" data-button-id="1"></div>
+		<div class="flex1" data-button-id="0"></div>
+		<div class="confirm-button ok" data-button-id="0"></div>
+	</div>
+</div>
+
+	<div class="shopee-action-sheet-mask"></div>
+<div class="shopee-action-sheet-container center-container isPC">
+</div>
+
+	
+
+<div id='pin-popup'>
+	<div class='popup'>
+		<div class='title r16'>
+		</div>
+		<div class='message r16'>
+		</div>
+		<div class='digit-holder'>
+			<div class='digit-input'>
+			</div><div class='digit-input'>
+			</div>
+		</div>
+		<div class='btn-holder'>
+			<div class='cancelText' data-button-id=1>
+			</div><div class='okText' data-button-id=0>
+			</div>
+		</div>
+	</div>
+	<div class='digit-keyboard'>
+		<div class='digit-row'>
+			<div class='digit r14'>1</div><div class='digit r14'>2</div><div class='digit r14'>3</div>
+		</div>
+		<div class='digit-row'>
+			<div class='digit r14'>4</div><div class='digit r14'>5</div><div class='digit r14'>6</div>
+		</div>
+		<div class='digit-row'>
+			<div class='digit r14'>7</div><div class='digit r14'>8</div><div class='digit r14'>9</div>
+		</div>
+		<div class='digit-row'>
+			<div class='digit r14'></div><div class='digit r14'>0</div><div class='delete r14'>Hapus</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="home-categories" class='page-holder'><div class="home-categories-container home-categories-container--no-background"><div class="banner-container " data-md5=""><div class="banner-container-inner"><div class="swiper-container clickable_area"><div class="swiper-wrapper"><div class="swiper-slide"></div><div class="swiper-slide"></div><div class="swiper-slide"></div><div class="swiper-slide"></div></div><div class="swiper-pagination"></div><!-- Will be dynamically removed for mobile devices. Refer to banners.js. --><div class="swiper-button-prev" style="display:none;"></div><div class="swiper-button-next" style="display:none;"></div></div></div></div><div class="shopee-section-header shopee-section-header--trending-search shopee-section-header__margin"><div class="l14 nowrap shopee-section-header__title uppercase">Pencarian Populer</div><div class="shopee-section-header__subtitle shopee-section-header__subtitle--update-time r12"><span class='update-time'></span></div></div><div class="trending-search-items  horizontal-list hide-scrollbar"><div class="items-wrapper"><div class="trending-search-item faked-item"><div class="trending-search-item__info  visibility-hidden"><div class="title trending-search-item__info__title truncate r14 ">xxx</div><div class="title trending-search-item__info__subtitle l12"><span class="trending-search-item__info__subtitle__count">xxx</span><span class="trending-search-item__info__subtitle__label">pencarian</span></div></div><div class="ratio_4_3_box trending-search-item__image"></div></div><div class="trending-search-item faked-item"><div class="trending-search-item__info  visibility-hidden"><div class="title trending-search-item__info__title truncate r14 ">xxx</div><div class="title trending-search-item__info__subtitle l12"><span class="trending-search-item__info__subtitle__count">xxx</span><span class="trending-search-item__info__subtitle__label">pencarian</span></div></div><div class="ratio_4_3_box trending-search-item__image"></div></div><div class="trending-search-item faked-item"><div class="trending-search-item__info  visibility-hidden"><div class="title trending-search-item__info__title truncate r14 ">xxx</div><div class="title trending-search-item__info__subtitle l12"><span class="trending-search-item__info__subtitle__count">xxx</span><span class="trending-search-item__info__subtitle__label">pencarian</span></div></div><div class="ratio_4_3_box trending-search-item__image"></div></div><div class="trending-search-item faked-item"><div class="trending-search-item__info  visibility-hidden"><div class="title trending-search-item__info__title truncate r14 ">xxx</div><div class="title trending-search-item__info__subtitle l12"><span class="trending-search-item__info__subtitle__count">xxx</span><span class="trending-search-item__info__subtitle__label">pencarian</span></div></div><div class="ratio_4_3_box trending-search-item__image"></div></div><div class="trending-search-item faked-item"><div class="trending-search-item__info  visibility-hidden"><div class="title trending-search-item__info__title truncate r14 ">xxx</div><div class="title trending-search-item__info__subtitle l12"><span class="trending-search-item__info__subtitle__count">xxx</span><span class="trending-search-item__info__subtitle__label">pencarian</span></div></div><div class="ratio_4_3_box trending-search-item__image"></div></div></div></div><div class='skinny-icon-wrapper shopee-section-header__margin' style=""><div class='skinny-icon'></div></div><div class="flash-sale-section  clickable_area flash-sale-section__ID shopee-section-header__margin"><div class='shopee-section-header shopee-section-header--flash-sale has-see-all'><div class="l12 nowrap ic_app_buy_flashsale ic_app_buy_flashsale--ID flash-sale-section__title"></div><div class="count-down"><div class="count-down__timer timer m13 hidden" data-end-time=""><div class="timer__hours digits"><div class="digits__1 digit ic_buy_digit transit"></div><div class="digits__2 digit ic_buy_digit transit"></div></div><div class="timer__colon timer__colon--blink ic_buy_dian"></div><div class="timer__mins digits"><div class="digits__1 digit ic_buy_digit up-to-5 transit"></div><div class="digits__2 digit ic_buy_digit transit"></div></div><div class="timer__colon timer__colon--blink ic_buy_dian"></div><div class="timer__secs digits"><div class="digits__1 digit ic_buy_digit up-to-5 transit"></div><div class="digits__2 digit ic_buy_digit transit"></div></div></div></div><div class="shopee-section-header__subtitle shopee-section-header__subtitle--update-time r12"><span class='update-time'></span></div><div class="shopee-section-header__see-all clickable_area l12 capitalize nowrap">Lihat Lainnya<span
+				class="ic_arrow_small_orange"></span></div></div><div class="flash-sale-container"><div class="flash-sale-items horizontal-list
+				hide-scrollbar  "><div class="flash-sale-items-wrapper"><div class="flash-sale-item clickable_area faked-item"><div class="flash-sale-item__image ratio_1_1_box"
+							 style="background-image : url(https://cf.shopee.co.id/file/_tn)"></div><div class="flash-sale-item__price"></div><div class="flash-sale-item__progress"><div class="flame"></div><div class="progress-bar r10"><span class="progress-label"></span></div></div></div><div class="flash-sale-item clickable_area faked-item"><div class="flash-sale-item__image ratio_1_1_box"
+							 style="background-image : url(https://cf.shopee.co.id/file/_tn)"></div><div class="flash-sale-item__price"></div><div class="flash-sale-item__progress"><div class="flame"></div><div class="progress-bar r10"><span class="progress-label"></span></div></div></div><div class="flash-sale-item clickable_area faked-item"><div class="flash-sale-item__image ratio_1_1_box"
+							 style="background-image : url(https://cf.shopee.co.id/file/_tn)"></div><div class="flash-sale-item__price"></div><div class="flash-sale-item__progress"><div class="flame"></div><div class="progress-bar r10"><span class="progress-label"></span></div></div></div><div class="flash-sale-item clickable_area faked-item"><div class="flash-sale-item__image ratio_1_1_box"
+							 style="background-image : url(https://cf.shopee.co.id/file/_tn)"></div><div class="flash-sale-item__price"></div><div class="flash-sale-item__progress"><div class="flame"></div><div class="progress-bar r10"><span class="progress-label"></span></div></div></div><div class="flash-sale-item clickable_area faked-item"><div class="flash-sale-item__image ratio_1_1_box"
+							 style="background-image : url(https://cf.shopee.co.id/file/_tn)"></div><div class="flash-sale-item__price"></div><div class="flash-sale-item__progress"><div class="flame"></div><div class="progress-bar r10"><span class="progress-label"></span></div></div></div><div class="flash-sale-item clickable_area faked-item"><div class="flash-sale-item__image ratio_1_1_box"
+							 style="background-image : url(https://cf.shopee.co.id/file/_tn)"></div><div class="flash-sale-item__price"></div><div class="flash-sale-item__progress"><div class="flame"></div><div class="progress-bar r10"><span class="progress-label"></span></div></div></div><div class="flash-sale-item clickable_area faked-item"><div class="flash-sale-item__image ratio_1_1_box"
+							 style="background-image : url(https://cf.shopee.co.id/file/_tn)"></div><div class="flash-sale-item__price"></div><div class="flash-sale-item__progress"><div class="flame"></div><div class="progress-bar r10"><span class="progress-label"></span></div></div></div><div class="flash-sale-item clickable_area faked-item"><div class="flash-sale-item__image ratio_1_1_box"
+							 style="background-image : url(https://cf.shopee.co.id/file/_tn)"></div><div class="flash-sale-item__price"></div><div class="flash-sale-item__progress"><div class="flame"></div><div class="progress-bar r10"><span class="progress-label"></span></div></div></div></div></div></div></div><div class="official-shop-section shopee-section-header__margin clickable_area official-shop-section--with-selling-points"><div class="official-shop-header"><div class="header-label uppercase m14">Shopee Mall</div><div class="see-more-button-wrapper"><div class="see-more-button"><div class="text capitalize r12">Lihat Lainnya</div><div class="arrow ic_buy_official_seemore"></div></div></div></div><div class='official-shop-container row-2 official-shop-container--compact'><div class="official-shop-items official-shop-items--compact hide-scrollbar"><div class="official-shop-items-wrapper"><div class="official-shop-item clickable_area"><div class="ratio_4_3_box official-shop-wrapper"></div></div><div class="official-shop-item clickable_area"><div class="ratio_4_3_box official-shop-wrapper"></div></div><div class="official-shop-item clickable_area"><div class="ratio_4_3_box official-shop-wrapper"></div></div><div class="official-shop-item clickable_area"><div class="ratio_4_3_box official-shop-wrapper"></div></div><div class="official-shop-item clickable_area"><div class="ratio_4_3_box official-shop-wrapper"></div></div><div class="official-shop-item clickable_area"><div class="ratio_4_3_box official-shop-wrapper"></div></div><div class="official-shop-item clickable_area"><div class="ratio_4_3_box official-shop-wrapper"></div></div><div class="official-shop-item clickable_area"><div class="ratio_4_3_box official-shop-wrapper"></div></div></div><div class="official-shop-items-wrapper"><div class="official-shop-item clickable_area"><div class="ratio_4_3_box official-shop-wrapper"></div></div><div class="official-shop-item clickable_area"><div class="ratio_4_3_box official-shop-wrapper"></div></div><div class="official-shop-item clickable_area"><div class="ratio_4_3_box official-shop-wrapper"></div></div><div class="official-shop-item clickable_area"><div class="ratio_4_3_box official-shop-wrapper"></div></div><div class="official-shop-item clickable_area"><div class="ratio_4_3_box official-shop-wrapper"></div></div><div class="official-shop-item clickable_area"><div class="ratio_4_3_box official-shop-wrapper"></div></div><div class="official-shop-item clickable_area"><div class="ratio_4_3_box official-shop-wrapper"></div></div><div class="official-shop-item clickable_area"><div class="ratio_4_3_box official-shop-wrapper"></div></div></div></div><div class="horizontal-line horizontal-line--1"></div></div><div class="official-shop-selling-points-wrapper"><div class="official-shop-selling-points visibility-hidden"><div class="selling-point"><span class="selling-point__component ic_sellingpoint_labding"></span><span class="selling-point__component selling-point__label r12">7 Hr Pengembalian</span></div><div class="selling-point"><span class="selling-point__component ic_sellingpoint_labding"></span><span class="selling-point__component selling-point__label r12">100% Ori</span></div><div class="selling-point"><span class="selling-point__component ic_sellingpoint_labding"></span><span class="selling-point__component selling-point__label r12">Gratis Ongkir</span></div></div></div></div><div class='shopee-section-header shopee-section-header--categories shopee-section-header__margin'><div class="r14 uppercase nowrap shopee-section-header__title">Kategori</div><div class="shopee-section-header__subtitle r12"></div><div class="shopee-section-header__see-all clickable_area l12 capitalize nowrap hidden">Lihat Lainnya<span class="ic_arrow_right_orange"></span></div></div><div class="category-container--card  two-row"><div class="category-items subcat-container container row center-container hide-scrollbar"><div class="category-items-wrapper"><div class="category-item clickable_area "
+	 data-category-id="33"
+	 
+	 data-is-adult="0"
+	 data-index="0"
+	 data-catid="33"
+	 data-catname="Pakaian Pria"
+><div class="ratio_1_1_box category-wrapper" style="background-image : url(https://cf.shopee.co.id/file/ec5c71e18beb2d6950fe691da42082d7_tn)" title="Pakaian Pria"></div><div class="middle-centered-div subcat-title"><div class="title r12 category-item-title">Pakaian Pria</div></div></div><div class="category-item clickable_area "
+	 data-category-id="40"
+	 
+	 data-is-adult="0"
+	 data-index="2"
+	 data-catid="40"
+	 data-catname="Handphone &amp; Aksesoris"
+><div class="ratio_1_1_box category-wrapper" style="background-image : url(https://cf.shopee.co.id/file/0bfdaa2d899e4d16ac0e31fc17a4d6ef_tn)" title="Handphone &amp; Aksesoris"></div><div class="middle-centered-div subcat-title"><div class="title r12 category-item-title">Handphone &amp; Aksesoris</div></div></div><div class="category-item clickable_area "
+	 data-category-id="134"
+	 
+	 data-is-adult="0"
+	 data-index="4"
+	 data-catid="134"
+	 data-catname="Komputer &amp; Aksesoris"
+><div class="ratio_1_1_box category-wrapper" style="background-image : url(https://cf.shopee.co.id/file/39762ff427021a9904a672a357897f1b_tn)" title="Komputer &amp; Aksesoris"></div><div class="middle-centered-div subcat-title"><div class="title r12 category-item-title">Komputer &amp; Aksesoris</div></div></div><div class="category-item clickable_area "
+	 data-category-id="14535"
+	 
+	 data-is-adult="0"
+	 data-index="6"
+	 data-catid="14535"
+	 data-catname="Fashion Bayi &amp; Anak"
+><div class="ratio_1_1_box category-wrapper" style="background-image : url(https://cf.shopee.co.id/file/1eb9ba3754c3cfebf2155bd9a9c7385d_tn)" title="Fashion Bayi &amp; Anak"></div><div class="middle-centered-div subcat-title"><div class="title r12 category-item-title">Fashion Bayi &amp; Anak</div></div></div><div class="category-item clickable_area "
+	 data-category-id="35"
+	 
+	 data-is-adult="0"
+	 data-index="8"
+	 data-catid="35"
+	 data-catname="Sepatu Pria"
+><div class="ratio_1_1_box category-wrapper" style="background-image : url(https://cf.shopee.co.id/file/6afd8f9ce7b884ef3c8172445dae9de4_tn)" title="Sepatu Pria"></div><div class="middle-centered-div subcat-title"><div class="title r12 category-item-title">Sepatu Pria</div></div></div><div class="category-item clickable_area "
+	 data-category-id="10217"
+	 
+	 data-is-adult="0"
+	 data-index="10"
+	 data-catid="10217"
+	 data-catname="Tas Pria"
+><div class="ratio_1_1_box category-wrapper" style="background-image : url(https://cf.shopee.co.id/file/99b46a30d9d4499ef992d55e10586586_tn)" title="Tas Pria"></div><div class="middle-centered-div subcat-title"><div class="title r12 category-item-title">Tas Pria</div></div></div><div class="category-item clickable_area "
+	 data-category-id="37"
+	 
+	 data-is-adult="0"
+	 data-index="12"
+	 data-catid="37"
+	 data-catname="Jam Tangan"
+><div class="ratio_1_1_box category-wrapper" style="background-image : url(https://cf.shopee.co.id/file/7d6d5cda649d5d0faa0b82776c1c178d_tn)" title="Jam Tangan"></div><div class="middle-centered-div subcat-title"><div class="title r12 category-item-title">Jam Tangan</div></div></div><div class="category-item clickable_area "
+	 data-category-id="121"
+	 
+	 data-is-adult="0"
+	 data-index="14"
+	 data-catid="121"
+	 data-catname="Elektronik"
+><div class="ratio_1_1_box category-wrapper" style="background-image : url(https://cf.shopee.co.id/file/111b6a0545c8f85f27ac1d9e916e97bf_tn)" title="Elektronik"></div><div class="middle-centered-div subcat-title"><div class="title r12 category-item-title">Elektronik</div></div></div><div class="category-item clickable_area "
+	 data-category-id="14780"
+	 
+	 data-is-adult="0"
+	 data-index="16"
+	 data-catid="14780"
+	 data-catname="Kesehatan"
+><div class="ratio_1_1_box category-wrapper" style="background-image : url(https://cf.shopee.co.id/file/9a7d1a419066d6e9e37b35cacc880269_tn)" title="Kesehatan"></div><div class="middle-centered-div subcat-title"><div class="title r12 category-item-title">Kesehatan</div></div></div><div class="category-item clickable_area "
+	 data-category-id="154"
+	 
+	 data-is-adult="0"
+	 data-index="18"
+	 data-catid="154"
+	 data-catname="Fotografi"
+><div class="ratio_1_1_box category-wrapper" style="background-image : url(https://cf.shopee.co.id/file/23ae7eeda2ceedd08a6b6559328cbd4f_tn)" title="Fotografi"></div><div class="middle-centered-div subcat-title"><div class="title r12 category-item-title">Fotografi</div></div></div><div class="category-item clickable_area "
+	 data-category-id="41"
+	 
+	 data-is-adult="0"
+	 data-index="20"
+	 data-catid="41"
+	 data-catname="Olahraga &amp; Outdoor"
+><div class="ratio_1_1_box category-wrapper" style="background-image : url(https://cf.shopee.co.id/file/457a525b2447989d33b5d6459a008b5c_tn)" title="Olahraga &amp; Outdoor"></div><div class="middle-centered-div subcat-title"><div class="title r12 category-item-title">Olahraga &amp; Outdoor</div></div></div><div class="category-item clickable_area "
+	 data-category-id="16049"
+	 
+	 data-is-adult="0"
+	 data-index="22"
+	 data-catid="16049"
+	 data-catname="Buku &amp; Alat Tulis"
+><div class="ratio_1_1_box category-wrapper" style="background-image : url(https://cf.shopee.co.id/file/289b738f77694893dc1e971b42643aee_tn)" title="Buku &amp; Alat Tulis"></div><div class="middle-centered-div subcat-title"><div class="title r12 category-item-title">Buku &amp; Alat Tulis</div></div></div><div class="category-item clickable_area "
+	 data-category-id="135"
+	 data-no-subcategory="1"
+	 data-is-adult="0"
+	 data-index="24"
+	 data-catid="135"
+	 data-catname="Serba Serbi"
+><div class="ratio_1_1_box category-wrapper" style="background-image : url(https://cf.shopee.co.id/file/c10dbb27e7bbfd3fabac07b73900b23c_tn)" title="Serba Serbi"></div><div class="middle-centered-div subcat-title"><div class="title r12 category-item-title">Serba Serbi</div></div></div></div><div class="category-items-wrapper"><div class="category-item clickable_area "
+	 data-category-id="32"
+	 
+	 data-is-adult="0"
+	 data-index="1"
+	 data-catid="32"
+	 data-catname="Pakaian Wanita"
+><div class="ratio_1_1_box category-wrapper" style="background-image : url(https://cf.shopee.co.id/file/c099daa851a7c80a14eea3b66968a3f5_tn)" title="Pakaian Wanita"></div><div class="middle-centered-div subcat-title"><div class="title r12 category-item-title">Pakaian Wanita</div></div></div><div class="category-item clickable_area "
+	 data-category-id="14840"
+	 
+	 data-is-adult="0"
+	 data-index="3"
+	 data-catid="14840"
+	 data-catname="Kecantikan"
+><div class="ratio_1_1_box category-wrapper" style="background-image : url(https://cf.shopee.co.id/file/04efdc13ce3a60997897c45e95eb93fa_tn)" title="Kecantikan"></div><div class="middle-centered-div subcat-title"><div class="title r12 category-item-title">Kecantikan</div></div></div><div class="category-item clickable_area "
+	 data-category-id="46"
+	 
+	 data-is-adult="0"
+	 data-index="5"
+	 data-catid="46"
+	 data-catname="Perlengkapan Rumah"
+><div class="ratio_1_1_box category-wrapper" style="background-image : url(https://cf.shopee.co.id/file/ab72cad78f0fd55b3e7c6c255127335b_tn)" title="Perlengkapan Rumah"></div><div class="middle-centered-div subcat-title"><div class="title r12 category-item-title">Perlengkapan Rumah</div></div></div><div class="category-item clickable_area "
+	 data-category-id="45"
+	 
+	 data-is-adult="0"
+	 data-index="7"
+	 data-catid="45"
+	 data-catname="Ibu &amp; Bayi"
+><div class="ratio_1_1_box category-wrapper" style="background-image : url(https://cf.shopee.co.id/file/4b85839c9d6c9a9dac9e8f68483d3a62_tn)" title="Ibu &amp; Bayi"></div><div class="middle-centered-div subcat-title"><div class="title r12 category-item-title">Ibu &amp; Bayi</div></div></div><div class="category-item clickable_area "
+	 data-category-id="34"
+	 
+	 data-is-adult="0"
+	 data-index="9"
+	 data-catid="34"
+	 data-catname="Sepatu Wanita"
+><div class="ratio_1_1_box category-wrapper" style="background-image : url(https://cf.shopee.co.id/file/e7df9dc29e88bd525eab10f2a34b6e83_tn)" title="Sepatu Wanita"></div><div class="middle-centered-div subcat-title"><div class="title r12 category-item-title">Sepatu Wanita</div></div></div><div class="category-item clickable_area "
+	 data-category-id="36"
+	 
+	 data-is-adult="0"
+	 data-index="11"
+	 data-catid="36"
+	 data-catname="Tas Wanita"
+><div class="ratio_1_1_box category-wrapper" style="background-image : url(https://cf.shopee.co.id/file/09a946c456690e19e0ea28fb0ec8215f_tn)" title="Tas Wanita"></div><div class="middle-centered-div subcat-title"><div class="title r12 category-item-title">Tas Wanita</div></div></div><div class="category-item clickable_area "
+	 data-category-id="43"
+	 
+	 data-is-adult="0"
+	 data-index="13"
+	 data-catid="43"
+	 data-catname="Fashion Muslim"
+><div class="ratio_1_1_box category-wrapper" style="background-image : url(https://cf.shopee.co.id/file/a2c53afdb6ac0894dc9f953714560ccb_tn)" title="Fashion Muslim"></div><div class="middle-centered-div subcat-title"><div class="title r12 category-item-title">Fashion Muslim</div></div></div><div class="category-item clickable_area "
+	 data-category-id="38"
+	 
+	 data-is-adult="0"
+	 data-index="15"
+	 data-catid="38"
+	 data-catname="Aksesoris Fashion"
+><div class="ratio_1_1_box category-wrapper" style="background-image : url(https://cf.shopee.co.id/file/e9dcf5cda94694077a72e350917688b9_tn)" title="Aksesoris Fashion"></div><div class="middle-centered-div subcat-title"><div class="title r12 category-item-title">Aksesoris Fashion</div></div></div><div class="category-item clickable_area "
+	 data-category-id="42"
+	 
+	 data-is-adult="0"
+	 data-index="17"
+	 data-catid="42"
+	 data-catname="Hobi &amp; Koleksi"
+><div class="ratio_1_1_box category-wrapper" style="background-image : url(https://cf.shopee.co.id/file/6f9965db3a657f2408ef4663c3954943_tn)" title="Hobi &amp; Koleksi"></div><div class="middle-centered-div subcat-title"><div class="title r12 category-item-title">Hobi &amp; Koleksi</div></div></div><div class="category-item clickable_area "
+	 data-category-id="157"
+	 
+	 data-is-adult="0"
+	 data-index="19"
+	 data-catid="157"
+	 data-catname="Makanan &amp; Minuman"
+><div class="ratio_1_1_box category-wrapper" style="background-image : url(https://cf.shopee.co.id/file/a679f289aaac9660ec0b3c301f33d49a_tn)" title="Makanan &amp; Minuman"></div><div class="middle-centered-div subcat-title"><div class="title r12 category-item-title">Makanan &amp; Minuman</div></div></div><div class="category-item clickable_area "
+	 data-category-id="155"
+	 
+	 data-is-adult="0"
+	 data-index="21"
+	 data-catid="155"
+	 data-catname="Otomotif"
+><div class="ratio_1_1_box category-wrapper" style="background-image : url(https://cf.shopee.co.id/file/b1d4a1b303e074db103b613cc63d383a_tn)" title="Otomotif"></div><div class="middle-centered-div subcat-title"><div class="title r12 category-item-title">Otomotif</div></div></div><div class="category-item clickable_area "
+	 data-category-id="2160"
+	 
+	 data-is-adult="0"
+	 data-index="23"
+	 data-catid="2160"
+	 data-catname="Voucher"
+><div class="ratio_1_1_box category-wrapper" style="background-image : url(https://cf.shopee.co.id/file/369fb7e53c325c89057c4388709a4023_tn)" title="Voucher"></div><div class="middle-centered-div subcat-title"><div class="title r12 category-item-title">Voucher</div></div></div><div class="category-item clickable_area "
+	 data-category-id="10226"
+	 
+	 data-is-adult="0"
+	 data-index="25"
+	 data-catid="10226"
+	 data-catname="Souvenir &amp; Pesta"
+><div class="ratio_1_1_box category-wrapper" style="background-image : url(https://cf.shopee.co.id/file/810fcc29f815c84548c7c57bbd614b42_tn)" title="Souvenir &amp; Pesta"></div><div class="middle-centered-div subcat-title"><div class="title r12 category-item-title">Souvenir &amp; Pesta</div></div></div></div><div class="clearfix"></div></div><div class="horizontal-line"></div></div></div><div class="just-for-you just-for-you--v25 just-for-you--sticky fixed-item-with-glitch-ios11 shopee-section-header shopee-section-header--daily-discover center-container has-see-all hidden"><div class="m14 nowrap shopee-section-header__title uppercase primary">Rekomendasi</div><div class="shopee-section-header__subtitle shopee-section-header__subtitle--update-time r12"><span class='update-time'></span></div><div class="shopee-section-header__see-all clickable_area label-see-all-wrapper l12 primary capitalize nowrap hide">Lihat Lainnya<span class="ic_arrow_small_orange"></span></div></div><div class="just-for-you just-for-you--v25 shopee-section-header shopee-section-header--daily-discover shopee-section-header__flex has-see-all hidden" id="just-for-you"><div class="shopee-section-header__title-wrapper"><div class="m14 nowrap shopee-section-header__title uppercase primary">Rekomendasi</div><div class="shopee-section-header__subtitle shopee-section-header__subtitle--update-time r12"><span class='update-time'></span></div></div><div class="shopee-section-header__see-all clickable_area label-see-all-wrapper l12 primary capitalize nowrap hide">Lihat Lainnya<span class="ic_arrow_small_orange"></span></div></div><div class="item-list-container item-list-container--just-for-you center-container"><ul class='item-list'></ul></div><div class="btn-see-all-just-for-you-wrapper"><div class="btn-see-all-just-for-you hide clickable_area capitalize">Lihat Lainnya</div><div class="btn-tap-to-load-again hide clickable_area capitalize">Sentuh untuk memuat lagi</div></div><div class='gtop ic_maketop fixed-item-with-glitch-ios11  ' style='display:none;z-index:1000;' id="go-top-icon"></div><div class='floating-icon fixed-item-with-glitch-ios11'><div class='close-btn'></div></div></div><footer class="center-container"><div class="middle-centered-div"><a href="http://shopee.co.id/legaldoc/privacy/" class="flex1 m10 middle-centered-div footer-privacy"><div class="footer-icon ic_web_privacypolicy"></div><span>KEBIJAKAN PRIVASI</span></a><div class="vertical-divider"></div><a href="http://shopee.co.id/legaldoc/termsOfService/" class="flex1 m10 middle-centered-div footer-tos"><div class="footer-icon ic_web_termofservice"></div><span>SYARAT LAYANAN</span></a></div></footer>
+
+
+
+
+	<div class='web-popup-mask'></div>
+<div class='web-popup-holder center-container'>
+	<div class='title'></div>
+	<div class='image'></div>
+	<div class='text'></div>
+	<div class='button'></div>
+</div>
+
+	<div class='web-popup-box-mask'></div>
+<div class='web-popup-box-holder center-container'>
+	<div class='title'></div>
+	<div class='image'></div>
+	<div class='text'></div>
+	<div class='cancel'></div>
+	<div class='confirm'></div>
+</div>
+
+	
+<div id="_alert_bg" class="hidden">
+	<div id="_alert_content" class="center-container">
+		<div class='img hidden'></div>
+		<span></span>
+		<div class="middle-centered-div alert-btn-group">
+			<div class="btn-dismiss-alert flex1">Tidak</div>
+			<div class="btn-confirm-alert flex1">Ya</div>
+		</div>
+	</div>
+</div>
+<div id="_alert_msg" class="center-container hidden">
+	<div class='img hidden'></div>
+	<span></span>
+	<div class="middle-centered-div alert-btn-group">
+		<div class="btn-dismiss-alert flex1">Tidak</div>
+		<div class="btn-confirm-alert flex1">Ya</div>
+	</div>
+</div>
+
+
+	
+
+	<div class='page_hide'></div>
+	<div class='general-mask'></div>
+
+
+
+
+	
+		
+
+
+
+
+
+
+<script type="text/javascript">
+
+
+	var USERID = null;
+	var ALERT_LIKE_PRIVACY_MSG = false;
+	var CC_INSTALLMENT_PAYMENT_ELIGIBILITY = true;
+	var NON_CC_INSTALLMENT_PAYMENT_ELIGIBILITY = true;
+
+
+
+
+	var CURRENT_PATH = '/';
+
+	var CURRENT_SHOPID = 'None';
+	var VERSION = '';
+	var APPVER = '';
+	var LANGUAGE = 'id';
+	var IS_FB_APP = false;
+
+	var T_EM_H = '';
+
+
+</script>
+
+
+
+<script type="text/javascript">
+
+
+	var LOCALE = 'ID';
+	var ENVIRONMENT = 'LIVE';
+	var POPTAB_FIRST = true;
+	var POPTAB_FIRST_HASHTAG = false;
+	var SHOW_TOP_SALES_TABS = true;
+
+	var ITEM_IMAGE_BASE_URL = 'https://cf.shopee.co.id/file/';
+	var ITEM_VIDEO_BASE_URL = 'https://cv.shopee.co.id/video/';
+	var ROOT_DOMAIN = 'shopee.co.id';
+	var COOKIE_DOMAIN = 'shopee.co.id';
+
+	
+	var msg_server_error = 'Server Error';
+	var label_ok = 'OK';
+
+	var T_GA_ID = 'UA\u002D61904553\u002D8';
+	var T_GA_ID_PC = 'UA\u002D61904553\u002D8';
+	var T_FB_ID = '466924370133774';
+	var T_CRITEO_ID = '34652';
+
+
+
+
+	var T_BI_SIG = "SPC_T_ID";
+	var T_BI_IV = "SPC_T_IV";
+	var SHOW_SHOPEE_VERIFIED_FILTER = true;
+	var SHOW_IN_PAGE_FILTER = true;
+	var MARKET_TRACKING_TOKEN_NAME = "smtt_v0";
+	var MARKET_TRACKING_TOKEN_V2_NAME = "smtt";
+	var MARKET_TRACKING_ADS_AFFILIATION_TOKEN = "sp_af";
+	var RN_BUNDLE_VERSION_COOKIE_NAME = "SPC_RNBV";
+	var PRICEZA_MERCHANT_ID = 7077;
+	var CONFIG_WALLET_KYC = false;
+	var AIRPAY_CLIENT_API_ENDPOINT = 'https://capi.wallet.airpay.co.id';
+	var CONFIG_COIN_INFLATION = 1;
+	var CONFIG_CONTACT_US_NUMBER = JSON.parse('{\u0022phone_number\u0022:\u00221500702\u0022,\u0022operating_hours\u0022:\u0022Layanan Pelanggan 24 Jam, Senin s/d Minggu, termasuk Hari Libur Nasional.\u0022,\u0022email_address\u0022:\u0022support@shopee.co.id\u0022}')['phone_number'];
+
+
+	var IS_MALL_PAGE = true;
+	var STATIC_URL = '/static/';
+	var SIMPLE_VERSION = false;
+	var DEBUG = false;
+	var LOCALHOST = false;
+	var STAGING = false;
+	var ANDROID_FRIENDLY = false;
+	var ENABLE_RATING_REPLY = true;
+	var ADULT_AGE = '21';
+	var ENABLE_LOCATION_FILTER = true;
+	var ENABLE_LOCATION_FILTER_IN_PAGE = true;
+	var CONFIG_BRANDING_SHOPEE_WALLET_AS_MY_WALLET = false;
+	var CONFIG_ENABLE_SHOPEE_BUYER_WALLET_V2 = true;
+	var SHOW_SOLD_COUNT = true;
+	var OPC_CART_MUST_HAVE_ADDRESS = true;
+	var CONFIG_FLASH_SALE_NAMED_AS_FLASH_DEAL = false;
+	var SHIPPING_OPTION_FILTER = true;
+	var ENABLE_SHIPPING_FILTER_PAGE = true;
+	var CONFIG_FLASH_SALE_NAME_KEY = "flash_sale";
+	var CONFIG_OFFICIAL_SHOP_ROOT_URL = "/mall";
+	var show_from_same_shop = true;
+	var CONFIG_SHOW_FROM_SAME_SHOP_SHOW_SECTION = true;
+	var ENABLE_OFFICIAL_SHOP_FILTER = true;
+	var ENABLE_OFFICIAL_SHOP_FILTER_IN_PAGE = true;
+	var ENABLE_CC_INSTALLMENT_PAYMENT = true;
+	var ENABLE_NON_CC_INSTALLMENT_PAYMENT = true;
+	var LOWEST_PRICE_GUARANTEE_SHOP = [{"userid":27994335,"shopid":27992951}];
+	var INSTALLMENT_FILTER = false;
+	var CONFIG_BRAND_LIST = true;
+	var CONFIG_RW_ONE_PAGE_CHECKOUT = true;
+	var CONFIG_ENABLE_LOCAL_WALLET = false;
+	var CONFIG_DIGIT_GROUP_SYMBOL = ".";
+	var CONFIG_FREE_SHIPPING_VOUCHER = true;
+	var TRACKING_URL_PARAMS = ["smtt","smtt_v0"];
+	var MARKET_UNIVERSAL_LANDING_PAGE_PREFIX = "/universal-link";
+	var CONFIG_ROUND_TO_DECIMAL_PLACE_FOR_BUYER_WALLET = 0;
+
+
+	var _gaq = [];
+
+	var _djangofy_t_ = {};
+
+	var _transify_t_ = {};
+
+	var i18njs = false;
+
+	window.criteo_q = window.criteo_q || [];
+
+	window.RN_PERCENTAGE = {"default":100,"just_for_you":0,"checkout":100};
+	window.RN_PAGE_MIN_VERSION_ANDROID = {"default":21416,"checkout":21200};
+	window.RN_PAGE_MIN_VERSION_IOS = {"checkout_cancel_provide_reason":24705,"default":21400,"checkout":21200};
+	window.RN_PAGE_MIN_VERSION_BUNDLE = {"checkout_cancel_provide_reason":3033000,"default":0,"order_paid":2066000};
+
+</script>
+
+
+	<script>
+  var gtmDataLayer = [{
+	  'country': window.LOCALE.toLowerCase(),
+	  'userid': window.USERID,
+	  'source': 'mweb'
+  }];
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','gtmDataLayer','GTM-WJZQSJF');</script>
+<!-- End Google Tag Manager -->
+
+
+
+
+
+	<script type="text/javascript" src="/static/jsutil_min/tracking/fb_init.js?f40291411950" defer></script>
+	
+	<script type="text/javascript" src="//static.criteo.net/js/ld/ld.js" async="true"></script>
+	<script type="text/javascript">
+		window.criteo_q.push({event: "setAccount", account: T_CRITEO_ID });
+		if(window.T_EM_H)
+			window.criteo_q.push({ event: "setEmail", email: window.T_EM_H });
+	</script>
+	
+
+
+
+
+
+	<script type="text/javascript" src="/static/jslib_min/jslib_base.js?c2a4f916f2e8"></script>
+
+
+
+
+<script>
+_transify_t_["label_mil_id"] = "JT";
+_transify_t_["label_mil_ph"] = "jt";
+_transify_t_["label_ok"] = "OK";
+_transify_t_["label_mil_th"] = "juta";
+_transify_t_["tooltips_shipping_fee_included"] = "Gunakan fitur “Chat” untuk konfirmasi ongkos kirim dengan Penjual. Jika perlu, gunakan fitur \u0022Tawar\u0022 untuk menyesuaikan Harga (mengikuti ongkos kirim yang tepat).";
+_transify_t_["label_used"] = "Pernah Dipakai";
+_transify_t_["label_used_good"] = "Pernah pakai (kualitas bagus)";
+_transify_t_["label_years"] = "tahun";
+_transify_t_["label_apps"] = "Aplikasi";
+_transify_t_["text_download_shopee_for_more_function"] = "Silakan download aplikasi Shopee untuk menikmati lebih banyak fitur!";
+_transify_t_["alert_bank_account_wallet_pin_changed"] = "Permintaan Anda tidak dapat diproses. Mohon coba lagi nanti atau hubungi Customer Service kami di {{hotline}}";
+_transify_t_["label_short_for_number_100000000"] = "N/A";
+_transify_t_["label_copied_failed"] = "Gagal disalin";
+_transify_t_["label_within_hours"] = "Hitungan jam";
+_transify_t_["label_short_for_number_10000"] = "N/A";
+_transify_t_["label_latest"] = "Terbaru";
+_transify_t_["alert_set_rejected_account_default"] = "Anda tidak dapat menjadikan bank yang ditolak sebagai yang utama";
+_transify_t_["label_new_without_tags"] = "Baru (tanpa label)";
+_transify_t_["label_price"] = "Harga";
+_transify_t_["alert_bank_account_no_change"] = "Mohon ubah detil rekening bank untuk melanjutkan.";
+_transify_t_["label_cancel"] = "Nanti Saja";
+_transify_t_["label_year_abbr"] = "th";
+_transify_t_["alert_bank_account_duplicate"] = "Anda tidak dapat membuat 2 rekening bank yang sama";
+_transify_t_["alert_bank_info_not_valid"] = "Beberapa informasi rekening bank tidak sah, mohon masukkan kembali";
+_transify_t_["label_week"] = "minggu";
+_transify_t_["label_day"] = "hari";
+_transify_t_["tooltips_days_to_ship"] = "Jumlah hari yang dibutuhkan Penjual menyiapkan pengiriman Anda";
+_transify_t_["label_day_abbr"] = "hari";
+_transify_t_["label_not_set"] = "Belum ditetapkan";
+_transify_t_["tooltips_shipping_fee_included_my"] = "Chat dengan Penjual untuk negosiasi mengenai ongkos kirim, silakan chat dengan Penjual";
+_transify_t_["msg_ios_coming_soon"] = "Segera hadir untuk versi iOS";
+_transify_t_["label_popular"] = "Populer";
+_transify_t_["alert_delete_default_account"] = "Anda tidak dapat menghapus rekening bank utama";
+_transify_t_["label_hour"] = "jam";
+_transify_t_["label_within_1_day"] = "Dalam 1 hari";
+_transify_t_["label_prep_within"] = "dalam";
+_transify_t_["alert_delete_pending_account"] = "Anda tidak dapat menghapus rekening ini karena ada pesanan/dana yang belum diproses";
+_transify_t_["label_store_number"] = "No. Toko";
+_transify_t_["label_hours"] = "jam";
+_transify_t_["label_k_th"] = "พัน";
+_transify_t_["label_copied_successfully"] = "Berhasil disalin";
+_transify_t_["alert_bank_account_banned"] = "No. Rekening ini telah diblokir karena terdeteksi adanya kejanggalan. Mohon masukkan No. Rekening lainnya atau hubungi Customer Service kami.";
+_transify_t_["label_short_for_number_1000000"] = "JT";
+_transify_t_["label_new_with_defects"] = "Baru (dengan cacat)";
+_transify_t_["label_get"] = "Download Sekarang";
+_transify_t_["alert_bank_account_blacklisted"] = "No. Rekening ini telah diblokir karena terdeteksi adanya kejanggalan. Mohon masukkan No. Rekening lainnya atau hubungi Customer Service kami.";
+_transify_t_["label_k_vn"] = "k";
+_transify_t_["label_k_ph"] = "k";
+_transify_t_["alert_bank_account_reach_limit"] = "Anda telah mencapai jumlah akun bank maksimum yang diijinkan.";
+_transify_t_["label_hour_abbr"] = "jam";
+_transify_t_["label_new_others"] = "Baru lainnya";
+_transify_t_["label_days"] = "hari";
+_transify_t_["label_shopee"] = "Shopee";
+_transify_t_["label_year"] = "tahun";
+_transify_t_["label_k_id"] = "RB";
+_transify_t_["label_weeks"] = "minggu";
+_transify_t_["label_used_like_new"] = "Pernah Dipakai";
+_transify_t_["label_new_with_tags"] = "Baru";
+_transify_t_["msg_server_error"] = "Server Error";
+_transify_t_["label_mil_vn"] = "tr";
+_transify_t_["label_week_abbr"] = "minggu";
+_transify_t_["alert_bank_account_phone_changed"] = "Permintaan Anda tidak dapat diproses. Mohon coba lagi nanti atau hubungi Customer Service kami di {{hotline}}";
+_transify_t_["label_used_with_defects"] = "Pernah dipakai (dengan cacat)";
+_transify_t_["label_short_for_number_1000"] = "RB";
+_transify_t_["alert_edit_bank_account_error"] = "hanya rekening bank yang ditolak yang dapat diubah";
+_transify_t_["label_minute_abbr"] = "menit";
+_transify_t_["label_minute"] = "menit";
+_transify_t_["label_prep_morethan"] = "Lebih dari";
+_transify_t_["label_used_acceptable"] = "pernah dipakai (kualitas baik)";
+_transify_t_["label_distance"] = "Terdekat";
+_transify_t_["label_within_days"] = "Hitungan hari";
+_transify_t_["label_just_now"] = "Baru saja";
+_transify_t_["label_within_minutes"] = "Hitungan menit";
+_transify_t_["label_minutes"] = "menit";
+</script>
+<script type="text/javascript" src="/static/jsutil_min/site.js?9ef0dec5214d"></script>
+<script>
+_transify_t_["label_help_center"] = "Pusat Bantuan";
+</script>
+<script type="text/javascript" src="/static/jsutil_min/help.js?e8e239888203"></script>
+
+
+
+
+
+<script>
+
+
+</script>
+
+<script type="text/template" id="shopee-action-sheet-item">
+
+<li class='action-sheet-item {% if data.disabled %}disabled{% endif %}' data-id={{data.id}}>
+	<div class='title'>
+		{{data.title}}
+	</div>
+	<div class='subtitle L12'>
+		{% if data.subtitle %}
+			{{data.subtitle}}
+		{% endif %}
+	</div>
+</li>
+
+</script>
+
+
+
+
+<script>
+
+
+</script>
+
+<script type="text/template" id="drop-down-menu-item">
+
+<li class='drop-down-menu-item {% if data.state %}drop-down-menu-item--disabled{% endif %}' data-id={{data.id}}>
+	<div class='drop-down-menu-item__content'>
+		<div class='drop-down-menu-item__content__title r14'>
+			{{data.title}}
+		</div>
+	</div>
+</li>
+
+</script>
+
+
+
+	<script>
+_transify_t_["msg_overseas_products_credit_card_only"] = "Gunakan Kartu Kredit atau Debit untuk checkout produk dari luar negeri.";
+_transify_t_["label_official_shops--TH"] = "Shopee Mall";
+_transify_t_["label_ok"] = "OK";
+_transify_t_["label_official_shops--ID"] = "Shopee Mall";
+_transify_t_["label_all_categories_s"] = "semua kategori";
+_transify_t_["label_online"] = "Online";
+_transify_t_["msg_cancel_order_upgrade"] = "Pembeli telah mengajukan pembatalan atas pesanan ini. Mohon update aplikasi Shopee Anda untuk dapat menjawab pengajuan pembatalan dari Pembeli.";
+_transify_t_["label_official_shops--PH"] = "Shopee Mall";
+_transify_t_["label_your_activity_are_public"] = "Pengikut Anda sekarang dapat melihat aktivitas pemberian komentar dan favorit Anda";
+_transify_t_["msg_offline_payment_disabled_singular"] = "__seller__ tidak mengaktifkan fungsi Transaksi Offline.";
+_transify_t_["label_unexpected_error"] = "Halaman bermasalah. Mohon coba lagi.";
+_transify_t_["label_official_shops--VN"] = "Shopee Mall";
+_transify_t_["text_retrieve_location_failed"] = "Lokasi tidak bisa ditemukan";
+_transify_t_["msg_total_price_exceed_channel_max"] = "Total pesanan yang dibuat telah melebihi batas yang diperbolehkan. Untuk keterangan lebih lanjut, hubungi Customer Service kami.";
+_transify_t_["label_official_shops--TW"] = "蝦皮商城";
+_transify_t_["label_ago"] = "__date__ lalu";
+_transify_t_["text_retrieve_location"] = "Memuat lokasi Anda...";
+_transify_t_["msg_app_go_send"] = "Mohon gunakan aplikasi Shopee untuk menambahkan informasi lokasi map Go\u002DSend.";
+_transify_t_["label_learn_more"] = "Pelajari Lebih Lanjut";
+_transify_t_["label_official_shops--MY"] = "Shopee Mall";
+_transify_t_["text_waiting_for_location"] = "Mencari lokasi...";
+_transify_t_["msg_you_will_receive_a_phone_call"] = "Kode verifikasi akan diinfokan kepada Anda melalui panggilan telepon dari Shopee.";
+_transify_t_["msg_buyer_address_not_support_cod"] = "Alamat Anda tidak mendukung metode COD";
+_transify_t_["msg_seller_has_blocked_you"] = "Pengguna ini telah membatasi penjualannya. Harap untuk membeli ke toko yang lain.";
+_transify_t_["label_filter"] = "Filter";
+_transify_t_["label_see_other_products"] = "Lihat Produk Lainnya";
+_transify_t_["msg_promo_offline_no_multiple_checkouts"] = "Kode promo hanya dapat digunakan untuk pesanan pada satu Penjual. Mohon ubah keranjang Anda.";
+_transify_t_["label_change_setting"] = "Ubah Pengaturan";
+_transify_t_["msg_payment_channel_banned_category"] = "Maaf, karena keranjang Anda memiliki produk dari __category__, __payment_channel__ telah dinonaktifkan.";
+_transify_t_["label_age_control_ok_customize"] = "LANJUT";
+_transify_t_["label_age_control_msgs_customize"] = "Anda harus diatas __{age}__ tahun untuk melihat konten ini. Silakan konfirmasi umur Anda.";
+_transify_t_["label_search_in"] = "Cari dalam";
+_transify_t_["label_chat"] = "Chat";
+_transify_t_["label_call_me"] = "Hubungi Saya";
+_transify_t_["label_active_date_ago"] = "Aktif __date__ lalu";
+_transify_t_["label_m"] = "m";
+_transify_t_["label_edit_product"] = "Ubah Produk";
+_transify_t_["label_cart"] = "Keranjang";
+_transify_t_["msg_total_price_below_min_amount"] = "Minimal transaksi menggunakan metode pembayaran ini adalah __min_amount__. Silakan pilih metode pembayaran lainnya untuk checkout.";
+_transify_t_["msg_cod_not_all_supported_logistic"] = "Tidak semua jasa pengiriman mendukung COD";
+_transify_t_["msg_cod_temporarily_suspended"] = "COD telah dinonaktifkan sementara. Mohon menggunakan metode pembayaran yang lain.";
+_transify_t_["msg_pls_update_apps"] = "Update aplikasi Shopee Anda untuk menggunakan fitur ini.";
+_transify_t_["label_like"] = "Favorit";
+_transify_t_["label_cancel"] = "Nanti Saja";
+_transify_t_["label_official_shops--SG"] = "Shopee Mall";
+_transify_t_["msg_download_shopee_google"] = "Mohon download aplikasi Shopee melalui Google Play Store untuk menggunakan fitur ini.";
+_transify_t_["label_follow"] = "Ikuti";
+_transify_t_["msg_server_error"] = "Server Error";
+_transify_t_["label_search_within_category"] = "Cari \u0022#{searchText}\u0022 dalam #{categoryName}";
+_transify_t_["msg_payment_option_maintenance"] = "__channelname__ sistem saat ini sedang dalam perbaikan, silakan pilih metode pembayaran yang lain.";
+_transify_t_["label_age_control_no_customize"] = "KEMBALI";
+_transify_t_["msg_order_total_exceed_cod_maximum"] = "Harga pesanan anda telah melebihi batas untuk COD (__cod_limit__ IDR). Mohon cek kembali pesanan anda atau pilih metode pembayaran yang lain untuk transaksi ini.";
+_transify_t_["label_km"] = "km";
+_transify_t_["alert_follow_limit"] = "Anda telah mencapai batas maksimal Mengikuti.";
+_transify_t_["label_following"] = "Mengikuti";
+_transify_t_["alert_follow_too_frequent"] = "Anda telah mencapai batas Mengikuti untuk hari ini. Silakan coba lagi besok.";
+_transify_t_["label_within"] = "sekitar";
+_transify_t_["label_share"] = "Share";
+_transify_t_["msg_total_price_exceed_credit_card_max"] = "Checkout Gagal (C07): Kamu telah melewati batas maks. pembayaran harian dengan kartu kredit. Mohon coba metode pembayaran lain.";
+_transify_t_["label_more_than_200km_away"] = "lebih dari 200KM";
+_transify_t_["msg_promo_code_no_offline_payment"] = "Penjual\u002DPembeli Atur Sendiri tidak dapat dipilih ketika menggunakan kode promosi.";
+</script>
+<script type="text/javascript" src="/static/jsutil_min/jsutil_base.js?29d2a90465d5"></script>
+
+
+
+	<script type="text/javascript" src="/static/jslib/jquery.mobile.custom.min.js?ef4d69c9fa8a"></script>
+
+
+<script type="text/javascript" src="/static/pagejs_min/config.js?d5c0b1924e6e"></script>
+<script type="text/javascript" src="/static/pagejs_min/server_constant.js?f4a10fd22106"></script>
+
+
+	<script type="text/javascript" src="/static/jsutil_min/BJBridgeReceiver.js?d3341eb14e17"></script>
+	
+
+	<script>
+_transify_t_["msg_facebook_please_copy_link"] = "Silakan salin URL dan tempel di Aplikasi Safari. Maaf atas ketidaknyamanannya.";
+_transify_t_["label_search_within"] = "Cari dalam";
+</script>
+<script type="text/javascript" src="/static/pagejs_min/common/deep_linking.js?b22f48077eff"></script>
+	<script type="text/javascript" src="/static/jslib/velocity.min.js?8fb122e8a4ed"></script>
+	<script type="text/javascript" src="/static/jsutil_min/multi_target_event_dispatcher.js?49f854421b97"></script>
+	<script type="text/javascript" src="/static/pagejs_min/common/app_header_controller.js?abc1676abeda"></script>
+	<script type="text/javascript">
+		$(function() {
+			AppHeaderController.init($('.header'));
+		});
+		
+		
+		
+		window.criteo_q.push({ event: "setSiteType", type: isPC() ? "d" : "m" });
+		
+	</script>
+
+	
+
+
+
+
+	
+	
+
+
+
+
+
+
+
+
+<script>
+
+_transify_t_['label_hide'] = "Sembunyi";
+_transify_t_['label_installment_tag'] = "Cicilan";
+_transify_t_['label_unlike'] = "Hapus Favorit";
+_transify_t_['label_promote_in'] = "Tunggu";
+_transify_t_['label_promote_now'] = "Naikkan Produk";
+_transify_t_['label_this_product_banned'] = "Produk ini telah diblokir";
+_transify_t_['label_this_product_delete'] = "Produk ini telah dihapus";
+_transify_t_['msg_your_product_has_banned'] = "Produk Anda telah diblokir";
+_transify_t_['label_update'] = "Update";
+_transify_t_['msg_your_product_has_deleted'] = "Produk anda telah dihapus dari Daftar.";
+_transify_t_['label_dismiss'] = "Tutup";
+_transify_t_['msg_your_product_under_review'] = "Produk Anda sedang diperiksa";
+_transify_t_['msg_listed_successfully'] = "Produk terdaftar!";
+_transify_t_['msg_uploaded_successfully'] = "Berhasil Diupload!";
+_transify_t_['msg_reach_out'] = "Promosi ke teman";
+_transify_t_['label_share'] = "Share";
+_transify_t_['label_view_details'] = "Tampilkan Rincian";
+_transify_t_['label_product_not_visible'] = "Pembeli tidak dapat melihat produk ini karena Anda belum melengkapi Informasi Pengguna.";
+_transify_t_['label_verify_user_info'] = "Verifikasi Informasi Pengguna";
+_transify_t_['label_promotion_sold'] = "Habis";
+_transify_t_['label_sold'] = "Terjual";
+_transify_t_['msg_item_invalid_attribute'] = "Produk Anda memiliki informasi yang tidak sah.";
+_transify_t_['msg_item_invalid_category'] = "Kami merekomendasikan kategori yang lebih sesuai untuk produkmu.";
+_transify_t_['label_sold'] = "Terjual";
+_transify_t_['label_no_resent_sale'] = "0 Terjual";
+_transify_t_['label_product_coming_soon'] = "Akan Datang";
+var isShownToOwner = false;
+
+</script>
+
+<script type="text/template" id="item-card">
+
+<li class='item-card {{card_type}} {{item.item_status_for_owner}}' data-from="{{item.from}}" distance='{{item.distance}}' shopid='{{item.shopid}}' itemid='{{item.itemid}}'>
+	<div class='margin-holder' style="{{ r.item_after_dismiss_visibility }}">
+		<div class='margin-holder-inner'>
+
+
+
+			<a class='item-href {{r.item_status}}' href="{{ r.item_href }}" shopid='{{item.shopid}}' itemid='{{item.itemid}}' target='_blank' id="item-href-{{ item.itemid }}">
+				<div class='holder {{r.item_status}}'>
+					<div class="image-wrapper">
+
+						
+
+						<div class="item-image-container">
+							<div class="item-image-container-inner">
+								<div class="item-image-loading"> </div>
+								<div class="item-image domify-bg-img" style='{{ r.bg_img_style }}' title='{{item.name}}' id="item-image-{{ item.itemid }}">
+									<div class="adult-mask {{ r.class_adult }}"></div>
+									<div class="preview-mask {{ r.class_preview_mask }} m14" id="preview-mask-{{ item.itemid }}">Akan Datang</div>
+								</div>
+								<div class="item-labels">
+									<div class='shopee-verified ic_productlist_verified ic_productlist_verified--{{ LOCALE }}' style="{{ r.shopee_verified_display }}"></div>
+									<div class='official-shop ic_productlist_officialshop ic_productlist_officialshop--{{ LOCALE }}' style="{{ r.official_shop_display }}"></div>
+									<div class='wholesale-product ic_productlist_wholesale ic_productlist_wholesale--{{ LOCALE }}' style="{{ r.wholesale_display }}"></div>
+									<div class='shopee-horizontal-badge shopee-badge-coins-back' style="{{ r.coin_earn_label_display }}">{{ item.coin_earn_label }}</div>
+								</div>
+								<div class='shopee-ads r10' style="{{ r.shopee_ads_style }}">
+									
+									Iklan
+									
+								</div>
+							</div>
+							<div class='shopee-ads r10' style="{{ r.shopee_ads_style }}">
+								
+								Iklan
+								
+							</div>
+							<div class='product-video ic_productlist_video' style="{{ r.product_video_style }}" id="product-video-{{ item.itemid }}"></div>
+							<div class='lowest-price ic_lowest_price_small {{LOCALE}}' style="{{ r.lowest_price_style }}"></div>
+							<div class='unlisted-tag' style="{{ r.unlisted_style }}">
+								<div class='unlisted-tag__text l12'>
+									
+									Diarsipkan
+									
+								</div>
+							</div>
+						</div>
+						<div class='mask'></div>
+
+						<div class='status_band'>
+
+							
+
+<div class="badge-fixed-width badge-soldout" style="{{ r.badge_soldout_display }}">
+
+    
+        
+            <div class="badge-sold-label m10">Habis</div>
+        
+        
+    
+</div>
+
+							
+
+<div class="badge-fixed-width badge-promotion" style="{{ r.badge_promotion_display }}">
+
+	
+	<div class="badge-promotion-percent L12">
+		
+
+		<span class="percent">{{item.discount}}</span>
+
+		<span class="badge-promotion-off-label L12">OFF</span>
+		
+	</div>
+	
+</div>
+
+
+						</div>
+					</div>
+				</div>
+				<div class='bottom {{r.item_status}} {{r.class_liked}} '>
+					
+					
+					<div class="item-name">
+						<div class="name L14 itemName {{ r.item_name_class }}">
+							<div class="official_productcard_label official_productcard_label--{{ LOCALE }}" style="{{ r.official_shop_label_in_title_display }}"></div>
+							<span class='name__label' id="item-name-{{ item.itemid }}">{{item.name}}</span>
+						</div>
+						<div class="item-tags">
+							<div class="item-tag item-installment-tag" style="{{ r.installment_tag_style }}">
+								
+
+<div  class="badge-label" >
+	<div class="badge-label--regular truncate">
+		Cicilan
+	</div>
+	<!-- We need this because the small size font have some issue being
+		 vertically centered on some Android devices -->
+	<div class="badge-label--resize truncate">
+		Cicilan
+	</div>
+</div>
+
+							</div>
+							<div class="item-tag item-bundle-deal-tag" style="{{ r.bundle_deal_tag_style }}">
+								
+
+<div  class="badge-label" >
+	<div class="badge-label--regular truncate">
+		{{r.bundle_deal_label}}
+	</div>
+	<!-- We need this because the small size font have some issue being
+		 vertically centered on some Android devices -->
+	<div class="badge-label--resize truncate">
+		{{r.bundle_deal_label}}
+	</div>
+</div>
+
+							</div>
+						</div>
+					</div>
+					<div class="item-detail">
+						<div class="price m12 truncate" style='{{ r.price_style }}'>
+							<div class="price-before-discount m12" style="{{ r.price_before_discount_display }}">
+								<span class="todel-dollarfy_sign" dir="ltr"  val="{{item.currency}}" id="item-currency-{{ item.itemid }}">{{ r.text_currency }}</span><span class="todel-dollarfy_ext_int"  currency="{{item.currency}}" id="price-before-discount-{{ item.itemid }}">{{r.text_price_before_discount}}</span>
+							</div>
+							<div class="real-price m12">
+								<span class="todel-dollarfy_sign fix-size" dir="ltr"  val="{{item.currency}}">{{ r.text_currency }}</span><span class="todel-dollarfy_ext_int fix-size"  currency="{{item.currency}}" id="real-price-{{ item.itemid }}">{{r.text_price}}</span>
+								<span style='{{r.price_max_display}}'>
+									<span>-</span>
+									<span class="todel-dollarfy_sign fix-size" dir="ltr"  val="{{item.currency}}" >{{ r.text_currency }}</span><span class="todel-dollarfy_ext_int fix-size" currency="{{item.currency}}" id="max-price-{{ item.itemid }}">{{r.text_price_max}}</span>
+								</span>
+							</div>
+						</div>
+						<div class="price--masked m12 truncate" style='{{ r.price_masked_style }}'>
+							<span class="todel-dollarfy_sign" dir="ltr"  val="{{item.currency}}">{{ r.text_currency }}</span><span class="todel-dollarfy_ext_int fix-size"  currency="{{item.currency}}" id="price-{{ item.itemid }}">{{item.hidden_price_display}}</span>
+						</div>
+						<div class="item-detail__icons">
+							<div class="ic_service_by_shopee {{ r.service_by_shopee_icon_cls }} service_by_shopee-icon" style="{{ r.service_by_shopee_icon_visibility }}"></div>
+							<div class="ic_free_shipping_green_small free-shipping-icon" style="{{ r.free_shipping_visibility }}"></div>
+						</div>
+					</div>
+					<span class="from" style="{{ r.white_list_visibility }}" id="item-from-{{ item.itemid }}">{{item.from}}</span>
+
+					<div class="item-status">
+						<div class="likes half" style="{{ r.like_visibility }}">
+							<div class="icon_like {{item.icon_like}}"></div>
+							<span class="number r12" id="item-like-count-{{ item.itemid }}">{{item.liked_count}}</span>
+							<div class='clickable' id="like-btn-{{ item.itemid }}">
+							</div>
+						</div>
+
+
+	<div class="sold-info" style="{{ r.sold_visibility }}"><span class="sold-info__label r10" style="{{ r.sold_number_visibility }}">Terjual</span><span class="sold-info__number r10" style="{{ r.sold_number_visibility }}" id="item-sold-{{ item.itemid }}">{{ item.sold }}</span><span class="sold-info__label r10" style="{{ r.sold_empty_visibility }}">0 Terjual</span></div>
+
+						
+							
+							
+							
+							
+						
+
+
+					</div>
+
+
+<div class="item_rating"><div class="item_rating__rating-info" style="{{ r.rating_inline_style }}"><div class="item_rating__rating-info__stars"><div class="item_rating__rating-info__stars__star {{ r.star_cls_0 }}"></div><div class="item_rating__rating-info__stars__star {{ r.star_cls_1 }}"></div><div class="item_rating__rating-info__stars__star {{ r.star_cls_2 }}"></div><div class="item_rating__rating-info__stars__star {{ r.star_cls_3 }}"></div><div class="item_rating__rating-info__stars__star {{ r.star_cls_4 }}"></div></div><div class="item_rating__rating-info__count r10" id="item-rating-count-{{ item.itemid }}">{{ r.rating_count_display }}</div></div><div class="no-rating r10" style="{{ r.rating_empty_inline_style }}">
+						
+						Belum ada penilaian
+						
+						</div></div>
+
+
+					<div class='action-text L12'>{{ i18n.t('label_this_product_' + r.item_status) }}</div>
+					<div class='action-btn unlike'>
+						<span class='ic_unlike_icon'></span><span class='text L12'>{{ i18n.t('label_unlike') }}</span>
+					</div>
+				</div>
+			</a>
+		</div>
+
+
+
+
+	</div>
+</li>
+
+</script>
+
+
+
+
+
+
+<script type="text/javascript" src="/static/jslib/swiper.jquery.min.js?f63325953f1b"></script>
+<script type="text/javascript" src="/static/jsutil_min/gswiper.js?0e8e4fd76910"></script>
+<script type="text/javascript" src="/static/pagejs_min/home/banners_manager.js?16eba0dad7bd"></script>
+<script type="text/javascript" src="/static/pagejs_min/home/banners.js?32539aa3c0c9"></script>
+<script type="text/javascript" src="/static/pagejs_min/home/simple_banners.js?11356e598cdf"></script>
+<script type="text/javascript" src="/static/pagejs_min/home/activity_banners.js?d379cad76fbc"></script>
+
+	<script type="text/javascript" src="/static/pagejs_min/home/popup_banners.js?01dcb040ec5d"></script>
+
+
+	<script>
+_transify_t_["label_official_shops--TH"] = "Shopee Mall";
+_transify_t_["label_official_shops--SG"] = "Shopee Mall";
+_transify_t_["label_official_shops--ID"] = "Shopee Mall";
+_transify_t_["label_see_all"] = "Lihat Semua";
+_transify_t_["label_official_shops--PH"] = "Shopee Mall";
+_transify_t_["label_official_shops--VN"] = "Shopee Mall";
+_transify_t_["label_official_shops--MY"] = "Shopee Mall";
+_transify_t_["label_official_shops--TW"] = "蝦皮商城";
+</script>
+<script type="text/javascript" src="/static/pagejs_min/home/category/official_shop_controller.js?c3006637b51e"></script>
+	
+
+
+<script type="text/template" id="official-shop-item">
+
+<div class="official-shop-item clickable_area {% if hidden %}hidden{% endif %} {% if item.is_see_all %}official-shop-item--see-all{% endif %} {% if item.is_empty_item %}official-shop-item--empty-item{% endif %}" data-shopposition="{{item.position}}" data-shopid="{{item.shopid}}" data-shopcat_id="{{item.shop_collection_id}}" data-username="{{item.username}}">
+	{% if item.is_see_all %}
+		<div class="mask middle-centered-div">
+			<div class="see-all-text-wrapper">
+				<span class="r14 capitalize">{{seeAllText}}</span>
+				<span class="ic_arrow_right_white"></span>
+			</div>
+		</div>
+	{% endif %}
+	<div class="{{ratio_class}} official-shop-wrapper" style="{% if item.logo_url %}background-image : url({{item.logo_url}}){% endif %}">
+		<div class="brand-label brand-label--{% if item.brand_label == BrandLabel.NONE %}none{% else %}{% if item.brand_label == BrandLabel.NEW %}new-{{LOCALE}}{% endif %}{% endif %}"></div>
+	</div>
+</div>
+
+</script>
+
+	
+
+
+<script type="text/template" id="official-shop-items">
+
+<div class="official-shop-items {% if modifier_cls %}official-shop-items--{{modifier_cls}}{% endif %} center-container {% if isPC %}{% else %}hide-scrollbar{% endif %}">
+	{% if item_rows.0 %}
+		<div class="official-shop-items-wrapper">
+			{% for item in item_rows.0 %}
+				{% include "home/category/official_shop_item_djangofy.html" with item=item, ratio_class=ratio_class%}
+			{% endfor %}
+		</div>
+	{% endif %}
+	{% if item_rows.1 %}
+		<div class="official-shop-items-wrapper">
+			{% for item in item_rows.1 %}
+				{% include "home/category/official_shop_item_djangofy.html" with item=item, ratio_class=ratio_class%}
+			{% endfor %}
+		</div>
+	{% endif %}
+	{% if item_rows.2 %}
+		<div class="official-shop-items-wrapper">
+			{% for item in item_rows.2 %}
+				{% include "home/category/official_shop_item_djangofy.html" with item=item, ratio_class=ratio_class%}
+			{% endfor %}
+		</div>
+	{% endif %}
+</div>
+{% if modifier_cls=='compact' %}
+	{% if item_rows.1 %}<div class="horizontal-line horizontal-line--1"></div> {% endif %}
+	{% if item_rows.2 %}<div class="horizontal-line horizontal-line--2"></div> {% endif %}
+{% endif %}
+
+</script>
+
+
+<script>
+_transify_t_["label_trending_hashtags"] = "Hashtag Trending";
+</script>
+<script type="text/javascript" src="/static/pagejs_min/home/hashtag_hot.js?5598d8147dea"></script>
+<script>
+_transify_t_["label_flashsale_n_sold"] = "__n__ terjual";
+_transify_t_["label_flashsale_selling_out"] = "segera habis";
+_transify_t_["label_flash_sale_amount_sold_out_in_1_hour"] = "__amount__ terjual dalam __n__ jam";
+_transify_t_["label_flash_sale_amount_sold_out_in_n_hours"] = "__amount__ terjual dalam __n__ jam";
+</script>
+<script type="text/javascript" src="/static/pagejs_min/home/flash_sale_utils.js?6385ef039edd"></script>
+
+
+
+<script>
+
+_djangofy_t_['label_promotion_off'] = "OFF";
+
+</script>
+
+<script type="text/template" id="badge-promotion">
+
+{% if item.discount %}
+<div class="badge-fixed-width badge-promotion">
+	{% if LOCALE == "TW" %}
+	<div class="badge-promotion-percent L12 promotion-tw">
+		<span class="percent">{{item.discount}}</span><span class="badge-promotion-off-label L12 promotion-tw">{% transify 'label_promotion_off' %}</span>
+	</div>
+	{% else %}
+	<div class="badge-promotion-percent L12">
+		{% if LOCALE == "TH" %}
+		<span class="badge-promotion-off-label L12">{% transify 'label_promotion_off' %}</span><span class="percent">{{item.discount}}</span>
+		{% else %}
+		<span class="percent">{{item.discount}}</span><span class="badge-promotion-off-label {% if LOCALE == 'IR' %}L10{% else %}L12{% endif %}">{% transify 'label_promotion_off' %}</span>
+		{% endif %}
+	</div>
+	{% endif %}
+</div>
+{% endif %}
+
+</script>
+
+
+
+<script>
+
+_djangofy_t_['label_promotion_sold'] = "Habis";
+_djangofy_t_['label_promotion_out'] = ".";
+_djangofy_t_['label_grey_badge_sold'] = "Habis";
+_djangofy_t_['label_grey_badge_out'] = "Terjual";
+
+</script>
+
+<script type="text/template" id="badge-soldout">
+
+<div class="badge-fixed-width badge-soldout">
+	{% if LANGUAGE == "vi" %}
+		<div class="badge-sold-label m10">{% transify 'label_promotion_sold' %}</div>
+		<div class="badge-out-label m10">{% transify 'label_promotion_out' %}</div>
+	{% else %}
+		{% if LANGUAGE == "th" %}
+			<div class="badge-sold-label m10">{% transify 'label_grey_badge_sold' %}</div>
+			<div class="badge-out-label m10">{% transify 'label_grey_badge_out' %}</div>
+		{% else %}
+			{% if LANGUAGE == "id" %}
+				<div class="badge-sold-label m10">{% transify 'label_promotion_sold' %}</div>
+			{% else %}
+				{% if LANGUAGE == "zhHant" %}
+					<div class="badge-sold-label m10">{% transify 'label_promotion_sold' %}</div>
+				{% else %}
+					<div class="badge-sold-label m12">{% transify 'label_promotion_sold' %}</div>
+				{% endif %}
+			{% endif %}
+			{% if LANGUAGE != "id" %}
+				{% if LANGUAGE != "zhHant" %}
+					<div class="badge-out-label m12">{% transify 'label_promotion_out' %}</div>
+				{% endif %}
+			{% endif %}
+		{% endif %}
+	{% endif %}
+</div>
+
+</script>
+
+
+
+<script type="text/template" id="banners_djangofy">
+
+<div class="swiper-container clickable_area">
+	<div class="swiper-wrapper">
+		{% for banner in banners %}
+		{% if banner.type != 2 %}
+			<div class="swiper-slide" data-params="{{banner.params}}">
+				{% if banner.video_id %}
+					<div class="video-banner" id="video-{{banner.video_id}}">
+						<div class="ic_play" data-video-id="{{banner.video_id}}"></div>
+						<img _src="{{banner.banner_image}}" alt="" title="{{banner.navigate_params.navbar.title}}">
+					</div>
+				{% else %}
+					<img _src="{{banner.banner_image}}" alt="" title="{{banner.navigate_params.navbar.title}}" data-idx={{banner.idx}}>
+				{% endif %}
+			</div>
+		{% endif %}
+		{% endfor %}
+	</div>
+	<div class="swiper-pagination"></div>
+
+	<!-- Will be dynamically removed for mobile devices. Refer to banners.js. -->
+	<div class="swiper-button-prev" style="display:none;"></div>
+	<div class="swiper-button-next" style="display:none;"></div>
+</div>
+
+</script>
+
+
+
+
+<script>
+
+_djangofy_t_['label_see_all'] = "Lihat Semua";
+
+</script>
+
+<script type="text/template" id="hashtags_djangofy">
+
+<div class='outer-wrapper'>
+	<div class='hashtag-list'>
+		{% for hash in hashtags %}
+			<div class='hashtag-item with-border' data-hash='{{hash.hashtag}}' _style='background-image:url("{{ITEM_IMAGE_BASE_URL}}{{hash.cover_image}}_tn");' title="{{hash.hashtag}}">
+				<div class='hashtag-title r14'>#{{hash.hashtag}}</div>
+			</div>
+		{% endfor %}
+		{% if dummy_hashtag %}
+			<div class='hashtag-item trending_link with-border' _style='background-image:url("{{ITEM_IMAGE_BASE_URL}}{{dummy_hashtag.cover_image}}_tn");' _href="/trending_hashtags/">
+				<div class='hashtag-title r14'>{% transify "label_see_all" %}</div>
+			</div>
+		{% endif %}
+	</div>
+	<div class="hashtag-swiper-button-prev"></div>
+	<div class="hashtag-swiper-button-next"></div>
+</div>
+
+</script>
+
+
+<script>
+
+_djangofy_t_['label_see_more'] = "Lihat Lainnya";
+_djangofy_t_['label_see_all'] = "Lihat Semua";
+
+</script>
+<script type="text/template" id="simple-item-card">
+<div class='simple-item-card {% if item.is_see_all %} see-all simple-item-card--see-more{% endif %} clickable_area' data-shopid={{item.shopid}} data-itemid={{item.itemid}} data-is_adult={% if item.is_adult %}1{% else %}0{% endif %} data-index={{item.itemIndex}} {% if item.from %}data-from="{{item.from}}"{% endif %} >
+	{% if item.covered_see_all %}
+		<div class="covered_see-all"><div class="see-all-wrapper"><div class="see-all-icon ic_shopee_seeall"></div><div class="see-all-label capitalize r12">{% if item.show_see_all_text_as_see_more %}{% transify "label_see_more" %}{% else %}{% transify "label_see_all" %}{% endif %}</div></div></div>
+	{% endif %}
+	{% if item.is_see_all %}
+		<div class="mask middle-centered-div"><div class="see-all-text-wrapper"><span class="r14 capitalize">{% if item.show_see_all_text_as_see_more %}{% transify 'label_see_more' %}{% else %}{% transify 'label_see_all' %}{% endif %}</span><span class="ic_arrow_right_white"></span></div></div>
+	{% endif %}
+	<div class='status_band'>
+		{% if item.discount %}
+			{% include "shop/badges/badge_promotion.html" %}
+		{% endif %}
+	</div><div class='image-wrapper ratio_1_1_box' style="background-image : url({{ITEM_IMAGE_BASE_URL}}{{item.image}}_tn)"> {% if item.has_lowest_price_guarantee %}
+			<div class='lowest-price ic_lowest_price_small {{LOCALE}}'></div>
+		{% endif %}</div><div class='text item-info-wrapper'><div class='top-line'><div class='title r12 truncate-line2 itemName'>{% if item.name %}{{item.name}}{% endif %}</div></div><div class='price'>
+			{% if item.price_min != item.price_max %}
+				{% if item.price_before_discount %}
+					{% if item.price_before_discount != item.price %}
+						<span class="price-before-discount"><div class="table-truncate-container"><div class="table-truncate-content truncate l12"><span dir="ltr" class="dollarfy_sign" val="{{item.currency}}" style="visibility: hidden; display: initial;"></span><span class="dollarfy_ext_int"  currency="{{item.currency}}" style="visibility: hidden; display: initial;">{{item.price_before_discount}}</span></div><div class="table-truncate-spacer l12"><span dir="ltr" class="dollarfy_sign" val="{{item.currency}}" style="visibility: hidden; display: initial;"></span><span class="dollarfy_ext_int"  currency="{{item.currency}}" style="visibility: hidden; display: initial;">{{item.price_before_discount}}</span></div></div></span>
+					{% endif %}
+				{% endif %}
+			{% endif %}
+			<span class='price-final m12'><span class="dollarfy_sign" dir="ltr" val="{{item.currency}}" style="visibility: hidden; display: initial;"></span><span class="dollarfy_ext_int"  currency="{{item.currency}}" style="visibility: hidden; display: initial;">{{item.price}}</span>
+				{% if item.price_min != item.price_max %}
+					<span>- </span><span class="dollarfy_sign" dir="ltr" val="{{item.currency}}" style="visibility: hidden; display: initial;"></span><span class="dollarfy_ext_int"  currency="{{item.currency}}" style="visibility: hidden; display: initial;">{{item.price_max}}</span>
+				{% endif %}
+			</span></div></div></div>
+
+</script>
+
+
+
+
+<script>
+
+_djangofy_t_['label_searches'] = "pencarian";
+_djangofy_t_['label_see_all'] = "Lihat Semua";
+
+</script>
+
+<script type="text/template" id="trending-search-item">
+
+<div class="trending-search-item clickable_area {% if item.is_see_all %}trending-search-item--see-all{% endif %}" data-keyword='{{item.keyword}}' data-catid='{{item.catid}}' data-from='{{item.from}}' data-info='{{item.info}}' data-index='{{itemIndex}}'>
+	{% if item.is_see_all %}
+		<div class="mask middle-centered-div">
+			<div class="see-all-text-wrapper">
+				<span class="r14 capitalize">{% transify "label_see_all" %}</span>
+				<span class="ic_arrow_right_white"></span>
+			</div>
+		</div>
+	{% endif %}
+	<div class="trending-search-item__info">
+		<div class="title trending-search-item__info__title truncate r14">{{item.keyword}}</div>
+	</div>
+	<div class="ratio_4_3_box trending-search-item__image" style="background-image : url({{ITEM_IMAGE_BASE_URL}}{{item.images.0}}_tn)""></div>
+</div>
+
+</script>
+
+
+	
+
+
+<script>
+
+_djangofy_t_['label_sold_out'] = "Habis";
+_djangofy_t_['label_see_all'] = "Lihat Semua";
+
+</script>
+
+<script type="text/template" id="flash-sale-item-card">
+
+
+	<div class="flash-sale-item {% if item.is_see_all %}flash-sale-item--see-all{% endif %} clickable_area" data-shopid={{item.shopid}} data-itemid={{item.itemid}} data-index={{item.itemIndex}}>
+		<div class='status_band'>
+			{% if item.flash_sale.stock %}
+				{% if item.flash_sale.price_before_discount %}
+					{% include "shop/badges/badge_promotion.html" with item=flash_sale%}
+				{% endif %}
+			{% else %}
+				{% include "shop/badges/badge_soldout.html" with item=flash_sale%}
+			{% endif %}
+		</div>
+		<div class="flash-sale-item__image ratio_1_1_box" style="background-image : url({{ITEM_IMAGE_BASE_URL}}{{displayImage}}_tn)"></div>
+		<div class="flash-sale-item__name itemName r14 hidden">{{displayName}}</div>
+		<div class="flash-sale-item__price truncate"><span class="dollarfy_sign m12" val="{{item.currency}}"></span><span class="dollarfy_ext_int r16"  currency="{{item.currency}}">{{item.flash_sale.price}}</span></div>
+		{% if item.flash_sale.stock %}
+			<div class="flash-sale-item__progress">
+				<div class="flame ic_flashsale_fire_app {% if item.flash_sale.hide_flame %}hidden{% endif %}"></div>
+				<div class="progress-bar">
+					<div class="progress-fg">
+						<div class="progress-bg" style="background-size:{{item.flash_sale.left_progress_percent}}%"></div>
+					</div>
+					<div class="r10 progress-label uppercase"><span>{{item.flash_sale.progress_label}}</span></div>
+				</div>
+			</div>
+		{% else %}
+			<div class="flash-sale-item__sold-out-label-wrapper">
+				<div class="sold-out-label uppercase m11">{{item.flash_sale.progress_label}}</div>
+			</div>
+		{% endif %}
+
+		{% if item.is_see_all %}
+			<div class="flash-sale-item__see-all">
+				<div class="see-all-wrapper">
+					<div class="see-all-icon ic_shopee_seeall"></div>
+					<div class="see-all-label capitalize r12">{% transify "label_see_all" %}</div>
+				</div>
+			</div>
+		{% endif %}
+	</div>
+
+</script>
+
+
+<script>
+	var PAGE_TYPE = 111;
+	var TARGETED_BANNER = true;
+	var CONFIG_CNY_SKIN = 'NORMAL' === 'CNY_SKIN';
+	var CONFIG_VALENTINES_SKIN = 'NORMAL' === 'VALENTINES_SKIN';
+	var CONFIG_HARI_RAYA_SKIN = 'NORMAL' === 'HARI_RAYA_SKIN';
+	var CONFIG_XMAS_SKIN = 'NORMAL' === 'XMAS_SKIN';
+	var CONFIG_SHOPEE_DAY_SKIN = 'NORMAL' === 'SHOPEE_DAY_SKIN';
+	var CONFIG_SHOPEE_DAY_SKIN_TEN_TEN = 'NORMAL' === 'SHOPEE_DAY_SKIN_TEN_TEN';
+	var CONFIG_SHOPEE_DAY_SKIN_ELEVEN_ELEVEN = 'NORMAL' === 'SHOPEE_DAY_SKIN_ELEVEN_ELEVEN';
+	var CONFIG_BIRTHDAY_SKIN = 'NORMAL' === 'BIRTHDAY_SKIN';
+	var CONFIG_INDEPENDENT_DAY_SKIN = 'NORMAL' === 'INDEPENDENT_DAY_SKIN';
+	var show_terms_update_popup = false;
+	var show_skinny_banner = true;
+	var CONFIG_OFFICIAL_SHOP_LANDING_PAGE = true;
+	var CONFIG_FLASH_SALE = true;
+</script>
+
+<script type="text/javascript" src="/static/pagejs_min/home/search_bar.js?1f448a0185b2"></script>
+
+
+<script type="text/javascript" src="/static/pagejs_min/common/track_item_card_scroll-domify.js?9379fa8a6f12"></script>
+<script>
+_transify_t_["msg_server_error"] = "Server Error";
+_transify_t_["msg_seller_on_vacation"] = "Kamu tidak dapat menambah/ mengubah produk apabila fitur Toko Libur diaktifkan.";
+_transify_t_["msg_free_shipping_th"] = "Gratis Ongkir";
+_transify_t_["msg_hide_item_success"] = "Terima kasih! Kami akan terus memperbaiki penemuan Anda.";
+_transify_t_["label_ok"] = "OK";
+_transify_t_["msg_edit_btn_pop"] = "Apakah Anda ingin update produk ini? Silakan download Aplikasi Shopee. Masih banyak produk lainnya menunggu Anda!";
+_transify_t_["msg_added_to_your_favorite"] = "Difavoritkan";
+_transify_t_["msg_product_offensive_hide_my"] = "Your product is currently not visible to buyers. It will be visible once it passes Shopee\u0027s manual review within 1 working days.";
+_transify_t_["msg_product_offensive_hide"] = "Produk Anda tidak dapat dilihat Pembeli. Produk akan dapat terlihat setelah pemeriksaan selesai.";
+_transify_t_["msg_id_free_shipping"] = "Gratis Ongkir se\u002DIndonesia! Periksa di halaman produk untuk informasi lebih lanjut.";
+_transify_t_["label_promote_now"] = "Naikkan Produk";
+_transify_t_["label_promoting"] = "Diiklankan...";
+_transify_t_["msg_deleted_from_your_favorite"] = "Favorit Dihapus";
+_transify_t_["msg_free_shipping_ph"] = "Free shipping and COD are supported";
+_transify_t_["msg_free_shipping_vn"] = "Didukung oleh ongkir gratis";
+_transify_t_["label_promote_in"] = "Tunggu";
+_transify_t_["msg_free_shipping_tw"] = "Didukung oleh ongkir gratis";
+_transify_t_["msg_free_shipping_sg"] = "Didukung oleh ongkir gratis";
+_transify_t_["label_shipping_promotion_van_my"] = "Gratis Ongkir";
+</script>
+<script type="text/javascript" src="/static/jsutil_min/batch-item-domify.js?3b7597c75514"></script>
+<script>
+_transify_t_["label_show_more"] = "Lihat Lebih";
+_transify_t_["msg_shopee_has_updated_terms_of_service"] = "Shopee telah memperbaharui Syarat Layanan dan Kebijakan Privasi.";
+_transify_t_["label_search_shopee"] = "Cari di Shopee";
+_transify_t_["label_search_c_prod"] = "Cari Produk \u0022_{keyword}_\u0022";
+_transify_t_["label_see_more"] = "Lihat Lainnya";
+_transify_t_["label_show_less"] = "Sembunyikan";
+_transify_t_["label_update_at"] = "Diupdate #{time}";
+_transify_t_["label_search_c_shop"] = "Cari Toko \u0022_{keyword}_\u0022";
+</script>
+<script type="text/javascript" src="/static/pagejs_min/home/home_new.js?96e5c481ca5e"></script>
+
+
+
+
+
+
+	<script>
+{
+	var dur = (Date.now ? Date.now() : +new Date()) - QOS_PAGE_START_MS;
+	if(window._track_qos_pageload)
+		_track_qos_pageload(dur);
+	if(window.BI_ANALYTICS)
+		BI_ANALYTICS.qos(QOS_TYPE.HTML, dur);
+}
+
+if(window.__plvNeedSaveAllNodesState__)
+{
+	// __plv_saved_body__ = document.children[0].innerHTML;
+	window.__plv_saved_body__ = document.body.innerHTML;
+}
+</script>
+
+
+
+
+
+</body>
+</html>

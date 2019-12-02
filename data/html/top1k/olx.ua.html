@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <title>OLX</title>
+    <meta name="description" content="Coś się nie zgadza">
+    <meta name="author" content="OLX">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <style type="text/css">
+    html, body, div, span, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    abbr, address, cite, code,
+    del, dfn, em, img, ins, kbd, q, samp,
+    small, strong, sub, sup, var,
+    b, i,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, figcaption, figure,
+    footer, header, hgroup, menu, nav, section, summary,
+    time, mark, audio, video {
+        margin:0;
+        padding:0;
+        border:0;
+        outline:0;
+        font-size:100%;
+        vertical-align:baseline;
+        background:transparent;
+    }
+    html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var,
+    b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header,
+    hgroup, menu, nav, section, summary, time, mark, audio, video {
+        margin:0;
+        padding:0;
+        border:0;
+        outline:0;
+        font-size:100%;
+        vertical-align:baseline;
+        background:transparent;
+    }
+    body{
+        font-family: "Lato",Helvetica,Arial,sans-serif;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #333;
+        background-color: #fff;
+    }
+    h1{
+        font-size:22px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    p {
+        margin: 0 0 15px;
+    }
+    p img{
+        vertical-align:top;
+    }
+    a {
+        margin:0;
+        padding:0;
+        font-size:100%;
+        vertical-align:baseline;
+        background:transparent;
+        color:#2fa5d5;
+    }
+    .container{
+        padding-left:15px;
+        padding-right:15px;
+        margin-right: auto;
+        margin-left: auto;
+        position:relative;
+    }
+    .header{
+        height:60px;
+        border-bottom:1px solid #f0f0f0;
+    }
+    .header__logo{
+        width:70px;
+        height:70px;
+        background:url(failover-ua/logo.svg) no-repeat 0 0;
+        position:absolute;
+        left:10px;
+        top:4px;
+        text-indent:-1000em;
+    }
+    .main{
+        text-align:center;
+    }
+    .message{
+        max-width:600px;
+        margin:30px auto 50px;
+    }
+    .message em {
+        padding-top: 30px;
+        margin-bottom: 10px;
+        display: block;
+        border-bottom: 1px solid #eaeaea;
+    }
+    .message__img{
+        padding-left:28px;
+    }
+    .message__hash{
+        font-size:16px;
+        font-weight:bold;
+    }
+    @media (min-width: 768px){
+        .container {
+            width: 750px;
+        }
+        body{
+            font-size: 16px;
+        }
+        h1{
+            font-size:28px;
+            margin-top:30px;
+            margin-bottom:30px;
+        }
+        p {
+            margin: 0px 0 20px;
+        }
+        .message__hash{
+            font-size:20px;
+        }
+    }
+    @media (min-width: 992px){
+        .container {
+            width: 970px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__logo">OLX</div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            <div class="message">
+                <div class="message__img">
+                    <img src="failover-ua/500.svg">
+                </div>
+                <h1>Щось пішло не так :(</h1>
+                <p><strong>Була зафіксована підозріла активність з вашої IP-адреси.</strong></p>
+                <p>
+                    Можливо, виникла помилка, тому рекомендуємо вам спробувати увійти на сервіс через 10 хвилин.
+                    <br>Якщо це буде неможливло, будь ласка, зв'яжіться з нами, заповнивши форму:
+                </p>
+                <p>
+                    <a href="https://help.olx.ua/hc/uk/requests/new#top" target="_blank">
+                        https://help.olx.ua
+                    </a>
+                </p>
+                <p>В заявці обов'язково вкажіть цей номер</p>
+                <span id="ctl00_mainContentPlaceHolder_lblInvalidRequest">
+                OLX: 18.3ec31302.1575262594.61b52b09
+                </span>
+                <em></em>
+                <h1>Что-то пошло не так :(</h1>
+                <p><strong>Была зафиксирована подозрительная активность с вашего IP-адреса.</strong></p>
+                <p>
+                    Возможно, произошла ошибка, поэтому рекомендуем вам попроовать войти на сервис через 10 минут.
+                    <br>Если это всё ещё будет невозможно, пожалуйста, свяжитесь с нами, заполнив форму:
+                </p>
+                <p>
+                    <a href="https://help.olx.ua/hc/ru/requests/new#top" target="_blank">
+                        https://help.olx.ua
+                    </a>
+                </p>
+                <p>В заявке обязательно укажите этот номер</p>
+                <span id="ctl00_mainContentPlaceHolder_lblInvalidRequest">
+                OLX: 18.3ec31302.1575262594.61b52b09
+                </span>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

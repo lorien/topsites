@@ -1,0 +1,748 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="head"><title>
+	Life Insurance Corporation of India - Home
+</title><meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
+<meta http-equiv="pragma" content="no-cache" /> 
+<meta http-equiv="content-style-type" content="text/css" /> 
+<meta http-equiv="content-script-type" content="text/javascript" /> 
+
+<noscript>  <h3 style="color: #FF3300; padding-top:25px;">
+Javascript is not currently enabled in your browser.<br /> You must enable Javascript to run this web page correctly. 
+</h3></noscript><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<script type="text/javascript">document.getElementsByTagName("html")[0].setAttribute( "lang", "en"); </script>
+<link href="/CMSPages/GetResource.ashx?stylesheetname=Reset4" type="text/css" rel="stylesheet"/> 
+<!-- Inline 2 --><link href="/CMSPages/GetResource.ashx?stylesheetname=Lic-css4" type="text/css" rel="stylesheet"/> 
+<link href="/CMSPages/GetResource.ashx?stylesheetname=Res4" type="text/css" rel="stylesheet"/> 
+<link href="/CMSPages/GetResource.ashx?stylesheetname=Menulive" type="text/css" rel="stylesheet"/> 
+
+<script src="/CMSScripts/Custom/jquery-1.10.2.min.js" type="text/javascript"></script>
+  <script src="/CMSScripts/Custom/blissaccess.js" type="text/javascript"></script>
+  <script src="/CMSScripts/Custom/jquery.slides.min.js" type="text/javascript"></script>
+    <script src="/CMSScripts/Custom/togetherjs-min.js" type="text/javascript"></script> 
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-65952529-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script>
+    $(function() {
+      $('#slides') .slidesjs({
+		preload: true,
+        preloadImage: '../images/progress.gif',
+        play: 5000,
+        pause: 2500,
+        hoverPause: true,
+       
+        play: {
+          active: true,
+          auto: true,
+          interval: 7000,
+          swap: true
+        }
+      });
+    });
+  </script>
+
+
+<script src="/CMSScripts/Custom/sss.min.js"></script>
+<link href="/CMSPages/GetResource.ashx?stylesheetname=Sss" type="text/css" rel="stylesheet" media="all" /> 
+
+<script>
+jQuery(function($) {
+$('.slider').sss();
+});
+</script>
+
+<!--back to top scroller-->
+
+<script src="/CMSScripts/Custom/scroller.js"></script>
+<!--replacement for marquee-->
+<script type="text/javascript" src="/CMSScripts/Custom/jquery.marquee.min.js"></script>
+
+	<script type="text/javascript">
+	<!--//
+	var use_debug = false;
+
+	function debug(){
+		if( use_debug && window.console && window.console.log ) console.log(arguments);
+	}
+
+	// on DOM ready
+	$(document).ready(function (){
+      
+ $("a").each(function(){
+    if($(this).text() == 'मराठी')
+      {
+        //$(this).hide();
+       }
+});     
+      
+      
+      
+$("article a").each(function(i) {
+         //debugger;
+            var anch = $(this).attr("href");
+            var anch2 = $(this).attr("href");
+            var i = anch.slice(-8);
+            switch (i) {
+                case 'xls.aspx':
+                    $(this).append("&nbsp;<img width='16px' height='16px' alt='attached file is in Excel Format' src='/CorporateSiteDemo/media/LIC_New_Images/Excel.png' />");
+                    break;
+                case 'doc.aspx':
+                    $(this).append("&nbsp;<img width='16px' height='16px' alt='attached file is in Word Document Format' src='/CorporateSiteDemo/media/LIC_New_Images/doc.jpg' />");
+                    break;
+                case 'pdf.aspx':
+                    $(this).append("&nbsp;<img width='16px' height='16px' alt='attached file is in PDF Document Format' src='/CorporateSiteDemo/media/LIC_Images/pdfIcon.jpg' />");
+                    break;
+                default:
+                    //this.style.color = "red";
+
+            }
+        }); 
+      
+      
+      
+      
+      
+      
+      
+		$(".marquee").marquee({
+			loop: -1
+			// this callback runs when the marquee is initialized
+			, init: function ($marquee, options){
+				debug("init", arguments);
+
+				// shows how we can change the options at runtime
+				if( $marquee.is("#marquee2") ) options.yScroll = "bottom";
+			}
+			// this callback runs before a marquee is shown
+			, beforeshow: function ($marquee, $li){
+				debug("beforeshow", arguments);
+
+				// check to see if we have an author in the message (used in #marquee6)
+				var $author = $li.find(".author");
+				// move author from the item marquee-author layer and then fade it in
+				if( $author.length ){
+					$("#marquee-author").html("<span style='display:none;'>" + $author.html() + "</span>").find("> span").fadeIn(100);
+				}
+			}
+			// this callback runs when a has fully scrolled into view (from either top or bottom)
+			, show: function (){
+				debug("show", arguments);
+			}
+			// this callback runs when a after message has being shown
+			, aftershow: function ($marquee, $li){
+				debug("aftershow", arguments);
+
+				// find the author
+				var $author = $li.find(".author");
+				// hide the author
+				if( $author.length ) $("#marquee-author").find("> span").fadeOut(100);
+			}
+		});
+	});
+	
+	var iNewMessageCount = 0;
+	
+	function addMessage(selector){
+		// increase counter
+		iNewMessageCount++;
+
+		// append a new message to the marquee scrolling list
+		var $ul = $(selector).append("<li>New message #" + iNewMessageCount + "</li>");
+		// update the marquee
+		$ul.marquee("update");
+	}
+	
+	function pause(selector){
+		$(selector).marquee('pause');
+	}
+	
+	function resume(selector){
+		$(selector).marquee('resume');
+	}
+	//-->
+	</script>
+<!--replacement for marquee--> 
+<link href="/favicon.ico" type="image/x-icon" rel="shortcut icon"/> 
+<link href="/favicon.ico" type="image/x-icon" rel="icon"/> 
+<script>
+	function changecountry(id){
+
+			//window.location.href = id;
+
+			window.open(id,'_blank');
+
+
+
+	}
+
+</script><link href="/CMSPages/GetResource.ashx?_webparts=677" type="text/css" rel="stylesheet"/> 
+</head>
+<body class="LTR Safari Chrome Safari78 Chrome78 ENUS ContentBody" >
+    <form method="post" action="/" onsubmit="javascript:return WebForm_OnSubmit();" id="form">
+<div class="aspNetHidden">
+<input type="hidden" name="manScript_HiddenField" id="manScript_HiddenField" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEyMTY0MTExOTEPZBYCAgEPFgIeBmFjdGlvbgUBLxYCAgUPZBYCZg8PFgQeCENzc0NsYXNzBQ9QYWdlUGxhY2Vob2xkZXIeBF8hU0ICAmQWAmYPZBYGAgUPZBYCZg9kFgICAg8PFjAeG1NlcGFyYXRvclRyYW5zZm9ybWF0aW9uTmFtZWUeI1NlbGVjdGVkRm9vdGVydGVtVHJhbnNmb3JtYXRpb25OYW1lZR4SVHJhbnNmb3JtYXRpb25OYW1lZR4OU2hvd0VkaXRCdXR0b25oHhZIaWRlQ29udHJvbEZvclplcm9Sb3dzZx4JSXRlbUNvdW50AlQeGEZvb3RlclRyYW5zZm9ybWF0aW9uTmFtZWUeEE5lc3RlZENvbnRyb2xzSURlHhhIZWFkZXJUcmFuc2Zvcm1hdGlvbk5hbWVlHh1BbHRlcm5hdGluZ1RyYW5zZm9ybWF0aW9uTmFtZWUeEFNob3dEZWxldGVCdXR0b25oHgtfIUl0ZW1Db3VudAJUHh5IaWVyYXJjaGljYWxUcmFuc2Zvcm1hdGlvbk5hbWUFF0NNUy5NZW51SXRlbS5NZWdhTWVudV8yHg1QYWdlclBvc2l0aW9uCylxQ01TLkNvbnRyb2xzLlBhZ2luZ1BsYWNlVHlwZUVudW0sIENNUy5Db250cm9scywgVmVyc2lvbj04LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPTgzNGIxMmEyNThmMjEzZjkAHhZMYXN0VHJhbnNmb3JtYXRpb25OYW1lZR4ORGVsYXllZExvYWRpbmdoHgtfIURhdGFCb3VuZGceFExvYWRIaWVyYXJjaGljYWxEYXRhZx4XRmlyc3RUcmFuc2Zvcm1hdGlvbk5hbWVlHgxaZXJvUm93c1RleHQFDU5vIGRhdGEgZm91bmQeJFNlbGVjdGVkSGVhZGVySXRlbVRyYW5zZm9ybWF0aW9uTmFtZWUeGFNpbmdsZVRyYW5zZm9ybWF0aW9uTmFtZWUeF1VzZUhpZXJhcmNoaWNhbE9yZGVyaW5nZx4ORGF0YVNvdXJjZU5hbWVlZBYCZg8PFg4eCFBhZ2VTaXplAgoeDlF1ZXJ5U3RyaW5nS2V5BQRQYWdlHglQYWdlck1vZGULKWpDTVMuQ29udHJvbHMuVW5pUGFnZXJNb2RlLCBDTVMuQ29udHJvbHMsIFZlcnNpb249OC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj04MzRiMTJhMjU4ZjIxM2Y5AB4JR3JvdXBTaXplAgoeHURpc3BsYXlGaXJzdExhc3RBdXRvbWF0aWNhbGx5aB4gRGlzcGxheVByZXZpb3VzTmV4dEF1dG9tYXRpY2FsbHloHgdFbmFibGVkaGRkAgcPZBYCZg9kFgICAg8WFB8KZR8FBSJjdXN0b20uRHluYW1pY01hcnF1ZWUuTWFycXVlZVRyYW5zHwZoHw4CCR8NaB8HZx8aZR8WBQ1ObyBkYXRhIGZvdW5kHwxlHgxFbmFibGVQYWdpbmdoFhJmD2QWAmYPZBYCZg8VAb4CPGEgdGFyZ2V0PSdfYmxhbmsnIGhyZWY9Jy9nZXRhdHRhY2htZW50LzA4MzM3OGIyLWJjMmYtNDljMC1hMWVmLTQxZmIyNjlkNjdlMS9JbnRpbWF0aW9uLXRvLXBvbGljeWhvbGRlcnMtcmVnYXJkaW5nLWNoYW5nZXMtKDEpJyA+PHNwYW4gY2xhc3M9ImJsaW5rIj4iVGhlIFJldml2YWwgcGVyaW9kIGhhcyBiZWVuIGV4dGVuZGVkIHRvIDUgeWVhcnMgZm9yIE5vbi1MaW5rZWQgcG9saWNpZXMgYW5kIDMgeWVhcnMgZm9yIGxpbmtlZCBwb2xpY2llcy4gV29uZGVyZnVsIE9wcG9ydHVuaXR5IHRvIFJldml2ZSB5b3VyIGxhcHNlZCBwb2xpY3kuIjwvc3Bhbj48L2E+ZAIBD2QWAmYPZBYCZg8VAcQBPGEgdGFyZ2V0PSdfYmxhbmsnIGhyZWY9Jy9nZXRhdHRhY2htZW50LzI5ZDNjZThkLWVjMGMtNDc1Ny1iOTUwLTMzN2FkZmRmOWVmNS9CZXdhcmUtb2YtU3B1cmlvdXMtUGhvbmUtQ2FsbC1hbmQtRmljdGl0aW91cy1GcmF1ZCcgPkJld2FyZSBvZiBTcHVyaW91cyBQaG9uZSBDYWxsIGFuZCBGaWN0aXRpb3VzL0ZyYXVkdWxlbnQgT2ZmZXJzPC9hPmQCAg9kFgJmD2QWAmYPFQGGAjxhIHRhcmdldD0nX2JsYW5rJyBocmVmPScvZ2V0YXR0YWNobWVudC8zYWE1OGVkMS04MjJjLTQ4ZjEtYmE2ZS00NDA3MzMwNTY2ZDkvSW50aW1hdGlvbi10by1wb2xpY3lob2xkZXJzLXJlZ2FyZGluZy1jaGFuZ2VzLWluLXQnID5JbnRpbWF0aW9uIHRvIHBvbGljeWhvbGRlcnMgcmVnYXJkaW5nIGNoYW5nZXMgaW4gdGF4IHN0cnVjdHVyZSBkdWUgdG8gaW1wbGVtZW50YXRpb24gb2YgR29vZHMgYW5kIFNlcnZpY2VzVGF4IChHU1QpIC0gQ2xpY2sgSGVyZTwvYT5kAgMPZBYCZg9kFgJmDxUBlAEnU01TICJMSUNIRUxQICZsdDsgcG9saWN5IG5vICZndDsiIGFuZCBzZW5kIGl0IHRvIDkyMjI0OTIyMjQgb3IgNTY3Njc4NzcgZm9yIFBvbGljeSBFbnF1aXJ5L1Byb2R1Y3QgUXVlcnkvUmVnaXN0ZXJpbmcgb2YgY29tcGxhaW50IHVuZGVyIHlvdXIgcG9saWN5ZAIED2QWAmYPZBYCZg8VAaEBPGEgdGFyZ2V0PSdfYmxhbmsnIGhyZWY9Jy9nZXRhdHRhY2htZW50LzgzNjU4ZjFlLWEwODMtNDQxMi04YWRkLWY0OWJlYzgxZDYzNC9GUkFVRFVMRU5ULVJFQ1JVSVRNRU5ULUFEcy1CRVdBUkUtIScgPiIgRlJBVURVTEVOVCBSRUNSVUlUTUVOVCBBRHM6IEJFV0FSRS4uLiEgIjwvYT5kAgUPZBYCZg9kFgJmDxUBrgE8YSB0YXJnZXQ9J19ibGFuaycgaHJlZj0nL2dldGF0dGFjaG1lbnQvNzJkZTdiNGYtYzgyMC00NTVkLWFlNDEtOTZmNGQ3YmFlYzBkL0Jld2FyZS1vZi1mYWtlLXNwdXJpb3VzLWNhbGxzLURPcy1hbmQtRE9OVHMnID5CZXdhcmUgb2YgZmFrZSAvIHNwdXJpb3VzIGNhbGxzIC0gRE9zIGFuZCBET05UczwvYT5kAgYPZBYCZg9kFgJmDxUBiwEiIEtub3cgeW91ciBwb2xpY3kgZGV0YWlscyB0aHJvdWdoIFNNUyB0byAnQVNLTElDJyAoQVNLTElDIDwgcG9saWN5IG5vID4gUFJFTUlVTS9MT0FOL0JPTlVTL1JFVklWQUwvTk9NSU5BVElPTikgYW5kIHNlbmQgaXQgdG8gOTIyMjQ5MjIyNCAiZAIHD2QWAmYPZBYCZg8VAbgBPGEgdGFyZ2V0PSdfYmxhbmsnIGhyZWY9Jy9nZXRhdHRhY2htZW50L2JjZjNmNDhjLTBjZjAtNDJiYS05NTE2LTQzMDY2MGVjMWY4MC9Ob3RpY2UtdG8tUHVibGljLXJlZ2FyZGluZy1Db21iaW5hdGlvbi1vZi1Qcm9kdWN0cycgPk5vdGljZSB0byBQdWJsaWMgcmVnYXJkaW5nIENvbWJpbmF0aW9uIG9mIFByb2R1Y3RzPC9hPmQCCA9kFgJmD2QWAmYPFQFnRGVhciBQb2xpY3lob2xkZXIsUGxlYXNlIHN1Ym1pdCBCYW5rIEFjY291bnQgRGV0YWlscyAoIE5FRlQgKSB0byBMSUMgLSBDbGljayBoZXJlIHRvIERvd25sb2FkIE5FRlQgZm9ybWQCCQ9kFgJmD2QWAgICD2QWAmYPDxYEHwEFD1BhZ2VQbGFjZWhvbGRlch8CAgJkFgJmD2QWAmYPZBYCZg9kFgICAg8WFB8KZR8FBRdDTVMuRmlsZS5TbGlkZXIyX0ltYWdlcx8GaB8OAgYfDWgfB2cfGmUfFgUNTm8gZGF0YSBmb3VuZB8MZR8iaBYMZg9kFgJmD2QWAmYPFQMUVGVjaC10ZXJtLWJhbm5lci1uZXcgL1NsaWRlcl9JbWFnZXMvQW1hcl9Ib2FyZGluZy1uZXdMd2luZG93Lm9wZW4oJ2h0dHBzOi8vZXRlcm0ubGljaW5kaWEuaW4vb25saW5lUGxhbnNJbmRleC9sb2dpbi5kbycsICdfYmxhbmsnKWQCAQ9kFgJmD2QWAmYPFQMSZmluYWx0b3VwbG9hZGZpbmFsIS9TbGlkZXJfSW1hZ2VzL2ZpbmFsdG91cGxvYWRmaW5hbD53aW5kb3cub3BlbignL1Byb2R1Y3RzL1BlbnNpb24tUGxhbnMvSmVldmFuLVNoYW50aScsICdfYmxhbmsnKWQCAg9kFgJmD2QWAmYPFQMCYTEVL1NsaWRlcl9JbWFnZXMvYTEtKDIpTHdpbmRvdy5vcGVuKCdodHRwczovL2V0ZXJtLmxpY2luZGlhLmluL29ubGluZVBsYW5zSW5kZXgvbG9naW4uZG8nLCAnX2JsYW5rJylkAgMPZBYCZg9kFgJmDxUDEG0tYmFjaGF0LWZvci13ZWIfL1NsaWRlcl9JbWFnZXMvbS1iYWNoYXQtZm9yLXdlYkp3aW5kb3cub3BlbignL1Byb2R1Y3RzL01pY3JvLUluc3VyYW5jZS1QbGFucy9taWNyby1iYWNoYXQtcGxhbicsICdfYmxhbmsnKWQCBA9kFgJmD2QWAmYPFQMWbS1iYWNoYXQtZm9yLXdlYi1oaW5kaSMvU2xpZGVyX0ltYWdlcy9tLWJhY2hhdC1mb3Itd2ViLSgxKYYBd2luZG93Lm9wZW4oJy9Qcm9kdWN0cy9NaWNyby1JbnN1cmFuY2UtUGxhbnMv4KSP4KSy4KSG4KSI4KS44KWALeCkruCkvuCkh+CkleCksOCliy3gpKzgpJrgpKQt4KSq4KWJ4KSy4KS/4KS44KWAP2xhbmc9aGktSU4nLCAnX2JsYW5rJylkAgUPZBYCZg9kFgJmDxUDEUFtYXJfSG9hcmRpbmctbmV3Iy9TbGlkZXJfSW1hZ2VzL1RlY2gtdGVybS1iYW5uZXItbmV3Q3dpbmRvdy5vcGVuKCcvUHJvZHVjdHMvSW5zdXJhbmNlLVBsYW4vTElDLXMtSmVldmFuLUFtYXInLCAnX2JsYW5rJylkGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYBBShwJGx0JGN0bDAzJFNtYXJ0U2VhcmNoQm94JGJ0bkltYWdlQnV0dG9ug09tE/Ou0tihys/03sMtZQ4ICBMQ4QutdeaV3Omncwk=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form'];
+if (!theForm) {
+    theForm = document.form;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=ZnfSPaDOkmEe3ANz7JAElzxcCOySi5i1OqLXRs_X6IuhtDNUNmlFJdz2LBpf7InubAohJDxD1J7cogCgY4kXI_16M92euHBnPvjBbqlxTCQ1&amp;t=636996406220000000" type="text/javascript"></script>
+
+<input type="hidden" name="lng" id="lng" value="en-US" />
+<script type="text/javascript">
+	//<![CDATA[
+
+function PM_Postback(param) { if (window.top.HideScreenLockWarningAndSync) { window.top.HideScreenLockWarningAndSync(1080); } if(window.CMSContentManager) { CMSContentManager.allowSubmit = true; }; __doPostBack('m$am',param); }
+function PM_Callback(param, callback, ctx) { if (window.top.HideScreenLockWarningAndSync) { window.top.HideScreenLockWarningAndSync(1080); }if (window.CMSContentManager) { CMSContentManager.storeContentChangedStatus(); };WebForm_DoCallback('m$am',param,callback,ctx,null,true); }
+//]]>
+</script>
+<script src="/CMSPages/GetResource.ashx?scriptfile=%7e%2fCMSScripts%2fjquery%2fjquery-core.js" type="text/javascript"></script>
+<script src="/CMSPages/GetResource.ashx?scriptfile=%7e%2fCMSWebParts%2fSmartSearch%2fSearchBox_files%2fPredictiveSearch.js" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=7VqciY0079nZIOkMD7DM7YqtAQ3FCOBARWXIWx-a4EF6L8VK_YmD84KeJp0wstRzWd-_22emkg75aIAugHkCzCO3RbfM8lhAa_xware33lqFL_hO2-e7VqQaDVEeWha_0&amp;t=7c776dc1" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=PkG09DBPA04iMX4QsBuO5wEhgs1s4vclpKe4tot2pW3ClO7VFBdTnaTW0GWPywE7uVhuv8tEH1FqX55_ISQyBlNeFHuhCjHr8jA27fR5wBrXnFWvGTrWxvg292keAjq4gg4cb91R0dklrq1BOpZ2Mg2&amp;t=7c776dc1" type="text/javascript"></script>
+<script src="/CMSPages/PortalTemplate.aspx?_TSM_HiddenField_=manScript_HiddenField&amp;_TSM_CombinedScripts_=%3b%3bAjaxControlToolkit%2c+Version%3d4.1.60919.0%2c+Culture%3dneutral%2c+PublicKeyToken%3d28f01b0e84b6d53e%3aen-US%3aee051b62-9cd6-49a5-87bb-93c07bc43d63%3ade1feab2%3af9cec9bc%3a35576c48" type="text/javascript"></script>
+<script type="text/javascript">
+	//<![CDATA[
+
+var CMS = CMS || {};
+CMS.Application = {
+  "isDialog": false,
+  "applicationUrl": "/",
+  "isRTL": "false",
+  "imagesUrl": "/CMSPages/GetResource.ashx?image=%5bImages.zip%5d%2f"
+};
+
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+null;
+return true;
+}
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="A5343185" />
+	<input type="hidden" name="__SCROLLPOSITIONX" id="__SCROLLPOSITIONX" value="0" />
+	<input type="hidden" name="__SCROLLPOSITIONY" id="__SCROLLPOSITIONY" value="0" />
+</div>
+    <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('manScript', 'form', ['tctxM',''], [], [], 90, '');
+//]]>
+</script>
+
+    <div id="ctxM">
+
+</div>
+    
+<div id="main">
+<div id="content" >
+<header>
+  <div class="width">
+    <div id="logo"><a href="../Home.aspx" title="Home page"><img id="p_lt_ctl00_EditableImage1_ucEditableImage_imgImage" title="LIC Logo" src="/CorporateSiteDemo/media/LIC_Media/LIC_LOGO_1.png" alt="LIC Logo" />
+
+</a></div>
+      <div id="menu">
+        <div id="menu1">
+            <ul>
+	          <ul style="display: inline-block;margin-left:-10px;">
+	<li style="display: none;"><button class="yellowbtn" onclick="TogetherJS(this); return false;">Co Browse</button></li>
+	<li><a href="#" target="_blank"><img alt="Swachh Bharat" src="/CorporateSiteDemo/media/LIC_Media/SBAfinallogo.jpeg" style=" position:absolute;top: -5px;left: 233px;z-index: -1;" /></a> &nbsp;</li>
+	<li class="dis-fix">Colors <a href="javascript:void(o);" onclick="javascript:FontWB();"><img alt="color1" class="newimg" src="/CorporateSiteDemo/media/Mock4/6.jpg" /></a> <a href="javascript:void(o);1" onclick="javascript:FontYG();"><img alt="color2" class="newimg" src="/CorporateSiteDemo/media/Mock4/4.jpg" /></a> <a href="javascript:void(o);2" onclick="javascript:FontYB();"><img alt="color3" class="newimg" src="/CorporateSiteDemo/media/Mock4/1.jpg" /></a> <a href="javascript:void(o);3" onclick="javascript:FontYR();"><img alt="color4" class="newimg" src="/CorporateSiteDemo/media/Mock4/5.jpg" /></a> <a class="toplink" href="javascript:decreaseFontSize();" style="text-decoration:none;"> <img alt="A Minus" class="newimg" height="19" id="Img1" src="/CorporateSiteDemo/media/Mock4/a2.jpg" /> </a> <a class="toplink" href="JavaScript:location.reload(true)" style="text-decoration:none;"> <img alt="A" class="newimg" height="19" id="Img2" src="/CorporateSiteDemo/media/Mock4/a.jpg" /> </a> <a class="toplink" href="javascript:increaseFontSize();" style="text-decoration:none;"> <img alt="A Plus" class="newimg" height="19" id="Img3" src="/CorporateSiteDemo/media/Mock4/a1.jpg" /> </a> <a href="/Top-Links/Screen-Reader-Access"><img alt="Screen Reader" height="20" src="/CorporateSiteDemo/media/Mock4/scr.jpg" width="38" /></a></li>
+	<li><a href="/Top-Links/About-Us/Know-About-Your-Life-Insurance">Know Your Life Insurance</a></li>
+	<li class="gap1">|</li>
+	<li><a href="/Customer-Services/Phone-Help-Line">Contact</a></li>
+	<li class="gap1">|</li>
+	<li><a href="/Top-Links/About-Us">About</a></li>
+	<li class="gap1">|</li>
+</ul>
+<div class="dropdown">
+  <button class="dropbtn">Language</button>
+  <div class="dropdown-content"><a href="/Home?lang=hi-IN">हिन्दी</a> <a href="/Home?lang=mr-IN">मराठी</a>
+</div>
+</div>
+              
+            </ul>
+          </div>
+        <nav>
+       <a href="/Home"><img src="/CorporateSiteDemo/media/LIC_New_Images/hlogo.png" style="vertical-align:middle;" width="62" height="28" alt="home"></a>
+       <label class="responsive_menu" for="responsive_menu">
+       <span>Menu</span>
+       </label>
+        <input id="responsive_menu" type="checkbox">
+<ul class="menu"><li><a class="actv-pg1" href="#" >Products </a><!-- <ul class='hidden' style="z-index:100;z-index:100;  width: 200px;" > -->
+<ul>
+<li class="col_1">
+
+<a href="/Products/Aam-Aadmi-Bima-Yojana">Aam Aadmi Bima Yojna</a>
+</li><li class="col_1">
+
+<a href="/Products/Insurance-Plan">Insurance  Plan</a>
+</li><li class="col_1">
+
+<a href="/Products/Special-Plans">Special Plans</a>
+</li><li class="col_1">
+
+<a href="/Products/Pension-Plans">Pension Plan</a>
+</li><li class="col_1">
+
+<a href="/Products/Unit-Plans">Unit Plans</a>
+</li><li class="col_1">
+
+<a href="/Products/Micro-Insurance-Plans">Micro Insurance Plans</a>
+</li><li class="col_1">
+
+<a href="/Products/Withdrawn-Plans">Withdrawn Plans</a>
+</li><li class="col_1">
+
+<a href="/Products/Health-Plans">Health Plans</a>
+</li>
+</ul></li><!--<li class="gap2">|</li>--><li class="bar"><a href="#" >Group Schemes </a><!-- <ul class='hidden' style="z-index:100;z-index:100;  width: 200px;" > -->
+<ul>
+<li class="col_1">
+
+<a href="/Group-Schemes/Group-Scheme">Group Scheme</a>
+</li><li class="col_1">
+
+<a href="/Group-Schemes/Gratuity-Plus-NAV">Gratuity Plus NAV</a>
+</li>
+</ul></li><!--<li class="gap2">|</li>--><li class="bar"><a href="#" >Customer Services </a><!-- <ul class='hidden' style="z-index:100;z-index:100;  width: 200px;" > -->
+<ul>
+<li class="col_1">
+
+<a href="/Customer-Services/Costumer-Education">Spurious Calls</a>
+</li><li class="col_1">
+
+<a href="/Customer-Services/Update-Your-Contact-details-Offline">Update Your Contact details – Offline</a>
+</li><li class="col_1">
+
+<a href="/Customer-Services/Update-Your-Contact-Details">Update Your Contact details – Online</a>
+</li><li class="col_1">
+
+<a href="/Customer-Services/Unclaimed-Amounts-of-Policyholders">Unclaimed Amounts of Policyholders</a>
+</li><li class="col_1">
+
+<a href="/Customer-Services/Bonus-Information">Bonus Information</a>
+</li><li class="col_1">
+
+<a href="/Customer-Services/Policy-Status">Policy Status</a>
+</li><li class="col_1">
+
+<a href="/Customer-Services/NRI-Center">NRI Center</a>
+</li><li class="col_1">
+
+<a href="/Customer-Services/Phone-Help-Line">Phone  Help Line</a>
+</li><li class="col_1">
+
+<a href="/Customer-Services/Insurance-Selector">Insurance Selector</a>
+</li><li class="col_1">
+
+<a href="/Customer-Services/Policy-Guidelines">Policy Guidelines</a>
+</li><li class="col_1">
+
+<a href="/Customer-Services/Tax-Benefit">Tax Benefit</a>
+</li><li class="col_1">
+
+<a href="/Customer-Services/sms">SMS Enquiry</a>
+</li>
+</ul></li><!--<li class="gap2">|</li>--><li class="bar"><a href="#" >Premium Payment </a><!-- <ul class='hidden' style="z-index:100;z-index:100;  width: 200px;" > -->
+<ul>
+<li class="col_1">
+
+<a href="/Community/alt_chan_faq">FAQ of Alternate Channels</a>
+</li><li class="col_1">
+
+<a href="/Community/Payment-at-Cash-Counter">Payment at Cash Counter</a>
+</li><li class="col_1">
+
+<a href="/Community/Payment-Through-Alternate-Channels">Payment Through Alternate Channels</a>
+</li>
+</ul></li><!--<li class="gap2">|</li>--><li class="bar"><a href="#" >Join Our Team </a><!-- <ul class='hidden' style="z-index:100;z-index:100;  width: 200px;" > -->
+<ul>
+<li class="col_1">
+
+<a href="/Guidelines/Be-a-Corporate-Agent">Be a Corporate Agent</a>
+</li><li class="col_1">
+
+<a href="/Guidelines/Be-an-Agent-(Individual)">Be an Agent (Individual)</a>
+</li>
+</ul></li><!--<li class="gap2">|</li>--><li class="bar"><a href="#" >Plan NAV </a><ul class='hidden' >
+<li class="col_1">
+
+<a href="/PLAN-NAV/Bima-Plus">Plan NAV</a>
+</li>
+</ul></li><!--<li class="gap2">|</li>--><li class="bar"><a href="#" >Locator </a><!-- <ul class='hidden' style="z-index:100;z-index:100;  width: 200px;" > -->
+<ul>
+<li class="col_1">
+
+<a href="/LOCATOR/Branch">Branch</a>
+</li><li class="col_1">
+
+<a href="/LOCATOR/Premiumpoint">Premium Point</a>
+</li><li class="col_1">
+
+<a href="/LOCATOR/microinsagent">Micro Insurance Agent</a>
+</li>
+</ul></li></ul>
+ </nav>
+      </div>
+    <style type="text/css">.blink{
+ animation:blinker 0.8s infinite;
+}
+@keyframes blinker{
+ 0%{  color: pink; }
+ 49%{ color: blue; }
+ 50%{ color: green; }
+ 99%{ color: yellow; }
+ 100%{ color: gray; }
+}
+</style>
+
+
+<ul id="marquee1" class="marquee marq"><li>
+<a target='_blank' href='/getattachment/083378b2-bc2f-49c0-a1ef-41fb269d67e1/Intimation-to-policyholders-regarding-changes-(1)' ><span class="blink">"The Revival period has been extended to 5 years for Non-Linked policies and 3 years for linked policies. Wonderful Opportunity to Revive your lapsed policy."</span></a>
+&nbsp;&nbsp;&nbsp;&nbsp;<a target='_blank' href='/getattachment/29d3ce8d-ec0c-4757-b950-337adfdf9ef5/Beware-of-Spurious-Phone-Call-and-Fictitious-Fraud' >Beware of Spurious Phone Call and Fictitious/Fraudulent Offers</a>
+&nbsp;&nbsp;&nbsp;&nbsp;<a target='_blank' href='/getattachment/3aa58ed1-822c-48f1-ba6e-4407330566d9/Intimation-to-policyholders-regarding-changes-in-t' >Intimation to policyholders regarding changes in tax structure due to implementation of Goods and ServicesTax (GST) - Click Here</a>
+&nbsp;&nbsp;&nbsp;&nbsp;'SMS "LICHELP &lt; policy no &gt;" and send it to 9222492224 or 56767877 for Policy Enquiry/Product Query/Registering of complaint under your policy
+&nbsp;&nbsp;&nbsp;&nbsp;<a target='_blank' href='/getattachment/83658f1e-a083-4412-8add-f49bec81d634/FRAUDULENT-RECRUITMENT-ADs-BEWARE-!' >" FRAUDULENT RECRUITMENT ADs: BEWARE...! "</a>
+&nbsp;&nbsp;&nbsp;&nbsp;<a target='_blank' href='/getattachment/72de7b4f-c820-455d-ae41-96f4d7baec0d/Beware-of-fake-spurious-calls-DOs-and-DONTs' >Beware of fake / spurious calls - DOs and DONTs</a>
+&nbsp;&nbsp;&nbsp;&nbsp;" Know your policy details through SMS to 'ASKLIC' (ASKLIC < policy no > PREMIUM/LOAN/BONUS/REVIVAL/NOMINATION) and send it to 9222492224 "
+&nbsp;&nbsp;&nbsp;&nbsp;<a target='_blank' href='/getattachment/bcf3f48c-0cf0-42ba-9516-430660ec1f80/Notice-to-Public-regarding-Combination-of-Products' >Notice to Public regarding Combination of Products</a>
+&nbsp;&nbsp;&nbsp;&nbsp;Dear Policyholder,Please submit Bank Account Details ( NEFT ) to LIC - Click here to Download NEFT form
+&nbsp;&nbsp;&nbsp;&nbsp;
+</li>
+  
+</ul><div id="p_lt_ctl03_SmartSearchBox_pnlSearch" class="searchBox" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;p_lt_ctl03_SmartSearchBox_btnImageButton&#39;)">
+	
+    <label for="p_lt_ctl03_SmartSearchBox_txtWord" id="p_lt_ctl03_SmartSearchBox_lblSearch" style="display:none;">Search for:</label>
+    <input type="hidden" name="p$lt$ctl03$SmartSearchBox$txtWord_exWatermark_ClientState" id="p_lt_ctl03_SmartSearchBox_txtWord_exWatermark_ClientState" /><input name="p$lt$ctl03$SmartSearchBox$txtWord" type="text" maxlength="1000" id="p_lt_ctl03_SmartSearchBox_txtWord" class="form-control" />
+    
+    <input type="image" name="p$lt$ctl03$SmartSearchBox$btnImageButton" id="p_lt_ctl03_SmartSearchBox_btnImageButton" src="/CorporateSiteDemo/media/Mock4/search-icon.png" alt="Search" />
+    <div id="p_lt_ctl03_SmartSearchBox_pnlPredictiveResultsHolder" class="predictiveSearchHolder">
+
+	</div>
+
+</div>
+
+    </div>
+</header>
+  <div id="con">
+    	
+<style>#con{ background-image: url("../CorporateSiteDemo/media/Mock4/banner-bg.jpg");
+    background-repeat: repeat-x;padding-top:110px;}</style>
+<div id="slides" class="width"  >
+<img style="cursor:pointer;" alt="LIC Policy Tech-term-banner-new" src="/Slider_Images/Amar_Hoarding-new" onclick="window.open('https://eterm.licindia.in/onlinePlansIndex/login.do', '_blank')" /><img style="cursor:pointer;" alt="LIC Policy finaltouploadfinal" src="/Slider_Images/finaltouploadfinal" onclick="window.open('/Products/Pension-Plans/Jeevan-Shanti', '_blank')" /><img style="cursor:pointer;" alt="LIC Policy a1" src="/Slider_Images/a1-(2)" onclick="window.open('https://eterm.licindia.in/onlinePlansIndex/login.do', '_blank')" /><img style="cursor:pointer;" alt="LIC Policy m-bachat-for-web" src="/Slider_Images/m-bachat-for-web" onclick="window.open('/Products/Micro-Insurance-Plans/micro-bachat-plan', '_blank')" /><img style="cursor:pointer;" alt="LIC Policy m-bachat-for-web-hindi" src="/Slider_Images/m-bachat-for-web-(1)" onclick="window.open('/Products/Micro-Insurance-Plans/एलआईसी-माइकरो-बचत-पॉलिसी?lang=hi-IN', '_blank')" /><img style="cursor:pointer;" alt="LIC Policy Amar_Hoarding-new" src="/Slider_Images/Tech-term-banner-new" onclick="window.open('/Products/Insurance-Plan/LIC-s-Jeevan-Amar', '_blank')" />
+</div><a name="maincontent"></a><div class="width" id="mid">
+<div class="conmid" style="min-height: 285px;    border: 0px; padding: 0 20px;  width: 260px;">
+<div style="margin-bottom:15px; border: 1px solid #00539f; padding-bottom: 12px;margin-bottom: 18px; box-shadow: 0px 8px 0px 0px #ffcb08;">
+<h1>Online Services</h1>
+
+<h2><!--<a class="knowMore3" href="https://onlinesales.licindia.in/AgentsHelpLine/agentlogin.do" target="_blank"><b>Agents Help Line</b></a><img alt="new" height="40" src="/getmedia/5823c04f-3358-402f-9a14-921672acad56/newhelp" style="left: 175px; top: 29px; position: absolute;" />--><a class="knowMore3" href="https://onlinesales.licindia.in/agentshelpline/" onclick="return confirm('This link will take you to an external site?');" target="_blank" title="Agent’s Helpline Module"><b>Agent&rsquo;s Helpline Module</b></a> <a class="knowMore3" href="/Home/Online-Policy-Loan-Options" onclick="return confirm('This link will take you to an external site?');" target="_blank" title="Online Loan"><b>Online Loan</b></a> <a class="knowMore3" href="/Home-(1)/LICOnlineServicePortal" onclick="return confirm('This link will take you to an external site?');" title="Customer Portal"><b>Customer Portal</b></a><a class="knowMore3" href="https://ebiz.licindia.in/D2CPM/#Login"><b>Agents Portal</b></a> <a class="knowMore3" href="../Home/Pay-Premium-Online" onclick="return confirm('This link will take you to an external site?');" target="_blank" title="Pay Premium Online"><b>Pay Premium Online</b></a><a class="knowMore3" href="https://customer.onlinelic.in/GroupPensionUser.htm" onclick="return confirm('This link will take you to an external site?');" target="_blank" title="Pension and Group Schemes"><b>Pension and Group Schemes</b></a> <a class="knowMore3" href="https://merchant.onlinelic.in/merchant/" onclick="return confirm('This link will take you to an external site?');" target="_blank" title="Merchant Portal"><b>Merchant Portal</b></a> <a class="knowMore3" href="https://customer.onlinelic.in/LICEPS/Login/begin.do?agent" onclick="return confirm('This link will take you to an external site?');" target="_blank" title="Bill Pay Enquiry"><b>Dev. Officers/Bill Pay Enquiry</b></a> <a class="knowMore3" href="https://merchant.onlinelic.in/LICMerchant/Login/begin.do" onclick="return confirm('This link will take you to an external site?');" target="_blank" title="SSS PA Portal"><b>SSS PA Portal</b></a> <a class="knowMore3" href="http://customer.onlinelic.in/cbv/" onclick="return confirm('This link will take you to an external site?');" target="_blank" title="Corporate Portal"><b>Corporate Portal</b></a></h2>
+</div>
+&nbsp;
+
+<div style="padding: 0px; border: currentColor; border-image: none; width: 100%;
+            text-align: left; vertical-align: top; display: inline-block; position: static;
+            min-height: 55px;"><a href="/Bottom-Links/Products-Services" title="LIC Quick Tips"><img alt="quick-tips" src="
+/CorporateSiteDemo/media/LIC_Media/Yellow_26.jpg" style="top: 151px; width: 100%; height: 90px;" /></a><br />
+&nbsp;</div>
+</div>
+
+<div class="conmid" style="  margin:0 2px; width:219px; padding:0; border: 0px;">
+<div style="padding: 0px; border: currentColor; border-image: none; width: 100%;
+            text-align: left; vertical-align: top; display: inline-block; position: static;
+            min-height: 55px;"><a href="https://customer.onlinelic.in/LICEPS/portlets/visitor/updateContact/UpdateContactController.jpf" onclick="return confirm('This link will take you to an external site?');" target="_blank" title="Update your contact details"><img alt="UPDATE CONTACT DETAILS" src="
+/CorporateSiteDemo/media/LIC_Media/Yellow_03.jpg" style="width: 100%; " /></a></div>
+<!--
+<div style="padding: 0px; border: currentColor; border-image: none; width: 100%;
+            text-align: left; vertical-align: top; display: inline-block; position: static;
+            min-height: 55px;"><a href="/Bottom-Links/Sale-of-Flats" title="Sale of Flats"><img alt="sale of flats " src="
+/CorporateSiteDemo/media/LIC_Media/Yellow_12.jpg" style="width: 100%; " /></a></div>
+
+-->
+
+<div style="padding: 0px; border: currentColor; border-image: none; width: 100%;
+            text-align: left; vertical-align: top; display: inline-block; position: static;
+            min-height: 55px;"><a href="/Bottom-Links/LIC-Call-Centre-Services" target="_blank"><img alt="Call Center Services" src="/CorporateSiteDemo/media/LIC_Media/customercare.jpg" style="width: 100%;" /></a></div>
+
+<div style="width: 100%; margin-bottom: 5px;" title="Awards &amp; Achievements"><a href="../Media/Awards.aspx"><img alt="awards" src="/CorporateSiteDemo/media/LIC_Media/Yellow_22.jpg" style="width:100%" /></a></div>
+</div>
+
+<div class="conmid" style=" margin:0 2px; padding: 0px; border: currentColor; border-image: none; width: 220px;padding:0;
+        text-align: left; vertical-align: top; display: inline-block; position: static;
+        min-height: 255px;"><!-- <div style="padding: 0px 21.5px;  border-image: none; width: 185px; text-align: center; vertical-align: top; display: inline-block; position: static; min-height: 142px;"> --><!-- <ul class="foreign" style="margin-top: 2px;"> --><!-- <li style="margin: 0px; padding: 0px; width: 100%; min-height: 100px;"> --><!-- <p><a href="https://eterm.licindia.in/onlinePlansIndex/login.do" style="color: white; padding-top: 0px;">Buy Policies Online</a></p> --><!-- <a href="https://eterm.licindia.in/onlinePlansIndex/login.do"><img alt="Buy Policies Online LIC1" height="100" src="/getmedia/0f08f266-1fdd-4694-a1a0-dc29e45c0ff1/Buy_Policies_Online" width="162" /></a></li> --><!-- </ul> --><!-- </div> -->
+<div style="border: currentColor; border-image: none;" title="Buy Policies Online"><a href="https://eterm.licindia.in/onlinePlansIndex/login.do" target="_blank"><img alt="Online_Policies" src="/CorporateSiteDemo/media/LIC_Media/buy-policy-online-banner-11.jpg" style="width: 100%;" /></a></div>
+<!--
+<div style="border: currentColor; border-image: none;" title="Call Center Services"><a href="" target="_blank"><img alt="Call Center Services" src="/CorporateSiteDemo/media/LIC_Media/Yellow_14.jpg" style="width: 100%;" /></a></div>--><!--
+<div style="border: currentColor; border-image: none;" title="Call Center Services"><a href="/Bottom-Links/LIC-Call-Centre-Services" target="_blank"><img alt="Call Center Services" src="/CorporateSiteDemo/media/LIC_Media/call-center-services-new.jpg" style="width: 100%;" /></a></div>
+-->
+
+<div style="padding: 0px; border: currentColor; border-image: none; width: 100%;
+            text-align: left; vertical-align: top; display: inline-block; position: static;
+            min-height: 55px;" title="LIC Pensioners Portal"><a href="https://microapigo.licindia.in/PensionersPortal3/login" target="_blank"><img alt="Pensioners Portal" src="
+/CorporateSiteDemo/media/LIC_Media/image-1.jpg" style=" width: 100%; " /></a></div>
+</div>
+
+<div class="conmid" style="border: currentColor;  margin:0 2px; border-image: none; width:220px; padding:0;"><a href="/Home/Pay-Premium-Online" title="Pay Premium Online"><img alt="Image of Pay Premium Online" src="/CorporateSiteDemo/media/LIC_Media/spurious-banner-1.jpg" style="width: 100%;" /></a> <!--
+<div class="conmid" style="min-height:auto; width:220px; padding:0; margin:0 2px;"><a href="/home/index"><img alt="" src="/CorporateSiteDemo/media/LIC_Media/PMSYM_Eng_logounit_new.png" style="  width: 100%;" /></a></div>--> <a href="/Home-(1)/LICOnlineServicePortal#Registrationfore-Services" title="Registration"><img alt="registration services" src="/CorporateSiteDemo/media/LIC_Media/Yellow_15.jpg" style=" width: 100%;" /></a><br />
+<a href="https://agencycareer.licindia.in/agt_req/" onclick="return confirm('This link will take you to an external site?');" target="_blank" title="Want to be an LIC Agent"><img alt="" src="/CorporateSiteDemo/media/LIC_Media/Yellow_17.jpg" style="top: 151px;
+                width: 100%;" /></a> <a href="https://customer.onlinelic.in/LICMobile/" target="_blank" title="LIC App"><img alt="LIC App" src="/CorporateSiteDemo/media/LIC_Media/Yellow_24.jpg" style="width: 100%;" /></a></div>
+</div>
+
+<div class="width yellow" style="text-align: center;">
+<div class="img"><a href="/Products/Insurance-Plan.aspx"><img alt="Endowment Plan1" src="../CorporateSiteDemo/media/Mock4/img1.jpg" /></a>
+
+<p><a href="/Products/Insurance-Plan.aspx">Endowment Plan</a></p>
+</div>
+
+<div class="img"><a href="/Products/Insurance-Plan.aspx" title="Money Back Plan"><img alt="Money Back Plan1" src="../CorporateSiteDemo/media/Mock4/lic-img2.png" /></a>
+
+<p><a href="/Products/Insurance-Plan.aspx">Money Back Plan</a></p>
+</div>
+
+<div class="img"><a href="/Products/Insurance-Plan/jeevan-lakshya.aspx" title="Jeevan Lakshya"><img alt="img1" src="../CorporateSiteDemo/media/Mock4/lic-img3.png" /></a>
+
+<p><a href="/Products/Insurance-Plan/jeevan-lakshya.aspx">LIC&#39;s Jeevan Lakshya</a></p>
+</div>
+
+<div class="img"><a href="/Products/Pension-Plans/LIC-s-New-Jeevan-Nidhi.aspx" title="Jeevan Nidhi"><img alt="Jeevan Nidhi1" src="../CorporateSiteDemo/media/Mock4/lic-img4.png" /></a>
+
+<p><a href="/Products/Pension-Plans/LIC-s-New-Jeevan-Nidhi.aspx">LIC&#39;s Jeevan Nidhi</a></p>
+</div>
+
+<div class="img"><a href="/Products/Insurance-Plan/limited-endow-benef.aspx" title="Limited period Endowment Plan"><img alt="Limited period Endowment Plan1" src="../CorporateSiteDemo/media/Mock4/lic-img5.png" /></a>
+
+<p><a href="/Products/Insurance-Plan/limited-endow-benef.aspx">LIC&#39;s Limited period Endowment Plan</a></p>
+</div>
+
+<div class="img"><a href="/Products/Insurance-Plan/anand.aspx" title="New Jeevan Anand"><img alt="New Jeevan Anand" src="../CorporateSiteDemo/media/Mock4/img6.png" /></a>
+
+<p><a href="/Products/Insurance-Plan/anand.aspx">LIC&#39;s New Jeevan Anand</a></p>
+</div>
+</div>
+
+<div>&nbsp;</div>
+<div id="tape">
+<h2>Zindagi ke saath bhi, Zindagi ke baad bhi <!--<a href="http://india.gov.in/" target="_blank"> <img align="right" height="38" src="/CorporateSiteDemo/media/Mock4/gov.jpg" width="132" /></a>--></h2>
+</div>
+
+<div class="width">
+<ul class="foreign">
+	<li>
+	<p>Foreign units</p>
+	<label for="jm1" style="visibility: hidden;">.</label> <select id="jm1" name="Foreign Units" onchange="changecountry(this.value);">Foreign Units<option value="">Select</option><option value="http://www.liciuk.com">1. UK</option><option value="http://www.liclanka.com">2. SriLanka</option><option value="http://www.licifiji.com">3. Fiji</option><option value="http://www.lic.mu">4. Mauritius</option><option value="http://www.licinternational.com">5. Bahrain</option><option value="http://www.licnepal.com.np">6. Nepal</option><option value="http://www.kenindia.com">7. Kenindia Assurance</option><option>8. SICCI</option><option value="http://www.licsingapore.com">9. Singapore</option> </select></li>
+	<li>
+	<p><a href="https://ebiz.licindia.in/D2CPM/#qni/basicinfo">Premium Calculator</a></p>
+	<a href="https://ebiz.licindia.in/D2CPM/#qni/basicinfo"><img align="left" alt="Premium Calculator LIC2" height="50" src="../CorporateSiteDemo/media/Mock4/cal.png" width="40" /><span>Online Calculator, generate an instant illustration for Premium</span> </a></li>
+	<li>
+	<p><a href="/Home/Apply-Now">Want us to contact you</a></p>
+	<a href="/Home/Apply-Now"><img align="left" alt="Apply Now LIC2" height="50" src="../CorporateSiteDemo/media/Mock4/guide.png" width="49" /> <span>Apply now for your Insurance Policy</span></a></li>
+	<li style="min-height: 140px;"><a href="../Products/Pradhan-Mantri-Jan-Dhan-Yojana" target="_blank"><img alt="Pradhan Mantri Jan Dhan Yojana" src="../CorporateSiteDemo/media/LIC_New_Images/scheme2.jpg" style="top: 95px;" /></a> <a href="../Products/Pradhan-Mantri-Jeevan-Jyoti-Bima-Yojana-(PMJJBY)" style="width: 190px; margin-top: -5px; display: block;"><img alt="Pradhan Mantri Jeevan Jyoti Bima Yojana" src="../CorporateSiteDemo/media/Mock4/scheme2.jpg" width="100%" /></a></li>
+</ul>
+</div>
+
+  </div>
+  <div class="width" id="socialThings2">
+  <div id="social">
+<div class="hint"><img alt="arrow2" src="/CorporateSiteDemo/media/Mock4/arrow.png" /> <a href="../Top-Links/About-Us/Know-About-Your-Life-Insurance">Things you must know</a></div>
+
+<div class="hint"><img alt="arrow3" src="/CorporateSiteDemo/media/Mock4/arrow.png" /> <a href="../Top-Links/About-Us/Know-About-Your-Life-Insurance#2">Why Life Insurance</a></div>
+
+<div class="hint"><img alt="arrow4" src="/CorporateSiteDemo/media/Mock4/arrow.png" /> <a href="../Top-Links/About-Us/Know-About-Your-Life-Insurance#3">Why Invest</a></div>
+
+<div class="hint"><img alt="arrow4" src="/CorporateSiteDemo/media/Mock4/arrow.png" /> <a href="https://customer.onlinelic.in/LICMobile/">Go Mobile</a></div>
+</div>
+
+<ul class="share-wrp">
+	<li><a alt="LIC on Facebook " class="icon-facebook" href="http://www.facebook.com/LICIndiaForever/" target="_blank" title="LIC on Facebook "><img alt="youtube" height="32" src="/CorporateSiteDemo/media/Mock4/fb.png" width="32" /> </a></li>
+	<li><a alt="LIC on Twitter" class="icon-twitter" href="http://www.twitter.com/licindiaforever/" target="_blank" title="LIC on Twitter"><img alt="youtube" height="25" src="/CorporateSiteDemo/media/LIC_New_Images/twitter-logo-618.jpg" width="30" /></a></li>
+	<li><a alt="LIC on YouTube" class="icon-you-tube" href="http://www.youtube.com/user/licindiaforever" target="_blank" title="LIC on YouTube"><img alt="youtube" height="32" src="/CorporateSiteDemo/media/Mock4/you.png" width="32" /></a></li>
+</ul>
+
+<div id="footpart">
+<ul>
+	<li><a href="../Home">Home</a></li>
+	<li>|</li>
+	<li><a href="../Bottom-Links/Corporate_Agents_r.aspx">Agents-Corner</a></li>
+	<li>|</li>
+	<li><a href="../Bottom-Links/annual-report">Annual Report </a></li>
+	<li>|</li>
+	<li><a class="golden" href="../getattachment/Anti_Fraud_Policy.pdf.aspx" target="_blank">Anti Fraud Policy</a></li>
+	<li>|</li>
+	<li><a href="../associates">Associates</a></li>
+	<li>|</li>
+	<li><a href="../Bottom-Links/careers">Careers</a></li>
+	<li>|</li>
+	<li><a href="../Bottom-Links/Citizens_Charter-English">Citizens Charter</a></li>
+	<li>|</li>
+	<li><a href="../Bottom-Links/Corporate-Agents-Details" target="_blank">Corporate Agents Details </a></li>
+	<li>|</li>
+	<li><a href="../Bottom-Links/Download-Forms">Download Forms</a></li>
+	<li>|</li>
+	<li><a href="../Bottom-Links/engineering-consultancy-service">Engineering Consultancy Service</a></li>
+	<li>|</li>
+	<li><a href="https://customer.onlinelic.in/LICEPS/portlets/visitor/OutstandingClaims/OutstandingClaimsController.jpf" target="_blank">Enquiry of Outstanding Claims for the Current Year</a></li>
+	<li>|</li>
+	<li><a href="../Bottom-Links/FAQ">FAQs </a></li>
+	<li>|</li>
+	<li><a href="../Bottom-Links/Feedback">Feedback </a></li>
+	<li>|</li>
+	<li><a class="golden" href="/Bottom-Links/Service-Request" style="font-weight:bold;color:red">Service Request </a></li>
+	<li>|</li>
+	<li><a href="../Bottom-Links/grievence-redresal-system">Grievances </a></li>
+	<li>|</li>
+	<li><a href="../Bottom-Links/glOSSORY">Glossary</a></li>
+	<li>|</li>
+	<li><a class="golden" href="../Golden-Jubilee-Foundation">Golden Jubilee Foundation</a></li>
+	<li>|</li>
+	<li><a href="../Bottom-Links/Investment">Investment </a></li>
+	<li>|</li>
+	<li><a href="http://www.policyholder.gov.in/" target="_blank">IRDAI Consumer Education </a></li>
+	<li>|</li>
+	<li><a href="../Bottom-Links/Key-persons">Key-Persons </a></li>
+	<li>|</li>
+	<li><a href="../Bottom-Links/licact">LIC Act </a></li>
+	<li>|</li>
+	<li><a href="../Bottom-Links/Media-Room">Media Room </a></li>
+	<li>|</li>
+	<li><a href="../Customer-Services/NRI-Center">NRI Centre</a></li>
+	<li>|</li>
+	<li><a href="../Media/Images">Photo Gallery</a></li>
+	<li>|</li>
+	<li><a href="../Bottom-Links/Press-Release">Press Release </a></li>
+	<li>|</li>
+	<li><a href="../Bottom-Links/Privacy-Policy">Privacy Policy </a></li>
+	<li>|</li>
+	<li><a href="../Bottom-Links/Public-disclosure">Public Disclosure</a></li>
+	<li>|</li>
+	<li><a href="../Bottom-Links/Stewardship-Policy-Disclosure" target="_blank">Stewardship Policy &amp; Disclosure</a></li>
+	<li>|</li>
+	<li><a href="../Bottom-Links/Property">Property</a></li>
+	<li>|</li>
+	<li><a href="/Bottom-Links/RTI-Link ">RTI Center </a></li>
+	<li>|</li>
+	<li><a href="../Sitemap.aspx">Sitemap </a></li>
+	<li>|</li>
+	<li><a href="../Media/Images/Swachh-Bharat-Campaign">Swachh Bharat Campaign</a></li>
+	<li>|</li>
+	<li><a href="../Bottom-Links/Tenders">Tenders </a></li>
+	<li>|</li>
+	<li><a href="/Bottom-Links/Equal-Opportunity-Policy">Equal Opportunity Policy </a></li>
+	<li>|</li>
+	<li><a class="golden" href="../Bottom-Links/Policy-for-protection-of-interests-of-policyholder">Policy for protection of interests of policyholders </a></li>
+	<li>|</li>
+	<li><a href="../Bottom-Links/Tender-award">Tender &ndash;Award </a></li>
+	<li>|</li>
+	<li><a href="https://customer.onlinelic.in/LICEPS/portlets/visitor/unclaimedPolicyDues/UnclaimedPolicyDuesController.jpf">Unclaimed Amounts of Policyholders</a></li>
+	<li>|</li>
+	<li><a class="golden" href="http://www.cvc.nic.in" target="_blank">CVC Website Link</a></li>
+	<li><a class="geo" href="#"><img alt="geotrust" height="30" src="https://licindia.in/CorporateSiteDemo/media/Mock4/geotrust.png" width="111" /></a> <a class="geo" href="https://india.gov.in/" target="_blank"><img alt="Government of india" height="30" src="https://licindia.in/CorporateSiteDemo/media/Mock4/gov.jpg" width="120" /></a></li>
+</ul>
+</div>
+<script type="text/javascript">
+function cvcredirect()
+{
+(function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga')
+        ga('send', 'event', 'CVC Bottom Click', "licindia.in", "licindia.in");
+window.location.href='https://www.cvc.nic.in/';
+
+}
+</script>
+  </div>
+  
+  <footer class="width">
+     
+  </footer>
+   <div style="text-align:center;margin-top: 10px;padding-bottom: 10px;"> <span><strong style="color: #01559b;font-weight: bold;font-style: italic;">Life Insurance Corporation of India –
+Corporate Office : Yogakshema Building, Jeevan Bima Marg, P.O. Box No – 19953, Mumbai – 400 021
+IRDAI Reg No- 512</strong></span></div>
+</div>
+</div>
+<a href="#" class="cd-top">Top</a>
+    
+    
+
+<script type="text/javascript">
+//<![CDATA[
+(function() {var fn = function() {$get("manScript_HiddenField").value = '';Sys.Application.remove_init(fn);};Sys.Application.add_init(fn);})();//]]>
+</script>
+
+<script type="text/javascript">
+	//<![CDATA[
+if (typeof(Sys.Browser.WebKit) == 'undefined') {
+    Sys.Browser.WebKit = {};
+}
+if (navigator.userAgent.indexOf('WebKit/') > -1) {
+    Sys.Browser.agent = Sys.Browser.WebKit;
+    Sys.Browser.version = parseFloat(navigator.userAgent.match(/WebKit\/(\d+(\.\d+)?)/)[1]);
+    Sys.Browser.name = 'WebKit';
+}
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+
+<script type="text/javascript">
+	//<![CDATA[
+var predictiveSearchObject_p_lt_ctl03_SmartSearchBox = new PredictiveSearchExtender('p_lt_ctl03_SmartSearchBox', 'p_lt_ctl03_SmartSearchBox_txtWord', 'p_lt_ctl03_SmartSearchBox_pnlPredictiveResultsHolder', 1, true, 'selectedResult', 'predictiveSearchResults');
+predictiveSearchObject_p_lt_ctl03_SmartSearchBox.CallPredictiveSearch = function(arg, context) { WebForm_DoCallback('p$lt$ctl03$SmartSearchBox',arg,predictiveSearchObject_p_lt_ctl03_SmartSearchBox.RecieveSearchResults,context,null,false); }
+
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+
+theForm.oldSubmit = theForm.submit;
+theForm.submit = WebForm_SaveScrollPositionSubmit;
+
+theForm.oldOnSubmit = theForm.onsubmit;
+theForm.onsubmit = WebForm_SaveScrollPositionOnSubmit;
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.TextBoxWatermarkBehavior, {"ClientStateFieldID":"p_lt_ctl03_SmartSearchBox_txtWord_exWatermark_ClientState","WatermarkText":"Search","id":"p_lt_ctl03_SmartSearchBox_txtWord_exWatermark"}, null, null, $get("p_lt_ctl03_SmartSearchBox_txtWord"));
+});
+//]]>
+</script>
+</form>
+</body>
+</html>

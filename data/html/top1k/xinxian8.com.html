@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>新鲜汇 - 分享你的消费新主张</title>
+<meta name="keywords" content="新鲜汇,导购,推荐商品,购物指南,消费分享" />
+<meta name="description" content="新鲜汇是一个优质购物分享平台。致力于汇集数码，家电，美妆，母婴，家居等各领域购物达人，通过分享心得和商品的方式帮助人们从容挑选商品，成为生活的艺术家。" />
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1100">
+<link rel="shortcut icon" href="/favicon.ico">
+<script>
+var userinfo = {'uid':0, 'nickname':''};
+</script>
+<script type="text/javascript" src="https://www.xinxian8.com/templates/default/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="https://www.xinxian8.com/templates/default/js/jquery.md5.js"></script>
+<link href="https://www.xinxian8.com/templates/default/css/idangerous.swiper.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="https://www.xinxian8.com/templates/default/js/idangerous.swiper.min.js"></script>
+<script type="text/javascript" src="https://www.xinxian8.com/templates/default/js/default.js"></script>
+<link href="https://www.xinxian8.com/templates/default/css/style.css" rel="stylesheet" type="text/css" />
+<link href="https://www.xinxian8.com/templates/default/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div class="header" id="top">
+    <div class="container">
+        <div class="logo"><a href="/"><img src="https://www.xinxian8.com/templates/default/images/logo.png"></a></div>
+        <div class="main-nav">
+            <a href="/" class="active">首页</a>
+            <a href="/mai">优鲜购</a>
+            <a href="/ce">抢鲜测</a>
+            <a href="/shi">新鲜事</a>
+            <a href="/huan">积分礼</a>
+            <a href="/quan">新鲜惠</a>
+            <div class="clear"></div>
+        </div>
+        <div class="header-right">
+            <form action="/search" id="header-search-form" class="category-search-form" style="right: 50px;" w="830">
+                <input type="text" id="header-search-keyword" name="keyword" placeholder="输入关键字">
+                <button id="header-search-submit" type="submit"></button>
+                <a href="javascript:;" id="close-header-search-form"></a>
+            </form>
+            <a href="javascript:;" class="icon-search" id="show-header-search" title="搜索"></a>
+                        <a href="javascript:;" class="show-sub-nav user-avatar" id="show-sub-nav-1" item-id="1"></a>
+        </div>
+        <div class="sub-nav" id="sub-nav-1" item-id="1">
+                        <a href="javascript:;" class="login-register-btn">登录 / 注册</a>
+                    </div>
+        <div class="sub-nav" id="sub-nav-2" item-id="2">
+            <a href="/tougao">发布推荐</a>
+        </div>
+        <div class="sub-nav" id="sub-nav-3" item-id="3">
+            <p class="sign-count">已累计签到<span id="sign-running-days"></span>天</p>
+                                    <a href="javascript:;" class="sign-btn" id="user-sign-btn">签到</a>
+                    </div>
+    </div>
+    <div class="clear"></div>
+</div>
+
+<div class="container">
+    <div class="swiper-container banner">
+        <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                <a href="https://www.xinxian8.com/1523.html" target="_blank"><img src="/upload/1911/19/13759808355dd3aa2b747644.14308875.jpg"></a>
+            </div>
+                        <div class="swiper-slide">
+                <a href="https://www.xinxian8.com/1455.html" target="_blank"><img src="/upload/1911/06/18976452875dc2364414e114.92214919.jpg"></a>
+            </div>
+                        <div class="swiper-slide">
+                <a href="https://www.xinxian8.com/1481.html" target="_blank"><img src="/upload/1911/11/10028937715dc92e71d2df12.79537819.jpg"></a>
+            </div>
+                        <div class="swiper-slide">
+                <a href="https://www.xinxian8.com/1117.html" target="_blank"><img src="/upload/1906/27/6268924635d1429302d0b61.66512164.jpg"></a>
+            </div>
+                        <div class="swiper-slide">
+                <a href="http://www.xinxian8.com/gonggao/5" target="_blank"><img src="/upload/1901/09/14190913855c35b9b7ce7f34.61839427.jpg"></a>
+            </div>
+                    </div>
+        <a href="javascript:;" id="banner-prev"></a>
+        <a href="javascript:;" id="banner-next"></a>
+        <div class="pagination"></div>
+    </div>
+
+    <div class="home-fresh">
+        <div class="main-title">新鲜盘点<small>Fresh</small><a href="/shi" class="more">更多 &gt;</a></div>
+        <div class="home-fresh-list">
+                        <div class="home-fresh-item">
+                <a href="/shi/125" class="cover" target="_blank"><img src="/upload/1911/13/5503349275dcbd3cf73c006.16620133.jpg"></a>
+                <a href="/shi/125" class="title" target="_blank">完美的家庭装饰，每天都能过的很开心</a>
+            </div>
+                        <div class="home-fresh-item">
+                <a href="/shi/124" class="cover" target="_blank"><img src="/upload/1911/13/9289557175dcbd2d5268bc8.20036498.jpg"></a>
+                <a href="/shi/124" class="title" target="_blank">数码耳机怎么买？看这篇种草list</a>
+            </div>
+                        <div class="home-fresh-item">
+                <a href="/shi/123" class="cover" target="_blank"><img src="/upload/1911/13/16043227615dcbd19dab5536.09902412.jpg"></a>
+                <a href="/shi/123" class="title" target="_blank">美妆必备，我还是想多选一点香水哦</a>
+            </div>
+                        <div class="home-fresh-item">
+                <a href="/shi/122" class="cover" target="_blank"><img src="/upload/1911/13/15748001875dcbcef7b4a601.62518214.jpg"></a>
+                <a href="/shi/122" class="title" target="_blank">你们双十一都买了什么？</a>
+            </div>
+                        <div class="clear"></div>
+        </div>
+    </div>
+    <!-- div class="banner-goto"><img src="https://www.xinxian8.com/templates/default/images/banner.jpg" style="width: 100%;height: 80px;"></div -->
+    <div class="home-category-recommend">
+        <div class="home-left-menu" id="home-left-menu">
+            <div class="title">优鲜购</div>
+            <div class="category-list">
+                                <a href="/fenlei/3c" target="_blank"><img src="/upload/1808/14/20895548535b7296d69664e0.48547464.png" class="icon1"><img src="/upload/1808/14/17620023005b7296d6966e74.54453344.png" class="icon2">3C数码</a>
+                                <a href="/fenlei/jdjz" target="_blank"><img src="/upload/1808/14/7839338335b7296f44bd663.75661828.png" class="icon1"><img src="/upload/1808/14/16557452605b7296f44bde02.74630018.png" class="icon2">家电家装</a>
+                                <a href="/fenlei/mzgh" target="_blank"><img src="/upload/1808/14/10796527285b72971947ab52.39416066.png" class="icon1"><img src="/upload/1808/14/20506886445b72971947b463.46724926.png" class="icon2">美妆个护</a>
+                                <a href="/fenlei/fsxb" target="_blank"><img src="/upload/1808/14/11169945465b72972f9ef194.45466300.png" class="icon1"><img src="/upload/1808/14/9575879785b72972f9ef9f3.39285649.png" class="icon2">服饰鞋包</a>
+                                <a href="/fenlei/mywj" target="_blank"><img src="/upload/1808/14/1476191125b729757bc5243.63289715.png" class="icon1"><img src="/upload/1808/14/6344435915b729757bc5ae8.14620439.png" class="icon2">母婴玩具</a>
+                                <a href="/fenlei/mwsp" target="_blank"><img src="/upload/1808/14/15330212965b72976e4ca560.49187484.png" class="icon1"><img src="/upload/1808/14/7249495955b72976e4cadb4.15566221.png" class="icon2">美味食品</a>
+                                <a href="/fenlei/jjjf" target="_blank"><img src="/upload/1808/14/19027056375b7297879620d9.58715112.png" class="icon1"><img src="/upload/1808/14/14063089235b729787962840.15028402.png" class="icon2">家居家纺</a>
+                                <a href="/fenlei/rybh" target="_blank"><img src="/upload/1808/14/9611841135b72979eb26695.25264713.png" class="icon1"><img src="/upload/1808/14/8118655775b72979eb26f56.52152356.png" class="icon2">日用百货</a>
+                                <a href="/fenlei/mcsj" target="_blank"><img src="/upload/1808/14/12223938865b7297c2c9c8f3.31462500.png" class="icon1"><img src="/upload/1808/14/14381366895b7297c2c9d0c7.75067309.png" class="icon2">萌宠世界</a>
+                                <a href="/fenlei/ysts" target="_blank"><img src="/upload/1808/14/6937332555b7297de4feb07.19752726.png" class="icon1"><img src="/upload/1808/14/17225970495b7297de4ff3b5.29058932.png" class="icon2">音像图书</a>
+                                <a href="/fenlei/yybj" target="_blank"><img src="/upload/1808/14/13433545975b7297f4430692.73509305.png" class="icon1"><img src="/upload/1808/14/7331223315b7297f4430fa0.15407522.png" class="icon2">医药保健</a>
+                                <a href="/fenlei/jrlc" target="_blank"><img src="/upload/1808/14/15190965805b72980ff36a58.88156563.png" class="icon1"><img src="/upload/1808/14/8000456685b72980ff372c6.70984999.png" class="icon2">金融理财</a>
+                            </div>
+        </div>
+        <div class="home-recommend-list">
+                        <div class="category-list">
+                <div class="recommend-item category" style="background: #644AD8;">
+                    <p class="title">3C数码</p>
+                    <p class="icon"><img src="/upload/1808/14/16572120625b72929468fe75.56897731.png"></p>
+                    <a href="/fenlei/3c" class="more" target="_blank">更多 &gt;</a>
+                </div>
+                                                                                <div class="recommend-item image">
+                    <a href="/1422.html" target="_blank"><img src="/upload/1910/31/19398962535dba6333aa0ae5.20119861.png"></a>
+                </div>
+                                                                                <div class="recommend-item has-image">
+                    <p class="cover"><a href="/1513.html" target="_blank"><img src="/upload/1911/19/6859197885dd35cf3a363e3.45115393.jpg"></a></p>
+                    <p class="title"><a href="1513.html" target="_blank">有了这款体感VR 周末我可不想出门了！</a></p>
+                    <p class="fields">
+                    <span class="goods-count" title="这篇文章推荐了4个商品">4</span>
+                    <span class="buy-count" title="0人看了这篇文章后去购买">0</span>
+                    </p>
+                    <p class="author"><a href="/user/27" target="_blank"><img src="/upload/avatar/1909/25/5574827875d8b27dd486509.62623864.png">许仙</a></p>
+                </div>
+                                <div class="recommend-item">
+                    <p class="cover"><a href="/1507.html" target="_blank"><img src="/upload/1911/17/21241080475dd149472fcd79.60922162.jpg"></a></p>
+                    <p class="title"><a href="1507.html" target="_blank">有什么比去健身房更瘦身的方法？跟新垣结衣一起运动！</a></p>
+                    <p class="fields">
+                    <span class="goods-count" title="这篇文章推荐了1个商品">1</span>
+                    <span class="buy-count" title="0人看了这篇文章后去购买">0</span>
+                    </p>
+                    <p class="author"><a href="/user/27" target="_blank"><img src="/upload/avatar/1909/25/5574827875d8b27dd486509.62623864.png">许仙</a></p>
+                </div>
+                                <div class="recommend-item">
+                    <p class="cover"><a href="/1483.html" target="_blank"><img src="/upload/1911/12/9334616615dc98ae4a2e663.79677098.jpg"></a></p>
+                    <p class="title"><a href="1483.html" target="_blank">抄底价数码小东东，再不买真的会悔三年！</a></p>
+                    <p class="fields">
+                    <span class="goods-count" title="这篇文章推荐了4个商品">4</span>
+                    <span class="buy-count" title="0人看了这篇文章后去购买">0</span>
+                    </p>
+                    <p class="author"><a href="/user/31" target="_blank"><img src="/upload/avatar/1909/25/375814695d8b28ee3e9f95.34527283.jpg">吃不胖嘻嘻</a></p>
+                </div>
+                                                                <div class="clear"></div>
+            </div>
+                        <div class="category-list">
+                <div class="recommend-item category" style="background: #8370D8;">
+                    <p class="title">家电家装</p>
+                    <p class="icon"><img src="/upload/1808/14/10501461845b7296f44be330.00633196.png"></p>
+                    <a href="/fenlei/jdjz" class="more" target="_blank">更多 &gt;</a>
+                </div>
+                                                                                <div class="recommend-item image">
+                    <a href="/1414.html" target="_blank"><img src="/upload/1910/31/16586594545dba63b9bda138.20707400.jpg"></a>
+                </div>
+                                                                                <div class="recommend-item has-image">
+                    <p class="cover"><a href="/1525.html" target="_blank"><img src="/upload/1911/19/16623811185dd3bf73a59d80.42267562.JPG"></a></p>
+                    <p class="title"><a href="1525.html" target="_blank">给房间一些童真 这件小摆件能帮助你</a></p>
+                    <p class="fields">
+                    <span class="goods-count" title="这篇文章推荐了4个商品">4</span>
+                    <span class="buy-count" title="0人看了这篇文章后去购买">0</span>
+                    </p>
+                    <p class="author"><a href="/user/5" target="_blank"><img src="/upload/avatar/1807/30/5700977565b5ec163b8f133.89147856.jpg">Fawn</a></p>
+                </div>
+                                <div class="recommend-item">
+                    <p class="cover"><a href="/1520.html" target="_blank"><img src="/upload/1911/19/17120009825dd38ef4d44287.10682909.jpg"></a></p>
+                    <p class="title"><a href="1520.html" target="_blank">把漫山遍野的自然气息带进房间！</a></p>
+                    <p class="fields">
+                    <span class="goods-count" title="这篇文章推荐了6个商品">6</span>
+                    <span class="buy-count" title="0人看了这篇文章后去购买">0</span>
+                    </p>
+                    <p class="author"><a href="/user/27" target="_blank"><img src="/upload/avatar/1909/25/5574827875d8b27dd486509.62623864.png">许仙</a></p>
+                </div>
+                                <div class="recommend-item">
+                    <p class="cover"><a href="/1478.html" target="_blank"><img src="/upload/1911/10/21374692425dc812a8ed51f9.55380653.jpg"></a></p>
+                    <p class="title"><a href="1478.html" target="_blank">双十一空调怎么买？格力出重拳让利！不买就没啦！</a></p>
+                    <p class="fields">
+                    <span class="goods-count" title="这篇文章推荐了6个商品">6</span>
+                    <span class="buy-count" title="0人看了这篇文章后去购买">0</span>
+                    </p>
+                    <p class="author"><a href="/user/31" target="_blank"><img src="/upload/avatar/1909/25/375814695d8b28ee3e9f95.34527283.jpg">吃不胖嘻嘻</a></p>
+                </div>
+                                                                <div class="clear"></div>
+            </div>
+                        <div class="category-list">
+                <div class="recommend-item category" style="background: #FB3F51;">
+                    <p class="title">美妆个护</p>
+                    <p class="icon"><img src="/upload/1808/14/3675537695b72971947bba9.40839043.png"></p>
+                    <a href="/fenlei/mzgh" class="more" target="_blank">更多 &gt;</a>
+                </div>
+                                                                                <div class="recommend-item image">
+                    <a href="/1495.html" target="_blank"><img src="/upload/1911/13/8065027155dcbdcd740b803.15808655.JPG"></a>
+                </div>
+                                                                                <div class="recommend-item has-image">
+                    <p class="cover"><a href="/1531.html" target="_blank"><img src="/upload/1911/27/20474462445dde3257e975c2.98801899.jpg"></a></p>
+                    <p class="title"><a href="1531.html" target="_blank">熬夜加班买买买护肤品来犒劳一下自己</a></p>
+                    <p class="fields">
+                    <span class="goods-count" title="这篇文章推荐了4个商品">4</span>
+                    <span class="buy-count" title="0人看了这篇文章后去购买">0</span>
+                    </p>
+                    <p class="author"><a href="/user/34" target="_blank"><img src="/upload/avatar/1909/25/13290430215d8b2af1217ff8.28683036.jpg">吃可爱d兔兔</a></p>
+                </div>
+                                <div class="recommend-item">
+                    <p class="cover"><a href="/1522.html" target="_blank"><img src="/upload/1911/19/18220162885dd3a361967047.77679234.jpg"></a></p>
+                    <p class="title"><a href="1522.html" target="_blank">高绅男士之选——森林男香水</a></p>
+                    <p class="fields">
+                    <span class="goods-count" title="这篇文章推荐了3个商品">3</span>
+                    <span class="buy-count" title="0人看了这篇文章后去购买">0</span>
+                    </p>
+                    <p class="author"><a href="/user/27" target="_blank"><img src="/upload/avatar/1909/25/5574827875d8b27dd486509.62623864.png">许仙</a></p>
+                </div>
+                                <div class="recommend-item">
+                    <p class="cover"><a href="/1493.html" target="_blank"><img src="/upload/1911/12/15621638325dca8ae1aa5419.17655548.jpg"></a></p>
+                    <p class="title"><a href="1493.html" target="_blank">因为李佳琦 我第一次买了娇兰 真香</a></p>
+                    <p class="fields">
+                    <span class="goods-count" title="这篇文章推荐了4个商品">4</span>
+                    <span class="buy-count" title="7人看了这篇文章后去购买">7</span>
+                    </p>
+                    <p class="author"><a href="/user/27" target="_blank"><img src="/upload/avatar/1909/25/5574827875d8b27dd486509.62623864.png">许仙</a></p>
+                </div>
+                                                                <div class="clear"></div>
+            </div>
+                        <div class="category-list">
+                <div class="recommend-item category" style="background: #FB717E;">
+                    <p class="title">服饰鞋包</p>
+                    <p class="icon"><img src="/upload/1808/14/713598005b72972f9eff34.26492160.png"></p>
+                    <a href="/fenlei/fsxb" class="more" target="_blank">更多 &gt;</a>
+                </div>
+                                                                                <div class="recommend-item">
+                    <p class="cover"><a href="/1530.html" target="_blank"><img src="/upload/1911/27/15943281685dde2fad037ab5.12803643.jpg"></a></p>
+                    <p class="title"><a href="1530.html" target="_blank">买了一个超贵超贵的包包，和大家分享一下</a></p>
+                    <p class="fields">
+                    <span class="goods-count" title="这篇文章推荐了0个商品">0</span>
+                    <span class="buy-count" title="0人看了这篇文章后去购买">0</span>
+                    </p>
+                    <p class="author"><a href="/user/34" target="_blank"><img src="/upload/avatar/1909/25/13290430215d8b2af1217ff8.28683036.jpg">吃可爱d兔兔</a></p>
+                </div>
+                                <div class="recommend-item">
+                    <p class="cover"><a href="/1450.html" target="_blank"><img src="/upload/1911/05/17252575255dc15699dc22c3.37479510.jpg"></a></p>
+                    <p class="title"><a href="1450.html" target="_blank">在家也要“仙女范”可不可爱你说了算！</a></p>
+                    <p class="fields">
+                    <span class="goods-count" title="这篇文章推荐了3个商品">3</span>
+                    <span class="buy-count" title="0人看了这篇文章后去购买">0</span>
+                    </p>
+                    <p class="author"><a href="/user/33" target="_blank"><img src="/upload/avatar/1909/25/14294237915d8b2a855a0998.82211449.png">我命由我</a></p>
+                </div>
+                                                                <div class="clear"></div>
+            </div>
+                        <div class="category-list">
+                <div class="recommend-item category" style="background: #FFDA40;">
+                    <p class="title">母婴玩具</p>
+                    <p class="icon"><img src="/upload/1808/14/14529431805b729757bc6005.23881173.png"></p>
+                    <a href="/fenlei/mywj" class="more" target="_blank">更多 &gt;</a>
+                </div>
+                                                                                <div class="recommend-item">
+                    <p class="cover"><a href="/1331.html" target="_blank"><img src="/upload/1908/11/5682600295d5018eb3cdde3.36665623.png"></a></p>
+                    <p class="title"><a href="1331.html" target="_blank">口碑推|给宝宝理发，它很在行！</a></p>
+                    <p class="fields">
+                    <span class="goods-count" title="这篇文章推荐了1个商品">1</span>
+                    <span class="buy-count" title="0人看了这篇文章后去购买">0</span>
+                    </p>
+                    <p class="author"><a href="/user/2" target="_blank"><img src="/upload/avatar/1807/30/18285810805b5ecae74059d5.55401545.jpg">种草官</a></p>
+                </div>
+                                <div class="recommend-item">
+                    <p class="cover"><a href="/1307.html" target="_blank"><img src="/upload/1908/01/21314975265d4261eff06ea6.67659679.jpg"></a></p>
+                    <p class="title"><a href="1307.html" target="_blank">毛绒玩具根本就是哄娃神器呀！</a></p>
+                    <p class="fields">
+                    <span class="goods-count" title="这篇文章推荐了5个商品">5</span>
+                    <span class="buy-count" title="0人看了这篇文章后去购买">0</span>
+                    </p>
+                    <p class="author"><a href="/user/2" target="_blank"><img src="/upload/avatar/1807/30/18285810805b5ecae74059d5.55401545.jpg">种草官</a></p>
+                </div>
+                                                                <div class="clear"></div>
+            </div>
+                        <div class="category-list">
+                <div class="recommend-item category" style="background: #FF5722;">
+                    <p class="title">美味食品</p>
+                    <p class="icon"><img src="/upload/1808/14/2300405785b72976e4cb2b9.44852931.png"></p>
+                    <a href="/fenlei/mwsp" class="more" target="_blank">更多 &gt;</a>
+                </div>
+                                                                                <div class="recommend-item">
+                    <p class="cover"><a href="/1465.html" target="_blank"><img src="/upload/1911/08/11910430485dc5458d5a65b9.24610621.png"></a></p>
+                    <p class="title"><a href="1465.html" target="_blank">干露集团举办智利酒王之父 - 魔爵红30周年庆典</a></p>
+                    <p class="fields">
+                    <span class="goods-count" title="这篇文章推荐了2个商品">2</span>
+                    <span class="buy-count" title="0人看了这篇文章后去购买">0</span>
+                    </p>
+                    <p class="author"><a href="/user/35" target="_blank"><img src="/upload/avatar/1909/25/19791143685d8b2bcb5e8852.33398796.jpg">旭旭</a></p>
+                </div>
+                                <div class="recommend-item">
+                    <p class="cover"><a href="/1451.html" target="_blank"><img src="/upload/1911/05/11905424335dc16354934554.23119618.jpg"></a></p>
+                    <p class="title"><a href="1451.html" target="_blank">双11，“酒鬼”必败清单！</a></p>
+                    <p class="fields">
+                    <span class="goods-count" title="这篇文章推荐了4个商品">4</span>
+                    <span class="buy-count" title="0人看了这篇文章后去购买">0</span>
+                    </p>
+                    <p class="author"><a href="/user/33" target="_blank"><img src="/upload/avatar/1909/25/14294237915d8b2a855a0998.82211449.png">我命由我</a></p>
+                </div>
+                                                                <div class="clear"></div>
+            </div>
+                        <div class="category-list">
+                <div class="recommend-item category" style="background: #4CAF50;">
+                    <p class="title">家居家纺</p>
+                    <p class="icon"><img src="/upload/1808/14/5271201585b729787962cd1.18318618.png"></p>
+                    <a href="/fenlei/jjjf" class="more" target="_blank">更多 &gt;</a>
+                </div>
+                                                                                <div class="recommend-item">
+                    <p class="cover"><a href="/1499.html" target="_blank"><img src="/upload/1911/14/13966988855dccc94ad5def4.84244908.jpg"></a></p>
+                    <p class="title"><a href="1499.html" target="_blank">这些北欧单人沙发的颜值也太高了吧！</a></p>
+                    <p class="fields">
+                    <span class="goods-count" title="这篇文章推荐了3个商品">3</span>
+                    <span class="buy-count" title="0人看了这篇文章后去购买">0</span>
+                    </p>
+                    <p class="author"><a href="/user/33" target="_blank"><img src="/upload/avatar/1909/25/14294237915d8b2a855a0998.82211449.png">我命由我</a></p>
+                </div>
+                                <div class="recommend-item">
+                    <p class="cover"><a href="/1467.html" target="_blank"><img src="/upload/1911/08/16347417685dc550931b0703.88278597.jpg"></a></p>
+                    <p class="title"><a href="1467.html" target="_blank">或许……你应该换个智能马桶盖了</a></p>
+                    <p class="fields">
+                    <span class="goods-count" title="这篇文章推荐了3个商品">3</span>
+                    <span class="buy-count" title="0人看了这篇文章后去购买">0</span>
+                    </p>
+                    <p class="author"><a href="/user/33" target="_blank"><img src="/upload/avatar/1909/25/14294237915d8b2a855a0998.82211449.png">我命由我</a></p>
+                </div>
+                                                                <div class="clear"></div>
+            </div>
+                        <div class="category-list">
+                <div class="recommend-item category" style="background: #607D8B;">
+                    <p class="title">日用百货</p>
+                    <p class="icon"><img src="/upload/1808/14/6805912505b72979eb27479.77368508.png"></p>
+                    <a href="/fenlei/rybh" class="more" target="_blank">更多 &gt;</a>
+                </div>
+                                                                                <div class="recommend-item">
+                    <p class="cover"><a href="/1500.html" target="_blank"><img src="/upload/1911/14/5632627595dcccc931cab35.66662254.jpg"></a></p>
+                    <p class="title"><a href="1500.html" target="_blank">没空照顾绿植？仿真植物了解一下！</a></p>
+                    <p class="fields">
+                    <span class="goods-count" title="这篇文章推荐了5个商品">5</span>
+                    <span class="buy-count" title="0人看了这篇文章后去购买">0</span>
+                    </p>
+                    <p class="author"><a href="/user/2" target="_blank"><img src="/upload/avatar/1807/30/18285810805b5ecae74059d5.55401545.jpg">种草官</a></p>
+                </div>
+                                <div class="recommend-item">
+                    <p class="cover"><a href="/1485.html" target="_blank"><img src="/upload/1911/12/7831201395dca55c9452294.47282007.jpg"></a></p>
+                    <p class="title"><a href="1485.html" target="_blank">前方高萌！这些化妆包承包了我的少女心。</a></p>
+                    <p class="fields">
+                    <span class="goods-count" title="这篇文章推荐了5个商品">5</span>
+                    <span class="buy-count" title="0人看了这篇文章后去购买">0</span>
+                    </p>
+                    <p class="author"><a href="/user/2" target="_blank"><img src="/upload/avatar/1807/30/18285810805b5ecae74059d5.55401545.jpg">种草官</a></p>
+                </div>
+                                                                <div class="clear"></div>
+            </div>
+                        <div class="category-list">
+                <div class="recommend-item category" style="background: #795548;">
+                    <p class="title">萌宠世界</p>
+                    <p class="icon"><img src="/upload/1808/14/19721674515b7297c2c9d587.12416383.png"></p>
+                    <a href="/fenlei/mcsj" class="more" target="_blank">更多 &gt;</a>
+                </div>
+                                                                                <div class="recommend-item">
+                    <p class="cover"><a href="/1476.html" target="_blank"><img src="/upload/1911/10/11012656015dc805516d4a20.97580624.jpg"></a></p>
+                    <p class="title"><a href="1476.html" target="_blank">双十一最后剁手指南 | 超值价格的猫粮猫砂猫罐头！！！</a></p>
+                    <p class="fields">
+                    <span class="goods-count" title="这篇文章推荐了7个商品">7</span>
+                    <span class="buy-count" title="0人看了这篇文章后去购买">0</span>
+                    </p>
+                    <p class="author"><a href="/user/31" target="_blank"><img src="/upload/avatar/1909/25/375814695d8b28ee3e9f95.34527283.jpg">吃不胖嘻嘻</a></p>
+                </div>
+                                <div class="recommend-item">
+                    <p class="cover"><a href="/1462.html" target="_blank"><img src="/upload/1911/07/20064033875dc3dbc61bad53.17835216.jpg"></a></p>
+                    <p class="title"><a href="1462.html" target="_blank">打骨折价的猫罐头，不囤悔三年！</a></p>
+                    <p class="fields">
+                    <span class="goods-count" title="这篇文章推荐了5个商品">5</span>
+                    <span class="buy-count" title="0人看了这篇文章后去购买">0</span>
+                    </p>
+                    <p class="author"><a href="/user/31" target="_blank"><img src="/upload/avatar/1909/25/375814695d8b28ee3e9f95.34527283.jpg">吃不胖嘻嘻</a></p>
+                </div>
+                                                                <div class="clear"></div>
+            </div>
+                        <div class="category-list">
+                <div class="recommend-item category" style="background: #9C27B0;">
+                    <p class="title">音像图书</p>
+                    <p class="icon"><img src="/upload/1808/14/8180479265b7297de4ff880.60228314.png"></p>
+                    <a href="/fenlei/ysts" class="more" target="_blank">更多 &gt;</a>
+                </div>
+                                                                                <div class="recommend-item">
+                    <p class="cover"><a href="/1471.html" target="_blank"><img src="/upload/1911/08/16599166825dc55bb339cb93.99904518.jpg"></a></p>
+                    <p class="title"><a href="1471.html" target="_blank">纸质书太贵？那就买就几本电子书吧！</a></p>
+                    <p class="fields">
+                    <span class="goods-count" title="这篇文章推荐了6个商品">6</span>
+                    <span class="buy-count" title="0人看了这篇文章后去购买">0</span>
+                    </p>
+                    <p class="author"><a href="/user/33" target="_blank"><img src="/upload/avatar/1909/25/14294237915d8b2a855a0998.82211449.png">我命由我</a></p>
+                </div>
+                                <div class="recommend-item">
+                    <p class="cover"><a href="/1457.html" target="_blank"><img src="/upload/1911/06/18448479695dc2a3cc5c5fb2.50904938.jpg"></a></p>
+                    <p class="title"><a href="1457.html" target="_blank">肖战的粉丝来互撩，哥哥的*你买了几本啦？</a></p>
+                    <p class="fields">
+                    <span class="goods-count" title="这篇文章推荐了3个商品">3</span>
+                    <span class="buy-count" title="0人看了这篇文章后去购买">0</span>
+                    </p>
+                    <p class="author"><a href="/user/33" target="_blank"><img src="/upload/avatar/1909/25/14294237915d8b2a855a0998.82211449.png">我命由我</a></p>
+                </div>
+                                                                <div class="clear"></div>
+            </div>
+                        <div class="category-list">
+                <div class="recommend-item category" style="background: #009688;">
+                    <p class="title">医药保健</p>
+                    <p class="icon"><img src="/upload/1808/14/19492588625b7297f4431559.64109624.png"></p>
+                    <a href="/fenlei/yybj" class="more" target="_blank">更多 &gt;</a>
+                </div>
+                                                                                <div class="recommend-item">
+                    <p class="cover"><a href="/1263.html" target="_blank"><img src="/upload/1907/23/8711313255d36806a8652e5.58506951.jpg"></a></p>
+                    <p class="title"><a href="1263.html" target="_blank">口碑推|不用饿肚子，也能轻松享瘦</a></p>
+                    <p class="fields">
+                    <span class="goods-count" title="这篇文章推荐了1个商品">1</span>
+                    <span class="buy-count" title="0人看了这篇文章后去购买">0</span>
+                    </p>
+                    <p class="author"><a href="/user/2" target="_blank"><img src="/upload/avatar/1807/30/18285810805b5ecae74059d5.55401545.jpg">种草官</a></p>
+                </div>
+                                <div class="recommend-item">
+                    <p class="cover"><a href="/1206.html" target="_blank"><img src="/upload/1907/07/9756237825d21d1b38afac9.99154825.jpg"></a></p>
+                    <p class="title"><a href="1206.html" target="_blank">经常感到眼睛酸涩有异物感？那你可能得了干眼症</a></p>
+                    <p class="fields">
+                    <span class="goods-count" title="这篇文章推荐了4个商品">4</span>
+                    <span class="buy-count" title="0人看了这篇文章后去购买">0</span>
+                    </p>
+                    <p class="author"><a href="/user/2" target="_blank"><img src="/upload/avatar/1807/30/18285810805b5ecae74059d5.55401545.jpg">种草官</a></p>
+                </div>
+                                                                <div class="clear"></div>
+            </div>
+                        <div class="category-list">
+                <div class="recommend-item category" style="background: #E91E63;">
+                    <p class="title">金融理财</p>
+                    <p class="icon"><img src="/upload/1808/14/2531620865b72980ff37809.77705501.png"></p>
+                    <a href="/fenlei/jrlc" class="more" target="_blank">更多 &gt;</a>
+                </div>
+                                                                                <div class="recommend-item">
+                    <p class="cover"><a href="/795.html" target="_blank"><img src="/upload/1904/02/13706436645ca36387099634.29566369.jpg"></a></p>
+                    <p class="title"><a href="795.html" target="_blank">2019年必看的入门理财书，小白也不怕看不懂！</a></p>
+                    <p class="fields">
+                    <span class="goods-count" title="这篇文章推荐了4个商品">4</span>
+                    <span class="buy-count" title="0人看了这篇文章后去购买">0</span>
+                    </p>
+                    <p class="author"><a href="/user/4" target="_blank"><img src="/upload/avatar/1807/30/14159010745b5ebdecd36f41.12794834.JPG">睡不醒小姐</a></p>
+                </div>
+                                <div class="recommend-item">
+                    <p class="cover"><a href="/474.html" target="_blank"><img src="/upload/1901/30/11322036155c519bc385cdf9.72068533.jpg"></a></p>
+                    <p class="title"><a href="474.html" target="_blank">2019年新flag——我要存钱！</a></p>
+                    <p class="fields">
+                    <span class="goods-count" title="这篇文章推荐了5个商品">5</span>
+                    <span class="buy-count" title="0人看了这篇文章后去购买">0</span>
+                    </p>
+                    <p class="author"><a href="/user/4" target="_blank"><img src="/upload/avatar/1807/30/14159010745b5ebdecd36f41.12794834.JPG">睡不醒小姐</a></p>
+                </div>
+                                                                <div class="clear"></div>
+            </div>
+                    </div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+<div class="home-test">
+    <div class="container">
+        <div class="main-title">抢鲜测<small>Evaluation</small><a href="/ce" target="_blank" class="more">更多 &gt;</a></div>
+        <div class="swiper-container home-test-list">
+            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                    <div class="home-test-item">
+                        <p class="cover"><a href="/1486.html" target="_blank"><img src="/upload/1911/12/6369960675dca5d19c65ed7.21601283.jpg"></a></p>
+                        <p class="title"><a href="/1486.html" target="_blank">用一本新的日历，做好迎接2020年的准备！</a></p>
+                        <p class="category"><a href="/fenlei/rybh" target="_blank">日用百货</a></p>
+                        <p class="author"><a href="/user/2" target="_blank"><img src="/upload/avatar/1807/30/18285810805b5ecae74059d5.55401545.jpg">种草官</a></p>
+                    </div>
+                </div>
+                                <div class="swiper-slide">
+                    <div class="home-test-item">
+                        <p class="cover"><a href="/1455.html" target="_blank"><img src="/upload/1911/06/18115263735dc234459960a2.21109232.jpg"></a></p>
+                        <p class="title"><a href="/1455.html" target="_blank">今天你的眼睛休息过了吗？</a></p>
+                        <p class="category"><a href="/fenlei/mzgh" target="_blank">美妆个护</a></p>
+                        <p class="author"><a href="/user/5" target="_blank"><img src="/upload/avatar/1807/30/5700977565b5ec163b8f133.89147856.jpg">Fawn</a></p>
+                    </div>
+                </div>
+                                <div class="swiper-slide">
+                    <div class="home-test-item">
+                        <p class="cover"><a href="/1394.html" target="_blank"><img src="/upload/1910/05/8097226255d985131309d52.37045941.jpg"></a></p>
+                        <p class="title"><a href="/1394.html" target="_blank">薅羊毛| 超实用的塑料脸盆，加厚双耳，3个装仅售17.8元！</a></p>
+                        <p class="category"><a href="/fenlei/rybh" target="_blank">日用百货</a></p>
+                        <p class="author"><a href="/user/2" target="_blank"><img src="/upload/avatar/1807/30/18285810805b5ecae74059d5.55401545.jpg">种草官</a></p>
+                    </div>
+                </div>
+                                <div class="swiper-slide">
+                    <div class="home-test-item">
+                        <p class="cover"><a href="/1391.html" target="_blank"><img src="/upload/1910/03/937933565d9612a7e6b8c9.26027360.jpg"></a></p>
+                        <p class="title"><a href="/1391.html" target="_blank">薅羊毛|LYRA德国艺雅洞洞铅笔 48支装，限时抢购立减10元</a></p>
+                        <p class="category"><a href="/fenlei/rybh" target="_blank">日用百货</a></p>
+                        <p class="author"><a href="/user/2" target="_blank"><img src="/upload/avatar/1807/30/18285810805b5ecae74059d5.55401545.jpg">种草官</a></p>
+                    </div>
+                </div>
+                                <div class="swiper-slide">
+                    <div class="home-test-item">
+                        <p class="cover"><a href="/1388.html" target="_blank"><img src="/upload/1910/03/6339539925d95e44321e417.29251935.jpg"></a></p>
+                        <p class="title"><a href="/1388.html" target="_blank">口碑推|Edo温馨时尚创意肥皂盒，点滴细节让家更美好</a></p>
+                        <p class="category"><a href="/fenlei/rybh" target="_blank">日用百货</a></p>
+                        <p class="author"><a href="/user/2" target="_blank"><img src="/upload/avatar/1807/30/18285810805b5ecae74059d5.55401545.jpg">种草官</a></p>
+                    </div>
+                </div>
+                                <div class="swiper-slide">
+                    <div class="home-test-item">
+                        <p class="cover"><a href="/1387.html" target="_blank"><img src="/upload/1910/03/14803096305d95e1b8e39e25.53757273.jpg"></a></p>
+                        <p class="title"><a href="/1387.html" target="_blank">薅羊毛|利达妮棉拖鞋 第2双到手价11.4元</a></p>
+                        <p class="category"><a href="/fenlei/rybh" target="_blank">日用百货</a></p>
+                        <p class="author"><a href="/user/2" target="_blank"><img src="/upload/avatar/1807/30/18285810805b5ecae74059d5.55401545.jpg">种草官</a></p>
+                    </div>
+                </div>
+                                <div class="swiper-slide">
+                    <div class="home-test-item">
+                        <p class="cover"><a href="/1386.html" target="_blank"><img src="/upload/1910/03/18643108565d95daa30aaab1.98783103.jpg"></a></p>
+                        <p class="title"><a href="/1386.html" target="_blank">薅羊毛|洁丽雅毛巾 下单3件打9折扣，到手价8.9元起</a></p>
+                        <p class="category"><a href="/fenlei/rybh" target="_blank">日用百货</a></p>
+                        <p class="author"><a href="/user/2" target="_blank"><img src="/upload/avatar/1807/30/18285810805b5ecae74059d5.55401545.jpg">种草官</a></p>
+                    </div>
+                </div>
+                                <div class="swiper-slide">
+                    <div class="home-test-item">
+                        <p class="cover"><a href="/1385.html" target="_blank"><img src="/upload/1910/03/12662594665d95d8fef12393.70800556.jpg"></a></p>
+                        <p class="title"><a href="/1385.html" target="_blank">口碑推|张小泉不锈钢居家厨房剪，好用锋利！</a></p>
+                        <p class="category"><a href="/fenlei/rybh" target="_blank">日用百货</a></p>
+                        <p class="author"><a href="/user/2" target="_blank"><img src="/upload/avatar/1807/30/18285810805b5ecae74059d5.55401545.jpg">种草官</a></p>
+                    </div>
+                </div>
+                            </div>
+            <a href="javascript:;" id="home-test-prev"></a>
+            <a href="javascript:;" id="home-test-next"></a>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="home-goods">
+        <div class="main-title">积分礼<small>Gift</small><a href="/huan" target="_blank" class="more">更多 &gt;</a></div>
+        <div class="home-goods-list">
+                        <div class="home-goods-item item-1">
+                <a href="/huan/58" target="_blank" class="title">美帕焕颜凝润柔肤水 150ml  2020.11</a>
+                <p class="price">29700 <span>积分</span></p>
+                <a href="/huan/58" target="_blank"><img class="cover" src="/upload/1910/17/16404751225da83d422add98.89158770.png"></a>
+            </div>
+                        <div class="home-goods-item item-1">
+                <a href="/huan/57" target="_blank" class="title">欧珀莱恒久肌底循环精华露 限定版 30ml  2020.9</a>
+                <p class="price">103200 <span>积分</span></p>
+                <a href="/huan/57" target="_blank"><img class="cover" src="/upload/1910/17/9940669075da83a9003d265.80882743.jpg"></a>
+            </div>
+                        <div class="home-goods-item item-1">
+                <a href="/huan/56" target="_blank" class="title">泊美鲜纯珍萃生机悦润乳 滋润型  120ml  2020.9</a>
+                <p class="price">33000 <span>积分</span></p>
+                <a href="/huan/56" target="_blank"><img class="cover" src="/upload/1910/17/16091686725da839bf6704a1.50781899.png"></a>
+            </div>
+                        <div class="home-goods-item item-1">
+                <a href="/huan/55" target="_blank" class="title">泊美鲜纯珍萃生机悦润水 滋润型  150ml  2020.9</a>
+                <p class="price">30000 <span>积分</span></p>
+                <a href="/huan/55" target="_blank"><img class="cover" src="/upload/1910/17/15966185555da836c5e70fd0.26902903.png"></a>
+            </div>
+                        <div class="home-goods-item item-1">
+                <a href="/huan/54" target="_blank" class="title">泊美鲜纯珍萃生机悦润洁面膏 滋润型  120ml  2020.9</a>
+                <p class="price">18000 <span>积分</span></p>
+                <a href="/huan/54" target="_blank"><img class="cover" src="/upload/1910/17/5734441915da834f175b8f3.29363729.jpg"></a>
+            </div>
+                        <div class="home-goods-item item-1">
+                <a href="/huan/53" target="_blank" class="title">康如舒缓洗发露 400ml  2020.6</a>
+                <p class="price">25200 <span>积分</span></p>
+                <a href="/huan/53" target="_blank"><img class="cover" src="/upload/1910/17/4707110165da82b17b78aa1.31932622.png"></a>
+            </div>
+                        <div class="clear"></div>
+        </div>
+    </div>
+
+    <div class="home-coupon footer-padding">
+        <div class="main-title">新鲜惠<small>Coupons</small><a href="/quan" target="_blank" class="more">更多 &gt;</a></div>
+        <div class="coupon-list">
+                        <div class="coupon-item">
+                <div class="coupon-logo"></div>
+                <div class="coupon-info">
+                    <p class="money"><span>&yen;</span> 20 <span>好奇母婴</span></p>
+                    <span class="min-money">满45元可用</span>
+                </div>
+                <a class="coupon-link" href="https://item.m.jd.com/product/538737.html?wxa_abtest=b&utm_source=iosapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=CopyURL&ad_od=share&utm_user=plusmember" target="_blank">立即领取</a>
+                <span class="circle1"></span>
+                <span class="circle2"></span>
+            </div>
+                        <div class="coupon-item">
+                <div class="coupon-logo"></div>
+                <div class="coupon-info">
+                    <p class="money"><span>&yen;</span> 20 <span>京东生鲜</span></p>
+                    <span class="min-money">满199元可用</span>
+                </div>
+                <a class="coupon-link" href="https://item.m.jd.com/product/5529641.html?wxa_abtest=b&utm_source=iosapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=CopyURL&ad_od=share&utm_user=plusmember" target="_blank">立即领取</a>
+                <span class="circle1"></span>
+                <span class="circle2"></span>
+            </div>
+                        <div class="coupon-item">
+                <div class="coupon-logo"></div>
+                <div class="coupon-info">
+                    <p class="money"><span>&yen;</span> 10 <span>周大福</span></p>
+                    <span class="min-money">满50元可用</span>
+                </div>
+                <a class="coupon-link" href="https://item.m.jd.com/product/100001362737.html?wxa_abtest=b&utm_source=iosapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=CopyURL&ad_od=share&utm_user=plusmember" target="_blank">立即领取</a>
+                <span class="circle1"></span>
+                <span class="circle2"></span>
+            </div>
+                        <div class="coupon-item">
+                <div class="coupon-logo"></div>
+                <div class="coupon-info">
+                    <p class="money"><span>&yen;</span> 120 <span>百草味食品</span></p>
+                    <span class="min-money">满199元可用</span>
+                </div>
+                <a class="coupon-link" href="https://item.m.jd.com/product/31887275580.html?wxa_abtest=b&utm_source=iosapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=CopyURL&ad_od=share&utm_user=plusmember" target="_blank">立即领取</a>
+                <span class="circle1"></span>
+                <span class="circle2"></span>
+            </div>
+                        <div class="coupon-item">
+                <div class="coupon-logo"></div>
+                <div class="coupon-info">
+                    <p class="money"><span>&yen;</span> 50 <span>muji无印良品</span></p>
+                    <span class="min-money">满500元可用</span>
+                </div>
+                <a class="coupon-link" href="https://item.m.jd.com/product/31203574603.html?wxa_abtest=b&utm_source=iosapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=CopyURL&ad_od=share&utm_user=plusmember" target="_blank">立即领取</a>
+                <span class="circle1"></span>
+                <span class="circle2"></span>
+            </div>
+                        <div class="coupon-item">
+                <div class="coupon-logo"></div>
+                <div class="coupon-info">
+                    <p class="money"><span>&yen;</span> 100 <span>高洁丝卫生巾</span></p>
+                    <span class="min-money">满149元可用</span>
+                </div>
+                <a class="coupon-link" href="https://item.m.jd.com/product/4389192.html?wxa_abtest=b&utm_source=iosapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=CopyURL&ad_od=share&utm_user=plusmember" target="_blank">立即领取</a>
+                <span class="circle1"></span>
+                <span class="circle2"></span>
+            </div>
+                        <div class="clear"></div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="container">
+        <div class="footer-nav">
+            <a href="/html/about">我们的故事</a>
+            <span>│</span>
+            <a href="/html/contact">商务合作</a>
+            <span>│</span>
+            <a href="/html/friendlink">友情链接</a>
+            <span>│</span>
+            <a href="/user/help">使用帮助</a>
+            <span>│</span>
+            <a href="/html/disclaimer">法律声明</a>
+            <span>│</span>
+            <a href="/user/help?tab=rule">积分规则</a>
+            <span>│</span>
+            <a href="/user/help?tab=feedback">意见反馈</a>
+        </div>
+        <div class="footer-copyright">
+            &copy; 2019 新鲜汇 All rights reserved. <a href="http://beian.miit.gov.cn" target="_blank">沪ICP备18029743号-1</a>
+        </div>
+        <div class="qrcode">
+            <img src="https://www.xinxian8.com/templates/default/images/qr-code.png">
+            <p>扫一扫下载APP</p>
+        </div>
+    </div>
+</div>
+<div id="user-login-page">
+    <div class="login-box" id="login-box">
+        <div class="login-box-tab">
+            <a href="javascript:;" class="active" tab="login">老朋友？登录</a> |
+            <a href="javascript:;" tab="register">新朋友？注册</a>
+        </div>
+        <div id="login">
+            <form id="login-form" action="/login" method="post">
+                <input type="text" name="username" id="login-username" class="username-input" placeholder="请输入手机号">
+                <input type="password" name="password" id="login-password" class="password-input" placeholder="请输入密码"><a href="javascript:;" id="forgot-btn">忘记密码</a>
+                <input type="text" name="sms" id="login-sms" class="password-input" placeholder="请输入手机验证码">
+                <input type="button" class="send-sms-btn" id="login-send-sms-btn" value="获取验证码">
+                <div class="clear"></div>
+                <div id="login-error-info"></div>
+                <input type="submit" value="登录" class="login-submit" id="login-submit-btn">
+            </form>
+            <div class="change-login">
+                <a href="javascript:;" class="change-login-btn" id="use-sms">手机号快捷登录 <i class="fa fa-angle-double-right"></i></a>
+                <a href="javascript:;" class="change-login-btn" id="use-password">使用密码登录 <i class="fa fa-angle-double-right"></i></a>
+            </div>
+        </div>
+        <div id="register">
+            <input type="text" name="username" id="register-username" class="username-input" placeholder="请输入正确的手机号">
+            <input type="password" name="password" id="register-password" class="password-input2" placeholder="请设置6位以上密码，包含数字、字母或符号">
+            <input type="text" name="sms" id="register-sms" class="password-input" placeholder="请输入手机验证码">
+            <input type="button" class="send-sms-btn" id="register-send-sms-btn" value="获取验证码">
+            <input type="text" name="invite_nickname" class="invite-nickname" placeholder="请输入邀请人的昵称，可选填">
+            <div class="clear"></div>
+            <div id="register-error-info"></div>
+            <input type="submit" value="注册" class="login-submit" id="register-submit-btn">
+            <div class="register-tip">
+                <label><input type="checkbox" id="register-agree" name="agree" value="1"> <span>我已阅读并同意</span></label>
+                <a href="/html/protocol" target="_blank">《新鲜汇用户协议》</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="alert-page">
+    <div id="alert-box">
+        <a href="javascript:;" id="alert-close"></a>
+        <p id="alert-title"></p>
+        <p id="alert-content"></p>
+        <p class="alert-btn"><input type="button" value="确 定" id="alert-btn"></p>
+    </div>
+</div>
+<div id="showtip"></div>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?75401a565cd934d714cfc2f30760fa4f";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>

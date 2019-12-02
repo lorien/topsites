@@ -1,0 +1,178 @@
+            <!DOCTYPE html>
+      <html class="vk vk_js_no vk_1x vk_flex_no r d h  vk_appAuth_no n vk_old ">
+      <head>
+              <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="MobileOptimized" content="176" />
+        <meta name="HandheldFriendly" content="True" />
+        <base id="base">
+        
+        <link rel="shortcut icon" href="/images/icons/favicons/fav_logo.ico?8"></link>
+            <meta name="theme-color" content="#5181b8" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/pwa/favicon_32.png?8">
+    <link rel="apple-touch-icon" href="/images/icons/pwa/apple/default.png?8">
+    <link rel="mask-icon" href="/images/icons/pwa/safari_pinned_tab.svg" color="#5181b8">
+    <meta name="msapplication-config" content="/images/icons/pwa/windows/browserconfig.xml">
+    <meta name="apple-mobile-web-app-title" content="ВКонтакте">
+    <meta name="application-name" content="ВКонтакте">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <title>Мобильная версия ВКонтакте</title>
+        <meta http-equiv="origin-trial" content="Av8ECqeAAIiC9bF3N7aq2M/TaxNzzpPcFXnw0rRb9KRUQlbyHKYmPj6KeVUFVDk+S7W9RfJH2GsEOS8G99uJvgcAAABaeyJvcmlnaW4iOiJodHRwczovL3ZrLmNvbTo0NDMiLCJmZWF0dXJlIjoiQmFkZ2luZyIsImV4cGlyeSI6MTU2MTY2MTkxNCwiaXNTdWJkb21haW4iOnRydWV9">
+        <script>
+          (function() {
+            window.isMVK = true;
+            window.isNewNavigation = true;
+            window.isCustomScroll = false;
+            window.isNewMail = false;
+            window.isNewLongpoll = false;
+            window.audioSubscribe = false;
+            window.isArticleWebView = false;
+            window.audioAdsConfig = {"_":"_"};
+
+            var vkElem = document.querySelector('.vk');
+            var vkClass = vkElem.getAttribute('class');
+
+            var supports = {
+              js: true,
+              flex: window.CSS && CSS.supports && (
+                CSS.supports('display', 'flex') ||
+                CSS.supports('display', '-webkit-flex') ||
+                CSS.supports('display', '-ms-flexbox')
+              )
+            };
+
+            supports.js && (vkClass = vkClass.replace('vk_js_no', 'vk_js_yes'));
+            supports.flex && (vkClass = vkClass.replace('vk_flex_no', 'vk_flex_yes'));
+            vkElem.setAttribute('class', vkClass);
+
+            
+          })();
+        </script>
+
+        
+        <script type="text/javascript">
+<!--
+    if (navigator.standalone === true && document.cookie.indexOf('remixmiospwa=1') === -1) {
+      document.cookie = 'remixmiospwa=1; expires='+(new Date((new Date).getTime()+7776E6)).toUTCString()+'; Secure; path=/; domain=.vk.com';
+    }
+
+    (function(k,a,d,e,f){function l(){var c=function(){var b=!1;try{b=new XMLHttpRequest}catch(a){try{b=new ActiveXObject("Msxml2.XMLHTTP")}catch(d){try{b=new ActiveXObject("Microsoft.XMLHTTP")}catch(c){b=!1}}}return b?e:f}(),g=function(){var b=k.createElement("div");b.innerHTML='<input type="file" />';b=b.getElementsByTagName("input")[0];return"file"!=b.type||b.disabled?f:e}(),h="ontouchstart"in a?e:f,m;try{m=typeof navigator.geolocation!==d?e:typeof a.google!==d&&typeof google.gears!==d?e:typeof device!==d&&typeof device.getServiceObject!==d?e:typeof Mojo!==d&&"Mojo.Service.Request"!==typeof Mojo.Service.Request?e:f}catch(p){m=f}var l=function(b){try{var d=a.Audio?new Audio:k.createElement("audio");if(d.canPlayType&&d.canPlayType(b)&&"no"!=d.canPlayType(b))return e}catch(c){}return f}("audio/mpeg"),n=function(b){try{for(var a=k.createElement("div"),c=0,g=["webkit","Moz","ms","O",""],h=g.length;c<h;c++){var l=g[c],m=l?l+b:b.toLowerCase();if(typeof a.style[m]!==d)return e}return f}catch(n){return f}}("Transform");return c+g+h+m+l+n+((a.XMLHttpRequest||a.XDomainRequest)&&(a.FormData||a.FileReader&&(a.XMLHttpRequest&&XMLHttpRequest.sendAsBinary||a.ArrayBuffer&&a.Uint8Array&&(a.MozBlobBuilder||a.WebKitBlobBuilder||a.BlobBuilder)))?e:f)}var c=a.screen,g=c.width||0,c=c.height||0,n=a.devicePixelRatio||1,p=(k.cookie.match(/(^|;\s+)remixmdevice=([^;]+)/)||[])[2]||"",h=p.split("/");p&&g==h[0]&&c==h[1]&&7==h[3].length||(g=[g,c,n,l()].join("/"),k.cookie="remixmdevice=; expires="+(new Date(0)).toUTCString()+"; Secure; path=/",k.cookie="remixmdevice="+g+"; expires="+(new Date((new Date).getTime()+7776E6)).toUTCString()+"; Secure; path=/; domain=.vk.com",(k.cookie!=="")&&1&&location.reload())})(document,window,"undefined","!","-");!function(o,a){var e=o.hash||"",t=e.substr(2);if("#/"==e.substr(0,2)){var i=window.locDomain,n=new Date;n.setTime(n.getTime()+864e5);var r="; expires="+n.toGMTString();document.cookie=["remixtmp_hash_nav","=",escape(o.href),r,"; path=/"," Secure;","",i?"; domain=."+i:""].join(""),!a&&(t.match(/^\/*(away|login)(\.php)?([^a-z0-9\.]|$)/)&&(t=""),o.replace(o.protocol+"//"+o.host+"/"+t))}}(location);
+//-->
+</script>
+        <link rel="stylesheet" href="/css/mobile/common.css?5f668458153fb388e74ac32605219e930613cb878a0874c7b4009e55ea1879b3">
+<script src="/js/cmodules/mobile/grip.32c759c2f237d1b13d8e.js?a0ba9661cbcb47e24281e3470c3d784b8cd405fd8d1a3c141dd938b10bf5cd4b"></script>
+
+        
+    <link rel="canonical" href="https://vk.com/" />
+    <link rel="alternate" href="android-app://com.vkontakte.android/vkontakte/m.vk.com/" />
+  
+      </head>
+
+      <body  class="vk__page _hover vk_ios_no vk_stickers_hints_support_no opera_mini_no vk_safari_no vk__page_login vk_tabbar_static    vk_al_no ">
+            <div class="layout">
+      
+          <div class="layout__header mhead" id="vk_head">
+      <div class="hb_wrap">
+        <div class="hb_btn">&nbsp;</div>
+      </div>
+    </div>
+      <div class="layout__body " id="vk_wrap">
+        <div class="layout__leftMenu" id="l">
+          
+        </div>
+        <div class="layout__basis" id="m">
+              <div class="basis">
+      <div class="basis__header mhead basis__header_noBottomMenu" id="mhead"><a href="/" accesskey="*" class="hb_wrap mhb_logo">
+  <div class="hb_btn mhi_logo">&nbsp;</div>
+  <h1 class="hb_btn mh_header">&nbsp;</h1>
+</a>
+</div>
+      <div class="basis__menu"></div>
+      
+      <div class="basis__content mcont " id="mcont" data-canonical="https://vk.com/"><div class="installApp">
+  <a class="installApp__link" href="https://vk.me/?act=dl">
+    <div class="installApp__link_wrap">
+      <div class="installApp__label">
+        Установить приложение <b>ВКонтакте</b>
+        <span class="installApp__arrow"></span>
+      </div>
+    </div>
+  </a>
+</div><div class="pcont fit_box bl_cont new_form">
+  <div class="PageBlock">
+  
+  <div class="form_item">
+    <div class="login_header">
+      Мобильная версия поможет Вам оставаться ВКонтакте, даже если Вы далеко от компьютера.
+    </div>
+    
+    <form method="POST" action="https://login.vk.com/?act=login&_origin=https://m.vk.com&ip_h=9b2ce0f482a8b65aa5&lg_h=2a12dde2ea1e38a8fb&role=pda&utf8=1" novalidate>
+      <dl class="fi_row">
+        <dd>
+          <input type="text" class="textfield" name="email" value="" placeholder="Телефон или email" />
+        </dd>
+      </dl>
+      <dl class="fi_row">
+        <dd>
+          <input type="password" class="textfield" name="pass" placeholder="Пароль" />
+        </dd>
+      </dl>
+      
+      <div class="fi_row_new">
+        <input class="button wide_button" type="submit" value="Войти" />
+      </div>
+      <div class="fi_row">
+        <div class="near_btn wide_button login_restore"><a href="https://static.vk.com/restore" rel="noopener">Забыли пароль?</a></div>
+      </div>
+      <div class="login_new_user">
+  <div class="fi_header fi_header_light">Впервые ВКонтакте?</div>
+</div>
+<div class="fi_row">
+  <a class="button wide_button success" href="/join" rel="noopener">Зарегистрироваться</a>
+</div>
+<div class="socials">
+  
+  <a href="/login?act=fb_sign" class="social_button"><i class="social_icon"></i>Войти через Facebook</a>
+</div>
+    </form>
+  </div>
+  </div>
+</div></div>
+          <div class="basis__footer mfoot" id="mfoot"><div class="pfoot">
+  <ul class="footer_menu">
+    <li class="fm_row"><a class="fm_item" href="/settings?act=change_regional&hash=538a6f1a873bad0367&lang_id=3">English</a></li><li class="fm_row"><a class="fm_item" href="/settings?act=change_regional&hash=538a6f1a873bad0367&lang_id=1">Українська</a></li>
+    <li class="fm_row"><a class="fm_item" href="/settings?act=select_lang">all languages »</a></li>
+  </ul>
+  <ul id="footer_menu" class="footer_menu">
+    <li class="fm_row"><a class="fm_item" href="/fv?to=%2F%3F_fm%3D1%26_fm2%3D1">Версия для компьютера</a></li>
+  </ul>
+  
+</div></div>
+      
+          <div class="_cntrs" style="height:0;overflow:hidden;">
+      <img width="1" height="1" src="//sb.scorecardresearch.com/p?c1=2&c2=13765216&c3=&c4=https%3A%2F%2Fm.vk.com%2F&c5=&c9=&c15=&cv=2.0&cj=1&rn=68769379" alt="" align="left" />
+      
+      <img src="//top-fwz1.mail.ru/counter?id=2579437;pid=0;r=" style="border:0;" height="1" width="1" />
+    </div>
+    </div>
+        </div>
+      </div>
+    </div>
+        <a class="FloatBtn FloatBtn_nowrap" href="/join?from=float" data-skiponclick="1"><span class="FloatBtn__text">Регистрация</span><i class="FloatBtn__close" onclick="uRegisterFloatBtn._onCloseClick(event)"></i></a>
+        
+        <script type="text/javascript">
+<!--
+parent&&parent!=window&&(document.getElementsByTagName('body')[0].innerHTML='');try{sessionStorage.set('is_mvk_tab', 1)}catch(e){};window.store.stickers = {"url_template":"https:\/\/vk.com\/sticker\/1-%id%-%size%"};
+//-->
+</script>
+        <div id="vk_utils"></div>
+        <div id="z"></div>
+        <div id="vk_bottom"></div>
+        <div id="theme_color_shim"></div>
+        
+        
+      </body>
+    </html>

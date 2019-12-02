@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Banco de Venezuela</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet"> 
+    <link href="css/lightbox.css" rel="stylesheet"> 
+
+    <meta http-equiv="Cache-Control" content="no-store" />
+
+
+	<link href="css/main.css" rel="stylesheet">
+	<!-- <link href="css/hover.css" rel="stylesheet" type="text/css"> -->
+	<link href="css/responsive.css" rel="stylesheet">
+<!-- 	<link href="css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/sheetslider.min.css"/>
+ -->
+
+    <!--[if lt IE 9]>
+	    <script src="js/html5shiv.js"></script>
+	    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    <link rel="shortcut icon" href="images/ico/favicon2.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+</head>
+<body>
+        <input type="checkbox" id="cerrar">
+        <label for="cerrar" id="btn-cerrar"></label>
+        <div class= "modal" >
+            <div class="contenido">
+            <script type="text/javascript">
+              var prefix = "<img src=\"";
+              var postfix = "\" />";
+              var rnumb = "";
+              var img = "";
+              rnumb += Math.floor(Math.random()*3);
+              img = rnumb;
+              if(img == "0") {
+                document.write(prefix+ "imgbdv/popup/POP-UP-phishing-oct-2019.jpg" +postfix);
+              }
+              if(img == "1") {
+                document.write(prefix+ "imgbdv/popup/pop-up-comuna-digital.jpg" +postfix);
+              }
+              if(img == "2") {
+                document.write(prefix+ "imgbdv/popup/puntoYa-pop-up.jpg" +postfix);
+              }
+
+            </script></div>
+        </div>
+        <!-- Elemento para cargar las piezas de la pagina -->
+        <header id="header"></header>
+       <div id="slider-integrado"></div>    
+       <section  id="home-slider"></section>
+       <section id="services"></section>
+       <section id="clients"></section>
+       <footer id="footer"></footer>
+    <!-- Javascript -->
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/lightbox.min.js"></script>
+        <script type="text/javascript" src="js/wow.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>   
+        <script>
+/* Cargar la paginas comunes por medio ajax */
+        $(function(){
+          
+          $("#header").load("header_principal.html"); 
+          $("#slider-integrado").load("slider_principal.html"); 
+          $('#home-slider').load("home_slider.html");
+          $("#services").load("servicios_comunes.html"); 
+          $("#clients").load("clients_principal.html"); 
+          $("#footer").load("footer.html"); 
+        });
+        </script>
+</body>
+</html>

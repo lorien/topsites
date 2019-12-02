@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<base target="_blank" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="baidu-site-verification" content="OIn8KgjtDz" />
+    <meta name="sogou_site_verification" content="2bn6QOGpl5"/>
+    <meta name="360-site-verification" content="df7bd3217db758ef21a0d6cc5bbd15b3" />
+    <title>互动百科-百科更权威</title>
+    <meta name="description" content="客观、专业、权威！互动百科是基于中文维基技术(维客,wiki百科)的网络百科全书,是全球知名中文百科网及百科全书。互动百科中文网,助您轻松百科探秘" />
+    <meta name="keywords" content=" 中国百科网,wiki百科,baike,互动百科,wiki,百科,wiki 百科,百科全书,维基百科中文网" />
+<style>
+/*reset*/
+blockquote,body,dd,div,dl,dt,form,h1,h2,h3,h4,h5,h6,html,input,li,ol,p,pre,td,th,ul{margin:0;padding:0;font-weight:400}
+li{list-style:none}
+article,aside,audio,canvas,command,datalist,details,embed,figcaption,figure,footer,header,hgroup,keygen,meter,nav,output,progress,section,source,video{display:block;}
+figure{margin:0;}
+address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:400}
+img{border:0}
+caption,th{text-align:left}
+input,select,textarea{font-size:12px;color:#333;font-family:'lucida grande',taho,verdana,'trebuchet ms',sans-serif}
+body{font:14px/1.2 helvetica,Arial,'Microsoft YaHei',SimHei,sans-serif;position:absolute;top:0;left:0;right:0;min-height: 100%;min-width:672px;color:#333;background:#fff}
+:focus{outline:0}
+input:focus,input:hover{outline:0}
+/*base*/
+.f12{font-size:12px}
+.f14{font-size:14px}
+.f16{font-size:16px}
+.f18{font-size:18px}
+.f20{font-size:20px}
+.f22{font-size:22px}
+.f24{font-size:24px}
+.f30{font-size:30px}
+.fb{font-weight:700}
+.fn{font-weight:400}
+a{color:inherit;text-decoration:none}
+a:hover{color:#f77413;}
+.gray{color:gray}
+.gray3{color:#333}
+.gray6{color:gray}
+.gray9{color:#999}
+.grayb{color:#bbb}
+.grayc{color:#ccc}
+.blue{color:#0268cd}
+.red{color:#fb4f4f}
+.white{color:#fff}
+.wrap{width:1170px;}
+.pr{position:relative;}
+.pa{position:absolute;}
+.clearfix:before,.clearfix:after{content:"";display:table;}
+.clearfix:after{clear:both;}
+.clear{clear:both;width:100%;height:0;font-size:0;overflow:hidden}
+.fl{float:left;}
+.fr{float:right;}
+.mar-t10{margin-top:10px;}
+.header-baike{text-align: right;padding-top:10px;padding-right: 25px;}
+.header-baike .navi-bk{display: inline;}
+.header-baike .navi-bk li{display: inline-block;line-height: 1;font-size: 14px;padding-right: 15px;}
+.header-baike a{color: #555;text-decoration: underline;}.header-baike a:hover{color: #222;}
+#loggingnews,#hdlogout{display: inline-block;margin-left:5px;}
+#loggingnews .user-face{display:none}
+#loggingnews em{background: url(https://s3.pstatp.com/toutiao/baike_static/huimg/public/images/header-2016.png) no-repeat -78px 1px;width: 20px;line-height:16px;font-size: 12px;display:inline-block;overflow:hidden;text-align:center;color:#fff;font-style: normal;margin:0 0 0 3px;vertical-align:top;}
+.header-baike .log{border-right:#ccc solid 1px;display: inline-block;padding-right: 8px;margin-right: 8px;font-size: 14px;line-height: 1;}
+.header-baike .log.bor-no{border-right: 0;margin-right: 0;padding-right: 0;}
+.header-baike .log a{color: #555;font-weight: 500;}
+.header-baike .log a:hover{color: #222;}
+h2.logo{margin:0 auto 40px auto;width:180px;}
+h2.logo a,h2.logo img{display:block;}
+.header-search{width:672px;position: absolute;top:42%;left:50%;margin-left:-335px;margin-top:-89px;}
+.header-search form{float:left;}
+.header-search .ac_input{background-color:#fff;border: 1px solid #D4D6D8;border-right: none;line-height: 1;height: 16px;padding:13px 10px 15px 10px;width:430px;font-size: 16px;}
+.header-search .ac_input:focus{border-color:#EF792A;outline: none;}
+.header-search input[type='button']{height: 46px;line-height:1;padding:13px 20px 15px;cursor: pointer;font-size:16px;}
+.header-search .entry-button{color: #fff;border:none;background: -webkit-linear-gradient(-22deg, #F18D18 26%,#EF792A 100%);background: -moz-linear-gradient(-22deg, #F18D18 26%,#EF792A 100%);background: linear-gradient(-22deg, #EF792A 26%, #F18D18 100%);}
+.header-search .search-button{margin-left: 5px;border:#EF792A solid 1px;height:32px;color:#EF792A;background:#fff;}
+.header-search input[type='button']:hover{opacity: .9;}
+.header-search .hot_results{font-size: 13px;line-height: 24px;height: 24px;overflow: hidden;width:578px;padding-left:2px;color: #999;margin-top: 15px;}
+.header-search .hot_results a{display: inline-block;margin-right: 18px;color: #999;text-decoration: none;}
+.header-search .hot_results a:hover{color: #333 !important;text-decoration:none;}
+.ac_results{background:#fff;position: absolute; width: 465px; top: 124px;z-index: 9999;font-size: 16px;margin:-7px 0 0 -0;box-shadow: 0 6px 6px 0 rgba(153,153,153,0.20);}
+.ac_results ul{max-height: 300px; overflow: auto;margin:5px 0;padding:0;}
+.ac_results li {height:30px;line-height:30px;cursor:pointer;margin: 0;list-style: none;}
+.ac_results li p{color:#222;text-decoration:none;padding-left:12px;font-size: 16px;}
+.ac_results li p:hover{background:#eeefef;text-decoration:none;}
+.footer{position: absolute;top:100%;left:0;right:0;}
+
+.navi-bk a,.navi-bk a:hover{-webkit-transition:border 200ms linear;-moz-transition:border 200ms linear;transition:border 200ms linear;}
+.ac_results{-webkit-animation: animt-result 200ms linear;-moz-animation: animt-result 200ms linear;animation: animt-result 200ms linear;}
+@-webkit-keyframes animt-result{0%{-webkit-transform: translateY(-30px);}100%{-webkit-transform: translateY(0);}}
+@-moz-keyframes animt-result{0%{-moz-transform: translateY(-30px);}100%{-moz-transform: translateY(0);}}
+@keyframes animt-result{0%{transform: translateY(-30px);}100%{transform: translateY(0);}}
+{}</style>
+<!--[if IE]>
+<script src="//s3.pstatp.com/toutiao/baike_static/huimg/xiaobaike/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<script src="//s3.pstatp.com/toutiao/baike_static/huimg/lib/jquery-1.7.min.js"></script>
+<script>
+ $(function(){
+    if(getHdCookie('hduser') == null){
+       //$("#hdlogout").css("display","none")
+       //$("#hdlogouta").css("display","none")
+       $("#createDoc").attr("href","http://passport.baike.com/login.do?site_ource=zz_page&service=http://www.baike.com")
+    }    
+ })
+
+</script>
+
+</head><body>
+<div class="header-baike">
+    <ul class="navi-bk">
+        <li><a id="createDoc" href="http://www.baike.com/createDocAuth.do?prd=shouye_chuangjiancitiao" target="_blank">创建词条</a></li>
+        <li><a href="http://task.baike.com/" target="_blank">百科任务</a></li>
+        <li><a href="http://www.baike.com/giftshop/index.html?prd=shouye_wanshancitiao" target="_blank">百科商城</a></li>
+    </ul>
+    <div id="loggingnews"></div>
+    <!--<div id="hdlogout" class="log bor-no" >
+        <a  id="hdlogouta" href="http://passport.baike.com/logout.do?from=adsbaike&tag=sec" target="_blank">退出</a>
+    </div>-->
+</div>
+
+
+<div class="header-search">
+    <div class="nav-search">
+        <h2 class="logo"><a href="http://www.baike.com/" target="_self"><img alt="互动百科 - 全球领先中文百科网站" src="http://static.hudong.com/84/61/26100000006141156802612782162.png" width="180"></a></h2>
+        <div class="search-panel">
+            <form id="enter" method="get" target="_blank">
+                <input autocomplete="off" class="ac_input" type="text" name="q">
+            </form>
+            <input value="进入词条" class="entry-button" type="button">
+            <input value="搜索词条" class="search-button" type="button">
+        </div>
+    </div>
+</div>
+
+<!--通用底部-->
+<div class="footer">
+    <iframe width="100%" height="260" frameborder="0" scrolling="no" src="//www.baike.com/all/footsimp2017.html" marginwidth="0" marginheight="0" id="footcommon"></iframe>
+</div>
+<!--通用底部结束-->
+<!--站长统计新-->
+<div style="display:none">
+    <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1260070928'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1260070928' type='text/javascript'%3E%3C/script%3E"));</script>
+</div>
+
+<script type="text/javascript" src="//s3.pstatp.com/toutiao/baike_static/huimg/public/js/userLogin_home_page_20190927.js"></script>
+<script type="text/javascript" src="//s3.pstatp.com/toutiao/baike_static/huimg/public/js/module/Hrequire-1.0.1.js"></script>
+<script type="text/javascript">
+loadLoginInfo();
+Hrequire.add('common_head_home',{path:"//s3.pstatp.com/toutiao/baike_static/huimg/public/js/module/HD_Head_20160713.js",type:"js",requires: ['jquery']});
+Hrequire('common_head_home',function(){
+	$.HdHead({
+	  title_filter:function(q){
+		   return q.replace(/\+/g,'%2B');
+		  },
+	  openac:true,
+	  openhotword:true,
+	});
+});
+</script>
+<script type="text/javascript" src="http://stat.baike.com/js/webstat_manage.js"></script><script type="text/javascript" src="http://stat.baike.com/js/webstat_manage_hdga.js"></script></body></html>

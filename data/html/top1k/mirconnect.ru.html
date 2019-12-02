@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="ru" class="main">
+<head>
+<title>Национальная платежная карта «Мир»</title>
+<script type="text/javascript">if(!window.BX)window.BX={};if(!window.BX.message)window.BX.message=function(mess){if(typeof mess=='object') for(var i in mess) BX.message[i]=mess[i]; return true;};</script>
+<script type="text/javascript">(window.BX||top.BX).message({'JS_CORE_LOADING':'Загрузка...','JS_CORE_NO_DATA':'- Нет данных -','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_WINDOW_CONTINUE':'Продолжить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с','JSADM_AI_HIDE_EXTRA':'Скрыть лишние','JSADM_AI_ALL_NOTIF':'Показать все','JSADM_AUTH_REQ':'Требуется авторизация!','JS_CORE_WINDOW_AUTH':'Войти','JS_CORE_IMAGE_FULL':'Полный размер'});</script>
+<script type="text/javascript">(window.BX||top.BX).message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','SERVER_TZ_OFFSET':'10800','SITE_ID':'s1','SITE_DIR':'/','USER_ID':'','SERVER_TIME':'1575262726','USER_TZ_OFFSET':'0','USER_TZ_AUTO':'Y','bitrix_sessid':'a5eea6b0fd38248621e7b9b6d542cc58'});</script>
+
+
+<script type="text/javascript"  src="/bitrix/cache/js/s1/main/kernel_main/kernel_main.js?1574230802288777"></script>
+<script type="text/javascript">BX.setJSList(['/bitrix/js/main/core/core.js','/bitrix/js/main/core/core_popup.js','/bitrix/js/main/core/core_date.js','/bitrix/js/main/core/core_ajax.js','/bitrix/js/main/json/json2.min.js','/bitrix/js/main/core/core_ls.js','/bitrix/js/main/session.js','/bitrix/js/main/core/core_window.js','/bitrix/js/main/utils.js','/local/templates/main/js/polyfill.js','/local/templates/main/libs/jquery-3.2.1.min.js','/local/templates/main/libs/bootstrap-3.3.7-dist/js/bootstrap.min.js','/local/templates/main/libs/jasny-bootstrap/js/jasny-bootstrap.min.js','/local/templates/main/libs/bootstrap-select-1.12.4/js/bootstrap-select.min.js','/local/templates/main/libs/bootstrap-select-1.12.4/js/i18n/defaults-ru_RU.min.js','/local/templates/main/libs/bootstrap-datepicker-1.6.4/js/bootstrap-datepicker.min.js','/local/templates/main/libs/bootstrap-datepicker-1.6.4/locales/bootstrap-datepicker.ru.min.js','/local/templates/main/libs/slick/slick.js','/local/templates/main/libs/aos/dist/aos.js','/local/templates/main/libs/malihu-scrollbar/jquery.mCustomScrollbar.concat.min.js','/local/templates/main/libs/magnific-popup/jquery.magnific-popup.min.js','/local/templates/main/libs/touch-swipe/jquery.touchSwipe.min.js','/local/templates/main/libs/mask-plugin/dist/jquery.mask.min.js','/local/templates/main/libs/typeahead.bundle/typeahead.bundle.min.js','/local/templates/main/libs/daterangepicker/moment.min.js','/local/templates/main/libs/daterangepicker/daterangepicker.js','/local/templates/main/libs/lightbox/lightbox.min.js','/local/templates/main/js/site-scripts.js','/local/templates/main/js/script.js','/local/templates/main/components/bitrix/search.form/.default/script.js']); </script>
+<script type="text/javascript">
+					(function () {
+						"use strict";
+
+						var counter = function ()
+						{
+							var cookie = (function (name) {
+								var parts = ("; " + document.cookie).split("; " + name + "=");
+								if (parts.length == 2) {
+									try {return JSON.parse(decodeURIComponent(parts.pop().split(";").shift()));}
+									catch (e) {}
+								}
+							})("BITRIX_CONVERSION_CONTEXT_s1");
+
+							if (cookie && cookie.EXPIRE >= BX.message("SERVER_TIME"))
+								return;
+
+							var request = new XMLHttpRequest();
+							request.open("POST", "/bitrix/tools/conversion/ajax_counter.php", true);
+							request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+							request.send(
+								"SITE_ID="+encodeURIComponent("s1")+
+								"&sessid="+encodeURIComponent(BX.bitrix_sessid())+
+								"&HTTP_REFERER="+encodeURIComponent(document.referrer)
+							);
+						};
+
+						if (window.frameRequestStart === true)
+							BX.addCustomEvent("onFrameDataReceived", counter);
+						else
+							BX.ready(counter);
+					})();
+				</script>
+
+
+
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" id="site-viewport">
+<meta name="HandheldFriendly" content="true">
+<meta name="format-detection" content="telephone=no">
+
+<link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png">
+<link rel="manifest" href="/images/icons/site.webmanifest">
+<link rel="mask-icon" href="/images/icons/safari-pinned-tab.svg" color="#006848">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="theme-color" content="#ffffff">
+
+
+<!--[if gte IE 9]><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/><![endif]-->
+
+<!--[if lte IE 9]><script src="/local/templates/main/js/ie-html5.js"></script><![endif]-->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="description" content="Официальный сайт национальной платежной системы «Мир». Платежная система «Мир» отвечает мировым стандартам безопасности и не зависит от внешних факторов." />
+<link href="/bitrix/cache/css/s1/main/kernel_main/kernel_main.css?157418332726563" type="text/css" rel="stylesheet" />
+<link href="/bitrix/cache/css/s1/main/page_e3a2adf0a774e0f5e49814dfa831fa59/page_e3a2adf0a774e0f5e49814dfa831fa59.css?15741825461066" type="text/css" rel="stylesheet" />
+<link href="/bitrix/cache/css/s1/main/template_5dc05c2883fc094cadd2adc12e73ba43/template_5dc05c2883fc094cadd2adc12e73ba43.css?15742493521016238" type="text/css" data-template-style="true" rel="stylesheet" />
+<script type="text/javascript"  src="/bitrix/cache/js/s1/main/template_1dba7da36c9aab5616f046d7004967b5/template_1dba7da36c9aab5616f046d7004967b5.js?1574249352658630"></script>
+<script type="text/javascript">var _ba = _ba || []; _ba.push(["aid", "be6e367e19f5abf180c14ca21faaf6c4"]); _ba.push(["host", "mironline.ru"]); (function() {var ba = document.createElement("script"); ba.type = "text/javascript"; ba.async = true;ba.src = (document.location.protocol == "https:" ? "https://" : "http://") + "bitrix.info/ba.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ba, s);})();</script>
+
+
+<style>
+.site-body .h-m-bottom .menu-main-item[href*='/press-center/media-files/'] {
+display: none;
+}
+</style>
+<meta name="yandex-verification" content="70bbf2f491f9bebe" />
+
+<!-- БОЛЬШОЙ БЛОК ТЭГОВ!! -->
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K6DFQRZ');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '231836717601879');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=231836717601879&ev=PageView&noscript=1"
+/></noscript>
+
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '463179364218277');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=463179364218277&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+<!-- Rating@Mail.ru counter -->
+<script type="text/javascript">
+var _tmr = window._tmr || (window._tmr = []);
+_tmr.push({id: "3037397", type: "pageView", start: (new Date()).getTime()});
+(function (d, w, id) {
+  if (d.getElementById(id)) return;
+  var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+  ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
+  var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+  if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+})(document, window, "topmailru-code");
+</script><noscript><div>
+<img src="//top-fwz1.mail.ru/counter?id=3037397;js=na" style="border:0;position:absolute;left:-9999px;" alt="" />
+</div></noscript>
+<!-- //Rating@Mail.ru counter -->
+
+
+
+<!-- vk code -->
+<script type="text/javascript">!function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://vk.com/js/api/openapi.js?154",t.onload=function(){VK.Retargeting.Init("VK-RTRG-256196-9Fw2v"),VK.Retargeting.Hit()},document.head.appendChild(t)}();</script><noscript><img src="https://vk.com/rtrg?p=VK-RTRG-256196-9Fw2v" style="position:fixed; left:-999px;" alt=""/></noscript>
+<script type="text/javascript">!function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://vk.com/js/api/openapi.js?160",t.onload=function(){VK.Retargeting.Init("VK-RTRG-336534-fIfBx"),VK.Retargeting.Hit()},document.head.appendChild(t)}();</script><noscript><img src="https://vk.com/rtrg?p=VK-RTRG-336534-fIfBx" style="position:fixed; left:-999px;" alt=""/></noscript>
+<!-- /vk code -->
+
+<!-- /БОЛЬШОЙ БЛОК ТЭГОВ!! -->
+</head>
+
+
+<body>
+<!-- Rating@Mail.ru counter -->
+<script type="text/javascript">
+var _tmr = window._tmr || (window._tmr = []);
+_tmr.push({id: "3083556", type: "pageView", start: (new Date()).getTime(), pid: "USER_ID"});
+(function (d, w, id) {
+  if (d.getElementById(id)) return;
+  var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+  ts.src = "https://top-fwz1.mail.ru/js/code.js";
+  var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+  if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+})(document, window, "topmailru-code");
+</script><noscript><div>
+<img src="https://top-fwz1.mail.ru/counter?id=3083556;js=na" style="border:0;position:absolute;left:-9999px;" alt="Top.Mail.Ru" />
+</div></noscript>
+<!-- //Rating@Mail.ru counter -->
+
+<!-- Rating@Mail.ru counter dynamic remarketing appendix -->
+<script type="text/javascript">
+var _tmr = _tmr || [];
+_tmr.push({
+    type: 'itemView',
+    productid: 'VALUE',
+    pagetype: 'VALUE',
+    list: 'VALUE',
+    totalvalue: 'VALUE'
+});
+</script>
+<!-- // Rating@Mail.ru counter dynamic remarketing appendix -->
+
+
+<!-- БОЛЬШОЙ БЛОК ТЭГОВ!! -->
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K6DFQRZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- DCA Programmatic Pixel  -->
+<script type="text/javascript">
+    function dca_http(){return"https:"==location.protocol?"https:":"http:"}function dca_get_ic(){var e=new RegExp("[?&]ic(=([^&#]*)|&|#|$)"),t=e.exec(window.location.href);return t&&t[2]?t[2]:null}function dca_track_event(e,t,a,r,i){var n=dca_http()+"//dsp-eu.exe.bid/pixel?type=img";switch(arguments.length){case 2:a="";break;case 3:n+="&action="+a;break;case 4:n+="&action="+a+"&cnl="+r;break;default:throw new Error("Exebid.DCA Pixel Code: illegal argument count for dca_track_event function")}n+="&action_id="+(new Date).getTime(),n+="&id="+t,n+="&goal="+e;var i=dca_get_ic();return null!==i&&(n+="&ic="+i),(new Image()).src=n,!0}
+    try{var iframe=document.createElement("iframe");iframe.setAttribute("scrolling","no"),iframe.setAttribute("style","border:0px;padding:0px;margin:0px;width:0px;height:0px;display:none;"),iframe.setAttribute("sandbox","allow-scripts"),iframe.setAttribute("src",dca_http()+"//profile-eu.exe.bid/sandbox/"),document.body.appendChild(iframe)}catch(e){}
+    // Exebid post-click events section:
+    setTimeout("dca_track_event('event','156540','after1sec','2');",1000);
+    setTimeout("dca_track_event('event','156540','after5sec','2');",5000);
+    setTimeout("dca_track_event('event','156540','after10sec','2');",10000);
+    setTimeout("dca_track_event('event','156540','after15sec','2');",15000);
+    setTimeout("dca_track_event('event','156540','after30sec','2');",30000);
+    setTimeout("dca_track_event('event','156540','after60sec','2');",60000);
+</script>
+<!-- End DCA Programmatic Pixel -->
+
+<!-- RuTarget -->
+<script>(function(w, d, s, p) { var f = d.getElementsByTagName(s)[0], j = d.createElement(s); j.async = true; j.src = '//cdn.rutarget.ru/static/tag/tag.js'; f.parentNode.insertBefore(j, f); w[p] = {rtgNoSync: false, rtgSyncFrame: true}; })(window, document, 'script', '_rtgParams');</script>
+<!-- /RuTarget -->
+
+<script type="text/javascript">
+var _rutarget = window._rutarget || [];
+_rutarget.push({'event': 'otherPage'});
+</script>
+
+<script type="text/javascript">
+var axel = Math.random() + "";
+var a = axel * 10000000000000;
+document.write('<iframe src="https://8723499.fls.doubleclick.net/activityi;src=8723499;type=invmedia;cat=p9slrghm;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;npa=;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+</script>
+<noscript>
+<iframe src="https://8723499.fls.doubleclick.net/activityi;src=8723499;type=invmedia;cat=p9slrghm;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;npa=;ord=1?" width="1" height="1" frameborder="0" style="display:none"></iframe>
+</noscript>
+
+<img src="https://nativerollru.solution.weborama.fr/fcgi-bin/dispatch.fcgi?a.A=co&a.si=2676&a.cp=632&a.ct=c" style="display: none;">
+
+<img src="https://nspkru.solution.weborama.fr/fcgi-bin/dispatch.fcgi?a.A=co&a.si=5472&a.cp=12&a.ct=d" style="display: none;">
+
+<!-- /БОЛЬШОЙ БЛОК ТЭГОВ!! -->
+
+
+
+    <div id="panel"></div>
+    <div class="site-body b-body">
+	<!-- BODY CONTENT BEGIN -->
+        <!-- header begin -->
+        <header class="b-header">
+	    <section class="b-header__top">
+		<span class="b-header__hamburger"><span></span></span>
+		<a class="b-header__logo" href="/">МИР</a>
+                <div class="b-header__phone">
+                <a href="tel:+78001005464">8 800 100 54 64</a>
+<span>бесплатно, круглосуточно</span>		</div>
+                <div class="b-header__top-right">
+
+
+    				<a href="/press-center/" class="">Пресс-центр</a>
+
+        			<a href="/feedback/" class="">Контакты</a>
+
+        		    <span class="b-header__search js--search-popup-open-link">
+			<svg class="b-desktop"><use xlink:href="/local/templates/main/img/new/icons.svg#search"/></svg>
+			<svg class="b-mobile"><use xlink:href="/local/templates/main/img/new/icons.svg#search_mini"/></svg>
+		    </span>
+                </div>
+	    </section>
+	    <section class="b-header__bottom">
+
+
+
+<div class="b-header__bottom_inner">
+    <ul class="b-menu-main">
+    		    	        <li class="b-menu-main__item sub active">
+	            <a href="/">Частным лицам</a>
+                    <div class="b-menu-main__submenu_outer"><ul class="b-menu-main__submenu"><li class="b-menu-main__subitem"><a href="/about-card/">Карты «Мир»</a></li><li class="b-menu-main__subitem"><a href="/about-card/receiving-and-maintaining/">Банки-партнеры</a></li><li class="b-menu-main__subitem"><a href="/about-card/geo/">Зона покрытия</a></li><li class="b-menu-main__subitem"><a href="/cashback/">Акции и бонусы</a></li><li class="b-menu-main__subitem"><a href="/mirpay/">Оплата смартфоном</a></li><li class="b-menu-main__subitem"><a href="/support/">Вопросы и ответы</a></li></ul></div>                </li>
+                    	            	            	            	            	            	            	    	        <li class="b-menu-main__item sub">
+	            <a href="/business/">Бизнесу</a>
+                    <div class="b-menu-main__submenu_outer"><ul class="b-menu-main__submenu"><li class="b-menu-main__subitem"><a href="/business/">Карты для бизнеса</a><ul><li class="b-menu-main__subitem"><a href="/business/">Карты для бизнеса</a></li><li class="b-menu-main__subitem"><a href="/business/#business-start">Как начать принимать карты «Мир»</a></li></ul></li><li class="b-menu-main__subitem"><a href="/business/#business-start">Как начать принимать карты «Мир»</a></li></ul></div>                </li>
+                    	            	            	            	            	    	        <li class="b-menu-main__item sub">
+	            <a href="/banks/">Банкам</a>
+                    <div class="b-menu-main__submenu_outer"><ul class="b-menu-main__submenu"><li class="b-menu-main__subitem"><a href="#">Карта «Мир» для банков</a></li><li class="b-menu-main__subitem"><a href="/banks/rules/">Правила и тарифы</a></li><li class="b-menu-main__subitem sub"><a href="/banks/knowledge/">Учебный центр</a><ul><li class="b-menu-main__subitem"><a href="/banks/knowledge/">Учебный центр</a></li><li class="b-menu-main__subitem"><a href="/banks/knowledge/seminars/">Тренинги и вебинары</a></li><li class="b-menu-main__subitem"><a href="/banks/knowledge/teachers/">Преподаватели</a></li><li class="b-menu-main__subitem"><a href="/banks/knowledge/faq/">Поддержка</a></li><li class="b-menu-main__subitem"><a href="https://nspkknowledge.ru">Электронные курсы</a></li></ul></li></ul></div>                </li>
+                    	            	            	            	            	            	            	            	            	    	        <li class="b-menu-main__item sub">
+	            <a href="/payment-system/">Платежная система «Мир»</a>
+                    <div class="b-menu-main__submenu_outer"><ul class="b-menu-main__submenu"><li class="b-menu-main__subitem"><a href="/payment-system/about/">О платежной системе «Мир»</a></li><li class="b-menu-main__subitem"><a href="/payment-system/bonus/">Бонусы и привилегии</a></li><li class="b-menu-main__subitem"><a href="/payment-system/history/">Наша история</a></li></ul></div>                </li>
+                    	            	            	            	    	        <li class="b-menu-main__item sub">
+	            <a href="/nspk/">О компании АО НСПК</a>
+                    <div class="b-menu-main__submenu_outer"><ul class="b-menu-main__submenu"><li class="b-menu-main__subitem"><a href="/nspk/">О компании АО «НСПК»</a><ul><li class="b-menu-main__subitem"><a href="/nspk/">О компании АО «НСПК»</a></li><li class="b-menu-main__subitem"><a href="/nspk/steps/">Этапы создания</a></li><li class="b-menu-main__subitem"><a href="/nspk/career/">Карьера и вакансии</a></li></ul></li><li class="b-menu-main__subitem"><a href="/nspk/steps/">Этапы создания</a></li><li class="b-menu-main__subitem"><a href="/nspk/career/">Карьера и вакансии</a><ul></ul></li></ul></div>                </li>
+                    	            	            	            	            	            	                </ul>
+</div>
+        <div class="b-header__bottom_phone b-mobile">
+          <a href="tel:+78001005464">8 800 100 54 64</a>
+<span>бесплатно, круглосуточно</span>        </div>
+    	</section>
+	</header>
+	<!-- header end -->
+
+	<div class="b-header-offset"></div>
+<!-- main slider --> <section class="b-main-slider">
+    <div class="b-main-slider__list js--index-slider">
+                <div class="b-main-slider__item">
+	    <div class="b-main-slider__img">
+	        <img src="/upload/iblock/e7d/e7d3bff7286fd4c32d7053e2362327cb.jpg" alt="">
+	    </div>
+	    <div class="b-main-slider__img_mobile">
+		<img src="/upload/resize_cache/iblock/9c9/1920_926_1/9c9878d1d251f95734a40dde65e31eb7.png" alt="">
+	    </div>
+	    <div class="b-main-slider__text">
+	        <div class="b-main-slider__title"><span style="color: #ffffff;">Каждая поездка на&nbsp;метро</span><br>
+ <span style="color: #ffffff;">
+дешевле на&nbsp;15&nbsp;рублей</span></div>
+	        <div class="b-main-slider__desc"><span style="color: #ffffff;">При оплате проезда бесконтактной</span><br>
+ <span style="color: #ffffff;">
+картой «Мир» на&nbsp;турникете</span><br>
+ <span style="color: #ffffff;">
+стоимость проезда на&nbsp;15&nbsp;руб. дешевле</span><br>
+ <span style="color: #ffffff;">
+до&nbsp;конца&nbsp;2019 года</span></div>
+                                <div class="b-main-slider__bottom">
+                    <a href="https://super.mironline.ru/msk/" class="b-white-btn"><span>Узнать больше</span></a>
+                </div>
+                	    </div>
+        </div>
+                <div class="b-main-slider__item">
+	    <div class="b-main-slider__img">
+	        <img src="/upload/iblock/55e/55e6cbcde1bda37cbc65c999df219da5.jpg" alt="">
+	    </div>
+	    <div class="b-main-slider__img_mobile">
+		<img src="/upload/iblock/2bf/2bf8e1155a635731733546e65245596f.jpg" alt="">
+	    </div>
+	    <div class="b-main-slider__text">
+	        <div class="b-main-slider__title"><span style="color: #ffffff">Мой мир — мои правила!</span></div>
+	        <div class="b-main-slider__desc"><span style="color: #ffffff">Чем больше покупок по карте «Мир» Ак Барс Банка,<br>тем больше денежный приз,<br>который вы можете выиграть</span></div>
+                                <div class="b-main-slider__bottom">
+                    <a href="https://super.mironline.ru/akbars_bank/" class="b-white-btn"><span>Узнать больше</span></a>
+                </div>
+                	    </div>
+        </div>
+                <div class="b-main-slider__item">
+	    <div class="b-main-slider__img">
+	        <img src="/upload/iblock/0d4/0d4472a9dd0a5f68aff58700d4cd6468.jpg" alt="">
+	    </div>
+	    <div class="b-main-slider__img_mobile">
+		<img src="/upload/iblock/19f/19f80245a1bcaf6a95b2ec493bd4b36b.jpg" alt="">
+	    </div>
+	    <div class="b-main-slider__text">
+	        <div class="b-main-slider__title"><span style="color: #ffffff;">Кэшбэк 10%<br>
+по карте «Мир»</span></div>
+	        <div class="b-main-slider__desc"><span style="color: #ffffff;">10% во всех магазинах косметики,<br>бытовой техники и детских товаров</span></div>
+                                <div class="b-main-slider__bottom">
+                    <a href="https://cashback.privetmir.ru/" class="b-white-btn"><span>Узнать больше</span></a>
+                </div>
+                	    </div>
+        </div>
+                <div class="b-main-slider__item">
+	    <div class="b-main-slider__img">
+	        <img src="/upload/iblock/843/843c8b23c25c16522691829b0f839b65.jpg" alt="">
+	    </div>
+	    <div class="b-main-slider__img_mobile">
+		<img src="/upload/iblock/5e4/5e47e212e6d0f936729326eddcd8c397.jpg" alt="">
+	    </div>
+	    <div class="b-main-slider__text">
+	        <div class="b-main-slider__title"><span style="color: #ffffff">Открывайте сезон<br>
+с картой «Мир!»</span></div>
+	        <div class="b-main-slider__desc"><span style="color: #ffffff">Оплачивайте покупки картой «Мир»<br>
+банка «Санкт-Петербург» от 700 рублей<br>
+и участвуйте в розыгрыше призов<br>
+для яркого отдыха!</span></div>
+                                <div class="b-main-slider__bottom">
+                    <a href="https://super.mironline.ru/bspbseason/" class="b-white-btn"><span>Узнать больше</span></a>
+                </div>
+                	    </div>
+        </div>
+            </div>
+    <div class="b-main-slider__ctrl">
+        <div class="b-main-slider__left_arrow b-slider-left-btn"></div>
+	<div class="b-main-slider__counter b-slider-counter green js--index-slider-counter">1/4</div>
+	<div class="b-main-slider__right_arrow b-slider-right-btn"></div>
+    </div>
+</section>
+ <!-- / main slider --> <!-- main chooser begin  --> <section class="b-main-chooser b-two-cols">
+    <div class="b-two-cols__column b-two-cols__padding">
+	<div class="b-title__h2">Выбрать <strong>карту</strong></div>
+	<div class="b-desc">
+	    Помогаем выбрать карту под ваши предпочтения
+	</div>
+	<div class="b-main-chooser__img">
+	    <img src="/local/templates/main/img/new/main_chooser_img1.jpg" alt="">
+	</div>
+	<div class="b-main-chooser__bottom">
+	    <a href="/about-card/#type" class="b-arrow-btn green"></a>
+	</div>
+    </div>
+
+    <div class="b-two-cols__column b-two-cols__padding b-main-chooser__bg_green">
+	<div class="b-title__h2">Выбрать <strong>банк</strong></div>
+	<div class="b-desc">
+	    Помогаем выбрать банк для открытия карты
+	</div>
+	<div class="b-main-chooser__img">
+	    <img src="/local/templates/main/img/new/main_chooser_img2.jpg" alt="">
+	</div>
+	<div class="b-main-chooser__bottom">
+	    <a href="/about-card/receiving-and-maintaining/" class="b-arrow-btn white"></a>
+	</div>
+    </div>
+</section>
+
+<!-- / main chooser begin  -->
+
+
+<section class="b-using-card-slider">
+    <div class="b-using-card-slider__list js--using-card-slider">
+
+    <div class="b-using-card-slider__item">
+	<div class="b-using-card-slider__img">
+	    <img src="/upload/iblock/65a/65a2d2ed10bad48f8af11a18edc313e8.jpg" alt="">
+	</div>
+	<div class="b-using-card-slider__text">
+	    <a href="https://privetmir.ru/promo/produkty-pitaniya/keshbek-3-v-setyakh-ashan-i-atak-pri-pokupke-ot-2-000-rubley/" class="b-using-card-slider__title">
+		АШАН и АТАК	    </a>
+	    <div class="b-using-card-slider__desc">
+		Кэшбэк
+3% за покупки от 2000 рублей	    </div>
+	</div>
+    </div>
+    <div class="b-using-card-slider__item">
+	<div class="b-using-card-slider__img">
+	    <img src="/upload/iblock/88f/88f3328bcbdfffb2c6cdcf7590484944.jpg" alt="">
+	</div>
+	<div class="b-using-card-slider__text">
+	    <a href="https://privetmir.ru/promo/produkty-pitaniya/produkty-i-tovary-s-keshbekom-5/" class="b-using-card-slider__title">
+		ДИКСИ	    </a>
+	    <div class="b-using-card-slider__desc">
+		Кэшбэк за любую покупку 5&#37;	    </div>
+	</div>
+    </div>
+    <div class="b-using-card-slider__item">
+	<div class="b-using-card-slider__img">
+	    <img src="/upload/iblock/2db/2db0c1095e0b3a826c2770b2fbf90beb.jpg" alt="">
+	</div>
+	<div class="b-using-card-slider__text">
+	    <a href="https://privetmir.ru/promo/razvlecheniya/kino-i-serialy-s-keshbekom-2/" class="b-using-card-slider__title">
+		ОККО	    </a>
+	    <div class="b-using-card-slider__desc">
+		Кэшбэк за любую покупку 10&#37;	    </div>
+	</div>
+    </div>
+    <div class="b-using-card-slider__item">
+	<div class="b-using-card-slider__img">
+	    <img src="/upload/iblock/4ba/4ba849c44b652f76499bd5f2af24f620.jpg" alt="">
+	</div>
+	<div class="b-using-card-slider__text">
+	    <a href="https://privetmir.ru/promo/toplivo/bystraya-oplata-topliva-v-seti-azs-gazpromneft-3/" class="b-using-card-slider__title">
+		АЗС GO	    </a>
+	    <div class="b-using-card-slider__desc">
+		Кэшбэк 10&#37; за покупки от 1500 рублей	    </div>
+	</div>
+    </div>
+    <div class="b-using-card-slider__item">
+	<div class="b-using-card-slider__img">
+	    <img src="/upload/iblock/921/921809455445068b8b7a0da76d756eba.jpg" alt="">
+	</div>
+	<div class="b-using-card-slider__text">
+	    <a href="https://privetmir.ru/promo/puteshestviya-i-otdyh/servis-onlayn-bronirovaniya-oteley/" class="b-using-card-slider__title">
+		Ostrovok.ru	    </a>
+	    <div class="b-using-card-slider__desc">
+		Кэшбэк 6&#37; за любую покупку на mir.ostrovok.ru	    </div>
+	</div>
+    </div>
+
+    </div>
+    <div class="b-using-card-slider__ctrl">
+        <div class="b-using-card-slider__left_arrow b-slider-left-btn"></div>
+        <div class="b-slider-counter js--using-card-slider-counter">1/1</div>
+        <div class="b-using-card-slider__right_arrow b-slider-right-btn"></div>
+    </div>
+    <div class="b-using-card-slider__btn_case">
+        <a href="https://privetmir.ru/promo/" target="_blank" class="b-white-btn"><strong>Все предложения</strong></a>
+    </div>
+    <div class="b-title__h2 b-using-card-slider__header">
+	<strong>Специальные</strong> предложения    </div>
+</section>
+
+<!-- main facts begin --> <section class="b-main-facts b-section-container">
+    <h2 class="b-title__h2"><strong>Факты</strong> о картах «Мир»</h2>
+    <ul class="b-main-facts__list">
+	<li class="b-main-facts__item">
+	    <div class="b-main-facts__title">67 500 000 </div>
+	    <div class="b-main-facts__desc">
+		карт «Мир» выпущено с декабря 2015 г.
+	    </div>
+	</li>
+	<li class="b-main-facts__item">
+	    <div class="b-main-facts__title">85 регионов</div>
+	    <div class="b-main-facts__desc">
+	        Российской Федерации обслуживают карты «Мир», включая Республику Крым, вся территория России
+	    </div>
+	</li>
+	<li class="b-main-facts__item">
+	    <div class="b-main-facts__title">7 стран</div>
+	    <div class="b-main-facts__desc">
+	        принимают карты «Мир»: Армения, Абхазия, Южная Осетия, Беларусь, Казахстан, Кыргызстан и Турция
+	    </div>
+	</li>
+    </ul>
+</section>
+<!-- main order begin -->
+<section class="b-main-order b-section-container">
+<h2 class="b-title__h2">
+Заказывайте карту «Мир» в одном из <strong>160 банков</strong>
+</h2>
+    <div class="b-main-order__slider_container">
+	<div class="b-main-order__list js--main-order-slider">
+
+        <div class="b-main-order__item">
+    	    <a href="http://www.banki.ru/products/debitcards/search/moskva/?bonus=&card_type%5B%5D=19&card_type%5B%5D=20&card_type%5B%5D=21&card_type%5B%5D=22&card_type%5B%5D=23&card_type%5B%5D=28&currency=RUB&bank_ids%5B%5D=322#results" target="_blank"><img src="/upload/iblock/5d1/5d1a0d2703bbf16a6522c3bf0cd065dd.png"></a>
+        	    <a href="http://www.banki.ru/products/debitcards/search/moskva/?bonus=&card_type%5B%5D=19&card_type%5B%5D=20&card_type%5B%5D=21&card_type%5B%5D=22&card_type%5B%5D=23&card_type%5B%5D=28&currency=RUB&bank_ids%5B%5D=327#results" target="_blank"><img src="/upload/iblock/3cd/3cd86ba3da50f08b49b783f3d8e255b8.png"></a>
+        </div>
+            <div class="b-main-order__item">
+    	    <a href="http://www.banki.ru/products/debitcards/search/moskva/?bonus=&card_type%5B%5D=19&card_type%5B%5D=20&card_type%5B%5D=21&card_type%5B%5D=22&card_type%5B%5D=23&card_type%5B%5D=28&currency=RUB&bank_ids%5B%5D=13011#results" target="_blank"><img src="/upload/iblock/13c/13c0d50a96b20110565bfe41112db892.jpg"></a>
+        	    <a href="http://www.banki.ru/products/debitcards/search/moskva/?bonus=&card_type%5B%5D=19&card_type%5B%5D=20&card_type%5B%5D=21&card_type%5B%5D=22&card_type%5B%5D=23&card_type%5B%5D=28&currency=RUB&bank_ids%5B%5D=194275#results" target="_blank"><img src="/upload/iblock/527/5274b5febb853c40d4354c0c320f25f7.jpg"></a>
+        </div>
+            <div class="b-main-order__item">
+    	    <a href="http://www.banki.ru/products/debitcards/search/moskva/?bonus=&card_type%5B%5D=19&card_type%5B%5D=20&card_type%5B%5D=21&card_type%5B%5D=22&card_type%5B%5D=23&card_type%5B%5D=28&currency=RUB&bank_ids%5B%5D=195706#results" target="_blank"><img src="/upload/iblock/802/80279d1b820f5ad603131ea45e805fbc.png"></a>
+        	    <a href="http://www.banki.ru/products/debitcards/search/moskva/?bonus=&card_type%5B%5D=19&card_type%5B%5D=20&card_type%5B%5D=21&card_type%5B%5D=22&card_type%5B%5D=23&card_type%5B%5D=28&currency=RUB&bank_ids%5B%5D=2764#results" target="_blank"><img src="/upload/iblock/67f/67fdedd47ffe23045b048a45346393f7.png"></a>
+        </div>
+            <div class="b-main-order__item">
+    	    <a href="http://www.banki.ru/products/debitcards/search/moskva/?bonus=&card_type%5B%5D=19&card_type%5B%5D=20&card_type%5B%5D=21&card_type%5B%5D=22&card_type%5B%5D=23&card_type%5B%5D=28&currency=RUB&bank_ids%5B%5D=4725#results" target="_blank"><img src="/upload/iblock/aac/aac7ece434d72c7f3eb9c419622154a6.png"></a>
+        	    <a href="" target="_blank"><img src="/upload/iblock/111/111871ef0838b389b44706e195e48f48.png"></a>
+        </div>
+    
+	</div>
+	<div class="b-main-order__bottom">
+	    <div class="b-main-order__btn_case">
+		<a href="/about-card/receiving-and-maintaining/" class="b-simple-btn green b-i-flex-desktop"><span>Выбрать карту в любимом банке</span></a>
+		<a href="/about-card/receiving-and-maintaining/" class="b-simple-btn green b-i-flex-tab-mobile"><span>Выбрать карту</span></a>
+	    </div>
+	    <div class="b-main-order__ctrl">
+		<div class="b-main-order__left_arrow b-slider-left-btn-green"></div>
+		<div class="b-slider-counter black js--main-order-counter">1/1</div>
+		<div class="b-main-order__right_arrow b-slider-right-btn-green"></div>
+	    </div>
+	</div>
+    </div>
+</section>
+
+
+<!-- main mirpay --> <section class="b-main-mirpay b-two-cols">
+    <div class="b-main-mirpay__text b-two-cols__column b-two-cols__padding">
+	<h2 class="b-title__h2">Оплачивайте покупки смартфоном <br>с помощью <strong>Mir Pay</strong></h2>
+	<div class="b-main-mirpay__desc b-desc">
+	    Mir Pay — это мобильное приложение от ПС «Мир»
+	    для бесконтактной оплаты при помощи смартфона.
+	    Платить Mir Pay можно во всех терминалах,
+	    где принимаются бесконтактные карты «Мир».
+	</div>
+	<div class="b-main-mirpay__note">
+	    доступно владельцам устройств на базе ОС Android (от версии 6.0 и выше) и поддерживающих технологию NFC
+	</div>
+	<div class="b-main-mirpay__btn_case">
+	    <a href="/mirpay/" class="b-simple-btn white blue-text"><strong>Начать пользоваться</strong></a>
+	</div>
+    </div>
+    <div class="b-main-mirpay__media b-two-cols__column b-two-cols__padding">
+	<div class="b-main-phone">
+	    <div class="b-main-phone__shadow"></div>
+	    <div class="b-main-phone__phone"></div>
+	    <div class="b-main-phone__card"></div>
+	</div>
+    </div>
+</section>
+ <!-- / main mirpay --> <!-- main order begin --> 
+
+
+<section class="b-main-news b-section-container">
+<h2 class="b-title__h2">
+    <strong>Новости</strong></h2>
+    <div class="b-main-news__slider_container">
+	<div class="b-main-news__list js--main-news-slider">
+
+    <div class="b-main-news__item">
+	<div class="b-main-news__type">Новости проекта</div>
+	<div class="b-main-news__title"><a href="/press-center/project-news/26-11-2019-prezentatsiya-pervogo-evropeyskogo-ekvayrera-ps-mir-na-rossiysko-brit/">Презентация первого европейского эквайрера ПС «Мир» на Российско-британском бизнес форуме </a></div>
+	<div class="b-main-news__date">26 ноября 2019, 12:14</div>
+	<div class="b-main-news__tags">
+            <a href="/press-center/tag-Владимир Комлев/">#Владимир Комлев</a> <a href="/press-center/tag-Великобритания/">#Великобритания</a> <a href="/press-center/tag-PayXpert/">#PayXpert</a> 	</div>
+    </div>
+    <div class="b-main-news__item">
+	<div class="b-main-news__type">Новости проекта</div>
+	<div class="b-main-news__title"><a href="/press-center/project-news/20-11-2019-glava-nspk-protsess-platezha-budet-stanovitsya-vse-menee-zametnym-dlya/">Глава НСПК: «Процесс платежа будет становиться все менее заметным для клиента»</a></div>
+	<div class="b-main-news__date">20 ноября 2019, 14:15</div>
+	<div class="b-main-news__tags">
+            <a href="/press-center/tag-Владимир Комлев/">#Владимир Комлев</a> <a href="/press-center/tag-Конференции/">#Конференции</a> 	</div>
+    </div>
+    <div class="b-main-news__item">
+	<div class="b-main-news__type">Новости проекта</div>
+	<div class="b-main-news__title"><a href="/press-center/project-news/18-11-2019-vladimir-komlev-22-rynka-bankovskikh-kart-v-rossii-prikhoditsya-na-mi/">Владимир Комлев: 22% рынка банковских карт в России приходится на «Мир»</a></div>
+	<div class="b-main-news__date">18 ноября 2019, 11:24</div>
+	<div class="b-main-news__tags">
+            <a href="/press-center/tag-Конференции/">#Конференции</a> <a href="/press-center/tag-Владимир Комлев/">#Владимир Комлев</a> <a href="/press-center/tag-статистика/">#статистика</a> 	</div>
+    </div>
+    <div class="b-main-news__item">
+	<div class="b-main-news__type">Новости проекта</div>
+	<div class="b-main-news__title"><a href="/press-center/project-news/11-11-2019-platezhnaya-sistema-mir-i-bank-sankt-peterburg-otkryvayut-sezon-podar/">Платежная система «Мир» и Банк «Санкт-Петербург» открывают сезон подарков для держателей карт!</a></div>
+	<div class="b-main-news__date">11 ноября 2019, 12:45</div>
+	<div class="b-main-news__tags">
+            <a href="/press-center/tag-Акции/">#Акции</a> <a href="/press-center/tag-Банк Санкт-Петербург/">#Банк Санкт-Петербург</a> 	</div>
+    </div>
+
+	</div>
+	<div class="b-main-news__bottom">
+	    <div class="b-main-news__btn_case">
+		<a href="/press-center/" class="b-simple-btn green"><span>Все новости</span></a>
+	    </div>
+	    <div class="b-main-news__ctrl">
+		<div class="b-main-news__left_arrow b-slider-left-btn-green"></div>
+		<div class="b-slider-counter black js--main-news-counter">1/4</div>
+		<div class="b-main-news__right_arrow b-slider-right-btn-green"></div>
+	    </div>
+	</div>
+    </div>
+
+</section>
+
+
+
+
+
+
+    <!-- footer begin -->
+    <footer class="b-footer">
+        <div class="footer-personal-data" data-modal="true">
+            <div class="footer-personal-data__wrapper">
+Настоящий Web-ресурс mironline.ru использует файлы «cookie», в том числе собирает сведения о Посетителях Web-ресурса в целях улучшения качества работы и удобства использования Web-ресурса, персонализации сервисов и предложений для Посетителей Web-ресурса. Обработка сведений о Посетителях Web-ресурса осуществляется в соответствии с <a target="_blank" href="https://www.nspk.ru/about/processing-of-personal-data/">Политикой обработки и защиты персональных данных в АО «НСПК»</a>. При использовании данного Web-ресурса Вы подтверждаете свое согласие на использование файлов «cookie». Если Вы не хотите использовать файлы «cookie», измените настройки браузера.
+            </div>
+            <div class="footer-personal-data__close js-close-personal"></div>
+        </div>
+
+	<div class="b-footer__inner">
+    
+
+<section class="b-footer__menu">
+    		                    <div class="b-footer-menu__col">
+		    <div class="b-footer-menu__head sub"><span>Частным лицам</span></div>
+                    <ul class="b-footer-menu__list">
+<li class="b-footer-menu__item">
+<a href="/about-card/">Карты «Мир»</a>
+</li>
+<li class="b-footer-menu__item">
+<a href="/about-card/receiving-and-maintaining/">Банки-партнеры</a>
+</li>
+<li class="b-footer-menu__item">
+<a href="/about-card/geo/">Зона покрытия</a>
+</li>
+<li class="b-footer-menu__item">
+<a href="/cashback/">Акции и бонусы</a>
+</li>
+<li class="b-footer-menu__item">
+<a href="/mirpay/">Оплата смартфоном</a>
+</li>
+<li class="b-footer-menu__item">
+<a href="/support/">Вопросы и ответы</a>
+</li>
+</ul>
+                </div>
+                    	            	            	            	            	            	            	                    <div class="b-footer-menu__col">
+		    <div class="b-footer-menu__head sub"><span>Бизнесу</span></div>
+                    <ul class="b-footer-menu__list">
+<li class="b-footer-menu__item">
+<a href="/business/">Карты для бизнеса</a>
+<ul class="b-footer-menu__submenu">
+<li class="b-footer-menu__subitem">
+<a href="/business/">Карты для бизнеса</a>
+</li>
+<li class="b-footer-menu__subitem">
+<a href="/business/#business-start">Как начать принимать карты «Мир»</a>
+</li>
+</ul>
+</li>
+<li class="b-footer-menu__item">
+<a href="/business/#business-start">Как начать принимать карты «Мир»</a>
+</li>
+</ul>
+                </div>
+                    	            	            	            	            	                    <div class="b-footer-menu__col">
+		    <div class="b-footer-menu__head sub"><span>Банкам</span></div>
+                    <ul class="b-footer-menu__list">
+<li class="b-footer-menu__item">
+<a href="#">Карта «Мир» для банков</a>
+</li>
+<li class="b-footer-menu__item">
+<a href="/banks/rules/">Правила и тарифы</a>
+</li>
+<li class="b-footer-menu__item sub">
+<a href="/banks/knowledge/">Учебный центр</a>
+<ul class="b-footer-menu__submenu">
+<li class="b-footer-menu__subitem">
+<a href="/banks/knowledge/">Учебный центр</a>
+</li>
+<li class="b-footer-menu__subitem">
+<a href="/banks/knowledge/seminars/">Тренинги и вебинары</a>
+</li>
+<li class="b-footer-menu__subitem">
+<a href="/banks/knowledge/teachers/">Преподаватели</a>
+</li>
+<li class="b-footer-menu__subitem">
+<a href="/banks/knowledge/faq/">Поддержка</a>
+</li>
+<li class="b-footer-menu__subitem">
+<a href="https://nspkknowledge.ru">Электронные курсы</a>
+</li>
+</ul>
+</li>
+</ul>
+                </div>
+                    	            	            	            	            	            	            	            	            	                    <div class="b-footer-menu__col">
+		    <div class="b-footer-menu__head sub"><span>О компании АО НСПК</span></div>
+                    <ul class="b-footer-menu__list">
+<li class="b-footer-menu__item">
+<a href="/nspk/">О компании АО «НСПК»</a>
+<ul class="b-footer-menu__submenu">
+<li class="b-footer-menu__subitem">
+<a href="/nspk/">О компании АО «НСПК»</a>
+</li>
+<li class="b-footer-menu__subitem">
+<a href="/nspk/steps/">Этапы создания</a>
+</li>
+<li class="b-footer-menu__subitem">
+<a href="/nspk/career/">Карьера и вакансии</a>
+</li>
+</ul>
+</li>
+<li class="b-footer-menu__item">
+<a href="/nspk/steps/">Этапы создания</a>
+</li>
+<li class="b-footer-menu__item">
+<a href="/nspk/career/">Карьера и вакансии</a>
+<ul class="b-footer-menu__submenu">
+</ul>
+</li>
+</ul>
+                </div>
+                    	            	            	            	            	            	            </section>
+
+	<section class="b-footer__info">
+	    <div class="b-footer__phone">
+                <strong>8 800 100 54 64</strong> бесплатно, круглосуточно
+поддержка держателей карт «Мир»
+    	    </div>
+	    <div class="b-footer__address">
+                Большая Татарская, 11А, Москва, 115184<br>
+<a href="/feedback/">Написать нам</a>
+	    </div>
+	    <div class="b-footer__social b-social-networks">
+                <a href="https://www.facebook.com/mirpaycard" class="b-social-networks__item" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+<a href="https://vk.com/mirpaycard" class="b-social-networks__item" target="_blank"><i class="fa fa-vk" aria-hidden="true"></i></a>
+<a href="https://ok.ru/group/mirpaycard" class="b-social-networks__item" target="_blank"><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a>
+<a href="https://twitter.com/mirpaycard" class="b-social-networks__item" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+<a href="https://www.youtube.com/channel/UCPiW2CtffKHzXQIYGib1t4g" class="b-social-networks__item" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+<a href="https://www.instagram.com/mirpaycard/" class="b-social-networks__item" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+
+<span class="b-social-messenger">
+    <a href="https://telegram.me/mirpaycard_bot" class="b-social-networks__item b-s-telegram" target="_blank">
+        <svg class="b-desktop"><use xlink:href="/local/templates/main/img/new/icons.svg#messenger_telegram"/></svg>
+    </a>
+    <a href="https://wa.me/79166901052" class="b-social-networks__item b-s-whatsapp" target="_blank">
+        <svg class="b-desktop"><use xlink:href="/local/templates/main/img/new/icons.svg#messenger_whatsapp"/></svg>
+    </a>
+    <a href="viber://chat?number=79166901052" class="b-social-networks__item b-s-viber" target="_blank">
+        <svg class="b-desktop"><use xlink:href="/local/templates/main/img/new/icons.svg#messenger_viber"/></svg>
+    </a>
+</span>
+	    </div>
+	    <div class="b-footer__copyright">
+                &copy; АО «НСПК», 2018 — 2019
+	    </div>
+	</section>
+    </div>
+</footer>
+<!-- footer end -->
+<!-- BODY CONTENT END -->
+</div>
+
+<!-- modal windows begin -->
+<div class="menu-back" id="menu-back-id"></div>
+
+
+<div class="site-popup-menu js--site-popup-menu" data-menu-id="tablet-fiz-menu">
+    <section class="site-popup-menu-content">
+
+    				<a href="/" class="s-p-m-item">Физ. лицам</a>
+
+        			<a href="/business/" class="s-p-m-item">Бизнесу</a>
+
+        			<a href="/banks/" class="s-p-m-item">Банкам</a>
+
+        
+
+    				<a href="/payment-system/" class="s-p-m-item">Платежная система «Мир»</a>
+
+        			<a href="/nspk/" class="s-p-m-item">О компании АО «НСПК»</a>
+
+        
+
+    				<a href="/press-center/" class="s-p-m-item">Пресс-центр</a>
+
+        			<a href="/feedback/" class="s-p-m-item">Контакты</a>
+
+            </section>
+</div>
+
+
+<div class="site-popup-menu js--site-popup-menu" data-menu-id="search-window">
+    <section class="site-popup-menu-content">
+
+        <div class="form-container site-form">
+            <form>
+                <div class="fieldset">
+                    <input type="text" name="q" value="" placeholder="искать..." class="form-field">
+                    <button type="submit" class="btn-round form-field search-icon"><i class="fa fa-search" aria-hidden="true"></i></button>
+                </div>
+            </form>
+        </div>
+
+    </section>
+</div>
+
+
+<div class="site-search-window js--site-popup-menu" data-menu-id="search-window-new">
+    <section class="site-popup-menu-content">
+
+        <div class="form-container site-form">
+            <form>
+                <div class="fieldset">
+                    <input type="text" name="q" value="" placeholder="искать..." class="form-field">
+                    <button type="submit" class="btn-round form-field search-icon"><i class="fa fa-search" aria-hidden="true"></i></button>
+                </div>
+            </form>
+        </div>
+
+    </section>
+</div>
+
+<div class="search-animation sa-circle" id="search-animation-circle-id"></div>
+<div class="search-frame-container" id="search-frame-container-id">
+    <header class="search">
+        <a href="/" class="logo"><img src="/local/templates/main/img/h-logo.svg" onerror="this.onerror=null; this.src='/local/templates/main/img/h-logo.png'" alt=""></a>
+        <a href="javascript:void(0)" class="search-popup-close-link js--search-popup-close-link"><img src="/local/templates/main/img/icons/cross-green.svg" onerror="this.onerror=null; this.src='/local/templates/main/img/icons/cross-green.png'" alt=""></a>
+    </header>
+    <section class="frame-container">
+                
+
+<!-- search-form begin -->
+<form id="site-search-form" action="/search/index.php">
+    <div class="site-search-form">
+        <div class="site-search-form-field">
+        	<input type="text" name="q" value="" size="15" maxlength="50" placeholder="Ввести запрос" />        </div>
+        <div class="site-search-form-btn">
+            <button type="submit" name="s" class="site-search-btn"><span>Искать</span></button>
+        </div>
+    </div>
+</form>
+<!-- search-form end -->        <div class="site-search-results" id="site-search-results"></div>
+    </section>
+</div>
+
+<!-- modal video -->
+<section class="b-modal-video">
+  <div class="b-modal-video__close">
+    <svg><use xlink:href="/local/templates/main/img/new/icons.svg#modal_close"/></svg>
+  </div>
+  <div class="b-modal-video__container">
+    <iframe allow="encrypted-media" allowfullscreen="" src=""></iframe>
+  </div>
+</section>
+
+
+<div class="white-animation wa-circle" id="white-animation-circle-id"></div>
+
+<div class="white-animation-container js--white-animation-container thank-you-window" id="thank-you-window-id">
+    <header class="search">
+        <a href="/" class="logo"><img src="/local/templates/main/img/h-logo.svg" onerror="this.onerror=null; this.src='/local/templates/main/img/h-logo.png'" alt=""></a>
+        <a href="javascript:void(0)" class="white-popup-close-link js--white-popup-close-link"><img src="/local/templates/main/img/icons/cross-green.svg" onerror="this.onerror=null; this.src='/local/templates/main/img/icons/cross-green.png'" alt=""></a>
+    </header>
+    <section class="frame-container">
+        <div class="center-page site-body">
+          <div class="js-message">
+            <p>Спасибо за обращение! <br>Мы свяжемся с вами в течение 14 дней.</p>          </div>
+          <a href="#" class="site-btn standard green bigger  js--white-popup-close-link"><span>Хорошо</span></a>
+        </div>
+    </section>
+</div>
+
+
+<div class="site-popup-menu js--site-popup-menu" data-menu-id="tablet-main-menu">
+    <section class="site-popup-menu-content">
+
+
+    
+                <a href="/" class="s-p-m-item active">Частным лицам</a>
+            <div class="s-p-m-item-inner">
+    
+    
+
+    
+    
+        
+                            <a href="/about-card/">Карты «Мир»</a>
+            
+        
+    
+    
+
+    
+    
+        
+                            <a href="/about-card/receiving-and-maintaining/">Банки-партнеры</a>
+            
+        
+    
+    
+
+    
+    
+        
+                            <a href="/about-card/geo/">Зона покрытия</a>
+            
+        
+    
+    
+
+    
+    
+        
+                            <a href="/cashback/">Акции и бонусы</a>
+            
+        
+    
+    
+
+    
+    
+        
+                            <a href="/mirpay/">Оплата смартфоном</a>
+            
+        
+    
+    
+
+    
+    
+        
+                            <a href="/support/">Вопросы и ответы</a>
+            
+        
+    
+    
+
+            </div>    
+                <a href="/business/" class="s-p-m-item">Бизнесу</a>
+            <div class="s-p-m-item-inner">
+    
+    
+
+    
+    
+        
+                            <a href="/business/">Карты для бизнеса</a>
+            
+        
+    
+    
+
+    
+    
+        
+                            <a href="/business/#business-start">Как начать принимать карты «Мир»</a>
+            
+        
+    
+    
+
+            </div>    
+                <a href="/banks/" class="s-p-m-item">Банкам</a>
+            <div class="s-p-m-item-inner">
+    
+    
+
+    
+    
+        
+                            <a href="#">Карта «Мир» для банков</a>
+            
+        
+    
+    
+
+    
+    
+        
+                            <a href="/banks/rules/">Правила и тарифы</a>
+            
+        
+    
+    
+
+    
+    
+        
+                            <a href="/banks/knowledge/">Учебный центр</a>
+            
+        
+    
+    
+
+            </div>    
+                <a href="/payment-system/" class="s-p-m-item">Платежная система «Мир»</a>
+            <div class="s-p-m-item-inner">
+    
+    
+
+    
+    
+        
+                            <a href="/payment-system/about/">О платежной системе «Мир»</a>
+            
+        
+    
+    
+
+    
+    
+        
+                            <a href="/payment-system/bonus/">Бонусы и привилегии</a>
+            
+        
+    
+    
+
+    
+    
+        
+                            <a href="/payment-system/history/">Наша история</a>
+            
+        
+    
+    
+
+            </div>    
+                <a href="/nspk/" class="s-p-m-item">О компании АО НСПК</a>
+            <div class="s-p-m-item-inner">
+    
+    
+
+    
+    
+        
+                            <a href="/nspk/">О компании АО «НСПК»</a>
+            
+        
+    
+    
+
+    
+    
+        
+                            <a href="/nspk/steps/">Этапы создания</a>
+            
+        
+    
+    
+
+    
+    
+        
+                            <a href="/nspk/career/">Карьера и вакансии</a>
+            
+        
+    
+    
+
+    </div>
+    </section>
+</div>
+<div class="video-player-popup">
+	<div class="video-player-popup__back"></div>
+	<div class="video-player-popup__container">
+		<span class="video-player-popup__close"></span>
+		<iframe allow="encrypted-media" allowfullscreen></iframe>
+	</div>
+</div>
+<!-- modal windows end -->
+</body>
+</html>
+

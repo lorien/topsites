@@ -1,0 +1,3424 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description"
+    content="深圳新闻网是立足深圳、辐射全国的综合性区域门户网站,为用户提供新闻、视频、博客、房产、汽车、财经、健康、美食、旅游、教育、时尚、娱乐、交友等20多个频道,并拥有深圳最大的门户互动社区深圳论坛,以及深圳报业集团旗下《深圳特区报》、《深圳商报》、《深圳晚报》、《晶报》、《香港商报》、《Shenzhen Daily》等系列报刊杂志电子版" />
+  <meta name="keywords"
+    content="深圳,新闻门户,深圳新闻,深圳社区,深圳论坛,我说深圳事,王荣,许勤,深圳博客,中国新闻,国际新闻,财经,深圳资讯,报料,相册,图片,视听深圳,罗湖家园网,福田,南山,盐田,龙岗,坪山,前海,广州,惠州,珠海,佛山" />
+  <meta name="filetype" content="0">
+  <meta name="publishedtype" content="1">
+  <meta name="pagetype" content="2">
+  
+          <meta name="catalogs" content="10,989" />
+
+  <meta name="author" content="深圳新闻网" />
+  <title>深圳第一新闻门户网站---深圳新闻网</title>
+  <link href="http://www.sznews.com/2016gb/css/swiper.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="http://www.sznews.com/resource/templateRes/201909/24/1056/1056/style20180611.css">
+  <link href="http://www.sznews.com/resource/templateRes/201909/24/1056/1056/da-2017192200.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="http://www.sznews.com/js/jquery/jquery-V30.min.js"></script>
+  <script type="text/javascript" src="http://www.sznews.com/resource/templateRes/201909/24/1056/1056/common181128.js"></script>
+  <script type="text/javascript" src="http://www.sznews.com/2016gb/js/myfocus-2.0.1.min.js"></script>
+  <script type="text/javascript" src="http://www.sznews.com/test/test/js/zhugeIO.js"></script>
+  <!--娱乐图js-->
+  <script language="javascript" type="text/javascript" src="http://www.sznews.com/resource/templateRes/201909/24/1056/1056/ss.js"></script>
+  <!--娱乐图js-->
+  <!--首页手机跳转begin-->
+  <script type="text/javascript" src="http://www.sznews.com/m/js/mobile_index.js"></script>
+  <!--首页手机跳转end-->
+  <script type="text/javascript" src="http://www.sznews.com/js/checkUpdate.js"></script>
+
+  <!--首页广告系统js化-->
+  <script type="text/javascript" src="http://www.sznews.com/resource/templateRes/201909/24/1056/1056/sznewsadv2016.js"></script>
+  <!--弹出层-->
+  <link rel="stylesheet" href="http://www.sznews.com/2016mi/js/layer/skin/layer.css" id="layui_layer_skinlayercss">
+  <script type="text/javascript" src="http://www.sznews.com/2016mi/js/layer/layer.js"></script>
+  <!--首页热图-->
+  <script>
+    var c = 0;
+
+    function rnd(start, end) {
+      return Math.floor(Math.random() * (end - start + 1) + start);
+    }
+
+    function change() {
+      console.log($(".tmpl").length);
+      var n = rnd(0, 4);
+      while (c == n) {
+        n = rnd(0, 4);
+      }
+      c = n;
+
+      $(".tmpl").each(function (index, el) {
+        console.log(n);
+        if (index == n) {
+          $("div .photo5").html($(this).html());
+        }
+      });
+
+    }
+  </script>
+  <!--首页热图end-->
+  <!--滚图样式-->
+  <link href="http://www.sznews.com/resource/templateRes/201909/24/1056/1056/mF_taobao2010.css" rel="stylesheet" type="text/css">
+  <!--时间天气样式-->
+
+  <style>
+    .time {
+      max-height: 45px;
+      overflow: hidden;
+      max-width: 420px;
+    }
+
+    .time span {
+      margin-right: 7px;
+      line-height: 34px;
+    }
+
+    .time span img {
+      vertical-align: -4px;
+    }
+
+    /*时政快报*/
+    .polity-news {
+      margin-bottom: 15px;
+      height: 30px;
+      line-height: 30px;
+      background: #f5f5f5;
+      overflow: hidden;
+    }
+
+    .polity-news-bti {
+      color: #fff;
+      background: #8bbd00 url(http://www.sznews.com/resource/templateRes/201909/24/1056/1056/szkb-icon.png) no-repeat;
+    }
+
+    #alistId {
+      height: 30px;
+      line-height: 30px;
+    }
+
+    /*单头条*/
+    .toptop-news {
+      width: 1190px;
+      margin: 0 auto 30px;
+      overflow: hidden;
+      zoom: 1;
+      background: #f5f5f5;
+      text-align: center;
+      padding: 10px 5px;
+    }
+
+    .toptop-news-l {
+      width: 1170px;
+      font-size: 18px;
+    }
+
+    .toptop-news-l h3 {
+      display: block;
+      font-size: 32px;
+      font-weight: bold;
+      font-family: "Microsoft Yahei";
+      margin-bottom: 5px;
+      color: #000;
+      text-align: center;
+    }
+
+    .toptop-news-l h3 a {}
+
+    .toptop-news-l h3 a:hover {
+      color: #CD0200;
+    }
+
+    .toptop-news-more {
+      float: right;
+      width: 20px;
+      line-height: 14px;
+    }
+
+    .huaw0523 b {
+      font-size: 12px;
+    }
+
+    .huaw0523 a {
+      font-size: 12px;
+    }
+
+    .r-icon-list li a:hover img {
+      -webkit-filter: hue-rotate(15deg);
+      filter: hue-rotate(15deg);
+    }
+
+    /*首页飘红背景*/
+    body {
+      /*background: url(http://www.sznews.com/resource/templateRes/201909/24/1056/1056/bg922.jpg) no-repeat top center;*/
+    }
+
+    .topNav {
+      margin-top: 0;
+      padding-top: 10px;
+    }
+
+    .adv-top {
+      margin: 0px auto;
+      padding: 14px 0px;
+    }
+
+
+
+
+    /*一周排行/24小时排行 图片*/
+    .top-photo {
+      width: 305px;
+      height: 150px;
+      position: relative;
+      margin-bottom: 13px;
+    }
+
+    .top-photo a {
+      display: block;
+    }
+
+    .top-photo img {
+      width: 305px;
+      height: 150px;
+    }
+
+    .top-photo .tx {
+      position: absolute;
+      width: 90%;
+      padding: 0 5%;
+      height: 30px;
+      line-height: 30px;
+      color: #fff;
+      bottom: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.5);
+      filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#7F000000, endcolorstr=#7F000000);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 14px;
+    }
+
+    /*315*/
+    .list-315 li {
+      background: url(http://www.sznews.com/2016gb/css/images/point1.png) no-repeat left center;
+      text-indent: 12px;
+    }
+
+    .list-315 li a {
+      font-size: 16px;
+    }
+
+    /*房产服务*/
+    .fcfw-list {
+      overflow: hidden;
+      zoom: 1;
+      margin-bottom: 3px;
+    }
+
+    .fcfw-list li {
+      float: left;
+      width: 30%;
+      margin: 0 1.5% 6px;
+    }
+
+    .fcfw-list li a.fcfw-list-tit {
+      height: 25px;
+      line-height: 25px;
+      overflow: hidden;
+      display: block;
+      text-align: center;
+    }
+
+    .fcfw-list li a.fcfw-list-img {
+      box-sizing: border-box;
+      display: block;
+      width: 70px;
+      margin: 0 auto;
+    }
+
+    .fcfw-list li a img {
+      width: 70px;
+      height: 65px;
+      border: 1px solid #eee;
+    }
+
+    /*按钮*/
+    .fcfw-btn {
+      overflow: hidden;
+      zoom: 1;
+      margin-bottom: 10px;
+    }
+
+    /*银行优惠*/
+    .jrfw-img-list {}
+
+    .jrfw-img-list {
+      overflow: hidden;
+      zoom: 1;
+      margin-bottom: 3px;
+    }
+
+    .jrfw-img-list li {
+      float: left;
+      width: 47%;
+      margin: 0 1.5% 12px;
+      box-sizing: border-box;
+      display: block;
+      padding: 0 5%;
+      border: 1px solid #eee;
+    }
+
+    .jrfw-img-list li a img {
+      width: 100%;
+    }
+
+    .kf-img-list li a.kf-img-img {
+      width: 95%;
+    }
+
+    .kf-img-list li a img {
+      width: 75px;
+      height: 68px;
+    }
+
+    .list-lineheight li {
+      margin-bottom: 10px;
+    }
+
+    .tiket-list li {
+      margin-bottom: 10px;
+    }
+
+    /*房产滚图*/
+    #myFocusTo2 {
+      width: 660px;
+      height: 371px;
+    }
+
+    #myFocusTo2 .pic li {
+      display: none
+    }
+
+    #myFocusTo2 .pic li:first-child {
+      display: block;
+    }
+
+    /*.header {
+    height: 45px;
+    background: #e9e9ea;
+    min-width: 1000px;
+    border-bottom: 1px solid #e0e0e0;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    margin-left: 0;
+    margin-right: 0;
+    top: 0;
+    left: 0;
+}
+
+body {
+    width: 1100px;
+    margin: 0 auto;
+}*/
+
+    /*对联广告置前*/
+    #_AdSame_ld1971,
+    #_AdSame_rd1971 {
+      z-index: 10000000;
+    }
+
+    /*民生版块*/
+    .ms-list-mod {
+      width: 305px;
+      margin: 0 auto;
+    }
+
+    .ms-list-item {
+      background: #f7f9f2;
+      position: relative;
+      margin-bottom: 12px;
+    }
+
+    .ms-list-item dt {
+      font-size: 16px;
+      text-align: center;
+      height: 38px;
+      line-height: 38px;
+    }
+
+    .ms-list-item dt a {
+      height: 38px;
+      line-height: 38px;
+      display: block;
+      font-size: 16px;
+    }
+
+    .ms-list-item dt a img {
+      margin-right: 5px;
+    }
+
+    .ms-list-item dd {
+      overflow: hidden;
+      zoom: 1;
+      background: url(http://www.sznews.com/resource/templateRes/201909/24/1056/1056/ms-icon-l-add.png) no-repeat 285px 15px;
+      display: block;
+      font-style: normal;
+    }
+
+    .ms-list-show a {
+      display: inline-block;
+      border: 1px solid #ecede8;
+      padding: 5px 1px;
+      text-align: center;
+      width: 81px;
+      background: #fff;
+      margin: 5px 5px 10px;
+      float: left;
+    }
+
+    .ms-list-hidden {
+      background: #f7f9f2;
+      position: absolute;
+      z-index: 1000;
+      top: 76px;
+      width: 100%;
+      height: auto;
+      display: none;
+    }
+
+    .ms-list-hidden a {
+      display: inline-block;
+      border: 1px solid #ecede8;
+      padding: 5px 1px;
+      text-align: center;
+      width: 81px;
+      background: #fff;
+      margin: 5px;
+    }
+
+    < !--读创快报-->.dcnews {
+      color: #fff;
+      background: #8bbd00 url(http://www.sznews.com/resource/templateRes/201909/24/1056/1056/szkb-icon.png) no-repeat;
+    }
+
+    #dckbgun {
+      height: 30px;
+      line-height: 30px;
+      float: left;
+      width: 1110px;
+      background: #f2f2f2;
+    }
+
+    #dckbgun ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: inline-block;
+      *display: inline;
+      zoom: 1;
+    }
+
+    #dckbgun ul li {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: inline-block;
+      *display: inline;
+      zoom: 1;
+      text-indent: 15px;
+    }
+
+    < !--读创快报-->.icon-list a {
+      margin: 0 13px 15px !important;
+      display: inline-block;
+    }
+
+    .cell {
+      width: 390px;
+      height: 233px;
+      margin-bottom: 35px;
+      float: left;
+    }
+
+    .cell .pic {
+      width: 390px;
+    }
+
+    .cell .txt li {
+      width: 390px;
+    }
+
+    .col-tt {
+      font-size: 24px;
+      line-height: 67px;
+      margin-bottom: 16px;
+    }
+
+    .r-tt {
+      font-size: 16px;
+      line-height: 43px;
+    }
+
+    .cell-mid {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    .cell-r li {
+      font-size: 14px;
+    }
+  </style>
+  <!--时间天气样式-->
+
+  <!--百度统计代码-->
+  <script>
+    var _hmt = _hmt || [];
+    (function () {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?a0da25edb5d358650383266bc9dc8de0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+  <!--百度统计代码-->
+  <!--手动下拉代码js-->
+  <script type="text/javascript">
+    var intervalId = null;
+
+    function slideAd(id, nStayTime, sState, nMaxHth, nMinHth) {
+      this.stayTime = nStayTime * 2000 || 2000;
+      this.maxHeigth = nMaxHth || 320;
+      this.minHeigth = nMinHth || 2.5;
+      this.state = sState || "down";
+      var obj = document.getElementById(id);
+      if (intervalId != null) window.clearInterval(intervalId);
+
+      function openBox() {
+        var h = obj.offsetHeight;
+        obj.style.height = ((this.state == "down") ? (h + 4) : (h - 10)) + "px";
+        if (obj.offsetHeight > this.maxHeigth) {
+          window.clearInterval(intervalId);
+          intervalId = window.setInterval(closeBox, this.stayTime);
+        }
+        if (obj.offsetHeight < this.minHeigth) {
+          window.clearInterval(intervalId);
+          obj.style.display = "none";
+        }
+      }
+
+      function closeBox() {
+        slideAd(id, this.stayTime, "up", nMaxHth, nMinHth);
+      }
+      intervalId = window.setInterval(openBox, 10);
+    }
+  </script>
+  <!--手动下拉代码js-->
+</head>
+
+<body>
+  <!-- AdSame ShowCode: 2018.2 深圳新闻网 / 首页 / 飘窗 Begin -->
+  <script type="text/javascript" src="http://v10.sznews.com/s?z=sznews&c=685" charset="gbk"></script>
+  <!-- AdSame ShowCode: 2018.2 深圳新闻网 / 首页 / 飘窗 End -->
+  <!-- AdSame ShowCode: 2018.2 深圳新闻网 / 首页 / 飘窗右 Begin -->
+  <script type="text/javascript" src="http://v10.sznews.com/s?z=sznews&c=686" charset="gbk"></script>
+  <!-- AdSame ShowCode: 2018.2 深圳新闻网 / 首页 / 飘窗右 End -->
+  <!-- AdSame ShowCode: 2018.2 深圳新闻网 / 首页 / 对联 Begin -->
+  <script type="text/javascript" src="http://v10.sznews.com/s?z=sznews&c=670" charset="gbk"></script>
+  <!-- AdSame ShowCode: 2018.2 深圳新闻网 / 首页 / 对联 End -->
+
+  <!-- AdSame ShowCode: 2016.6 深圳新闻网 / 首页 / 飘窗左1 Begin -->
+  <!--<script type="text/javascript" src="http://v10.sznews.com/s?z=sznews&c=437" charset="gbk" ></script>-->
+  <!-- AdSame ShowCode: 2016.6 深圳新闻网 / 首页 / 飘窗左1 End -->
+  <!-- AdSame ShowCode: 2016.6 深圳新闻网 / 首页 / 飘窗右1 Begin -->
+  <!--<script type="text/javascript" src="http://v10.sznews.com/s?z=sznews&c=438" charset="gbk" ></script>-->
+  <!-- AdSame ShowCode: 2016.6 深圳新闻网 / 首页 / 飘窗右1 End -->
+
+  <!-- AdSame ShowCode: 2016.6 深圳新闻网 / 首页 / 飘窗 Begin -->
+  <script type="text/javascript">
+    // <!--
+    // index_scroll();
+    // -->
+  </script>
+  <!-- AdSame ShowCode: 2016.6 深圳新闻网 / 首页 / 飘窗 End -->
+  <!-- AdSame ShowCode: 2016.6 深圳新闻网 / 首页 / 左飘窗 Begin -->
+  <script type="text/javascript">
+    // <!--
+    // index_scroll0();
+    // -->
+  </script>
+  <!-- AdSame ShowCode: 2016.6 深圳新闻网 / 首页 / 左飘窗 End -->
+  <!-- Start:header -->
+  <div class="header" id="dh2016" style="top: 0;">
+    <div class="navMain">
+      <div class="topLeft"><a style="float:left;display:block;width:100px;" href="http://www.sznews.com/"
+          target="_self">深圳新闻网首页</a>
+        <div style="float:left">
+          <div class="time"><span id="datetime" name="datetime"></span>
+            
+              <span>深圳</span><span><img src="http://www.sznews.com/news/pic/2019-12/02/962be9e6-7486-411f-a070-2cc16cb2a3d7.gif" width="18px" height="18px" />
+                  <font style="width:100px;"><a href="http://www.sznews.com/news/content/2019-12/02/content_22672046.htm" target="_blank">14-20℃，晴天干燥</a></font>
+                </span>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Start:topRight -->
+      <div class="topRight">
+        <div id="loginPanel" class="tn tn-login"> <img src="http://www.sznews.com/2016gb/images/user-icon.png" /> <a
+            href="http://uc.sznews.com/default.php?m=reg" target="_blank" class="reg">注册</a> / <a class="log">登录</a>
+          <div class="tn-box"> <span class="tn-box-arrow"></span>
+            <div class="formLogin">
+              <form action="" method="post">
+                <input id="username" name="email" data-type="email" data-required="true" class="dlemail" type="text"
+                  autocomplete="off" tabindex="1" spellcheck="false" placeholder="通行证账号">
+                <input id="password" name="password" maxlength="16" data-required="true" class="dlpwd" type="password"
+                  autocomplete="off" data-max-length="20" tabindex="2" spellcheck="false" placeholder="请输入密码">
+                <div class="loginbox"><a tabindex="8" onClick="doLogin()">登&nbsp;&nbsp;录</a></div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- Start:tn-paper -->
+        <div class="tn tn-paper"> <span class="tn-item"><a href="">电子报刊</a></span>
+          <div class="tn-box"> <span class="tn-box-arrow"></span>
+            <ul class="tn-box-list">
+              <li><a href="http://sztqb.sznews.com/" target="_blank">深圳特区报</a></li>
+              <li><a href="http://szsb.sznews.com/" target="_blank">深圳商报</a></li>
+              <li><a href=" http://hk.hkcd.com/pdf/index.htm" target="_blank">香港商报</a></li>
+              <li><a href="http://wb.sznews.com/" target="_blank">深圳晚报</a></li>
+              <li><a href="http://jb.sznews.com/" target="_blank">晶报</a></li>
+              <li><a href="http://www.szdaily.com/" target="_blank">SHENZHEN DAILY</a></li>
+              <li><a href="http://szjy.sznews.com/" target="_blank">南方教育时报</a></li>
+              <li><a href="http://barb.sznews.com/" target="_blank">宝安日报</a></li>
+              <li><a href="http://dtzbd.sznews.com/" target="_blank">深圳都市报</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- End:tn-paper -->
+
+        <!-- Start:tn-region -->
+        <div class="tn tn-region tn-box-vis"> <span class="tn-item"><a href="">各区</a></span>
+          <div class="tn-box"> <span class="tn-box-arrow"></span>
+            <ul class="tn-box-list">
+              <li><a href="http://ifutian.sznews.com/" target="_blank">福田</a></li>
+              <li><a href="http://www.luoohu.com/" target="_blank">罗湖</a></li>
+              <li><a href="http://inanshan.sznews.com/" target="_blank">南山</a></li>
+              <li><a href="http://iyantian.sznews.com/" target="_blank">盐田</a></li>
+              <li><a href="http://ibaoan.sznews.com/" target="_blank">宝安</a></li>
+              <li><a href="http://iqianhai.sznews.com/" target="_blank">前海</a></li>
+              <li><a href="http://ilonggang.sznews.com/" target="_blank">龙岗</a></li>
+              <li><a href="http://iguangming.sznews.com/" target="_blank">光明</a></li>
+              <li><a href="http://ipingshan.sznews.com/" target="_blank">坪山</a></li>
+              <li><a href="http://ilonghua.sznews.com/" target="_blank">龙华</a></li>
+              <li><a href="http://idapeng.sznews.com/" target="_blank">大鹏</a></li>
+              <li><a href="http://www.shenshan.gov.cn/" target="_blank">深汕</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- End:tn-region -->
+
+        <!-- Start:tn-weibo -->
+        <div class="tn tn-weibo"> <span class="tn-item"><img
+              src="http://www.sznews.com/2016gb/images/twb-icon.png" /></span>
+          <div class="tn-box"> <span class="tn-box-arrow"></span> <img src="http://www.sznews.com/2016gb/images/wb.png"
+              width="138" height="138"> </div>
+        </div>
+        <!-- End:tn-weibo -->
+
+        <div class="tn tn-weixin"> <span class="tn-item"><img
+              src="http://www.sznews.com/2016gb/images/wechat-icon.png" /></span>
+          <div class="tn-box"> <span class="tn-box-arrow"></span> <img src="http://www.sznews.com/2016gb/images/wx.png"
+              width="138" height="138"> </div>
+        </div>
+        <div class="tn tn-phone"><span class="tn-item"><img src="http://www.sznews.com/resource/templateRes/201909/24/1056/1056/phone-icon.png" /></span></div>
+        <div class="tn tn-email"><span class="tn-item"><a href="http://mail.sznews.com/" target="_blank"><img
+                src="http://www.sznews.com/resource/templateRes/201909/24/1056/1056/email-icon.png" /></a></span> </div>
+        <div class="tn"><span class="tn-item"><a href="http://www.sznews.com/zhuanti/node_230252.htm"
+              target="_blank"><img src="http://www.sznews.com/resource/templateRes/201909/24/1056/1056/iszhen_icon.png" /></a> </span></div>
+      </div>
+      <!-- End:topRight -->
+    </div>
+  </div>
+  <!-- End:header -->
+
+
+  <!--首页飘红banner-->
+  <!--<div style="width:1200px;height:177px;margin:0 auto"><a   href="http://www.sznews.com/zhuanti/node_302442.htm" target="_blank"><img src="http://www.sznews.com/resource/templateRes/201909/24/1056/1056/banner2019924.jpg" width="1200" height="177"></a></div>-->
+  <div style="width:1200px;margin:45px auto 5px;background:#FFF"><a href="http://news.sznews.com/node_235841.htm"
+      target="_blank"><img src="http://www.sznews.com/resource/templateRes/201909/24/1056/1056/20180528.jpg" width="1200"></a></div>
+  <div style="width:1200px;margin:0 auto 5px;background:#FFF">
+    <script language='javascript' type='text/javascript' src='http://v10.sznews.com/s?z=sznews&la=15'></script>
+  </div>
+
+
+<div style="width:1200px;margin:0 auto;background:#FFF"><div style="float:right"><!--<a href="http://zg.southcn.com/bridge/" target="_blank"><img src="http://www.sznews.com/resource/templateRes/201909/24/1056/1056/banner_1012_500.jpg" width="500"></a>--><a href="http://www.sznews.com/zhuanti/node_305116.htm" target="_blank"><img src="http://www.sznews.com/resource/templateRes/201909/24/1056/1056/banner1125.png" width="500"></a></div><div style="float:left; width:700px;"><script language='javascript' type='text/javascript' src='http://v10.sznews.com/s?z=sznews&la=18' ></script><!--<a href="http://www.gdggkf.com/zg/" target="_blank"><img src="http://www.sznews.com/resource/templateRes/201909/24/1056/1056/banner_1012_700.jpg" width="700"></a>--></div></div>
+
+  <!--首页飘红banner end-->
+  <!-- AdSame ShowCode: 2016.6 深圳新闻网 / 首页 / 下拉 Begin -->
+  <script type="text/javascript">
+    index_A0102();
+  </script>
+  <!-- AdSame ShowCode: 2016.6 深圳新闻网 / 首页 / 下拉 end -->
+
+
+  <!-- Start:content -->
+  <div class="content" style="">
+
+    <!--手动下拉代码content内-->
+
+
+    <!--手动下拉代码content内 小图END-->
+    <!-- Start:topNav -->
+    <!--<div ><a style=" display:block; width:1000px; height:120px; margin:0px auto;"href="http://news.sznews.com/node_233382.htm" target="_blank"> </a></div>-->
+    <div id="cywbg" style=" background-color:#FFF; width:1200px; margin:0px auto;">
+      <div class="topNav cf" style="background:#FFF;">
+        <div class="logo l" style="margin-left:10px;"><a href="http://www.sznews.com/" target="_blank"><img
+              src="http://www.sznews.com/resource/templateRes/201909/24/1056/1056/sznewslogo2018.png" width="255" height="67.7"></a></div>
+        <div class="nav r" style="width: 749px;float: left;margin-left: -15px;">
+          <ul class="cf">
+            <li class="n1"><a href="http://www.sznews.com/news/node_31180.htm" target="_blank"><strong>深圳</strong></a>
+            </li>
+            <li><a href="http://gov.sznews.com/" target="_blank">政务</a></li>
+
+            <li><a href="http://news.sznews.com/node_18037.htm" target="_blank">专题</a></li>
+            <li class="n3"><a href="http://in.sznews.com/" target="_blank">IN视频</a></li>
+            <li class="n1"><a href="http://wz.sznews.com/" target="_blank"><strong>问政</strong></a></li>
+            <li><a href="http://www.sznews.com/zhuanti/node_232644.htm" target="_blank">摄影</a></li>
+            <li class="n3"><a href="http://szbbs.sznews.com/forumdisplay.php?fid=160" target="_blank">深圳事</a></li>
+            <li class="n1"><a href="http://www.sznews.com/education/index.htm" target="_blank"><strong>教育</strong></a>
+            </li>
+            <li><a href="http://www.sznews.com/culture/index.htm" target="_blank">文旅</a></li>
+            <li class="n2"><a href="http://www.sznews.com/fashion/index.htm" target="_blank">时尚</a></li>
+            <li class="n1"><a href="http://dc.sznews.com/" target="_blank"><strong>房产</strong></a></li>
+            <li class="n3"><a href="http://www.sznews.com/zhuanti/node_304111.htm" target="_blank">查餐厅</a></li>
+          </ul>
+          <ul class="cf">
+            <li class="n1"><a href="http://www.sznews.com/news/node_227703.htm" target="_blank"><strong>原创</strong></a>
+            </li>
+            <li><a href="http://news.sznews.com/node_33500.htm" target="_blank">焦点</a></li>
+            <li><a href="http://www.sznews.com/photo/index.htm" target="_blank">图片</a></li>
+            <li class="n3"><a href="http://news.sznews.com/node_31304.htm" target="_blank">直播车</a></li>
+            <li class="n1"><a href="http://www.sznews.com/zhuanti/node_233635.htm"
+                target="_blank"><strong>舆情</strong></a></li>
+            <li><a href="http://www.sznews.com/news/node_145651.htm" target="_blank">评论</a></li>
+            <li class="n3"><a href="http://www.sznews.com/zhuanti/node_101387.htm" target="_blank">发布厅</a></li>
+            <li class="n1"><a href="http://www.sznews.com/eating/index.htm" target="_blank"><strong>美食</strong></a></li>
+                        <li><a href="http://health.sznews.com/index.htm" target="_blank">健康</a></li>
+            <li class="n2"><a href="http://www.sznews.com/tech/node_231060.htm" target="_blank">消费</a></li>
+            <li class="n1"><a href="http://www.sznews.com/banking/index.htm" target="_blank"><strong>金融</strong></a>
+            </li>
+            <li class="n3"><a href="http://www.sznews.com/zhuanti/node_233942.htm" target="_blank">排行榜</a></li>
+          </ul>
+        </div>
+        <div class="ltlogo" style="margin-top: 26px; margin-right: 6px;">
+          <a href="https://szbbs.sznews.com/" target="_blank">
+            <img src="http://www.sznews.com/resource/templateRes/201909/24/1056/1056/LTlogo.gif" style="float: right;margin-top: 25px;" width="171">
+          </a></div>
+      </div>
+      <!-- End:topNav -->
+      <!-- Start:region -->
+      <div class="region cf">
+        <div class="col-l l"><strong class="green">各区</strong><a href="http://ifutian.sznews.com/"
+            target="_blank">福田</a><a href="http://www.luoohu.com/" target="_blank">罗湖</a><a
+            href="http://inanshan.sznews.com/" target="_blank">南山</a><a href="http://iyantian.sznews.com/"
+            target="_blank">盐田</a><a href="http://ibaoan.sznews.com/" target="_blank">宝安</a><a
+            href="http://ilonggang.sznews.com/" target="_blank">龙岗</a><a href="http://ilonghua.sznews.com/"
+            target="_blank">龙华</a><a href="http://ipingshan.sznews.com/" target="_blank">坪山</a><a
+            href="http://iguangming.sznews.com/" target="_blank">光明</a><a href="http://idapeng.sznews.com/"
+            target="_blank">大鹏</a><a href="http://www.szss.gov.cn/" target="_blank">深汕</a><a href="http://iqianhai.sznews.com/" target="_blank">前海</a></div>
+        <!-- Start:col-r -->
+        <div class="col-r r">
+          <!-- Start:region-tbox -->
+          <div class="region-tbox l"> <span class="region-tbox-bti">深圳报业媒体群</span>
+            <div class="region-tbox-con"> <span class="region-tbox-arrow"></span> <a href="http://sztqb.sznews.com/"
+                target="_blank">深圳特区报</a><span class="fgx">|</span><a href="http://szsb.sznews.com/"
+                target="_blank">深圳商报</a><span class="fgx">|</span><a href="http://wb.sznews.com/"
+                target="_blank">深圳晚报</a><span class="fgx">|</span><a href="http://jb.sznews.com/"
+                target="_blank">晶报</a><br /><a
+                href="http://www.szdaily.com/" target="_blank">Shenzhen Daily</a><span class="fgx">|</span><a
+                href="http://barb.sznews.com/" target="_blank">宝安日报</a><span class="fgx">|</span><a
+                href="http://xcb.sznews.com/" target="_blank">新传播</a><br />
+              <a href="http://qsnb.sznews.com/" target="_blank">深圳青少年报</a><span class="fgx">|</span> <a
+                href="http://szjy.sznews.com/" target="_blank">南方教育时报</a><span class="fgx">|</span><a
+                href="http://www.jdonline.com.hk/" target="_blank">香港经济导报</a><br />
+              <a href="https://www.dutenews.com/" target="_blank">读特网</a><span class="fgx">|</span><a
+                href="http://www.cnicif.com/" target="_blank">文博会</a><span class="fgx">|</span><a
+                href="http://www.cnci.net.cn/" target="_blank">中国文化产业网</a><br />
+              <!--<a href="http://photo.sznews.com/" target="_blank">图图中国</a>-->
+              <!--<span class="fgx">|</span>-->
+              <a href="http://www.sznews.com/publish/node_13497.htm" target="_blank">报业集团出版社</a><span
+                class="fgx">|</span><a href="http://www.sznews.com/zhuanti/node_95906.htm" target="_blank">深圳
+                INEWS</a><span class="fgx">|</span><a href="http://duchuang.sznews.com/index.htm"
+                target="_blank">读创网</a> </div>
+          </div>
+          <!-- End:region-tbox -->
+
+          <!-- Start:region-tbox -->
+          <div class="region-tbox region-tbox-detail l"> <span class="region-tbox-bti">合作网站</span>
+            <div class="region-tbox-con"> <span class="region-tbox-arrow"></span> <a href="http://gdsz.wenming.cn/"
+                target="_blank">文明网</a><span class="fgx">|</span> <a href="http://www.szmil.com/"
+                target="_blank">国防教育网</a><span class="fgx">|</span> <a href="http://www1.szzx.gov.cn"
+                target="_blank">政协网</a><span class="fgx">|</span> <a href="http://www.saom.org.cn/"
+                target="_blank">网协</a><span class="fgx">|</span><br />
+              <a href="http://szmtf.sznews.com/" target="_blank">深圳市新闻人才基金会</a><span class="fgx">|</span> <a href="http://www.szmj.gov.cn/" target="_blank">廉洁深圳</a><span class="fgx">|</span>  <a href="http://www.pengchengenergy.com/" target="_blank">鹏城新力</a><span class="fgx">|</span><br />
+              <a href="http://szwb.sz.gov.cn/szgws/" target="_blank">深圳市建筑工务署</a> <span class="fgx">|</span> <a
+                href="http://www.eyeshenzhen.com/" target="_blank">EYESHENZHEN</a><br /><span class="fgx">|</span> <a
+                href="http://www.szguanai.com/" target="_blank">深圳关爱网</a><span class="fgx">|</span> <a
+                href="http://www.szxlga.com/" target="_blank">深圳关爱热线网</a><span class="fgx">|</span><a
+                href="http://www.szlilun.com/" target="_blank">深思网</a><span class="fgx">|</span><br />
+              <a href="http://www.igongyi.org.cn/" target="_blank">关爱基金</a><span class="fgx">|</span> <a
+                href="http://www.sztalent.org/" target="_blank">深圳人才工作网</a><span class="fgx">|</span> <a
+                href="https://www.sz-art.cn/" target="_blank">深圳文学艺术网</a><span class="fgx">|</span><br />
+              <a href="https://www.ciep.gov.cn/" target="_blank">中国国际人才交流大会</a><span class="fgx">|</span> <a
+                href="http://www.sciep.com/" target="_blank">深圳国际人才交流中心</a><span class="fgx">|</span><br />
+              <a href="http://www.sihc.com.cn/" target="_blank">深圳投控网</a> <span class="fgx">|</span> <a
+                href="http://www.shenzhentour.com/" target="_blank">深圳旅游网</a>
+
+            </div>
+          </div>
+          <!-- End:region-tbox -->
+          <!-- Start:search -->
+          <div class="search l" style="margin-left:15px;">
+            <div class="sel sel-ed l"> <span class="sel-on">搜索</span>
+              <ul class="sel-list" style="z-index:10">
+                <!--<li><a href="javascript:;" data-type="sznews">站内</a></li>-->
+                <li><a href="javascript:;" data-type="baidu">百度</a></li>
+                <!--<li><a href="javascript:;" data-type="google">谷歌</a></li>-->
+                <li><a href="javascript:;" data-type="360">360</a></li>
+              </ul>
+            </div>
+            <input type="text" class="l" data-type="baidu" id="searchField" name="searchName" />
+            <span class="submit r"></span>
+          </div>
+          <!-- End:search -->
+          <div class="r zf-banner">
+            <!-- AdSame ShowCode: 2016.6 深圳新闻网 / 首页 / T1 Begin -->
+            <script language='javascript' type='text/javascript' src='http://v10.sznews.com/s?z=sznews&la=16'></script>
+            <!-- AdSame ShowCode: 2016.6 深圳新闻网 / 首页 / T1 End -->
+          </div>
+        </div>
+        <!-- End:col-r -->
+      </div>
+      <!-- End:region -->
+
+      <!-- Start:paper-links -->
+      <!--<div class="paper-links cf" style="background-color:#fff;">
+    <div class="paper l"><a href="http://sztqb.sznews.com/" target="_blank">&nbsp;深圳特区报</a>|<a href="http://szsb.sznews.com/" target="_blank">深圳商报</a>|<a href="http://wb.sznews.com/" target="_blank">深圳晚报</a>|<a href="https://jb.sznews.com/" target="_blank">晶报</a>|<a href="http://www.hkcd.com.hk/pdf/index.htm" target="_blank">香港商报</a>|<a href="http://www.szdaily.com/" target="_blank">Shenzhen Daily</a>|<a href="http://szjy.sznews.com/" target="_blank">南方教育时报</a>|<a href="http://barb.sznews.com/" target="_blank">宝安日报</a>|<a href="http://dtzbd.sznews.com/" target="_blank">深圳都市报</a>|<a href="http://www.jdonline.com.hk/"  target="_blank">经济导报</a>|<a href="http://www.eyeshenzhen.com/"  target="_blank">EYESHENZHEN</a></div>
+    
+    
+     
+ 
+  </div>-->
+      <!-- End:paper-links -->
+
+      <!-- Start:adv -->
+
+      <div class="adv cf" style="background-color:#fff;">
+        <!--  AdSame ShowCode: 2018.2 深圳新闻网 / 首页 / A1 A2 Begin -->
+
+
+
+        <div class="mb10 cf">
+          <div class="l">
+            <!-- AdSame ShowCode: 2018.2 深圳新闻网 / 首页 / A1 Begin -->
+            <script type="text/javascript" src="http://v10.sznews.com/s?z=sznews&c=623" charset="gbk"></script>
+          </div>
+          <div class="r">
+            <!-- AdSame ShowCode: 2018.2 深圳新闻网 / 首页 / A2 Begin -->
+            <script language='javascript' type='text/javascript' src='http://v10.sznews.com/s?z=sznews&la=12'></script>
+          </div>
+        </div>
+        <!--  AdSame ShowCode: 2018.2 深圳新闻网 / 首页 / A1 A2 end -->
+        <!--  AdSame ShowCode: 2018.2 深圳新闻网 / 首页 / A3 A4 Begin -->
+        <div class="cf">
+          <div class="l">
+            <!-- AdSame ShowCode: 2018.2 深圳新闻网 / 首页 / A3 Begin -->
+            <script type="text/javascript" src="http://v10.sznews.com/s?z=sznews&c=625" charset="gbk"></script>
+
+          </div>
+          <div class="r">
+            <!-- AdSame ShowCode: 2018.2 深圳新闻网 / 首页 / A4 Begin -->
+            <script language='javascript' type='text/javascript' src='http://v10.sznews.com/s?z=sznews&la=13'></script>
+          </div>
+        </div>
+        <!--  AdSame ShowCode: 2018.2 深圳新闻网 / 首页 / A3 A4 end -->
+      </div>
+      <!-- Start:315nwes-top -->
+      <div class="news-top cf" style="position:relative; top:15px"> <a
+          href="http://www.sznews.com/zhuanti/node_231155.html" target="_blank"><span class="bt l">天天3.15 </span></a>
+        <div id="ulid">
+          
+                            <ul>
+              <li><a href="http://www.sznews.com/zhuanti/content/2019-11/22/content_22650789.htm" target="_blank"> 印迹健身：商家停业未退费</a></li>
+              <li><a href="http://www.sznews.com/zhuanti/content/2019-11/22/content_22650786.htm" target="_blank"> 晶馨瑜伽：商家停业未退费</a></li>
+              <li><a href="http://www.sznews.com/zhuanti/content/2019-11/22/content_22650784.htm" target="_blank"> 霸龙健身：商家停业未退费</a></li>
+              <li><a href="http://www.sznews.com/zhuanti/content/2019-11/14/content_22627858.htm" target="_blank"> 豆悦网络科技：商家以点券已消耗为由拒绝退费</a></li>
+              <li><a href="http://www.sznews.com/zhuanti/content/2019-11/14/content_22627854.htm" target="_blank"> 汇充电：商家私自涨价未提供等价服务</a></li>
+              <li><a href="http://www.sznews.com/zhuanti/content/2019-11/14/content_22627848.htm" target="_blank"> 爱堡母婴：商家停业未退费</a></li>
+            </ul>
+
+        </div>
+        <!--<a href="" target="_blank" style="position:absolute; top:0px; right:0px;"><span class="bt r">诚信之窗 </span></a>-->
+      </div>
+      <!-- End:315news-top -->
+      <!-- End:adv -->
+      <!--  AdSame ShowCode: 2018.2 深圳新闻网 / 首页 / 通栏A34-1 Begin -->
+      <div class="adv cf" style="margin-bottom:5px;">
+        <script type="text/javascript">
+          <!--
+          index_A3401();
+          -->
+        </script>
+      </div>
+      <!--  AdSame ShowCode: 2018.2 深圳新闻网 / 首页 / 通栏A34-1 End -->
+      <!-- Start:adv-top -->
+      <div class="adv-top cf" style="background-color:#FFF;">
+        <!-- Start:col-1 -->
+        <div class="col-1 cf">
+          <ul class="tab-menu l">
+            <li class="on"><a href="http://dc.sznews.com/" target="_blank">房产</a><span class="arrow"></span></li>
+            <li><a href="http://sznews.com/education/index.htm" target="_blank">教育</a><span class="arrow"></span></li>
+            <li><a href="http://health.sznews.com/index.htm" target="_blank">健康</a><span class="arrow"></span></li>
+          </ul>
+          
+                            <ul class="tab-con tab-con-on r">
+              <li><a href="http://dc.sznews.com/content/2019-12/02/content_22672185.htm" target="_blank"> 南山街道冲刺小区撤桶</a></li>
+              <li><a href="http://dc.sznews.com/content/2019-12/02/content_22672146.htm" target="_blank"> 盐田区打好产业组合拳</a></li>
+              <li><a href="http://dc.sznews.com/content/2019-12/02/content_22672686.htm" target="_blank"> 粤“三旧”改造面积破80万亩</a></li>
+              <li><a href="http://dc.sznews.com/content/2019-11/29/content_22668259.htm" target="_blank"> 年前房贷利率将趋于平稳</a></li>
+              <li><a href="http://dc.sznews.com/content/2019-11/28/content_22664958.htm" target="_blank"> 明年房价有望实现软着陆</a></li>
+            </ul>
+
+          
+                            <ul class="tab-con r">
+              <li><a href="http://www.sznews.com/news/content/2019-09/23/content_22489657.htm" target="_blank"> 谁是故事大王3 今日启动</a></li>
+              <li><a href="http://www.sznews.com/news/content/2019-09/09/content_22455193.htm" target="_blank"> 光明凤凰学校如期开学<IMG style="PADDING-LEFT: 5px; DISPLAY: inline; VERTICAL-ALIGN: middle" src="http://www.sznews.com/2016gb/images/170106yc01.gif"></a></li>
+              <li><a href="http://www.sznews.com/education/content/2019-08/01/content_22323091.htm" target="_blank"> 深圳中考补报志愿10时开始</a></li>
+              <li><a href="http://www.sznews.com/education/content/2019-08/01/content_22323086.htm" target="_blank"> 深圳中考游泳列为必考选项</a></li>
+              <li><a href="http://www.sznews.com/news/content/2019-07/03/content_22230951.htm" target="_blank"> 谁是故事大王•第三季</a></li>
+            </ul>
+
+          
+                            <ul class="tab-con r">
+              <li><a href="http://health.sznews.com/content/2019-10/22/content_22562349.htm" target="_blank"> 寻觅母婴室？ 地图随手查</a></li>
+              <li><a href="http://health.sznews.com/content/2019-10/18/content_22552768.htm" target="_blank"> 深圳异地就医“一站式”结算</a></li>
+              <li><a href="http://health.sznews.com/content/2019-10/17/content_22548612.htm" target="_blank"> 看一次病要交两次挂号费？</a></li>
+              <li><a href="http://health.sznews.com/content/2019-10/16/content_22545146.htm" target="_blank"> 喝生羊奶数十人入院</a></li>
+              <li><a href="http://health.sznews.com/content/2019-10/08/content_22519967.htm" target="_blank"> 国内眼科“大咖”沙井义诊</a></li>
+            </ul>
+
+        </div>
+        <!-- End:col-1 -->
+        <!-- Start:col-2 -->
+        <div class="col-2">
+          
+                            <ul class="adv-top-hot cf">
+              <li><a href="http://www.sznews.com/zhuanti/node_232921.htm" target="_blank"> 深圳口岸通关指南</a></li>
+              <li><a href="http://www.sznews.com/zhuanti/node_236047.htm" target="_blank"> 龙华消防宣传专栏</a></li>
+              <li><a href="http://www.sznews.com/news/content/2018-10/08/content_21125268.htm" target="_blank"> 羊台山优质天然矿泉水</a></li>
+              <li><a href="http://www.sznews.com/news/node_14125.htm" target="_blank"> 报业集团招标公告</a></li>
+              <li><a href="http://www.sznews.com/zhuanti/node_235360.htm" target="_blank"> 园芳有约·我的支教之路</a></li>
+            </ul>
+
+          <!--A0 广告位-->
+          <div class="adv-top-pic">
+            <script language='javascript' type='text/javascript' src='http://v10.sznews.com/s?z=sznews&la=11'></script>
+          </div>
+          
+                            <ul class="adv-top-hot cf">
+              <li><a href="http://sznews.com/zhuanti/node_231741.htm" target="_blank"> 快来加入深网小记者</a></li>
+              <li><a href="http://www.sznews.com/zhuanti/node_304954.htm" target="_blank"> 商事主体年报改革</a></li>
+              <li><a href="http://www.sznews.com/zhuanti/node_303573.htm" target="_blank"> 深化税制改革专栏</a></li>
+              <li><a href="http://www.sznews.com/zhuanti/content/2018-12/12/content_21273986.htm" target="_blank"> 运动要讲究科学</a></li>
+              <li><a href="http://health.sznews.com/content/2019-03/07/content_21454169.htm" target="_blank"> 保健品虚假宣传九个套路</a></li>
+            </ul>
+
+        </div>
+        <!-- End:col-2 -->
+        <!-- Start:col-3 -->
+        <div class="col-3 cf">
+          
+                            <ul class="tab-con tab-con-on l">
+              <li><a href="http://www.sznews.com/banking/content/2019-11/27/content_22662016.htm" target="_blank"> 套路贷涉黑非法牟利佰万元</a></li>
+              <li><a href="http://www.sznews.com/banking/content/2019-11/27/content_22661898.htm" target="_blank"> 外资险企布局中国"拼手速"</a></li>
+              <li><a href="http://www.sznews.com/banking/content/2019-11/27/content_22661845.htm" target="_blank"> 金融监管发力补短板</a></li>
+              <li><a href="http://www.sznews.com/banking/content/2019-11/26/content_22657611.htm" target="_blank"> 交行抢金条活动劲爆来袭</a></li>
+              <li><a href="http://www.sznews.com/banking/content/2019-11/25/content_22655404.htm" target="_blank"> 光大阳光惠生活APP更懂你</a></li>
+            </ul>
+
+          
+                            <ul class="tab-con l">
+              <li><a href="http://travel.sznews.com/content/2019-11/20/content_22644351.htm" target="_blank"> 一位旅客的糟心之旅</a></li>
+              <li><a href="http://travel.sznews.com/content/2019-11/20/content_22644073.htm" target="_blank"> 推进文明旅游环境建设</a></li>
+              <li><a href="http://travel.sznews.com/content/2019-11/19/content_22639308.htm" target="_blank"> 深圳国际旅游博览会将启幕</a></li>
+              <li><a href="http://travel.sznews.com/content/2019-11/20/content_22644391.htm" target="_blank"> 记忆中15年前 的“深圳八景”</a></li>
+              <li><a href="http://www.sznews.com/culture/content/2019-11/20/content_22642896.htm" target="_blank"> “海上看深圳” 旅游新名片</a></li>
+            </ul>
+
+          
+                            <ul class="tab-con l">
+              <li><a href="http://www.sznews.com/sports/content/2019-11/15/content_22631091.htm" target="_blank"> 深圳社体指导员夺7座奖杯</a></li>
+              <li><a href="http://www.sznews.com/sports/content/2019-11/26/content_22659799.htm" target="_blank"> 深圳万人健步活动落幕</a></li>
+              <li><a href="http://www.sznews.com/sports/content/2019-11/20/content_22643235.htm" target="_blank"> 深圳开展敬老月体育活动</a></li>
+              <li><a href="http://www.sznews.com/sports/content/2019-11/18/content_22636186.htm" target="_blank"> 第六届乒乓球段位赛落幕</a></li>
+              <li><a href="http://www.sznews.com/sports/content/2019-11/17/content_22634258.htm" target="_blank"> 全国航模大赛在中心公园举办</a></li>
+            </ul>
+
+          <ul class="tab-menu r">
+            <li class="on"><a href="http://sznews.com/banking/" target="_blank">金融</a><span class="arrow"></span></li>
+            <li><a href="http://travel.sznews.com/index.htm" target="_blank">旅游</a><span class="arrow"></span></li>
+            <li><a href="http://www.sznews.com/sports/node_208906.htm" target="_blank">体育</a><span class="arrow"></span>
+            </li>
+          </ul>
+        </div>
+        <!-- End:col-3 -->
+      </div>
+      <!-- End:adv-top -->
+      <!-- AdSame ShowCode: 2018.2 深圳新闻网  / 首页 / A3-1 A4-1 Begin -->
+      <!--<div class="adv cf" style="margin-bottom:5px;">
+		<div class="cf">		
+			<div class="l">
+           
+<script type="text/javascript" src="http://v10.sznews.com/s?z=sznews&c=627" charset="gbk" ></script>
+     </div>
+			<div class="r">
+             <script type="text/javascript" src="http://v10.sznews.com/s?z=sznews&c=628" charset="gbk" ></script>
+            </div>
+		</div>
+	</div>-->
+      <!-- AdSame ShowCode: 2018.2 深圳新闻网  / 首页 / A3-1 A4-1 end -->
+      <!-- AdSame ShowCode: 2018.2 深圳新闻网 / 首页 / A3-2 A4-2 Begin -->
+      <!--<div class="adv cf" style="margin-bottom:5px;">
+		<div class="cf">		
+			<div class="l">
+              <script type="text/javascript" src="http://v10.sznews.com/s?z=sznews&c=629" charset="gbk" ></script>
+            </div>
+			<div class="r">
+                <script type="text/javascript" src="http://v10.sznews.com/s?z=sznews&c=630" charset="gbk" ></script>
+            </div>
+		</div>
+	</div>-->
+      <!-- AdSame ShowCode: 2016.6 深圳新闻网 / 首页 / A3-2 A4-2 end -->
+      <!-- AdSame ShowCode: 2016.6 深圳新闻网 / 首页 / A3-3 A4-3 Begin -->
+      <!--<div class="adv cf" style="margin-bottom:5px;">
+		<div class="cf">		
+			<div class="l">
+               <script type="text/javascript">
+			                      
+									index_A303();
+								   
+							 </script>
+            </div>
+			<div class="r">
+                <script type="text/javascript">
+			                      
+									index_A403();
+									
+							 </script>
+            </div>
+		</div>
+	</div>-->
+      <!-- AdSame ShowCode: 2016.6 深圳新闻网 / 首页 / A3-3 A4-3 end -->
+      <!--<div class="adv cf" style="margin-bottom:5px;"><a href="http://www.sznews.com/zhuanti/node_234636.htm" target="_blank"><img src="http://www.sznews.com/resource/templateRes/201909/24/1056/1056/bannertf0826.jpg"></a></div>-->
+      <!-- AdSame ShowCode: 2018.2 深圳新闻网 / 首页 /通栏 A34 Begin -->
+      <!-- <script type="text/javascript" src="http://v10.sznews.com/s?z=sznews&c=626" charset="gbk"></script> -->
+      <!-- AdSame ShowCode: 2018.2 深圳新闻网 / 首页 /通栏 A34 End -->
+
+      <!--单头条-->
+      <div class="toptop-news"> <a href="http://www.sznews.com/news/node_18030.htm" class="toptop-news-more"
+          target="_blank">更多&or;</a>
+        <div class="toptop-news-l">
+          
+                          <h3><a href="http://www.sznews.com/news/content/2019-12/02/content_22672880.htm" target="_blank"> 微纪录片《共商共建共享——习近平引领开放之路》</a></h3><a style="font-size:14px;"
+                href="http://www.sznews.com/news/content/2019-12/02/content_22672880.htm" target="_blank"> </a>
+
+        </div>
+      </div>
+    </div>
+    <!--cywbg-->
+    <!-- Start:area-1 -->
+    <div class="area area-1 cf" style="background:#fff;">
+      <!-- Start:slide4 -->
+      <div class="slide4 l">
+        <div class="slide4-pic">
+          <div id="myFocus" class="slide-content slide-content-on">
+            <!--<div class="loading"><img src="img/loading.gif" alt="请稍候..." /></div>载入画面(可删除) -->
+            <div class="pic">
+              <!--天下5张图-->
+              
+                                    <ul>
+                  <li><a href="http://www.sznews.com/photo/content/2019-12/02/content_22671622.htm" target="_blank">
+                      <img src="http://www.sznews.com/photo/pic/2019-12/02/0e855bb8-e88f-4390-9525-441808cfd29f.png" width="660" height="371" alt="初雪后故宫银装素裹 游客排队打卡"></a></li>
+                  <li><a href="http://www.sznews.com/photo/content/2019-12/02/content_22672155.htm" target="_blank">
+                      <img src="http://www.sznews.com/photo/pic/2019-12/02/80360344-e1a8-485e-819b-34ad752e977e.png" width="660" height="371" alt="第二届海南岛国际电影节开幕"></a></li>
+                  <li><a href="http://www.sznews.com/photo/content/2019-12/02/content_22672051.htm" target="_blank">
+                      <img src="http://www.sznews.com/photo/pic/2019-12/02/6164e0f6-2832-490b-b11e-c0979e88dc4a.png" width="660" height="371" alt="古老村落焕新生  距今已有600年历史"></a></li>
+                  <li><a href="http://www.sznews.com/photo/content/2019-12/02/content_22671620.htm" target="_blank">
+                      <img src="http://www.sznews.com/photo/pic/2019-12/02/913298d8-7059-45bb-97ab-be2dc40542ba.png" width="660" height="371" alt="求解中国考古学“哥德巴赫猜想”——跨越60年的夏朝探寻"></a></li>
+                  <li><a href="http://www.sznews.com/photo/content/2019-12/02/content_22672050.htm" target="_blank">
+                      <img src="http://www.sznews.com/photo/pic/2019-12/02/5b379725-ddc1-4778-9224-1c42e408d4f8.png" width="660" height="371" alt="触目惊心！印度儿童在铺满白色污染物泡沫海滩玩耍"></a></li>
+                </ul>
+
+            </div>
+          </div>
+          <!--深圳-->
+          
+            <a href="http://www.sznews.com/news/content/2019-11/30/content_22671198.htm" class="slide-content" target="_blank"><img
+                  src="http://www.sznews.com/news/pic/2019-11/30/t2_(10X36X590X362)b4bba00f-ddcd-4930-b85b-63477ab5fc71.png" width="660" height="371" border="0">
+                <p class="slide-pic-info"> 深圳，究竟有多好吃？</p>
+              </a>
+
+          <!--视频-->
+          
+            <a href="http://in.sznews.com/content/2019-12/02/content_22672022.htm" class="slide-content" target="_blank"><img
+                  src="http://in.sznews.com/pic/2019-12/02/caf654d9-4388-452d-b485-bcd0f7dcb0ee.png" width="660px" height="371px" border="0">
+                <p class="slide-pic-info"> 突发脑梗!危急时刻,公交司机"教科书式"操作保住全车人</p>
+              </a>
+
+          <!--各区-->
+          
+            <a href="http://news.sznews.com/content/2019-12/02/content_22672280.htm" class="slide-content" target="_blank"><img
+                  src="http://news.sznews.com/pic/2019-12/02/t2_(16X6X600X322)44e5bca8-2278-4b31-a77f-3f144c10ec4a4ce72da1-0fd1-469c-abf8-b630ea646f20.jpg" width="660px" height="371px" border="0">
+                <p class="slide-pic-info"> “警”彩纷呈！多图重温大鹏这场警营开放日活动</p>
+              </a>
+
+          <!--娱乐-->
+          
+            <a href="http://www.sznews.com/photo/content/2019-12/02/content_22672695.htm" class="slide-content" target="_blank"><img
+                  src="http://www.sznews.com/photo/pic/2019-12/02/21ec124e-fdc4-49b2-930c-7e2647bf1983.png" width="660px" height="371px" border="0">
+                <p class="slide-pic-info"> 张嘉倪纱裙飞舞，何泓姗一个动作太尴尬</p>
+              </a>
+
+          <!--热图-->
+          
+            <a href="http://www.sznews.com/photo/content/2019-12/02/content_22672217.htm" class="slide-content" target="_blank"><img
+                  src="http://www.sznews.com/photo/pic/2019-12/02/d5f1360c-ae44-4bba-8f5f-ebd24349cbc4.png" width="660px" height="371px" border="0">
+                <p class="slide-pic-info"> 乒乓球——国际乒联男子世界杯：樊振东夺冠</p>
+              </a>
+
+          <!--房产-->
+          <div id="myFocusTo2" class="slide-content">
+            <div class="pic">
+              
+                                    <ul>
+                  <li><a href="http://app.dc.sznews.com/floor/1619.html" target="_blank"><img src="http://news.sznews.com/pic/2019-11/26/517572ea-5819-408e-9e34-d0756b2c3e01.jpg" width="660px" height="371px"
+                        alt="南山都芯总部超体，华联城市中心全球租售中"></a></li>
+                  <li><a href="http://app.dc.sznews.com/floor/1746.html" target="_blank"><img src="http://news.sznews.com/pic/2019-12/02/9967daae-3a1d-4bc2-9c4f-e097327bcb78.jpg" width="660px" height="371px"
+                        alt="华晖瑞禧|建面约82-143㎡精著美宅"></a></li>
+                </ul>
+
+            </div>
+          </div>
+
+          <!--财经-->
+          <div id="myFocusTo" class="slide-content">
+            <div class="pic">
+              
+                                    <ul>
+                  <li><a href="http://www.sznews.com/banking/content/2019-12/01/content_22671592.htm" target="_blank"><img src="http://www.sznews.com/banking/pic/2019-12/01/1082fa9a-e920-481b-98b1-5ac475eadb6d.jpg" width="660px" height="371px"
+                        alt="深圳农行“小小陶艺师” 感悟千年文明的律动"></a></li>
+                  <li><a href="http://www.sznews.com/banking/content/2019-11/26/content_22658101.htm" target="_blank"><img src="http://www.sznews.com/banking/pic/2019-11/26/cda5b39c-48c8-488f-8a48-9edcfc4cbeed.jpg" width="660px" height="371px"
+                        alt="央行继续暂停逆回购操作 本周还有3000亿元到期"></a></li>
+                  <li><a href="http://www.sznews.com/banking/content/2019-11/25/content_22654848.htm" target="_blank"><img src="http://www.sznews.com/banking/pic/2019-11/25/bbe834a7-4526-4d95-8244-f53b958da1ec.jpg" width="660px" height="371px"
+                        alt="10月银行理财发行量“缩水”环比下降6.1%"></a></li>
+                </ul>
+
+            </div>
+          </div>
+        </div>
+        <!-- AdSame ShowCode: 2016.6 深圳新闻网 / 首页 / P1 100*54 Begin -->
+        <div href="javascript:;" class="slide4-adv">
+          <script type="text/javascript">
+            <!--
+            index_P1();
+            -->
+          </script>
+          <span class="slide4-adv-close"></span>
+        </div>
+        <ul class="slide4-tab tx-n">
+          <li class="on"><a href="http://www.sznews.com/photo/index.htm" target="_blank">天下<span
+                class="arrow"></span></a></li>
+          <li><a href="http://www.sznews.com/news/node_31180.htm" target="_blank">深圳<span class="arrow"></span></a></li>
+          <li><a href="http://v.sznews.com/" target="_blank">视频<span class="arrow"></span></a></li>
+          <li><a href="http://news.sznews.com/node_239321.htm" target="_blank">各区<span class="arrow"></span></a></li>
+          <li><a href="http://www.sznews.com/photo/node_150830.htm" target="_blank">娱乐<span class="arrow"></span></a>
+          </li>
+          <li><a href="http://www.sznews.com/photo/index.htm" target="_blank">热图<span class="arrow"></span></a></li>
+          <li><a href="http://dc.sznews.com/" target="_blank">房产<span class="arrow"></span></a></li>
+          <li><a href="http://www.sznews.com/banking/index.htm" target="_blank">财经<span class="arrow"></span></a></li>
+        </ul>
+      </div>
+      <!-- End:slide4 -->
+
+      <!-- Start:news -->
+      <div class="news">
+        
+                      <h3><a href="http://www.sznews.com/news/content/2019-12/02/content_22671990.htm" target="_blank"> 深圳明年8月实现5G基站全覆盖</a></h3>
+            <div class="text"><a href="http://www.sznews.com/news/content/2019-12/02/content_22671990.htm" target="_blank"> <p><a href="http://www.sznews.com/news/content/2019-12/02/content_22671992.htm" target="_blank">【深圳举办建设中国特色社会主义先行示范区&quot;数字政府&quot;高级别研讨会】</a><a href="http://www.sznews.com/news/content/2019-12/02/content_22672037.htm" target="_blank">【深圳经验受关注】</a><a href="http://www.sznews.com/news/content/2019-12/02/content_22672036.htm" target="_blank">【在全国发挥示范作用】</a><a href="http://www.sznews.com/news/content/2019-12/02/content_22672033.htm" target="_blank">【将推动数据立法 目前开放政务数据2.5亿条】</a><a href="http://www.sznews.com/news/content/2019-12/02/content_22672028.htm" target="_blank">【深圳获中国智慧城市建设综合领先奖】</a></p></a></div>
+            <h3><a href="http://www.sznews.com/news/content/2019-12/02/content_22672892.htm" target="_blank"> 深汕特别合作区商品房“解冻” 家庭持有不得超过2套</a></h3>
+            <div class="text"><a href="http://www.sznews.com/news/content/2019-12/02/content_22672892.htm" target="_blank"> <p><a href="http://www.sznews.com/news/content/2019-12/02/content_22672892.htm" target="_blank">【只限个人购买】</a><a href="http://www.sznews.com/news/content/2019-12/02/content_22672892.htm" target="_blank">【深汕合作区购买的商品房套数不计入深圳其他限购区】</a></p></a></div>
+            <h3><a href="http://www.sznews.com/news/content/2019-11/29/content_22670731.htm" target="_blank"> 融媒时代，罗湖来了！"罗湖+"APP上线<IMG style="HEIGHT: 16px; WIDTH: 29px; VERTICAL-ALIGN: middle; FLOAT: none; PADDING-LEFT: 5px; MARGIN-TOP:0px; DISPLAY:   inline"src="http://www.sznews.com/2016gb/images/170106yc01.gif"></a></h3>
+            <div class="text"><a href="http://www.sznews.com/news/content/2019-11/29/content_22670731.htm" target="_blank"> <p><a href="http://www.sznews.com/news/content/2019-11/29/content_22670731.htm" target="_blank">【该平台由深圳新闻网建设，实现&quot;一端在手，融通罗湖&quot;】</a><a href="http://www.sznews.com/news/content/2019-11/29/content_22670731.htm" target="_blank">【第一时间了解大事小情】</a><a href="http://www.sznews.com/news/content/2019-11/29/content_22670731.htm" target="_blank">【留言反映诉求并直通政府】</a><a href="http://www.sznews.com/news/content/2019-11/29/content_22670731.htm" target="_blank">【足不出户办业务】</a></p></a></div>
+
+      </div>
+      <!-- End:news -->
+    </div>
+    <!-- End:area-1 -->
+    <!--时政快报-->
+    <!--<div class="polity-news"> <strong class="polity-news-bti">时政快报：</strong>
+      <div id="alistId">
+        
+                        <ul>
+            <li><a href="http://www.sznews.com/news/content/2019-12/02/content_22672880.htm" target="_blank"> 微纪录片《共商共建共享——习近平引领开放之路》</a></li>
+            <li><a href="http://news.sznews.com/content/2019-12/01/content_22671632.htm" target="_blank"> 释放制度力量培固党的执政之基</a></li>
+            <li><a href="http://news.sznews.com/content/2019-12/01/content_22671500.htm" target="_blank"> 独腿老人郦礼元：从自立自强到保护环境</a></li>
+            <li><a href="http://news.sznews.com/content/2019-12/01/content_22671835.htm" target="_blank"> 【飞越广东】化橘红：岭南中药 造福百姓 走向世界</a></li>
+            <li><a href="http://news.sznews.com/content/2019-12/01/content_22671830.htm" target="_blank"> 【飞越广东】茂名：一条罗非鱼的旅程</a></li>
+            <li><a href="http://news.sznews.com/content/2019-12/01/content_22671829.htm" target="_blank"> 第二届海南岛国际电影节开幕式进行时</a></li>
+            <li><a href="http://news.sznews.com/content/2019-12/01/content_22671783.htm" target="_blank"> 《疫苗管理法》施行：疫苗犯罪行为将从重追究刑事责任</a></li>
+            <li><a href="http://news.sznews.com/content/2019-12/01/content_22671782.htm" target="_blank"> 探访西澳矿区：与中国经济快车同行</a></li>
+            <li><a href="http://news.sznews.com/content/2019-12/01/content_22671781.htm" target="_blank"> “农民院士”朱有勇：用科技改变贫穷</a></li>
+            <li><a href="http://news.sznews.com/content/2019-12/01/content_22671780.htm" target="_blank"> 12月2日全国交通安全日：交通安全进校园 筑牢学生安全关</a></li>
+          </ul>
+
+      </div>
+    </div>-->
+
+    <!-- 突发新闻 -->
+    <div class="interruptNews" style="display:none;">
+      <div class="itrN">突<br>发<br>新<br>闻</div>
+    </div>
+
+    <!--时政快报-->
+    <div class="polity-news"> <strong class="polity-news-bti">时政快报：</strong>
+      <div id="alistId">
+        
+                        <ul>
+            <li><a href="http://www.sznews.com/news/content/2019-12/02/content_22672880.htm" target="_blank"> 微纪录片《共商共建共享——习近平引领开放之路》</a></li>
+            <li><a href="http://news.sznews.com/content/2019-12/01/content_22671632.htm" target="_blank"> 释放制度力量培固党的执政之基</a></li>
+            <li><a href="http://news.sznews.com/content/2019-12/01/content_22671500.htm" target="_blank"> 独腿老人郦礼元：从自立自强到保护环境</a></li>
+            <li><a href="http://news.sznews.com/content/2019-12/01/content_22671835.htm" target="_blank"> 【飞越广东】化橘红：岭南中药 造福百姓 走向世界</a></li>
+            <li><a href="http://news.sznews.com/content/2019-12/01/content_22671830.htm" target="_blank"> 【飞越广东】茂名：一条罗非鱼的旅程</a></li>
+            <li><a href="http://news.sznews.com/content/2019-12/01/content_22671829.htm" target="_blank"> 第二届海南岛国际电影节开幕式进行时</a></li>
+            <li><a href="http://news.sznews.com/content/2019-12/01/content_22671783.htm" target="_blank"> 《疫苗管理法》施行：疫苗犯罪行为将从重追究刑事责任</a></li>
+            <li><a href="http://news.sznews.com/content/2019-12/01/content_22671782.htm" target="_blank"> 探访西澳矿区：与中国经济快车同行</a></li>
+            <li><a href="http://news.sznews.com/content/2019-12/01/content_22671781.htm" target="_blank"> “农民院士”朱有勇：用科技改变贫穷</a></li>
+            <li><a href="http://news.sznews.com/content/2019-12/01/content_22671780.htm" target="_blank"> 12月2日全国交通安全日：交通安全进校园 筑牢学生安全关</a></li>
+          </ul>
+
+      </div>
+    </div>
+    <!-- Start:adv -->
+    <!-- AdSame ShowCode: 2018.2 深圳新闻网  / 首页 / A5 A6 Begin -->
+    <div class="adv cf">
+      <div class="l">
+        <script type="text/javascript" src="http://v10.sznews.com/s?z=sznews&c=631" charset="gbk"></script>
+      </div>
+      <div class="r" style="margin-bottom:10px">
+        <script type="text/javascript" src="http://v10.sznews.com/s?z=sznews&c=632" charset="gbk"></script>
+      </div>
+      	<script type="text/javascript" src="http://v10.sznews.com/s?z=sznews&c=731" charset="gbk" ></script>
+    </div>
+    <!-- AdSame ShowCode: 2018.2 深圳新闻网 / 首页 / A5 A5 end -->
+    <!-- AdSame ShowCode: 2018.2 深圳新闻网/ 首页 / A5-1 A6-1 Begin -->
+    <!--<div class="adv cf" style="margin-top:5px;">
+    <div class="l"> 
+      <script type="text/javascript" src="http://v10.sznews.com/s?z=sznews&c=633" charset="gbk" ></script>
+    </div>
+    <div class="r"> 
+     <script type="text/javascript" src="http://v10.sznews.com/s?z=sznews&c=634" charset="gbk" ></script>
+    </div>
+  </div>-->
+    <!-- AdSame ShowCode: 2018.2 深圳新闻网/ 首页 / A5-1 A6-1 end -->
+    <!-- End:adv -->
+
+    <!-- Start:area 要闻资讯-->
+    <div class="area-wrap mt20">
+      <h2 class="area-nav">要闻资讯</h2>
+      <div class="area area-2 cf" style="margin-bottom:0;">
+        <!-- Start:col-1 -->
+        <div class="col-1">
+          <div class="tit zj-tit">
+            <h2><span class="on"><a href="http://www.sznews.com/news/node_50780.htm"
+                  target="_blank">深圳政务</a></span><span><a href="http://www.sznews.com/news/node_180787.htm"
+                  target="_blank">公告</a></span></h2>
+          </div>
+          <div class="tab tab-on">
+            
+                                <ul class="list1">
+                <li><a href="http://www.sznews.com/news/content/2019-12/02/content_22671992.htm" target="_blank"><strong> 如何提升"数字政府"建设水平？市委书记这样说</strong></a></li>
+
+            
+                              <li><a href="http://www.sznews.com/news/content/2019-11/30/content_22670823.htm" target="_blank"> 王伟中陈如桂会见北京大学党委书记邱水平</a></li>
+                <li><a href="http://www.sznews.com/news/content/2019-11/29/content_22668069.htm" target="_blank"> 王伟中会见滴滴出行董事长程维</a></li>
+                <li><a href="http://www.sznews.com/news/content/2019-12/02/content_22672137.htm" target="_blank"> 深圳宝安国际马拉松开跑 李小甘为赛事鸣枪发令</a></li>
+                <li><a href="http://www.sznews.com/news/content/2019-12/02/content_22672126.htm" target="_blank"> 如何在新思想引领下推动经济高质量发展？</a></li>
+                <li><a href="http://www.sznews.com/news/content/2019-12/02/content_22672138.htm" target="_blank"> 深圳对16个被巡察党组织展开整改督查</a></li>
+
+          </div>
+          <div class="tab">
+            
+                                <ul class="list1">
+                <li><a href="http://www.sznews.com/news/content/2019-11/29/content_22669135.htm" target="_blank"><strong> 李小甘等出席25届中国纪录片学术盛典颁奖典礼</strong></a></li>
+
+            
+                              <li><a href="http://www.sznews.com/news/content/2019-11/29/content_22668031.htm" target="_blank"> 关于征集5G应用场景示范项目的通知</a></li>
+                <li><a href="http://www.sznews.com/news/content/2019-11/29/content_22669140.htm" target="_blank"> 全市规范性文件备案审查工作会议召开</a></li>
+                <li><a href="http://www.sznews.com/news/content/2019-11/29/content_22669139.htm" target="_blank"> 模范机关创建活动知识竞赛决赛举行</a></li>
+                <li><a href="http://www.sznews.com/news/content/2019-11/29/content_22669141.htm" target="_blank"> 深茂铁路在深设西丽站和机场站</a></li>
+                <li><a href="http://www.sznews.com/news/content/2019-11/28/content_22667001.htm" target="_blank"> 2019深防治校园欺凌骨干培训项目遴选结果公示</a></li>
+
+          </div>
+          <div class="zhenjian-mod mb10">
+            <div class="tit zj-tit">
+              <h2><span class="on"><a href="http://wz.sznews.com/" target="_blank">问政深圳</a></span><span><a
+                    href="http://news.sznews.com/node_31304.htm" target="_blank">直播车行动</a></span><span><a
+                    href="http://www.sznews.com/news/node_305310.htm" target="_blank">深网观察</a></span> </h2>
+            </div>
+            <div class="tab tab-on">
+              
+                                    <ul class="list1" style="margin-bottom:0;">
+                  <li><a href="https://szbbs.sznews.com/thread-3998639-1-1.html" target="_blank"><strong> 生活超市噪音持续扰民，回应：已撤走高音喇叭</strong></a></li>
+
+              
+                                  <li><a href="https://szbbs.sznews.com/thread-3994799-1-1.html" target="_blank"> 餐饮店占道经营投诉无果，回应：暂扣经营物品</a></li>
+                  <li><a href="https://szbbs.sznews.com/thread-3999920-1-1.html" target="_blank"> 简报：南山、宝安、福田、龙岗等多部门未回应</a></li>
+                  <li><a href="https://szbbs.sznews.com/thread-3998670-1-1.html" target="_blank"> 龙海家园停车位少，回应：将错峰停放缓解压力</a></li>
+                  <li><a href="https://szbbs.sznews.com/thread-3989985-1-1.html" target="_blank"> 畔山花园施工存消防隐患，回应：设置消防措施</a></li>
+
+
+            </div>
+            <div class="tab">
+              
+                                    <ul class="list1" style="margin-bottom:0;">
+                  <li><a href="http://dc.sznews.com/content/mb/2019-11/20/content_22644348.htm" target="_blank"><strong> 市住建局回应：建筑面积144平方米以下或套内面积120平方米以下都属于普通住宅</strong></a></li>
+
+              
+                                  <li><a href="http://www.sznews.com/news/content/2019-11/13/content_22624706.htm" target="_blank"> 网友吐槽新洲路施工致堵 交通运输局：防撞墙老化亟待更换<IMG style="HEIGHT: 16px; WIDTH: 29px; VERTICAL-ALIGN: middle; FLOAT: none; PADDING-LEFT: 5px; MARGIN-TOP:0px; DISPLAY:   inline"src="http://www.sznews.com/2016gb/images/170106yc01.gif"></a></li>
+                  <li><a href="http://in.sznews.com/content/2019-10/29/content_22583622.htm" target="_blank"> IN视频|东景花园电梯“咯噔”吓坏宝宝和老人 监控还原全过程</a></li>
+                  <li><a href="http://news.sznews.com/content/2019-10/25/content_22574278.htm" target="_blank"> 别再被骗了！深圳“史上最严交规”权威解读版本来了<img style="MARGIN-TOP: 0px; PADDING-LEFT: 5px; WIDTH: 29px; DISPLAY: inline; FLOAT: none; HEIGHT: 16px; VERTICAL-ALIGN: middle" src="http://www.sznews.com/2016gb/images/170106yc01.gif"/></a></li>
+                  <li><a href="http://news.sznews.com/content/2019-10/22/content_22563958.htm" target="_blank"> 直播车|网友爆料天地大厦微信支付停车费要多付1元？真相是……<img src="http://www.sznews.com/2016gb/images/170106yc01.gif" style="display:inline; vertical-align:middle;  padding-left:5px; width:29px; height:16px; margin-top:0; float:none;"/></a></li>
+
+
+            </div>
+
+            <div class="tab">
+              
+                                    <ul class="list1" style="margin-bottom:0;">
+                  <li><a href="http://www.sznews.com/news/content/2019-11/29/content_22670248.htm" target="_blank"><strong> 街坊“察”市场，亮点是“街坊”<img style="HEIGHT: 16px; WIDTH: 29px;VERTICAL-ALIGN:   middle; FLOAT: none; PADDING-LEFT: 5px; MARGIN-TOP: 0px;   DISPLAY:   inline" src="http://www.sznews.com/2016gb/images/170106yc01.gif"/></strong></a></li>
+
+              
+                                  <li><a href="http://www.sznews.com/news/content/2019-11/28/content_22667084.htm" target="_blank"> “携号转网”不能只是说说而已<img style="HEIGHT: 16px; WIDTH: 29px;VERTICAL-ALIGN:   middle; FLOAT: none; PADDING-LEFT: 5px; MARGIN-TOP: 0px;   DISPLAY:   inline" src="http://www.sznews.com/2016gb/images/170106yc01.gif"/></a></li>
+                  <li><a href="http://www.sznews.com/news/content/2019-11/27/content_22663601.htm" target="_blank"> 深圳再下“跳棋”，深河特别合作区如何乘势而上？<img style="HEIGHT: 16px; WIDTH: 29px;VERTICAL-ALIGN:   middle; FLOAT: none; PADDING-LEFT: 5px; MARGIN-TOP: 0px;   DISPLAY:   inline" src="http://www.sznews.com/2016gb/images/170106yc01.gif"/></a></li>
+                  <li><a href="http://www.sznews.com/news/content/2019-11/26/content_22659264.htm" target="_blank"> 年轻人立遗嘱 是生命意识和法律意识的双重进步<img style="HEIGHT: 16px; WIDTH: 29px;VERTICAL-ALIGN:   middle; FLOAT: none; PADDING-LEFT: 5px; MARGIN-TOP: 0px;   DISPLAY:   inline" src="http://www.sznews.com/2016gb/images/170106yc01.gif"/></a></li>
+                  <li><a href="http://www.sznews.com/news/content/2019-11/25/content_22655474.htm" target="_blank"> ETC全覆盖，配套服务也需“全覆盖”<img style="HEIGHT: 16px; WIDTH: 29px;VERTICAL-ALIGN:   middle; FLOAT: none; PADDING-LEFT: 5px; MARGIN-TOP: 0px;   DISPLAY:   inline" src="http://www.sznews.com/2016gb/images/170106yc01.gif"/></a></li>
+
+
+            </div>
+          </div>
+
+        </div>
+        <!-- End:col-1 -->
+
+        <!-- Start:col-2 -->
+        <div class="col-2">
+          <!--深圳要闻 热点-->
+          <div class="szyw-col">
+            <div class="tit">
+              <h2><span class="on"><a href="http://www.sznews.com/news/node_31180.htm"
+                    target="_blank">深圳要闻</a></span><span><a href="http://www.sznews.com/news/node_31180.htm"
+                    target="_blank">热点</a></span></h2>
+            </div>
+            <!--深圳要闻-->
+            <div class="tab tab-on">
+              
+                <ul class="list1" style="margin:0;">
+                                      <li><a href="http://www.sznews.com/news/content/2019-12/02/content_22672018.htm" target="_blank">
+                        <strong> 深圳建成首条郊野径手作步道 位于梅林山 使用26种手工工法</strong>
+                      </a></li>
+                </ul>
+
+              
+                <ul class="list1">
+                                      <li><a href="http://www.sznews.com/news/content/2019-12/02/content_22672020.htm" target="_blank"> 成为深圳中心公园一部分！福田花卉世界将变身多功能园区</a></li>
+                    <li><a href="http://www.sznews.com/news/content/2019-12/02/content_22671994.htm" target="_blank"> 首张华为手机&quot;深圳通互联互通卡&quot;亮相 还有10万个名额免费抢</a></li>
+                    <li><a href="http://www.sznews.com/news/content/2019-12/02/content_22672232.htm" target="_blank"> &quot;新阶层新力量，助力法治示范城市建设&quot;活动向你征集法律问题</a></li>
+                    <li><a href="" target="_blank"> <a href="http://www.sznews.com/news/content/2019-12/02/content_22672055.htm" target="_blank">深圳成全国第二大数字阅读城市</a> <a href="http://www.sznews.com/news/content/2019-12/01/content_22671754.htm" target="_blank">1100万人次参与读书月</a><img style="MARGIN-TOP: 0px; PADDING-LEFT: 5px; WIDTH: 29px; DISPLAY: inline; FLOAT: none; HEIGHT: 16px; VERTICAL-ALIGN: middle" src="http://www.sznews.com/2016gb/images/170106yc01.gif"/></a></li>
+                    <li><a href="http://www.sznews.com/news/content/2019-12/02/content_22672078.htm" target="_blank"> <a href="http://www.sznews.com/zhuanti/node_304527.htm" target="_blank">一周说廉</a>丨<a href="http://www.sznews.com/news/content/2019-12/02/content_22672078.htm" target="_blank">深圳公布首批专项整治漠视侵害群众利益问题成果</a></a></li>
+                </ul>
+
+              
+                <ul class="list1" style="margin:0;">
+                                      <li><a href="http://in.sznews.com/content/2019-12/02/content_22672022.htm" target="_blank">
+                        <strong> <a href="http://www.sznews.com/zhuanti/node_304529.htm" target="_blank">圳能量</a>|<a href="http://in.sznews.com/content/2019-12/02/content_22672022.htm" target="_blank">突发脑梗!危急时刻,公交司机&quot;教科书式&quot;操作保住全车人</a></strong>
+                      </a></li>
+                </ul>
+
+              
+                <ul class="list1">
+                                      <li><a href="http://www.sznews.com/news/content/2019-12/02/content_22672105.htm" target="_blank"> 龙岗又一批公租房来了！673套，大族云峰也在内！<IMG style="HEIGHT: 16px; WIDTH: 29px; VERTICAL-ALIGN: middle; FLOAT: none; PADDING-LEFT: 5px; MARGIN-TOP:0px; DISPLAY:   inline"src="http://www.sznews.com/2016gb/images/170106yc01.gif"></a></li>
+                    <li><a href="http://www.sznews.com/news/content/2019-12/01/content_22671821.htm" target="_blank"> 老太太心脏每秒心跳3.3次！深大总院出奇招“降速”<IMG style="MARGIN-TOP: 0px; PADDING-LEFT: 5px; WIDTH: 29px; DISPLAY: inline; FLOAT: none; HEIGHT: 16px; VERTICAL-ALIGN: middle" src="http://www.sznews.com/2016gb/images/170106yc01.gif"></a></li>
+                    <li><a href="http://in.sznews.com/content/2019-12/02/content_22672700.htm" target="_blank"> 视频：深圳驴友摔下梧桐山燕子崖，蓝天救援队紧急出动！</a></li>
+                    <li><a href="http://in.sznews.com/content/2019-12/02/content_22671986.htm" target="_blank"> 视频：深圳的哥正常调头却遭人用保温杯暴打，拘留10日！</a></li>
+                    <li><a href="http://in.sznews.com/content/2019-12/02/content_22671985.htm" target="_blank"> 视频：灵芝孢子油是“神药”能抑制肿瘤？咱爸妈又被骗了！</a></li>
+                </ul>
+
+            </div>
+            <!--热点-->
+            <div class="tab">
+
+              
+                <ul class="list1" style="margin:0;">
+                                      <li><a href="http://www.sznews.com/news/content/2019-12/02/content_22672048.htm" target="_blank"><strong> 广东百强民营企业 深圳上榜企业连续4年居首</strong></a></li>
+                </ul>
+
+
+                <ul class="list1">
+                                      <li><a href="http://www.sznews.com/news/content/2019-12/02/content_22672034.htm" target="_blank"> 2019中国年度最佳雇主百强出炉 腾讯招行跻身前5</a></li>
+                    <li><a href="http://www.sznews.com/news/content/2019-12/02/content_22672035.htm" target="_blank"> 11262个岗位等你来！高校毕业生就业南方金融科技类专场举行</a></li>
+                    <li><a href="http://www.sznews.com/news/content/2019-12/01/content_22671755.htm" target="_blank"> 健康传播界&quot;奥斯卡&quot;闭幕 儿童医院斩获两项&quot;国字号&quot;大奖<img style="MARGIN-TOP: 0px; PADDING-LEFT: 5px; WIDTH: 29px; DISPLAY: inline; FLOAT: none; HEIGHT: 16px; VERTICAL-ALIGN: middle" src="http://www.sznews.com/2016gb/images/170106yc01.gif"/></a></li>
+                    <li><a href="http://www.sznews.com/news/content/2019-12/02/content_22672139.htm" target="_blank"> 别再买了!宝安黄田市场查出一档不合格牛肉,新鲜度不达标<img src="http://www.sznews.com/2016gb/images/170106yc01.gif" style="display:inline; vertical-align:middle;  padding-left:5px; width:29px; height:16px; margin-top:0; float:none;"/></a></li>
+                    <li><a href="http://www.sznews.com/news/content/2019-12/02/content_22672134.htm" target="_blank">  油条、馒头、瓜子…这些店抽检不合格，快看有你附近的吗<img src="http://www.sznews.com/2016gb/images/170106yc01.gif" style="display:inline; vertical-align:middle;  padding-left:5px; width:29px; height:16px; margin-top:0; float:none;"/></a></li>
+                </ul>
+
+              
+                <ul class="list1" style="margin:0;">
+                                      <li><a href="http://www.sznews.com/news/content/2019-12/02/content_22672383.htm" target="_blank"><strong> 格力电器控制权变更事项拟发生重大进展 今日起临时停牌<img src="http://www.sznews.com/2016gb/images/170106yc01.gif" style="display:inline; vertical-align:middle;  padding-left:5px; width:29px; height:16px; margin-top:0; float:none;"/></strong></a></li>
+                </ul>
+        
+              
+                <ul class="list1">
+                                      <li><a href="http://www.sznews.com/news/content/2019-12/02/content_22672143.htm" target="_blank"> 深圳女孩遭抢劫、绑架、拍裸照，幕后黑手竟是现任男友···</a></li>
+                    <li><a href="http://www.sznews.com/news/content/2019-12/02/content_22672182.htm" target="_blank"> "别妨碍我赚钱,现在就转账！"宝安老太险被"股神"骗30万元</a></li>
+                    <li><a href="http://in.sznews.com/content/2019-12/02/content_22672157.htm" target="_blank"> 视频：龙岗万科里地下停车场汽车自燃起火，幸无人员伤亡</a></li>
+                    <li><a href="http://www.sznews.com/news/content/2019-12/02/content_22672107.htm" target="_blank"> 龙岗一批民生项目将竣工 明年可使用学校11所新增学位15900个</a></li>
+                    <li><a href="http://www.sznews.com/news/content/2019-12/02/content_22672097.htm" target="_blank"> 二氧化碳如何还原至甲醇？南科大课题组最新成果登上《自然》</a></li>
+                </ul>
+ 
+
+            </div>
+          </div>
+
+        </div>
+        <!-- End:col-2 -->
+
+        <!-- Start:col-3 -->
+        <div class="col-3">
+          <div class="yzph-col">
+            <div class="tit">
+              <h2><span class="on"><a href="http://in.sznews.com/" target="_blank">IN视频</a></span></h2>
+            </div>
+            <div class="tab tab-on">
+              
+                                  <div class="top-photo" style="height:172px!important;">
+                    <a href="http://in.sznews.com/content/2019-11/29/content_22669542.htm" target="_blank">
+                      <img src="http://in.sznews.com/pic/2019-11/29/t2_(0X9X583X337)fd2100d5-5b80-40fb-a0c8-86b1479dbed7.jpg" border="0" width="305" height="172" style="height:172px!important;">
+                      <span class="tx">
+                        皇岗口岸重建项目开拆惊现彩虹
+                      </span>
+                    </a>
+                  </div>
+                  <div class="top-photo" style="height:172px!important;">
+                    <a href="http://in.sznews.com/content/2019-11/29/content_22669348.htm" target="_blank">
+                      <img src="http://in.sznews.com/pic/2019-11/29/a0c142a9-ac2e-4633-8102-786cbac6c36d.png" border="0" width="305" height="172" style="height:172px!important;">
+                      <span class="tx">
+                        司机车祸被困，消防员12分钟救出
+                      </span>
+                    </a>
+                  </div>
+
+              <div class="list1">
+              
+<ul>
+<li><a href="http://in.sznews.com/content/2019-11/28/content_22667164.htm" target="_blank">大货车马路上横冲直撞 路人夺命狂奔</a></li>
+<li><a href="http://in.sznews.com/content/2019-12/02/content_22671986.htm" target="_blank">的哥正常调头却遭人用保温杯暴打</a></li>
+<li><a href="http://in.sznews.com/content/2019-12/02/content_22671985.htm" target="_blank">灵芝孢子油是“神药”能抑制肿瘤？</a></li>
+</ul>
+
+</div>
+            </div>
+          </div>
+
+
+        </div>
+        <!-- End:col-3 -->
+      </div>
+      <div class="area area-2 cf" style="margin-bottom:0;">
+        <!-- Start:col-1 -->
+        <div class="col-1">
+
+          <!-- 国内滚图-->
+          <div id="wenzhen-img" class="mb20">
+            <div class="pic">
+              
+                                    <ul>
+                  <li><a href="http://news.sznews.com/content/2019-12/02/content_22672016.htm" target="_blank">
+                      <img src="http://news.sznews.com/pic/2019-12/02/003e233a-3f3d-4fe3-8496-e3ec7d9ec3fd.png" width="365" height="206" alt="“雪龙兄弟”南极卸货记">
+                    </a></li>
+                  <li><a href="http://news.sznews.com/content/2019-12/02/content_22672019.htm" target="_blank">
+                      <img src="http://news.sznews.com/pic/2019-12/02/99f97449-473f-4e7f-98e7-d900c2a5b8df.png" width="365" height="206" alt="广西柳州：美丽异木棉花竞相盛开">
+                    </a></li>
+                <li><a href="http://www.sznews.com/news/content/2019-10/18/content_22553024.htm" target="_blank">
+                      <img src="http://www.sznews.com/resource/templateRes/201909/24/1056/1056/20191024gjh.jpg" width="365" height="206" alt="高交会创新与科研展激发经济增长新活力">
+                    </a></li>
+                </ul>
+
+                      </div>
+          </div>
+          <div class="tit">
+            <h2><span class="on"><a href="http://news.sznews.com/node_150128.htm"
+                  target="_blank">国际新闻</a></span><span><a href="http://www.sznews.com/photo/node_150829.htm"
+                  target="_blank">环宇博闻</a></span></h2>
+          </div>
+          <div class="tab tab-on">
+            
+                                <ul class="list1">
+                <li><a href="http://news.sznews.com/content/2019-12/02/content_22672014.htm" target="_blank"><strong> 欧盟领导人纪念《里斯本条约》生效十周年</strong></a></li>
+
+            
+                              <li><a href="http://news.sznews.com/content/2019-12/02/content_22672027.htm" target="_blank"> 英国货车惨案全部遇难者遗体和骨灰运回越南</a></li>
+                <li><a href="http://news.sznews.com/content/2019-12/02/content_22672032.htm" target="_blank"> 法国政府召开危机会议 紧急应对全国大罢工</a></li>
+                <li><a href="http://news.sznews.com/content/2019-12/02/content_22672031.htm" target="_blank"> 俄军首座"集装箱"超视距雷达站正式进入战斗值班</a></li>
+                <li><a href="http://news.sznews.com/content/2019-12/02/content_22672030.htm" target="_blank"> 突尼斯一客车坠落山谷 造成26人死亡16人受伤</a></li>
+
+          </div>
+          <div class="tab">
+            
+                                <ul class="list1">
+                <li><a href="http://www.sznews.com/photo/content/2019-11/29/content_22668612.htm" target="_blank"><strong> 巴黎深秋时</strong></a></li>
+
+            
+                              <li><a href="http://www.sznews.com/photo/content/2019-11/29/content_22668630.htm" target="_blank"> 地球暖化加剧 科学家：小丑鱼恐在海洋中消失</a></li>
+                <li><a href="http://www.sznews.com/photo/content/2019-11/29/content_22668644.htm" target="_blank"> 莫扎特肖像400万欧元拍出 画中乐谱引关注</a></li>
+                <li><a href="http://www.sznews.com/photo/content/2019-11/29/content_22668639.htm" target="_blank"> 最慢每分钟仅跳2次！科学家首次记录蓝鲸的心跳</a></li>
+                <li><a href="http://www.sznews.com/photo/content/2019-11/29/content_22668607.htm" target="_blank"> 探访多哥洛美大学“新宠”中文系</a></li>
+
+          </div>
+
+        </div>
+        <!-- End:col-1 -->
+
+        <!-- Start:col-2 -->
+        <div class="col-2">
+
+          <!--国内国际-->
+          <div class="gngj-col">
+            <div class="tit">
+              <h2><span class="on"><a href="http://news.sznews.com/node_18029.htm"
+                    target="_blank">国内新闻</a></span><span><a href="http://news.sznews.com/node_18236.htm"
+                    target="_blank">社会新闻</a></span></h2>
+            </div>
+            <div class="tab tab-on">
+              
+                <ul class="list1" style="margin:0;">
+                                      <li><a href="http://news.sznews.com/content/2019-12/02/content_22672887.htm" target="_blank"><strong> 明年起港澳台居民可在内地参加社保 暂行办法公布</strong></a></li>
+                </ul>
+
+              
+                <ul class="list1">
+                                      <li><a href="http://news.sznews.com/content/2019-12/02/content_22671995.htm" target="_blank"> 最高5.5折！铁路部分动车组列车执行票价优化调整</a></li>
+                    <li><a href="http://news.sznews.com/content/2019-12/02/content_22671996.htm" target="_blank"> 中国首部疫苗管理法实施 除了四个最严还有这些重点</a></li>
+                    <li><a href="http://news.sznews.com/content/2019-12/02/content_22671997.htm" target="_blank"> 新一轮医保药品准入谈判结果公布 名贵药如何开出优惠价</a></li>
+                    <li><a href="http://news.sznews.com/content/2019-12/02/content_22672011.htm" target="_blank"> 12月天宇将上演“双子座流星雨极大”“日环食”等精彩天象</a></li>
+                </ul>
+
+              
+                                    <ul class="list1" style="margin:0;">
+                  <li><a href="http://news.sznews.com/content/2019-12/02/content_22672003.htm" target="_blank"><strong> 广州地铁十一号线施工过程中地面坍塌 三人被困</strong></a></li>
+                </ul>
+
+              
+                                    <ul class="list1" style="margin-bottom:0;">
+                  <li><a href="http://news.sznews.com/content/2019-12/02/content_22672119.htm" target="_blank"> 微信回应朋友圈发原图泄露位置：谣言，这锅不背</a></li>
+                  <li><a href="http://news.sznews.com/content/2019-12/02/content_22672121.htm" target="_blank"> 浙江一女老师美国失联？校方：手机信号差导致 已找到</a></li>
+                  <li><a href="http://news.sznews.com/content/2019-12/02/content_22672010.htm" target="_blank"> 9岁男童努力增重为父捐骨髓 硬着头皮一天吃五顿饭</a></li>
+                </ul>
+
+              
+                                    <ul class="list-315">
+                  <li><a href="http://www.sznews.com/zhuanti/node_231155.htm" target="_blank"
+                      style="color:#FF0000;">[天天3·15]</a><a href="http://www.sznews.com/zhuanti/content/2019-11/22/content_22650786.htm" target="_blank"> 晶馨瑜伽：商家停业未退费</a>
+                  </li>
+                </ul>
+
+            </div>
+            <div class="tab">
+
+              
+                                    <ul class="list1" style="margin:0;">
+                  <li><a href="http://news.sznews.com/content/2019-12/02/content_22672118.htm" target="_blank"><strong> 中国三条高铁开通 3线均具备350公里时速运营条件</strong></a></li>
+                </ul>
+
+              
+                                    <ul class="list1">
+                  <li><a href="http://news.sznews.com/content/2019-12/02/content_22672029.htm" target="_blank"> 六部门强化全链条安全管理 危险货物运输车辆禁止挂靠经营</a></li>
+                  <li><a href="http://news.sznews.com/content/2019-12/02/content_22672123.htm" target="_blank"> 女子放火行凶潜逃17年 投案时是当地有名的技术大咖</a></li>
+                  <li><a href="http://news.sznews.com/content/2019-12/02/content_22672284.htm" target="_blank"> 女子婚内出轨老同学，伪造离婚证，还生下一对双胞胎</a></li>
+                  <li><a href="http://news.sznews.com/content/2019-12/02/content_22672350.htm" target="_blank"> 指导用户修电脑结果200G数据没了 苹果:最多赔2000元代金券</a></li>
+                </ul>
+
+              
+                                    <ul class="list1" style="margin:0;">
+                  <li><a href="http://news.sznews.com/content/2019-12/02/content_22672242.htm" target="_blank"><strong> 图个刺激，厦门一男子与美女网友玩裸聊，几天内被讹13万</strong></a></li>
+                </ul>
+
+              
+                                    <ul class="list1">
+                  <li><a href="http://news.sznews.com/content/2019-12/02/content_22672266.htm" target="_blank"> 北京头场冬雪催生新商机：代堆雪人10厘米高25元</a></li>
+                  <li><a href="http://news.sznews.com/content/2019-12/02/content_22672259.htm" target="_blank"> 看着都悬！男子酒后爬上海边百米悬崖，双腿发抖喊&quot;救命&quot;</a></li>
+                  <li><a href="http://news.sznews.com/content/2019-12/02/content_22672117.htm" target="_blank"> 湖南一盘踞13年“保护伞”被拔除 商家放鞭炮庆贺</a></li>
+                  <li><a href="http://news.sznews.com/content/2019-12/02/content_22672120.htm" target="_blank"> 重庆：利用小区住宅办民宿 须经有利害关系业主同意</a></li>
+                </ul>
+
+            </div>
+          </div>
+        </div>
+        <!-- End:col-2 -->
+
+        <!-- Start:col-3 -->
+        <div class="col-3">
+
+          <!--学习强国-->
+          <div class="swch-col">
+            <div class="tit">
+              <h2><span class="on"><a href="http://www.sznews.com/zhuanti/node_304307.htm" target="_blank"><img
+                      src="http://www.sznews.com/resource/templateRes/201909/24/1056/1056/xxqgLOGO.png" height="30" style="margin-top:-10px"> </a></span></h2>
+            </div>
+            <div class="tab tab-on">
+              
+                                  <div class="top-photo" style="height:172px!important">
+                    <a href="https://article.xuexi.cn/articles/index.html?art_id=11062098819931401867&source=share&study_style_id=video_default&share_to=wx_single&study_comment_disable=1&ptype=0&from=groupmessage&isappinstalled=0" target="_blank">
+                      <img src="http://www.sznews.com/zhuanti/pic/2019-11/29/t2_(42X1X542X282)e12ac029-eefc-4aca-bb75-fb21e5ca01de.jpg" border="0" width="305" height="172" style="height:172px!important">
+                      <span class="tx">
+                        【百灵·靓】深圳：暖冬赏花正当时
+                      </span>
+                    </a>
+                  </div>
+
+            </div>
+            
+                                <ul class="list2 special" style="margin-bottom:0;">
+                <li><a href="https://article.xuexi.cn/articles/index.html?art_id=3281754363018294590&source=share&study_style_id=video_default&share_to=wx_single&study_comment_disable=1&ptype=0" target="_blank"> 【百灵·秀】＂十分钟文化服务圈＂让深圳罗湖市民畅享书香</a></li>
+                <li><a href="https://article.xuexi.cn/articles/index.html?art_id=9960090955692005889&source=share&study_style_id=feeds_default&share_to=wx_single&study_comment_disable=1&ptype=0&from=groupmessage&isappinstalled=0" target="_blank"> 【民生幸福标杆】9天开展20余项活动 3万深圳市民感受多彩民俗魅力</a></li>
+                <li><a href="https://article.xuexi.cn/articles/index.html?art_id=2831684684092152602&read_id=EE59066C-15DB-48C8-9E53-6F88CB94D391&study_style_id=feeds_default&share_to=wx_single&study_comment_disable=1&ptype=0&from=groupmessage&isappinstalled=0" target="_blank"> 【民生幸福标杆】深圳拟3年间开展45万人次补贴性职业技能培训</a></li>
+                <li><a href="https://article.xuexi.cn/articles/index.html?art_id=3172234259193958420&source=share&study_style_id=feeds_default&share_to=wx_single&study_comment_disable=1&ptype=0&from=groupmessage&isappinstalled=0" target="_blank"> 【可持续发展先锋】源头减污出实效 深圳南山区10条河流全面消除黑臭</a></li>
+                <li><a href="https://article.xuexi.cn/articles/index.html?art_id=428787671051897281&source=share&study_style_id=feeds_default&share_to=wx_single&study_comment_disable=1&ptype=0&from=groupmessage&isappinstalled=0" target="_blank"> 【南方舞台】让戏剧艺术在基层扎根 第二届深圳拉阔戏剧节圆满闭幕</a></li>
+                <li><a href="https://article.xuexi.cn/articles/index.html?art_id=7374179784931438066&source=share&study_style_id=video_default&share_to=wx_single&study_comment_disable=1&ptype=0&from=groupmessage&isappinstalled=0" target="_blank"> 【百灵·秀】深圳：寻味鹏城，走进夜色下的东门老街</a></li>
+                <li><a href="https://article.xuexi.cn/articles/index.html?art_id=14153362966165828942&jump_model=" target="_blank"> 【人文湾区】第八届全国全民健身操舞大赛总决赛在深圳龙岗圆满闭幕</a></li>
+              </ul>
+
+
+          </div>
+
+        </div>
+        <!--深网视频-->
+
+      </div>
+      <!-- End:col-3 -->
+    </div>
+  </div>
+  <!-- End:area -->
+
+
+  <!-- Start:adv -->
+  <!-- AdSame ShowCode: 2018.2 深圳新闻网/ 首页 / A7 A8 Begin -->
+  <div class="adv cf">
+    <div class="l">
+      <script type="text/javascript" src="http://v10.sznews.com/s?z=sznews&c=637" charset="gbk"></script>
+    </div>
+    <div class="r">
+      <script type="text/javascript" src="http://v10.sznews.com/s?z=sznews&c=638" charset="gbk"></script>
+    </div>
+  </div>
+  <!-- AdSame ShowCode: 2018.2 深圳新闻网/ 首页 / A7 A8 End -->
+  <!-- AdSame ShowCode: 2018.2 深圳新闻网/ 首页 / 通栏A78 Begin -->
+  <div style="margin:0 auto;width:1200px;height:auto;margin-bottom:5px;margin-top:5px">
+    <script type="text/javascript" src="http://v10.sznews.com/s?z=sznews&c=639" charset="gbk"></script>
+  </div>
+  <!-- AdSame ShowCode: 2018.2 深圳新闻网/ 首页 / 通栏A78 END -->
+  <!-- AdSame ShowCode: 2018.2 深圳新闻网/ 首页 / 通栏A78-1 Begin -->
+  <div style="margin:0 auto;width:1200px;height:auto;margin-bottom:5px;margin-top:5px">
+    <script type="text/javascript" src="http://v10.sznews.com/s?z=sznews&c=640" charset="gbk"></script>
+  </div>
+  <!-- AdSame ShowCode: 2018.2 深圳新闻网/ 首页 / 通栏A78-1 END -->
+  <!-- AdSame ShowCode: 2016.6 深圳新闻网 / 首页 / 通栏A78-2 Begin -->
+  <div style="margin:0 auto;width:1200px;height:auto;margin-bottom:5px;margin-top:5px">
+    <script type="text/javascript">
+      <!--
+      index_A7803();
+      -->
+    </script>
+  </div>
+  <!-- AdSame ShowCode: 2016.6 深圳新闻网 / 首页 / 通栏A78-2 END -->
+  <!-- Start:polity-news 环宇时事 -->
+  <div class="area-wrap mt20">
+    <h2 class="area-nav">深圳各区</h2>
+    <!-- Start:area -->
+    <div class="area area-3 cf">
+      <!-- Start:col-1 -->
+      <div class="col-1">
+      
+
+      
+        <div class="tit">
+          <h2><span class="on"><a href="http://news.sznews.com/node_237743.htm" target="_blank">街区·民生</a></span>
+          <dl class="other-area"><dt>各区</dt><dd class="other-area-list"><a href="http://ifutian.sznews.com/" target="_blank">福田</a><a href="http://www.luoohu.com/" target="_blank">罗湖</a><a href="http://inanshan.sznews.com/" target="_blank">南山</a><a href="http://iyantian.sznews.com/" target="_blank">盐田</a><a href="http://ibaoan.sznews.com/" target="_blank">宝安</a><a href="http://ilonggang.sznews.com/" target="_blank">龙岗</a><a href="http://ilonghua.sznews.com/" target="_blank">龙华</a><a href="http://ipingshan.sznews.com/" target="_blank">坪山</a><a href="http://iguangming.sznews.com/" target="_blank">光明</a><a href="http://idapeng.sznews.com/" target="_blank">大鹏</a><a href="http://www.szss.gov.cn/" target="_blank">深汕</a><a href="http://iqianhai.sznews.com/" target="_blank">前海</a></dd></dl></h2>
+        </div>
+        <div class="tab tab-on" style="margin-bottom:-20px;">
+          
+                            <ul class="list3">
+              <li><a href="http://news.sznews.com/content/2019-12/02/content_22672298.htm" target="_blank"><strong> 12月1日起广深城际铁路全线支持扫码乘车</strong></a></li>
+
+          
+            <ul class="list5" style="margin:0;">
+                              <li><a href="http://ibaoan.sznews.com/content/2019-11/29/content_22668841.htm" target="_blank"> 注意了 宝安近期扬尘污染严重项目名单公开曝光</a></li>
+                <li><a href="http://news.sznews.com/content/2019-12/02/content_22672335.htm" target="_blank"> “钢琴教父”点亮福田 云际天籁响彻星空</a></li>
+                <li><a href="http://news.sznews.com/content/2019-12/02/content_22672332.htm" target="_blank"> 莲花心愿驿站搭台爱心企业家精准帮扶送温暖</a></li>
+                <li><a href="http://news.sznews.com/content/2019-12/02/content_22672308.htm" target="_blank"> 世界艾滋病日 龙岗区多举措普及预防艾滋病知识</a></li>
+                <li><a href="http://news.sznews.com/content/2019-12/02/content_22672338.htm" target="_blank"> 华强北街道“五个实”推进模范机关建设</a></li>
+                <li><a href="http://iyantian.sznews.com/content/2019-11/30/content_22671042.htm" target="_blank"> 盐田区首家家庭发展服务中心在小梅沙社区揭牌</a></li>
+                <li><a href="http://news.sznews.com/content/2019-12/02/content_22672341.htm" target="_blank"> 福田区获评2019智慧中国之数字政府50强</a></li>
+                <li><a href="http://news.sznews.com/content/2019-12/02/content_22672304.htm" target="_blank"> 龙岗区文化馆总分馆正式授牌</a></li>
+            </ul>
+
+        </div>
+
+        <div class="tit">
+          <h2><span class="on"><a href="http://news.sznews.com/node_237742.htm" target="_blank">社区零距离</a></span></h2>
+        </div>
+
+        <div class="tab tab-on" style="display:block!important;">
+          
+                            <ul class="list3">
+              <li><a href="http://news.sznews.com/content/2019-12/02/content_22672279.htm" target="_blank"><strong> 交通利好！大鹏假日专线1号今日开行</strong></a></li>
+
+          
+            <ul class="list5" style="margin:0;">
+                              <li><a href="http://www.luoohu.com/content/2019-11/30/content_22670785.htm" target="_blank"> 两面锦旗承载满心感动 社区民微项目获居民点赞</a></li>
+                <li><a href="http://news.sznews.com/content/2019-12/02/content_22672277.htm" target="_blank"> 大鹏警方助力本届金沙湾沙滩音乐节顺利举办</a></li>
+                <li><a href="http://news.sznews.com/content/2019-12/02/content_22672293.htm" target="_blank"> 为期8天的国际短片分享会开启 市民可免费观看</a></li>
+                <li><a href="http://news.sznews.com/content/2019-12/02/content_22672299.htm" target="_blank"> 2019年深圳公园文化季龙华分会场开幕</a></li>
+                <li><a href="http://news.sznews.com/content/2019-12/02/content_22672297.htm" target="_blank"> 温暖龙华有你有我 北站社区基金关爱行动启动</a></li>
+                <li><a href="http://news.sznews.com/content/2019-12/02/content_22672328.htm" target="_blank"> 《漫话中国文学 青春版》举行读者分享会</a></li>
+                <li><a href="http://news.sznews.com/content/2019-12/02/content_22672305.htm" target="_blank"> 龙岗为海丰帮扶村贫困户再送油米</a></li>
+                <li><a href="http://news.sznews.com/content/2019-12/02/content_22672331.htm" target="_blank"> 福田青年驿站又升级！成立“站友法律服务站”</a></li>
+            </ul>
+
+        </div>
+
+      </div>
+      <!-- End:col-1 -->
+
+      <!-- Start:col-2 -->
+      <div class="col-2">
+        <div class="tit">
+          <h2><span class="on"><a href="http://news.sznews.com/node_237741.htm" target="_blank">各区要闻</a></span></h2>
+        </div>
+        <div class="tab tab-on"> 
+          <!-- Start:slide2 -->
+          <div class="slide2">
+            <div id="gq-news">
+              <div class="pic"> 
+                
+<ul><li><a   href="http://news.sznews.com/content/2019-12/02/content_22672675.htm"  target="_blank" >
+<img src="http://news.sznews.com/pic/2019-12/02/t2_(0X18X563X323)847438b3-15c7-4629-a0e3-b5e8c59d48373a6218e9-7103-4f47-bef7-3bc1ad7875a0.jpg" width="470"  height="266" alt="​警营开放深汕首秀 萌娃零距离领略“警”彩！">
+</a></li><li><a   href="http://news.sznews.com/content/2019-12/02/content_22672278.htm"  target="_blank" >
+<img src="http://news.sznews.com/pic/2019-12/02/t2_(13X25X595X340)58040ad8-1a86-417d-b15f-c213e460c1de0e17ace6-b7dc-4c08-aaa7-5b011c51e8cf.jpg" width="470"  height="266" alt="大鹏金沙湾沙滩音乐节在金沙湾国际乐园如期上演！">
+</a></li><li><a   href="http://ibaoan.sznews.com/content/2019-12/01/content_22671606.htm"  target="_blank" >
+<img src="http://news.sznews.com/pic/2019-12/02/t2_(100X8X597X277)7b90e7a9-5534-438f-845f-6342710acbee.jpg" width="470"  height="266" alt="2019深圳宝安国际马拉松赛鸣枪开跑！">
+</a></li><li><a   href="http://news.sznews.com/content/2019-12/02/content_22672340.htm"  target="_blank" >
+<img src="http://news.sznews.com/pic/2019-12/02/t2_(29X0X600X309)0e7b686c-81af-4dd6-999d-20b2d996c86a.png" width="470"  height="266" alt="书香溢满园 | 用一场校园嘉年华带你找回儿时记忆">
+</a></li><li><a   href="http://iyantian.sznews.com/content/2019-11/29/content_22670402.htm"  target="_blank" >
+<img src="http://news.sznews.com/pic/2019-12/02/t2_(0X0X600X325)7de0e539-6dab-4c7e-afac-0053cf686049.jpg" width="470"  height="266" alt="创新城区智向未来 盐田区智慧城市指挥中心启用">
+</a></li></ul>
+ 
+              </div>
+            </div>
+          </div>
+          <!-- End:slide2 --> 
+          
+<ul class="list3" style="margin:0;"><li><a   href="http://news.sznews.com/content/2019-12/02/content_22672342.htm"  target="_blank" ><strong> 皇岗口岸重建项目开拆惊现彩虹 新口岸通关能力翻三倍<IMG style="MARGIN-TOP: 0px; PADDING-LEFT: 5px; WIDTH: 29px; DISPLAY: inline; FLOAT: none; HEIGHT: 16px; VERTICAL-ALIGN: middle" src="http://www.sznews.com/2016gb/images/170106yc01.gif"></strong></a></li></ul>
+ 
+          
+<ul class="list3" style="margin-bottom:15px;"><li><a   href="http://news.sznews.com/content/2019-12/02/content_22672334.htm"  target="_blank" > 每天收运量达4.5吨！福保实现城中村易腐垃圾全量回收<IMG style="MARGIN-TOP: 0px; PADDING-LEFT: 5px; WIDTH: 29px; DISPLAY: inline; FLOAT: none; HEIGHT: 16px; VERTICAL-ALIGN: middle" src="http://www.sznews.com/2016gb/images/170106yc01.gif"></a></li><li><a   href="http://www.luoohu.com/content/2019-11/29/content_22669289.htm"  target="_blank" > 融媒时代 罗湖来了！“罗湖+”APP正式上线！<IMG style="MARGIN-TOP: 0px; PADDING-LEFT: 5px; WIDTH: 29px; DISPLAY: inline; FLOAT: none; HEIGHT: 16px; VERTICAL-ALIGN: middle" src="http://www.sznews.com/2016gb/images/170106yc01.gif"></a></li><li><a   href="http://news.sznews.com/content/2019-12/02/content_22672281.htm"  target="_blank" > 133．22KM大鹏 超乎你的想象 主题旅游推广闪现东门<IMG style="MARGIN-TOP: 0px; PADDING-LEFT: 5px; WIDTH: 29px; DISPLAY: inline; FLOAT: none; HEIGHT: 16px; VERTICAL-ALIGN: middle" src="http://www.sznews.com/2016gb/images/170106yc01.gif"></a></li><li><a   href="http://ibaoan.sznews.com/content/2019-11/29/content_22670276.htm"  target="_blank" > 宝安查获一宗厢式货车偷排高浓度含镍废液涉刑案件<IMG style="MARGIN-TOP: 0px; PADDING-LEFT: 5px; WIDTH: 29px; DISPLAY: inline; FLOAT: none; HEIGHT: 16px; VERTICAL-ALIGN: middle" src="http://www.sznews.com/2016gb/images/170106yc01.gif"></a></li></ul>
+ 
+          
+<ul class="list3" style="margin:0;"><li><a   href="http://iyantian.sznews.com/content/2019-11/29/content_22670401.htm"  target="_blank" ><strong> 盐田区委书记陈清做客“民心桥”栏目 与市民在线沟通交流<IMG style="MARGIN-TOP: 0px; PADDING-LEFT: 5px; WIDTH: 29px; DISPLAY: inline; FLOAT: none; HEIGHT: 16px; VERTICAL-ALIGN: middle" src="http://www.sznews.com/2016gb/images/170106yc01.gif"></strong></a></li></ul>
+ 
+          
+<ul class="list3" style="margin:0;"><li><a   href="http://ibaoan.sznews.com/content/2019-11/29/content_22670232.htm"  target="_blank" > 宝安区天使志愿者服务中心表彰先进 助力和谐医患关系<IMG style="MARGIN-TOP: 0px; PADDING-LEFT: 5px; WIDTH: 29px; DISPLAY: inline; FLOAT: none; HEIGHT: 16px; VERTICAL-ALIGN: middle" src="http://www.sznews.com/2016gb/images/170106yc01.gif"></a></li><li><a   href="http://news.sznews.com/content/2019-12/02/content_22672307.htm"  target="_blank" > 风驰电掣！80多名运动员角逐省青少年自行车（场地）冠军赛</a></li><li><a   href="http://news.sznews.com/content/2019-12/02/content_22672302.htm"  target="_blank" > WHL女冰联赛万科阳光拿下“十连胜” 明年1月迎战卫冕冠军</a></li><li><a   href="http://news.sznews.com/content/2019-12/02/content_22672292.htm"  target="_blank" > 星阅光明图书馆之夜 30对亲子家庭开启图书馆梦幻之旅<IMG style="MARGIN-TOP: 0px; PADDING-LEFT: 5px; WIDTH: 29px; DISPLAY: inline; FLOAT: none; HEIGHT: 16px; VERTICAL-ALIGN: middle" src="http://www.sznews.com/2016gb/images/170106yc01.gif"></a></li></ul>
+ 
+          
+        </div>
+      </div>
+      <!-- End:col-2 --> 
+
+      <!-- Start:col-3 -->
+      <div class="col-3">
+        <div class="tit">
+          <h2><span class="on"><a href="http://news.sznews.com/node_239021.htm" target="_blank">微街区</a></span></h2>
+        </div>
+        
+                      <div class="photo4 cf" style="width:355px;">
+              <a href="https://mp.weixin.qq.com/s/qTcAn4RNnRiv5uRpHqZuEw" class="l" target="_blank"><img src="http://news.sznews.com/pic/2019-12/02/dec3c4b6-a63a-4484-9fcd-ab5bf4b2f092.gif" width="120" height="68"
+                  border="0"> </a>
+              <div class="info r" style="padding-right:55px;">
+                <h3><a href="https://mp.weixin.qq.com/s/qTcAn4RNnRiv5uRpHqZuEw" target="_blank"> 2万名选手"宝马"开跑</a></h3>
+                <p style="width:165px!important;">
+                  跑出朝气与活力！                  <a href="https://mp.weixin.qq.com/s/qTcAn4RNnRiv5uRpHqZuEw" class="red" target="_blank" style="color:#c00;">[详细]</a>
+                </p>
+              </div>
+            </div>
+
+        
+                        <ul class="list5" style="margin-bottom:0;">
+            <li><a href="https://mp.weixin.qq.com/s/ZKiOKIXibfpgUrh_mI4JZg" target="_blank"><strong> 南山人大“先行示范论坛周”来了</strong></a></li>
+          </ul>
+
+        
+                        <ul class="list5" style="margin:0;">
+            <li><a href="https://mp.weixin.qq.com/s/E_m2l3vNH_nMMRt3n9oEjg" target="_blank"> 去龙华打卡粉色花海，逛最美的公园~</a></li>
+            <li><a href="https://mp.weixin.qq.com/s/J8CQz3sWTVSYlTaS5GzZrQ" target="_blank"> 光明33个单位115个岗位集中招聘</a></li>
+            <li><a href="https://mp.weixin.qq.com/s/Y8BUtEMpmCEpvSpGicLN4Q" target="_blank"> "5060"攻坚计划:坝光新村幼儿园来啦</a></li>
+          </ul>
+
+
+        <div class="tit" style="margin-top:20px;">
+          <h2><span class="on"><a href="http://news.sznews.com/node_237739.htm" target="_blank">文体通</a></span></h2>
+        </div>
+        <ul class="list3">
+          
+                          <li><a href="http://news.sznews.com/content/2019-12/02/content_22672310.htm" target="_blank"><strong> 第二届客家印象国际海报展开幕</strong></a></li>
+
+          
+                          <li><a href="http://news.sznews.com/content/2019-12/02/content_22672300.htm" target="_blank"> 200幅文艺精品亮相新锐美术馆</a></li>
+              <li><a href="http://ibaoan.sznews.com/content/2019-11/30/content_22671202.htm" target="_blank"> 第五届领读者大奖宝安颁出</a></li>
+              <li><a href="http://ibaoan.sznews.com/content/2019-12/01/content_22671492.htm" target="_blank"> 松岗“茅洲河杯”足球邀请赛闭幕</a></li>
+              <li><a href="http://ibaoan.sznews.com/content/2019-12/01/content_22671815.htm" target="_blank">  宝安举办歌舞情景剧《中华·家风》</a></li>
+
+        </ul>
+        <!-- Start:slide3 -->
+        <div class="slide3">
+          <div id="wt-news">
+            <div class="pic">
+              
+                                    <ul>
+                  <li><a href="http://news.sznews.com/content/2019-12/02/content_22672309.htm" target="_blank">
+                      <img src="http://news.sznews.com/pic/2019-12/02/t2_(3X16X600X339)0b6cc099-a076-4aa8-af85-ff69f52d3bc4.jpg" width="305" height="172" alt="龙岗少儿登台演绎经典京剧">
+                    </a></li>
+                  <li><a href="http://ibaoan.sznews.com/content/2019-11/30/content_22671018.htm" target="_blank">
+                      <img src="http://news.sznews.com/pic/2019-12/02/t2_(24X17X600X329)72a34be1-a61c-441f-83b5-821e1dff5a92.jpg" width="305" height="172" alt="松岗街道首家熟食中心揭牌">
+                    </a></li>
+                  <li><a href="http://news.sznews.com/content/2019-12/02/content_22672329.htm" target="_blank">
+                      <img src="http://news.sznews.com/pic/2019-12/02/t2_(0X0X600X325)7968b833-89a3-40f2-bc91-16e8a632ae07.jpg" width="305" height="172" alt="福田将创建无障碍国际化幸福城区">
+                    </a></li>
+                </ul>
+
+            </div>
+          </div>
+        </div>
+        <!-- End:slide3 -->
+
+      </div>
+      <!-- End:col-3 -->
+    </div>
+  </div>
+  <!-- End:area -->
+  <div class="rmt-col area">
+    <div class="tit rmt-tit">
+      <h2><span class="on"><a href="#">深网品牌</a></span><span><a href="#">报刊</a></span><span><a
+            href="#">APP</a></span><span><a href="#">各区网站</a></span></h2>
+    </div>
+    <!--深网品牌-->
+    <div class="tab tab-on">
+      
+                    <div class="icon-list">
+          <a href="http://www.sznews.com/zhuanti/node_239622.htm" target="_blank">
+            <img src="http://www.sznews.com/news/pic/2019-11/15/74f6f0ca-ef45-43de-93e8-c3e63de2c182.jpg" alt="问政深圳"></a>
+<a href="http://www.sznews.com/news/node_305310.htm" target="_blank">
+            <img src="http://www.sznews.com/news/pic/2019-11/15/2faf2490-8b0f-43d2-b266-657ee93dad0a.jpg" alt="深网观察"></a>
+<a href="http://www.sznews.com/news/node_240222.htm" target="_blank">
+            <img src="http://www.sznews.com/news/pic/2018-08/16/IMG6c0b840b65f248440353443.png" alt="校傲江湖"></a>
+<a href="http://news.sznews.com/node_31304.htm" target="_blank">
+            <img src="http://www.sznews.com/news/pic/2018-02/07/IMG94c69121319746796974282.png" alt="直播车行动"></a>
+<a href="http://www.sznews.com/zhuanti/node_238162.htm" target="_blank">
+            <img src="http://www.sznews.com/news/pic/2018-02/07/IMG94c69121319746796999791.png" alt="星期三查餐厅"></a>
+<a href="http://www.sznews.com/news/node_237320.htm" target="_blank">
+            <img src="http://www.sznews.com/news/pic/2018-02/07/IMG94c69121319746796989688.png" alt="深新早点"></a>
+<a href="http://www.sznews.com/zhuanti/node_233635.htm" target="_blank">
+            <img src="http://www.sznews.com/news/pic/2018-02/07/d4deb390-294c-4d88-bcd2-b7d14a963ebb.jpg" alt="舆情频道"></a>
+<a href="http://www.sznews.com/zhuanti/node_225526.htm" target="_blank">
+            <img src="http://www.sznews.com/news/pic/2018-02/07/IMG94c69121319746797009994.png" alt="鹏城眼"></a>
+<a href="http://www.sznews.com/zhuanti/node_301639.htm" target="_blank">
+            <img src="http://www.sznews.com/news/pic/2019-04/11/a13ed5ff-52bf-46e7-9174-986fb0069ca7.jpg" alt="一周冰纷播"></a>
+<a href="http://www.sznews.com/news/node_239440.htm" target="_blank">
+            <img src="http://www.sznews.com/news/pic/2018-02/07/13661b47-e246-4557-9c6f-3a809246110b.jpg" alt="张玲说法"></a>
+<a href="http://www.sznews.com/zhuanti/node_305054.htm" target="_blank">
+            <img src="http://www.sznews.com/news/pic/2019-11/15/6e9523eb-e053-4d99-9775-4755bbf04096.png" alt="刘婷心观察"></a>
+<a href="http://www.sznews.com/zhuanti/node_231155.html" target="_blank">
+            <img src="http://www.sznews.com/news/pic/2019-04/12/96996c72-01e4-4494-bbbb-84d052fd544d.jpg" alt="天天3.15"></a>
+    </div>
+
+
+  </div>
+  <!--报刊-->
+  <div class="tab">
+    
+                <div class="icon-list">
+        <a href="http://sztqb.sznews.com" target="_blank"><img src="http://www.sznews.com/news/pic/2018-02/09/IMG94c69121319747143505413.jpg" alt="深圳特区报"></a>
+<a href="http://szsb.sznews.com" target="_blank"><img src="http://www.sznews.com/news/pic/2018-02/09/IMG94c69121319747143515518.jpg" alt="深圳商报"></a>
+<a href="http://wb.sznews.com" target="_blank"><img src="http://www.sznews.com/news/pic/2018-02/09/IMG94c69121319747143511116.jpg" alt="深圳晚报"></a>
+<a href="http://jb.sznews.com" target="_blank"><img src="http://www.sznews.com/news/pic/2018-02/09/IMG94c69121319747143509515.jpg" alt="晶报"></a>
+<a href="http://www.szdaily.com/" target="_blank"><img src="http://www.sznews.com/news/pic/2018-02/09/IMG94c6912131974696944813.jpg" alt="Shenzhen Daily"></a>
+<a href="http://barb.sznews.com" target="_blank"><img src="http://www.sznews.com/news/pic/2018-02/09/IMG94c69121319747143507814.jpg" alt="宝安日报"></a>
+<a href="http://xcb.sznews.com/" target="_blank"><img src="http://www.sznews.com/news/pic/2018-02/09/IMG94c69121319746962844450.jpg" alt="新传播"></a>
+<a href="http://qsnb.sznews.com/" target="_blank"><img src="http://www.sznews.com/news/pic/2018-02/09/IMG94c69121319747143512717.jpg" alt="深圳青少年报"></a>
+<a href="http://szjy.sznews.com" target="_blank"><img src="http://www.sznews.com/news/pic/2018-02/09/IMG94c69121319746962826745.jpg" alt="南方教育时报"></a>
+<a href="http://www.eyeshenzhen.com/" target="_blank"><img src="http://www.sznews.com/news/pic/2018-02/09/IMG94c69121319746814043476.png" alt="EYESHENZHEN"></a>
+  </div>
+
+
+  </div>
+  <!--APP-->
+  <div class="tab">
+    
+                <div class="icon-list app-logo">
+        <a href="http://www.sznews.com/news/content/2018-02/26/content_18529112.htm" target="_blank"><img src="http://www.sznews.com/news/pic/2018-02/26/494c1e62-e192-4195-a05e-d7d4eff79231.jpg" alt="深圳新闻网客户端"><p> 深圳新闻网客户端</p></a>
+<a href="http://www.sznews.com/news/content/2018-02/09/content_18449266.htm" target="_blank"><img src="http://www.sznews.com/news/pic/2018-02/09/IMG94c69121319747032173146.png" alt="深圳特区报客户端"><p> 深圳特区报客户端</p></a>
+<a href="http://www.sznews.com/news/content/2018-02/09/content_18450065.htm" target="_blank"><img src="http://www.sznews.com/news/pic/2018-02/09/IMG94c69121319747032175150.png" alt="深圳商报客户端"><p> 深圳商报客户端</p></a>
+<a href="http://www.sznews.com/news/content/2019-06/18/content_22174391.htm" target="_blank"><img src="http://www.sznews.com/news/pic/2019-06/18/96946dd3-ae57-4b72-98a5-abb6587a5371.jpg" alt="晶报客户端"><p> 晶报客户端</p></a>
+<a href="http://www.sznews.com/news/content/2019-08/09/content_22363348.htm" target="_blank"><img src="http://www.sznews.com/news/pic/2019-08/09/788f287f-8e99-43f5-ba4c-452a01f904de.png" alt="宝安日报客户端"><p> 宝安日报客户端</p></a>
+  </div>
+
+  </div>
+  <!--网站-->
+  <div class="tab">
+    
+                <div class="icon-list">
+        <a href="http://ifutian.sznews.com/" target="_blank"><img src="http://www.sznews.com/news/pic/2018-02/09/IMG94c69121319746960917397.jpg" alt="福田网"></a>
+<a href="http://www.luoohu.com/" target="_blank"><img src="http://www.sznews.com/news/pic/2018-02/09/IMG94c69121319747143521121.jpg" alt="罗湖网"></a>
+<a href="http://inanshan.sznews.com/" target="_blank"><img src="http://www.sznews.com/news/pic/2018-02/09/IMG94c6912131974696124120.jpg" alt="南山网"></a>
+<a href="http://iyantian.sznews.com/" target="_blank"><img src="http://www.sznews.com/news/pic/2018-02/09/IMG94c69121319747143532230.jpg" alt="盐田网"></a>
+<a href="http://ibaoan.sznews.com/" target="_blank"><img src="http://www.sznews.com/news/pic/2018-02/09/IMG94c69121319746969431597.jpg" alt="宝安网"></a>
+<a href="http://ilonggang.sznews.com/" target="_blank"><img src="http://www.sznews.com/news/pic/2018-02/09/IMG94c69121319747143526824.jpg" alt="龙岗网"></a>
+<a href="http://ilonghua.sznews.com/" target="_blank"><img src="http://www.sznews.com/news/pic/2018-02/09/IMG94c69121319747143523322.jpg" alt="龙华网"></a>
+<a href="http://ipingshan.sznews.com/" target="_blank"><img src="http://www.sznews.com/news/pic/2018-02/09/IMG94c69121319747143530529.jpg" alt="坪山网"></a>
+<a href="http://iguangming.sznews.com/" target="_blank"><img src="http://www.sznews.com/news/pic/2018-02/09/IMG94c69121319747143528725.jpg" alt="光明网"></a>
+<a href="http://idapeng.sznews.com/" target="_blank"><img src="http://www.sznews.com/news/pic/2018-02/09/IMG94c69121319747143533731.jpg" alt="大鹏网"></a>
+<a href="http://www.shenshan.gov.cn/" target="_blank"><img src="http://www.sznews.com/news/pic/2018-02/09/ca1c3ddf-7f2e-4826-95cc-e311da03ab16.png" alt="深汕"></a>
+<a href="http://iqianhai.sznews.com/" target="_blank"><img src="http://www.sznews.com/news/pic/2018-02/09/IMG94c69121319746961266513.jpg" alt="前海网"></a>
+  </div>
+
+
+  </div>
+  </div>
+  <!-- Start:adv -->
+
+  <!-- AdSame ShowCode: 2016.6 深圳新闻网 / 首页 / B1-1 B2-1 Begin -->
+  <!--<div class="adv cf" style="margin-top:5px">
+    <div class="l"> 
+   
+      <script type="text/javascript">
+			                     
+									index_B101();
+									
+							 </script>
+    </div>
+    <div class="r"> 
+      <script type="text/javascript">
+			                     
+									index_B201();
+									
+							 </script> 
+    </div>
+  </div>-->
+  <!-- AdSame ShowCode: 2016.6 深圳新闻网 / 首页 / B1-1  B2-1 End -->
+  <!-- End:adv -->
+  <!-- 读创快报：-->
+
+  <!-- 读创快报：-> 
+  <!-- Start:area 深圳论坛-->
+  <div class="area-wrap mt20 forum-mod">
+    <h2 class="area-nav">深圳论坛</h2>
+    <div class="area area-5 cf" style="margin-bottom:0;">
+      <div class="szlt-nav">
+        <dl>
+          <dt><a href="http://szbbs.sznews.com/forum-160-1.html" target="_blank"><img src="http://www.sznews.com/resource/templateRes/201909/24/1056/1056/swlt_nav1.jpg" /></a>
+          </dt>
+          <dd><a href="http://szbbs.sznews.com/forum.php?mod=forumdisplay&fid=160&filter=typeid&typeid=3"
+              target="_blank">报料</a><a
+              href="http://szbbs.sznews.com/forum.php?mod=forumdisplay&fid=160&filter=typeid&typeid=1"
+              target="_blank">问政</a><a href="http://szbbs.sznews.com/forum-2626-1.html" target="_blank">义工</a><a
+              href="http://szbbs.sznews.com/forum.php?mod=forumdisplay&fid=160&filter=typeid&typeid=6"
+              target="_blank">住房</a></dd>
+        </dl>
+        <dl>
+          <dt><a href="http://szbbs.sznews.com/forum.php?gid=1925" target="_blank"><img
+                src="http://www.sznews.com/resource/templateRes/201909/24/1056/1056/swlt_nav2.jpg" /></a></dt>
+          <dd><a href="http://szbbs.sznews.com/forum-1621-1.html" target="_blank">美食</a><a
+              href="http://szbbs.sznews.com/forum-161-1.html" target="_blank">心情</a><a
+              href="http://szbbs.sznews.com/forum-1861-1.html" target="_blank">驴友</a><a
+              href="http://szbbs.sznews.com/forum-202-1.html" target="_blank">宠物</a></dd>
+        </dl>
+        <dl>
+          <dt><a href="http://szbbs.sznews.com/forum.php?gid=174" target="_blank"><img src="http://www.sznews.com/resource/templateRes/201909/24/1056/1056/swlt_nav3.jpg" /></a>
+          </dt>
+          <dd><a href="http://szbbs.sznews.com/forum-1620-1.html" target="_blank">亲子</a><a
+              href="http://szbbs.sznews.com/forum-161-1.html" target="_blank">亲友</a><a
+              href="http://szbbs.sznews.com/forum.php?gid=196" target="_blank">同乡</a><a
+              href="http://szbbs.sznews.com/forum-180-1.html" target="_blank">征婚</a></dd>
+        </dl>
+        <dl>
+          <dt><a href="http://szbbs.sznews.com/forum.php?gid=1293" target="_blank"><img
+                src="http://www.sznews.com/resource/templateRes/201909/24/1056/1056/swlt_nav4.jpg" /></a></dt>
+          <dd><a href="http://szbbs.sznews.com/forum-169-1.html" target="_blank">书香</a><a
+              href="http://szbbs.sznews.com/forum-173-1.html" target="_blank">摄影</a><a
+              href="http://szbbs.sznews.com/forum-194-1.html" target="_blank">音乐</a><a
+              href="http://szbbs.sznews.com/forum-13519-1.html" target="_blank">书法</a></dd>
+        </dl>
+        <dl class="szlt-nav-last">
+          <dt><a href="http://szbbs.sznews.com/forum.php?gid=1921" target="_blank"><img
+                src="http://www.sznews.com/resource/templateRes/201909/24/1056/1056/swlt_nav5.jpg" /></a></dt>
+          <dd><a href="http://szbbs.sznews.com/forum-1619-1.html" target="_blank">二手</a><a
+              href="http://szbbs.sznews.com/forum-1901-1.html" target="_blank">租售</a><a
+              href="http://szbbs.sznews.com/forum-1622-1.html" target="_blank">装修</a><a
+              href="http://szbbs.sznews.com/forum-189-1.html" target="_blank">招聘</a></dd>
+        </dl>
+      </div>
+      <div class="cf" style="margin-top:25px;">
+        <!-- Start:col-2 -->
+        <div class="col-1">
+          <div class="tit">
+            <h2><span class="on"><a
+                  href="http://szbbs.sznews.com/forum.php?mod=forumdisplay&fid=160&filter=typeid&typeid=3"
+                  target="_blank">最新报料</a></span><a href="http://szbbs.sznews.com/forum.php?mod=misc&action=nav"
+                target="_blank" class="tit-right"> 我要报料</a>
+              <div class="cf"></div>
+            </h2>
+          </div>
+          <ul class="list3" style="margin-bottom:12px;">
+            
+                              <li><a href="https://szbbs.sznews.com/thread-4001708-1-1.html" target="_blank"><strong> 平湖特发简头岭的旧改，十号线地铁口无缝对接</strong></a></li>
+
+
+            
+
+                              <li><a href="https://szbbs.sznews.com/thread-4001334-1-1.html" target="_blank"> 4800个新学位渐近！龙岗新学校的最新进度来了</a></li>
+                <li><a href="https://szbbs.sznews.com/thread-4001469-1-1.html" target="_blank"> 尘土飞扬！地铁十号线雪象站工地扬尘何时解决</a></li>
+                <li><a href="https://szbbs.sznews.com/thread-4000058-1-1.html" target="_blank"> 希望南山区西丽街道茶光村的改造能够快点完工</a></li>
+                <li><a href="https://szbbs.sznews.com/thread-4000388-1-1.html" target="_blank"> 急！宝安西乡金海路耗时一年半依旧封锁未完工</a></li>
+                <li><a href="https://szbbs.sznews.com/thread-4000452-1-1.html" target="_blank"> 罗湖区仙湖路这段人行道，修的真是不敢恭维！</a></li>
+
+          </ul>
+          <ul class="list3" style="margin-bottom:12px;">
+            
+                              <li><a href="https://szbbs.sznews.com/thread-4000047-1-1.html" target="_blank"><strong> 翠岭华庭旁的碎石制沙厂产生大量灰尘，很扰民</strong></a></li>
+
+
+            
+                              <li><a href="https://szbbs.sznews.com/thread-4000052-1-1.html" target="_blank"> 深足提前一轮降级，足球振兴计划算不算是失败</a></li>
+                <li><a href="https://szbbs.sznews.com/thread-4000058-1-1.html" target="_blank"> 希望南山区西丽街道茶光村的改造能够快点完工</a></li>
+                <li><a href="https://szbbs.sznews.com/thread-3999114-1-1.html" target="_blank"> 莲花北小区的地下车库，为何不让停新能源车？</a></li>
+                <li><a href="https://szbbs.sznews.com/thread-3999513-1-1.html" target="_blank"> 每年都是这个区最缺学位，什么时候能有改善？</a></li>
+                <li><a href="https://szbbs.sznews.com/thread-3999196-1-1.html" target="_blank"> 保障房里的幼儿园只能给业主上吗？非常不公平</a></li>
+
+          </ul>
+        </div>
+        <!-- End:col-2 -->
+        <!-- Start:col-1 -->
+        <div class="r" style="width:803px;">
+          <div class="tit">
+            <h2><span class="on"><a href="https://szbbs.sznews.com/forum-173-1.html" target="_blank">摄友圈</a></span></h2>
+          </div>
+          <div class="cf">
+            <div class="l" style="width:533px;">
+              <ul class="cf photo3">
+                
+                                      <li class="pp pp-big"><a href="https://szbbs.sznews.com/thread-4001086-1-1.html" target="_blank"><img src="http://www.sznews.com/zhuanti/pic/2019-12/02/4ab298a9-21b5-4942-a5d9-34dca189d05c.jpg"
+                          border="0" width="280" height="157"> <span class="tx"> 与花比美</span></a></li>
+
+              </ul>
+              <ul class="cf photo3">
+                
+                                      <li class="pp pp2"><a href="https://szbbs.sznews.com/thread-4001782-1-1.html" target="_blank"><img src="http://www.sznews.com/zhuanti/pic/2019-12/02/2f1b53bb-e6a1-475e-a54b-08a398bdf562.jpg" border="0"
+                          width="280" height="157"> <span class="tx"> 爱鸟护鸟您也行</span></a></li>
+
+                
+                                      <li class="pp pp3"><a href="https://szbbs.sznews.com/thread-4000512-1-1.html" target="_blank"><img src="http://www.sznews.com/zhuanti/pic/2019-11/29/b02f6e41-e597-4460-86d9-d88e61191a7d.jpg" border="0"
+                          width="280" height="157"> <span class="tx"> 生活怎么能少了音乐和运动？</span></a></li>
+
+              </ul>
+            </div>
+            <ul class="cf photo3 r" style="width:269px;">
+              
+                                  <li class="pp pp1"><a href="https://szbbs.sznews.com/thread-4000181-1-1.html" target="_blank"><img src="http://www.sznews.com/zhuanti/pic/2019-11/28/6e2919d4-8236-4ffd-b21f-1838391aba39.jpg" border="0"
+                        width="280" height="157"> <span class="tx"> 忙充电</span></a></li>
+                  <li class="pp pp1"><a href="https://szbbs.sznews.com/thread-3998005-1-1.html" target="_blank"><img src="http://www.sznews.com/zhuanti/pic/2019-11/27/5d8f6e56-6584-449d-af72-9ea36af58737.jpg" border="0"
+                        width="280" height="157"> <span class="tx"> 深圳南山半程马拉松赛</span></a></li>
+                  <li class="pp pp1"><a href="https://szbbs.sznews.com/thread-3998928-1-1.html" target="_blank"><img src="http://www.sznews.com/zhuanti/pic/2019-11/27/b58e51b7-1980-4b1d-b3d5-b3601911899b.jpg" border="0"
+                        width="280" height="157"> <span class="tx"> 西湾落日</span></a></li>
+
+            </ul>
+          </div>
+        </div>
+        <!-- End:col-1 -->
+
+      </div>
+    </div>
+
+    <!-- End:area -->
+    <div class="area area-4 cf" style="margin-bottom:0;">
+      <!-- Start:col-1 -->
+      <div class="col-1">
+        <div class="tit">
+          <h2><span class="on"><a href="https://szbbs.sznews.com/forum.php?mod=guide&view=hot"
+                target="_blank">论坛热帖</a></span></h2>
+        </div>
+        <ul class="list3">
+          
+                          <li><a href="https://szbbs.sznews.com/thread-4001698-1-1.html" target="_blank"><strong> 为何不管？龙华民治创业花园回收站存在五年了</strong></a></li>
+
+
+          
+                          <li><a href="https://szbbs.sznews.com/thread-4000602-1-1.html" target="_blank"> 别把社区里惠民的电单车充电站，变成了隐患点</a></li>
+              <li><a href="https://szbbs.sznews.com/thread-4000010-1-1.html" target="_blank"> 电子病历应该允许病人自己查询，方便掌握病情</a></li>
+              <li><a href="https://szbbs.sznews.com/thread-3998832-1-1.html" target="_blank"> 保证孩子每天都背小书包、轻书包就是减负吗？</a></li>
+              <li><a href="https://szbbs.sznews.com/thread-3998665-1-1.html" target="_blank"> 公交车停车场设置在居民小区地下停车场很扰民</a></li>
+
+        </ul>
+      </div>
+      <!-- End:col-1 -->
+
+      <!-- Start:col-2 -->
+      <div class="col-2">
+        <div class="tit">
+          <h2><span class="on"><a href="https://szbbs.sznews.com/forum.php?mod=guide&view=digest"
+                target="_blank">论坛精华</a></span><span></span></h2>
+        </div>
+        <ul class="list3">
+          
+                          <li><a href="https://szbbs.sznews.com/thread-4001301-1-1.html" target="_blank"><strong> 深圳富人不敌北上港！拥600万资产“富裕家庭”仅17万户</strong></a></li>
+
+
+          
+                          <li><a href="https://szbbs.sznews.com/thread-4000546-1-1.html" target="_blank"> 希望各大运营商携手推进，让“携号转网”不只是说说而已</a></li>
+              <li><a href="https://szbbs.sznews.com/thread-3999607-1-1.html" target="_blank"> 南山半马--深坛户外义工队再出动，为赛事提供义工服务</a></li>
+              <li><a href="https://szbbs.sznews.com/thread-3998984-1-1.html" target="_blank"> 四年的大学教学生涯，让我与我的学生们结下了不解之缘</a></li>
+              <li><a href="https://szbbs.sznews.com/thread-3998666-1-1.html" target="_blank"> 高速公路收费站ETC全覆盖，配套服务更加需要“全覆盖”</a></li>
+
+        </ul>
+
+
+      </div>
+      <!-- End:col-2 -->
+
+      <!-- Start:col-3 -->
+      <div class="col-3">
+        <div class="tit">
+          <h2><span class="on"><a href="http://szbbs.sznews.com/forum-2652-1.html" target="_blank">攻略圈</a></span><b
+              style="cursor:default;">办事攻略
+              便民信息</b></h2>
+        </div>
+        
+          <ul class="list2">
+                          <li><a href="https://szbbs.sznews.com/thread-4000604-1-1.html" target="_blank"> 坪山区坑梓街道新兴街片区城市更新单元的公示</a></li>
+              <li><a href="https://szbbs.sznews.com/thread-4000603-1-1.html" target="_blank"> 宝安国际马拉松赛期间实施交通管理措施的通告</a></li>
+              <li><a href="https://szbbs.sznews.com/thread-4000598-1-1.html" target="_blank"> 地铁仙湖路站工程施工期间调整交通组织的通告</a></li>
+              <li><a href="https://szbbs.sznews.com/thread-4000596-1-1.html" target="_blank"> 关于部分地铁工程施工期间调整交通组织的通告</a></li>
+              <li><a href="https://szbbs.sznews.com/thread-4000595-1-1.html" target="_blank"> 滨海大道深圳湾总部基地段下沉改造工程的通告</a></li>
+              <li><a href="https://szbbs.sznews.com/thread-3998754-1-1.html" target="_blank"> 11月26日起，深圳新配租800套公租房开放申请</a></li>
+          </ul>
+
+
+      </div>
+      <!-- End:col-3 -->
+    </div>
+    <!-- Start:area -->
+    <div class="area area-4 cf">
+      <!-- Start:col-1 -->
+      <div class="col-1" style="width:865px;">
+        <div class="tit" style="width:855px;">
+          <h2><span class="on"><a href="http://szbbs.sznews.com/forum-216-1.html"
+                target="_blank">同城活动</a></span><b>新鲜热辣的同城活动</b> <a href="http://szbbs.sznews.com/forum-2657-1.html"
+              class="tit-right" target="_blank">我要发布活动</a></h2>
+          <div class="cf"></div>
+        </div>
+        
+                        <div class="cf  tc-photo">
+            <a href="https://szbbs.sznews.com/thread-3999163-1-1.html" target="_blank"><img src="http://www.sznews.com/zhuanti/pic/2019-11/26/61a2c049-44c5-4f2b-8a98-33b1bff2941b.jpg" border="0" width="110"
+                height="83"> <span class="tx"> 11月30日艺术大观</span></a>
+<a href="https://szbbs.sznews.com/thread-3998517-1-1.html" target="_blank"><img src="http://www.sznews.com/zhuanti/pic/2019-11/25/759d5b14-ed26-48bc-bb26-0789cc947d36.jpg" border="0" width="110"
+                height="83"> <span class="tx"> 正佳国际影城观影福利</span></a>
+<a href="https://szbbs.sznews.com/thread-3998504-1-1.html" target="_blank"><img src="http://www.sznews.com/zhuanti/pic/2019-11/25/88aa4d80-a2dc-4073-8ce9-7d8688d6725b.jpg" border="0" width="110"
+                height="83"> <span class="tx"> 12月1日美丽星期天</span></a>
+<a href="http://www.sznews.com/zhuanti/node_231324.htm" target="_blank"><img src="http://www.sznews.com/zhuanti/pic/2018-01/10/IMG6c0b840b67734692771882.png" border="0" width="110"
+                height="83"> <span class="tx"> 法眼看深圳</span></a>
+<a href="https://szbbs.sznews.com/thread-3967624-1-1.html" target="_blank"><img src="http://www.sznews.com/zhuanti/pic/2019-09/24/t2_(30X75X528X355)5f955559-ed09-42f5-8175-18478e0a051f.png" border="0" width="110"
+                height="83"> <span class="tx"> 文明深圳“随手拍”曝光台</span></a>
+      </div>
+
+    </div>
+    <!-- End:col-1 -->
+    <!-- Start:col-3 -->
+    <div class="col-3">
+      <div class="tit">
+        <h2><span class="on"><a href="http://szbbs.sznews.com/forum.php?gid=1921" target="_blank">换客圈</a></span><a
+            href="http://szbbs.sznews.com/forum-1619-1.html" class="tit-right" target="_blank">我要置换</a>
+          <div class="cf"></div>
+        </h2>
+      </div>
+      
+                    <div class="hkq-photo cf">
+          <a href="https://szbbs.sznews.com/thread-4001760-1-1.html" target="_blank"><img src="http://www.sznews.com/zhuanti/pic/2019-12/02/fdc4e717-41e4-4117-b6ca-e452cf6cb27f.jpg" border="0" width="110"
+              height="83"> <span class="tx"> 无线蓝牙键盘</span></a>
+
+      
+        <a href="https://szbbs.sznews.com/thread-3997534-1-1.html" target="_blank" class="hkq-photo-r"><img
+              src="http://www.sznews.com/zhuanti/pic/2019-11/29/d1a884b2-dc89-41f1-be28-23157db23ba6.jpg" border="0" width="110" height="83"> <span class="tx"> 二手电动石磨</span></a>
+
+    </div>
+    <!-- End:col-3 -->
+  </div>
+  </div>
+  <!-- End:area 深圳论坛-->
+  <!-- Start:adv -->
+  <!-- AdSame ShowCode: 2018.2 深圳新闻网/ 首页 / B1 B2 Begin -->
+  <div class="adv cf" style="margin-bottom:15px">
+    <div class="l">
+      <script type="text/javascript" src="http://v10.sznews.com/s?z=sznews&c=641" charset="gbk"></script>
+    </div>
+    <div class="r">
+      <script type="text/javascript" src="http://v10.sznews.com/s?z=sznews&c=642" charset="gbk"></script>
+    </div>
+  </div>
+  <!-- AdSame ShowCode: 2018.2 深圳新闻网/ 首页 / B1  B2 End -->
+  <!-- AdSame ShowCode: 2018.2 深圳新闻网/ 首页 / B3 B4 Begin -->
+  <div class="adv cf">
+    <div class="l">
+      <script type="text/javascript" src="http://v10.sznews.com/s?z=sznews&c=643" charset="gbk"></script>
+    </div>
+    <div class="r">
+      <script type="text/javascript" src="http://v10.sznews.com/s?z=sznews&c=644" charset="gbk"></script>
+    </div>
+  </div>
+  <!-- AdSame ShowCode: 2018.2 深圳新闻网/ 首页 / B3 B4 Begin -->
+  <!-- End:adv -->
+
+
+    <!-- Start:area 发现深圳-->
+    <div class="col" style="width: 1200px; margin-left: 50px;">
+      <h2 class="area-nav" style="left: 0;">发现深圳</h2>
+      <!-- Start:col-4 -->
+      <!--房产 滚图-->
+      <div class="cell">
+        <div id="fc-pic" style="width: 390px!important;">
+          <div class="pic">
+            
+            <ul>
+                            <li><a href="http://dc.sznews.com/content/2019-12/02/content_22672676.htm" target="_blank">
+                    <img src="http://dc.sznews.com/pic/2019-12/02/96427bcc-3c4a-4c09-95d7-88c72881e8cd.jpg" width="415" height="233" alt="11月楼市：人才政策带动二三线城市找房热度"></a></li>
+                <li><a href="http://dc.sznews.com/content/2019-11/29/content_22668225.htm" target="_blank">
+                    <img src="http://dc.sznews.com/pic/2019-11/29/4f42f926-d830-4ecc-aa29-aa7137563a34.jpg" width="415" height="233" alt="白石洲的日与夜"></a></li>
+                <li><a href="http://dc.sznews.com/content/2019-11/28/content_22664941.htm" target="_blank">
+                    <img src="http://dc.sznews.com/pic/2019-11/28/eea2f070-5724-470d-a3af-2768acf37f62.jpg" width="415" height="233" alt="新建住宅区须配套建设养老服务设施"></a></li>
+              </ul>
+
+          </div>
+        </div>
+      </div>
+      <!-- End:col-4 -->
+  
+      <!-- Start:col-5 -->
+      <!-- 房产 -->
+      <div class="cell cell-mid">
+        <div class="tit">
+          <h2><span class="on"><a href="http://dc.sznews.com/" target="_blank">房产</a></span></h2>
+        </div>
+        <div class="tab tab-on">
+          <ul class="list3">
+            
+                              <li><a href="http://dc.sznews.com/content/2019-12/02/content_22672180.htm" target="_blank"><strong>
+                       坪山区多举措探索建立房企“黑名单”制度                     </strong></a></li>
+
+  
+            
+                              <li><a href="http://dc.sznews.com/content/2019-12/02/content_22672156.htm" target="_blank">                     深圳探索人才住房产品标准化 邀专家进行评审 </a></li>
+                <li><a href="http://dc.sznews.com/content/2019-12/02/content_22672146.htm" target="_blank">                     坚持创新驱动 盐田打好产业“政策+空间”组合拳 </a></li>
+                <li><a href="http://dc.sznews.com/content/2019-12/02/content_22672185.htm" target="_blank">                     南山街道冲刺小区撤桶 对配合物业小区实施奖励 </a></li>
+                <li><a href="http://dc.sznews.com/content/2019-12/02/content_22672693.htm" target="_blank">                     每日成交：12月1日深圳商品住宅共成交131套 </a></li>
+
+          </ul>
+        </div>
+      </div>
+      <!-- End:col-5 -->
+  
+      <!-- Start:col-6 -->
+      <!--文旅-->
+      <div class="cell">
+        <div class="tit">
+          <h2><span class="on"><a href="http://www.sznews.com/culture/index.htm" target="_blank">文旅</a></span></h2>
+        </div>
+        <div class="tab tab-on">
+          
+                          <div class="photo4 photo-415 cf"><a href="http://www.sznews.com/culture/content/2019-11/29/content_22668342.htm" target="_blank" class="l"><img
+                    src="http://www.sznews.com/culture/pic/2019-11/29/bb3b631d-50fb-48c4-8eb8-8a680580316b.jpg" border="0" width="154px" height="87px"> </a>
+                <div class="info r" style="width:230px">
+                  <h3><a href="http://www.sznews.com/culture/content/2019-11/29/content_22668342.htm" target="_blank"> 《为祖国干杯》音乐会举行</a></h3>
+                  <p> 日前，《为祖国干杯》“庆祝新中国成立70周年”深圳优秀歌唱家音乐会在深圳音乐厅演奏大厅唱响。...<a href="http://www.sznews.com/culture/content/2019-11/29/content_22668342.htm" target="_blank" class="red">[详细]</a></p>
+                </div>
+              </div>
+
+          <ul class="list3 list-lineheight" style="line-height: 21px">
+            
+                              <li>
+<a href="http://www.sznews.com/culture/content/2019-11/29/content_22670083.htm" target="_blank">深圳网络媒体"江西寻乌行"纪实</a>
+</li>
+                <li>
+<a href="http://www.sznews.com/culture/content/2019-11/29/content_22668329.htm" target="_blank">曾圣雕塑新作《鸿蒙》深圳展出反响热烈</a>
+</li>
+                <li>
+<a href="http://www.sznews.com/culture/content/2019-11/29/content_22668320.htm" target="_blank">“一场有关深圳的回响”带来艺术家思考</a>
+</li>
+
+          </ul>
+        </div>
+      </div>
+      <!-- End:col-6 -->
+  
+      <!-- Start:col-4 -->
+      <!-- 金融 -->
+      <div class="cell">
+        <div class="tit">
+          <h2><span class="on"><a href="http://www.sznews.com/banking/" target="_blank">金融</a></span></h2>
+        </div>
+        <div class="tab tab-on">
+          <ul class="list3">
+            
+                              <li><a href="http://www.sznews.com/banking/content/2019-12/01/content_22671592.htm" target="_blank"><strong> 深圳农行“小小陶艺师” 感悟千年文明的律动</strong></a></li>
+
+  
+            
+                              <li><a href="http://www.sznews.com/banking/content/2019-11/30/content_22671457.htm" target="_blank"> 银行板块估值修复 价值投资正当时 </a></li>
+                <li><a href="http://www.sznews.com/banking/content/2019-11/29/content_22668476.htm" target="_blank"> 保费破6000亿大关 健康险发展迎战略机遇期 </a></li>
+                <li><a href="http://www.sznews.com/banking/content/2019-11/29/content_22668386.htm" target="_blank"> 养老基金委托投资规模未来有望增至1.5万亿元 </a></li>
+                <li><a href="http://www.sznews.com/banking/content/2019-11/29/content_22668593.htm" target="_blank"> 光大银行湘西分行开业 金融精准扶贫触角再延伸 </a></li>
+
+          </ul>
+        </div>
+      </div>
+      <!-- End:col-4 -->
+  
+      <!-- Start:col-5 -->
+      <!--金股 滚图-->
+      <div class="cell cell-mid">
+        <div id="jr-pic" style="width: 390px!important;">
+          <div class="pic">
+            
+                                <ul>
+                <li><a href="http://www.sznews.com/banking/content/2019-12/01/content_22671592.htm" target="_blank">
+                    <img src="http://www.sznews.com/banking/pic/2019-12/01/1082fa9a-e920-481b-98b1-5ac475eadb6d.jpg" width="390" height="233" alt="深圳农行“小小陶艺师” 感悟千年文明的律动"></a></li>
+                <li><a href="http://www.sznews.com/banking/content/2019-11/27/content_22662932.htm" target="_blank">
+                    <img src="http://www.sznews.com/banking/pic/2019-11/27/0d271290-9c63-4a10-b021-1e41586fbda0.png" width="390" height="233" alt="陈东升：做寿险新时代的保险企业家"></a></li>
+                <li><a href="http://www.sznews.com/banking/content/2019-11/27/content_22662324.htm" target="_blank">
+                    <img src="http://www.sznews.com/banking/pic/2019-11/27/a7ca15cf-acde-46e5-9809-69a1cd99c3cd.jpg" width="390" height="233" alt="深圳邮储银行助力产业造血帮扶贫困村“摘帽”"></a></li>
+              </ul>
+
+          </div>
+        </div>
+      </div>
+      <!-- End:col-5 -->
+  
+      <!-- Start:col-6 -->
+      <!--股票-->
+      <div class="cell">
+        <div class="tit">
+          <h2><span class="on"><a href="http://www.sznews.com/stock/index.htm" target="_blank">股票</a></span></h2>
+        </div>
+        <div class="tab tab-on">
+          <ul class="list3">
+            
+                              <li><a href="http://www.sznews.com/stock/content/2019-12/02/content_22672114.htm" target="_blank"><strong> 浮动费率基金回归 5只该类基金正式开售</strong></a></li>
+
+  
+            
+                              <li>
+<a href="http://www.sznews.com/stock/content/2019-12/02/content_22672112.htm" target="_blank">年内56家公司被举牌多家绩差公司受青睐</a>
+</li>
+                <li>
+<a href="http://www.sznews.com/stock/content/2019-12/02/content_22672109.htm" target="_blank">证监会拟打造航母级券商 头部券商或迎注资</a>
+</li>
+                <li>
+<a href="http://www.sznews.com/stock/content/2019-12/02/content_22672101.htm" target="_blank">一周市场观察：逢低吸纳静待转机出现</a>
+</li>
+                <li>
+<a href="http://www.sznews.com/stock/content/2019-12/02/content_22672093.htm" target="_blank">两市缩量震荡下跌 短期积聚超跌反弹动力</a>
+</li>
+
+          </ul>
+        </div>
+      </div>
+      <!-- End:col-6 -->
+  
+      <!-- Start:col-4 -->
+      <!-- 教育 -->
+      <div class="cell">
+        <div class="tit">
+          <h2><span class="on"><a href="http://sznews.com/education/index.htm" target="_blank">教育</a></span></h2>
+        </div>
+        <div class="tab tab-on">
+          <ul class="list3">
+            
+                              <li><a href="http://www.sznews.com/education/content/2019-12/02/content_22672853.htm" target="_blank"><strong> 高密度城市新校园样本 现实的未来学校 </strong></a></li>
+
+            
+<li>
+<a href="http://www.sznews.com/news/content/2019-12/01/content_22671751.htm" target="_blank">​“谁是故事大王·第三季”百名学生、家长共绘画卷祝福祖国<img src="http://www.sznews.com/2016gb/images/170106yc01.gif" style="display:inline; vertical-align:middle; padding-left:5px; width:29px; height:16px; margin-top:0; float:none;" /></a>
+</li>
+<li>
+<a href="http://www.sznews.com/news/content/2019-11/29/content_22669404.htm" target="_blank">阳光小学跳绳队在省跳绳比赛中摘得2金1铜<img src="http://www.sznews.com/2016gb/images/170106yc01.gif" style="display:inline; vertical-align:middle; padding-left:5px; width:29px; height:16px; margin-top:0; float:none;" /></a>
+</li>
+<li>
+<a href="http://www.sznews.com/news/content/2019-11/29/content_22668898.htm" target="_blank">家庭亲子节能环保秀活动走进丹堤实验学校<img src="http://www.sznews.com/2016gb/images/170106yc01.gif" style="display:inline; vertical-align:middle; padding-left:5px; width:29px; height:16px; margin-top:0; float:none;" /></a>
+</li>
+<li>
+<a href="http://www.sznews.com/education/content/2019-11/29/content_22668783.htm" target="_blank">童程童美在深开免费人工智能编程体验课</a>
+</li>
+
+          </ul>
+        </div>
+      </div>
+      <!-- End:col-4 -->
+  
+      <!-- Start:col-5 -->
+      <!-- 健康 -->
+      <div class="cell cell-mid">
+        <div class="tit">
+          <h2><span class="on"><a href="http://health.sznews.com/index.htm" target="_blank">健康</a></span></h2>
+        </div>
+        <div class="tab tab-on">
+          <ul class="list3">
+            
+                              <li><a href="http://health.sznews.com/content/2019-12/02/content_22672819.htm" target="_blank"><strong> 龙华区人民医院正式上线“互联网+护理服务”</strong></a></li>
+
+  
+            
+                              <li><a href="http://health.sznews.com/content/2019-12/02/content_22672758.htm" target="_blank">                     宝安举办“防治性病 为爱护航”宣传周活动 </a></li>
+                <li><a href="http://health.sznews.com/content/2019-12/02/content_22672748.htm" target="_blank">                     养老领域现“非法集资” 谨防养老变“坑老” </a></li>
+                <li><a href="http://health.sznews.com/content/2019-12/02/content_22672738.htm" target="_blank">                    深圳前10月新发艾滋病例1715例 同期减少4. ...
+                      </a></li>
+                <li><a href="http://health.sznews.com/content/2019-12/02/content_22672733.htm" target="_blank">                     国内多地经方爱好者聚宝安 参加中医知识竞赛 </a></li>
+
+          </ul>
+  
+        </div>
+      </div>
+      <!-- End:col-5 -->
+  
+      <!-- Start:col-6 -->
+      <!--教育健康 滚图-->
+      <div class="cell">
+        <div id="edu-pic" style="width: 390px!important;">
+          <div class="pic">
+            
+<ul><li><a   href="http://health.sznews.com/content/2019-12/02/content_22672678.htm"  target="_blank" >
+<img src="http://health.sznews.com/pic/2019-12/02/036812d6-c27a-4e43-a35c-58acea503634_watermark.png" width="415"  height="233" alt="深圳华厦眼科举办全科医生亚专科培养分论坛"></a></li><li><a   href="http://health.sznews.com/content/2019-11/29/content_22669004.htm"  target="_blank" >
+<img src="http://health.sznews.com/pic/2019-11/29/a06f3d2b-b890-4e47-8721-32a9ccad8f0e.png" width="415"  height="233" alt="做好职业健康防护 拒绝职业病"></a></li><li><a   href="http://www.sznews.com/news/content/2019-11/29/content_22668898.htm"  target="_blank" >
+<img src="http://www.sznews.com/news/pic/2019-11/29/2925c09d-c068-4f60-96af-0317f392b44e.jpg" width="415"  height="233" alt="家庭亲子节能环保秀活动走进丹堤实验学校"></a></li></ul>
+
+          </div>
+        </div>
+      </div>
+      <!-- End:col-6 -->
+  
+      <!-- Start:col-4 -->
+      <!--消费-->
+      <div class="cell" style="height:290px!important">
+        <!-- <div class="tit">
+          <h2><span class="on"><a href="http://www.sznews.com/tech/node_231060.htm" target="_blank">消费</a></span>
+          </h2>
+        </div>
+        <div class="tab tab-on">
+          
+                          <div class="photo4 photo-415 cf"><a href="http://www.sznews.com/tech/content/2019-12/02/content_22672777.htm" target="_blank" class="l"><img
+                    src="http://www.sznews.com/tech/pic/2019-12/02/1de95545-a684-4237-9fd1-77be6f2c1b1e.jpg" border="0" width="390px" height="204px"> </a>
+              </div>
+
+          <ul class="list3 list-lineheight">
+            
+                                <li>
+                    <a href="http://www.sznews.com/tech/content/2019-12/02/content_22672839.htm" target="_blank">
+                      <strong> 粤澳联合推出消费维权跨域视频调解机制</strong>
+                    </a>
+                  </li>
+                    <li>
+                      <a href="http://www.sznews.com/tech/content/2019-12/02/content_22672815.htm" target="_blank">
+                        华为手机“深圳通互联互通卡”正式亮相
+                      </a>
+                    </li>
+                    <li>
+                      <a href="http://www.sznews.com/tech/content/2019-12/02/content_22672851.htm" target="_blank">
+                        顺德老牌家电重出江湖如何“撩动”年轻人？
+                      </a>
+                    </li>
+                    <li>
+                      <a href="http://www.sznews.com/tech/content/2019-12/02/content_22672846.htm" target="_blank">
+                        家电业掘金“颜值经济”先进标准引领发展
+                      </a>
+                    </li>
+
+          </ul>
+        </div> -->
+        <div class="tit">
+          <h2><span class="on"><a href="http://www.sznews.com/tech/node_231060.htm" target="_blank">消费</a></span></h2>
+        </div>
+        <div class="tab tab-on">
+          
+                          <div class="photo4 photo-415 cf"><a href="http://www.sznews.com/tech/content/2019-12/02/content_22672777.htm" target="_blank" class="l"><img
+                    src="http://www.sznews.com/tech/pic/2019-12/02/1de95545-a684-4237-9fd1-77be6f2c1b1e.jpg" border="0" width="154px" height="87px"> </a>
+                <div class="info r" style="width:230px">
+                  <h3><a href="http://www.sznews.com/tech/content/2019-12/02/content_22672777.htm" target="_blank"> “一人份”家电成消费者新宠</a></h3>
+                  <p> 迷你电饭煲、一人食养生壶……“一人份”家电成为人们品质生活的新选择，也是消费升级的新风口。...<a href="http://www.sznews.com/tech/content/2019-12/02/content_22672777.htm" target="_blank" class="red">[详细]</a></p>
+                </div>
+              </div>
+
+          <ul class="list3 list-lineheight">
+            
+                              <li><a href="http://www.sznews.com/tech/content/2019-12/02/content_22672839.htm" target="_blank">                     粤澳联合推出消费维权跨域视频调解机制 </a></li>
+                <li><a href="http://www.sznews.com/tech/content/2019-12/02/content_22672815.htm" target="_blank">                     华为手机“深圳通互联互通卡”正式亮相 </a></li>
+                <li><a href="http://www.sznews.com/tech/content/2019-12/02/content_22672851.htm" target="_blank">                     顺德老牌家电重出江湖如何“撩动”年轻人？ </a></li>
+                <li><a href="http://www.sznews.com/tech/content/2019-12/02/content_22672846.htm" target="_blank">                     家电业掘金“颜值经济”先进标准引领发展 </a></li>
+
+  
+  
+          </ul>
+        </div>
+  
+      </div>
+    </div>
+    <!-- End:col-4 -->
+  
+    <!-- Start:col-5 -->
+    <!--美食-->
+    <div class="cell cell-mid" style="height:290px!important">
+      <!-- <div class="tit">
+        <h2><span class="on"><a href="http://www.sznews.com/eating/index.htm" target="_blank">美食</a></span>
+        </h2>
+      </div>
+      <div class="tab tab-on">
+        
+                      <div class="photo4 photo-415 cf"><a href="http://www.sznews.com/eating/content/2019-12/02/content_22670986.htm" target="_blank" class="l"><img
+                  src="http://www.sznews.com/eating/pic/2019-12/02/t2_(73X65X532X323)52ba8f26-2020-477e-86c6-8a07e6cfd212.jpg" border="0" width="390px" height="204px"> </a>
+            </div>
+
+        <ul class="list3 list-lineheight">
+          
+                            <li>
+                  <a href="http://www.sznews.com/eating/content/2019-12/02/content_22670989.htm" target="_blank">
+                    <strong>
+                        伊比利亚顶级黑标火腿5J正式进入深圳市场
+                    </strong>
+                  </a>
+                </li>
+                  <li>
+                    <a href="http://www.sznews.com/eating/content/2019-12/02/content_22672845.htm" target="_blank">
+                      坚持健康饮酒 国台健康饮酒中国行深圳站举行 
+                    </a>
+                  </li>
+                  <li>
+                    <a href="http://www.sznews.com/eating/content/2019-12/02/content_22672830.htm" target="_blank">
+                      康达尔加速再签广西贺州200万头生猪项目
+                    </a>
+                  </li>
+                  <li>
+                    <a href="http://www.sznews.com/eating/content/2019-12/02/content_22672818.htm" target="_blank">
+                      联众共赢深圳汇品联会员大会暨启动仪式举行
+                    </a>
+                  </li>
+
+        </ul>
+      </div> -->
+  
+      <div class="tit">
+        <h2><span class="on"><a href="http://www.sznews.com/eating/index.htm" target="_blank">美食</a></span></h2>
+      </div>
+      <div class="tab tab-on">
+        
+                      <div class="photo4 photo-415 cf"><a href="http://www.sznews.com/eating/content/2019-12/02/content_22670986.htm" target="_blank" class="l"><img
+                  src="http://www.sznews.com/eating/pic/2019-12/02/t2_(73X65X532X323)52ba8f26-2020-477e-86c6-8a07e6cfd212.jpg" border="0" width="154px" height="87px"> </a>
+              <div class="info r" style="width:230px">
+                <h3><a href="http://www.sznews.com/eating/content/2019-12/02/content_22670986.htm" target="_blank">  天猫携手百果园共创美好生活</a></h3>
+                <p> 天猫与百果园在深圳举行战略合作发布会，重塑B2C平台信任体系，让全国都可以吃上好水果。...<a href="http://www.sznews.com/eating/content/2019-12/02/content_22670986.htm" target="_blank" class="red">[详细]</a></p>
+              </div>
+            </div>
+
+        <ul class="list3 list-lineheight">
+          
+                          <li><a href="http://www.sznews.com/eating/content/2019-12/02/content_22670989.htm" target="_blank">                     伊比利亚顶级黑标火腿5J正式进入深圳市场 </a></li>
+              <li><a href="http://www.sznews.com/eating/content/2019-12/02/content_22672845.htm" target="_blank">                     坚持健康饮酒 国台健康饮酒中国行深圳站举行  </a></li>
+              <li><a href="http://www.sznews.com/eating/content/2019-12/02/content_22672830.htm" target="_blank">                     康达尔加速再签广西贺州200万头生猪项目 </a></li>
+              <li><a href="http://www.sznews.com/eating/content/2019-12/02/content_22672818.htm" target="_blank">                     联众共赢深圳汇品联会员大会暨启动仪式举行 </a></li>
+
+        </ul>
+      </div>
+    </div>
+    <!-- End:col-5 -->
+  
+    <!-- Start:col-6 -->
+    <!--时尚-->
+    <div class="cell" style="height:290px!important">
+      <!-- <div class="tit">
+        <h2><span class="on"><a href="http://www.sznews.com/fashion/index.htm" target="_blank">时尚</a></span>
+        </h2>
+      </div>
+      <div class="tab tab-on">
+        
+                      <div class="photo4 photo-415 cf"><a href="http://www.sznews.com/fashion/content/2019-12/02/content_22672801.htm" target="_blank" class="l"><img
+                  src="http://www.sznews.com/fashion/pic/2019-12/02/a27cb81e-80c3-447f-b61b-5364f404d133.jpg" border="0" width="390px" height="204px"> </a>
+            </div>
+
+        <ul class="list3 list-lineheight">
+          
+                            <li>
+                  <a href="http://www.sznews.com/fashion/content/2019-11/29/content_22668587.htm" target="_blank">
+                    <strong> 8天奇迹？欧莱雅“吹牛”被罚了20万元！</strong>
+                  </a>
+                </li>
+                  <li>
+                    <a href="http://www.sznews.com/fashion/content/2019-11/29/content_22668553.htm" target="_blank">
+                      这些化妆品别买了 14批次不合格化妆品清单
+                    </a>
+                  </li>
+                  <li>
+                    <a href="http://www.sznews.com/fashion/content/2019-11/29/content_22668467.htm" target="_blank">
+                      专访：奢华的生活方式 是一种沉浸其中的感受
+                    </a>
+                  </li>
+                  <li>
+                    <a href="http://www.sznews.com/fashion/content/2019-11/29/content_22668460.htm" target="_blank">
+                      亚太设计师大赛暨G8国际设计师峰会开幕
+                    </a>
+                  </li>
+
+        </ul>
+      </div> -->
+      <div class="tit">
+        <h2><span class="on"><a href="http://www.sznews.com/fashion/index.htm" target="_blank">时尚</a></span></h2>
+      </div>
+      <div class="tab tab-on">
+        
+                      <div class="photo4 photo-415 cf"><a href="http://www.sznews.com/fashion/content/2019-12/02/content_22672801.htm" target="_blank" class="l"><img
+                  src="http://www.sznews.com/fashion/pic/2019-12/02/a27cb81e-80c3-447f-b61b-5364f404d133.jpg" border="0" width="154px" height="87px"> </a>
+              <div class="info r" style="width:230px">
+                <h3><a href="http://www.sznews.com/fashion/content/2019-12/02/content_22672801.htm" target="_blank"> “中国风”引领全球时尚潮</a></h3>
+                <p> 近年来，全球时尚界“中国风”劲吹。服装正是观察时尚风向的最佳窗口之一。...<a href="http://www.sznews.com/fashion/content/2019-12/02/content_22672801.htm" target="_blank" class="red">[详细]</a></p>
+              </div>
+            </div>
+
+        <ul class="list3 list-lineheight">
+          
+<li>
+<a href="http://www.sznews.com/fashion/content/2019-12/02/content_22672834.htm" target="_blank">传承匠心 施华洛世奇助力中国传统文化传承</a>
+</li>
+<li>
+<a href="http://www.sznews.com/fashion/content/2019-12/02/content_22672784.htm" target="_blank">网购化妆水一瓶塑料包装超2米 过度包装要重视</a>
+</li>
+<li>
+<a href="http://www.sznews.com/fashion/content/2019-12/02/content_22672765.htm" target="_blank">珠宝设计师丰吉：让世界瞩目“东方风情”</a>
+</li>
+<li>
+<a href="http://www.sznews.com/fashion/content/2019-12/02/content_22672735.htm" target="_blank">意大利GIADA2020春夏城市大秀绽放深圳</a>
+</li>
+
+        </ul>
+      </div>
+    </div>
+    <!-- End:col-6 -->
+  
+    </div>
+  
+    <!-- End:area 发现深圳-->
+
+
+  <!-- Start:adv -->
+  <!-- AdSame ShowCode: 2018.2 深圳新闻网/ 首页 / C1  C2 Begin -->
+  <div class="adv cf" style="margin-bottom:15px;">
+    <div class="l">
+      <script type="text/javascript" src="http://v10.sznews.com/s?z=sznews&c=645" charset="gbk"></script>
+    </div>
+    <div class="r">
+      <script language='javascript' type='text/javascript' src='http://v10.sznews.com/s?z=sznews&la=14'></script>
+    </div>
+  </div>
+  <!-- AdSame ShowCode: 2018.2 深圳新闻网/ 首页 / C1 C2 End -->
+  <!-- End:adv -->
+
+  <!-- Start:area 视觉热图-->
+  <div class="area-wrap mt20">
+    <h2 class="area-nav">视觉热图</h2>
+    <div class="area area-12">
+      <div class="tit">
+        <h2 class="l"><span class="on"><a href="http://www.sznews.com/photo/index.htm" target="_blank">热图</a></span>
+        </h2>
+        <a href="javascript:;" onClick="change();" class="change r">换一批美图</a>
+      </div>
+      <!--1-->
+      <div class="photo5 cf">
+        <ul class="l cf">
+          <!--tt1-->
+          
+                          <li class="pp pp1"><a href="http://www.sznews.com/photo/content/2019-12/02/content_22672089.htm" target="_blank"><img src="http://www.sznews.com/photo/pic/2019-12/02/eecf6ec3-141a-4e5a-be1d-a5746c79bede.png" width="570px"
+                    height="320px" border="0"> <span class="tx"> 沈阳：雪后冬泳市民热情不减 畅游冰河</span></a></li>
+
+          <!--pt1-3-->
+          <li class="pp pptx">
+            
+                              <h3><a href="http://www.sznews.com/photo/content/2019-12/02/content_22672611.htm" target="_blank">2000余件陶瓷藏品亮相重庆荣昌</a></h3>
+                <p class="news-con">当日，“一带一路”陶瓷博览中心在重庆荣昌开馆，该馆收集了古代建筑陶瓷、现代精美陶瓷以及来自英国、法国、德国等多国的陶瓷产品，藏品达2000多件。
+                    <a href="http://www.sznews.com/photo/content/2019-12/02/content_22672611.htm" class="red" target="_blank">[详细]</a></p>
+
+            
+              <ul class="list3">
+                                  <li><a href="http://www.sznews.com/photo/content/2019-12/02/content_22672600.htm" target="_blank">武夷山大红袍体验中心开园</a></li>
+                  <li><a href="http://www.sznews.com/photo/content/2019-12/02/content_22672598.htm" target="_blank">拉林铁路第二次跨越雅鲁藏布江</a></li>
+              </ul>
+
+          </li>
+
+        </ul>
+        <!--tp1-2-->
+        <ul class="r cf">
+          
+                          <li class="pp pp5"><a href="http://www.sznews.com/photo/content/2019-12/02/content_22672588.htm" target="_blank"><img src="http://www.sznews.com/photo/pic/2019-12/02/e3445149-f653-49c5-9861-7070248b04eb.png" border="0"
+                    width="280px" height="158px"> <span class="tx"> 广西柳州推进体育公园建设</span></a></li>
+
+          
+                          <li class="pp pp6"><a href="http://www.sznews.com/photo/content/2019-12/02/content_22672559.htm" target="_blank"><img src="http://www.sznews.com/photo/pic/2019-12/02/3e7c210c-b940-404d-b01e-b44ee3778f15.png" border="0"
+                    width="280px" height="158px"> <span class="tx"> 伦敦：“冬日仙境”</span></a></li>
+
+          <!--tt2-->
+          
+                          <li class="pp pp7"><a href="http://www.sznews.com/photo/content/2019-12/02/content_22672084.htm" target="_blank"><img src="http://www.sznews.com/photo/pic/2019-12/02/4ee03a5f-cb23-49fa-b348-ed401562bbfb.png" border="0"
+                    width="570px" height="320px"> <span class="tx"> 安徽黄山风景区迎来降雪天气 美不胜收</span></a></li>
+
+
+        </ul>
+      </div>
+
+      <!--2-->
+      <script type="text/template" class="tmpl" id="img-tmpl">
+
+        <ul class="l cf">
+            <!--tt3-->
+            
+   <li class="pp pp1"><a   href="http://www.sznews.com/photo/content/2019-12/02/content_22672217.htm"  target="_blank" ><img src="http://www.sznews.com/photo/pic/2019-12/02/d5f1360c-ae44-4bba-8f5f-ebd24349cbc4.png"    width="570" height="320" border="0"> <span class="tx"> 乒乓球——国际乒联男子世界杯：樊振东夺冠</span></a></li>
+
+  <!--pt4-6-->
+            <li class="pp pptx">
+              
+   <h3><a   href="http://www.sznews.com/photo/content/2019-09/20/content_22483759.htm"  target="_blank" > 朝凌客专燕都隧道贯通</a></h3><p class="news-con"> 朝凌客专于2017年10月1日开工建设，线路自朝阳站引出，经辽宁省朝阳市、北票市、锦州市后接入京哈铁路秦沈段（秦沈客专）的凌海南站，建设里程105.6公里，设计时速350公里。<a   href="http://www.sznews.com/photo/content/2019-09/20/content_22483759.htm"   class="red" target="_blank" >[详细]</a></p>
+
+              
+  <ul class="list3"><li><a   href="http://www.sznews.com/photo/content/2019-11/29/content_22666516.htm"  target="_blank" > 直击云南临沧安石隧道突泥涌水事故现场 衬台车被淤泥冲出</a></li><li><a   href="http://www.sznews.com/photo/content/2019-11/29/content_22668466.htm"  target="_blank" > 云南墨江国际双胞胎文化节举行花车巡游</a></li></ul>
+
+            </li>
+            
+        </ul>
+          <!--tp3-4-->
+          <ul class="r cf">
+            
+   <li class="pp pp5"><a   href="http://www.sznews.com/photo/content/2019-11/29/content_22668368.htm"  target="_blank" ><img src="http://www.sznews.com/photo/pic/2019-11/29/4bb1ca7e-18b7-4256-9715-b5807e87c45d.png"    border="0"  width="280" height="158"> <span class="tx"> 沙漠深处的“CEO”</span></a></li>
+
+            
+   <li class="pp pp6"><a   href="http://www.sznews.com/photo/content/2019-11/29/content_22668289.htm"  target="_blank" ><img src="http://www.sznews.com/photo/pic/2019-11/29/cbb937d4-0827-4c9a-a60b-7048cb5ae9fb.png"    border="0"  width="280" height="158"> <span class="tx"> 巴黎深秋时</span></a></li>
+ 
+            <!--tt4-->
+            
+   <li class="pp pp7"><a   href="http://www.sznews.com/photo/content/2019-11/29/content_22666552.htm"  target="_blank" ><img src="http://www.sznews.com/photo/pic/2019-11/29/436fe837-aa5e-4b3a-a8a0-01deffa57702.png"    border="0"  width="570" height="320"> <span class="tx"> 图看华夏儿女传统感恩方式</span></a></li>
+
+          
+          </ul>	
+      </script>
+
+      <!--3-->
+      <script type="text/template" class="tmpl" id="img-tmpl">
+        <ul class="l cf">
+            <!--tt5-->
+            
+   <li class="pp pp1"><a   href="http://www.sznews.com/photo/content/2019-11/29/content_22668085.htm"  target="_blank" ><img src="http://www.sznews.com/photo/pic/2019-11/29/4520d1f0-cf46-46f7-95ff-4ecbf48aaa89.png"    width="570" height="320" border="0"> <span class="tx"> 缤纷多彩长三角——冬日的上海崇明长江入海口</span></a></li>
+
+            <!--pt7-9-->
+            <li class="pp pptx">
+              
+   <h3><a   href="http://www.sznews.com/photo/content/2019-11/29/content_22668338.htm"  target="_blank" > 探访多哥洛美大学“新宠”中文系</a></h3><p class="news-con"> <a   href="http://www.sznews.com/photo/content/2019-11/29/content_22668338.htm"   class="red" target="_blank" >[详细]</a></p>
+
+              
+  <ul class="list3"><li><a   href="http://www.sznews.com/photo/content/2019-11/28/content_22664744.htm"  target="_blank" > 甘肃天水清水河污染犯罪嫌疑人被抓获</a></li><li><a   href="http://www.sznews.com/photo/content/2019-11/28/content_22664750.htm"  target="_blank" > 国务院检查组暗访核查佛山一农村河涌黑臭十余年无人管理</a></li></ul>
+
+            </li>
+            
+          </ul>
+          <!--tp5-6-->
+          <ul class="r cf">
+            
+   <li class="pp pp5"><a   href="http://www.sznews.com/photo/content/2019-11/28/content_22664839.htm"  target="_blank" ><img src="http://www.sznews.com/photo/pic/2019-11/28/c8af10ec-cffa-4b2d-8e85-083ee20a6ad9.png"    border="0"  width="280" height="158"> <span class="tx"> 云南思茅：茶园云海美如画</span></a></li>
+
+            
+   <li class="pp pp6"><a   href="http://www.sznews.com/photo/content/2019-11/28/content_22664806.htm"  target="_blank" ><img src="http://www.sznews.com/photo/pic/2019-11/28/53516e6f-4a9a-4a3c-9369-b9bf3686dae0.png"    border="0"  width="280" height="158"> <span class="tx"> 秋到罗马</span></a></li>
+ 
+            <!--tt6-->
+            
+   <li class="pp pp7"><a   href="http://www.sznews.com/photo/content/2019-11/25/content_22654200.htm"  target="_blank" ><img src="http://www.sznews.com/photo/pic/2019-11/25/b413f0c9-3beb-4964-9d9a-95ece3dbd444.png"    border="0"  width="570" height="320"> <span class="tx"> 建在山顶上的古山寨 曾是村民的避难场所</span></a></li>
+
+           
+          </ul>	
+      </script>
+
+      <!--4-->
+      <script type="text/template" class="tmpl" id="img-tmpl">
+        <ul class="l cf">
+            <!--tt7-->
+            
+   <li class="pp pp1"><a   href="http://www.sznews.com/photo/content/2019-11/29/content_22668128.htm"  target="_blank" ><img src="http://www.sznews.com/photo/pic/2019-11/29/67dca684-90f9-4284-b561-e872e41ed442.png"    width="570" height="320" border="0"> <span class="tx"> 纽约举行2019感恩节大游行</span></a></li>
+
+            <!--pt10-12-->
+            <li class="pp pptx">
+              
+   <h3><a   href="http://www.sznews.com/photo/content/2019-11/28/content_22664760.htm"  target="_blank" > 地中海与古蜀文明跨越时空的多彩对话</a></h3><p class="news-con"> “彩绘地中海：一座古城的文明与幻想”展览26日在四川博物院开幕，向中国观众展现了两千多年前地中海与古蜀文明跨越时空的多彩对话。<a   href="http://www.sznews.com/photo/content/2019-11/28/content_22664760.htm"   class="red" target="_blank" >[详细]</a></p>
+
+              
+  <ul class="list3"><li><a   href="http://www.sznews.com/photo/content/2019-11/27/content_22662200.htm"  target="_blank" > 游弋煤海的万吨“钢铁巨兽”</a></li><li><a   href="http://www.sznews.com/photo/content/2019-11/27/content_22662049.htm"  target="_blank" > 中俄南非三国在开普敦举行海上联合演习</a></li></ul>
+
+            </li>
+            
+          </ul>
+          <!--tp7-8-->
+          <ul class="r cf">
+            
+   <li class="pp pp5"><a   href="http://www.sznews.com/photo/content/2019-11/28/content_22664828.htm"  target="_blank" ><img src="http://www.sznews.com/photo/pic/2019-11/28/019ac782-9734-4fb5-a6a0-cc596c23f1b7.png"    border="0"  width="280" height="158"> <span class="tx"> “一键式报警柱”亮相兰州街头</span></a></li>
+
+            
+   <li class="pp pp6"><a   href="http://www.sznews.com/photo/content/2019-11/28/content_22664763.htm"  target="_blank" ><img src="http://www.sznews.com/photo/pic/2019-11/28/408bca8f-738e-45d3-8176-bcf333ac4305.png"    border="0"  width="280" height="158"> <span class="tx"> 记者手记：与八廓街之约</span></a></li>
+ 
+            <!--tt8-->
+            
+   <li class="pp pp7"><a   href="http://www.sznews.com/photo/content/2019-11/28/content_22664775.htm"  target="_blank" ><img src="http://www.sznews.com/photo/pic/2019-11/28/a449de93-3979-4348-ba33-2e089098ada9.png"    border="0"  width="570" height="320"> <span class="tx"> 京张高铁东花园北站整体亮相</span></a></li>
+
+           
+          </ul>	
+      </script>
+
+      <!--5-->
+      <script type="text/template" class="tmpl" id="img-tmpl">
+        <ul class="l cf">
+            <!--tt9-->
+            
+   <li class="pp pp1"><a   href="http://www.sznews.com/photo/content/2019-11/28/content_22663206.htm"  target="_blank" ><img src="http://www.sznews.com/photo/pic/2019-11/28/1f7a7281-b787-4d5e-b3ec-7a6741eb45e1.png"    width="570" height="320" border="0"> <span class="tx"> 大叔街头“喷火”三十年 演绝技一年要喝千斤煤油</span></a></li>
+
+            <!--pt13-15-->
+            <li class="pp pptx">
+              
+   <h3><a   href="http://www.sznews.com/photo/content/2019-11/27/content_22661732.htm"  target="_blank" > 河南社旗山陕会馆：古代“茶叶之路”上的建筑明珠</a></h3><p class="news-con"> 河南省社旗县赊店镇是明清时期著名的商业古镇，是“茶叶之路”的重要中转站。赊店镇上的山陕会馆始建于清代，系当年寓居此地的山陕二省商人集资兴建的同乡会馆。<a   href="http://www.sznews.com/photo/content/2019-11/27/content_22661732.htm"   class="red" target="_blank" >[详细]</a></p>
+
+              
+  <ul class="list3"><li><a   href="http://www.sznews.com/photo/content/2019-11/26/content_22657494.htm"  target="_blank" > 玉磨铁路三家村隧道顺利贯通</a></li><li><a   href="http://www.sznews.com/photo/content/2019-11/26/content_22657392.htm"  target="_blank" > 广东珠海：小学生零距离接触帝企鹅</a></li></ul>
+
+            </li>
+           
+          </ul>
+          <!--tp9-10-->
+          <ul class="r cf">
+            
+   <li class="pp pp5"><a   href="http://www.sznews.com/photo/content/2019-11/27/content_22662108.htm"  target="_blank" ><img src="http://www.sznews.com/photo/pic/2019-11/27/7d4ea2ce-75ec-4f91-aa18-19106ad19ae6.png"    border="0"  width="280" height="158"> <span class="tx"> “无声世界”里爱的传递</span></a></li>
+
+            
+   <li class="pp pp6"><a   href="http://www.sznews.com/photo/content/2019-11/27/content_22661806.htm"  target="_blank" ><img src="http://www.sznews.com/photo/pic/2019-11/27/a2e3ecd4-b5c1-445b-b846-8745d718255e.png"    border="0"  width="280" height="158"> <span class="tx"> 金门：老房子的复古魅力</span></a></li>
+ 
+            <!--tt10-->
+            
+   <li class="pp pp7"><a   href="http://www.sznews.com/photo/content/2019-11/28/content_22664988.htm"  target="_blank" ><img src="http://www.sznews.com/photo/pic/2019-11/28/38c657d4-c0e4-4b6b-b4d5-78e38ab8f394.png"    border="0"  width="570" height="320"> <span class="tx"> 重庆主城最后一批渔民退捕上岸 51艘渔船集中进行拆解</span></a></li>
+
+            <!--tp29-30--> 
+        
+          </ul>	
+      </script>
+    </div>
+  </div>
+  <!-- End:area -->
+
+  <!-- Start:adv -->
+  <!-- AdSame ShowCode: 2018.2 深圳新闻网/ 首页 / C3 C4 Begin -->
+  <div class="adv cf">
+    <div class="l">
+      <script type="text/javascript" src="http://v10.sznews.com/s?z=sznews&c=646" charset="gbk"></script>
+    </div>
+    <div class="r">
+      <script type="text/javascript" src="http://v10.sznews.com/s?z=sznews&c=647" charset="gbk"></script>
+    </div>
+  </div>
+  <!-- AdSame ShowCode: 2018.2 深圳新闻网/ 首页 / C3 C4 Begin -->
+  <!-- End:adv -->
+
+
+
+  <!-- Start:adv -->
+  <!-- AdSame ShowCode: 2018.2 深圳新闻网/ 首页 /  D1 D2 Begin -->
+  <div class="adv cf" style="margin-bottom:15px;">
+    <div class="l">
+      <script type="text/javascript" src="http://v10.sznews.com/s?z=sznews&c=648" charset="gbk"></script>
+    </div>
+    <div class="r">
+      <script type="text/javascript" src="http://v10.sznews.com/s?z=sznews&c=649" charset="gbk"></script>
+    </div>
+  </div>
+  <!-- AdSame ShowCode: 2018.2 深圳新闻网/ 首页 /  D1 D2 end -->
+  <!-- End:adv -->
+  <!--start英文网内容-->
+  <div class="area-wrap mt20" style="height:430px; overflow:hidden;">
+    <!-- Start:area -->
+    <div class="area area-11 cf">
+      <div class="tit">
+        <h2><span class="on"><a href="http://www.eyeshenzhen.com/" target="_blank">EYESHENZHEN</a></span></h2>
+      </div>
+      <!-- Start:col-1 -->
+      <div class="col-1">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            
+                              <div class="swiper-slide"><a href="http://www.eyeshenzhen.com/content/2019-11/14/content_22627233.htm" target="_blank"><img src="http://news.sznews.com/pic/2019-11/19/a19f8920-160b-4613-8a74-bb7ed81329ca.jpg"
+                      alt="21st China Hi-Tech Fair"></a>
+                  <div class="swiper-text">
+                    <h3><a href="http://www.eyeshenzhen.com/content/2019-11/14/content_22627233.htm" target="_blank"> 21st China Hi-Tech Fair</a></h3>
+                    <p> The 21st China Hi-Tech Fair (CHTF) was held from Nov. 13-17 at Shenzhen Convention and Exhibition Center. </p>
+                    <p class="more"><a href="http://www.eyeshenzhen.com/content/2019-11/14/content_22627233.htm" target="_blank">READ MORE ></a></p>
+                  </div>
+                </div>
+                <div class="swiper-slide"><a href="http://www.eyeshenzhen.com/content/2019-11/11/content_22617484.htm" target="_blank"><img src="http://news.sznews.com/pic/2019-11/13/540feebc-b2af-4d17-9108-c75793cc87f6.jpg"
+                      alt="21st Bougainvillea Show in town"></a>
+                  <div class="swiper-text">
+                    <h3><a href="http://www.eyeshenzhen.com/content/2019-11/11/content_22617484.htm" target="_blank"> 21st Bougainvillea Show in town</a></h3>
+                    <p> Coinciding with Shenzhen Park Culture Season, the 200,000-square-meter 21st Bougainvillea Show opened Nov. 8 at the Lianhua Hill Park in Futian District and will last 20 days.  </p>
+                    <p class="more"><a href="http://www.eyeshenzhen.com/content/2019-11/11/content_22617484.htm" target="_blank">READ MORE ></a></p>
+                  </div>
+                </div>
+                <div class="swiper-slide"><a href="http://www.eyeshenzhen.com/content/2019-11/13/content_22623905.htm" target="_blank"><img src="http://news.sznews.com/pic/2019-11/13/ec12eed8-02c8-49d0-8582-99acd61cf499.jpg"
+                      alt="Dragon's Den provides ideas on sustainable development"></a>
+                  <div class="swiper-text">
+                    <h3><a href="http://www.eyeshenzhen.com/content/2019-11/13/content_22623905.htm" target="_blank"> Dragon's Den provides ideas on sustainable development</a></h3>
+                    <p> Following the innovation process, the 2019 UNLEASH Innovation Lab has moved forward to the Dragons' Den stage, which was held at the Shekou I-Factory in Nanshan District on Tuesday night. </p>
+                    <p class="more"><a href="http://www.eyeshenzhen.com/content/2019-11/13/content_22623905.htm" target="_blank">READ MORE ></a></p>
+                  </div>
+                </div>
+
+          </div>
+          <!-- Add Arrows -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+      <!-- End:col-1 -->
+
+      <!-- Start:col-2 -->
+      <div class="col-2">
+        <ul class="en-img-news">
+          
+                          <li>
+                <h4><a href="http://www.eyeshenzhen.com/content/2019-11/29/content_22669211.htm" target="_blank"> Hydrogen, fuel cells key to future energy development</a></h4>
+                <div class="cf">
+                  <p class="en-txt"><a href="http://www.eyeshenzhen.com/content/2019-11/29/content_22669211.htm" target="_blank"> Nearly 100 experts and officials in the field of energy and technology gathered at Shenzhen Energy Center on Thursday to attend the third preparatory meeting for the Shenzhen First Session International Hydrogen and Fuel Cell Leaders Summit.</a></p>
+                </div>
+              </li>
+
+          
+                          <li>
+                <h4><a href="http://www.eyeshenzhen.com/content/2019-11/29/content_22669108.htm" target="_blank"> Hydrogen, fuel cells key to future energy development</a></h4>
+                <div class="cf">
+                  <p class="en-txt"><a href="http://www.eyeshenzhen.com/content/2019-11/29/content_22669108.htm" target="_blank">
+                      Nearly 100 experts and officials in the field of energy and technology gathered at S
+                          ...
+                    </a><a href="http://www.eyeshenzhen.com/node_216476.htm" target="_blank" class="more">READ MORE
+                      ></a></p>
+                </div>
+              </li>
+
+        </ul>
+        <ul class="en-list">
+          
+                          <li><a href="http://www.eyeshenzhen.com/content/2019-12/02/content_22672755.htm" target="_blank"> Catch Phrase | 黑五（hēiwǔ）</a> </li>
+
+          
+                          <li><a href="http://www.eyeshenzhen.com/content/2019-11/28/content_22665582.htm" target="_blank"> Catch Phrase | 脱粉（ tuōfěn）</a> <a
+                  href="http://www.eyeshenzhen.com/node_216464.htm" target="_blank" class="more">READ MORE ></a>
+              </li>
+
+        </ul>
+      </div>
+      <!-- End:col-2 -->
+
+      <!-- Start:col-3 -->
+      <div class="col-3">
+        
+                      <dl class="en-img-news2">
+              <dt><a href="http://www.eyeshenzhen.com/content/2019-11/25/content_22655865.htm" target="_blank" class="en-img"><img src="http://news.sznews.com/pic/2019-11/25/3ae707b0-40b5-42b0-bc8e-fc3594afa2e1.jpg"
+                    alt="Englishman continues music dream in SZ"></a></dt>
+              <dd><a href="http://www.eyeshenzhen.com/content/2019-11/25/content_22655865.htm" target="_blank" class="en-tit"> Englishman continues music dream in SZ</a></dd>
+            </dl>
+            <dl class="en-img-news2">
+              <dt><a href="http://www.eyeshenzhen.com/content/2019-11/18/content_22636244.htm" target="_blank" class="en-img"><img src="http://news.sznews.com/pic/2019-11/18/70fb490c-795c-4c97-95d7-6e6b5d1e2a7c.jpg"
+                    alt="Designer and storyteller"></a></dt>
+              <dd><a href="http://www.eyeshenzhen.com/content/2019-11/18/content_22636244.htm" target="_blank" class="en-tit"> Designer and storyteller</a></dd>
+            </dl>
+
+        
+                      <dl class="en-img-news2">
+              <dt><a href="http://www.eyeshenzhen.com/content/2019-11/04/content_22598170.htm" target="_blank" class="en-img"><img src="http://news.sznews.com/pic/2019-11/04/b57d71fe-ae67-41fe-b179-35c580ebb825.jpg"
+                    alt="Jordanian engineer’s startup receives 1m-yuan govt. grant"></a></dt>
+              <dd><a href="http://www.eyeshenzhen.com/content/2019-11/04/content_22598170.htm" target="_blank" class="en-tit"> Jordanian engineer’s startup receives 1m-yuan govt. grant</a>
+                <Url><a href="http://www.eyeshenzhen.com/node_216463.htm" target="_blank" class="en-more"></Url>READ
+                MORE ></a>
+              </dd>
+            </dl>
+
+      </div>
+      <!-- End:col-3 -->
+    </div>
+  </div>
+  <!--end英文网内容-->
+
+  <!-- Start:partner -->
+  <div class="partner">
+    <!--微信合作-->
+    <div class="weixin-col">
+      <h4>微信合作</h4>
+      
+                    <ul class="weixin-list">
+          <li>
+            <p> 光明群团</p><img src="http://www.sznews.com/zhuanti/pic/2018-11/19/40620fd3-a7d6-41c9-b159-8941aed732b2.jpg" border="0">
+          </li>
+          <li>
+            <p> 筑梦大鹏</p><img src="http://www.sznews.com/zhuanti/pic/2018-02/07/IMG1078d2e1cdb746798496079.jpg" border="0">
+          </li>
+          <li>
+            <p> 圳教育</p><img src="http://www.sznews.com/zhuanti/pic/2018-02/07/IMG1078d2e1cdb746798492977.jpg" border="0">
+          </li>
+          <li>
+            <p> 盐田区生态文明碳币服务平台</p><img src="http://www.sznews.com/zhuanti/pic/2018-02/07/IMG1078d2e1cdb746798488875.jpg" border="0">
+          </li>
+          <li>
+            <p> 新湖之窗</p><img src="http://www.sznews.com/zhuanti/pic/2018-02/07/IMG1078d2e1cdb746798485173.jpg" border="0">
+          </li>
+          <li>
+            <p> 心灵茁壮</p><img src="http://www.sznews.com/zhuanti/pic/2018-02/07/IMG1078d2e1cdb746798481971.png" border="0">
+          </li>
+          <li>
+            <p> 文明盐田</p><img src="http://www.sznews.com/zhuanti/pic/2018-02/07/IMG1078d2e1cdb746798479269.png" border="0">
+          </li>
+          <li>
+            <p> 文明深圳</p><img src="http://www.sznews.com/zhuanti/pic/2018-02/07/IMG1078d2e1cdb746798469667.png" border="0">
+          </li>
+          <li>
+            <p> 同心大鹏</p><img src="http://www.sznews.com/zhuanti/pic/2018-02/07/IMG1078d2e1cdb746798466565.jpg" border="0">
+          </li>
+          <li>
+            <p> 特区企业文化</p><img src="http://www.sznews.com/zhuanti/pic/2018-02/07/IMG1078d2e1cdb746798463263.png" border="0">
+          </li>
+          <li>
+            <p> 深圳舆情研究院</p><img src="http://www.sznews.com/zhuanti/pic/2018-02/07/IMG1078d2e1cdb746798454861.jpg" border="0">
+          </li>
+          <li>
+            <p> 深圳新闻网</p><img src="http://www.sznews.com/zhuanti/pic/2018-02/07/IMG1078d2e1cdb746798452059.jpg" border="0">
+          </li>
+          <li>
+            <p> 深圳食事药闻</p><img src="http://www.sznews.com/zhuanti/pic/2018-02/07/IMG1078d2e1cdb746798446257.jpg" border="0">
+          </li>
+          <li>
+            <p> 深圳龙华发布</p><img src="http://www.sznews.com/zhuanti/pic/2018-02/07/IMG1078d2e1cdb746798442255.jpg" border="0">
+          </li>
+          <li>
+            <p> 深圳科技创新</p><img src="http://www.sznews.com/zhuanti/pic/2018-02/07/IMG1078d2e1cdb746798438553.jpg" border="0">
+          </li>
+          <li>
+            <p> 深圳光明</p><img src="http://www.sznews.com/zhuanti/pic/2018-02/07/IMG1078d2e1cdb746798435051.jpg" border="0">
+          </li>
+          <li>
+            <p> 深圳工务署</p><img src="http://www.sznews.com/zhuanti/pic/2018-02/07/IMG1078d2e1cdb746798431249.jpg" border="0">
+          </li>
+          <li>
+            <p> 深圳工会</p><img src="http://www.sznews.com/zhuanti/pic/2018-02/07/IMG1078d2e1cdb746798428147.jpg" border="0">
+          </li>
+          <li>
+            <p> 深圳发布</p><img src="http://www.sznews.com/zhuanti/pic/2018-02/07/IMG1078d2e1cdb746798424645.jpg" border="0">
+          </li>
+          <li>
+            <p> 深圳宝安共青</p><img src="http://www.sznews.com/zhuanti/pic/2018-02/07/IMG1078d2e1cdb746798420343.png" border="0">
+          </li>
+          <li>
+            <p> 深网房产</p><img src="http://www.sznews.com/zhuanti/pic/2018-02/07/IMG1078d2e1cdb746798416641.jpg" border="0">
+          </li>
+          <li>
+            <p> 深思网</p><img src="http://www.sznews.com/zhuanti/pic/2018-02/07/IMG1078d2e1cdb746798413239.png" border="0">
+          </li>
+          <li>
+            <p> 人才深圳</p><img src="http://www.sznews.com/zhuanti/pic/2018-02/07/IMG1078d2e1cdb746798410537.jpg" border="0">
+          </li>
+          <li>
+            <p> 群策龙岗</p><img src="http://www.sznews.com/zhuanti/pic/2018-02/07/IMG1078d2e1cdb746798407535.jpg" border="0">
+          </li>
+          <li>
+            <p> 南山教育</p><img src="http://www.sznews.com/zhuanti/pic/2018-02/07/IMG1078d2e1cdb746798404533.png" border="0">
+          </li>
+          <li>
+            <p> 马田在线</p><img src="http://www.sznews.com/zhuanti/pic/2018-02/07/IMG1078d2e1cdb746798401131.jpg" border="0">
+          </li>
+          <li>
+            <p> 龙华人大</p><img src="http://www.sznews.com/zhuanti/pic/2018-02/07/IMG1078d2e1cdb746798397829.jpg" border="0">
+          </li>
+          <li>
+            <p> 龙岗统计</p><img src="http://www.sznews.com/zhuanti/pic/2018-02/07/IMG1078d2e1cdb746798394527.jpg" border="0">
+          </li>
+          <li>
+            <p> 乐FUN南山</p><img src="http://www.sznews.com/zhuanti/pic/2018-02/07/IMG1078d2e1cdb746798391325.jpg" border="0">
+          </li>
+          <li>
+            <p> 健康桥</p><img src="http://www.sznews.com/zhuanti/pic/2018-02/07/IMG1078d2e1cdb746798388723.jpg" border="0">
+          </li>
+          <li>
+            <p> 光明文体通</p><img src="http://www.sznews.com/zhuanti/pic/2018-02/07/IMG1078d2e1cdb746798386021.jpg" border="0">
+          </li>
+          <li>
+            <p> 凤凰微窗</p><img src="http://www.sznews.com/zhuanti/pic/2018-02/07/IMG1078d2e1cdb746798382719.jpg" border="0">
+          </li>
+          <li>
+            <p> 社区家园网</p><img src="http://www.sznews.com/zhuanti/pic/2018-02/07/IMG4439c452c70f4698930051.jpg" border="0">
+          </li>
+          <li>
+            <p> 大鹏新区社区家园网</p><img src="http://www.sznews.com/zhuanti/pic/2018-02/07/IMG1078d2e1cdb746798369615.jpg" border="0">
+          </li>
+          <li>
+            <p> 大鹏公共事业</p><img src="http://www.sznews.com/zhuanti/pic/2018-02/07/IMG1078d2e1cdb746798362513.jpg" border="0">
+          </li>
+          <li>
+            <p> 创新南山</p><img src="http://www.sznews.com/zhuanti/pic/2018-02/07/IMG1078d2e1cdb746798357811.jpg" border="0">
+          </li>
+          <li>
+            <p> 滨海宝安</p><img src="http://www.sznews.com/zhuanti/pic/2018-02/07/IMG1078d2e1cdb74679726799.png" border="0">
+          </li>
+          <li>
+            <p> 宝安消防</p><img src="http://www.sznews.com/zhuanti/pic/2018-02/06/IMG1078d2e1cdb74679083128.png" border="0">
+          </li>
+          <li>
+            <p> 宝安区土地规划监察局</p><img src="http://www.sznews.com/zhuanti/pic/2018-02/06/IMG1078d2e1cdb74679082046.png" border="0">
+          </li>
+          <li>
+            <p> 宝安教育</p><img src="http://www.sznews.com/zhuanti/pic/2018-02/06/IMG1078d2e1cdb74679081584.jpg" border="0">
+          </li>
+          <li>
+            <p> 爸爸书房</p><img src="http://www.sznews.com/zhuanti/pic/2018-02/06/IMG1078d2e1cdb74679078442.jpg" border="0">
+          </li>
+        <li class="cf"></li>
+        </ul>
+
+      <div class="cf"></div>
+    </div>
+    <div class="partner-tab cf"> <span class="on">深圳报业媒体群<i class="arrow"></i></span> <span>深圳公益网群<i
+          class="arrow"></i></span> <span>合作网站<i class="arrow"></i></span> <span>友情链接<i class="arrow"></i></span>
+      <span>“一带一路”网络联盟<i class="arrow"></i></span> </div>
+    <div class="partner-con cf on">
+      <p><a href="http://sztqb.sznews.com/" target="_blank">深圳特区报</a>|<a href="http://szsb.sznews.com/"
+          target="_blank">深圳商报</a>|<a href="http://wb.sznews.com/" target="_blank">深圳晚报</a>|<a
+          href="http://jb.sznews.com/" target="_blank">晶报</a>|<a href="http://www.szdaily.com/" target="_blank">Shenzhen Daily</a>|<a
+          href="http://barb.sznews.com/" target="_blank">宝安日报</a>|<a href="http://qsnb.sznews.com/"
+          target="_blank">深圳青少年报</a>|<a href="http://xcb.sznews.com/" target="_blank">新传播</a><a
+          href="http://www.cnci.net.cn/" target="_blank">中国文化产业网</a>|<a href="http://szjy.sznews.com/"
+          target="_blank">南方教育时报</a></p>
+      <p><a href="http://www.sznews.com/zhuanti/node_95906.htm" target="_blank">深圳iNews </a>|<a
+          href="https://www.dutenews.com/" target="_blank">读特网</a>|<a rel="nofollow" href="http://www.cnicif.com/"
+          target="_blank">文博会</a>|<a href="http://www.sznews.com/publish/node_13497.htm"
+          target="_blank">深圳报业集团出版社</a>|<a href="http://www.jdonline.com.hk/" target="_blank">香港经济导报</a>|<a
+          href="http://duchuang.sznews.com/index.htm" target="_blank">读创网</a>|<a href="http://szmedia.sznews.com"
+          target="_blank">深新传媒</a></p>
+    </div>
+    <div class="partner-con cf">
+      <p><a rel="nofollow" href="http://www.szguanai.com/" target="_blank">关爱网</a>|<a rel="nofollow"
+          href="http://www.szxlga.com/" target="_blank">深圳关爱热线网</a>|<a rel="nofollow" href="http://www.igongyi.org.cn/"
+          target="_blank">关爱基金</a>|<a rel="nofollow" href="http://web.cncf.org.cn/" target="_blank">中国公益慈善项目交流展示会</a>
+      </p>
+    </div>
+    <div class="partner-con cf">
+      <p><a rel="nofollow" target="_blank" href="http://gdsz.wenming.cn/">文明网</a>|<a rel="nofollow" target="_blank"
+          href="http://www.szmil.com/">国防教育网</a>|<a rel="nofollow" target="_blank"
+          href="http://www.szzx.gov.cn/">政协网</a>|<a rel="nofollow" target="_blank"
+          href="http://szmtf.sznews.com/">深圳市新闻人才基金会</a>|<a rel="nofollow" href="http://bagf.sznews.com/"
+          target="_blank">宝安国防网</a>|<a rel="nofollow" href="http://www.szlilun.com/" target="_blank">深思网</a>|<a
+          rel="nofollow" target="_blank" href="http://www.szguanai.com/">深圳关爱网</a>|<a rel="nofollow" target="_blank"
+          href="http://www.szxlga.com/">心理关爱网 </a>|<a rel="nofollow" target="_blank"
+          href="http://www.igongyi.org.cn/">关爱基金</a>|<a rel="nofollow" target="_blank"
+          href="http://www.sztalent.org//">深圳人才工作网</a>|<a href="https://www.ciep.gov.cn/" target="_blank">中国国际人才交流大会</a>
+      </p>
+      <p><a href="http://www.pengchengenergy.com/" target="_blank">鹏城新力</a>| <a href="http://www.sciep.com/" target="_blank">深圳国际人才交流中心</a></p>
+    </div>
+    <div class="partner-con cf">
+      <p><a href="http://www.cac.gov.cn" target="_blank">中国网信网</a>|<a href="http://www.people.com.cn/"
+          target="_blank">人民网</a>|<a href="http://www.xinhuanet.com/" target="_blank">新华网</a>|<a
+          href="http://www.wenming.cn/" target="_blank">中国文明网</a>|<a href=" http://hk.hkcd.com/pdf/index.htm"
+          target="_blank">香港商报</a>|<a href="http://www.southcn.com/"
+          target="_blank">南方网</a>|<a href="http://sz.people.com.cn/" target="_blank">人民网深圳频道</a>|<a
+          href="http://www.dbw.cn/" target="_blank">东北网</a>|<a rel="nofollow" href="http://www.investshenzhen.gov.cn/"
+          target="_blank">深圳市投资推广署</a>|<a rel="nofollow" href="http://gadpi.org.cn/" target="_blank">广东数字出版产业联合会</a>|<a
+          rel="nofollow" href="http://shuangyashan.dbw.cn/" target="_blank">双鸭山新闻网</a></p><p><a rel="nofollow"
+          href="http://difang.gmw.cn/sz/" target="_blank">光明网深圳频道</a></p>
+    </div>
+    <div class="partner-con cf">
+      <p><A href="http://www.cqnews.net/" target="_blank">华龙网</A>|<A href="http://www.sznews.com/"
+          target="_blank">深圳新闻网</A>|<A href="http://www.xinjiangnet.com.cn/" target="_blank">新疆网</A>|<A
+          href="http://www.xmnn.cn/" target="_blank">厦门网</A>|<A href="http://www.qingdaonews.com/"
+          target="_blank">青岛新闻网</A>|<A href="http://www.qzwb.com/" target="_blank">泉州网</A>|<A
+          href="http://www.runsky.com/" target="_blank">大连天健网</A>|<A href="http://www.hangzhou.com.cn/"
+          target="_blank">杭州网</A>|<A href="http://www.cnnb.com.cn/" target="_blank">中国宁波网</A>|<A
+          href="http://www.66wz.com/" target="_blank">温州网</A>|<A href="http://www.dayoo.com/" target="_blank">大洋网</A>|<A
+          href="http://www.gdzjdaily.com.cn/" target="_blank">湛江新闻网</A>|<A href="http://www.zynews.cn/"
+          target="_blank">中原网</A></p>
+      <p><A href="http://www.guilinlife.com/" target="_blank">桂林生活网</A>|<A href="http://www.changsha.cn/"
+          target="_blank">星辰在线</A>|<A href="http://www.longhoo.net/index.html" target="_blank">龙虎网</A>|<A
+          href="http://www.yznews.com.cn/" target="_blank">扬州网</A>|<A href="http://www.jiaodong.net/"
+          target="_blank">胶东在线</A>|<A href="http://www.xiancn.com/" target="_blank">西安新闻网</A>|<A
+          href="http://www.kunming.cn/" target="_blank">昆明信息港</A>|<A href="http://www.lanzhou.cn/"
+          target="_blank">中国兰州网</A>|<A href="http://www.ycen.com.cn/" target="_blank">银川新闻网</A>|<A
+          href="http://www.my399.com/" target="_blank">哈尔滨新闻网</A>|<A href="http://www.kf.cn/" target="_blank">开封网</A>|<A
+          href="http://www.zjknews.com/" target="_blank">张家口新闻网</A></p>
+      <p><A href="http://www.chengdu.cn/" target="_blank">成都全搜索</A>|<A href="http://www.hkwb.net/"
+          target="_blank">海口网</A>|<A href="http://news.cjn.cn/" target="_blank">长江网</A>|<A
+          href="http://www.ylxw.com.cn/" target="_blank">伊犁新闻网</A>|<A href="http://www.enorth.com.cn/"
+          target="_blank">北方网</A>|<A href="http://www.qhnews.com/" target="_blank">青海新闻网</A>|<A
+          href="http://www.cnxz.com.cn/" target="_blank">中国徐州网</A>|<A href="http://www.ycwb.com/"
+          target="_blank">金羊网</A>|<A href="http://www.fznews.com.cn/" target="_blank">福州新闻网</A>|<A
+          href="http://www.lyd.com.cn/ " target="_blank">洛阳网</A>|<A href="http://www.e23.cn/" target="_blank">舜网</A>|<A
+          href="http://www.hebei.com.cn/" target="_blank">长城网</A>|<A href="http://www.gatv.com.cn/"
+          target="_blank">广安新闻网</A></p>
+      <p><A href="http://www.tlfw.net/" target="_blank">吐鲁番新闻网</A>|<A href="http://www.hf365.com/"
+          target="_blank">合肥在线</A>|<A href="http://www.tynews.com.cn/" target="_blank">太原新闻网</A>|<A
+          href="http://www.baojinews.com/" target="_blank">宝鸡新闻网</A>|<A href="http://www.gazx.org/"
+          target="_blank">广安在线</A>|<A href="http://www.2500sz.com/" target="_blank">名城苏州网</A>|<A
+          href="http://www.zgzyw.com.cn/" target="_blank">中国张掖网</A>|<A href="http://www.dahuawang.com/"
+          target="_blank">大华网</A>|<A href="http://www.snxw.com/" target="_blank">遂宁新闻网</A>|<A
+          href="http://www.zhoushan.cn/" target="_blank">舟山网</A>|<A href="http://www.txdzw.com/"
+          target="_blank">大足网</A>|<a href="http://365jilin.com" target="_blank">吉和网</a></p>
+    </div>
+  </div>
+  <!-- End:partner -->
+
+  <!-- Start:union -->
+  <script type="text/javascript" src="http://www.sznews.com/2016gb/js/2018cswm.js"></script>
+  <!-- End:union -->
+  </div>
+  </div>
+  </div>
+  <!-- End:content -->
+
+  <!-- Start:footer -->
+  <div class="footer">
+    <div class="footer-inner cf">
+      <div class="link">
+        <div class="about"><a href="http://www.sznews.com/zhuanti/node_46881.htm" target="_blank">关于我们</a>|<a
+            href="http://www.sznews.com/2014/du/kdgg/kdggmain.html" target="_blank">集团广告价目</a>|<a
+            href="http://www.sznews.com/zhuanti/node_300732.html" target="_blank">深网广告价目</a>
+          <!--|<a href="http://www.sznews.com/zhuanti/node_140509.htm" target="_blank">合作伙伴</a>-->|<a
+            href="http://www.sznews.com/top/link.htm" target="_blank">申请链接</a>|<a
+            href="http://www.sznews.com/2017/qiyexinxi07142.html" target="_blank">报业集团及下属企业信息</a>|<a
+            href="http://www.sznews.com/top/lxwm/lxwm.html" target="_blank">联系我们</a>|<a href="zhuanti/node_238963.htm"
+            target="_blank">免责声明</a></div>
+        <p class="phone"><span class="phone-ico">廉政监督电话：</span>(0755)83515516 | 报料热线：(0755)83518877</p>
+      </div>
+      <div class="info">
+        <p>备案编号：<a href="http://beian.miit.gov.cn"
+            target="_blank">粤ICP备16092393号-2</a>&nbsp;|&nbsp;互联网新闻信息服务许可证 <a
+            href="http://www.sznews.com/top/paper/paper-webnews.html" target="_blank">4412006004</a></p>
+        <p>增值电信业务经营许可证 <a href="http://www.sznews.com/top/paper/paper-dxzz.html"
+            target="_blank">粤B1.B2-20062024</a>&nbsp;|&nbsp;信息网络传播视听节目许可证<a
+            href="http://www.sznews.com/top/paper/stxkz.html" target="_blank">1906154</a></p>
+        <p>网络文化经营许可证 <a href="http://www.sznews.com/top/paper/whxkz.html"
+            target="_blank">粤网文[2017]11007-2832号</a>&nbsp;|&nbsp;网络出版服务许可证 <a
+            href="http://www.sznews.com/top/paper/paper-webpublish.html" target="_blank">（总）网出证（粤）字第024号</a></p>
+        <p>广播电视节目制作经营许可证<a href="http://www.sznews.com/top/paper/201702gbdsxkz.pdf" target="_blank">（粤）字第01775号</a></p>
+        <p>深圳新闻网传媒股份有限公司版权所有，未经书面授权禁止使用</p>
+        <p>COPYRIGHT &copy; BY WWW.SZNEWS.COM ALL RIGHTS RESERVED</p>
+      </div>
+      <img src="http://www.sznews.com/resource/templateRes/201909/24/1056/1056/foot-0703-new.jpg" width="241" height="53" usemap="#Map2" class="report-center">
+      <map name="Map2">
+        <area shape="rect" coords="44,5,136,44" href="http://www.12377.cn/" target="_blank">
+        <area shape="rect" coords="4,8,36,44"
+          href="http://sq.ccm.gov.cn/ccnt/sczr/service/business/emark/toDetail/4028c08c4b2ad968014b2e87e77a0b86"
+          target="_blank">
+        <area shape="rect" coords="144,7,237,42"
+          href="https://ss.knet.cn/verifyseal.dll?sn=e12050911010020704307708&ct=df&a=1&pa=0.38224937637180356"
+          target="_blank">
+      </map>
+      <div class="trust-center">
+        <script id="ebsgovicon"
+          src="https://szcert.ebs.org.cn/govicons.js?id=ccdf69f5-6522-4bd0-b1e2-a5004644fcfb&width=40&height=56&type=1"
+          type="text/javascript" charset="utf-8"></script>
+      </div>
+    </div>
+  </div>
+  <!-- End:footer -->
+  <div id="advPrev" style="display: none;"> <a href="http://www.sznews.com/zhuanti/node_229508.htm" target="_blank"><img
+        layer-src="http://www.sznews.com/2016mi/images/adv1209.jpg" layer-pid=""
+        src="http://www.sznews.com/2016mi/images/adv1209.jpg" alt="广告图片" layer-index="0" style=""></a>
+    <div> <span class="adv-time" style="color: red;">15</span>秒后关闭 <span class="close-adv"
+        style="float:right;cursor: pointer;">[关闭]</span> </div>
+  </div>
+  <!--民生版块下拉js-->
+  <script type="text/javascript">
+    $(function () {
+      $('.ms-list-item dd').hover(
+        function () {
+          $(this).children('ul').css({
+            display: 'block'
+          });
+          $(this).focus().css({
+            background: 'url(http://www.sznews.com/resource/templateRes/201909/24/1056/1056/ms-icon-l-minus.png) no-repeat 285px 15px'
+          });
+        },
+        function () {
+          $(this).children('ul').css({
+            display: 'none'
+          });
+          $(this).focus().css({
+            background: 'url(http://www.sznews.com/resource/templateRes/201909/24/1056/1056/ms-icon-l-add.png) no-repeat 285px 15px'
+          });
+        });
+    });
+  </script>
+  <script type="text/javascript">
+    $(function () {
+
+      var stringTime = "2016-12-12 00:00:00";
+      var timestamp2 = Date.parse(new Date(stringTime));
+
+      var stringTime = "2016-12-14 00:00:00";
+      var timestamp3 = Date.parse(new Date(stringTime));
+
+      var timestamp = Date.parse(new Date());
+
+      if (timestamp > timestamp2 && timestamp < timestamp3) {
+        console.log("ds");
+        layer.ready(function () {
+          layer.open({
+            type: 1,
+            shade: 0,
+            title: false, //不显示标题
+            content: $('#advPrev'), //捕获的元素
+            time: 15000,
+            // anim:1,
+            shift: 2,
+            closeBtn: 0,
+            offset: 'rb',
+            btnAlign: 'l',
+            cancel: function (index) {
+              layer.close(index);
+              this.content.show();
+              $("#advPrev").hide();
+            }
+          });
+        });
+
+        $("#advPrev").show(function () {
+          var advtime = 15;
+
+          var advtimer = setInterval(function () {
+            advtime--;
+            $(".adv-time").text(advtime);
+            if (advtime <= 0) {
+              clearInterval(advtimer);
+            }
+
+          }, 1000);
+        });
+
+        $(".close-adv").click(function () {
+          $("#advPrev").hide();
+        });
+      }
+    });
+  </script>
+
+  <!-- webTerren -->
+  <script type="text/javascript" src="http://www.sznews.com/js/tianruntongji.js"></script>
+  <!-- webTerren -->
+
+</body>
+<!--<script type="text/javascript" src="http://www.sznews.com/2016gb/js/common.js"></script>-->
+<!--挂号 start-->
+<script type="text/javascript" src="http://www.sznews.com/fxsz/jy160.js"></script>
+<!--挂号 end-->
+<script type="text/javascript" src="http://www.sznews.com/2013/js/datetime.js"></script>
+<!-- 用户登录代码 -->
+<script type="text/javascript" src="http://www.sznews.com/2016gb/js/login.js"></script>
+<!-- 用户登录代码end-->
+<!--英文网滚图-->
+<script type="text/javascript" src="http://www.sznews.com/2016gb/js/swiper.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper('.swiper-container', {
+    autoplay: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>
+<script>
+  //处理“天天3.15消费投诉”征集的提交事件
+  $(function () {
+    var btn = document.getElementById("complain315SubmitBtn");
+    var t1 = document.getElementById("TextBox1");
+    var t2 = document.getElementById("TextBox2");
+    var t3 = document.getElementById("TextBox3");
+    var t6 = document.getElementById("TextBox6");
+    //添加隐藏域
+    $("input#__VIEWSTATE").val(
+      "/wEPDwUKMTY5MDk3NDM2NQ9kFgICAw8WAh4HZW5jdHlwZQUTbXVsdGlwYXJ0L2Zvcm0tZGF0YWRk8+PH4SFfr8sC1w3qtVAxsKBYaSg=");
+    $("input#__EVENTVALIDATION").val(
+      "/wEWCAKowefRDgLs0bLrBgLs0fbZDALs0Yq1BQLs0e58AuzRgtgJAuzRxsYPAoznisYGQGcJ9njOlmW8htwdqVamBGCSpUI=");
+    btn.onclick = function (event) {
+      if (t1.value == "" || t2.value == "" || t3.value == "" || t6.value == "") {
+        alert("请填写完整信息");
+        returnFunc();
+        return;
+      }
+      if (!/^1[34578][0-9]{9}$/.test(t6.value)) {
+        alert("请填写正确的手机号");
+        returnFunc();
+        return;
+      }
+
+      function returnFunc() {
+        event.preventDefault();
+      }
+    };
+
+    var iframe = document.getElementById("hide_frame");
+    if (iframe.attachEvent) {
+      iframe.attachEvent("onload", tip); // IE
+    } else {
+      iframe.onload = tip; // 非IE
+    }
+
+    function tip() {
+      if (t1.value == "") return;
+      t1.value = "";
+      t2.value = "";
+      t3.value = "";
+      t6.value = "";
+    };
+  });
+</script>
+
+</html>

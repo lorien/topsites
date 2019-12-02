@@ -1,0 +1,1797 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" dir="ltr"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" dir="ltr" > <!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VgUCUlJbDBADVlZSAAAPXlY=",licenseKey:"cf1392eaf6",applicationID:"327071882"};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(20),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(21),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),c.xhrWrappable&&t(10),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(9),s=t(8),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof x&&(this.bstStart=y.now())}),o.on(w,function(t,n){var e=t[0];e instanceof x&&i("bst",[e,n,this.bstStart,y.now()])}),a.on(m,function(t,n,e){this.bstStart=y.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,y.now(),this.bstType])}),s.on(m,function(){this.bstStart=y.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,y.now(),"requestAnimationFrame"])}),o.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),o.on(g+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t("wrap-function")(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){function r(t,n,e){var r=t[n];"function"==typeof r&&(t[n]=function(){var t=i(arguments),n={};o.emit(e+"before-start",[t],n);var a;n[m]&&n[m].dt&&(a=n[m].dt);var s=r.apply(this,t);return o.emit(e+"start",[t,a],s),s.then(function(t){return o.emit(e+"end",[null,t],s),t},function(t){throw o.emit(e+"end",[t],s),t})})}var o=t("ee").get("fetch"),i=t(21),a=t(20);n.exports=o;var s=window,c="fetch-",f=c+"body-",u=["arrayBuffer","blob","json","text","formData"],d=s.Request,l=s.Response,p=s.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,n){r(d[h],n,f),r(l[h],n,f)}),r(s,"fetch",c),o.on(c+"end",function(t,n){var e=this;if(n){var r=n.headers.get("content-length");null!==r&&(e.rxSize=r),o.emit(c+"done",[null,n],e)}else o.emit(c+"done",[t],e)}))},{}],7:[function(t,n,e){var r=t("ee").get("history"),o=t("wrap-function")(r);n.exports=r;var i=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;i&&i.pushState&&i.replaceState&&(a=i),o.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,n,e){var r=t("ee").get("raf"),o=t("wrap-function")(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],9:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t("wrap-function")(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],10:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",s)}function i(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];n.exports=u;var x=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,n,e){function r(){var t=window.NREUM;if(!t.loader_config)return null;var n=(t.loader_config.accountID||"").toString()||null,e=(t.loader_config.agentID||"").toString()||null,r=(t.loader_config.trustKey||"").toString()||null;if(!n||!e)return null;var a=i.generateCatId(),s=i.generateCatId(),c=Date.now(),f=o(a,s,c,n,e,r);return{header:f,guid:a,traceId:s,timestamp:c}}function o(t,n,e,r,o,i){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var s={v:[0,1],d:{ty:"Browser",ac:r,ap:o,id:t,tr:n,ti:e}};return i&&r!==i&&(s.d.tk=i),btoa(JSON.stringify(s))}var i=t(18);n.exports={generateTracePayload:r,generateTraceHeader:o}},{}],12:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<p;r++)t.removeEventListener(l[r],this.listener,!1);n.aborted||(e.duration=s.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==n.status&&(n.status=0):a(this,t),e.cbTime=this.cbTime,d.emit("xhr-done",[t],t),c("xhr",[n,e,this.startTime]))}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return w(r)}function i(t,n){var e=f(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}function a(t,n){t.params.status=n.status;var e=o(n,t.lastSize);if(e&&(t.metrics.rxSize=e),t.sameOrigin){var r=n.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var s=t("loader");if(s.xhrWrappable){var c=t("handle"),f=t(13),u=t(11).generateTracePayload,d=t("ee"),l=["load","error","abort","timeout"],p=l.length,h=t("id"),m=t(16),w=t(15),v=window.XMLHttpRequest;s.features.xhr=!0,t(10),t(6),d.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,n.loadCaptureCalled=!1,t.addEventListener("load",function(e){a(n,t)},!1),m&&(m>34||m<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),d.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),d.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var e=!1;if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(e=!!NREUM.init.distributed_tracing.enabled),e&&this.sameOrigin){var r=u();r&&r.header&&(n.setRequestHeader("newrelic",r.header),this.dt=r)}}),d.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=w(r);i&&(e.txSize=i)}this.startTime=s.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{d.emit("internal-error",[e])}catch(r){}}};for(var a=0;a<p;a++)n.addEventListener(l[a],this.listener,!1)}),d.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),d.on("xhr-load-added",function(t,n){var e=""+h(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),d.on("xhr-load-removed",function(t,n){var e=""+h(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),d.on("addEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&d.emit("xhr-load-added",[t[1],t[2]],n)}),d.on("removeEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&d.emit("xhr-load-removed",[t[1],t[2]],n)}),d.on("fn-start",function(t,n,e){n instanceof v&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=s.now()))}),d.on("fn-end",function(t,n){this.xhrCbStart&&d.emit("xhr-cb-time",[s.now()-this.xhrCbStart,this.onload,n],n)}),d.on("fetch-before-start",function(t){var n,e=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url&&(n=t[0].url),n&&(this.sameOrigin=f(n).sameOrigin);var r=!1;if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(r=!!NREUM.init.distributed_tracing.enabled),r&&this.sameOrigin){var o=u();if(!o||!o.header)return;var i=o.header;if("string"==typeof t[0]){var a={};for(var s in e)a[s]=e[s];a.headers=new Headers(e.headers||{}),a.headers.set("newrelic",i),this.dt=o,t.length>1?t[1]=a:t.push(a)}else t[0]&&t[0].headers&&(t[0].headers.append("newrelic",i),this.dt=o)}})}},{}],13:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],14:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(20),s=t(21),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t,n){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,n])}},{}],15:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],16:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],17:[function(t,n,e){function r(t,n){var e=t.getEntries();e.forEach(function(t){"first-paint"===t.name?a("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&a("timing",["fcp",Math.floor(t.startTime)])})}function o(t){if(t instanceof c&&!u){var n,e=Math.round(t.timeStamp);n=e>1e12?Date.now()-e:s.now()-e,u=!0,a("timing",["fi",e,{type:t.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var i,a=t("handle"),s=t("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){i=new PerformanceObserver(r);try{i.observe({entryTypes:["paint"]})}catch(f){}}if("addEventListener"in document){var u=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(t){document.addEventListener(t,o,!1)})}}},{}],18:[function(t,n,e){function r(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(n=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<i.length;s++)o=i[s],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&Uint8Array&&(n=r.getRandomValues(new Uint8Array(31)));for(var o=[],i=0;i<16;i++)o.push(t().toString(16));return o.join("")}n.exports={generateUuid:r,generateCatId:o}},{}],19:[function(t,n,e){function r(t,n){if(!o)return!1;if(t!==o)return!1;if(!n)return!0;if(!i)return!1;for(var e=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==e[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}n.exports={agent:o,version:i,match:r}},{}],20:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],21:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],22:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=m(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([x,e,r,a]),a}}function p(t,n){g[t]=m(t).concat(n)}function h(t,n){var e=g[t];if(e)for(var r=0;r<e.length;r++)e[r]===n&&e.splice(r,1)}function m(t){return g[t]||[]}function w(t){return d[t]=d[t]||o(e)}function v(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var g={},y={},x={on:p,addEventListener:p,removeEventListener:h,emit:e,get:w,listeners:m,context:n,buffer:v,abort:a,aborted:!1};return x}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(20),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!E++){var t=b.info=NREUM.info,n=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=p.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===p.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return R.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(20),u=t("ee"),d=t(19),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var g=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1153.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:g,features:{},xhrWrappable:x,userAgent:d};t(14),t(17),p[h]?(p[h]("DOMContentLoaded",i,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",o),l[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,R=t(22)},{}],"wrap-function":[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(21),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}]},{},["loader",2,12,4,3]);</script>
+
+	<!-- VWO Demand Base -->
+	<script src="https://s3.amazonaws.com/vwo-integrations/demand-base.min.js"></script>
+
+	<!-- Start VWO -->
+	<script type='text/javascript'>
+	var _vwo_code=(function(){
+	var account_id=342490,
+	settings_tolerance=2000,
+	library_tolerance=2500,
+	use_existing_jquery=false,
+	/* DO NOT EDIT BELOW THIS LINE */
+	f=false,d=document;return{use_existing_jquery:function(){return use_existing_jquery;},library_tolerance:function(){return library_tolerance;},finish:function(){if(!f){f=true;var a=d.getElementById('_vis_opt_path_hides');if(a)a.parentNode.removeChild(a);}},finished:function(){return f;},load:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){_vwo_code.finish();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){settings_timer=setTimeout('_vwo_code.finish()',settings_tolerance);var a=d.createElement('style'),b='body{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}',h=d.getElementsByTagName('head')[0];a.setAttribute('id','_vis_opt_path_hides');a.setAttribute('type','text/css');if(a.styleSheet)a.styleSheet.cssText=b;else a.appendChild(d.createTextNode(b));h.appendChild(a);this.load('//dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&r='+Math.random());return settings_timer;}};}());_vwo_settings_timer=_vwo_code.init();
+	</script>
+	<!-- END VWO -->
+
+	<!--[if IE]><![endif]-->
+<link rel="preconnect" href="//cdn.polyfill.io" />
+<link rel="dns-prefetch" href="//cdn.polyfill.io" />
+<link rel="preconnect" href="//js.driftt.com" />
+<link rel="dns-prefetch" href="//js.driftt.com" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script defer="" class="coveo-script" type="text/javascript" src="/sites/all/modules/okta_coveo_search/js/lib/CoveoJsSearch.Lazy.min.js"></script>
+<link rel="shortcut icon" href="https://www.okta.com/sites/all/themes/Okta/favicon.ico" type="image/vnd.microsoft.icon" />
+<meta name="description" content="The Okta Identity Cloud provides secure identity management with Single Sign-On, Multi-factor Authentication, Lifecycle Management (Provisioning), and more." />
+<meta name="generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="canonical" href="https://www.okta.com/" />
+<link rel="shortlink" href="https://www.okta.com/" />
+<meta property="og:site_name" content="Okta" />
+<meta property="og:url" content="https://www.okta.com/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Okta | The Identity Standard" />
+<meta property="og:description" content="Provide secure identity management and single sign-on to any application, whether in the cloud, on-premises or on a mobile device for your employees, partners and customers with Okta." />
+<meta property="og:image" content="https://www.okta.com/sites/default/files/okta-logo-onblue.png" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:creator" content="@okta" />
+<meta name="twitter:url" content="https://www.okta.com/" />
+<meta name="twitter:title" content="Okta | The Identity Standard" />
+<meta name="twitter:description" content="Provide secure identity management and single sign-on to any application." />
+	<title>Okta | The Identity Standard</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+	<!--[if lt IE 10]>
+	<link type="text/css" rel="stylesheet" href="/sites/all/themes/Okta/css/ie9.css" media="all" />
+	<![endif]-->
+	<link rel="preload" href="https://use.typekit.net/osg6paw.css" as="style" crossorigin>
+	<link rel="stylesheet" href="https://use.typekit.net/osg6paw.css" crossorigin>
+	<link type="text/css" rel="stylesheet" href="https://www.okta.com/sites/default/files/advagg_css/css__C7TuB6XHzTvHqt1HRqGVa1D63-pVD9Fj2D--LiCTNr4__1yCxnxQNh1aJ1cf4I8knp8m2aUkVuc8XX3CC62BtmwY__1R8XCyS6tpqpsyuFM984E62WgSntuhwasZ34DuDnp-U.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.okta.com/sites/default/files/advagg_css/css__SYmlsIAxY7TF39FpPdHdQH1_wqyaRNnysc9TCvA9sko__X9sXCA-OUtIZUG-XfWw-C9n7WqO76hxj5ZA_9xvoU5U__1R8XCyS6tpqpsyuFM984E62WgSntuhwasZ34DuDnp-U.css" media="all" />
+	<script type="text/javascript" src="https://cdn.polyfill.io/v2/polyfill.js?features=es6"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+!function(){var t;if(t=window.driftt=window.drift=window.driftt||[],!t.init)return t.invoked?void(window.console&&console.error&&console.error("Drift snippet included twice.")):(t.invoked=!0,t.methods=["identify","config","track","reset","debug","show","ping","page","hide","off","on"],t.factory=function(e){return function(){var n;return n=Array.prototype.slice.call(arguments),n.unshift(e),t.push(n),t;};},t.methods.forEach(function(e){t[e]=t.factory(e);}),t.load=function(t){var e,n,o,i;e=3e5,i=Math.ceil(new Date()/ e)*e,o=document.createElement("script"),o.type="text/javascript",o.async=!0,o.crossorigin="anonymous",o.src="https://js.driftt.com/include/"+i+"/"+t+".js",n=document.getElementsByTagName("script")[0],n.parentNode.insertBefore(o,n);});}();drift.SNIPPET_VERSION="0.3.1";drift.load("kn3ivuny969s");
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+(function(){function getRandomInt(min,max){min=Math.ceil(min);max=Math.floor(max);return Math.floor(Math.random()*(max-min))+min;}
+var random=getRandomInt(1,100);if(random<=50){document.cookie="DriftPlaybook=A"}else{document.cookie="DriftPlaybook=B"}})();
+//--><!]]>
+</script>
+
+	<script type="application/ld+json"> { "@context" : "http://schema.org", "@type" : "Organization", "legalName" : "Okta, Inc.", "url" : "https://www.okta.com/", "contactPoint" : [{"@type" : "ContactPoint", "telephone" : "+1 (888) 722-7871", "contactType" : "Customer Service"},{"@type" : "ContactPoint", "telephone" : "+1 (800) 588-1656", "contactType" : "Sales USA"}], "logo" : "https://www.okta.com/sites/all/themes/Okta/images/logo.svg", "sameAs" : ["https://twitter.com/okta", "https://www.facebook.com/OktaIdentity/", "https://www.linkedin.com/company/okta-inc-/", "https://www.youtube.com/user/OktaInc"] } </script>
+
+	<script type='application/ld+json'>{"@context":"http://schema.org","@type":"WebSite","@id":"#website","url":"https://www.okta.com/","name":"Okta, Inc.","potentialAction":{"@type":"SearchAction","target":"https://www.okta.com/search/#q={query}","query-input":"required name=query"}}</script>
+
+	<!--[if lt IE 9]>
+	  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+		<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TJ45R6');</script>
+<!-- End Google Tag Manager -->	<script type="text/javascript">
+(function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      didInit = true;
+      Munchkin.init('380-NLU-416');
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+</script>
+</head>
+<body class="html front not-logged-in no-sidebars page-node page-node- page-node-5586 node-type-home page-home-v1"  >
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TJ45R6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+
+	<!--[if lt IE 10]>
+	<div class="FullPageNotice--browserUpgrade">
+		<div>
+			<div class="Logo">Okta</div>
+			<p>You are using an outdated browser. Please <a target="_blank" href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		</div>
+	</div>
+<![endif]-->
+
+<noscript>
+	<div class="FullPageNotice--javascriptRequired" data-swiftype-index='false'>
+		<div>
+			<div class="Logo">Okta</div>
+			<p>Looks like you have Javascript turned off! Please enable it to improve your browsing experience.</p>
+		</div>
+	</div>
+</noscript>
+
+		<header class="Header" data-swiftype-index='false'>
+  <div class="Header-promo" data-promo-timestamp="1572538488" data-promo-name="okta-homepage-promo">
+  <div class="gradient-blue" id="homepage-top-promo">
+    <div class="Wrap">
+      <div class="Promo-items">
+                                              <div class="Promo-item Promo-1 js-active">
+              <div class="Promo-logo " >
+
+              </div>
+
+              <div class="Promo-text HideOn--mediumLarge">
+                <p><span class="HideOn--mediumLarge">How secure are you?</span></p>
+              </div>
+
+              <div class="Promo-cta">
+                <p class="HideOn--mediumLarge"><a href="https://www.okta.com/zero-trust-assessment#homepage"  >Get Your Zero Trust Assessment ›</a></p>
+
+                <p class="ShowOn--mediumLarge HideOn--xSmall color-white">How secure are you? | <a href="https://www.okta.com/zero-trust-assessment#homepage"  >Get Your Zero Trust Assessment ›</a></p>
+
+                <p class="ShowOn--xSmall"><a href="https://www.okta.com/zero-trust-assessment#homepage"  >How secure are you? ›</a></p>
+              </div>
+            </div>
+                              
+      </div>
+
+      <div class="Promo-close">&nbsp;</div>
+    </div>
+  </div>
+</div>
+
+
+  <div class="Wrap">
+
+    <div class="Header-logo">
+      <a href="/">Okta</a>
+    </div>
+        <div class="Header-media-assets" data-swiftype-index='false'>
+      <h4 class="Kicker blue-bright">Looking for Okta Logos?</h4>
+      <p>You can find all the media assets you need as part of our press room.</p>
+      <p><a href="/press-room/media-assets/" class="Button">Download Media Assets</a></p>
+    </div>
+
+          <nav class="Header-nav PrimaryNav" data-swiftype-index='false'>
+        <ul class="menu">
+<li class="first leaf">
+
+    
+          <a href="/customers/">Customers</a>    
+    
+    
+  
+    
+</li>
+
+<li class="expanded menu-item--flex-submenu">
+
+    
+          <a href="/solutions/">Solutions</a>    
+    
+    
+  
+    <ul class="menu">
+<li class="first expanded menu-item--flex-half">
+
+    
+          <span class="menu-item--header nolink">Business Initiatives</span>    
+    
+    
+  
+    <ul class="menu">
+<li class="first leaf">
+
+    
+          <a href="/solutions/protect-against-data-breaches/">Protect Against Data Breaches</a>    
+    
+    
+  
+    
+</li>
+
+<li class="leaf">
+
+    
+          <a href="/solutions/secure-seamless-customer-experience/">Seamless Customer Experience</a>    
+    
+    
+  
+    
+</li>
+
+<li class="leaf">
+
+    
+          <a href="/solutions/collaborate-with-partners/">Collaborate with Partners</a>    
+    
+    
+  
+    
+</li>
+
+<li class="leaf">
+
+    
+          <a href="/solutions/reduce-it-friction/">Reduce IT Friction</a>    
+    
+    
+  
+    
+</li>
+
+<li class="leaf">
+
+    
+          <a href="/solutions/increase-mergers-and-acquisitions-agility/">Increase M&amp;A Agility</a>    
+    
+    
+  
+    
+</li>
+
+<li class="last leaf">
+
+    
+          <a href="/solutions/modernize-enterprise-it/">Modernize Enterprise IT</a>    
+    
+    
+  
+    
+</li>
+</ul>
+</li>
+
+<li class="expanded menu-item--flex-half menu-item--border-left">
+
+    
+          <span class="menu-item--header nolink">Industries</span>    
+    
+    
+  
+    <ul class="menu">
+<li class="first leaf">
+
+    
+          <a href="/solutions/healthcare/">Healthcare</a>    
+    
+    
+  
+    
+</li>
+
+<li class="leaf">
+
+    
+          <a href="/solutions/government/">Government</a>    
+    
+    
+  
+    
+</li>
+
+<li class="leaf">
+
+    
+          <a href="/solutions/education/">Education</a>    
+    
+    
+  
+    
+</li>
+
+<li class="leaf">
+
+    
+          <a href="/solutions/energy/">Energy</a>    
+    
+    
+  
+    
+</li>
+
+<li class="leaf">
+
+    
+          <a href="/solutions/financial-services/">Financial Services</a>    
+    
+    
+  
+    
+</li>
+
+<li class="leaf">
+
+    
+          <a href="/solutions/technology/">Technology</a>    
+    
+    
+  
+    
+</li>
+
+<li class="leaf">
+
+    
+          <a href="/solutions/travel-hospitality/">Travel + Hospitality</a>    
+    
+    
+  
+    
+</li>
+
+<li class="last leaf">
+
+    
+          <a href="/okta-for-good/">Nonprofit</a>    
+    
+    
+  
+    
+</li>
+</ul>
+</li>
+
+<li class="last leaf is-highlighted menu-item--flex-full">
+
+    
+          <a href="/solutions/">View all solutions</a>    
+    
+    
+  
+    
+</li>
+</ul>
+</li>
+
+<li class="expanded menu-item--flex-submenu">
+
+    
+          <a href="/products/">Products</a>    
+    
+    
+  
+    <ul class="menu">
+<li class="first expanded menu-item--flex-half">
+
+    
+          <a href="/workforce-identity/" class="menu-item--header-link">Workforce Identity</a>    
+          <span class="menu-item-description">Protect and enable employees, contractors, partners</span>
+    
+    
+  
+    <ul class="menu">
+<li class="first leaf">
+
+    
+          <a href="/products/single-sign-on/">Single Sign-On</a>    
+    
+    
+  
+    
+</li>
+
+<li class="leaf">
+
+    
+          <a href="/products/adaptive-multi-factor-authentication/">Multi-factor Authentication</a>    
+    
+    
+  
+    
+</li>
+
+<li class="leaf">
+
+    
+          <a href="/products/universal-directory/">Universal Directory</a>    
+    
+    
+  
+    
+</li>
+
+<li class="leaf">
+
+    
+          <a href="/products/lifecycle-management/">Lifecycle Management</a>    
+    
+    
+  
+    
+</li>
+
+<li class="leaf">
+
+    
+          <a href="/products/api-access-management/">API Access Management</a>    
+    
+    
+  
+    
+</li>
+
+<li class="leaf">
+
+    
+          <a href="/products/advanced-server-access/">Advanced Server Access</a>    
+    
+    
+  
+    
+</li>
+
+<li class="last leaf">
+
+    
+          <a href="/products/access-gateway/">Access Gateway</a>    
+    
+    
+  
+    
+</li>
+</ul>
+</li>
+
+<li class="expanded menu-item--flex-half menu-item--border-left">
+
+    
+          <a href="/customer-identity/" class="menu-item--header-link">Customer Identity</a>    
+          <span class="menu-item-description">Build secure, seamless experiences</span>
+    
+    
+  
+    <ul class="menu">
+<li class="first leaf">
+
+    
+          <a href="/products/customer-identity/authentication/">Authentication</a>    
+    
+    
+  
+    
+</li>
+
+<li class="leaf">
+
+    
+          <a href="/products/customer-identity/authorization/">Authorization</a>    
+    
+    
+  
+    
+</li>
+
+<li class="leaf">
+
+    
+          <a href="/products/customer-identity/user-management/">User Management</a>    
+    
+    
+  
+    
+</li>
+
+<li class="leaf">
+
+    
+          <a href="/products/customer-identity/adaptive-multi-factor-authentication/">Multi-factor Authentication</a>    
+    
+    
+  
+    
+</li>
+
+<li class="leaf">
+
+    
+          <a href="/products/customer-identity/lifecycle-management/">Lifecycle Management</a>    
+    
+    
+  
+    
+</li>
+
+<li class="leaf">
+
+    
+          <a href="/products/customer-identity/b2b-integration/">B2B Integration</a>    
+    
+    
+  
+    
+</li>
+
+<li class="last leaf">
+
+    
+          <a href="/products/customer-identity/access-gateway/">Access Gateway</a>    
+    
+    
+  
+    
+</li>
+</ul>
+</li>
+
+<li class="leaf menu-item--flex-full menu-item--border-top">
+
+    
+          <span class="menu-item--header nolink">
+      The Okta Integration Network    </span>
+    
+          <span class="menu-item-description">Easily adopt the latest apps, centralize user management, and automate access workflows across cloud, on-prem, and mobile applications.</span>
+    
+          <a href="/okta-integration-network/" class="menu-item-learn-more">Learn more</a>    
+  
+    
+</li>
+
+<li class="last leaf is-highlighted menu-item--flex-full">
+
+    
+          <a href="/products/">View all products</a>    
+    
+    
+  
+    
+</li>
+</ul>
+</li>
+
+<li class="expanded">
+
+    
+          <a href="/services/">Services</a>    
+    
+    
+  
+    <ul class="menu">
+<li class="first leaf">
+
+    
+          <a href="/services/education-services/">Education Services</a>    
+    
+    
+  
+    
+</li>
+
+<li class="leaf">
+
+    
+          <a href="/services/professional-services/">Professional Services</a>    
+    
+    
+  
+    
+</li>
+
+<li class="leaf">
+
+    
+          <a href="/services/success-and-support/">Support + CSM Services</a>    
+    
+    
+  
+    
+</li>
+
+<li class="leaf">
+
+    
+          <a href="/partners/meet-our-partners/">Find a Partner</a>    
+    
+    
+  
+    
+</li>
+
+<li class="leaf">
+
+    
+          <a href="/services/customer-success-center/">Success Center</a>    
+    
+    
+  
+    
+</li>
+
+<li class="last leaf is-highlighted">
+
+    
+          <a href="/services/">View all services</a>    
+    
+    
+  
+    
+</li>
+</ul>
+</li>
+
+<li class="expanded">
+
+    
+          <a href="/resources/">Resources</a>    
+    
+    
+  
+    <ul class="menu">
+<li class="first leaf">
+
+    
+          <a href="https://www.okta.com/integrations/">Find Your Apps</a>    
+    
+    
+  
+    
+</li>
+
+<li class="leaf">
+
+    
+          <a href="/resources/content-library/">Content Library</a>    
+    
+    
+  
+    
+</li>
+
+<li class="leaf">
+
+    
+          <a href="/businesses-at-work/">Businesses @ Work Dashboard</a>    
+    
+    
+  
+    
+</li>
+
+<li class="leaf">
+
+    
+          <a href="/resources/events/">Events</a>    
+    
+    
+  
+    
+</li>
+
+<li class="leaf">
+
+    
+          <a href="/blog/">Blog</a>    
+    
+    
+  
+    
+</li>
+
+<li class="leaf">
+
+    
+          <a href="https://developer.okta.com">Developer</a>    
+    
+    
+  
+    
+</li>
+
+<li class="last leaf is-highlighted">
+
+    
+          <a href="/resources/">View all resources</a>    
+    
+    
+  
+    
+</li>
+</ul>
+</li>
+
+<li class="expanded">
+
+    
+          <a href="/company/">Company</a>    
+    
+    
+  
+    <ul class="menu">
+<li class="first leaf">
+
+    
+          <a href="/contact/">Contact</a>    
+    
+    
+  
+    
+</li>
+
+<li class="leaf">
+
+    
+          <a href="/partners/">Partners</a>    
+    
+    
+  
+    
+</li>
+
+<li class="leaf">
+
+    
+          <a href="/company/leadership/">Leadership</a>    
+    
+    
+  
+    
+</li>
+
+<li class="leaf">
+
+    
+          <a href="https://investor.okta.com/">Investors</a>    
+    
+    
+  
+    
+</li>
+
+<li class="leaf">
+
+    
+          <a href="/company/vision/">Vision</a>    
+    
+    
+  
+    
+</li>
+
+<li class="leaf">
+
+    
+          <a href="/company/careers/">Careers</a>    
+    
+    
+  
+    
+</li>
+
+<li class="leaf">
+
+    
+          <a href="/faq/">FAQ</a>    
+    
+    
+  
+    
+</li>
+
+<li class="last leaf is-highlighted">
+
+    
+          <a href="/company/">View company</a>    
+    
+    
+  
+    
+</li>
+</ul>
+</li>
+
+<li class="last expanded">
+
+    
+          <a href="/contact-sales/">Contact Sales</a>    
+    
+    
+  
+    <ul class="menu">
+<li class="first leaf">
+
+    
+          <a href="tel:+1 (800) 425-1267 ">+1 (800) 425-1267</a>    
+    
+    
+  
+    
+</li>
+
+<li class="leaf">
+
+    
+          <a href="/contact-sales/">Email</a>    
+    
+    
+  
+    
+</li>
+
+<li class="last leaf">
+
+        <a href="#chat-now">Chat</a>
+    
+    
+</li>
+</ul>
+</li>
+</ul>      </nav>
+    
+          <div class="Header-tryOkta">
+        <a class="Button--green" href="/free-trial/">
+          Try Okta
+        </a>
+      </div>
+    
+          <div class="Header-user">
+        <a class="Button--blueOutline" id="myokta-signin" href="https://login.okta.com/?SAMLRequest=fc%2B7CsJAEAXQXvAflu1NNJUMeZBGELTx1a%2FrYILJTtyZGD%2FfSBRiYzlw77lMnD3rSj3Qc0ku0YtgrhU6S5fSXRN9PKxmS52l00nMpq6iBvJWCrfDe4ss6vStRe9aDzmGIZfo1jsgwyWDMzUyiIV9vt1AH4XGk5ClSvewUgMNa%2BYW%2FVj5jxhm9NLP67QQaSAMu64L6CYmsFSHlnzT4ZlLwTgcL6Sf8%2FeX9AU%3D&RelayState=/home/v1">Sign In</a>      </div>
+    
+    <button class="Header-search Button--search" id="searchToggle">
+      <?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M15.3996653,14.6678682 L11.4569357,10.7244483 C12.3730629,9.64217101 12.9267433,8.24255145 12.9267433,6.71337171 C12.9267433,3.28220976 10.1445336,0.5 6.71337171,0.5 C3.28220976,0.5 0.5,3.28220976 0.5,6.71337171 C0.5,10.1445336 3.28220976,12.9267433 6.71337171,12.9267433 C8.24255145,12.9267433 9.64217101,12.3730629 10.7244483,11.4569357 L14.6669477,15.3996653 C14.8011105,15.5335979 15.02134,15.5335979 15.1552727,15.3996653 L15.3987447,15.1561932 C15.5335979,15.02134 15.5335979,14.8018009 15.3996653,14.6678682 L15.3996653,14.6678682 L15.3996653,14.6678682 Z M1.53556193,6.71337171 C1.53556193,3.85844245 3.85844245,1.53556193 6.71337171,1.53556193 C9.56830086,1.53556193 11.8911814,3.85844245 11.8911814,6.71337171 C11.8911814,9.56830086 9.56830086,11.8911814 6.71337171,11.8911814 C3.85844245,11.8911814 1.53556193,9.56830086 1.53556193,6.71337171 L1.53556193,6.71337171 L1.53556193,6.71337171 Z" id="Page-1-Copy" stroke="#007BC4" fill="#007BC4"></path>
+    </g>
+</svg>
+    </button>
+
+          <a class="Header-toggle" href="#">
+        <?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g class="MenuIcon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <path d="M1,16 L19,16" class="MenuIcon-line1" stroke="#007BC4" stroke-width="2"></path>
+        <path d="M1,4 L19,4" class="MenuIcon-line2" stroke="#007BC4" stroke-width="2"></path>
+        <path d="M1,10 L19,10" class="MenuIcon-line3" stroke="#007BC4" stroke-width="2"></path>
+        <path d="M1,10 L19,10" class="MenuIcon-line4" stroke="#007BC4" stroke-width="2"></path>
+    </g>
+</svg>
+      </a>
+    
+  </div>
+</header>
+
+<div class="SearchBar" id="searchForm">
+  <div class="Wrap">
+
+    <div id="searchbox" class="SearchBox" style="display:flex;" data-pipeline="www-okta-com">
+      <div class="CoveoOmnibox"></div>
+      <div class="CoveoSearchButton">Search</div>
+            <div class="CoveoAnalytics"></div>
+          </div>
+
+  </div>
+</div>
+
+<div id='content' class='container'>
+  <header class=".l-header">
+      </header>
+  <!--/.l-header -->
+
+  
+  
+  <a id="main-content"></a>
+
+  
+    
+      
+      
+    <div class="HeroWrap"><section class="contextual-links-region">
+
+<header class="Hero--home Hero--homeAlternate Hero--identity-standard">
+	<div class="Wrap">
+
+  	
+				<h1 class="Hero-title">Okta is the identity standard</h1>
+		
+				<p class="Hero-subtitle">The most complete access management platform for your workforce and customers, securing all your critical resources from cloud to ground.</p>
+		
+    		<div class="Hero-cta">
+			<a href="http://okta.com" class="Button--large Button--whiteOutline">http://okta.com</a>		</div>
+		
+	</div>
+</header>
+</section>
+<section class="contextual-links-region">
+
+<header class="Hero--home Hero--homeAlternate Hero--gartner-mq">
+	<div class="Wrap">
+
+  	<img  src="https://www.okta.com/sites/default/files/okta-rethinkad-hero.svg" class="Hero-image" alt="okta rethinkad hero" >
+				<h1 class="Hero-title">You deserve better than Active Directory</h1>
+		
+				<p class="Hero-subtitle">There’s a better option than Active Directory, so why settle for less than you deserve?</p>
+		
+    		<div class="Hero-cta">
+			<a href="https://www.okta.com/rethinkad" class="Button--large Button--whiteOutline">Learn More</a>		</div>
+		
+	</div>
+</header>
+</section>
+<section class="contextual-links-region">
+
+<header class="Hero--home Hero--homeAlternate Hero--gartner-mq">
+	<div class="Wrap">
+
+  	<img  src="https://www.okta.com/sites/default/files/okta-rethinkad-everything-harder.svg" class="Hero-image" alt="okta rethinkad everything harder" >
+				<h1 class="Hero-title">Active Directory makes everything harder</h1>
+		
+				<p class="Hero-subtitle">There’s a better option than Active Directory, so why settle for less than you deserve?</p>
+		
+    		<div class="Hero-cta">
+			<a href="https://www.okta.com/rethinkad" class="Button--large Button--whiteOutline">Learn More</a>		</div>
+		
+	</div>
+</header>
+</section>
+</div>
+
+	<section class="contextual-links-region">
+<section class="PageSection--xSmall" style="padding-bottom: 0;">
+<div class="Wrap--1024">
+<div class="Section-header" style="margin-bottom: 30px;">
+<h1 class="text-align--center Section-title" style="font-size: 47px; letter-spacing: 0.02em; text-transform: none;">Okta is the identity standard.</h1>
+</div>
+
+<div class="Section-content">
+<div class="Row u--stretch">
+<div class="Column--12">
+<p class="text-align--center" style="font-size:1.3em;">The most complete access management platform for your workforce and customers, securing all your critical resources from cloud to ground.</p>
+
+<p class="text-align--center" style="font-size:1.3em;">We help companies do two things:</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+</section>
+<section class="contextual-links-region">
+<section class="PageSection--newColumnContentWithImage u-align--left PageSection--newColumnContentWithImage-Hero-Alternative">
+	<div class="Wrap--1024">
+		<div class="Wrap-inner">
+
+		
+					<div class="Section-content">
+
+				<div class="Row" data-equalizer>
+
+											<div class="Column--6 Column--small-12" data-equalizer-watch>
+
+							<div class="Block">
+
+																										<div class="Block-image">
+
+                    
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 297 126">
+  <defs>
+    <style>
+      .cls-1,.cls-10,.cls-11,.cls-18,.cls-7{fill:none}.cls-1{stroke:#5d5d5d}.cls-1,.cls-11,.cls-16,.cls-18{stroke-miterlimit:10}.cls-3,.cls-4,.cls-9{fill:#fff}.cls-10,.cls-11,.cls-18,.cls-4,.cls-7,.cls-9{stroke:#2f3f4a}.cls-11,.cls-15,.cls-4,.cls-7{stroke-linecap:round}.cls-10,.cls-15,.cls-4,.cls-7,.cls-9{stroke-linejoin:round}.cls-10,.cls-11,.cls-15,.cls-18,.cls-4,.cls-7,.cls-9{stroke-width:1.75px}.cls-15,.cls-16{fill:#007dc1;stroke:#007dc1}
+    </style>
+    <clipPath id="clip-path">
+      <rect width="48.2" height="61.06" x="131.5" y="181.7" class="cls-1" rx="4" ry="4"/>
+    </clipPath>
+  </defs>
+  <g id="Workforce">
+    <ellipse cx="148.5" cy="117.2" fill="#a9e6fd" rx="148.5" ry="8.9"/>
+    <path d="M89.1 109.8H91.6V112.06H89.1z" class="cls-3"/>
+    <path d="M158.6 44.1L156.3 41.9 159.3 37 157.9 37 154.4 39.2 143.5 37 143.3 36.8 153 42.8 156.5 46.1 158.6 44.1z" class="cls-4"/>
+    <path stroke="#2f3f4a" stroke-linejoin="round" stroke-width="1.75" d="M133.3 35.4H169.3V36.9H133.3z"/>
+    <path d="M199,62.4l.7-14.7,15.8,7.8,18.4-2.1-.5-5.4L217,50l-16-9.5c-1.5-1.4-2-2.3-3.6-2.3h-16a3.9,3.9,0,0,0-3,1.7L167.2,53.3l-8.7-9.9-3,2.7,11.1,14.6,11.1-10.4L179,62.7l-2.1,23.2,12.6,6.9,11.9-6.9-1.8-17.3" class="cls-4"/>
+    <path fill="#2f3f4a" stroke="#2f3f4a" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M189.2 45.8L184.2 41.7 184.2 47.7 189.2 43.8 194.1 47.7 194.1 41.7 189.2 45.8z"/>
+    <path d="M194.9 114L183.4 114 181.7 65.6 196.6 65.6 194.9 114z" class="cls-4"/>
+    <path d="M182.2 68.7L195.9 68.7" class="cls-7"/>
+    <path fill="none" stroke="#2f3f4a" stroke-dasharray=".25 4 0 0 0 0" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M189.1 45L189.1 58.9"/>
+    <rect width="17.6" height="3.07" x="180.3" y="113.9" class="cls-4" rx="1.3" ry="1.3"/>
+    <path d="M199.8 70.9L199 62.6" class="cls-7"/>
+    <path d="M233.3 48.5L235.9 48.2 235.6 38.2 238.3 46.6 237.5 50.7 236.9 50.8 233.8 51.3 233.3 48.5z" class="cls-4"/>
+    <path d="M71 36.1H76.2V45.89H71z" class="cls-3"/>
+    <path d="M98 83.7c3.5 4.6-5.5 25.9-5.5 25.9H88.3l2.4-21.2-31.2-.5s-2.7-1.4-3-3.5.8-9.9.8-9.9l16.3 1 .5 2.2S93.6 78 98 83.7zM57.8 74.3s1.7-10.9 2.8-14.4 2.2-8.4 4.4-11.8 4.5-5.2 5.2-5.5a10.6 10.6 0 0 1 6.9 2.9 10 10 0 0 1 2.1 6c.2 2.7-1 7.7-1 7.7L74.7 67l-1.4 8.4zM70.2 42.6c2.9-5.6 1.2-7.3 1.2-7.3M76.3 39.2L75.8 44.5M88.6 115.3a.9.9 0 0 1-.9-.9v-1.1a.9.9 0 0 1 .9-.9h6.1c2.9 0 2.9 1.5 2.9 2.1v.9z" class="cls-9"/>
+    <path d="M77.7,24H74a4.7,4.7,0,0,0-4.7,4.7v2.9a4.7,4.7,0,0,0,3.3,4.5,4.6,4.6,0,0,0,4.5,3.4h.6a4.9,4.9,0,0,0,4.8-4.8v-6A4.8,4.8,0,0,0,77.7,24Z" class="cls-4"/>
+    <rect width="36.1" height="5.56" x="46.1" y="88.4" class="cls-9" rx="2.2" ry="2.2"/>
+    <rect width="36.1" height="5.56" x="30.8" y="59" class="cls-9" rx="2.2" ry="2.2" transform="rotate(90 48.85 61.85)"/>
+    <circle cx="51.7" cy="113.5" r="2.6" class="cls-4"/>
+    <circle cx="63.7" cy="113.5" r="2.6" class="cls-4"/>
+    <circle cx="75.8" cy="113.5" r="2.6" class="cls-4"/>
+    <path d="M48.5 79.6L48.5 88.7" class="cls-10"/>
+    <path d="M51.7 108.3L51.7 113.6M75.8 108.3L75.8 113.6" class="cls-7"/>
+    <path d="M124.4 74.7H128.5V116.52000000000001H124.4zM80.5 74.7H84.6V116.52000000000001H80.5z" class="cls-4"/>
+    <path d="M83.3 32.5L84.5 32.5" class="cls-7"/>
+    <path d="M106.5,69.7h-4.8a1,1,0,0,1-1-1.1V67.4a1,1,0,0,1,1-1.1H105c2.4,0,2.6,1,2.6,2.1v.2A1.1,1.1,0,0,1,106.5,69.7Z" class="cls-4"/>
+    <path d="M70.6,58.2l9,14.5,17-3h4.7l-.6-4-5-.2L84,66.3,75.1,48.7" class="cls-4"/>
+    <rect width="54.4" height="3.91" x="78.1" y="72.7" class="cls-4" rx="1.6" ry="1.6"/>
+    <path d="M89.2 109.5L89.2 112.1M91.5 109.6L91.5 112" class="cls-10"/>
+    <path d="M63.7 94.4L63.7 113.7" class="cls-7"/>
+    <path d="M50.2 107.5v-1.2a2.6 2.6 0 0 1 2.6-2.6H74.4a2.6 2.6 0 0 1 2.6 2.6v1.2zM66.2 93.9v3.6a2.6 2.6 0 0 1-2.6 2.6h0a2.7 2.7 0 0 1-2.7-2.6V93.9zM75.4 77.7L72.1 77.6" class="cls-4"/>
+    <path d="M81.7,36.1a1.8,1.8,0,0,1-1.8-1.8" class="cls-7"/>
+    <path d="M186.1 39.4L192.8 41.3 192.8 31.5 187.6 31.5 186.1 39.4z" class="cls-3"/>
+    <path d="M192.5 30.8s-.6 2.5.5 7.4M186.2 34.6L186 38.8" class="cls-9"/>
+    <path d="M186.1,19.4h3.7a4.7,4.7,0,0,1,4.7,4.7V27a4.7,4.7,0,0,1-3.2,4.5,4.7,4.7,0,0,1-4.5,3.4h-.7a4.8,4.8,0,0,1-4.8-4.7V24.1A4.8,4.8,0,0,1,186.1,19.4Z" class="cls-4"/>
+    <path d="M180.5 27.9L179.3 27.9M182.1 31.5a1.8 1.8 0 0 0 1.8-1.8" class="cls-7"/>
+    <path d="M146.4 117L206.3 117M214.3 117L229.2 117" class="cls-11"/>
+    <path d="M237.5 50.7L239.6 42.7" class="cls-7"/>
+    <path fill="#007dc1" d="M235.8,30.2l14.1,2.2a1.4,1.4,0,0,1,1.2,1.4v22A15.1,15.1,0,0,1,244.9,68l-8.5,5.6-.5.6h-.1l-.5-.6L226.8,68a15.1,15.1,0,0,1-6.2-12.2v-22a1.4,1.4,0,0,1,1.2-1.4l14-2.2Z"/>
+    <rect width="9.9" height="9.43" x="231.1" y="47.8" fill="#fff" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" rx="3" ry="3"/>
+    <path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M239.1,47.8V43.9a3,3,0,0,0-3-3,2.9,2.9,0,0,0-3,3v3.9"/>
+    <circle cx="236.1" cy="51.8" r="1" class="cls-15"/>
+    <path d="M236.1 52.8L236.1 54.3" class="cls-15"/>
+    <rect width="6" height="6" x="137.3" y="23.2" class="cls-16" rx="2" ry="2" transform="rotate(90 140.3 26.2)"/>
+    <rect width="6" height="6" x="148.3" y="23.2" class="cls-16" rx="2" ry="2" transform="rotate(90 151.3 26.2)"/>
+    <rect width="6" height="6" x="159.3" y="23.2" class="cls-16" rx="2" ry="2" transform="rotate(90 162.3 26.2)"/>
+    <rect width="6" height="6" x="137.3" y="12.2" class="cls-16" rx="2" ry="2" transform="rotate(90 140.3 15.2)"/>
+    <rect width="6" height="6" x="148.3" y="12.2" class="cls-16" rx="2" ry="2" transform="rotate(90 151.3 15.2)"/>
+    <rect width="6" height="6" x="159.3" y="12.2" class="cls-16" rx="2" ry="2" transform="rotate(90 162.3 15.2)"/>
+    <rect width="6" height="6" x="137.3" y="1.2" class="cls-16" rx="2" ry="2" transform="rotate(90 140.3 4.2)"/>
+    <rect width="6" height="6" x="148.3" y="1.2" class="cls-16" rx="2" ry="2" transform="rotate(90 151.3 4.2)"/>
+    <rect width="6" height="6" x="159.3" y="1.2" class="cls-16" rx="2" ry="2" transform="rotate(90 162.3 4.2)"/>
+    <path d="M189.1 78.9L189.1 116.7" class="cls-7"/>
+    <path d="M185.3 38.2L189.1 41.6 193 38.2" class="cls-10"/>
+    <path d="M115.8 72.1L112.7 71.6 117.8 53.3 120.7 53.9 115.8 72.1z" class="cls-4"/>
+    <path d="M98.8 69.7H115.8V72.67H98.8z" class="cls-4"/>
+  </g>
+</svg>
+
+                    
+									</div>
+																	
+								
+									<h4 class="Block-title">Workforce Identity</h4>
+
+
+								
+
+																	<div class="Block-content">
+
+										<p>Protect and enable employees, contractors, and partners.</p>
+
+                                          <ul class="Block-links">
+                                                  <li class="Block-links__link"><a href="https://www.okta.com/products/single-sign-on/">Single Sign-On</a></li>
+                                                  <li class="Block-links__link"><a href="https://www.okta.com/products/universal-directory/">Universal Directory</a></li>
+                                                  <li class="Block-links__link"><a href="https://www.okta.com/products/adaptive-multi-factor-authentication/">Adaptive MFA</a></li>
+                                                  <li class="Block-links__link"><a href="https://www.okta.com/products/api-access-management/">API Access Management</a></li>
+                                                  <li class="Block-links__link"><a href="https://www.okta.com/products/lifecycle-management/">Lifecycle Management</a></li>
+                                                  <li class="Block-links__link"><a href="https://www.okta.com/products/advanced-server-access/">Advanced Server Access</a></li>
+                                                  <li class="Block-links__link"><a href="https://www.okta.com/products/access-gateway/">Access Gateway</a></li>
+                                              </ul>
+                    
+                    										<a href="https://www.okta.com/workforce-identity/" class="Button--blueOutline">Explore Workforce Identity</a>
+																			</div>
+								
+							</div>
+
+						</div>
+											<div class="Column--6 Column--small-12" data-equalizer-watch>
+
+							<div class="Block">
+
+																										<div class="Block-image">
+
+                    
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 297 126">
+  <defs>
+    <style>
+      .cls-1,.cls-6,.cls-9{fill:none}.cls-1{stroke:#5d5d5d}.cls-1,.cls-10,.cls-4,.cls-6,.cls-9{stroke-miterlimit:10}.cls-13,.cls-4{fill:#fff}.cls-10,.cls-13,.cls-4,.cls-6,.cls-9{stroke:#2f3f4a}.cls-13,.cls-4,.cls-6,.cls-9{stroke-width:1.75px}.cls-9{stroke-linecap:round}.cls-10{fill:#2f3f4a}.cls-13{stroke-linejoin:round}
+    </style>
+    <clipPath id="clip-path">
+      <rect width="48.2" height="61.06" x="131.5" y="32.3" class="cls-1" rx="4" ry="4"/>
+    </clipPath>
+  </defs>
+  <g id="Customer">
+    <ellipse cx="148.5" cy="117.2" fill="#a9e6fd" rx="148.5" ry="8.9"/>
+    <path fill="#fff" d="M229.3 104.5H254V107.6H229.3z"/>
+    <path d="M73.7 19.1V13.4a3.8 3.8 0 0 1 3.8-3.8H221.3a3.8 3.8 0 0 1 3.8 3.8v5.7M225.1 19.1V97.8a3.7 3.7 0 0 1-3.8 3.6H77.5a3.7 3.7 0 0 1-3.8-3.6V19.1z" class="cls-4"/>
+    <g clip-path="url(#clip-path)">
+      <path d="M114.1 26.2L193.7 105.9M114.1 18.3L193.7 97.9M114.1 10.3L193.7 90M114.1 2.4L193.7 82.1M114.1-5.6L193.7 74.1M114.1-13.5L193.7 66.2M114.1-21.5L193.7 58.2M114.1-29.4L193.7 50.3M114.1-37.3L193.7 42.3M114.1-45.3L193.7 34.4M114.1-53.2L193.7 26.4M114.1-61.2L193.7 18.5M114.1 34.2L193.7 113.8M114.1 42.1L193.7 121.8M114.1 50L193.7 129.7M114.1 58L193.7 137.7M114.1 65.9L193.7 145.6M114.1 73.9L193.7 153.5" class="cls-6"/>
+    </g>
+    <rect width="48.2" height="61.06" x="131.5" y="32.3" class="cls-1" rx="4" ry="4"/>
+    <rect width="48.2" height="61.06" x="131.5" y="32.3" class="cls-6" rx="4" ry="4"/>
+    <rect width="48.2" height="61.06" x="124.8" y="25.7" fill="#a9e6fd" stroke="#2f3f4a" stroke-miterlimit="10" stroke-width="1.75" rx="4" ry="4"/>
+    <rect width="37.6" height="8.96" x="130.1" y="72.4" fill="#007dc1" rx="2" ry="2"/>
+    <rect width="37.6" height="8.96" x="130.1" y="45.6" class="cls-4" rx="2" ry="2"/>
+    <path d="M133.5 48.7L133.5 51.5" class="cls-9"/>
+    <rect width="37.6" height="8.96" x="130.1" y="59" class="cls-4" rx="2" ry="2"/>
+    <circle cx="134" cy="63.6" r="1.2" class="cls-10"/>
+    <circle cx="138" cy="63.6" r="1.2" class="cls-10"/>
+    <circle cx="142" cy="63.6" r="1.2" class="cls-10"/>
+    <circle cx="146" cy="63.6" r="1.2" class="cls-10"/>
+    <circle cx="150" cy="63.6" r="1.2" class="cls-10"/>
+    <circle cx="148.9" cy="36.7" r="4.5" class="cls-4"/>
+    <circle cx="80.5" cy="14.5" r="1.6" class="cls-4"/>
+    <circle cx="87.2" cy="14.5" r="1.6" class="cls-4"/>
+    <circle cx="93.9" cy="14.5" r="1.6" class="cls-4"/>
+    <path d="M149.2 28.4L149.2 5.7" class="cls-9"/>
+    <path fill="#fff" stroke="#2f3f4a" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M151.4 3.7L155.2 2.3 237.5 76.6 228.5 86.1 150.2 8 151.4 3.7z"/>
+    <rect width="61" height="8.78" x="212.1" y="108.1" class="cls-4" rx="4.4" ry="4.4"/>
+    <path d="M241.8,76.8h-9.9a3.4,3.4,0,0,0-3.4,3.4v7.7l10.6.2Z" class="cls-4"/>
+    <circle cx="237.1" cy="84.8" r="4.1" class="cls-4"/>
+    <path d="M263.8,65.2h-17c-1.9,0-2.9,1.4-3.4,3.4l-4.2,19.6H215.5a3.4,3.4,0,0,0-3.4,3.4v9.8a3.4,3.4,0,0,0,3.4,3.3h54.2a3.4,3.4,0,0,0,3.4-3.3V74.5C273.1,68.4,270.1,65.2,263.8,65.2Z" class="cls-4"/>
+    <path d="M266.6,88.9h-4.7a3.4,3.4,0,0,1-3.3-3.4V71.9a3.3,3.3,0,0,1,3.3-3.3h3c3.3,0,5,1.6,5,5V85.5A3.4,3.4,0,0,1,266.6,88.9Z" class="cls-6"/>
+    <rect width="6.7" height="20.34" x="246" y="68.5" class="cls-6" rx="3.4" ry="3.4"/>
+    <path d="M243.6 67.5L238.2 92.8M212.1 92.1L239 92.1" class="cls-6"/>
+    <rect width="55.2" height="3.09" x="215" y="110.9" class="cls-6" rx="1.5" ry="1.5"/>
+    <path d="M229.3 104.5L229.3 107.6M254.1 104.5L254.1 107.6M212 100.2L273.1 100.2M255.7 65.1L255.7 100.4" class="cls-6"/>
+    <rect width="2" height=".64" x="267.2" y="91.4" stroke="#2f3f4a" stroke-miterlimit="10" stroke-width="1.75" rx=".2" ry=".2"/>
+    <path d="M41.5 67L78 59.3 73.3 56.8 31.1 66 30.7 67.1 31.1 68.3 66.8 75.9 31.1 83.7 30.7 84.8 31.1 86 73.2 95 78 92.7 41.5 84.8 78 77 78.8 75.9 78 75 41.5 67z" class="cls-13"/>
+    <path d="M78.4 67.1L78 66 35.8 56.8 31.1 59.3 67.6 67 31.1 75 30.3 75.9 31.1 77 67.6 84.8 31.1 92.7 35.9 95 78 86 78.4 84.8 78 83.7 42.3 75.9 78 68.3 78.4 67.1z" class="cls-13"/>
+    <rect width="50.4" height="5.68" x="29.3" y="53.9" class="cls-4" rx="2" ry="2"/>
+    <rect width="50.4" height="5.68" x="29.3" y="34.7" class="cls-4" rx="2" ry="2"/>
+    <rect width="50.4" height="13.71" x="29.3" y="98.3" class="cls-4" rx="5.2" ry="5.2"/>
+    <circle cx="36" cy="112.1" r="5.2" class="cls-4"/>
+    <circle cx="36" cy="112.1" r="2.3" class="cls-4"/>
+    <circle cx="72.2" cy="112.1" r="5.2" class="cls-4"/>
+    <circle cx="72.2" cy="112.1" r="2.3" class="cls-4"/>
+    <path d="M29.3 93.6H79.7V103.78999999999999H29.3z" class="cls-4"/>
+    <path d="M30.8 40.4L30.8 53.9M47.4 40.4L47.4 53.9M78.3 40.4L78.3 53.9M62.2 40.4L62.2 53.9M30.3 45.9L78.4 45.9" class="cls-6"/>
+    <circle cx="155.1" cy="8.3" r="6.6" fill="#fff" stroke="#2f3f4a" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.75"/>
+    <path d="M32.5 97.5L47.7 97.5M50.8 97.5L50.8 97.5M215.6 95.6L230.8 95.6M233.9 95.6L233.9 95.6M224.6 77.5L195.6 48.5M40.9 109.4L67.4 109.4M91.6 117L164.5 117M175.5 117L197.4 117" class="cls-9"/>
+  </g>
+</svg>
+
+                    
+									</div>
+																	
+								
+									<h4 class="Block-title">Customer Identity</h4>
+
+
+								
+
+																	<div class="Block-content">
+
+										<p>Build secure, seamless experiences for your customers.</p>
+
+                                          <ul class="Block-links">
+                                                  <li class="Block-links__link"><a href="https://www.okta.com/products/customer-identity/authentication/">Authentication</a></li>
+                                                  <li class="Block-links__link"><a href="https://www.okta.com/products/customer-identity/authorization/">Authorization</a></li>
+                                                  <li class="Block-links__link"><a href="https://www.okta.com/products/customer-identity/adaptive-multi-factor-authentication/">Adaptive MFA</a></li>
+                                                  <li class="Block-links__link"><a href="https://www.okta.com/products/customer-identity/user-management/">User Management</a></li>
+                                                  <li class="Block-links__link"><a href="https://www.okta.com/products/customer-identity/lifecycle-management/">Lifecycle Management</a></li>
+                                                  <li class="Block-links__link"><a href="https://www.okta.com/products/customer-identity/b2b-integration/">B2B Integration</a></li>
+                                                  <li class="Block-links__link"><a href="https://www.okta.com/products/customer-identity/access-gateway/">Access Gateway</a></li>
+                                              </ul>
+                    
+                    										<a href="https://www.okta.com/customer-identity/" class="Button--blueOutline">Explore Customer Identity</a>
+																			</div>
+								
+							</div>
+
+						</div>
+					
+				</div>
+
+			</div>
+				</div>
+	</div>
+</section>
+</section>
+<section class="contextual-links-region">
+<section class="PageSection--newColumnContentWithImage u-align--left PageSection--newColumnContentWithImage-Hero-Alternative">
+	<div class="Wrap--1024">
+		<div class="Wrap-inner">
+
+					<header class="Section-header">
+
+				
+									<h2 class="Section-title">We help companies do two things</h2>
+				
+				
+			</header>
+		
+					<div class="Section-content">
+
+				<div class="Row" data-equalizer>
+
+											<div class="Column--6 Column--small-12" data-equalizer-watch>
+
+							<div class="Block">
+
+																										<div class="Block-image">
+
+                    
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 297 126">
+  <defs>
+    <style>
+      .cls-1,.cls-10,.cls-11,.cls-18,.cls-7{fill:none}.cls-1{stroke:#5d5d5d}.cls-1,.cls-11,.cls-16,.cls-18{stroke-miterlimit:10}.cls-3,.cls-4,.cls-9{fill:#fff}.cls-10,.cls-11,.cls-18,.cls-4,.cls-7,.cls-9{stroke:#2f3f4a}.cls-11,.cls-15,.cls-4,.cls-7{stroke-linecap:round}.cls-10,.cls-15,.cls-4,.cls-7,.cls-9{stroke-linejoin:round}.cls-10,.cls-11,.cls-15,.cls-18,.cls-4,.cls-7,.cls-9{stroke-width:1.75px}.cls-15,.cls-16{fill:#007dc1;stroke:#007dc1}
+    </style>
+    <clipPath id="clip-path">
+      <rect width="48.2" height="61.06" x="131.5" y="181.7" class="cls-1" rx="4" ry="4"/>
+    </clipPath>
+  </defs>
+  <g id="Workforce">
+    <ellipse cx="148.5" cy="117.2" fill="#a9e6fd" rx="148.5" ry="8.9"/>
+    <path d="M89.1 109.8H91.6V112.06H89.1z" class="cls-3"/>
+    <path d="M158.6 44.1L156.3 41.9 159.3 37 157.9 37 154.4 39.2 143.5 37 143.3 36.8 153 42.8 156.5 46.1 158.6 44.1z" class="cls-4"/>
+    <path stroke="#2f3f4a" stroke-linejoin="round" stroke-width="1.75" d="M133.3 35.4H169.3V36.9H133.3z"/>
+    <path d="M199,62.4l.7-14.7,15.8,7.8,18.4-2.1-.5-5.4L217,50l-16-9.5c-1.5-1.4-2-2.3-3.6-2.3h-16a3.9,3.9,0,0,0-3,1.7L167.2,53.3l-8.7-9.9-3,2.7,11.1,14.6,11.1-10.4L179,62.7l-2.1,23.2,12.6,6.9,11.9-6.9-1.8-17.3" class="cls-4"/>
+    <path fill="#2f3f4a" stroke="#2f3f4a" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M189.2 45.8L184.2 41.7 184.2 47.7 189.2 43.8 194.1 47.7 194.1 41.7 189.2 45.8z"/>
+    <path d="M194.9 114L183.4 114 181.7 65.6 196.6 65.6 194.9 114z" class="cls-4"/>
+    <path d="M182.2 68.7L195.9 68.7" class="cls-7"/>
+    <path fill="none" stroke="#2f3f4a" stroke-dasharray=".25 4 0 0 0 0" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M189.1 45L189.1 58.9"/>
+    <rect width="17.6" height="3.07" x="180.3" y="113.9" class="cls-4" rx="1.3" ry="1.3"/>
+    <path d="M199.8 70.9L199 62.6" class="cls-7"/>
+    <path d="M233.3 48.5L235.9 48.2 235.6 38.2 238.3 46.6 237.5 50.7 236.9 50.8 233.8 51.3 233.3 48.5z" class="cls-4"/>
+    <path d="M71 36.1H76.2V45.89H71z" class="cls-3"/>
+    <path d="M98 83.7c3.5 4.6-5.5 25.9-5.5 25.9H88.3l2.4-21.2-31.2-.5s-2.7-1.4-3-3.5.8-9.9.8-9.9l16.3 1 .5 2.2S93.6 78 98 83.7zM57.8 74.3s1.7-10.9 2.8-14.4 2.2-8.4 4.4-11.8 4.5-5.2 5.2-5.5a10.6 10.6 0 0 1 6.9 2.9 10 10 0 0 1 2.1 6c.2 2.7-1 7.7-1 7.7L74.7 67l-1.4 8.4zM70.2 42.6c2.9-5.6 1.2-7.3 1.2-7.3M76.3 39.2L75.8 44.5M88.6 115.3a.9.9 0 0 1-.9-.9v-1.1a.9.9 0 0 1 .9-.9h6.1c2.9 0 2.9 1.5 2.9 2.1v.9z" class="cls-9"/>
+    <path d="M77.7,24H74a4.7,4.7,0,0,0-4.7,4.7v2.9a4.7,4.7,0,0,0,3.3,4.5,4.6,4.6,0,0,0,4.5,3.4h.6a4.9,4.9,0,0,0,4.8-4.8v-6A4.8,4.8,0,0,0,77.7,24Z" class="cls-4"/>
+    <rect width="36.1" height="5.56" x="46.1" y="88.4" class="cls-9" rx="2.2" ry="2.2"/>
+    <rect width="36.1" height="5.56" x="30.8" y="59" class="cls-9" rx="2.2" ry="2.2" transform="rotate(90 48.85 61.85)"/>
+    <circle cx="51.7" cy="113.5" r="2.6" class="cls-4"/>
+    <circle cx="63.7" cy="113.5" r="2.6" class="cls-4"/>
+    <circle cx="75.8" cy="113.5" r="2.6" class="cls-4"/>
+    <path d="M48.5 79.6L48.5 88.7" class="cls-10"/>
+    <path d="M51.7 108.3L51.7 113.6M75.8 108.3L75.8 113.6" class="cls-7"/>
+    <path d="M124.4 74.7H128.5V116.52000000000001H124.4zM80.5 74.7H84.6V116.52000000000001H80.5z" class="cls-4"/>
+    <path d="M83.3 32.5L84.5 32.5" class="cls-7"/>
+    <path d="M106.5,69.7h-4.8a1,1,0,0,1-1-1.1V67.4a1,1,0,0,1,1-1.1H105c2.4,0,2.6,1,2.6,2.1v.2A1.1,1.1,0,0,1,106.5,69.7Z" class="cls-4"/>
+    <path d="M70.6,58.2l9,14.5,17-3h4.7l-.6-4-5-.2L84,66.3,75.1,48.7" class="cls-4"/>
+    <rect width="54.4" height="3.91" x="78.1" y="72.7" class="cls-4" rx="1.6" ry="1.6"/>
+    <path d="M89.2 109.5L89.2 112.1M91.5 109.6L91.5 112" class="cls-10"/>
+    <path d="M63.7 94.4L63.7 113.7" class="cls-7"/>
+    <path d="M50.2 107.5v-1.2a2.6 2.6 0 0 1 2.6-2.6H74.4a2.6 2.6 0 0 1 2.6 2.6v1.2zM66.2 93.9v3.6a2.6 2.6 0 0 1-2.6 2.6h0a2.7 2.7 0 0 1-2.7-2.6V93.9zM75.4 77.7L72.1 77.6" class="cls-4"/>
+    <path d="M81.7,36.1a1.8,1.8,0,0,1-1.8-1.8" class="cls-7"/>
+    <path d="M186.1 39.4L192.8 41.3 192.8 31.5 187.6 31.5 186.1 39.4z" class="cls-3"/>
+    <path d="M192.5 30.8s-.6 2.5.5 7.4M186.2 34.6L186 38.8" class="cls-9"/>
+    <path d="M186.1,19.4h3.7a4.7,4.7,0,0,1,4.7,4.7V27a4.7,4.7,0,0,1-3.2,4.5,4.7,4.7,0,0,1-4.5,3.4h-.7a4.8,4.8,0,0,1-4.8-4.7V24.1A4.8,4.8,0,0,1,186.1,19.4Z" class="cls-4"/>
+    <path d="M180.5 27.9L179.3 27.9M182.1 31.5a1.8 1.8 0 0 0 1.8-1.8" class="cls-7"/>
+    <path d="M146.4 117L206.3 117M214.3 117L229.2 117" class="cls-11"/>
+    <path d="M237.5 50.7L239.6 42.7" class="cls-7"/>
+    <path fill="#007dc1" d="M235.8,30.2l14.1,2.2a1.4,1.4,0,0,1,1.2,1.4v22A15.1,15.1,0,0,1,244.9,68l-8.5,5.6-.5.6h-.1l-.5-.6L226.8,68a15.1,15.1,0,0,1-6.2-12.2v-22a1.4,1.4,0,0,1,1.2-1.4l14-2.2Z"/>
+    <rect width="9.9" height="9.43" x="231.1" y="47.8" fill="#fff" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" rx="3" ry="3"/>
+    <path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M239.1,47.8V43.9a3,3,0,0,0-3-3,2.9,2.9,0,0,0-3,3v3.9"/>
+    <circle cx="236.1" cy="51.8" r="1" class="cls-15"/>
+    <path d="M236.1 52.8L236.1 54.3" class="cls-15"/>
+    <rect width="6" height="6" x="137.3" y="23.2" class="cls-16" rx="2" ry="2" transform="rotate(90 140.3 26.2)"/>
+    <rect width="6" height="6" x="148.3" y="23.2" class="cls-16" rx="2" ry="2" transform="rotate(90 151.3 26.2)"/>
+    <rect width="6" height="6" x="159.3" y="23.2" class="cls-16" rx="2" ry="2" transform="rotate(90 162.3 26.2)"/>
+    <rect width="6" height="6" x="137.3" y="12.2" class="cls-16" rx="2" ry="2" transform="rotate(90 140.3 15.2)"/>
+    <rect width="6" height="6" x="148.3" y="12.2" class="cls-16" rx="2" ry="2" transform="rotate(90 151.3 15.2)"/>
+    <rect width="6" height="6" x="159.3" y="12.2" class="cls-16" rx="2" ry="2" transform="rotate(90 162.3 15.2)"/>
+    <rect width="6" height="6" x="137.3" y="1.2" class="cls-16" rx="2" ry="2" transform="rotate(90 140.3 4.2)"/>
+    <rect width="6" height="6" x="148.3" y="1.2" class="cls-16" rx="2" ry="2" transform="rotate(90 151.3 4.2)"/>
+    <rect width="6" height="6" x="159.3" y="1.2" class="cls-16" rx="2" ry="2" transform="rotate(90 162.3 4.2)"/>
+    <path d="M189.1 78.9L189.1 116.7" class="cls-7"/>
+    <path d="M185.3 38.2L189.1 41.6 193 38.2" class="cls-10"/>
+    <path d="M115.8 72.1L112.7 71.6 117.8 53.3 120.7 53.9 115.8 72.1z" class="cls-4"/>
+    <path d="M98.8 69.7H115.8V72.67H98.8z" class="cls-4"/>
+  </g>
+</svg>
+
+                    
+									</div>
+																	
+								
+									<h4 class="Block-title">Workforce Identity</h4>
+
+
+								
+
+																	<div class="Block-content">
+
+										<p>Protect and enable employees, contractors, and partners.</p>
+
+                                          <ul class="Block-links">
+                                                  <li class="Block-links__link"><a href="https://www.okta.com/products/single-sign-on/">Single Sign-On</a></li>
+                                                  <li class="Block-links__link"><a href="https://www.okta.com/products/universal-directory/">Universal Directory</a></li>
+                                                  <li class="Block-links__link"><a href="https://www.okta.com/products/adaptive-multi-factor-authentication/">Adaptive MFA</a></li>
+                                                  <li class="Block-links__link"><a href="https://www.okta.com/products/api-access-management/">API Access Management</a></li>
+                                                  <li class="Block-links__link"><a href="https://www.okta.com/products/lifecycle-management/">Lifecycle Management</a></li>
+                                                  <li class="Block-links__link"><a href="https://www.okta.com/products/advanced-server-access/">Advanced Server Access</a></li>
+                                                  <li class="Block-links__link"><a href="https://www.okta.com/products/access-gateway/">Access Gateway</a></li>
+                                              </ul>
+                    
+                    										<a href="https://www.okta.com/workforce-identity/" class="Button--blueOutline">Explore Workforce Identity</a>
+																			</div>
+								
+							</div>
+
+						</div>
+											<div class="Column--6 Column--small-12" data-equalizer-watch>
+
+							<div class="Block">
+
+																										<div class="Block-image">
+
+                    
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 297 126">
+  <defs>
+    <style>
+      .cls-1,.cls-6,.cls-9{fill:none}.cls-1{stroke:#5d5d5d}.cls-1,.cls-10,.cls-4,.cls-6,.cls-9{stroke-miterlimit:10}.cls-13,.cls-4{fill:#fff}.cls-10,.cls-13,.cls-4,.cls-6,.cls-9{stroke:#2f3f4a}.cls-13,.cls-4,.cls-6,.cls-9{stroke-width:1.75px}.cls-9{stroke-linecap:round}.cls-10{fill:#2f3f4a}.cls-13{stroke-linejoin:round}
+    </style>
+    <clipPath id="clip-path">
+      <rect width="48.2" height="61.06" x="131.5" y="32.3" class="cls-1" rx="4" ry="4"/>
+    </clipPath>
+  </defs>
+  <g id="Customer">
+    <ellipse cx="148.5" cy="117.2" fill="#a9e6fd" rx="148.5" ry="8.9"/>
+    <path fill="#fff" d="M229.3 104.5H254V107.6H229.3z"/>
+    <path d="M73.7 19.1V13.4a3.8 3.8 0 0 1 3.8-3.8H221.3a3.8 3.8 0 0 1 3.8 3.8v5.7M225.1 19.1V97.8a3.7 3.7 0 0 1-3.8 3.6H77.5a3.7 3.7 0 0 1-3.8-3.6V19.1z" class="cls-4"/>
+    <g clip-path="url(#clip-path)">
+      <path d="M114.1 26.2L193.7 105.9M114.1 18.3L193.7 97.9M114.1 10.3L193.7 90M114.1 2.4L193.7 82.1M114.1-5.6L193.7 74.1M114.1-13.5L193.7 66.2M114.1-21.5L193.7 58.2M114.1-29.4L193.7 50.3M114.1-37.3L193.7 42.3M114.1-45.3L193.7 34.4M114.1-53.2L193.7 26.4M114.1-61.2L193.7 18.5M114.1 34.2L193.7 113.8M114.1 42.1L193.7 121.8M114.1 50L193.7 129.7M114.1 58L193.7 137.7M114.1 65.9L193.7 145.6M114.1 73.9L193.7 153.5" class="cls-6"/>
+    </g>
+    <rect width="48.2" height="61.06" x="131.5" y="32.3" class="cls-1" rx="4" ry="4"/>
+    <rect width="48.2" height="61.06" x="131.5" y="32.3" class="cls-6" rx="4" ry="4"/>
+    <rect width="48.2" height="61.06" x="124.8" y="25.7" fill="#a9e6fd" stroke="#2f3f4a" stroke-miterlimit="10" stroke-width="1.75" rx="4" ry="4"/>
+    <rect width="37.6" height="8.96" x="130.1" y="72.4" fill="#007dc1" rx="2" ry="2"/>
+    <rect width="37.6" height="8.96" x="130.1" y="45.6" class="cls-4" rx="2" ry="2"/>
+    <path d="M133.5 48.7L133.5 51.5" class="cls-9"/>
+    <rect width="37.6" height="8.96" x="130.1" y="59" class="cls-4" rx="2" ry="2"/>
+    <circle cx="134" cy="63.6" r="1.2" class="cls-10"/>
+    <circle cx="138" cy="63.6" r="1.2" class="cls-10"/>
+    <circle cx="142" cy="63.6" r="1.2" class="cls-10"/>
+    <circle cx="146" cy="63.6" r="1.2" class="cls-10"/>
+    <circle cx="150" cy="63.6" r="1.2" class="cls-10"/>
+    <circle cx="148.9" cy="36.7" r="4.5" class="cls-4"/>
+    <circle cx="80.5" cy="14.5" r="1.6" class="cls-4"/>
+    <circle cx="87.2" cy="14.5" r="1.6" class="cls-4"/>
+    <circle cx="93.9" cy="14.5" r="1.6" class="cls-4"/>
+    <path d="M149.2 28.4L149.2 5.7" class="cls-9"/>
+    <path fill="#fff" stroke="#2f3f4a" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M151.4 3.7L155.2 2.3 237.5 76.6 228.5 86.1 150.2 8 151.4 3.7z"/>
+    <rect width="61" height="8.78" x="212.1" y="108.1" class="cls-4" rx="4.4" ry="4.4"/>
+    <path d="M241.8,76.8h-9.9a3.4,3.4,0,0,0-3.4,3.4v7.7l10.6.2Z" class="cls-4"/>
+    <circle cx="237.1" cy="84.8" r="4.1" class="cls-4"/>
+    <path d="M263.8,65.2h-17c-1.9,0-2.9,1.4-3.4,3.4l-4.2,19.6H215.5a3.4,3.4,0,0,0-3.4,3.4v9.8a3.4,3.4,0,0,0,3.4,3.3h54.2a3.4,3.4,0,0,0,3.4-3.3V74.5C273.1,68.4,270.1,65.2,263.8,65.2Z" class="cls-4"/>
+    <path d="M266.6,88.9h-4.7a3.4,3.4,0,0,1-3.3-3.4V71.9a3.3,3.3,0,0,1,3.3-3.3h3c3.3,0,5,1.6,5,5V85.5A3.4,3.4,0,0,1,266.6,88.9Z" class="cls-6"/>
+    <rect width="6.7" height="20.34" x="246" y="68.5" class="cls-6" rx="3.4" ry="3.4"/>
+    <path d="M243.6 67.5L238.2 92.8M212.1 92.1L239 92.1" class="cls-6"/>
+    <rect width="55.2" height="3.09" x="215" y="110.9" class="cls-6" rx="1.5" ry="1.5"/>
+    <path d="M229.3 104.5L229.3 107.6M254.1 104.5L254.1 107.6M212 100.2L273.1 100.2M255.7 65.1L255.7 100.4" class="cls-6"/>
+    <rect width="2" height=".64" x="267.2" y="91.4" stroke="#2f3f4a" stroke-miterlimit="10" stroke-width="1.75" rx=".2" ry=".2"/>
+    <path d="M41.5 67L78 59.3 73.3 56.8 31.1 66 30.7 67.1 31.1 68.3 66.8 75.9 31.1 83.7 30.7 84.8 31.1 86 73.2 95 78 92.7 41.5 84.8 78 77 78.8 75.9 78 75 41.5 67z" class="cls-13"/>
+    <path d="M78.4 67.1L78 66 35.8 56.8 31.1 59.3 67.6 67 31.1 75 30.3 75.9 31.1 77 67.6 84.8 31.1 92.7 35.9 95 78 86 78.4 84.8 78 83.7 42.3 75.9 78 68.3 78.4 67.1z" class="cls-13"/>
+    <rect width="50.4" height="5.68" x="29.3" y="53.9" class="cls-4" rx="2" ry="2"/>
+    <rect width="50.4" height="5.68" x="29.3" y="34.7" class="cls-4" rx="2" ry="2"/>
+    <rect width="50.4" height="13.71" x="29.3" y="98.3" class="cls-4" rx="5.2" ry="5.2"/>
+    <circle cx="36" cy="112.1" r="5.2" class="cls-4"/>
+    <circle cx="36" cy="112.1" r="2.3" class="cls-4"/>
+    <circle cx="72.2" cy="112.1" r="5.2" class="cls-4"/>
+    <circle cx="72.2" cy="112.1" r="2.3" class="cls-4"/>
+    <path d="M29.3 93.6H79.7V103.78999999999999H29.3z" class="cls-4"/>
+    <path d="M30.8 40.4L30.8 53.9M47.4 40.4L47.4 53.9M78.3 40.4L78.3 53.9M62.2 40.4L62.2 53.9M30.3 45.9L78.4 45.9" class="cls-6"/>
+    <circle cx="155.1" cy="8.3" r="6.6" fill="#fff" stroke="#2f3f4a" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.75"/>
+    <path d="M32.5 97.5L47.7 97.5M50.8 97.5L50.8 97.5M215.6 95.6L230.8 95.6M233.9 95.6L233.9 95.6M224.6 77.5L195.6 48.5M40.9 109.4L67.4 109.4M91.6 117L164.5 117M175.5 117L197.4 117" class="cls-9"/>
+  </g>
+</svg>
+
+                    
+									</div>
+																	
+								
+									<h4 class="Block-title">Customer Identity</h4>
+
+
+								
+
+																	<div class="Block-content">
+
+										<p>Build secure, seamless experiences for your customers.</p>
+
+                                          <ul class="Block-links">
+                                                  <li class="Block-links__link"><a href="https://www.okta.com/products/customer-identity/authentication/">Authentication</a></li>
+                                                  <li class="Block-links__link"><a href="https://www.okta.com/products/customer-identity/authorization/">Authorization</a></li>
+                                                  <li class="Block-links__link"><a href="https://www.okta.com/products/customer-identity/adaptive-multi-factor-authentication/">Adaptive MFA</a></li>
+                                                  <li class="Block-links__link"><a href="https://www.okta.com/products/customer-identity/user-management/">User Management</a></li>
+                                                  <li class="Block-links__link"><a href="https://www.okta.com/products/customer-identity/lifecycle-management/">Lifecycle Management</a></li>
+                                                  <li class="Block-links__link"><a href="https://www.okta.com/products/customer-identity/b2b-integration/">B2B Integration</a></li>
+                                              </ul>
+                    
+                    										<a href="https://www.okta.com/customer-identity/" class="Button--blueOutline">Explore Customer Identity</a>
+																			</div>
+								
+							</div>
+
+						</div>
+					
+				</div>
+
+			</div>
+				</div>
+	</div>
+</section>
+</section>
+<section class="contextual-links-region">
+<section class="PageSection--newColumnContentWithImage u-align--left PageSection--newColumnContentWithImage-Featured">
+	<div class="Wrap--1024">
+
+		
+					<div class="Section-content">
+
+				<div class="Row">
+
+											<div class="Column--4 Column--medium-6 Column--small-12">
+
+							<div class="Block">
+
+																	<div class="Block-image">
+                    <img  src="https://www.okta.com/sites/default/files/Okta_Leader-Forrester-Wave-IDaaS_2019.png" alt="Okta Leader Forrester Wave IDaaS 2019" >
+									</div>
+								
+								
+
+								
+								
+							</div>
+
+						</div>
+											<div class="Column--6 Column--small-12">
+
+							<div class="Block">
+
+								
+																	<h2 class="Block-title">Okta named a Leader</h2>
+								
+
+																	<div class="Block-content">
+
+										<p>Gartner recently recognized Okta as a Leader in the <em>Magic Quadrant for Access Management, August 2019</em>. For the third year in a row, Okta has been placed the furthest for ability to execute and completeness of vision.</p>
+<p><strong><a href="https://www.okta.com/resources/access-management-leader-gartner-magic-quadrant/">Read the report</a></strong></p>
+
+									</div>
+								
+								
+							</div>
+
+						</div>
+					
+				</div>
+
+			</div>
+		
+	</div>
+</section>
+</section>
+<section class="contextual-links-region">
+<section class="PageSection--newColumnContentWithImage u-align--left PageSection--newColumnContentWithImage-Featured">
+	<div class="Wrap--1024">
+
+		
+					<div class="Section-content">
+
+				<div class="Row">
+
+											<div class="Column--8 Column--medium-6 Column--small-12">
+
+							<div class="Block">
+
+								
+																	<h2 class="Block-title">Your technology can do more</h2>
+								
+
+																	<div class="Block-content">
+
+										<p>With over 6,000+ integrations, there's a good chance we can connect anyone that touches your organization to any technology they want to use. But what really sets us apart is the depth of our integrations. Explore how SAML, automated provisioning, and security analytics can make the apps you already use even better.</p>
+<p><strong><a href="/okta-integration-network/">Learn more</a></strong></p>
+
+									</div>
+								
+								
+							</div>
+
+						</div>
+											<div class="Column--4 Column--medium-6 Column--small-12">
+
+							<div class="Block">
+
+																	<div class="Block-image">
+                    <img  src="https://www.okta.com/sites/default/files/oin-integrations-block.png" alt="oin integrations block" >
+									</div>
+								
+								
+
+								
+								
+							</div>
+
+						</div>
+					
+				</div>
+
+			</div>
+		
+	</div>
+</section>
+</section>
+<section class="contextual-links-region">
+
+<section class="PageSection--featuredCustomers PageSection--featuredCustomers-home">
+    <div class="Wrap--1024">
+
+          <h2 class="PageSection-title" style="text-align:center;">Leading businesses are more efficient and secure with Okta</h2>
+    
+    <div class="Row u-stretch">
+
+              <div class="Column--4 Column--medium-12 u-flex u-stretch">
+
+          <a class="FeaturedCustomerBlock home" href="/customers/news-corp/">
+
+            <div class="FeaturedCustomerBlock-bg">
+              <img  src="https://www.okta.com/sites/default/files/styles/customers_home/public/images/customer/logo/news_corp_white_1.png?itok=gh_5dZ5C" class="invert" alt="news corp white 1" >
+            </div>
+
+            <div class="FeaturedCustomerBlock-content">
+              <p>Enabling global collaboration and rapid growth</p>
+              <p class="color-blue">Learn more</p>
+            </div>
+
+          </a>
+
+        </div>
+              <div class="Column--4 Column--medium-12 u-flex u-stretch">
+
+          <a class="FeaturedCustomerBlock home" href="/customers/pitney-bowes/">
+
+            <div class="FeaturedCustomerBlock-bg">
+              <img  src="https://www.okta.com/sites/default/files/images/customer/logo/Pitney-Bowes-Logo.svg" class="invert" alt="Pitney Bowes Logo" >
+            </div>
+
+            <div class="FeaturedCustomerBlock-content">
+              <p>Securing access to APIs in the Pitney Bowes Commerce Cloud</p>
+              <p class="color-blue">Learn more</p>
+            </div>
+
+          </a>
+
+        </div>
+              <div class="Column--4 Column--medium-12 u-flex u-stretch">
+
+          <a class="FeaturedCustomerBlock home" href="/customers/flex/">
+
+            <div class="FeaturedCustomerBlock-bg">
+              <img  src="https://www.okta.com/sites/default/files/styles/customers_home/public/images/customer/logo/Flex_Logo-White_0.png?itok=eod3Zfoi" class="invert" alt="Flex Logo White 0" >
+            </div>
+
+            <div class="FeaturedCustomerBlock-content">
+              <p>Building an intelligent, connected world</p>
+              <p class="color-blue">Learn more</p>
+            </div>
+
+          </a>
+
+        </div>
+      
+    </div>
+
+  </div>
+        <div class="Wrap--1024 u-marginBottom--medium u-marginTop--large clearfix">
+      <div class="Row u-stretch u-justify u-alignCenter">
+
+                  <div class="Column--2 Column--medium-6 FeaturedCustomerBlock-logoRow">
+            <img  src="https://www.okta.com/sites/default/files/logo-nasdaq-gray.svg"  alt="logo nasdaq gray" >
+          </div>
+                  <div class="Column--2 Column--medium-6 FeaturedCustomerBlock-logoRow">
+            <img  src="https://www.okta.com/sites/default/files/logo-adobe-gray.svg"  alt="logo adobe gray" >
+          </div>
+                  <div class="Column--2 Column--medium-6 FeaturedCustomerBlock-logoRow">
+            <img  src="https://www.okta.com/sites/default/files/logo-natgeo-gray.svg"  alt="logo natgeo gray" >
+          </div>
+                  <div class="Column--2 Column--medium-6 FeaturedCustomerBlock-logoRow">
+            <img  src="https://www.okta.com/sites/default/files/logo-experian-gray.svg"  alt="logo experian gray" >
+          </div>
+                  <div class="Column--2 Column--medium-6 FeaturedCustomerBlock-logoRow">
+            <img  src="https://www.okta.com/sites/default/files/logo-21stFox-gray.svg"  alt="logo 21stFox gray" >
+          </div>
+                  <div class="Column--2 Column--medium-6 FeaturedCustomerBlock-logoRow">
+            <img  src="https://www.okta.com/sites/default/files/logo-engie-gray.svg"  alt="logo engie gray" >
+          </div>
+        
+      </div>
+    </div>
+  
+        <div class="Wrap--1024">
+      <div class="Row">
+        <div class="Column--12 u-paddingBottom--none">
+          <p class="u-alignCenter u-marginBottom--none"><a href="/customers/" class="Button--blueOutline">See why companies choose Okta</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+<section class="contextual-links-region">
+
+  <section class="PageSection--quickLinks PageSection--quickLinks-home">
+	<div class="Wrap--1024">
+		<div class="Row u-stretch ">
+			<div class="Column--12">
+				<h2 class="PageSection-title">Resources</h2>			
+			</div>
+			
+		</div>
+	</div>
+	
+
+	<div class="Wrap--1024">
+		<div class="Row u-stretch">
+			
+			<div class="Column--3 Column--large-6 Column--medium-12 u-flex u-stretch"><div class="QuickLinksGridBlock"><div class="QuickLinksGridBlock-content" ><h3 class="QuickLinksGridBlock-title">The Forrester Wave™: Zero Trust eXtended Ecosystem Platform Providers, Q4 2019</h3><p class="QuickLinksGridBlock-description">Okta Recognized as a Leader in Zero Trust Security</p><a class="QuickLinksGridBlock-link " href="https://www.okta.com/resources/analyst-research-the-forrester-wave-zero-trust/" >Read Report</a></div></div></div><div class="Column--3 Column--large-6 Column--medium-12 u-flex u-stretch"><div class="QuickLinksGridBlock"><div class="QuickLinksGridBlock-content" ><h3 class="QuickLinksGridBlock-title">Okta Showcase</h3><p class="QuickLinksGridBlock-description">Get insight into Okta’s latest innovations with discussions around new products, new partner integrations, and a panel discussion.</p><a class="QuickLinksGridBlock-link " href="https://www.okta.com/resources/video-showcase2019/" >Watch the recording</a></div></div></div><div class="Column--3 Column--large-6 Column--medium-12 u-flex u-stretch"><div class="QuickLinksGridBlock"><div class="QuickLinksGridBlock-content" ><h3 class="QuickLinksGridBlock-title">Product Demos</h3><p class="QuickLinksGridBlock-description">Wondering what Okta can do for your business? Visit our library of demo videos to find out.</p><a class="QuickLinksGridBlock-link " href="https://www.okta.com/resources/content-library/?type=demo_video" >Watch now</a></div></div></div><div class="Column--3 Column--large-6 Column--medium-12 u-flex u-stretch"><div class="QuickLinksGridBlock"><div class="QuickLinksGridBlock-content" ><h3 class="QuickLinksGridBlock-title">Enter 2020 on a high note by taking charge of your career!</h3><p class="QuickLinksGridBlock-description">Take an Okta Certification Exam 24 x 7 for 80% off the regular price by January 31, 2020. Use promo code GETCERT7E1354
+</p><a class="QuickLinksGridBlock-link " href="https://www.okta.com/services/certification/" >Get Certified</a></div></div></div>		</div>
+	</div>
+</section>
+
+
+</section>
+<section class="contextual-links-region">
+
+<section class="PageSection--cta Home is-darkBackground is-centerAligned">
+	<div class="Wrap--1024">
+
+		<div class="Row">
+			<div class="Column--10 Column--medium-12">
+
+				
+									<h3 class="PageSection-title">How secure is your organization?</h3>
+				
+				
+				
+									<div class="PageSection-cta">
+						<a href="https://www.okta.com/zero-trust-assessment" class="Button--green">Find out</a>					</div>
+				
+			</div>
+
+			
+			</div>
+
+		</div>
+
+		<div class="PageSection-background" style="background-image:url('https://www.okta.com/sites/default/files/bvc-background-007dc1.png');"></div>	</section>
+</section>
+
+
+
+
+  
+  
+    
+  
+
+<aside class="TrendingTopics">
+  <div class="Wrap">
+
+        <section class="block block-menu">
+  
+        <h2>Trending Topics:</h2>
+    
+    <ul class="menu"><li class="first leaf"><a href="https://www.okta.com/resources/whitepaper-rethink-active-directory">Rethink Active Directory</a></li>
+<li class="leaf"><a href="https://www.okta.com/resources/how-cloud-based-identity-and-access-management-enables-digital-business/">Enable Digital Business with IAM</a></li>
+<li class="leaf"><a href="https://www.okta.com/resources/eguide-office365-adoption/">Office 365 Adoption eGuide</a></li>
+<li class="leaf"><a href="https://www.okta.com/resources/whitepaper/consumer-identity-management-for-the-cmo-ciso-and-cio/">Consumer Identity Management</a></li>
+<li class="leaf"><a href="https://www.okta.com/resources/whitepaper/top-5-reasons-to-automate-identity-lifecycle/">Automate Identity Lifecycle</a></li>
+<li class="leaf"><a href="https://www.okta.com/identity-101/authentication-vs-authorization/">Authentication vs Authorization</a></li>
+<li class="last leaf"><a href="https://www.okta.com/services/certification/keepcurrent">Keep your Okta Certification current</a></li>
+</ul>  
+  </section>
+  </div>
+</aside>
+
+
+<footer class="Footer">
+  <div class="Wrap">
+
+    <div class="Footer-nav">
+        <section class="block block-menu">
+  
+        <h2>Quick Links</h2>
+    
+    <ul class="menu"><li class="first leaf"><a href="https://www.okta.com/pricing/">Pricing</a></li>
+<li class="leaf"><a href="/company/careers/">Careers</a></li>
+<li class="leaf"><a href="/services/support/">Support</a></li>
+<li class="leaf"><a href="/press-room/">Press Room</a></li>
+<li class="leaf"><a href="https://trust.okta.com/">Trust</a></li>
+<li class="leaf"><a href="https://status.okta.com/" target="_blank">Status</a></li>
+<li class="leaf"><a href="/blog/">Blog</a></li>
+<li class="leaf"><a href="/contact/">Contact Us</a></li>
+<li class="last leaf"><a href="https://www.okta.com/resources/customer-experience-center">Customer Experience Center</a></li>
+</ul>  
+  </section><section class="block block-menu">
+  
+      
+    <ul class="menu"><li class="first last expanded"><a href="/solutions/">Solutions</a><ul class="menu"><li class="first leaf"><a href="https://www.okta.com/solutions/protect-against-data-breaches">Protect Against Data Breaches</a></li>
+<li class="leaf"><a href="https://www.okta.com/solutions/secure-seamless-customer-experience">Secure, Seamless Customer Experience</a></li>
+<li class="leaf"><a href="https://www.okta.com/solutions/collaborate-with-partners">Collaborate with Partners</a></li>
+<li class="leaf"><a href="https://www.okta.com/solutions/enable-mobile-workforce">Enable a Mobile Workforce</a></li>
+<li class="leaf"><a href="https://www.okta.com/solutions/reduce-it-friction">Reduce IT Friction</a></li>
+<li class="leaf"><a href="https://www.okta.com/solutions/increase-mergers-and-acquisitions-agility">Increase M&amp;A Agility</a></li>
+<li class="last leaf"><a href="/solutions/">View All ›</a></li>
+</ul></li>
+</ul>  
+  </section><section class="block block-menu">
+  
+      
+    <ul class="menu"><li class="first last expanded"><a href="https://www.okta.com/products/">Products</a><ul class="menu"><li class="first expanded"><a href="/products/">Workforce Identity</a><ul class="menu"><li class="first leaf"><a href="/products/single-sign-on/">Single Sign-On</a></li>
+<li class="leaf"><a href="https://www.okta.com/products/adaptive-multi-factor-authentication">Multi-Factor Authentication</a></li>
+<li class="leaf"><a href="/products/lifecycle-management/">Lifecycle Management</a></li>
+<li class="leaf"><a href="/products/universal-directory/">Universal Directory</a></li>
+<li class="leaf"><a href="https://www.okta.com/products/api-access-management/">API Access Management</a></li>
+<li class="last leaf"><a href="/products/advanced-server-access/">Advanced Server Access</a></li>
+</ul></li>
+<li class="expanded"><a href="/products/">Customer Identity</a><ul class="menu"><li class="first leaf"><a href="https://www.okta.com/products/customer-identity/adaptive-multi-factor-authentication/">Multi-factor Authentication</a></li>
+<li class="leaf"><a href="https://www.okta.com/products/customer-identity/authentication/">Authentication</a></li>
+<li class="leaf"><a href="https://www.okta.com/products/customer-identity/authorization/">Authorization</a></li>
+<li class="leaf"><a href="https://www.okta.com/products/customer-identity/b2b-integration/">B2B Integration</a></li>
+<li class="leaf"><a href="https://www.okta.com/products/customer-identity/lifecycle-management/">Lifecycle Management</a></li>
+<li class="last leaf"><a href="https://www.okta.com/products/customer-identity/user-management/">User Management</a></li>
+</ul></li>
+<li class="last leaf"><a href="/okta-integration-network/">Okta Integration Network</a></li>
+</ul></li>
+</ul>  
+  </section>    </div>
+
+    <div class="Footer-copyright">
+        <section class="block block-block">
+  
+      
+    <p>© 2019 Okta, Inc. All Rights Reserved. Various trademarks held by their respective owners.</p>
+  
+  </section><section class="block block-menu">
+  
+      
+    <ul class="menu"><li class="first leaf"><a href="/privacy-policy/">Privacy</a></li>
+<li class="leaf"><a href="/security/">Security</a></li>
+<li class="leaf"><a href="/faq/">FAQ</a></li>
+<li class="leaf"><a href="https://www.okta.com/html-sitemap/">Sitemap</a></li>
+<li class="last leaf"><a href="http://developer.okta.com/">Visit our Developer Site</a></li>
+</ul>  
+  </section><section class="block block-menu LanguageSwitcher">
+  
+        <h2>Select Language</h2>
+    
+    <ul class="menu"><li class="first leaf"><a href="/" class="active">English</a></li>
+<li class="leaf"><a href="https://www.okta.com/fr/">French</a></li>
+<li class="leaf"><a href="https://www.okta.com/de/">German</a></li>
+<li class="last leaf"><a href="https://www.okta.com/jp/">Japanese</a></li>
+</ul>  
+  </section><section class="block block-menu SocialIcons">
+  
+      
+    <ul class="menu"><li class="first leaf"><a href="https://twitter.com/okta" class="SocialIcons-twitter">Twitter</a></li>
+<li class="leaf"><a href="https://www.facebook.com/OktaIdentity/" class="SocialIcons-facebook">Facebook</a></li>
+<li class="leaf"><a href="https://www.linkedin.com/company/okta-inc-/" class="SocialIcons-linkedin">LinkedIn</a></li>
+<li class="last leaf"><a href="https://www.youtube.com/user/OktaInc" class="SocialIcons-youtube">Youtube</a></li>
+</ul>  
+  </section>    </div>
+
+  </div>
+</footer>
+
+
+  </div><!-- .container -->
+	<script type="text/javascript" src="https://www.okta.com/sites/default/files/advagg_js/js__88Pl6qTAMDUc4vE-NHKS1NXKvoVRoD0hR8hVTFl2nL4__9mVDzo28Sb5-GFycdn9lIGjqHIRyxYRSIes99yzLveg__1R8XCyS6tpqpsyuFM984E62WgSntuhwasZ34DuDnp-U.js"></script>
+<script type="text/javascript" src="https://www.okta.com/sites/default/files/advagg_js/js__hnvbe_6rk9D_NuKiWMMbMHZBTANak9_QMmIiX4mRGh8__weZEyghBxX95qQKsxQnfu6ySXEckLELiYc1ocEuRTG0__1R8XCyS6tpqpsyuFM984E62WgSntuhwasZ34DuDnp-U.js"></script>
+<script type="text/javascript" src="https://www.okta.com/sites/default/files/advagg_js/js__DJWmjPIdRRKWmsKghKOfCFBcu-DCWKujMYE9rBHB58E__o4cTmMhQg8K_7Afb8nQUulhsG0jVWfn5I91nKOO_EkQ__1R8XCyS6tpqpsyuFM984E62WgSntuhwasZ34DuDnp-U.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.migrateMute=true;jQuery.migrateTrace=false;
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings,{"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"Okta","theme_token":"SCFmTUcfV95kxG7606VcMmyCprx9wjJi2uy-HioxcMs","css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"misc\/ui\/jquery.ui.slider.css":1,"modules\/comment\/comment.css":1,"profiles\/lightning\/modules\/contrib\/date\/date_api\/date.css":1,"profiles\/lightning\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"profiles\/lightning\/modules\/contrib\/ember_support\/css\/ember-token.css":1,"profiles\/lightning\/modules\/contrib\/ember_support\/css\/ember-workbench.css":1,"modules\/field\/theme\/field.css":1,"profiles\/lightning\/modules\/contrib\/media_preview_slider\/css\/slider-styles.css":1,"modules\/node\/node.css":1,"sites\/all\/modules\/okta_businesses_at_work\/css\/okta_baw_master.css":1,"sites\/all\/modules\/okta_certification\/css\/okta_certification_master.css":1,"sites\/all\/modules\/okta_forms\/okta_mql\/css\/okta_mql.css":1,"sites\/all\/modules\/okta_oan\/css\/okta_oan_master.css":1,"profiles\/lightning\/modules\/contrib\/panels_preview\/css\/panels-preview.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"profiles\/lightning\/modules\/contrib\/ckeditor\/css\/ckeditor.css":1,"profiles\/lightning\/modules\/contrib\/entity_embed\/css\/entity_embed.css":1,"profiles\/lightning\/modules\/contrib\/colorbox\/styles\/default\/colorbox_style.css":1,"profiles\/lightning\/modules\/contrib\/ctools\/css\/ctools.css":1,"profiles\/lightning\/modules\/contrib\/panels\/css\/panels.css":1,"sites\/all\/themes\/Okta\/css\/homepage-hero-vwo-ab-test.css":1,"sites\/all\/themes\/Okta\/css\/prism.css":1,"sites\/all\/themes\/Okta\/css\/style.css":1,"sites\/all\/themes\/Okta\/views.css":1,"sites\/all\/modules\/okta_coveo_search\/css\/okta_coveo_search.css":1},"js":{"https:\/\/cdn.polyfill.io\/v2\/polyfill.js?features=es6":1,"sites\/all\/modules\/jquery_update\/replace\/jquery\/1.10\/jquery.min.js":1,"sites\/all\/modules\/jquery_update\/replace\/jquery-migrate\/1\/jquery-migrate.min.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/themes\/Okta\/js\/drupal-xss-override.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.core.min.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.widget.min.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.mouse.min.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.slider.min.js":1,"profiles\/lightning\/modules\/contrib\/media_preview_slider\/js\/slider.js":1,"sites\/all\/modules\/okta_forms\/okta_attribution\/js\/okta_attribution.js":1,"sites\/all\/modules\/okta_certification\/js\/certification_master.js":1,"sites\/all\/modules\/okta_cvent\/js\/js.cookie.js":1,"sites\/all\/modules\/okta_cvent\/js\/okta_cvent.js":1,"sites\/all\/modules\/okta_forms\/okta_geolocation\/js\/okta_geolocation.js":1,"sites\/all\/modules\/okta_forms\/okta_mql\/js\/okta_mql_sync.js":1,"sites\/all\/modules\/okta_myokta\/js\/okta_myokta.js":1,"sites\/all\/modules\/okta_oan\/js\/master.js":1,"profiles\/lightning\/modules\/contrib\/panels_preview\/js\/panels-preview-autosubmit.js":1,"profiles\/lightning\/modules\/contrib\/panels_preview\/js\/panels-preview-title.js":1,"profiles\/lightning\/modules\/contrib\/panels_preview\/js\/panels-preview-toggle.js":1,"profiles\/lightning\/libraries\/colorbox\/jquery.colorbox-min.js":1,"profiles\/lightning\/modules\/contrib\/colorbox\/js\/colorbox.js":1,"profiles\/lightning\/modules\/contrib\/colorbox\/styles\/default\/colorbox_style.js":1,"profiles\/lightning\/modules\/contrib\/colorbox\/js\/colorbox_inline.js":1,"sites\/all\/libraries\/jquery.waypoints\/lib\/jquery.waypoints.min.js":1,"sites\/all\/themes\/Okta\/js\/bean\/homepage-top-promo.js":1,"sites\/all\/themes\/Okta\/js\/homepage-hero-vwo-ab-test.js":1,"sites\/all\/libraries\/cookie.js\/src\/js.cookie.js":1,"sites\/all\/themes\/Okta\/js\/prism.js":1,"sites\/all\/themes\/Okta\/js\/bundle.js":1,"sites\/all\/themes\/Okta\/js\/better_exposed_filters.js":1,"sites\/all\/themes\/Okta\/js\/drift_attribution.js":1,"sites\/all\/modules\/okta_configuration\/js\/okta.heap.gtm.js":1,"sites\/all\/modules\/okta_configuration\/js\/okta.demandbase.vwo.industry.js":1,"sites\/all\/modules\/okta_coveo_search\/js\/okta_coveo_search.js":1,"sites\/all\/themes\/Okta\/js\/header-nav-phone-number.js":1}},"colorbox":{"opacity":"0.85","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","maxWidth":"98%","maxHeight":"98%","fixed":true,"mobiledetect":true,"mobiledevicewidth":"480px"},"okta_coveo_search":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJsaWNlbnNlRGVmaW5pdGlvbktleSI6IlBJRF9HdWVzdF9Vc2VyIiwidjgiOnRydWUsInJvbGVzIjpbInF1ZXJ5RXhlY3V0b3IiXSwidXNlcnR5cGUiOiJHdWVzdCIsInNhbGVzZm9yY2VDb21tdW5pdHkiOiJodHRwczpcL1wvc3VwcG9ydC5va3RhLmNvbVwvaGVscCIsInNhbGVzZm9yY2VVc2VyIjoib2t0YV9oZWxwX2NlbnRlckBva3RhLmZvcmNlLmNvbSIsImZpbHRlciI6IihAY29tbW9uY29udGVudHR5cGUgTk9UIEBzb3VyY2U9PShcIm9rdGEtd2ViZm9ydW1cIikgTk9UIEBzZmtiaWQgTk9UIEBjb21tb25jb250ZW50dHlwZT09KElkZWFzLEdyb3VwcykpIE9SIChAc2ZrYmlkIChAc2Zpc3Zpc2libGVpbnBrYj1cInRydWVcIikpIiwidXNlckdyb3VwcyI6WyJPa3RhIEhlbHAgQ2VudGVyIFByb2ZpbGUiXSwic2FsZXNmb3JjZU9yZ2FuaXphdGlvbklkIjoiMDBEQTAwMDAwMDBLV1lETUE0Iiwib3JnYW5pemF0aW9uIjoib2t0YXByb2R1Y3Rpb245b3VudmN4YSIsInVzZXJJZHMiOlt7InByb3ZpZGVyIjoiRW1haWwgU2VjdXJpdHkgUHJvdmlkZXIiLCJuYW1lIjoiYW5vbnltb3VzIiwidHlwZSI6IlVzZXIifV0sImV4cCI6MTU3NTMyMDYxNiwiaWF0IjoxNTc1MjM0MjE2LCJzYWxlc2ZvcmNlRmFsbGJhY2tUb0FkbWluIjp0cnVlfQ.g15-kTIMdM_-DTibr_KK5CcSdjsWut8uTigwhhsOIYs"},"okta_geolocation":{"loaded":"false","nl":["NL"],"eu":["AT","BE","BG","CY","CZ","DK","EE","FI","FR","DE","GR","HR","HU","IE","IT","LV","LT","LU","MT","NL","PL","PT","RO","SK","SI","ES","SE","GB","UK"],"emea":["DZ","BH","BY","BE","BA","CY","EG","FI","FR","DE","GH","GG","IE","IM","IT","JO","KZ","KE","KW","LB","LI","LU","MT","MC","MA","NL","NG","OM","PK","PL","QA","RU","ZA","ES","SE","CH","SY","TN","TR","UA","AE","GB"],"apac":["AF","AM","AU","AZ","BD","BN","BT","CC","CN","CX","GE","HK","ID","IL","IN","IO","IQ","IR","JP","KG","KH","KP","KR","LA","LK","MM","MN","MO","MV","MY","NP","NZ","PH","PS","SA","SG","TH","TJ","TL","TM","TW","UZ","VN","YE"]},"currentPath":"node\/5586","currentPathIsAdmin":false,"okta_swiftype":{"slug":"okta-production","key":"UjgmgHD2a6s_JcZECqAY"}});
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://www.okta.com/sites/default/files/advagg_js/js__OYxD2q-uOwTpcHNgh1JWVGaNsI-apC6MJoJyxESVw-o__NGZVGYbySkd1FxY9_Sdks2qmZaqqQXKJ3Fd7_vQnXI8__1R8XCyS6tpqpsyuFM984E62WgSntuhwasZ34DuDnp-U.js" defer="defer"></script>
+<script type="text/javascript" src="https://www.okta.com/sites/default/files/advagg_js/js__FNJPX9yVLyk93Wdm6yy8im3L0JNEXoJt-ucsMjZT4Kw__mUPIuzafnHdis2y_xjhDQj_kxjyT0wXTZorQl3GD5xA__1R8XCyS6tpqpsyuFM984E62WgSntuhwasZ34DuDnp-U.js"></script>
+		<!-- Vimeo Google Analytics Tracking -->
+<!--
+ * vimeo.ga.js | v0.6
+ * Based on modifications by LukasBeaton (https://github.com/LukasBeaton/vimeo.ga.js)
+ * Copyright (c) 2015 Sander Heilbron (http://www.sanderheilbron.nl)
+ * MIT licensed
+-->
+
+<script>var vimeoGAJS=window.vimeoGAJS?window.vimeoGAJS:{};!function(e){var r={iframes:[],gaTracker:void 0,eventMarker:{},init:function(){r.initIframes(),"function"==typeof ga&&(r.gaTracker="ua"),"undefined"!=typeof _gaq&&"function"==typeof _gaq.push&&(r.gaTracker="ga"),"undefined"!=typeof dataLayer&&"function"==typeof dataLayer.push&&(r.gaTracker="gtm"),window.addEventListener?window.addEventListener("message",r.onMessageReceived,!1):window.attachEvent("onmessage",r.onMessageReceived,!1)},initIframes:function(){r.iframes=e("iframe"),r.iframes=e.grep(r.iframes,function(t,a){var n=e(t).attr("id");return void 0===n?!1:r.eventMarker[n]?!0:(r.eventMarker[n]={progress25:!1,progress50:!1,progress75:!1,videoPlayed:!1,videoPaused:!1,videoResumed:!1,videoSeeking:!1,videoCompleted:!1,timePercentComplete:0},!0)})},onMessageReceived:function(t){if("http://player.vimeo.com"===t.origin.replace("https:","http:")&&"undefined"!=typeof r.gaTracker){var a=JSON.parse(t.data),n=e("#"+a.player_id),i=n.attr("id");if(void 0===i)return!1;switch(a.event){case"ready":r.initIframes(),r.onReady();break;case"playProgress":r.onPlayProgress(a.data,n);break;case"seek":a&&!r.eventMarker[i].videoSeeking&&(r.sendEvent(n,"Skipped video forward or backward"),r.eventMarker[i].videoSeeking=!0);break;case"play":r.eventMarker[i].videoPlayed?!r.eventMarker[i].videoResumed&&r.eventMarker[i].videoPaused&&(r.sendEvent(n,"Resumed video"),r.eventMarker[i].videoResumed=!0):(r.sendEvent(n,"Started video"),r.eventMarker[i].videoPlayed=!0);break;case"pause":r.onPause(n);break;case"finish":r.eventMarker[i].videoCompleted||(r.sendEvent(n,"Completed video"),r.eventMarker[i].videoCompleted=!0)}}},getUrl:function(e){return e},post:function(t,a,n){var i={method:t};a&&(i.value=a);var o=e(n).attr("src");o&&null!==o.match(/player.vimeo.com/)&&(iframeSrcArr=o.split("?"),o=iframeSrcArr[0]?iframeSrcArr[0]:iframeSrcArr,n.contentWindow.postMessage(JSON.stringify(i),r.getUrl(o)))},onReady:function(){e.each(r.iframes,function(e,t){r.post("addEventListener","play",t),r.post("addEventListener","seek",t),r.post("addEventListener","pause",t),r.post("addEventListener","finish",t),r.post("addEventListener","playProgress",t)})},onPause:function(e){var t=e.attr("id");r.eventMarker[t].timePercentComplete<99&&!r.eventMarker[t].videoPaused&&(r.sendEvent(e,"Paused video"),r.eventMarker[t].videoPaused=!0)},onPlayProgress:function(e,t){var a,n=t.attr("id");r.eventMarker[n].timePercentComplete=Math.round(100*e.percent),r.eventMarker[n].timePercentComplete>24&&!r.eventMarker[n].progress25&&(a="Played video: 25%",r.eventMarker[n].progress25=!0),r.eventMarker[n].timePercentComplete>49&&!r.eventMarker[n].progress50&&(a="Played video: 50%",r.eventMarker[n].progress50=!0),r.eventMarker[n].timePercentComplete>74&&!r.eventMarker[n].progress75&&(a="Played video: 75%",r.eventMarker[n].progress75=!0),a&&r.sendEvent(t,a)},sendEvent:function(e,t){var a=e.attr("src").split("?")[0],n=e.data("bounce");switch(r.gaTracker){case"gtm":dataLayer.push({event:"Vimeo",eventCategory:"Vimeo",eventAction:t,eventLabel:r.getUrl(a),eventValue:void 0,eventNonInteraction:n?!1:!0});break;case"ua":ga("send","event","Vimeo",t,r.getUrl(a),void 0,{nonInteraction:n?0:1});break;case"ga":_gaq.push(["_trackEvent","Vimeo",t,r.getUrl(a),void 0,n?!1:!0])}}};e(function(){r.init(),r.onReady()})}(jQuery);</script>
+<!-- Vimeo Google Analytics Tracking -->
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"cf1392eaf6","applicationID":"327071882","transactionName":"Y1VTYhBVVhIHUEEMC1ofZEQLGxcICFdQHUpEWEE=","queueTime":0,"applicationTime":26,"atts":"TxJQFFhPRRw=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

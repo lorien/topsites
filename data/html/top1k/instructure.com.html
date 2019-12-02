@@ -1,0 +1,1845 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+<head>
+<meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"71b0675e2c",applicationID:"56772323"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1153.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<meta itemprop="acquia_lift:content_title" content="New Home" />
+<meta itemprop="acquia_lift:content_type" content="page_builder" />
+<meta itemprop="acquia_lift:page_type" content="node page" />
+<meta itemprop="acquia_lift:context_language" content="en" />
+<meta itemprop="acquia_lift:content_section" content="" />
+<meta itemprop="acquia_lift:content_keywords" content="" />
+<meta itemprop="acquia_lift:post_id" content="4671" />
+<meta itemprop="acquia_lift:content_uuid" content="f7e8be9f-56cc-48e8-a699-3bfd4f5dc653" />
+<meta itemprop="acquia_lift:published_date" content="1548191215" />
+<meta itemprop="acquia_lift:persona" content="" />
+<meta itemprop="acquia_lift:engagement_score" content="1" />
+<meta itemprop="acquia_lift:account_id" content="INSTRUCTURE" />
+<meta itemprop="acquia_lift:site_id" content="instructure--prod" />
+<meta itemprop="acquia_lift:contentOrigin" content="" />
+<meta itemprop="acquia_lift:liftAssetsURL" content="https://builder.lift.acquia.com" />
+<meta itemprop="acquia_lift:liftDecisionAPIURL" content="https://us-east-1-decisionapi.lift.acquia.com" />
+<meta itemprop="acquia_lift:authEndpoint" content="https://us-east-1-oauth2.lift.acquia.com/authorize" />
+<meta itemprop="acquia_lift:bootstrapMode" content="auto" />
+<meta itemprop="acquia_lift:contentReplacementMode" content="trusted" />
+<script src="https://builder.lift.acquia.com/lift.js" async></script>
+<meta name="title" content="Instructure | LMS &amp; Employee Development Solution" />
+<link rel="alternate" hreflang="x-default" href="https://www.instructure.com/" />
+<link rel="shortlink" href="https://www.instructure.com/" />
+<link rel="canonical" href="https://www.instructure.com/" />
+<meta name="description" content="Instructure built the preferred learning management system (LMS) and employee development software with Canvas and Bridge to maximize your growth from the first day of school to the last day of work. Find out what makes Instructure a great place to work for, and to invest in. Learn more." />
+<link rel="alternate" hreflang="sv-se" href="https://www.instructure.com/sv-se" />
+<link rel="alternate" hreflang="pt-br" href="https://www.instructure.com/pt-br" />
+<link rel="alternate" hreflang="es-es" href="https://www.instructure.com/es-es" />
+<link rel="alternate" hreflang="nor-no" href="https://www.instructure.com/nor-no" />
+<link rel="alternate" hreflang="en-gb" href="https://www.instructure.com/en-gb" />
+<link rel="alternate" hreflang="es" href="https://www.instructure.com/es" />
+<link rel="alternate" hreflang="en" href="https://www.instructure.com/" />
+<link rel="alternate" hreflang="en-au" href="https://www.instructure.com/en-au" />
+<link rel="alternate" hreflang="de" href="https://www.instructure.com/de" />
+<meta name="google-site-verification" content="dHELMv8N4nQCjioqVv7SFtwNMFKVr4X60067GzquCLI" />
+<meta property="og:image" content="https://www.instructure.com/sites/blog.instructure/files/og-img/OG_Share_global.png" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Organization",
+            "additionalType": "Corporation",
+            "@id": "https://www.instructure.com/#organization",
+            "url": "https://www.instructure.com/",
+            "sameAs": [
+                "https://en.wikipedia.org/wiki/Instructure",
+                "https://www.facebook.com/Instructure",
+                "https://twitter.com/instructure",
+                "https://www.youtube.com/channel/UCO5gu7IZmqEH7YeFBKm_CAw",
+                "https://www.linkedin.com/company/instructure-inc-",
+                "https://plus.google.com/+Instruc"
+            ],
+            "name": "Instructure",
+            "telephone": "+180020376755",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+180020376755",
+                "contactType": [
+                    "Customer Service",
+                    "Technical Support",
+                    "Billing Support"
+                ],
+                "email": "info@instructure.com",
+                "productSupported": [
+                    "Canvas",
+                    "Bridge"
+                ]
+            },
+            "image": {
+                "@type": "ImageObject",
+                "url": "http://instructureode16.prod.acquia-sites.com/sites/blog.instructure/files/og-img/OG_Share_global.png",
+                "width": "572",
+                "height": "299"
+            },
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.instructure.com/node/4786",
+                "width": "300",
+                "height": "34"
+            },
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "6330 South 3000 East, Suite 700",
+                "addressLocality": "Salt Lake City",
+                "addressRegion": "UT",
+                "postalCode": "84121",
+                "addressCountry": "USA"
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.3",
+                "ratingCount": "157",
+                "bestRating": "5.0",
+                "worstRating": "1.0"
+            }
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https://www.instructure.com/#website",
+            "name": "Instructure",
+            "url": "https://www.instructure.com/"
+        }
+    ]
+}</script>
+<link rel="shortcut icon" href="/themes/instructure_blog/images/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="alternate" hreflang="en" href="https://www.instructure.com/" />
+<link rel="alternate" hreflang="es" href="https://www.instructure.com/es" />
+<link rel="alternate" hreflang="pt-br" href="https://www.instructure.com/pt-br" />
+<link rel="alternate" hreflang="en-au" href="https://www.instructure.com/en-au" />
+<link rel="alternate" hreflang="en-gb" href="https://www.instructure.com/en-gb" />
+<link rel="alternate" hreflang="de" href="https://www.instructure.com/de" />
+<link rel="alternate" hreflang="es-es" href="https://www.instructure.com/es-es" />
+<link rel="alternate" hreflang="nor-no" href="https://www.instructure.com/nor-no" />
+<link rel="alternate" hreflang="sv-se" href="https://www.instructure.com/sv-se" />
+<link rel="revision" href="https://www.instructure.com/" />
+<title>Instructure | LMS &amp; Employee Development Solution</title>
+<link rel="stylesheet" media="all" href="/sites/blog.instructure/files/css/css_egiYx5tj0hLSezYDqkAX_GI5hizSvDx9jhJ5rG4OflA.css?q1lklp" />
+<link rel="stylesheet" media="all" href="/sites/blog.instructure/files/css/css_c9vTOVPVpYPjDyBXZ4g3LLCM2cd491jmT8KhAQwDF7U.css?q1lklp" />
+<!--[if lte IE 8]>
+<script src="/sites/blog.instructure/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+</head>
+<body>
+
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KMN72MJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script type="text/javascript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0];var j=d.createElement(s);var dl=l!='dataLayer'?'&l='+l:'';j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;j.type='text/javascript';j.async=true;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KMN72MJ');</script>
+
+<a href="#main-content" class="visually-hidden focusable">
+Skip to main content
+</a>
+<div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+<div class="layout-container site-content">
+<header id="main-header" role="banner">
+<a href="/" id="main-logo"><img src='/themes/instructure_blog/images/logo.svg' alt="instructure logo"></a>
+<div class="nav-spacer"></div>
+<nav role="navigation" aria-labelledby="block-mainnavigation-menu" id="block-mainnavigation" class="block block-menu navigation menu--main">
+<h2 class="visually-hidden" id="block-mainnavigation-menu">Main navigation</h2>
+<ul data-region="header" class="menu mega-menu vertical large-horizontal drilldown menu-level-0" data-responsive-menu="drilldown large-dropdown" data-auto-height="true" data-disable-hover="true" data-click-open="true">
+<li class="menu-item menu-item--expanded">
+<a href="/canvas" data-drupal-link-system-path="node/4381">Canvas</a>
+<ul class="menu_link_content menu-link-contentmain view-mode-drop-down menu vertical large-horizontal menu-dropdown-0 menu-type-drop_down" data-responsive-menu="large-dropdown">
+<li class="menu-item">
+<a href="/canvas" data-drupal-link-system-path="node/4381">HOME</a>
+<div class="menu_link_content menu-link-contentmain view-mode-link-plus menu-dropdown menu-dropdown-1 menu-type-link_plus">
+</div>
+</li>
+<li class="menu-item menu-item--expanded">
+<a href="/canvas" data-drupal-link-system-path="node/4381">Products</a>
+<ul class="menu_link_content menu-link-contentmain view-mode-sub-navigation menu-dropdown menu vertical menu-dropdown-1 menu-type-sub_navigation">
+<div class="menu-level-2">
+<ul class="menu">
+<li class="menu-item menu-item--expanded">
+<a href="/canvas/higher-education/platform/products">Higher Ed Overview</a>
+<div class="menu_link_content menu-link-contentmain view-mode-link-plus menu-dropdown menu-dropdown-2 menu-type-link_plus">
+<ul class="menu menu-level-3">
+<li class="menu-item">
+<a href="/canvas/higher-education/platform/products/Canvas-LMS">LMS</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/canvas/higher-education/platform/products/interactive-video">Studio</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/canvas/higher-education/platform/products/practice">Practice</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/canvas/higher-education/platform/products/catalog">Catalog</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/canvas/portfolium">Portfolium</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li class="menu-item menu-item--expanded">
+<a href="/canvas/k-12/platform/products">K12 Products Overview</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+<ul class="menu menu-level-3">
+<li class="menu-item">
+<a href="/canvas/k-12/platform/products/lms">LMS</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/canvas/k-12/platform/products%EF%BB%BF/interactive-video">Studio</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/canvas/k-12/platform/products/practice">Practice</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/canvas/k-12/platform/products/catalog">Catalog</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</ul>
+</li>
+<li class="menu-item menu-item--expanded">
+<a href="/canvas/higher-education">Higher Ed</a>
+<ul class="menu_link_content menu-link-contentmain view-mode-sub-navigation menu-dropdown menu vertical menu-dropdown-1 menu-type-sub_navigation">
+<div class="menu-level-2">
+<ul class="menu">
+<li class="menu-item">
+<a href="/canvas/higher-education">Overview</a>
+<div class="menu_link_content menu-link-contentmain view-mode-link-plus menu-dropdown menu-dropdown-2 menu-type-link_plus">
+</div>
+</li>
+<li class="menu-item menu-item--expanded">
+<a href="/canvas/higher-education/empowering-faculty">Empowering Faculty</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+<ul class="menu menu-level-3">
+<li class="menu-item">
+<a href="/canvas/higher-education/empowering-faculty/flexible">Flexible</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/canvas/higher-education/empowering-faculty/improving-learning">Improving Learning</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li class="menu-item menu-item--expanded">
+<a href="/canvas/higher-education/enabling-students">Enabling Students</a>
+<div class="menu_link_content menu-link-contentmain view-mode-link-plus menu-dropdown menu-dropdown-2 menu-type-link_plus">
+<ul class="menu menu-level-3">
+<li class="menu-item">
+<a href="/canvas/higher-education/enabling-students/student-success">Student Success</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/canvas/higher-education/enabling-students/ease-of-use">Ease of Use</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li class="menu-item menu-item--expanded">
+<a href="/canvas/higher-education/platform">Platform</a>
+<div class="menu_link_content menu-link-contentmain view-mode-link-plus menu-dropdown menu-dropdown-2 menu-type-link_plus">
+<ul class="menu menu-level-3">
+<li class="menu-item">
+<a href="/canvas/higher-education/platform/products">Products</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/canvas/higher-education/platform/open">Open</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/canvas/higher-education/platform/reliability">Reliability</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/canvas/higher-education/platform/integrations">Integrations</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/canvas/higher-education/platform/services">Services</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/canvas/features/higher-education">Features</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li class="menu-item menu-item--expanded">
+<a href="/canvas/higher-education/advancing-the-institution">Advancing Institutions</a>
+<div class="menu_link_content menu-link-contentmain view-mode-link-plus menu-dropdown menu-dropdown-2 menu-type-link_plus">
+<ul class="menu menu-level-3">
+<li class="menu-item">
+<a href="/canvas/higher-education/advancing-the-institution/community">Community</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/canvas/higher-education/advancing-the-institution/adoption">Adoption</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li class="menu-item menu-item--expanded">
+<a href="/canvas/higher-education/research-and-customer-stories">Research + Customer Stories</a>
+<div class="menu_link_content menu-link-contentmain view-mode-link-plus menu-dropdown menu-dropdown-2 menu-type-link_plus">
+<ul class="menu menu-level-3">
+<li class="menu-item">
+<a href="/canvas/higher-education/research-and-customer-stories/research">Research</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/canvas/higher-education/research-and-customer-stories/case-studies">Case Studies</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</ul>
+</li>
+<li class="menu-item menu-item--expanded">
+<a href="/canvas" data-drupal-link-system-path="node/4381">K-12</a>
+<ul class="menu_link_content menu-link-contentmain view-mode-sub-navigation menu-dropdown menu vertical menu-dropdown-1 menu-type-sub_navigation">
+<div class="menu-level-2">
+<ul class="menu">
+<li class="menu-item">
+<a href="/canvas/k-12">Overview</a>
+<div class="menu_link_content menu-link-contentmain view-mode-link-plus menu-dropdown menu-dropdown-2 menu-type-link_plus">
+</div>
+</li>
+<li class="menu-item menu-item--expanded">
+<a href="/canvas/k-12/increasing-achievement">Increasing Achievement</a>
+<div class="menu_link_content menu-link-contentmain view-mode-link-plus menu-dropdown menu-dropdown-2 menu-type-link_plus">
+<ul class="menu menu-level-3">
+<li class="menu-item">
+<a href="/canvas/k-12/increasing-achievement/equitable-access">Equitable Access</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/canvas/k-12/increasing-achievement/personalized-learning">Personalized Learning</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/canvas/k-12/increasing-achievement/student-engagement">Student Engagement</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/canvas/k-12/increasing-achievement/professional-learning">Professional Learning</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li class="menu-item menu-item--expanded">
+<a href="/canvas/k-12/platform">Platform</a>
+<div class="menu_link_content menu-link-contentmain view-mode-link-plus menu-dropdown menu-dropdown-2 menu-type-link_plus">
+<ul class="menu menu-level-3">
+<li class="menu-item">
+<a href="/canvas/k-12/platform/integrations">Integrations</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/canvas/k-12/platform/products">Products</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/canvas/k-12/platform/services">Services</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/canvas/features/k-12">Features</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li class="menu-item menu-item--expanded">
+<a href="/canvas/k-12/research-and-customer-stories">Research + Customer Stories</a>
+<div class="menu_link_content menu-link-contentmain view-mode-link-plus menu-dropdown menu-dropdown-2 menu-type-link_plus">
+<ul class="menu menu-level-3">
+<li class="menu-item">
+<a href="/canvas/k-12/research-and-customer-stories/case-studies">Case Studies</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/canvas/k-12/research-and-customer-stories/research">Research</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</ul>
+</li>
+<li class="menu-item menu-item--expanded">
+<a href="/canvas" data-drupal-link-system-path="node/4381">Community</a>
+<ul class="menu_link_content menu-link-contentmain view-mode-sub-navigation menu-dropdown menu vertical menu-dropdown-1 menu-type-sub_navigation">
+<div class="menu-level-2">
+<ul class="menu">
+<li class="menu-item">
+<a href="/canvas/community/canvas-community">Explore Community</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/canvas/community/blog">Blog</a>
+<div class="menu_link_content menu-link-contentmain view-mode-link-plus menu-dropdown menu-dropdown-2 menu-type-link_plus">
+</div>
+</li>
+<li class="menu-item">
+<a href="/canvas/community/events">Events</a>
+<div class="menu_link_content menu-link-contentmain view-mode-link-plus menu-dropdown menu-dropdown-2 menu-type-link_plus">
+</div>
+</li>
+<li class="menu-item">
+<a href="https://www.canvas.net/" target="_blank">Canvas Network</a>
+<div class="menu_link_content menu-link-contentmain view-mode-link-plus menu-dropdown menu-dropdown-2 menu-type-link_plus">
+</div>
+</li>
+<li class="menu-item">
+<a href="/canvas/community/webinars">Webinars</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/canvas/video-hub">Video Hub</a>
+<div class="menu_link_content menu-link-contentmain view-mode-link-plus menu-dropdown menu-dropdown-2 menu-type-link_plus">
+</div>
+</li>
+</ul>
+</div>
+</ul>
+</li>
+<li class="menu-item menu-item--expanded">
+<a href="/canvas" data-drupal-link-system-path="node/4381">About Canvas</a>
+<ul class="menu_link_content menu-link-contentmain view-mode-sub-navigation menu-dropdown menu vertical menu-dropdown-1 menu-type-sub_navigation">
+<div class="menu-level-2">
+<ul class="menu">
+<li class="menu-item">
+<a href="/canvas/about">Overview</a>
+<div class="menu_link_content menu-link-contentmain view-mode-link-plus menu-dropdown menu-dropdown-2 menu-type-link_plus">
+</div>
+</li>
+<li class="menu-item">
+<a href="https://community.canvaslms.com/welcome">Support</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/canvas/affordability">Affordability</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+</div>
+</li>
+</ul>
+</div>
+</ul>
+</li>
+<li class="menu-item">
+<span>Try Canvas</span>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+<div class="menu-item-cta"><a href="/canvas/try-canvas">Try Canvas</a></div>
+</div>
+</li>
+<div class="menu-item-logo"> <img width="" height="" src="/sites/blog.instructure/files/uploaded-assets/menu/logo/canvas-logo-white.svg" alt="Canvas Logo" typeof="foaf:Image" />
+</div>
+</ul>
+</li>
+<li class="menu-item menu-item--expanded">
+<a href="/bridge">Bridge</a>
+<ul class="menu_link_content menu-link-contentmain view-mode-drop-down menu vertical large-horizontal menu-dropdown-0 menu-type-drop_down" data-responsive-menu="large-dropdown">
+<li class="menu-item">
+<a href="/bridge">HOME</a>
+<div class="menu_link_content menu-link-contentmain view-mode-link-plus menu-dropdown menu-dropdown-1 menu-type-link_plus">
+</div>
+</li>
+<li class="menu-item menu-item--expanded">
+<a href="/bridge/solutions">Solutions</a>
+<ul class="menu_link_content menu-link-contentmain view-mode-sub-navigation menu-dropdown menu vertical menu-dropdown-1 menu-type-sub_navigation">
+<div class="menu-level-2">
+<ul class="menu">
+<li class="menu-item menu-item--expanded">
+<a href="/bridge/solutions">Solutions by Role</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+<ul class="menu menu-level-3">
+<li class="menu-item">
+<a href="/bridge/solutions/human-resources">Human Resources</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/bridge/solutions/learning-and-development">Learning and Development</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/bridge/solutions/sales-professionals">Sales Professionals</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/bridge/solutions/managers-and-employees">Managers and Employees</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li class="menu-item menu-item--expanded">
+<a href="/bridge/solutions">Use Cases</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+<ul class="menu menu-level-3">
+<li class="menu-item">
+<a href="/bridge/solutions/use-case/sales-training-and-onboarding">Sales and Enablement Training</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/bridge/solutions/use-case/leadership-development">Leadership Development</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/bridge/solutions/use-case/employee-development">Employee Development</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/bridge/extended-enterprise">Extended Enterprise</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</ul>
+</li>
+<li class="menu-item menu-item--expanded">
+<a href="/bridge/products">Platform</a>
+<ul class="menu_link_content menu-link-contentmain view-mode-sub-navigation menu-dropdown menu vertical menu-dropdown-1 menu-type-sub_navigation">
+<div class="menu-level-2">
+<ul class="menu">
+<li class="menu-item menu-item--expanded">
+<a href="/bridge/products/learn">Learn</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+<ul class="menu menu-level-3">
+<li class="menu-item">
+<a href="/bridge/features/learn-anywhere">Customizable Learning</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/bridge/features/retain">Knowledge Retention</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/bridge/features/lms-content">On-Demand Content</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/bridge/features/ease-of-use">Intuitive Course-Authoring</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/bridge/features/arc-video-for-bridge">Interactive Video Learning</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/bridge/features/mobile-app">Mobile App</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li class="menu-item menu-item--expanded">
+<a href="/bridge/products/perform">Perform</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+<ul class="menu menu-level-3">
+<li class="menu-item">
+<a href="/bridge/features/continuous-1%3A1-management">Manager Employee 1:1s</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/bridge/features/skills-assessment">Skill Assessments</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/bridge/features/employee-timeline">Employee Timelines</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/bridge/features/manager-dashboard">Performance Tools</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/bridge/features/robust-reporting">Skills Data</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/bridge/features/mobile-app">Mobile App</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li class="menu-item menu-item--expanded">
+<a href="/bridge/products/career">Career</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+<ul class="menu menu-level-3">
+<li class="menu-item">
+<a href="/bridge/features/career-development-plans">Career Development Plans</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/bridge/features/performance-conversations">Performance Conversations</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/bridge/features/career-drivers">Career Drivers</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/bridge/features/career-everest">Career Everest</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="https://www.instructure.com/bridge/lc/talent-development">Talent Development </a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li class="menu-item menu-item--expanded">
+<a href="/bridge/products/engage">Engage</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+<ul class="menu menu-level-3">
+<li class="menu-item">
+<a href="/bridge/features/employee-engagement-data">Efficient Data</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/bridge/features/employee-engagement-survey-authoring">Survey Authoring</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/bridge/features/manager-dashboard">Manager Dashboards</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/bridge/features/anonymous-employee-feedback">Anonymous Conversations</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li class="menu-item menu-item--expanded">
+<a href="/bridge/products/practice">Practice</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+<ul class="menu menu-level-3">
+<li class="menu-item">
+<a href="/bridge/practice">Assignments to Groups</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/bridge/practice">Engagement Data</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/bridge/practice">Engagement Notifications</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/bridge/practice">Leaderboards</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/bridge/practice">Model Responses</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/bridge/practice">Self-Directed Learning</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li class="menu-item menu-item--expanded">
+<a href="/bridge/products/connect">Connect</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+<ul class="menu menu-level-3">
+<li class="menu-item">
+<a href="/bridge/products/connect">Employee Directory</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/bridge/products/connect">Org Chart</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/bridge/products/connect">Skill Communities</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/bridge/features/mobile-app">Mobile App</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</ul>
+</li>
+<li class="menu-item">
+<a href="/bridge/customer-stories">Customer Stories</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+</div>
+</li>
+<li class="menu-item menu-item--expanded">
+<a href="/bridge/resources">Resources</a>
+<ul class="menu_link_content menu-link-contentmain view-mode-sub-navigation menu-dropdown menu vertical menu-dropdown-1 menu-type-sub_navigation">
+<div class="menu-level-2">
+<ul class="menu">
+<li class="menu-item">
+<a href="/bridge/resources/learning-center">Learning Center</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+<div class="menu-item-block"> <div id="block-instructure-global-nav-listings">
+<ul>
+<li>
+<a href="/bridge/pdf/mentorship-skills-development-harris-poll-research.pdf">Mentorship &amp; Skills Development - Harris Poll Research</a>
+</li>
+<li>
+<a href="/bridge/pdf/engage-and-develop-your-employees-power-mentorship.pdf">Engage and Develop Your Employees: The Power of Mentorship</a>
+</li>
+<li>
+<a href="/bridge/lc/articles/leadership-talent-development-2">Leadership Talent Development</a>
+</li>
+<li>
+<a href="/bridge/lc/case-studies/agile-transformation-management-simplified-employee-experience">Agile Transformation Management: Simplified Employee Experience </a>
+</li>
+<li>
+<a href="/bridge/lc/case-studies/chemical-bank">Leadership Behaviors: When Employee Development Becomes a Mindset </a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="menu-item">
+<a href="/bridge/news/events">Events</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+<div class="menu-item-block"> <div id="block-instructure-global-nav-events">
+<ul>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="menu-item menu-item--expanded">
+<span>Additional Resources</span>
+<div class="menu_link_content menu-link-contentmain view-mode-link-plus menu-dropdown menu-dropdown-2 menu-type-link_plus">
+<ul class="menu menu-level-3">
+<li class="menu-item">
+<a href="/bridge/resources/help-center">Help Center</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/bridge/features">Bridge Features</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="https://partners.instructure.com/English/">Partners</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/bridge/sales-enablement-software">Sales Enablement</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/bridge/extended-enterprise">Extended Enterprise</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</ul>
+</li>
+<li class="menu-item">
+<a href="/bridge/blog">Blog</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<span>Try Bridge</span>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+<div class="menu-item-cta"><a href="/bridge/demo">Try Bridge</a></div>
+</div>
+</li>
+<div class="menu-item-logo"> <img width="" height="" src="/sites/blog.instructure/files/uploaded-assets/menu/logo/Bridge-Logo_bridge-logo-white.svg" alt="Bridge Logo" typeof="foaf:Image" />
+</div>
+</ul>
+</li>
+<li class="menu-item menu-item--expanded">
+<a href="/about" data-drupal-link-system-path="node/4426">About Us</a>
+<ul class="menu_link_content menu-link-contentmain view-mode-drop-down menu vertical large-horizontal menu-dropdown-0 menu-type-drop_down" data-responsive-menu="large-dropdown">
+<li class="menu-item">
+<a href="/about" data-drupal-link-system-path="node/4426">HOME</a>
+<div class="menu_link_content menu-link-contentmain view-mode-link-plus menu-dropdown menu-dropdown-1 menu-type-link_plus">
+</div>
+</li>
+<li class="menu-item">
+<a href="/about/our-story" data-drupal-link-system-path="node/4421">Our Story</a>
+<div class="menu_link_content menu-link-contentmain view-mode-link-plus menu-dropdown menu-dropdown-1 menu-type-link_plus">
+</div>
+</li>
+<li class="menu-item">
+<a href="/about/platforms" data-drupal-link-system-path="node/4931">Platforms</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="/about/blog" data-drupal-link-system-path="node/216">Blog</a>
+<div class="menu_link_content menu-link-contentmain view-mode-link-plus menu-dropdown menu-dropdown-1 menu-type-link_plus">
+</div>
+</li>
+<li class="menu-item">
+<a href="/about/careers" data-drupal-link-system-path="node/236">Careers</a>
+<div class="menu_link_content menu-link-contentmain view-mode-link-plus menu-dropdown menu-dropdown-1 menu-type-link_plus">
+</div>
+</li>
+<li class="menu-item">
+<a href="/about/leadership" data-drupal-link-system-path="node/4431">Leadership</a>
+<div class="menu_link_content menu-link-contentmain view-mode-link-plus menu-dropdown menu-dropdown-1 menu-type-link_plus">
+</div>
+</li>
+<li class="menu-item">
+<a href="https://ir.instructure.com/">Investors</a>
+<div class="menu_link_content menu-link-contentmain view-mode-link-plus menu-dropdown menu-dropdown-1 menu-type-link_plus">
+</div>
+</li>
+<div class="menu-item-logo"> <img width="" height="" src="/sites/blog.instructure/files/uploaded-assets/menu/logo/starter.svg" alt="&quot;&quot;" typeof="foaf:Image" />
+</div>
+</ul>
+</li>
+<li class="menu-item">
+<a href="/news/public-relations" data-drupal-link-system-path="node/4436">News</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-0 menu-type-default">
+</div>
+</li>
+<li class="menu-item menu-item--expanded">
+<a href="/login">Sign In</a>
+<ul class="menu_link_content menu-link-contentmain view-mode-login-menu menu menu-dropdown-0 menu-type-login_menu" data-responsive-menu="large-dropdown">
+<li class="menu-item">
+<a href="/canvas/login/free-for-teacher">Canvas Login</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+<div class="menu-item-logo"> <img width="" height="" src="/sites/blog.instructure/files/uploaded-assets/menu/logo/Asset%202_0.svg" alt="Canvas Logo" typeof="foaf:Image" />
+</div>
+</div>
+</li>
+<li class="menu-item">
+<a href="https://community.bridgeapp.com/docs/DOC-3396">Bridge Login</a>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+<div class="menu-item-logo"> <img width="" height="" src="/sites/blog.instructure/files/uploaded-assets/menu/logo/Asset%203_0.svg" alt="Bridge Logo" typeof="foaf:Image" />
+</div>
+</div>
+</li>
+</ul>
+</li>
+<li class="menu-item">
+<span class="btn--signin nav--request">Request Info</span>
+<div id="nav-lightBox" class="lightBox-nav-style">
+<section>
+<span class="close">&times;</span>
+<h2>Request info</h2>
+<p>Mind telling us a bit about yourself and your organization so we can provide the most useful information?</p>
+<div id="hideMeNav">
+<form id="mktoForm_5341"></form>
+</div>
+<div id="replaceMeNav" data-nav-id="5341"></div>
+</section>
+</div>
+</li>
+<li class="menu-item">
+<span class="search-glass">Search</span>
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-0 menu-type-default">
+</div>
+</li>
+</ul>
+</nav>
+<div id="block-search" class="block block-instructure-global-search block-instructure-global-search-block">
+<div class="instructure-search-placeholder instructure-search-target-placeholder instructure-search-placeholder-1701303745" data-search-id="1701303745"></div>
+<div id="instructure-search-1701303745" class="instructure-search instructure-search-target" data-target="target" data-segments='[&quot;\/bridge\/sites\/blog.getbridge\/files\/search\/json\/all-bridge-en.json&quot;,&quot;\/canvas\/sites\/blog.canvaslms\/files\/search\/json\/all-canvas-en.json&quot;,&quot;\/sites\/blog.instructure\/files\/search\/json\/all-instructure-en.json&quot;]' data-search-id="1701303745">
+<div class="search-input-wrapper">
+<input class="search-input search-box" name="f" type="text" placeholder="Search…" value="" autocomplete="off" maxlength="240">
+<button aria-label="close search" class="search-close">›</button>
+</div>
+</div>
+<div class="search-results-container"><ul class="search-results"></ul></div>
+<button id="exit-search"></button>
+</div>
+<span id="mobile-requestInfo" class="nav--request" tabindex="0" role="button">Request Info</span>
+<button id="toggle-menu"><span class="menu-toggle-inner"></span></button>
+</header>
+<div id="gdpr">
+<style media="screen">
+  .dgpr-drop-down.visible{
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+    padding: 20px 0;
+  }
+  .dgpr-drop-down{
+    opacity: 0;
+    visibility: hidden;
+    padding: 0;
+    height: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2147483645;
+    text-align: center;
+    pointer-events: auto;
+    background: #287a9f;
+    display: flex;
+    align-items: center;
+    overflow: scroll;
+    transition: .3s;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0,0,0,.2);
+  }
+  .dgpr-drop-down p{
+    text-align: left;
+    padding: 0 5% 0 10%;
+    font-size: 17px;
+    max-width: unset;
+    color: #fff;
+    width: 70%;
+    /* background: blue; */
+  }
+  .button-holders{
+    width: 30%;
+    /* background: green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .button-holders button{
+    border: 2px solid #d41b5d;
+    background-color: #d41b5d;
+    border-color:  #d41b5d;
+    color: #fff;
+    margin-left: 15px;
+    letter-spacing: 1.5px;
+    font-size: 15px;
+    height: 40px;
+    line-height: 38px;
+    text-align: center;
+    padding: 0 20px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: all .25s;
+  }
+  .button-holders button:hover{
+    cursor: pointer;
+    border-color: #fff;
+  }
+  .button-holders a{
+    font-family: 'proxima nova',Arial,sans-serif;
+    text-decoration: underline;
+    color: #fff;
+    font-size: 17px;
+    transition: all .25s;
+  }
+  .button-holders a:hover{
+    color: #d41b5d
+  }
+  .button-holders #close-dropdown{
+    font-family: Helvetica, sans-serif;
+    background: lightgrey;
+    font-size: 17px;
+    margin-left: 15px;
+    width: 25px;
+    height: 25px;
+
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all .25s;
+  }
+  .button-holders #close-dropdown:hover{
+    cursor: pointer;
+    color: #fff;
+  }
+  @media (max-width: 960px){
+    .button-holders{
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .button-holders button,.button-holders #close-dropdown{
+      margin: 0;
+      margin-bottom: 15px;
+    }
+  }
+  @media (max-width: 480px){
+    .dgpr-drop-down{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .dgpr-drop-down p{
+      width: 100%;
+      padding: 0 10%;
+      margin-bottom: 15px;
+    }
+    .button-holders{
+      width: 100%;
+    }
+    .button-holders{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+    .button-holders button,.button-holders a,.button-holders #close-dropdown{
+      font-size: 14px;
+    }
+    .button-holders button,.button-holders #close-dropdown{
+      margin-left: 15px;
+      margin-bottom: 0;
+    }
+  }
+
+</style>
+<div class="dgpr-drop-down">
+<p>By continuing to browse or by clicking "accept all cookies," you agree to the storing of first- and third-party cookies on your device to enhance site navigation, alalyze site usage, and assist in our marketing efforts.</p>
+<div class="button-holders">
+<a href="https://www.instructure.com/policies/marketing-privacy" target="_blank">Privacy Policy</a>
+<button id="gdprAccept" type="submit" name="gdpr accept">Yes, I Accept</button>
+<div id="close-dropdown" type="button">✕</div>
+</div>
+</div>
+<script>
+window.addEventListener('load', function(){
+  var $ = jQuery;
+  if (sessionStorage.euUnion != "true" && localStorage.euUnion != "true") {
+    $("#close-dropdown").click(function(){
+      $(".dgpr-drop-down").removeClass('visible');
+    });
+    $("#gdprAccept").click(function(){
+      localStorage.setItem("euUnion", true);
+      sessionStorage.setItem("euUnion", true);
+      $(".dgpr-drop-down").removeClass('visible');
+    });
+    $.get('/oce/ip-test.php', function(response){
+      var madMax = JSON.parse(response);
+      console.log(madMax)
+      if (madMax.error) {
+        $(".dgpr-drop-down").addClass('visible');
+      }else {
+        if (madMax.continent.code == "EU"|| madMax.continent.code == "eu") {
+          if (madMax.country.is_in_european_union) {
+            $(".dgpr-drop-down").addClass('visible');
+          }else {
+            localStorage.setItem("euUnion", true);
+            sessionStorage.setItem("euUnion", true);
+          }
+        }else if (!madMax.continent.code) {
+          $(".dgpr-drop-down").addClass('visible');
+        }else {
+          localStorage.setItem("euUnion", true);
+          sessionStorage.setItem("euUnion", true);
+        }
+      }
+    })
+  }
+})
+</script>
+</div>
+<main role="main">
+<a id="main-content" tabindex="-1"></a>
+<div class="layout-content">
+<div>
+<div data-drupal-messages-fallback class="hidden"></div> <div id="block-mainpagecontent">
+<article data-history-node-id="4671" role="article" about="/">
+<div>
+<div class="paragraphs-container">
+<div class="paragraphs">
+<div class="paragraph paragraph--type--raw-html paragraph--view-mode--default">
+<div><div id="hero">
+<h1 class="colorful text-align-center">Make Learning Engaging, Inspiring, &amp; Lifelong</h1>
+</div>
+<p class="text-align-center">Too many learning experiences, both in school and work, are one-way, one size fits all, or once in a while. We can help you make learning and growth a real-life (and lifelong) thing for everyone.</p>
+</div>
+</div>
+<div>
+</div>
+<div class="paragraph paragraph--type--columns paragraph--view-mode--default background dark canvas-red">
+<h2 class="boxy"></h2>
+<div class="paragraph-columns column-count-2">
+<div class="column column-1" data-column="1"> <div class="paragraph paragraph--type--column paragraph--view-mode--default solo-image">
+<div> <img width="" height="" src="/sites/blog.instructure/files/2019-05/canvas%20screenshot%20%281%29.svg" alt="Canvas UI" typeof="foaf:Image" />
+</div>
+</div>
+</div>
+<div class="column column-2" data-column="2"> <div class="paragraph paragraph--type--column paragraph--view-mode--default">
+<div><h3>Build the Digital Learning Ecosystem That’s Right for Your School</h3>
+<p><svg id="Layer_1" style="enable-background:new 0 0 294.8 73.3;" version="1.1" viewbox="0 0 294.8 73.3" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px"><style type="text/css">
+<![CDATA[/* ><!--*/
+.st0{fill:#ffffff;}
+
+/*--><!]]>*/
+</style><g><g id="Layer_1-2"><path class="st0" d="M10.6,36.6c0-5.3-4-9.8-9.3-10.5c-1.8,6.9-1.8,14.1,0,21C6.6,46.4,10.6,41.9,10.6,36.6z"></path><path class="st0" d="M16.8,33.2c-1.8,0-3.3,1.5-3.3,3.3s1.5,3.3,3.3,3.3s3.3-1.5,3.3-3.3l0,0C20.1,34.7,18.6,33.2,16.8,33.2z"></path><path class="st0" d="M62.6,36.6c0,5.3,4,9.8,9.3,10.5c1.8-6.9,1.8-14.1,0-21C66.6,26.7,62.6,31.2,62.6,36.6z"></path><path class="st0" d="M56.5,33.2c-1.8,0-3.3,1.5-3.3,3.3s1.5,3.3,3.3,3.3s3.3-1.5,3.3-3.3l0,0C59.8,34.7,58.3,33.2,56.5,33.2z"></path><path class="st0" d="M36.6,62.7c-5.4,0-9.9,4-10.5,9.3c6.9,1.8,14.1,1.8,21,0C46.4,66.7,41.9,62.7,36.6,62.7z"></path><path class="st0" d="M36.6,53.2c-1.8,0-3.3,1.5-3.3,3.3s1.5,3.3,3.3,3.3s3.3-1.5,3.3-3.3l0,0C39.9,54.7,38.4,53.2,36.6,53.2&#10;&#9;&#9;&#9;C36.6,53.2,36.6,53.2,36.6,53.2z"></path><path class="st0" d="M36.6,10.6c5.3,0,9.8-4,10.5-9.3c-6.9-1.8-14.1-1.8-21,0C26.7,6.6,31.2,10.6,36.6,10.6z"></path><path class="st0" d="M36.6,13.5c-1.8,0-3.3,1.5-3.3,3.3c0,1.8,1.5,3.3,3.3,3.3s3.3-1.5,3.3-3.3S38.4,13.5,36.6,13.5L36.6,13.5z"></path><path class="st0" d="M55,55c-3.8,3.8-4.2,9.8-0.9,14c6.1-3.6,11.2-8.7,14.9-14.9C64.8,50.8,58.8,51.2,55,55z"></path><path class="st0" d="M48.3,48.3c-1.3,1.3-1.3,3.4,0,4.7s3.4,1.3,4.7,0c1.3-1.3,1.3-3.4,0-4.7C51.7,47,49.6,47,48.3,48.3z"></path><path class="st0" d="M18.2,18.2c3.8-3.8,4.1-9.8,0.9-14C12.9,7.8,7.8,12.9,4.2,19.1C8.4,22.3,14.4,22,18.2,18.2z"></path><path class="st0" d="M20.2,20.2c-1.3,1.3-1.3,3.4,0,4.7s3.4,1.3,4.7,0c1.3-1.3,1.3-3.4,0-4.7C23.6,18.9,21.5,18.9,20.2,20.2z"></path><path class="st0" d="M55,18.2c3.8,3.8,9.8,4.1,14,0.9c-3.6-6.1-8.8-11.2-14.9-14.9C50.8,8.4,51.2,14.4,55,18.2z"></path><path class="st0" d="M53,24.9c1.3-1.3,1.3-3.4,0-4.7s-3.4-1.3-4.7,0c-1.3,1.3-1.3,3.4,0,4.7C49.6,26.2,51.7,26.2,53,24.9z"></path><path class="st0" d="M18.2,54.9c-3.8-3.8-9.8-4.2-14-0.9c3.6,6.1,8.7,11.2,14.9,14.9C22.3,64.7,22,58.7,18.2,54.9z"></path><path class="st0" d="M20.2,48.2c-1.3,1.3-1.3,3.4,0,4.7c1.3,1.3,3.4,1.3,4.7,0s1.3-3.4,0-4.7c0,0,0,0,0,0&#10;&#9;&#9;&#9;C23.6,46.9,21.5,46.9,20.2,48.2z"></path><path class="st0" d="M121.8,52.1c0,7.2-4.7,9.9-11.7,9.9H110c-7,0-11.7-2.6-11.7-9.8V24.1c0-6.9,4.7-9.8,11.7-9.8h0.1&#10;&#9;&#9;&#9;c7,0,11.7,2.9,11.7,9.8v5.5h-7.7v-4.3c0-3.3-1.6-4.3-4.1-4.3s-4.1,1-4.1,4.3v25.5c0,3.3,1.6,4.2,4.1,4.2s4.1-1,4.1-4.2v-5.5h7.7&#10;&#9;&#9;&#9;L121.8,52.1z"></path><path class="st0" d="M149.2,51h-8.5L139,61.4h-7.4l8.6-46.5h9.7l8.8,46.5h-7.8L149.2,51z M148.2,44.6l-3.2-20.7l-3.3,20.7H148.2z"></path><path class="st0" d="M169.2,61.4V14.8h7.7l9.8,28.8V14.8h7v46.5h-7.3l-10.1-30.3v30.3H169.2z"></path><path class="st0" d="M221.5,61.4H213l-8.8-46.5h7.9l5.4,34.5l5.4-34.5h7.4L221.5,61.4z"></path><path class="st0" d="M253.3,51h-8.5l-1.7,10.4h-7.4l8.6-46.5h9.7l8.8,46.5H255L253.3,51z M252.3,44.6l-3.2-20.7l-3.3,20.7H252.3z"></path><path class="st0" d="M287.1,28.5v-3.5c0-2.9-1.7-4-3.9-4s-3.9,1.1-3.9,4v3.2c0,2.4,0.8,3.5,3,4.7l5.5,3.1c4.5,2.5,7.1,4.6,7.1,9.6&#10;&#9;&#9;&#9;v6.7c0,7.2-4.5,9.7-11.5,9.7h-0.1c-7,0-11.5-2.5-11.5-9.7v-4.9h7.6v3.9c0,2.9,1.7,4.1,4,4.1s4-1.3,4-4.1v-3.7&#10;&#9;&#9;&#9;c0-2.4-0.7-3.6-3.1-4.8l-5.4-3.1c-4.5-2.6-7.1-4.7-7.1-9.6v-6.1c0-6.9,5.1-9.6,11.4-9.6h0.1c6.4,0,11.4,2.7,11.4,9.6v4.6H287.1z"></path></g></g></svg></p>
+<p>The Canvas Learning Management Platform comes complete with everything you need to hit the ground teaching and learning. But here’s the cool thing: As your staff and students use Canvas (and they will), you can adapt it to meet their unique needs, thanks to the platform's open software, countless integrations, and scalable, flexible framework.</p>
+<p><a class="button-red" href="/canvas">Learn More</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div>
+</div>
+<div class="paragraph paragraph--type--columns paragraph--view-mode--default background dark bridge-blue">
+<h2 class="boxy"></h2>
+<div class="paragraph-columns column-count-2">
+<div class="column column-1" data-column="1"> <div class="paragraph paragraph--type--column paragraph--view-mode--default">
+<div><h3>Give Your Employees What They Really Need to Succeed</h3>
+<p><svg id="Layer_1" style="height: 25px" version="1.1" viewbox="0 0 360.6 65" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px"><style type="text/css">
+<![CDATA[/* ><!--*/
+
+	.st4{fill:#FFFFFF;}
+
+/*--><!]]>*/
+</style><g><g><g><path class="st4" d="M128.7,31.2c5.5,0.9,7.4,5.2,7.4,10.1v10.4c0,8-6.2,12.5-15.8,12.5H104V0.7h16.6c9.6,0,15.3,4.5,15.3,12.5v8&#10;&#9;&#9;&#9;&#9;C135.8,25.8,133.8,30.6,128.7,31.2z M114.5,27h5.9c3,0,4.9-1.5,4.9-4.9v-7.4c0-3.4-1.9-4.9-4.9-4.9h-5.9V27z M120.7,35.9h-6.3&#10;&#9;&#9;&#9;&#9;v19.3h6.3c3,0,4.9-1.5,4.9-4.9v-9.5C125.7,37.4,123.7,35.9,120.7,35.9z"></path><path class="st4" d="M176.9,64.3L168.9,39h-5.3v25.3h-10.5V0.7h16.4c9.6,0,16,3.8,16,13.4v11.3c0,6.1-2.5,9.9-6.9,11.8l9.1,27&#10;&#9;&#9;&#9;&#9;H176.9z M163.6,29.9h5.5c3.5,0,5.8-1.3,5.8-5.8v-8.3c0-4.5-2.4-5.8-5.8-5.8h-5.5V29.9z"></path><path class="st4" d="M203.5,64.3V0.7H214v63.6H203.5z"></path><path class="st4" d="M264.7,14.2v36.7c0,9.6-6.4,13.4-16,13.4h-16.3V0.7h16.3C258.4,0.7,264.7,4.5,264.7,14.2z M248.4,10H243v45&#10;&#9;&#9;&#9;&#9;h5.4c3.5,0,5.8-1.3,5.8-5.8V15.8C254.2,11.3,251.8,10,248.4,10z"></path><path class="st4" d="M314.9,51.6c0,9.8-6.4,13.4-16,13.4h-0.7c-9.6,0-16-3.5-16-13.4V13.4c0-9.4,6.4-13.4,16-13.4h0.7&#10;&#9;&#9;&#9;&#9;c9.6,0,16,4,16,13.4v9.1h-10.5v-7.4c0-4.5-2.4-5.8-5.8-5.8s-5.8,1.3-5.8,5.8v34.9c0,4.5,2.4,5.8,5.8,5.8s5.8-1.3,5.8-5.8v-9.4&#10;&#9;&#9;&#9;&#9;h-6.2v-8.9h16.7V51.6z"></path><path class="st4" d="M332.5,64.3V0.7h27.9V10H343v17.4h14.5v9.3H343V55h17.6v9.3H332.5z"></path></g></g><g><g><path class="st4" d="M55.7,48.5L55.7,48.5c4.4,0,7.9,3.5,7.9,7.9v0c0,4.4-3.5,7.9-7.9,7.9h0c-4.4,0-7.9-3.5-7.9-7.9v0&#10;&#9;&#9;&#9;&#9;C47.8,52,51.3,48.5,55.7,48.5z"></path></g><path class="st4" d="M55.7,24.6L55.7,24.6c4.4,0,7.9,3.5,7.9,7.9v0c0,4.4-3.5,7.9-7.9,7.9h0c-4.4,0-7.9-3.5-7.9-7.9v0&#10;&#9;&#9;&#9;C47.8,28.1,51.3,24.6,55.7,24.6z"></path><g><path class="st4" d="M31.8,48.5L31.8,48.5c4.4,0,7.9,3.5,7.9,7.9v0c0,4.4-3.5,7.9-7.9,7.9h0c-4.4,0-7.9-3.5-7.9-7.9v0&#10;&#9;&#9;&#9;&#9;C23.9,52,27.4,48.5,31.8,48.5z"></path></g><path class="st4" d="M31.8,24.6L31.8,24.6c4.4,0,7.9,3.5,7.9,7.9v0c0,4.4-3.5,7.9-7.9,7.9h0c-4.4,0-7.9-3.5-7.9-7.9v0&#10;&#9;&#9;&#9;C23.9,28.1,27.4,24.6,31.8,24.6z"></path><g><path class="st4" d="M7.9,48.5L7.9,48.5c4.4,0,7.9,3.5,7.9,7.9v0c0,4.4-3.5,7.9-7.9,7.9h0c-4.4,0-7.9-3.5-7.9-7.9v0&#10;&#9;&#9;&#9;&#9;C0,52,3.5,48.5,7.9,48.5z"></path></g><path class="st4" d="M55.7,0.7L55.7,0.7c4.4,0,7.9,3.5,7.9,7.9v0c0,4.4-3.5,7.9-7.9,7.9h0c-4.4,0-7.9-3.5-7.9-7.9v0&#10;&#9;&#9;&#9;C47.8,4.3,51.3,0.7,55.7,0.7z"></path></g></g></svg></p>
+<p>It’s no secret, and it’s not rocket science: Happy, successful employees drive successful businesses. Bridge combines learning, feedback, engagement insight, and career development in one seamless platform, giving every employee the resources they need to make an impact and achieve their career goals.</p>
+<p><a class="button-blue" href="/bridge">Learn More</a></p>
+</div>
+</div>
+</div>
+<div class="column column-2" data-column="2"> <div class="paragraph paragraph--type--column paragraph--view-mode--default solo-image">
+<div> <img width="" height="" src="/sites/blog.instructure/files/2019-05/bridge%20screenshot.svg" alt="Bridge UI" typeof="foaf:Image" />
+</div>
+</div>
+</div>
+</div>
+</div>
+<div>
+</div>
+<div class="paragraph paragraph--type--columns paragraph--view-mode--default background gray">
+<h2 class="boxy"></h2>
+<div class="paragraph-columns column-count-3">
+<div class="column column-1" data-column="1"> <div class="paragraph paragraph--type--column paragraph--view-mode--default">
+<div> <img width="" height="" src="/sites/blog.instructure/files/2019-05/masteryconnect%20grayAsset%205.svg" alt="MasteryConnect Logo" typeof="foaf:Image" />
+</div>
+<div><h2>MasteryConnect has joined the Instructure family</h2>
+<p>Teachers in 14,000 school districts use MasteryConnect as their assessment and curriculum platform to drive student growth. </p>
+<p><a href="https://masteryconnect.com/">Read More.</a></p>
+</div>
+</div>
+</div>
+<div class="column column-2" data-column="2"> <div class="paragraph paragraph--type--column paragraph--view-mode--default">
+<div> <img width="" height="" src="/sites/blog.instructure/files/2019-05/portfolium%20grayAsset%204.svg" alt="Portfolium Logo" typeof="foaf:Image" />
+</div>
+<div><h2>Portfolium is now an Instructure company</h2>
+<p>More than 40,000 educators and nearly 5 million students use Portfolium to showcase their achievements, projects, and competencies.</p>
+<p><a href="https://portfolium.com/">Learn More.</a></p>
+</div>
+</div>
+</div>
+<div class="column column-3" data-column="3"> <div class="paragraph paragraph--type--column paragraph--view-mode--default">
+<div> <img width="" height="" src="/sites/blog.instructure/files/2019-05/learnin%20safariAsset%203.svg" alt="Learnin&#039; Safari" typeof="foaf:Image" />
+</div>
+<div><h2>InstructureCon</h2>
+<p>Thanks for joining us at InstructureCon 2019. We learned, we laughed, and we had a super swell time. Watch the highlights to relive the action.</p>
+<p><a href="https://www.instructure.com/canvas/news/instructurecon19#mailing" target="_blank">Watch Now.</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div>
+</div>
+<div class="paragraph paragraph--type--columns paragraph--view-mode--default">
+<h2 class="boxy">More than 30 million people are growing with Instructure</h2>
+<div class="paragraph-columns column-count-9">
+<div class="column column-1" data-column="1"> <div class="paragraph paragraph--type--column paragraph--view-mode--default solo-image">
+<div> <script type="text/javascript" style="display:none">
+//<![CDATA[
+window.__mirage2 = {petok:"5a6362c870717b24e1ea0e46d12df677962e17f9-1575262531-1800"};
+//]]>
+</script>
+<script type="text/javascript" src="https://ajax.cloudflare.com/cdn-cgi/scripts/04b3eb47/cloudflare-static/mirage2.min.js"></script>
+<img data-cfsrc="/sites/blog.instructure/files/2019-06/OCPS_logo_New.png" width="250" height="140" alt="OCPS" typeof="foaf:Image" style="display:none;visibility:hidden;" /><noscript><img src="/sites/blog.instructure/files/2019-06/OCPS_logo_New.png" width="250" height="140" alt="OCPS" typeof="foaf:Image" /></noscript>
+</div>
+</div>
+</div>
+<div class="column column-2" data-column="2"> <div class="paragraph paragraph--type--column paragraph--view-mode--default solo-image">
+<div> <img data-cfsrc="/sites/blog.instructure/files/2019-06/Cornell_University-3.png" width="250" height="140" alt="Cornell University" typeof="foaf:Image" style="display:none;visibility:hidden;" /><noscript><img src="/sites/blog.instructure/files/2019-06/Cornell_University-3.png" width="250" height="140" alt="Cornell University" typeof="foaf:Image" /></noscript>
+</div>
+</div>
+</div>
+<div class="column column-3" data-column="3"> <div class="paragraph paragraph--type--column paragraph--view-mode--default solo-image">
+<div> <img data-cfsrc="/sites/blog.instructure/files/2019-06/1200px-California_Community_Colleges_System_logo.svg%20%281%29.png" width="250" height="140" alt="California Community Colleges" typeof="foaf:Image" style="display:none;visibility:hidden;" /><noscript><img src="/sites/blog.instructure/files/2019-06/1200px-California_Community_Colleges_System_logo.svg%20%281%29.png" width="250" height="140" alt="California Community Colleges" typeof="foaf:Image" /></noscript>
+</div>
+</div>
+</div>
+<div class="column column-4" data-column="4"> <div class="paragraph paragraph--type--column paragraph--view-mode--default solo-image">
+<div> <img data-cfsrc="/sites/blog.instructure/files/2019-06/temple-university-new.jpg" width="250" height="140" alt="Temple University" typeof="foaf:Image" style="display:none;visibility:hidden;" /><noscript><img src="/sites/blog.instructure/files/2019-06/temple-university-new.jpg" width="250" height="140" alt="Temple University" typeof="foaf:Image" /></noscript>
+</div>
+</div>
+</div>
+<div class="column column-5" data-column="5"> <div class="paragraph paragraph--type--column paragraph--view-mode--default solo-image">
+<div> <img data-cfsrc="/sites/blog.instructure/files/2019-06/bvlogo-new.png" width="250" height="140" alt="Blue Valley Schools" typeof="foaf:Image" style="display:none;visibility:hidden;" /><noscript><img src="/sites/blog.instructure/files/2019-06/bvlogo-new.png" width="250" height="140" alt="Blue Valley Schools" typeof="foaf:Image" /></noscript>
+</div>
+</div>
+</div>
+<div class="column column-6" data-column="6"> <div class="paragraph paragraph--type--column paragraph--view-mode--default solo-image">
+<div> <img data-cfsrc="/sites/blog.instructure/files/2019-06/toro-new.png" width="250" height="140" alt="Toro" typeof="foaf:Image" style="display:none;visibility:hidden;" /><noscript><img src="/sites/blog.instructure/files/2019-06/toro-new.png" width="250" height="140" alt="Toro" typeof="foaf:Image" /></noscript>
+</div>
+</div>
+</div>
+<div class="column column-7" data-column="7"> <div class="paragraph paragraph--type--column paragraph--view-mode--default solo-image">
+<div> <img data-cfsrc="/sites/blog.instructure/files/2019-06/CAT-new.jpg" width="250" height="140" alt="CAT" typeof="foaf:Image" style="display:none;visibility:hidden;" /><noscript><img src="/sites/blog.instructure/files/2019-06/CAT-new.jpg" width="250" height="140" alt="CAT" typeof="foaf:Image" /></noscript>
+</div>
+</div>
+</div>
+<div class="column column-8" data-column="8"> <div class="paragraph paragraph--type--column paragraph--view-mode--default solo-image">
+<div> <img width="" height="" src="/sites/blog.instructure/files/2019-06/sinclair_color%20bw.svg" alt="Sinclair" typeof="foaf:Image" />
+</div>
+</div>
+</div>
+<div class="column column-9" data-column="9"> <div class="paragraph paragraph--type--column paragraph--view-mode--default solo-image">
+<div> <img data-cfsrc="/sites/blog.instructure/files/2019-06/Slack_New.png" width="250" height="140" alt="Slack" typeof="foaf:Image" style="display:none;visibility:hidden;" /><noscript><img src="/sites/blog.instructure/files/2019-06/Slack_New.png" width="250" height="140" alt="Slack" typeof="foaf:Image" /></noscript>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</div>
+</div>
+</div>
+</main>
+<footer id="main-footer" role="contentinfo">
+<div class="main-footer--first">
+<div class="container">
+<div>
+<nav role="navigation" aria-labelledby="block-instructure-blog-footer-menu" id="block-instructure-blog-footer" class="block block-menu navigation menu--footer">
+<h2 class="visually-hidden" id="block-instructure-blog-footer-menu">Footer menu</h2>
+<div data-region="footer_first" class="menu-level-0">
+<span>Column</span>
+<div class="menu_link_content menu-link-contentfooter view-mode-column column menu-dropdown-0 menu-type-column">
+<div class="menu menu-level-1">
+<div class="menu-item menu-item-view-mode--title">
+<a href="https://www.instructure.com/canvas/">Canvas</a>
+<div class="menu_link_content menu-link-contentfooter view-mode-title menu-dropdown menu-dropdown-1 menu-type-title">
+</div>
+</div>
+<div class="menu-item menu-item-view-mode--default">
+<a href="https://community.canvaslms.com/">Community</a>
+<div class="menu_link_content menu-link-contentfooter view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+</div>
+</div>
+<div class="menu-item menu-item-view-mode--default">
+<a href="https://www.instructure.com/canvas/video-hub">Resources</a>
+<div class="menu_link_content menu-link-contentfooter view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+</div>
+</div>
+<div class="menu-item menu-item-view-mode--default">
+<a href="https://www.instructure.com/canvas/community/blog">Blog</a>
+<div class="menu_link_content menu-link-contentfooter view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+</div>
+</div>
+<div class="menu-item menu-item-view-mode--default">
+<a href="https://community.canvaslms.com/community/answers/guides">User Guides</a>
+<div class="menu_link_content menu-link-contentfooter view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+</div>
+</div>
+<div class="menu-item menu-item-view-mode--default">
+<a href="https://community.canvaslms.com/welcome">Support</a>
+<div class="menu_link_content menu-link-contentfooter view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+</div>
+</div>
+<div class="menu-item menu-item-view-mode--default">
+<a href="https://status.instructure.com/">Uptime</a>
+<div class="menu_link_content menu-link-contentfooter view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+</div>
+</div>
+<div class="menu-item menu-item-view-mode--default">
+<a href="/canvas/security">Security</a>
+<div class="menu_link_content menu-link-contentfooter view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+</div>
+</div>
+<div class="menu-item menu-item-view-mode--default">
+<a href="https://www.canvas.net/">Canvas Network</a>
+<div class="menu_link_content menu-link-contentfooter view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+</div>
+</div>
+<div class="menu-item menu-item-view-mode--default">
+<a href="https://instructure.github.io/">Developers</a>
+<div class="menu_link_content menu-link-contentfooter view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+</div>
+</div>
+<div class="menu-item menu-item-view-mode--default">
+<a href="https://github.com/instructure/canvas-lms/wiki">Open Source</a>
+<div class="menu_link_content menu-link-contentfooter view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+</div>
+</div>
+<div class="menu-item menu-item-view-mode--default">
+<a href="https://www.instructure.com/canvas/accessibility">Accessibility</a>
+<div class="menu_link_content menu-link-contentfooter view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+</div>
+</div>
+</div>
+</div>
+<span>Column</span>
+<div class="menu_link_content menu-link-contentfooter view-mode-column column menu-dropdown-0 menu-type-column">
+<div class="menu menu-level-1">
+<div class="menu-item menu-item-view-mode--title">
+<a href="https://www.instructure.com/bridge/">Bridge</a>
+<div class="menu_link_content menu-link-contentfooter view-mode-title menu-dropdown menu-dropdown-1 menu-type-title">
+</div>
+</div>
+<div class="menu-item menu-item-view-mode--default">
+<a href="https://community.bridgeapp.com/">Community</a>
+<div class="menu_link_content menu-link-contentfooter view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+</div>
+</div>
+<div class="menu-item menu-item-view-mode--default">
+<a href="https://www.instructure.com/bridge/resources/learning-center">Resources</a>
+
+<div class="menu_link_content menu-link-contentfooter view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+</div>
+</div>
+<div class="menu-item menu-item-view-mode--default">
+<a href="https://www.instructure.com/bridge/blog">Blog</a>
+<div class="menu_link_content menu-link-contentfooter view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+</div>
+</div>
+<div class="menu-item menu-item-view-mode--default">
+<a href="https://community.bridgeapp.com/community/documentation">User Guides</a>
+<div class="menu_link_content menu-link-contentfooter view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+</div>
+</div>
+<div class="menu-item menu-item-view-mode--default">
+<a href="https://community.bridgeapp.com/community/help">Support</a>
+<div class="menu_link_content menu-link-contentfooter view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+</div>
+</div>
+<div class="menu-item menu-item-view-mode--default">
+<a href="http://status.bridgeapp.com/">Uptime</a>
+<div class="menu_link_content menu-link-contentfooter view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+</div>
+</div>
+</div>
+</div>
+<span>Column</span>
+<div class="menu_link_content menu-link-contentfooter view-mode-column column menu-dropdown-0 menu-type-column">
+<div class="menu menu-level-1">
+<div class="menu-item menu-item-view-mode--title">
+<a href="https://instructure.com">Instructure</a>
+<div class="menu_link_content menu-link-contentfooter view-mode-title menu-dropdown menu-dropdown-1 menu-type-title">
+</div>
+</div>
+<div class="menu-item menu-item-view-mode--default">
+<a href="https://www.instructure.com/contact-us">Contact Us</a>
+<div class="menu_link_content menu-link-contentfooter view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+</div>
+</div>
+<div class="menu-item menu-item-view-mode--default">
+<a href="https://www.instructure.com/about">About Us</a>
+<div class="menu_link_content menu-link-contentfooter view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+</div>
+</div>
+<div class="menu-item menu-item-view-mode--default">
+<a href="https://www.instructure.com/about/careers">Careers</a>
+<div class="menu_link_content menu-link-contentfooter view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+</div>
+</div>
+<div class="menu-item menu-item-view-mode--default">
+<a href="https://partners.instructure.com">Partners</a>
+<div class="menu_link_content menu-link-contentfooter view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+</div>
+</div>
+<div class="menu-item menu-item-view-mode--default">
+<a href="https://www.instructure.com/news/public-relations">Press</a>
+<div class="menu_link_content menu-link-contentfooter view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+</div>
+</div>
+<div class="menu-item menu-item-view-mode--default">
+<a href="https://ir.instructure.com/?lead_source_description=instructure.com">Investors</a>
+<div class="menu_link_content menu-link-contentfooter view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+</div>
+</div>
+<div class="menu-item menu-item-view-mode--default">
+<a href="https://www.instructure.com/about/blog">Blog</a>
+<div class="menu_link_content menu-link-contentfooter view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+</div>
+</div>
+</div>
+</div>
+<span>Column</span>
+<div class="menu_link_content menu-link-contentfooter view-mode-column column menu-dropdown-0 menu-type-column">
+<div class="menu menu-level-1">
+<div class="menu-item menu-item--expanded menu-item-view-mode--social_media">
+<span>Social Media</span>
+<div class="menu_link_content menu-link-contentfooter view-mode-social-media menu-dropdown menu-dropdown-1 menu-type-social_media">
+<li class="menu-item">
+<a href="https://www.facebook.com/Instructure/" class="facebook" target="_blank">Facebook</a>
+<ul class="menu_link_content menu-link-contentfooter view-mode-default menu menu-dropdown-2 menu-type-default">
+</ul>
+</li>
+<li class="menu-item">
+<a href="https://www.linkedin.com/company/instructure-inc-" class="linkedin" target="_blank">Linked In</a>
+<ul class="menu_link_content menu-link-contentfooter view-mode-default menu menu-dropdown-2 menu-type-default">
+</ul>
+</li>
+<li class="menu-item">
+<a href="https://twitter.com/Instructure" class="twitter" target="_blank">Twitter</a>
+<ul class="menu_link_content menu-link-contentfooter view-mode-default menu menu-dropdown-2 menu-type-default">
+</ul>
+</li>
+<li class="menu-item">
+<a href="https://www.instagram.com/instructure/" class="instagram" target="_blank">Instagram</a>
+<ul class="menu_link_content menu-link-contentfooter view-mode-default menu menu-dropdown-2 menu-type-default">
+</ul>
+</li>
+</div>
+</div>
+<div class="menu-item menu-item-view-mode--default">
+<a href="https://www.google.com/maps/place/6330+S+3000+E+%23700,+Salt+Lake+City,+UT+84121/@40.6353159,-111.8097783,17z/data=!3m1!4b1!4m5!3m4!1s0x875263aac04739a3:0x3144e2537a467045!8m2!3d40.6353159!4d-111.8075896">6330 South 3000 East, Suite 700, Salt Lake City, UT 84121, USA</a>
+<div class="menu_link_content menu-link-contentfooter view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+</div>
+</div>
+<div class="menu-item menu-item-view-mode--default">
+<a href="tel://8002036755" class="phone" target="_blank">800-203-6755</a>
+<div class="menu_link_content menu-link-contentfooter view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+</div>
+</div>
+<div class="menu-item menu-item--expanded menu-item-view-mode--drop_down">
+<span> Drop Down</span>
+<ul class="menu_link_content menu-link-contentfooter view-mode-drop-down menu vertical footer-dropdown menu-dropdown-1 menu-type-drop_down" data-responsive-menu="dropdown" data-disable-hover="true" data-click-open="true">
+<li class="menu-item menu-item--expanded">
+<a href="">Language</a>
+<ul class="menu_link_content menu-link-contentfooter view-mode-default menu menu-dropdown-2 menu-type-default">
+<li class="menu-item">
+<a href="https://www.instructure.com/">United States (English)</a>
+<div class="menu_link_content menu-link-contentfooter view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="https://www.instructure.com/pt-br">Brasil (Português)</a>
+<div class="menu_link_content menu-link-contentfooter view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="https://www.instructure.com/es">América Latina (Español)</a>
+<div class="menu_link_content menu-link-contentfooter view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="https://www.instructure.com/en-gb">United Kingdom (English)</a>
+<div class="menu_link_content menu-link-contentfooter view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="https://www.instructure.com/de">Deutschland (Deutsch)</a>
+<div class="menu_link_content menu-link-contentfooter view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="https://www.instructure.com/en-au">Asia Pacific (English)</a>
+<div class="menu_link_content menu-link-contentfooter view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="https://www.instructure.com/sv-se">Sverige (Svenska)</a>
+<div class="menu_link_content menu-link-contentfooter view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="https://www.instructure.com/es-es">España (Español)</a>
+<div class="menu_link_content menu-link-contentfooter view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+<li class="menu-item">
+<a href="https://www.instructure.com/nor-no">Norge (norsk)</a>
+<div class="menu_link_content menu-link-contentfooter view-mode-default menu-dropdown menu-dropdown-3 menu-type-default">
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</div>
+</div>
+</div>
+<div class="main-footer--third">
+<div class="container">
+<div>
+<div id="block-legalmenu">
+<div><ul class="footer-legal"><li><a href="/policies/marketing-privacy"><span>Privacy</span></a></li>
+<li><a href="/policies/acceptable-use"><span>Acceptable Use</span></a></li>
+<li><a href="/policies/intl-acceptable-use"><span>Acceptable Use International</span></a></li>
+</ul><style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+.footer-legal{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+.footer-legal li {
+list-style: none;
+margin: 10px;
+}
+.footer-legal li a{
+color: #ffffff;
+font-family: "light",sans-serif;
+text-decoration: none;
+border-bottom: solid 1px #fff;
+}
+
+/*--><!]]>*/
+</style></div>
+</div>
+<div id="block-copyright-2">
+<div><p class="text-align-center" style="font-family: 'light', sans-serif">Copyright © 2019 Instructure, Inc. All rights reserved. Various trademarks held by their respective owners.</p>
+</div>
+</div>
+<div id="block-regionselection">
+<div><section id="regionSelector"><div class="selectorContainer">
+<p>Browse Instructure in your region:</p>
+<ul><li>Choose your region</li>
+<li><a class="siteSelection is-active" data-drupal-link-system-path="&lt;front&gt;" href="/">United States (English)</a></li>
+<li><a class="siteSelection" href="/pt-br">Brasil (Português)</a></li>
+<li><a class="siteSelection" href="/es">América Latina (Español)</a></li>
+<li><a class="siteSelection" href="/en-gb">United Kingdom (English)</a></li>
+<li><a class="siteSelection" href="/de">Deutschland (Deutsch)</a></li>
+<li><a class="siteSelection" href="/en-au">Asia Pacific (English)</a></li>
+<li><a class="siteSelection" href="/sv-se">Sverige (Svenska)</a></li>
+<li><a class="siteSelection" href="/es-es">España (Español)</a></li>
+<li><a class="siteSelection" href="/nor-no">Norge (norsk)</a></li>
+</ul><p><a class="close-region" href="#" id="siteSelection">No thanks</a></p>
+</div>
+</section></div>
+<style>
+  #block-regionselection{
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    background: #104068;
+    z-index: 1;
+  }
+  #regionSelector{
+    display: none;
+    box-shadow: 0 5px 5px -5px rgba(0,0,0,.5);
+  }
+  #regionSelector p, #regionSelector p a{
+    font-family: 'proxima' sans-serif;
+    text-decoration: none;
+    color: #fff;
+  }
+  #regionSelector p{
+    margin: 0 10px;
+    text-align: center;
+  }
+  #regionSelector li{
+    font-family: 'proxima' sans-serif;
+  }
+  #regionSelector .selectorContainer{
+    padding: 18px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #regionSelector ul.visible{
+    height: auto;
+  }
+  #regionSelector ul{
+    padding: 0px 15px;
+    display: inline-block;
+    margin: -5px 10px;
+    align-self: flex-end;
+    height: 34px;
+    overflow: hidden;
+    background: #fff;
+    border: solid 1px #6e6e6e;
+    position: relative;
+  }
+  #regionSelector ul:after{
+    content: '▼';
+    color: #104068;
+    font-family: 'proxima', sans-serif;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+  }
+  #regionSelector a{
+    position: relative;
+  }
+  #regionSelector li a{
+    padding: 2px 0;
+  }
+  #regionSelector a:hover:after{
+    width: 100%;
+  }
+  #regionSelector a:after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-bottom: solid #1a1a1a 1px;
+    width: 0%;
+    margin: auto;
+    display: block;
+    transition: .3s;
+  }
+
+  #regionSelector p a:after{
+    border-bottom-color: #fff; 
+  }
+
+  #regionSelector li{
+    list-style: none;
+    margin: 4px 0;
+  }
+  #regionSelector ul:hover{
+    cursor: pointer;
+  }
+  #regionSelector li:last-child{
+    margin-bottom: 7px;
+  }
+  #regionSelector li a{
+    text-decoration: none;
+    color: #1a1a1a;
+  }
+  @media (max-width: 1024px){
+    #block-regionselection.submenu-open{
+     top: 80px;
+    }
+  }
+  @media (max-width: 500px){
+    #regionSelector .selectorContainer{
+      flex-direction: column;
+      height: unset;
+    }
+    #regionSelector ul{
+      margin: 10px 10px;
+      align-self: center;
+    }
+  }
+</style>
+<script defer>
+  window.addEventListener("load", function(){
+    var $ = jQuery;
+    var pathname = window.location.pathname;
+    var locations = ["/en-gb","/pt-br","/es","/de","/en-au","/sv-se","/es-es","/nor-no", "/","/canvas/en-gb","/canvas/pt-br","/canvas/es","/canvas/de","/canvas/en-au","/canvas/sv-se","/canvas/es-es","/canvas/nor-no","/canvas/","/bridge/en-gb","/bridge/pt-br","/bridge/es","/bridge/de","/bridge/en-au","/bridge/sv-se","/bridge/es-es","/bridge/nor-no","/bridge/"]
+    if(locations.includes(pathname)){
+
+      var regions = {
+        "/en-gb": ["United Kingdom"],
+        "/pt-br": ["Brasil"],
+        "/es": ["Mexico", "Colombia","Argentina"],
+        "/de": ["Germany"],
+        "/en-au": ["Australia"],
+        "/sv-se": ["Sweden"],
+        "/es-es": ["Spain"],
+        "/nor-no": ["Norway"],
+        "/": ["United States"],
+        "/canvas/en-gb": ["United Kingdom"],
+        "/canvas/pt-br": ["Brasil"],
+        "/canvas/es": ["Mexico", "Colombia","Argentina"],
+        "/canvas/de": ["Germany"],
+        "/canvas/en-au": ["Australia"],
+        "/canvas/sv-se": ["Sweden"],
+        "/canvas/es-es": ["Spain"],
+        "/canvas/nor-no": ["Norway"],
+        "/canvas/": ["United States"],
+        "/bridge/en-gb": ["United Kingdom"],
+        "/bridge/pt-br": ["Brasil"],
+        "/bridge/es": ["Mexico", "Colombia","Argentina"],
+        "/bridge/de": ["Germany"],
+        "/bridge/en-au": ["Australia"],
+        "/bridge/sv-se": ["Sweden"],
+        "/bridge/es-es": ["Spain"],
+        "/bridge/nor-no": ["Norway"],
+        "/bridge/": ["United States"]
+      }
+
+      function getCountry(callback) {
+        $.get('/themes/instructure_blog/oce/ip-test.php', function(response) {
+          var ipData = JSON.parse(response);
+          var country;
+          if (ipData.code == "IP_ADDRESS_RESERVED") {
+            callback("United States")
+          } else {
+            callback (ipData["country"]["names"].en)
+          }
+        })
+      }
+
+      getCountry(function(country) {
+        console.log("country:", country)
+        var isHome = true
+        if (!regions[pathname].includes(country)) {
+          isHome = false
+        }
+        // finish logic and include gdpr stuff here
+        if (!isHome && localStorage.getItem("chosenLocation") == null) {
+          console.log('triggering region selector')
+          setTimeout(function() {
+            $("#regionSelector").slideDown("3000")
+          }, 1000);
+
+          $(".siteSelection").click(function(e) {
+            e.preventDefault();
+            ga('send', 'event', 'button-click', 'used', 'region-selection');
+            storeAndRedirect(this.getAttribute("href"))
+          })
+
+          $("#siteSelection").click(function(e) {
+            e.preventDefault();
+            ga('send', 'event', 'button-click', 'hide', 'region-selection');
+            storeAndRedirect(pathname)
+          })
+        }
+      })
+
+      function storeAndRedirect(location) {
+        localStorage.setItem("chosenLocation", location);
+        $('#regionSelector').slideUp("1500");
+        if (pathname !== location) {
+          window.location = location;
+        }
+      }
+      $('#regionSelector ul').on('click', function(){
+        $(this).toggleClass('visible')
+      })
+
+    }
+  })
+
+</script> </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</div>
+<script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/4671","currentPathIsAdmin":false,"isFront":true,"currentLanguage":"en"},"pluralDelimiter":"\u0003","acquia_lift_inspector":{"profile_manager_url":"https:\/\/us-east-1.lift.acquia.com"},"user":{"uid":0,"permissionsHash":"e783aab4a9fe6d0936d7521c674a20bd5c1e7cbde9419a9e25c7adbf5b13df9b"}}</script>
+<script src="/sites/blog.instructure/files/js/js_L20lgmglQ63OqfARi34Ypeh63hrR-vGu1Sbl6Z3-eUk.js"></script>
+<script src="https://cdn.appdynamics.com/adrum/adrum-latest.js"></script>
+<script src="//pages.instructure.com/js/forms2/js/forms2.min.js" rel="prefetch"></script>
+<script src="/sites/blog.instructure/files/js/js_8Zd0NyTUTPwHvDjjOGyEw2tegT0ixkErphHPR4BQtpM.js"></script>
+<script src="https://fast.wistia.com/assets/external/E-v1.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC8VO8NY63YYrc9YOFfTWVZGVifuFXikg"></script>
+<script src="/sites/blog.instructure/files/js/js_MbnUCRL8Sf1NhcovGHFLY27TqcJsevNcSzVBz1ENMMs.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/elasticlunr/0.9.6/elasticlunr.min.js"></script>
+<script src="/sites/blog.instructure/files/js/js_FC-dqC1PIEyPQg2BffUVB6aBxG99jEgs0UBQCP5FOhU.js"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"71b0675e2c","applicationID":"56772323","transactionName":"b1dSYEJTD0BSARUPDVYdcVdEWw5dHAQIAw5cbVdGX0cRbFYMFQ8WQW1GXVVFPkNBBz4UB1ZWVUY=","queueTime":0,"applicationTime":1730,"atts":"QxBRFgpJHE4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

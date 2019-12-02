@@ -1,0 +1,1841 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+
+
+
+<head>
+
+	<script>
+	// QOS start time must be as early as possible.
+	var QOS_PAGE_START_MS = Date.now ? Date.now() : +new Date();
+	</script>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<meta name="google-site-verification" content="iPs61v3hykiEZMnCl4W2izgZzaXLNbJRNLHvi9_-UUs" />
+	
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0" />
+	
+	<meta name='format-detection' content='telephone=no'>
+	
+	
+	
+
+	
+		
+			<meta name="apple-mobile-web-app-capable" content="yes">
+			<meta name="apple-mobile-web-app-status-bar-style" content="white">
+			<meta name="apple-mobile-web-app-title" content="">
+			<link rel="apple-touch-icon" href="/static/images/logo-152x152.png">
+		
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+	
+
+
+
+	<link href="/static/css/common.css?03de8b40d5f2" rel="stylesheet">
+	<link href="/static/css/icons.css?601bc084c065" rel="stylesheet">
+	
+	<link href="/static/css/fonts.css?25a358e3467e" rel="stylesheet">
+	
+	
+	<link rel="stylesheet" href="/static/css/common/web_popup.css?ff9073462c34">
+	<link rel="stylesheet" href="/static/css/common/web_popup_box.css?c436f8ffc5cb">
+	
+	
+
+
+
+
+
+	
+		<meta name="title" content="Shopee蝦皮購物 花得更少，買得更好"/>
+		<meta name="description" content="蝦皮購物讓你用最划算的價格買到所有需要、想要的商品，包含美妝保健、流行服飾配件、母嬰居家、美食旅遊票券、3C家電影音等千萬件熱銷好物等你來選購 蝦皮承諾│蝦皮商城│限時特賣"/>
+		<link rel="canonical" href="https://shopee.tw//"/>
+
+
+	
+
+
+	<title>Shopee</title>
+
+
+
+	
+	<link rel="stylesheet" href="/static/css/shop/simple-item-card.css?5828a8ca2e4b">
+	<link rel="stylesheet" href="/static/css/home/category/category_cards.css?25fb5487edfc">
+	<link rel="stylesheet" href="/static/css/home/banners.css?4902e3568217">
+	
+	<link rel="stylesheet" href="/static/css/swiper.min.css?0b2d1de8faf5">
+	<link rel="stylesheet" href="/static/css/gswiper.css?e28437b6a4a6">
+	<link rel="stylesheet" href="/static/css/home/item-cards-domify.css?79c853368700">
+	<link rel="stylesheet" href="/static/css/home/home_circles/home_circles_cards.css?1e43d143e7fb">
+	
+	<link rel="stylesheet" href="/static/css/home/home_v2.5.css?ca125a9c65e5">
+
+	
+
+	
+		<link rel="stylesheet" href="/static/css/home/category/official_shops.css?6caa0e2f20c4">
+	
+
+	
+
+
+
+
+
+    <script type="text/javascript">
+    ;(function() {
+        var SCRIPT_FAIL_THRESHOLD = 90000;
+        setTimeout(function() {
+            if (window.$ || window.jQuery) {
+                // console.log("jquery has been loaded successfully");
+                return true;
+            } else {
+                // jquery is not loaded after max timeout, we considered the script has fail to load
+                // it's time to show error message
+
+                // clear whatever dom content we have
+                document.body.innerHTML = document.getElementById("tap-to-reload").innerHTML;
+                document.body.addEventListener("touchend", function() {
+                    window.location.reload(true); // reload from server, not cache
+                }, false);
+
+                // set alert message to vertical center
+                var alertMessageDom = document.getElementsByClassName("alert-message")[0];
+                var viewportHeight = document.documentElement.clientHeight;
+                alertMessageDom.style.marginTop
+                        = Math.floor((viewportHeight - alertMessageDom.style.lineHeight)/2) + "px";
+            }
+        }, SCRIPT_FAIL_THRESHOLD);
+    })();
+</script>
+<script id="tap-to-reload" type="text/template">
+    <style>
+        body {
+            vertical-align : middle;
+            text-align : center;
+        }
+        .alert-message {
+            font-size : 18px;
+            vertical-align : middle;
+            display : inline-block;
+        }
+    </style>
+    <p class="alert-message">
+        Tap to reload again
+    </p>
+</script>
+
+	<script type="text/javascript">
+	var ORIGIN_WHITE_LIST = ['www.facebook.com', 'facebook.com'];
+	function isSameOrigin() {
+		var selfHost = window.self.location.hostname;
+		var topHost = window.top.location.hostname;
+
+		if (topHost in ORIGIN_WHITE_LIST) {
+			return true;
+		}
+		// same domain, including 127.0.0.1, localhost etc
+		if (selfHost === topHost) {
+			return true;
+		}
+		// other domain not contain shopee keyword
+		if (topHost.indexOf('shopee') === -1) {
+			return false;
+		}
+		var topRootDomain = topHost.slice(topHost.indexOf('shopee'));
+		var selfRootDomain = selfHost.slice(selfHost.indexOf('shopee'));
+		return topRootDomain == selfRootDomain;
+	}
+
+	if (!isSameOrigin()) {
+		document.body.style.display = 'none';
+	} else { }
+</script>
+	<script type="text/javascript">
+
+
+
+{
+	function _getGlobals_()
+	{
+		var toRet = {};
+		try
+		{
+			for(var k in window)
+			{
+				if(window.hasOwnProperty(k))
+					toRet[k]= true;
+			}
+		}
+		catch(e){}
+		return toRet;
+	}
+	window._resetGlobals_ = function(resetTo)
+	{
+		var vars = resetTo;
+		for(var k in window)
+		{
+			if(window.hasOwnProperty(k) && vars[k] == null)
+			{
+				window[k] = null; //Note: delete doesn't work for window's fields.
+			}
+		}
+	};
+	if(navigator.userAgent.indexOf('Shopee') >= 0 && (navigator.userAgent.indexOf('iPhone') >= 0 || navigator.userAgent.indexOf('iPad') >= 0 || navigator.userAgent.indexOf('iPod') >= 0))
+	{
+		window.ORIGINAL_GLOBAL_VARS = _getGlobals_();
+	}
+	window.GTimeoutAndInterval = (function(){
+		var idsTimeout = {};
+		var idsInterval = {};
+		var funcSetTimeout = window.setTimeout;
+		var funcClearTimeout = window.clearTimeout;
+		var funcSetInterval = window.setInterval;
+		var funcClearInterval = window.clearInterval;
+
+		window.setTimeout = function(func, delay){
+			var id = funcSetTimeout(func, delay);
+			idsTimeout[id] = id;
+			return id;
+		};
+		window.clearTimeout = function(id){
+			funcClearTimeout(id);
+			delete idsTimeout[id];
+		};
+
+		window.setInterval = function(func, interval){
+			var id = funcSetInterval(func, interval);
+			idsInterval[id] = id;
+			return id;
+		};
+		window.clearInterval = function(id){
+			funcClearInterval(id);
+			delete idsInterval[id];
+		};
+
+		function clearAll(skipSelf)
+		{
+			for(var k in idsTimeout)
+				funcClearTimeout(k);
+			for(var k in idsInterval)
+				funcClearInterval(k);
+			idsTimeout = {};
+			idsInterval = {};
+			if(skipSelf) return;
+
+			window.setTimeout = funcSetTimeout;
+			window.setInterval = funcSetInterval;
+			window.clearTimeout = funcClearTimeout;
+			window.clearInterval = funcClearInterval;
+			funcSetTimeout = null;
+			funcClearTimeout = null;
+			funcClearInterval = null;
+			funcSetInterval = null;
+		}
+
+		return {
+			clearAll: clearAll,
+		};
+	})();
+
+	function hookEventTarget(target)
+	{
+		var p = target.prototype || target.__proto__;
+		if(!p) return;
+
+		p.addEventListenerBase = p.addEventListener;
+		p.addEventListener = function(type, listener)
+		{
+			if(!this.EventList) { this.EventList = {}; }
+			// This condition prevents the crash when jQueryMobile is re-evaluated after iOS cache invalidation. (Comment out this condition and force cache invalidation in iOS to see the crash in action.)
+			if(this.addEventListenerBase)
+				this.addEventListenerBase.apply(this, arguments);
+			if(!this.EventList[type]) { this.EventList[type] = []; }
+			var list = this.EventList[type];
+			for(var index = 0; index != list.length; index++)
+			{
+				if(list[index] === listener) { return; }
+			}
+			list.push(listener);
+		};
+
+		p.removeEventListenerBase = p.removeEventListener;
+		p.removeEventListener = function(type, listener)
+		{
+			if(!this.EventList) { this.EventList = {}; }
+			// This second condition prevents the crash when jQueryMobile is re-evaluated after iOS cache invalidation.
+			if((listener instanceof Function) && this.removeEventListenerBase)
+			{
+				this.removeEventListenerBase.apply(this, arguments);
+			}
+			if(!this.EventList[type]) { return; }
+			var list = this.EventList[type];
+			for(var index = 0; index != list.length;)
+			{
+				var item = list[index];
+				if(!listener)
+				{
+					this.removeEventListenerBase(type, item);
+					list.splice(index, 1); continue;
+				}
+				else if(item === listener)
+				{
+					list.splice(index, 1); break;
+				}
+				index++;
+			}
+			if(list.length == 0) { delete this.EventList[type]; }
+		};
+
+		p.removeAllEvents = function()
+		{
+			if(!this.EventList) return;
+			for(var type in this.EventList)
+			{
+				if(!this.EventList.hasOwnProperty(type)) continue;
+				var list = this.EventList[type];
+				if(!list) continue;
+				for(var j=0; j<list.length; j++)
+				{
+					this.removeEventListenerBase(type, list[j]);
+				}
+				delete this.EventList[type];
+			}
+		};
+	}
+
+	function unhookEventTarget(target)
+	{
+		var p = target.prototype || target.__proto__;
+		if(!p) return;
+
+		if(p.addEventListenerBase)
+			p.addEventListener = p.addEventListenerBase;
+		if(p.removeEventListenerBase)
+			p.removeEventListener = p.removeEventListenerBase;
+	}
+
+	try
+	{
+		// Note: Originally I wanted to do this with EventTarget.prototype...., but seems iOS doesn't expose EventTarget interface. So we have to do it one by one.
+		hookEventTarget(Window);
+		hookEventTarget(Document);
+		hookEventTarget(Element);
+	}
+	catch(e)
+	{
+		console.log('hookEventTarget.ex', e);
+	}
+}
+</script>
+
+
+
+
+	
+	
+	
+	<script type="application/ld+json">
+	{
+	  "@context": "http://schema.org",
+	  "@type": "WebSite",
+	  "url": "http://shopee.tw/", 
+	  "potentialAction": {
+		"@type": "SearchAction",
+		"target": "http://shopee.tw/search/?keyword={search_term_string}",
+		"query-input": "required name=search_term_string"
+	  }
+	}
+	</script>
+	
+
+
+	
+
+	<link rel="alternate" href="android-app://com.shopee.tw/shopeetw/home" />
+	<link rel="alternate" href="ios-app://959841107/shopeetw/home" />
+
+	
+	
+	<meta property="al:ios:url" content="shopeetw://home" />
+    <meta property="al:ios:app_store_id" content="959841107" />
+    <meta property="al:android:url" content="shopeetw://home" />
+    <meta property="al:android:package" content="com.shopee.tw" />
+
+</head>
+<body>
+
+
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WJZQSJF" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
+
+
+
+
+	
+		
+
+<div class="header with_site_header">
+	
+		
+<div class='site_header'>
+	<ul class='site_header_list middle-centered-div L12'>
+		<li class='active'><a href='/'>Mall</a></li>
+		
+		
+		<li><a href='//seller.shopee.tw' target='_blank'>賣家中心</a></li>
+		<li><a href='//shopee.tw/ig/' target='_blank'>IG匯入</a></li>
+		
+		<li><a class='apps' href='//shopee.tw/web/' target='_blank'></a></li>
+	</ul>
+</div>
+
+	
+	<div class='inner middle-centered-div'>
+		
+        <a href="/"><div class='ic_logo clickable_area'>
+            </div></a>
+		
+
+		
+		<div class="search-bar flex1 hidden">
+			<div class="search-bar-input-wrapper middle-centered-div flex1">
+				<div class="ic_search ic_icon"></div>
+				<form class='search_form flex1' action='.'>
+					<input class="search-input flex1 L12" type='search'>
+				</form>
+				<div class='dropdown-holder'>
+					<div class='dropdown-content one r12'>
+					</div>
+					<div class='dropdown-content two r12'>
+					</div>
+				</div>
+			</div>
+			<div class="search-bar-space-holder flex1 hidden page_name L16">
+				
+			</div>
+			<div class="ic_search_red ic_icon hidden clickable_area"></div>
+		</div>
+		<div class="no-search-bar-holder center-nav flex1">
+			<div class="search-bar-space-holder flex1 page_name L16 truncate">
+			</div>
+		</div>
+		
+
+		
+
+		
+			
+				<div class='hold user_avatar ic_web_profile clickable_area'>
+				</div>
+			
+		
+		
+		<div class='second-panel'>
+			<a href='/buyer/login/signup/'>
+				<div class='signup-btn'>註冊</div>
+			</a>
+			<a href='/buyer/login/'>
+				<div class='login-btn'>登入</div>
+			</a>
+		</div>
+		
+        <div class="clearfix"></div>
+	</div>
+</div>
+<div class='header-holder with_site_header'>
+</div>
+<div class='body-mask'>
+</div>
+<div class='lure-hold'>
+	<div class='close_btn but_no_close' onclick='hideProm()'>
+	</div>
+
+    <div class='dogi-logo'>
+        <div class='ic_logo_get'></div>
+    </div>
+
+	<div class='show-text L13'>
+	</div>
+	<div class='bottom'>
+
+
+        <div class="get_app_btns_wrapper">
+            <div class="full">
+                <a id='get_app_link' target='_blank' href='' class='btn'>現在下載</a>
+            </div>
+            <div class="half"><a id='get_ios_app_link' target='_blank' href='' class='btn' onclick="_track_download_ios();">
+                    <div class="ic_IPhone icon"></div>
+                    <div>iPhone</div>
+                </a>
+            </div><div class="half"><a id='get_android_app_link' target='_blank' href='' class='btn' onclick="_track_download_android();">
+                    <div class="ic_Android icon"></div>
+                    <div>Android</div>
+                </a></div>
+
+        </div>
+
+	</div>
+</div>
+
+	
+
+	<div class="shopee-confirm-modal hidden">
+</div>
+<div class="shopee-confirm hidden">
+	<div class="confirm-title">
+		<div class="content"></div>
+	</div>
+	<div class="confirm-message">
+		<div class="content"></div>
+	</div>
+	<div class="confirm-button-holder middle-centered-div">
+		<div class="confirm-button cancel" data-button-id="1"></div>
+		<div class="flex1" data-button-id="0"></div>
+		<div class="confirm-button ok" data-button-id="0"></div>
+	</div>
+</div>
+
+	<div class="shopee-action-sheet-mask"></div>
+<div class="shopee-action-sheet-container center-container isPC">
+</div>
+
+	
+
+<div id='pin-popup'>
+	<div class='popup'>
+		<div class='title r16'>
+		</div>
+		<div class='message r16'>
+		</div>
+		<div class='digit-holder'>
+			<div class='digit-input'>
+			</div><div class='digit-input'>
+			</div>
+		</div>
+		<div class='btn-holder'>
+			<div class='cancelText' data-button-id=1>
+			</div><div class='okText' data-button-id=0>
+			</div>
+		</div>
+	</div>
+	<div class='digit-keyboard'>
+		<div class='digit-row'>
+			<div class='digit r14'>1</div><div class='digit r14'>2</div><div class='digit r14'>3</div>
+		</div>
+		<div class='digit-row'>
+			<div class='digit r14'>4</div><div class='digit r14'>5</div><div class='digit r14'>6</div>
+		</div>
+		<div class='digit-row'>
+			<div class='digit r14'>7</div><div class='digit r14'>8</div><div class='digit r14'>9</div>
+		</div>
+		<div class='digit-row'>
+			<div class='digit r14'></div><div class='digit r14'>0</div><div class='delete r14'>刪除</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="home-categories" class='page-holder'><div class="home-categories-container home-categories-container--no-background"><div class="banner-container " data-md5=""><div class="banner-container-inner"><div class="swiper-container clickable_area"><div class="swiper-wrapper"><div class="swiper-slide"></div><div class="swiper-slide"></div><div class="swiper-slide"></div><div class="swiper-slide"></div></div><div class="swiper-pagination"></div><!-- Will be dynamically removed for mobile devices. Refer to banners.js. --><div class="swiper-button-prev" style="display:none;"></div><div class="swiper-button-next" style="display:none;"></div></div></div></div><div class="flash-sale-section  clickable_area flash-sale-section__TW shopee-section-header__margin"><div class='shopee-section-header shopee-section-header--flash-sale has-see-all'><div class="l12 nowrap ic_app_buy_flashsale ic_app_buy_flashsale--TW flash-sale-section__title"></div><div class="count-down"><div class="count-down__timer timer m13 hidden" data-end-time=""><div class="timer__hours digits"><div class="digits__1 digit ic_buy_digit transit"></div><div class="digits__2 digit ic_buy_digit transit"></div></div><div class="timer__colon timer__colon--blink ic_buy_dian"></div><div class="timer__mins digits"><div class="digits__1 digit ic_buy_digit up-to-5 transit"></div><div class="digits__2 digit ic_buy_digit transit"></div></div><div class="timer__colon timer__colon--blink ic_buy_dian"></div><div class="timer__secs digits"><div class="digits__1 digit ic_buy_digit up-to-5 transit"></div><div class="digits__2 digit ic_buy_digit transit"></div></div></div></div><div class="shopee-section-header__subtitle shopee-section-header__subtitle--update-time r12"><span class='update-time'></span></div><div class="shopee-section-header__see-all clickable_area l12 capitalize nowrap">查看全部<span
+				class="ic_arrow_small_orange"></span></div></div><div class="flash-sale-container"><div class="flash-sale-items horizontal-list
+				hide-scrollbar  "><div class="flash-sale-items-wrapper"><div class="flash-sale-item clickable_area faked-item"><div class="flash-sale-item__image ratio_1_1_box"
+							 style="background-image : url(https://cf.shopee.tw/file/_tn)"></div><div class="flash-sale-item__price"></div><div class="flash-sale-item__progress"><div class="flame"></div><div class="progress-bar r10"><span class="progress-label"></span></div></div></div><div class="flash-sale-item clickable_area faked-item"><div class="flash-sale-item__image ratio_1_1_box"
+							 style="background-image : url(https://cf.shopee.tw/file/_tn)"></div><div class="flash-sale-item__price"></div><div class="flash-sale-item__progress"><div class="flame"></div><div class="progress-bar r10"><span class="progress-label"></span></div></div></div><div class="flash-sale-item clickable_area faked-item"><div class="flash-sale-item__image ratio_1_1_box"
+							 style="background-image : url(https://cf.shopee.tw/file/_tn)"></div><div class="flash-sale-item__price"></div><div class="flash-sale-item__progress"><div class="flame"></div><div class="progress-bar r10"><span class="progress-label"></span></div></div></div><div class="flash-sale-item clickable_area faked-item"><div class="flash-sale-item__image ratio_1_1_box"
+							 style="background-image : url(https://cf.shopee.tw/file/_tn)"></div><div class="flash-sale-item__price"></div><div class="flash-sale-item__progress"><div class="flame"></div><div class="progress-bar r10"><span class="progress-label"></span></div></div></div><div class="flash-sale-item clickable_area faked-item"><div class="flash-sale-item__image ratio_1_1_box"
+							 style="background-image : url(https://cf.shopee.tw/file/_tn)"></div><div class="flash-sale-item__price"></div><div class="flash-sale-item__progress"><div class="flame"></div><div class="progress-bar r10"><span class="progress-label"></span></div></div></div><div class="flash-sale-item clickable_area faked-item"><div class="flash-sale-item__image ratio_1_1_box"
+							 style="background-image : url(https://cf.shopee.tw/file/_tn)"></div><div class="flash-sale-item__price"></div><div class="flash-sale-item__progress"><div class="flame"></div><div class="progress-bar r10"><span class="progress-label"></span></div></div></div><div class="flash-sale-item clickable_area faked-item"><div class="flash-sale-item__image ratio_1_1_box"
+							 style="background-image : url(https://cf.shopee.tw/file/_tn)"></div><div class="flash-sale-item__price"></div><div class="flash-sale-item__progress"><div class="flame"></div><div class="progress-bar r10"><span class="progress-label"></span></div></div></div><div class="flash-sale-item clickable_area faked-item"><div class="flash-sale-item__image ratio_1_1_box"
+							 style="background-image : url(https://cf.shopee.tw/file/_tn)"></div><div class="flash-sale-item__price"></div><div class="flash-sale-item__progress"><div class="flame"></div><div class="progress-bar r10"><span class="progress-label"></span></div></div></div></div></div></div></div><div class='skinny-icon-wrapper shopee-section-header__margin' style=""><div class='skinny-icon'></div></div><div class="official-shop-section shopee-section-header__margin clickable_area official-shop-section--with-selling-points"><div class="official-shop-header"><div class="header-label uppercase m14">蝦皮商城</div><div class="see-more-button-wrapper"><div class="see-more-button"><div class="text capitalize r12">查看更多</div><div class="arrow ic_buy_official_seemore"></div></div></div></div><div class='official-shop-container row-2 official-shop-container--compact'><div class="official-shop-items official-shop-items--compact hide-scrollbar"><div class="official-shop-items-wrapper"><div class="official-shop-item clickable_area"><div class="ratio_4_3_box official-shop-wrapper"></div></div><div class="official-shop-item clickable_area"><div class="ratio_4_3_box official-shop-wrapper"></div></div><div class="official-shop-item clickable_area"><div class="ratio_4_3_box official-shop-wrapper"></div></div><div class="official-shop-item clickable_area"><div class="ratio_4_3_box official-shop-wrapper"></div></div><div class="official-shop-item clickable_area"><div class="ratio_4_3_box official-shop-wrapper"></div></div><div class="official-shop-item clickable_area"><div class="ratio_4_3_box official-shop-wrapper"></div></div><div class="official-shop-item clickable_area"><div class="ratio_4_3_box official-shop-wrapper"></div></div><div class="official-shop-item clickable_area"><div class="ratio_4_3_box official-shop-wrapper"></div></div></div><div class="official-shop-items-wrapper"><div class="official-shop-item clickable_area"><div class="ratio_4_3_box official-shop-wrapper"></div></div><div class="official-shop-item clickable_area"><div class="ratio_4_3_box official-shop-wrapper"></div></div><div class="official-shop-item clickable_area"><div class="ratio_4_3_box official-shop-wrapper"></div></div><div class="official-shop-item clickable_area"><div class="ratio_4_3_box official-shop-wrapper"></div></div><div class="official-shop-item clickable_area"><div class="ratio_4_3_box official-shop-wrapper"></div></div><div class="official-shop-item clickable_area"><div class="ratio_4_3_box official-shop-wrapper"></div></div><div class="official-shop-item clickable_area"><div class="ratio_4_3_box official-shop-wrapper"></div></div><div class="official-shop-item clickable_area"><div class="ratio_4_3_box official-shop-wrapper"></div></div></div></div><div class="horizontal-line horizontal-line--1"></div></div><div class="official-shop-selling-points-wrapper"><div class="official-shop-selling-points visibility-hidden"><div class="selling-point"><span class="selling-point__component ic_sellingpoint_labding"></span><span class="selling-point__component selling-point__label r12">15天鑑賞期</span></div><div class="selling-point"><span class="selling-point__component ic_sellingpoint_labding"></span><span class="selling-point__component selling-point__label r12">退貨無負擔</span></div><div class="selling-point"><span class="selling-point__component ic_sellingpoint_labding"></span><span class="selling-point__component selling-point__label r12">假一賠二</span></div></div></div></div><div class="shopee-section-header shopee-section-header--trending-search shopee-section-header__margin"><div class="l14 nowrap shopee-section-header__title uppercase">熱門搜尋</div><div class="shopee-section-header__subtitle shopee-section-header__subtitle--update-time r12"><span class='update-time'></span></div></div><div class="trending-search-items  horizontal-list hide-scrollbar"><div class="items-wrapper"><div class="trending-search-item faked-item"><div class="trending-search-item__info  visibility-hidden"><div class="title trending-search-item__info__title truncate r14 ">xxx</div><div class="title trending-search-item__info__subtitle l12"><span class="trending-search-item__info__subtitle__count">xxx</span><span class="trending-search-item__info__subtitle__label">搜尋</span></div></div><div class="ratio_4_3_box trending-search-item__image"></div></div><div class="trending-search-item faked-item"><div class="trending-search-item__info  visibility-hidden"><div class="title trending-search-item__info__title truncate r14 ">xxx</div><div class="title trending-search-item__info__subtitle l12"><span class="trending-search-item__info__subtitle__count">xxx</span><span class="trending-search-item__info__subtitle__label">搜尋</span></div></div><div class="ratio_4_3_box trending-search-item__image"></div></div><div class="trending-search-item faked-item"><div class="trending-search-item__info  visibility-hidden"><div class="title trending-search-item__info__title truncate r14 ">xxx</div><div class="title trending-search-item__info__subtitle l12"><span class="trending-search-item__info__subtitle__count">xxx</span><span class="trending-search-item__info__subtitle__label">搜尋</span></div></div><div class="ratio_4_3_box trending-search-item__image"></div></div><div class="trending-search-item faked-item"><div class="trending-search-item__info  visibility-hidden"><div class="title trending-search-item__info__title truncate r14 ">xxx</div><div class="title trending-search-item__info__subtitle l12"><span class="trending-search-item__info__subtitle__count">xxx</span><span class="trending-search-item__info__subtitle__label">搜尋</span></div></div><div class="ratio_4_3_box trending-search-item__image"></div></div><div class="trending-search-item faked-item"><div class="trending-search-item__info  visibility-hidden"><div class="title trending-search-item__info__title truncate r14 ">xxx</div><div class="title trending-search-item__info__subtitle l12"><span class="trending-search-item__info__subtitle__count">xxx</span><span class="trending-search-item__info__subtitle__label">搜尋</span></div></div><div class="ratio_4_3_box trending-search-item__image"></div></div></div></div><div class='shopee-section-header shopee-section-header--categories shopee-section-header__margin'><div class="r14 uppercase nowrap shopee-section-header__title">分類</div><div class="shopee-section-header__subtitle r12"></div><div class="shopee-section-header__see-all clickable_area l12 capitalize nowrap hidden">查看更多<span class="ic_arrow_right_orange"></span></div></div><div class="category-container--card  two-row"><div class="category-items subcat-container container row center-container hide-scrollbar"><div class="category-items-wrapper"><div class="category-item clickable_area "
+	 data-category-id="62"
+	 
+	 data-is-adult="0"
+	 data-index="0"
+	 data-catid="62"
+	 data-catname="女生衣著"
+><div class="ratio_1_1_box category-wrapper" style="background-image : url(https://cf.shopee.tw/file/17f3879a1872099681d7b85101e187db_tn)" title="女生衣著"></div><div class="middle-centered-div subcat-title"><div class="title r12 category-item-title">女生衣著</div></div></div><div class="category-item clickable_area "
+	 data-category-id="67"
+	 
+	 data-is-adult="0"
+	 data-index="2"
+	 data-catid="67"
+	 data-catname="美妝保健"
+><div class="ratio_1_1_box category-wrapper" style="background-image : url(https://cf.shopee.tw/file/227ec8335e695172de26c637ec8f8697_tn)" title="美妝保健"></div><div class="middle-centered-div subcat-title"><div class="title r12 category-item-title">美妝保健</div></div></div><div class="category-item clickable_area "
+	 data-category-id="100"
+	 
+	 data-is-adult="0"
+	 data-index="4"
+	 data-catid="100"
+	 data-catname="嬰幼童與母親"
+><div class="ratio_1_1_box category-wrapper" style="background-image : url(https://cf.shopee.tw/file/64ee86afd347eae0cb20279aa1c8e878_tn)" title="嬰幼童與母親"></div><div class="middle-centered-div subcat-title"><div class="title r12 category-item-title">嬰幼童與母親</div></div></div><div class="category-item clickable_area "
+	 data-category-id="73"
+	 
+	 data-is-adult="0"
+	 data-index="6"
+	 data-catid="73"
+	 data-catname="居家生活"
+><div class="ratio_1_1_box category-wrapper" style="background-image : url(https://cf.shopee.tw/file/dfaf1340a3440f2f664278081d909d45_tn)" title="居家生活"></div><div class="middle-centered-div subcat-title"><div class="title r12 category-item-title">居家生活</div></div></div><div class="category-item clickable_area "
+	 data-category-id="2580"
+	 
+	 data-is-adult="0"
+	 data-index="8"
+	 data-catid="2580"
+	 data-catname="女生配件"
+><div class="ratio_1_1_box category-wrapper" style="background-image : url(https://cf.shopee.tw/file/24bc8017d2628d023b171825f081ec06_tn)" title="女生配件"></div><div class="middle-centered-div subcat-title"><div class="title r12 category-item-title">女生配件</div></div></div><div class="category-item clickable_area "
+	 data-category-id="64"
+	 
+	 data-is-adult="0"
+	 data-index="10"
+	 data-catid="64"
+	 data-catname="女鞋"
+><div class="ratio_1_1_box category-wrapper" style="background-image : url(https://cf.shopee.tw/file/49dd854cf0f455b275d9e8dccae218f9_tn)" title="女鞋"></div><div class="middle-centered-div subcat-title"><div class="title r12 category-item-title">女鞋</div></div></div><div class="category-item clickable_area "
+	 data-category-id="65"
+	 
+	 data-is-adult="0"
+	 data-index="12"
+	 data-catid="65"
+	 data-catname="女生包包/精品"
+><div class="ratio_1_1_box category-wrapper" style="background-image : url(https://cf.shopee.tw/file/274d5b49c36e9eb47484535823cf42af_tn)" title="女生包包/精品"></div><div class="middle-centered-div subcat-title"><div class="title r12 category-item-title">女生包包/精品</div></div></div><div class="category-item clickable_area "
+	 data-category-id="66"
+	 
+	 data-is-adult="0"
+	 data-index="14"
+	 data-catid="66"
+	 data-catname="美食、伴手禮"
+><div class="ratio_1_1_box category-wrapper" style="background-image : url(https://cf.shopee.tw/file/f7ea5e16b692ede244bf6d54058ddf1a_tn)" title="美食、伴手禮"></div><div class="middle-centered-div subcat-title"><div class="title r12 category-item-title">美食、伴手禮</div></div></div><div class="category-item clickable_area "
+	 data-category-id="1657"
+	 
+	 data-is-adult="0"
+	 data-index="16"
+	 data-catid="1657"
+	 data-catname="寵物"
+><div class="ratio_1_1_box category-wrapper" style="background-image : url(https://cf.shopee.tw/file/253830d7b66ebfc16b976c2f26643fa8_tn)" title="寵物"></div><div class="middle-centered-div subcat-title"><div class="title r12 category-item-title">寵物</div></div></div><div class="category-item clickable_area "
+	 data-category-id="74"
+	 
+	 data-is-adult="0"
+	 data-index="18"
+	 data-catid="74"
+	 data-catname="服務、票券"
+><div class="ratio_1_1_box category-wrapper" style="background-image : url(https://cf.shopee.tw/file/24c20644f3e7ec92c9e21d149d994897_tn)" title="服務、票券"></div><div class="middle-centered-div subcat-title"><div class="title r12 category-item-title">服務、票券</div></div></div><div class="category-item clickable_area "
+	 data-category-id="76"
+	 
+	 data-is-adult="0"
+	 data-index="20"
+	 data-catid="76"
+	 data-catname="代買代購"
+><div class="ratio_1_1_box category-wrapper" style="background-image : url(https://cf.shopee.tw/file/f3c196d08f065e90a5180ad2dc96a139_tn)" title="代買代購"></div><div class="middle-centered-div subcat-title"><div class="title r12 category-item-title">代買代購</div></div></div></div><div class="category-items-wrapper"><div class="category-item clickable_area "
+	 data-category-id="63"
+	 
+	 data-is-adult="0"
+	 data-index="1"
+	 data-catid="63"
+	 data-catname="男生衣著"
+><div class="ratio_1_1_box category-wrapper" style="background-image : url(https://cf.shopee.tw/file/71fa5b118eb60cabe38caa3cae4a8c93_tn)" title="男生衣著"></div><div class="middle-centered-div subcat-title"><div class="title r12 category-item-title">男生衣著</div></div></div><div class="category-item clickable_area "
+	 data-category-id="70"
+	 
+	 data-is-adult="0"
+	 data-index="3"
+	 data-catid="70"
+	 data-catname="手機平板與周邊"
+><div class="ratio_1_1_box category-wrapper" style="background-image : url(https://cf.shopee.tw/file/508706d0720263ce8ee415bce40d0d33_tn)" title="手機平板與周邊"></div><div class="middle-centered-div subcat-title"><div class="title r12 category-item-title">手機平板與周邊</div></div></div><div class="category-item clickable_area "
+	 data-category-id="69"
+	 
+	 data-is-adult="0"
+	 data-index="5"
+	 data-catid="69"
+	 data-catname="3C"
+><div class="ratio_1_1_box category-wrapper" style="background-image : url(https://cf.shopee.tw/file/9326868176f0878a0b03ae278d82f0d6_tn)" title="3C"></div><div class="middle-centered-div subcat-title"><div class="title r12 category-item-title">3C</div></div></div><div class="category-item clickable_area "
+	 data-category-id="71"
+	 
+	 data-is-adult="0"
+	 data-index="7"
+	 data-catid="71"
+	 data-catname="家電影音"
+><div class="ratio_1_1_box category-wrapper" style="background-image : url(https://cf.shopee.tw/file/c000a3e95e7adc783826b992dbe2a5f7_tn)" title="家電影音"></div><div class="middle-centered-div subcat-title"><div class="title r12 category-item-title">家電影音</div></div></div><div class="category-item clickable_area "
+	 data-category-id="1837"
+	 
+	 data-is-adult="0"
+	 data-index="9"
+	 data-catid="1837"
+	 data-catname="男生包包與配件"
+><div class="ratio_1_1_box category-wrapper" style="background-image : url(https://cf.shopee.tw/file/e9815e64e65bde8f8fa4a4fe367423c2_tn)" title="男生包包與配件"></div><div class="middle-centered-div subcat-title"><div class="title r12 category-item-title">男生包包與配件</div></div></div><div class="category-item clickable_area "
+	 data-category-id="1859"
+	 
+	 data-is-adult="0"
+	 data-index="11"
+	 data-catid="1859"
+	 data-catname="男鞋"
+><div class="ratio_1_1_box category-wrapper" style="background-image : url(https://cf.shopee.tw/file/8d53bfc3ea2a689d2885cf9977cfcaab_tn)" title="男鞋"></div><div class="middle-centered-div subcat-title"><div class="title r12 category-item-title">男鞋</div></div></div><div class="category-item clickable_area "
+	 data-category-id="1611"
+	 
+	 data-is-adult="0"
+	 data-index="13"
+	 data-catid="1611"
+	 data-catname="戶外與運動用品"
+><div class="ratio_1_1_box category-wrapper" style="background-image : url(https://cf.shopee.tw/file/cda34cfd1235b787c2f6b378c906ebb7_tn)" title="戶外與運動用品"></div><div class="middle-centered-div subcat-title"><div class="title r12 category-item-title">戶外與運動用品</div></div></div><div class="category-item clickable_area "
+	 data-category-id="10076"
+	 
+	 data-is-adult="0"
+	 data-index="15"
+	 data-catid="10076"
+	 data-catname="汽機車零件百貨"
+><div class="ratio_1_1_box category-wrapper" style="background-image : url(https://cf.shopee.tw/file/41e63c17a4e0412883fac61d94592268_tn)" title="汽機車零件百貨"></div><div class="middle-centered-div subcat-title"><div class="title r12 category-item-title">汽機車零件百貨</div></div></div><div class="category-item clickable_area "
+	 data-category-id="75"
+	 
+	 data-is-adult="0"
+	 data-index="17"
+	 data-catid="75"
+	 data-catname="娛樂、收藏"
+><div class="ratio_1_1_box category-wrapper" style="background-image : url(https://cf.shopee.tw/file/1071d365b731ef6e2619699c3b6d3492_tn)" title="娛樂、收藏"></div><div class="middle-centered-div subcat-title"><div class="title r12 category-item-title">娛樂、收藏</div></div></div><div class="category-item clickable_area "
+	 data-category-id="72"
+	 
+	 data-is-adult="0"
+	 data-index="19"
+	 data-catid="72"
+	 data-catname="遊戲王"
+><div class="ratio_1_1_box category-wrapper" style="background-image : url(https://cf.shopee.tw/file/2ce3822327a87bd4e3e96a131e5ea082_tn)" title="遊戲王"></div><div class="middle-centered-div subcat-title"><div class="title r12 category-item-title">遊戲王</div></div></div><div class="category-item clickable_area "
+	 data-category-id="68"
+	 
+	 data-is-adult="0"
+	 data-index="21"
+	 data-catid="68"
+	 data-catname="其他類別"
+><div class="ratio_1_1_box category-wrapper" style="background-image : url(https://cf.shopee.tw/file/320a782fe4d9479c63408f9ba4584b94_tn)" title="其他類別"></div><div class="middle-centered-div subcat-title"><div class="title r12 category-item-title">其他類別</div></div></div></div><div class="clearfix"></div></div><div class="horizontal-line"></div></div></div><div class="just-for-you just-for-you--v25 just-for-you--sticky fixed-item-with-glitch-ios11 shopee-section-header shopee-section-header--daily-discover center-container has-see-all hidden"><div class="m14 nowrap shopee-section-header__title uppercase primary">每日新發現</div><div class="shopee-section-header__subtitle shopee-section-header__subtitle--update-time r12"><span class='update-time'></span></div><div class="shopee-section-header__see-all clickable_area label-see-all-wrapper l12 primary capitalize nowrap hide">查看更多<span class="ic_arrow_small_orange"></span></div></div><div class="just-for-you just-for-you--v25 shopee-section-header shopee-section-header--daily-discover shopee-section-header__flex has-see-all hidden" id="just-for-you"><div class="shopee-section-header__title-wrapper"><div class="m14 nowrap shopee-section-header__title uppercase primary">每日新發現</div><div class="shopee-section-header__subtitle shopee-section-header__subtitle--update-time r12"><span class='update-time'></span></div></div><div class="shopee-section-header__see-all clickable_area label-see-all-wrapper l12 primary capitalize nowrap hide">查看更多<span class="ic_arrow_small_orange"></span></div></div><div class="item-list-container item-list-container--just-for-you center-container"><ul class='item-list'></ul></div><div class="btn-see-all-just-for-you-wrapper"><div class="btn-see-all-just-for-you hide clickable_area capitalize">查看更多</div><div class="btn-tap-to-load-again hide clickable_area capitalize">重新讀取</div></div><div class='gtop ic_maketop fixed-item-with-glitch-ios11  ' style='display:none;z-index:1000;' id="go-top-icon"></div><div class='floating-icon fixed-item-with-glitch-ios11'><div class='close-btn'></div></div></div><footer class="center-container"><div class="middle-centered-div"><a href="http://shopee.tw/legaldoc/privacy/" class="flex1 m10 middle-centered-div footer-privacy"><div class="footer-icon ic_web_privacypolicy"></div><span>隱私權政策</span></a><div class="vertical-divider"></div><a href="http://shopee.tw/legaldoc/termsOfService/" class="flex1 m10 middle-centered-div footer-tos"><div class="footer-icon ic_web_termofservice"></div><span>服務條款</span></a></div></footer>
+
+
+
+
+	<div class='web-popup-mask'></div>
+<div class='web-popup-holder center-container'>
+	<div class='title'></div>
+	<div class='image'></div>
+	<div class='text'></div>
+	<div class='button'></div>
+</div>
+
+	<div class='web-popup-box-mask'></div>
+<div class='web-popup-box-holder center-container'>
+	<div class='title'></div>
+	<div class='image'></div>
+	<div class='text'></div>
+	<div class='cancel'></div>
+	<div class='confirm'></div>
+</div>
+
+	
+<div id="_alert_bg" class="hidden">
+	<div id="_alert_content" class="center-container">
+		<div class='img hidden'></div>
+		<span></span>
+		<div class="middle-centered-div alert-btn-group">
+			<div class="btn-dismiss-alert flex1">否</div>
+			<div class="btn-confirm-alert flex1">是</div>
+		</div>
+	</div>
+</div>
+<div id="_alert_msg" class="center-container hidden">
+	<div class='img hidden'></div>
+	<span></span>
+	<div class="middle-centered-div alert-btn-group">
+		<div class="btn-dismiss-alert flex1">否</div>
+		<div class="btn-confirm-alert flex1">是</div>
+	</div>
+</div>
+
+
+	
+
+	<div class='page_hide'></div>
+	<div class='general-mask'></div>
+
+
+
+
+	
+		
+
+
+
+
+
+
+<script type="text/javascript">
+
+
+	var USERID = null;
+	var ALERT_LIKE_PRIVACY_MSG = false;
+	var CC_INSTALLMENT_PAYMENT_ELIGIBILITY = true;
+	var NON_CC_INSTALLMENT_PAYMENT_ELIGIBILITY = false;
+
+
+
+
+	var CURRENT_PATH = '/';
+
+	var CURRENT_SHOPID = 'None';
+	var VERSION = '';
+	var APPVER = '';
+	var LANGUAGE = 'zhHant';
+	var IS_FB_APP = false;
+
+	var T_EM_H = '';
+
+
+</script>
+
+
+
+<script type="text/javascript">
+
+
+	var LOCALE = 'TW';
+	var ENVIRONMENT = 'LIVE';
+	var POPTAB_FIRST = true;
+	var POPTAB_FIRST_HASHTAG = false;
+	var SHOW_TOP_SALES_TABS = true;
+
+	var ITEM_IMAGE_BASE_URL = 'https://cf.shopee.tw/file/';
+	var ITEM_VIDEO_BASE_URL = 'https://cv.shopee.tw/video/';
+	var ROOT_DOMAIN = 'shopee.tw';
+	var COOKIE_DOMAIN = 'shopee.tw';
+
+	
+	var msg_server_error = '伺服器錯誤';
+	var label_ok = 'OK';
+
+	var T_GA_ID = 'UA\u002D61915057\u002D6';
+	var T_GA_ID_PC = 'UA\u002D61915057\u002D6';
+	var T_FB_ID = '503280033161781';
+	var T_CRITEO_ID = '34651';
+
+
+
+
+	var T_BI_SIG = "SPC_T_ID";
+	var T_BI_IV = "SPC_T_IV";
+	var SHOW_SHOPEE_VERIFIED_FILTER = true;
+	var SHOW_IN_PAGE_FILTER = false;
+	var MARKET_TRACKING_TOKEN_NAME = "smtt_v0";
+	var MARKET_TRACKING_TOKEN_V2_NAME = "smtt";
+	var MARKET_TRACKING_ADS_AFFILIATION_TOKEN = "sp_af";
+	var RN_BUNDLE_VERSION_COOKIE_NAME = "SPC_RNBV";
+	var PRICEZA_MERCHANT_ID = 7077;
+	var CONFIG_WALLET_KYC = false;
+	var AIRPAY_CLIENT_API_ENDPOINT = '';
+	var CONFIG_COIN_INFLATION = 100;
+	var CONFIG_CONTACT_US_NUMBER = JSON.parse('{\u0022phone_number\u0022:\u0022(02) 6636 6559\u0022,\u0022operating_hours\u0022:\u0022週一至週五: 9:00\u002D 18:00, 國定假日除外\u0022,\u0022email_address\u0022:\u0022support@shopee.tw\u0022}')['phone_number'];
+
+
+	var IS_MALL_PAGE = true;
+	var STATIC_URL = '/static/';
+	var SIMPLE_VERSION = false;
+	var DEBUG = false;
+	var LOCALHOST = false;
+	var STAGING = false;
+	var ANDROID_FRIENDLY = false;
+	var ENABLE_RATING_REPLY = true;
+	var ADULT_AGE = '18';
+	var ENABLE_LOCATION_FILTER = true;
+	var ENABLE_LOCATION_FILTER_IN_PAGE = false;
+	var CONFIG_BRANDING_SHOPEE_WALLET_AS_MY_WALLET = false;
+	var CONFIG_ENABLE_SHOPEE_BUYER_WALLET_V2 = false;
+	var SHOW_SOLD_COUNT = true;
+	var OPC_CART_MUST_HAVE_ADDRESS = false;
+	var CONFIG_FLASH_SALE_NAMED_AS_FLASH_DEAL = false;
+	var SHIPPING_OPTION_FILTER = true;
+	var ENABLE_SHIPPING_FILTER_PAGE = false;
+	var CONFIG_FLASH_SALE_NAME_KEY = "flash_sale";
+	var CONFIG_OFFICIAL_SHOP_ROOT_URL = "/mall";
+	var show_from_same_shop = true;
+	var CONFIG_SHOW_FROM_SAME_SHOP_SHOW_SECTION = true;
+	var ENABLE_OFFICIAL_SHOP_FILTER = true;
+	var ENABLE_OFFICIAL_SHOP_FILTER_IN_PAGE = false;
+	var ENABLE_CC_INSTALLMENT_PAYMENT = true;
+	var ENABLE_NON_CC_INSTALLMENT_PAYMENT = false;
+	var LOWEST_PRICE_GUARANTEE_SHOP = [{"userid":10937,"shopid":10937}];
+	var INSTALLMENT_FILTER = false;
+	var CONFIG_BRAND_LIST = false;
+	var CONFIG_RW_ONE_PAGE_CHECKOUT = true;
+	var CONFIG_ENABLE_LOCAL_WALLET = false;
+	var CONFIG_DIGIT_GROUP_SYMBOL = ",";
+	var CONFIG_FREE_SHIPPING_VOUCHER = true;
+	var TRACKING_URL_PARAMS = ["smtt","smtt_v0"];
+	var MARKET_UNIVERSAL_LANDING_PAGE_PREFIX = "/universal-link";
+	var CONFIG_ROUND_TO_DECIMAL_PLACE_FOR_BUYER_WALLET = 0;
+
+
+	var _gaq = [];
+
+	var _djangofy_t_ = {};
+
+	var _transify_t_ = {};
+
+	var i18njs = false;
+
+	window.criteo_q = window.criteo_q || [];
+
+	window.RN_PERCENTAGE = {"default":100,"just_for_you":0,"checkout":100};
+	window.RN_PAGE_MIN_VERSION_ANDROID = {"default":21416,"checkout":21200};
+	window.RN_PAGE_MIN_VERSION_IOS = {"checkout_cancel_provide_reason":24705,"default":21400,"checkout":21200};
+	window.RN_PAGE_MIN_VERSION_BUNDLE = {"checkout_cancel_provide_reason":3033000,"default":0,"order_paid":2066000};
+
+</script>
+
+
+	<script>
+  var gtmDataLayer = [{
+	  'country': window.LOCALE.toLowerCase(),
+	  'userid': window.USERID,
+	  'source': 'mweb'
+  }];
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','gtmDataLayer','GTM-WJZQSJF');</script>
+<!-- End Google Tag Manager -->
+
+
+
+
+
+	<script type="text/javascript" src="/static/jsutil_min/tracking/fb_init.js?f40291411950" defer></script>
+	
+	<script type="text/javascript" src="//static.criteo.net/js/ld/ld.js" async="true"></script>
+	<script type="text/javascript">
+		window.criteo_q.push({event: "setAccount", account: T_CRITEO_ID });
+		if(window.T_EM_H)
+			window.criteo_q.push({ event: "setEmail", email: window.T_EM_H });
+	</script>
+	
+
+
+
+
+
+	<script type="text/javascript" src="/static/jslib_min/jslib_base.js?c2a4f916f2e8"></script>
+
+
+
+
+<script>
+_transify_t_["label_mil_id"] = "juta";
+_transify_t_["label_mil_ph"] = "mil";
+_transify_t_["label_ok"] = "OK";
+_transify_t_["label_mil_th"] = "million";
+_transify_t_["tooltips_shipping_fee_included"] = "你可以使用\u0022出價\u0022功能來跟賣家討論運費金額或運送方式";
+_transify_t_["label_used"] = "二手";
+_transify_t_["label_used_good"] = "二手 (挺好的)";
+_transify_t_["label_years"] = "年";
+_transify_t_["label_apps"] = "Apps";
+_transify_t_["text_download_shopee_for_more_function"] = "快來下載蝦皮購物APP，等你喔！";
+_transify_t_["alert_bank_account_wallet_pin_changed"] = "你的帳戶目前還在審核中。請稍後再試一次，或聯繫{{hotline}} 以獲得幫助。";
+_transify_t_["label_short_for_number_100000000"] = "億";
+_transify_t_["label_copied_failed"] = "複製失敗";
+_transify_t_["label_within_hours"] = "幾小時內";
+_transify_t_["label_short_for_number_10000"] = "萬";
+_transify_t_["label_latest"] = "最新";
+_transify_t_["alert_set_rejected_account_default"] = "無法將被拒絕的帳戶設為預設";
+_transify_t_["label_new_without_tags"] = "全新已拆吊牌";
+_transify_t_["label_price"] = "價格";
+_transify_t_["alert_bank_account_no_change"] = "此帳戶已存在，請輸入新的銀行帳戶";
+_transify_t_["label_cancel"] = "取消";
+_transify_t_["label_year_abbr"] = "年";
+_transify_t_["alert_bank_account_duplicate"] = "銀行帳號資料已存在";
+_transify_t_["alert_bank_info_not_valid"] = "抱歉，你的銀行帳號無效，請再次填入";
+_transify_t_["label_week"] = "週";
+_transify_t_["label_day"] = "天";
+_transify_t_["tooltips_days_to_ship"] = "賣家在出貨前的準備天數";
+_transify_t_["label_day_abbr"] = "天";
+_transify_t_["label_not_set"] = "未設定";
+_transify_t_["tooltips_shipping_fee_included_my"] = "If you are shipping to East Malaysia or want to negotiate the shipping fee, please chat with seller";
+_transify_t_["msg_ios_coming_soon"] = "iOS版本Coming soon";
+_transify_t_["label_popular"] = "綜合排名";
+_transify_t_["alert_delete_default_account"] = "無法刪除預設的銀行帳號";
+_transify_t_["label_hour"] = "小時";
+_transify_t_["label_within_1_day"] = "within 1 day";
+_transify_t_["label_prep_within"] = "不超過";
+_transify_t_["alert_delete_pending_account"] = "因為有訂單/退款等待審核中，所以無法刪除這個帳戶";
+_transify_t_["label_store_number"] = "門市店號";
+_transify_t_["label_hours"] = "小時";
+_transify_t_["label_k_th"] = "พัน";
+_transify_t_["label_copied_successfully"] = "複製成功";
+_transify_t_["alert_bank_account_banned"] = "銀行帳戶已被禁用";
+_transify_t_["label_short_for_number_1000000"] = "M";
+_transify_t_["label_new_with_defects"] = "全新但有部分瑕疵";
+_transify_t_["label_get"] = "現在下載";
+_transify_t_["alert_bank_account_blacklisted"] = "此銀行帳號經系統偵測為高風險帳號，請重新設定其他銀行帳號";
+_transify_t_["label_k_vn"] = "k";
+_transify_t_["label_k_ph"] = "k";
+_transify_t_["alert_bank_account_reach_limit"] = "你的銀行帳號數量已是最大值。";
+_transify_t_["label_hour_abbr"] = "小時前";
+_transify_t_["label_new_others"] = "全新 (其他)";
+_transify_t_["label_days"] = "天";
+_transify_t_["label_shopee"] = "蝦皮購物";
+_transify_t_["label_year"] = "年";
+_transify_t_["label_k_id"] = "rb";
+_transify_t_["label_weeks"] = "週";
+_transify_t_["label_used_like_new"] = "二手";
+_transify_t_["label_new_with_tags"] = "全新";
+_transify_t_["msg_server_error"] = "伺服器錯誤";
+_transify_t_["label_mil_vn"] = "tr";
+_transify_t_["label_week_abbr"] = "週前";
+_transify_t_["alert_bank_account_phone_changed"] = "你的帳戶目前還在審核中。請稍後再試一次，或聯繫{{hotline}} 以獲得幫助";
+_transify_t_["label_used_with_defects"] = "二手 (部分瑕疵)";
+_transify_t_["label_short_for_number_1000"] = "K";
+_transify_t_["alert_edit_bank_account_error"] = "只能編輯被拒絕的銀行帳號資料";
+_transify_t_["label_minute_abbr"] = "分鐘前";
+_transify_t_["label_minute"] = "分鐘";
+_transify_t_["label_prep_morethan"] = "超過";
+_transify_t_["label_used_acceptable"] = "二手 (還行)";
+_transify_t_["label_distance"] = "附近";
+_transify_t_["label_within_days"] = "幾天內";
+_transify_t_["label_just_now"] = "剛剛";
+_transify_t_["label_within_minutes"] = "幾分鐘內";
+_transify_t_["label_minutes"] = "分鐘";
+</script>
+<script type="text/javascript" src="/static/jsutil_min/site.js?9ef0dec5214d"></script>
+<script>
+_transify_t_["label_help_center"] = "幫助中心";
+</script>
+<script type="text/javascript" src="/static/jsutil_min/help.js?e8e239888203"></script>
+
+
+
+
+
+<script>
+
+
+</script>
+
+<script type="text/template" id="shopee-action-sheet-item">
+
+<li class='action-sheet-item {% if data.disabled %}disabled{% endif %}' data-id={{data.id}}>
+	<div class='title'>
+		{{data.title}}
+	</div>
+	<div class='subtitle L12'>
+		{% if data.subtitle %}
+			{{data.subtitle}}
+		{% endif %}
+	</div>
+</li>
+
+</script>
+
+
+
+
+<script>
+
+
+</script>
+
+<script type="text/template" id="drop-down-menu-item">
+
+<li class='drop-down-menu-item {% if data.state %}drop-down-menu-item--disabled{% endif %}' data-id={{data.id}}>
+	<div class='drop-down-menu-item__content'>
+		<div class='drop-down-menu-item__content__title r14'>
+			{{data.title}}
+		</div>
+	</div>
+</li>
+
+</script>
+
+
+
+	<script>
+_transify_t_["msg_overseas_products_credit_card_only"] = "請使用信用卡／VISA金融卡結帳境外商品";
+_transify_t_["label_official_shops--TH"] = "Shopee Mall";
+_transify_t_["label_ok"] = "OK";
+_transify_t_["label_official_shops--ID"] = "Shopee Mall";
+_transify_t_["label_all_categories_s"] = "所有分類";
+_transify_t_["label_online"] = "在線上";
+_transify_t_["msg_cancel_order_upgrade"] = "很抱歉，買家已申請取消此筆訂單。請更新到最新版本以回應買家的申請";
+_transify_t_["label_official_shops--PH"] = "Shopee Mall";
+_transify_t_["label_your_activity_are_public"] = "你的粉絲可以看到你說讚的好物哦";
+_transify_t_["msg_offline_payment_disabled_singular"] = "__seller__ 沒有提供面交付款";
+_transify_t_["label_unexpected_error"] = "歹勢...系統目前不太穩定，請您稍後再次嘗試，謝謝!";
+_transify_t_["label_official_shops--VN"] = "Shopee Mall";
+_transify_t_["text_retrieve_location_failed"] = "找不到此位置";
+_transify_t_["msg_total_price_exceed_channel_max"] = "你已超過每筆交易的金額上限。若有任何問題，你可以直接聯絡蝦皮客服";
+_transify_t_["label_official_shops--TW"] = "蝦皮商城";
+_transify_t_["label_ago"] = "__date__ 前";
+_transify_t_["text_retrieve_location"] = "讀取中...";
+_transify_t_["msg_app_go_send"] = "請使用蝦皮購物APP新增 Go\u002DSend 地圖位置資訊";
+_transify_t_["label_learn_more"] = "瞭解更多";
+_transify_t_["label_official_shops--MY"] = "Shopee Mall";
+_transify_t_["text_waiting_for_location"] = "等待位置...";
+_transify_t_["msg_you_will_receive_a_phone_call"] = "你將會接到一通來自蝦皮的電話,電話中將會給予你一組驗證碼,請至下一頁輸入聽到的驗證碼";
+_transify_t_["msg_buyer_address_not_support_cod"] = "你的地址無法使用貨到付款功能";
+_transify_t_["msg_seller_has_blocked_you"] = "你已被此賣家加進封鎖名單，你可以查看其他商品。";
+_transify_t_["label_filter"] = "篩選";
+_transify_t_["label_see_other_products"] = "查看其他商品";
+_transify_t_["msg_promo_offline_no_multiple_checkouts"] = "折扣代碼只能適用於單一賣家。請重新編輯你的購物車";
+_transify_t_["label_change_setting"] = "更改設定";
+_transify_t_["msg_payment_channel_banned_category"] = "由於你的購物車中包含__category__商品，無法使用__payment_channel__付款。";
+_transify_t_["label_age_control_ok_customize"] = "我已滿__{age}__歲";
+_transify_t_["label_age_control_msgs_customize"] = "本分類商品為限制級商品，限__{age}__歲以上會員始可瀏覽及購買。";
+_transify_t_["label_search_in"] = "搜尋";
+_transify_t_["label_chat"] = "聊聊";
+_transify_t_["label_call_me"] = "打電話給我";
+_transify_t_["label_active_date_ago"] = "__date__前上線";
+_transify_t_["label_m"] = "公尺";
+_transify_t_["label_edit_product"] = "修改商品";
+_transify_t_["label_cart"] = "購物車";
+_transify_t_["msg_total_price_below_min_amount"] = "此付款方式最低金額為__min_amount__，請選擇別的付款方式。";
+_transify_t_["msg_cod_not_all_supported_logistic"] = "並不是所有寄送方式都適用取貨付款";
+_transify_t_["msg_cod_temporarily_suspended"] = "你的超商取貨付款權限已暫時取消，請選擇其他付款方式。";
+_transify_t_["msg_pls_update_apps"] = "請盡快更新你的app並立即體驗此項功能";
+_transify_t_["label_like"] = "讚";
+_transify_t_["label_cancel"] = "取消";
+_transify_t_["label_official_shops--SG"] = "Shopee Mall";
+_transify_t_["msg_download_shopee_google"] = "請從 Google Play 商店下載蝦皮購物以使用此功能";
+_transify_t_["label_follow"] = "關注";
+_transify_t_["msg_server_error"] = "伺服器錯誤";
+_transify_t_["label_search_within_category"] = "在 #{categoryName} 中搜尋 \u0022#{searchText}\u0022";
+_transify_t_["msg_payment_option_maintenance"] = "目前__channelname__系統停機維護中，請選擇其他付款方式，謝謝";
+_transify_t_["label_age_control_no_customize"] = "我還沒滿__{age}__歲";
+_transify_t_["msg_order_total_exceed_cod_maximum"] = "抱歉，此金額超過蝦皮支援的寄送最高價值金額。";
+_transify_t_["label_km"] = "公里";
+_transify_t_["alert_follow_limit"] = "你已達到關注的上限";
+_transify_t_["label_following"] = "關注中";
+_transify_t_["alert_follow_too_frequent"] = "你已達到關注的單日最高上限，請明天再試";
+_transify_t_["label_within"] = "距離我";
+_transify_t_["label_share"] = "分享";
+_transify_t_["msg_total_price_exceed_credit_card_max"] = "哎呀！您已達可使用信用卡交易金額上限， 請選擇其他付款方式結帳（錯誤代碼C07）";
+_transify_t_["label_more_than_200km_away"] = "超過兩百公里";
+_transify_t_["msg_promo_code_no_offline_payment"] = "此折扣代碼不適用面交付款";
+</script>
+<script type="text/javascript" src="/static/jsutil_min/jsutil_base.js?29d2a90465d5"></script>
+
+
+
+	<script type="text/javascript" src="/static/jslib/jquery.mobile.custom.min.js?ef4d69c9fa8a"></script>
+
+
+<script type="text/javascript" src="/static/pagejs_min/config.js?d5c0b1924e6e"></script>
+<script type="text/javascript" src="/static/pagejs_min/server_constant.js?f4a10fd22106"></script>
+
+
+	<script type="text/javascript" src="/static/jsutil_min/BJBridgeReceiver.js?d3341eb14e17"></script>
+	
+
+	<script>
+_transify_t_["msg_facebook_please_copy_link"] = "請複製以下網址，並在Safari中開啟，抱歉造成你的不便。";
+_transify_t_["label_search_within"] = "搜尋範圍";
+</script>
+<script type="text/javascript" src="/static/pagejs_min/common/deep_linking.js?b22f48077eff"></script>
+	<script type="text/javascript" src="/static/jslib/velocity.min.js?8fb122e8a4ed"></script>
+	<script type="text/javascript" src="/static/jsutil_min/multi_target_event_dispatcher.js?49f854421b97"></script>
+	<script type="text/javascript" src="/static/pagejs_min/common/app_header_controller.js?abc1676abeda"></script>
+	<script type="text/javascript">
+		$(function() {
+			AppHeaderController.init($('.header'));
+		});
+		
+		
+		
+		window.criteo_q.push({ event: "setSiteType", type: isPC() ? "d" : "m" });
+		
+	</script>
+
+	
+
+
+
+
+	
+	
+
+
+
+
+
+
+
+
+<script>
+
+_transify_t_['label_hide'] = "隱藏";
+_transify_t_['label_installment_tag'] = "分期付款";
+_transify_t_['label_unlike'] = "收回讚";
+_transify_t_['label_promote_in'] = "置頂在";
+_transify_t_['label_promote_now'] = "點我置頂推廣";
+_transify_t_['label_this_product_banned'] = "此商品已被禁賣下架";
+_transify_t_['label_this_product_delete'] = "此商品已被刪除";
+_transify_t_['msg_your_product_has_banned'] = "你的商品已被禁賣下架";
+_transify_t_['label_update'] = "更新";
+_transify_t_['msg_your_product_has_deleted'] = "你的商品已被刪除";
+_transify_t_['label_dismiss'] = "離開";
+_transify_t_['msg_your_product_under_review'] = "你的商品正在審查中";
+_transify_t_['msg_listed_successfully'] = "成功上架了！";
+_transify_t_['msg_uploaded_successfully'] = "成功上架了!";
+_transify_t_['msg_reach_out'] = "快去找更多買家";
+_transify_t_['label_share'] = "分享";
+_transify_t_['label_view_details'] = "查看詳情";
+_transify_t_['label_product_not_visible'] = "因為你的用戶資訊尚未驗證，商品將無法被其他用戶看到";
+_transify_t_['label_verify_user_info'] = "驗證用戶資訊";
+_transify_t_['label_promotion_sold'] = "售完";
+_transify_t_['label_sold'] = "已售出";
+_transify_t_['msg_item_invalid_attribute'] = "你的商品內容中有無效的資訊";
+_transify_t_['msg_item_invalid_category'] = "向你推薦合適的商品分類";
+_transify_t_['label_sold'] = "已售出";
+_transify_t_['label_no_resent_sale'] = "尚未售出";
+_transify_t_['label_product_coming_soon'] = "即將開放";
+var isShownToOwner = false;
+
+</script>
+
+<script type="text/template" id="item-card">
+
+<li class='item-card {{card_type}} {{item.item_status_for_owner}}' data-from="{{item.from}}" distance='{{item.distance}}' shopid='{{item.shopid}}' itemid='{{item.itemid}}'>
+	<div class='margin-holder' style="{{ r.item_after_dismiss_visibility }}">
+		<div class='margin-holder-inner'>
+
+
+
+			<a class='item-href {{r.item_status}}' href="{{ r.item_href }}" shopid='{{item.shopid}}' itemid='{{item.itemid}}' target='_blank' id="item-href-{{ item.itemid }}">
+				<div class='holder {{r.item_status}}'>
+					<div class="image-wrapper">
+
+						
+
+						<div class="item-image-container">
+							<div class="item-image-container-inner">
+								<div class="item-image-loading"> </div>
+								<div class="item-image domify-bg-img" style='{{ r.bg_img_style }}' title='{{item.name}}' id="item-image-{{ item.itemid }}">
+									<div class="adult-mask {{ r.class_adult }}"></div>
+									<div class="preview-mask {{ r.class_preview_mask }} m14" id="preview-mask-{{ item.itemid }}">即將開放</div>
+								</div>
+								<div class="item-labels">
+									<div class='shopee-verified ic_productlist_verified ic_productlist_verified--{{ LOCALE }}' style="{{ r.shopee_verified_display }}"></div>
+									<div class='official-shop ic_productlist_officialshop ic_productlist_officialshop--{{ LOCALE }}' style="{{ r.official_shop_display }}"></div>
+									<div class='wholesale-product ic_productlist_wholesale ic_productlist_wholesale--{{ LOCALE }}' style="{{ r.wholesale_display }}"></div>
+									<div class='shopee-horizontal-badge shopee-badge-coins-back' style="{{ r.coin_earn_label_display }}">{{ item.coin_earn_label }}</div>
+								</div>
+								<div class='shopee-ads r10' style="{{ r.shopee_ads_style }}">
+									
+									廣告
+									
+								</div>
+							</div>
+							<div class='shopee-ads r10' style="{{ r.shopee_ads_style }}">
+								
+								廣告
+								
+							</div>
+							<div class='product-video ic_productlist_video' style="{{ r.product_video_style }}" id="product-video-{{ item.itemid }}"></div>
+							<div class='lowest-price ic_lowest_price_small {{LOCALE}}' style="{{ r.lowest_price_style }}"></div>
+							<div class='unlisted-tag' style="{{ r.unlisted_style }}">
+								<div class='unlisted-tag__text l12'>
+									
+									未上架
+									
+								</div>
+							</div>
+						</div>
+						<div class='mask'></div>
+
+						<div class='status_band'>
+
+							
+
+<div class="badge-fixed-width badge-soldout" style="{{ r.badge_soldout_display }}">
+
+    
+        
+			
+				<div class="badge-sold-label m10">售完</div>
+			
+        
+        
+			
+        
+    
+</div>
+
+							
+
+<div class="badge-fixed-width badge-promotion" style="{{ r.badge_promotion_display }}">
+
+	
+	<div class="badge-promotion-percent L12 promotion-tw">
+
+		<span class="percent">{{item.discount}}</span>
+
+		<span class="badge-promotion-off-label L12 promotion-tw">折</span>
+	</div>
+	
+</div>
+
+
+						</div>
+					</div>
+				</div>
+				<div class='bottom {{r.item_status}} {{r.class_liked}} '>
+					
+					
+					<div class="item-name">
+						<div class="name L14 itemName {{ r.item_name_class }}">
+							<div class="official_productcard_label official_productcard_label--{{ LOCALE }}" style="{{ r.official_shop_label_in_title_display }}"></div>
+							<span class='name__label' id="item-name-{{ item.itemid }}">{{item.name}}</span>
+						</div>
+						<div class="item-tags">
+							<div class="item-tag item-installment-tag" style="{{ r.installment_tag_style }}">
+								
+
+<div  class="badge-label" >
+	<div class="badge-label--regular truncate">
+		分期付款
+	</div>
+	<!-- We need this because the small size font have some issue being
+		 vertically centered on some Android devices -->
+	<div class="badge-label--resize truncate">
+		分期付款
+	</div>
+</div>
+
+							</div>
+							<div class="item-tag item-bundle-deal-tag" style="{{ r.bundle_deal_tag_style }}">
+								
+
+<div  class="badge-label" >
+	<div class="badge-label--regular truncate">
+		{{r.bundle_deal_label}}
+	</div>
+	<!-- We need this because the small size font have some issue being
+		 vertically centered on some Android devices -->
+	<div class="badge-label--resize truncate">
+		{{r.bundle_deal_label}}
+	</div>
+</div>
+
+							</div>
+						</div>
+					</div>
+					<div class="item-detail">
+						<div class="price m12 truncate" style='{{ r.price_style }}'>
+							<div class="price-before-discount m12" style="{{ r.price_before_discount_display }}">
+								<span class="todel-dollarfy_sign" dir="ltr"  val="{{item.currency}}" id="item-currency-{{ item.itemid }}">{{ r.text_currency }}</span><span class="todel-dollarfy_ext_int"  currency="{{item.currency}}" id="price-before-discount-{{ item.itemid }}">{{r.text_price_before_discount}}</span>
+							</div>
+							<div class="real-price m12">
+								<span class="todel-dollarfy_sign fix-size" dir="ltr"  val="{{item.currency}}">{{ r.text_currency }}</span><span class="todel-dollarfy_ext_int fix-size"  currency="{{item.currency}}" id="real-price-{{ item.itemid }}">{{r.text_price}}</span>
+								<span style='{{r.price_max_display}}'>
+									<span>-</span>
+									<span class="todel-dollarfy_sign fix-size" dir="ltr"  val="{{item.currency}}" >{{ r.text_currency }}</span><span class="todel-dollarfy_ext_int fix-size" currency="{{item.currency}}" id="max-price-{{ item.itemid }}">{{r.text_price_max}}</span>
+								</span>
+							</div>
+						</div>
+						<div class="price--masked m12 truncate" style='{{ r.price_masked_style }}'>
+							<span class="todel-dollarfy_sign" dir="ltr"  val="{{item.currency}}">{{ r.text_currency }}</span><span class="todel-dollarfy_ext_int fix-size"  currency="{{item.currency}}" id="price-{{ item.itemid }}">{{item.hidden_price_display}}</span>
+						</div>
+						<div class="item-detail__icons">
+							<div class="ic_service_by_shopee {{ r.service_by_shopee_icon_cls }} service_by_shopee-icon" style="{{ r.service_by_shopee_icon_visibility }}"></div>
+							<div class="ic_free_shipping_green_small free-shipping-icon" style="{{ r.free_shipping_visibility }}"></div>
+						</div>
+					</div>
+					<span class="from" style="{{ r.white_list_visibility }}" id="item-from-{{ item.itemid }}">{{item.from}}</span>
+
+					<div class="item-status">
+						<div class="likes half" style="{{ r.like_visibility }}">
+							<div class="icon_like {{item.icon_like}}"></div>
+							<span class="number r12" id="item-like-count-{{ item.itemid }}">{{item.liked_count}}</span>
+							<div class='clickable' id="like-btn-{{ item.itemid }}">
+							</div>
+						</div>
+
+
+	<div class="sold-info" style="{{ r.sold_visibility }}"><span class="sold-info__label r10" style="{{ r.sold_number_visibility }}">已售出</span><span class="sold-info__number r10" style="{{ r.sold_number_visibility }}" id="item-sold-{{ item.itemid }}">{{ item.sold }}</span><span class="sold-info__label r10" style="{{ r.sold_empty_visibility }}">尚未售出</span></div>
+
+						
+							
+							
+							
+							
+						
+
+
+					</div>
+
+
+<div class="item_rating"><div class="item_rating__rating-info" style="{{ r.rating_inline_style }}"><div class="item_rating__rating-info__stars"><div class="item_rating__rating-info__stars__star {{ r.star_cls_0 }}"></div><div class="item_rating__rating-info__stars__star {{ r.star_cls_1 }}"></div><div class="item_rating__rating-info__stars__star {{ r.star_cls_2 }}"></div><div class="item_rating__rating-info__stars__star {{ r.star_cls_3 }}"></div><div class="item_rating__rating-info__stars__star {{ r.star_cls_4 }}"></div></div><div class="item_rating__rating-info__count r10" id="item-rating-count-{{ item.itemid }}">{{ r.rating_count_display }}</div></div><div class="no-rating r10" style="{{ r.rating_empty_inline_style }}">
+						
+						尚無評價
+						
+						</div></div>
+
+
+					<div class='action-text L12'>{{ i18n.t('label_this_product_' + r.item_status) }}</div>
+					<div class='action-btn unlike'>
+						<span class='ic_unlike_icon'></span><span class='text L12'>{{ i18n.t('label_unlike') }}</span>
+					</div>
+				</div>
+			</a>
+		</div>
+
+
+
+
+	</div>
+</li>
+
+</script>
+
+
+
+
+
+
+<script type="text/javascript" src="/static/jslib/swiper.jquery.min.js?f63325953f1b"></script>
+<script type="text/javascript" src="/static/jsutil_min/gswiper.js?0e8e4fd76910"></script>
+<script type="text/javascript" src="/static/pagejs_min/home/banners_manager.js?16eba0dad7bd"></script>
+<script type="text/javascript" src="/static/pagejs_min/home/banners.js?32539aa3c0c9"></script>
+<script type="text/javascript" src="/static/pagejs_min/home/simple_banners.js?11356e598cdf"></script>
+<script type="text/javascript" src="/static/pagejs_min/home/activity_banners.js?d379cad76fbc"></script>
+
+	<script type="text/javascript" src="/static/pagejs_min/home/popup_banners.js?01dcb040ec5d"></script>
+
+
+	<script>
+_transify_t_["label_official_shops--TH"] = "Shopee Mall";
+_transify_t_["label_official_shops--SG"] = "Shopee Mall";
+_transify_t_["label_official_shops--ID"] = "Shopee Mall";
+_transify_t_["label_see_all"] = "查看全部";
+_transify_t_["label_official_shops--PH"] = "Shopee Mall";
+_transify_t_["label_official_shops--VN"] = "Shopee Mall";
+_transify_t_["label_official_shops--MY"] = "Shopee Mall";
+_transify_t_["label_official_shops--TW"] = "蝦皮商城";
+</script>
+<script type="text/javascript" src="/static/pagejs_min/home/category/official_shop_controller.js?c3006637b51e"></script>
+	
+
+
+<script type="text/template" id="official-shop-item">
+
+<div class="official-shop-item clickable_area {% if hidden %}hidden{% endif %} {% if item.is_see_all %}official-shop-item--see-all{% endif %} {% if item.is_empty_item %}official-shop-item--empty-item{% endif %}" data-shopposition="{{item.position}}" data-shopid="{{item.shopid}}" data-shopcat_id="{{item.shop_collection_id}}" data-username="{{item.username}}">
+	{% if item.is_see_all %}
+		<div class="mask middle-centered-div">
+			<div class="see-all-text-wrapper">
+				<span class="r14 capitalize">{{seeAllText}}</span>
+				<span class="ic_arrow_right_white"></span>
+			</div>
+		</div>
+	{% endif %}
+	<div class="{{ratio_class}} official-shop-wrapper" style="{% if item.logo_url %}background-image : url({{item.logo_url}}){% endif %}">
+		<div class="brand-label brand-label--{% if item.brand_label == BrandLabel.NONE %}none{% else %}{% if item.brand_label == BrandLabel.NEW %}new-{{LOCALE}}{% endif %}{% endif %}"></div>
+	</div>
+</div>
+
+</script>
+
+	
+
+
+<script type="text/template" id="official-shop-items">
+
+<div class="official-shop-items {% if modifier_cls %}official-shop-items--{{modifier_cls}}{% endif %} center-container {% if isPC %}{% else %}hide-scrollbar{% endif %}">
+	{% if item_rows.0 %}
+		<div class="official-shop-items-wrapper">
+			{% for item in item_rows.0 %}
+				{% include "home/category/official_shop_item_djangofy.html" with item=item, ratio_class=ratio_class%}
+			{% endfor %}
+		</div>
+	{% endif %}
+	{% if item_rows.1 %}
+		<div class="official-shop-items-wrapper">
+			{% for item in item_rows.1 %}
+				{% include "home/category/official_shop_item_djangofy.html" with item=item, ratio_class=ratio_class%}
+			{% endfor %}
+		</div>
+	{% endif %}
+	{% if item_rows.2 %}
+		<div class="official-shop-items-wrapper">
+			{% for item in item_rows.2 %}
+				{% include "home/category/official_shop_item_djangofy.html" with item=item, ratio_class=ratio_class%}
+			{% endfor %}
+		</div>
+	{% endif %}
+</div>
+{% if modifier_cls=='compact' %}
+	{% if item_rows.1 %}<div class="horizontal-line horizontal-line--1"></div> {% endif %}
+	{% if item_rows.2 %}<div class="horizontal-line horizontal-line--2"></div> {% endif %}
+{% endif %}
+
+</script>
+
+
+<script>
+_transify_t_["label_trending_hashtags"] = "熱門標籤";
+</script>
+<script type="text/javascript" src="/static/pagejs_min/home/hashtag_hot.js?5598d8147dea"></script>
+<script>
+_transify_t_["label_flashsale_n_sold"] = "已售出 __n__";
+_transify_t_["label_flashsale_selling_out"] = "即將售完";
+_transify_t_["label_flash_sale_amount_sold_out_in_1_hour"] = "__amount__ 件 __n__ 小時內售完";
+_transify_t_["label_flash_sale_amount_sold_out_in_n_hours"] = "__amount__ 件 __n__ 小時內售完";
+</script>
+<script type="text/javascript" src="/static/pagejs_min/home/flash_sale_utils.js?6385ef039edd"></script>
+
+
+
+<script>
+
+_djangofy_t_['label_promotion_off'] = "折";
+
+</script>
+
+<script type="text/template" id="badge-promotion">
+
+{% if item.discount %}
+<div class="badge-fixed-width badge-promotion">
+	{% if LOCALE == "TW" %}
+	<div class="badge-promotion-percent L12 promotion-tw">
+		<span class="percent">{{item.discount}}</span><span class="badge-promotion-off-label L12 promotion-tw">{% transify 'label_promotion_off' %}</span>
+	</div>
+	{% else %}
+	<div class="badge-promotion-percent L12">
+		{% if LOCALE == "TH" %}
+		<span class="badge-promotion-off-label L12">{% transify 'label_promotion_off' %}</span><span class="percent">{{item.discount}}</span>
+		{% else %}
+		<span class="percent">{{item.discount}}</span><span class="badge-promotion-off-label {% if LOCALE == 'IR' %}L10{% else %}L12{% endif %}">{% transify 'label_promotion_off' %}</span>
+		{% endif %}
+	</div>
+	{% endif %}
+</div>
+{% endif %}
+
+</script>
+
+
+
+<script>
+
+_djangofy_t_['label_promotion_sold'] = "售完";
+_djangofy_t_['label_promotion_out'] = "Out";
+_djangofy_t_['label_grey_badge_sold'] = "Sold";
+_djangofy_t_['label_grey_badge_out'] = "Out";
+
+</script>
+
+<script type="text/template" id="badge-soldout">
+
+<div class="badge-fixed-width badge-soldout">
+	{% if LANGUAGE == "vi" %}
+		<div class="badge-sold-label m10">{% transify 'label_promotion_sold' %}</div>
+		<div class="badge-out-label m10">{% transify 'label_promotion_out' %}</div>
+	{% else %}
+		{% if LANGUAGE == "th" %}
+			<div class="badge-sold-label m10">{% transify 'label_grey_badge_sold' %}</div>
+			<div class="badge-out-label m10">{% transify 'label_grey_badge_out' %}</div>
+		{% else %}
+			{% if LANGUAGE == "id" %}
+				<div class="badge-sold-label m10">{% transify 'label_promotion_sold' %}</div>
+			{% else %}
+				{% if LANGUAGE == "zhHant" %}
+					<div class="badge-sold-label m10">{% transify 'label_promotion_sold' %}</div>
+				{% else %}
+					<div class="badge-sold-label m12">{% transify 'label_promotion_sold' %}</div>
+				{% endif %}
+			{% endif %}
+			{% if LANGUAGE != "id" %}
+				{% if LANGUAGE != "zhHant" %}
+					<div class="badge-out-label m12">{% transify 'label_promotion_out' %}</div>
+				{% endif %}
+			{% endif %}
+		{% endif %}
+	{% endif %}
+</div>
+
+</script>
+
+
+
+<script type="text/template" id="banners_djangofy">
+
+<div class="swiper-container clickable_area">
+	<div class="swiper-wrapper">
+		{% for banner in banners %}
+		{% if banner.type != 2 %}
+			<div class="swiper-slide" data-params="{{banner.params}}">
+				{% if banner.video_id %}
+					<div class="video-banner" id="video-{{banner.video_id}}">
+						<div class="ic_play" data-video-id="{{banner.video_id}}"></div>
+						<img _src="{{banner.banner_image}}" alt="" title="{{banner.navigate_params.navbar.title}}">
+					</div>
+				{% else %}
+					<img _src="{{banner.banner_image}}" alt="" title="{{banner.navigate_params.navbar.title}}" data-idx={{banner.idx}}>
+				{% endif %}
+			</div>
+		{% endif %}
+		{% endfor %}
+	</div>
+	<div class="swiper-pagination"></div>
+
+	<!-- Will be dynamically removed for mobile devices. Refer to banners.js. -->
+	<div class="swiper-button-prev" style="display:none;"></div>
+	<div class="swiper-button-next" style="display:none;"></div>
+</div>
+
+</script>
+
+
+
+
+<script>
+
+_djangofy_t_['label_see_all'] = "查看全部";
+
+</script>
+
+<script type="text/template" id="hashtags_djangofy">
+
+<div class='outer-wrapper'>
+	<div class='hashtag-list'>
+		{% for hash in hashtags %}
+			<div class='hashtag-item with-border' data-hash='{{hash.hashtag}}' _style='background-image:url("{{ITEM_IMAGE_BASE_URL}}{{hash.cover_image}}_tn");' title="{{hash.hashtag}}">
+				<div class='hashtag-title r14'>#{{hash.hashtag}}</div>
+			</div>
+		{% endfor %}
+		{% if dummy_hashtag %}
+			<div class='hashtag-item trending_link with-border' _style='background-image:url("{{ITEM_IMAGE_BASE_URL}}{{dummy_hashtag.cover_image}}_tn");' _href="/trending_hashtags/">
+				<div class='hashtag-title r14'>{% transify "label_see_all" %}</div>
+			</div>
+		{% endif %}
+	</div>
+	<div class="hashtag-swiper-button-prev"></div>
+	<div class="hashtag-swiper-button-next"></div>
+</div>
+
+</script>
+
+
+<script>
+
+_djangofy_t_['label_see_more'] = "查看更多";
+_djangofy_t_['label_see_all'] = "查看全部";
+
+</script>
+<script type="text/template" id="simple-item-card">
+<div class='simple-item-card {% if item.is_see_all %} see-all simple-item-card--see-more{% endif %} clickable_area' data-shopid={{item.shopid}} data-itemid={{item.itemid}} data-is_adult={% if item.is_adult %}1{% else %}0{% endif %} data-index={{item.itemIndex}} {% if item.from %}data-from="{{item.from}}"{% endif %} >
+	{% if item.covered_see_all %}
+		<div class="covered_see-all"><div class="see-all-wrapper"><div class="see-all-icon ic_shopee_seeall"></div><div class="see-all-label capitalize r12">{% if item.show_see_all_text_as_see_more %}{% transify "label_see_more" %}{% else %}{% transify "label_see_all" %}{% endif %}</div></div></div>
+	{% endif %}
+	{% if item.is_see_all %}
+		<div class="mask middle-centered-div"><div class="see-all-text-wrapper"><span class="r14 capitalize">{% if item.show_see_all_text_as_see_more %}{% transify 'label_see_more' %}{% else %}{% transify 'label_see_all' %}{% endif %}</span><span class="ic_arrow_right_white"></span></div></div>
+	{% endif %}
+	<div class='status_band'>
+		{% if item.discount %}
+			{% include "shop/badges/badge_promotion.html" %}
+		{% endif %}
+	</div><div class='image-wrapper ratio_1_1_box' style="background-image : url({{ITEM_IMAGE_BASE_URL}}{{item.image}}_tn)"> {% if item.has_lowest_price_guarantee %}
+			<div class='lowest-price ic_lowest_price_small {{LOCALE}}'></div>
+		{% endif %}</div><div class='text item-info-wrapper'><div class='top-line'><div class='title r12 truncate-line2 itemName'>{% if item.name %}{{item.name}}{% endif %}</div></div><div class='price'>
+			{% if item.price_min != item.price_max %}
+				{% if item.price_before_discount %}
+					{% if item.price_before_discount != item.price %}
+						<span class="price-before-discount"><div class="table-truncate-container"><div class="table-truncate-content truncate l12"><span dir="ltr" class="dollarfy_sign" val="{{item.currency}}" style="visibility: hidden; display: initial;"></span><span class="dollarfy_ext_int"  currency="{{item.currency}}" style="visibility: hidden; display: initial;">{{item.price_before_discount}}</span></div><div class="table-truncate-spacer l12"><span dir="ltr" class="dollarfy_sign" val="{{item.currency}}" style="visibility: hidden; display: initial;"></span><span class="dollarfy_ext_int"  currency="{{item.currency}}" style="visibility: hidden; display: initial;">{{item.price_before_discount}}</span></div></div></span>
+					{% endif %}
+				{% endif %}
+			{% endif %}
+			<span class='price-final m12'><span class="dollarfy_sign" dir="ltr" val="{{item.currency}}" style="visibility: hidden; display: initial;"></span><span class="dollarfy_ext_int"  currency="{{item.currency}}" style="visibility: hidden; display: initial;">{{item.price}}</span>
+				{% if item.price_min != item.price_max %}
+					<span>- </span><span class="dollarfy_sign" dir="ltr" val="{{item.currency}}" style="visibility: hidden; display: initial;"></span><span class="dollarfy_ext_int"  currency="{{item.currency}}" style="visibility: hidden; display: initial;">{{item.price_max}}</span>
+				{% endif %}
+			</span></div></div></div>
+
+</script>
+
+
+
+
+<script>
+
+_djangofy_t_['label_searches'] = "搜尋";
+_djangofy_t_['label_see_all'] = "查看全部";
+
+</script>
+
+<script type="text/template" id="trending-search-item">
+
+<div class="trending-search-item clickable_area {% if item.is_see_all %}trending-search-item--see-all{% endif %}" data-keyword='{{item.keyword}}' data-catid='{{item.catid}}' data-from='{{item.from}}' data-info='{{item.info}}' data-index='{{itemIndex}}'>
+	{% if item.is_see_all %}
+		<div class="mask middle-centered-div">
+			<div class="see-all-text-wrapper">
+				<span class="r14 capitalize">{% transify "label_see_all" %}</span>
+				<span class="ic_arrow_right_white"></span>
+			</div>
+		</div>
+	{% endif %}
+	<div class="trending-search-item__info">
+		<div class="title trending-search-item__info__title truncate r14">{{item.keyword}}</div>
+	</div>
+	<div class="ratio_4_3_box trending-search-item__image" style="background-image : url({{ITEM_IMAGE_BASE_URL}}{{item.images.0}}_tn)""></div>
+</div>
+
+</script>
+
+
+	
+
+
+<script>
+
+_djangofy_t_['label_sold_out'] = "售完";
+_djangofy_t_['label_see_all'] = "查看全部";
+
+</script>
+
+<script type="text/template" id="flash-sale-item-card">
+
+
+	<div class="flash-sale-item {% if item.is_see_all %}flash-sale-item--see-all{% endif %} clickable_area" data-shopid={{item.shopid}} data-itemid={{item.itemid}} data-index={{item.itemIndex}}>
+		<div class='status_band'>
+			{% if item.flash_sale.stock %}
+				{% if item.flash_sale.price_before_discount %}
+					{% include "shop/badges/badge_promotion.html" with item=flash_sale%}
+				{% endif %}
+			{% else %}
+				{% include "shop/badges/badge_soldout.html" with item=flash_sale%}
+			{% endif %}
+		</div>
+		<div class="flash-sale-item__image ratio_1_1_box" style="background-image : url({{ITEM_IMAGE_BASE_URL}}{{displayImage}}_tn)"></div>
+		<div class="flash-sale-item__name itemName r14 hidden">{{displayName}}</div>
+		<div class="flash-sale-item__price truncate"><span class="dollarfy_sign m12" val="{{item.currency}}"></span><span class="dollarfy_ext_int r16"  currency="{{item.currency}}">{{item.flash_sale.price}}</span></div>
+		{% if item.flash_sale.stock %}
+			<div class="flash-sale-item__progress">
+				<div class="flame ic_flashsale_fire_app {% if item.flash_sale.hide_flame %}hidden{% endif %}"></div>
+				<div class="progress-bar">
+					<div class="progress-fg">
+						<div class="progress-bg" style="background-size:{{item.flash_sale.left_progress_percent}}%"></div>
+					</div>
+					<div class="r10 progress-label uppercase"><span>{{item.flash_sale.progress_label}}</span></div>
+				</div>
+			</div>
+		{% else %}
+			<div class="flash-sale-item__sold-out-label-wrapper">
+				<div class="sold-out-label uppercase m11">{{item.flash_sale.progress_label}}</div>
+			</div>
+		{% endif %}
+
+		{% if item.is_see_all %}
+			<div class="flash-sale-item__see-all">
+				<div class="see-all-wrapper">
+					<div class="see-all-icon ic_shopee_seeall"></div>
+					<div class="see-all-label capitalize r12">{% transify "label_see_all" %}</div>
+				</div>
+			</div>
+		{% endif %}
+	</div>
+
+</script>
+
+
+<script>
+	var PAGE_TYPE = 111;
+	var TARGETED_BANNER = true;
+	var CONFIG_CNY_SKIN = 'NORMAL' === 'CNY_SKIN';
+	var CONFIG_VALENTINES_SKIN = 'NORMAL' === 'VALENTINES_SKIN';
+	var CONFIG_HARI_RAYA_SKIN = 'NORMAL' === 'HARI_RAYA_SKIN';
+	var CONFIG_XMAS_SKIN = 'NORMAL' === 'XMAS_SKIN';
+	var CONFIG_SHOPEE_DAY_SKIN = 'NORMAL' === 'SHOPEE_DAY_SKIN';
+	var CONFIG_SHOPEE_DAY_SKIN_TEN_TEN = 'NORMAL' === 'SHOPEE_DAY_SKIN_TEN_TEN';
+	var CONFIG_SHOPEE_DAY_SKIN_ELEVEN_ELEVEN = 'NORMAL' === 'SHOPEE_DAY_SKIN_ELEVEN_ELEVEN';
+	var CONFIG_BIRTHDAY_SKIN = 'NORMAL' === 'BIRTHDAY_SKIN';
+	var CONFIG_INDEPENDENT_DAY_SKIN = 'NORMAL' === 'INDEPENDENT_DAY_SKIN';
+	var show_terms_update_popup = false;
+	var show_skinny_banner = true;
+	var CONFIG_OFFICIAL_SHOP_LANDING_PAGE = true;
+	var CONFIG_FLASH_SALE = true;
+</script>
+
+<script type="text/javascript" src="/static/pagejs_min/home/search_bar.js?1f448a0185b2"></script>
+
+
+<script type="text/javascript" src="/static/pagejs_min/common/track_item_card_scroll-domify.js?9379fa8a6f12"></script>
+<script>
+_transify_t_["msg_server_error"] = "伺服器錯誤";
+_transify_t_["msg_seller_on_vacation"] = "無法在休假模式下增加/編輯商品";
+_transify_t_["msg_free_shipping_th"] = "Free shipping via Kerry";
+_transify_t_["msg_hide_item_success"] = "乾蝦！我們會努力改善你的每日新發現～";
+_transify_t_["label_ok"] = "OK";
+_transify_t_["msg_edit_btn_pop"] = "想要得到商品的第一手情報嗎？下載蝦皮購物APP，超多有趣商品等著你";
+_transify_t_["msg_added_to_your_favorite"] = "已說讚";
+_transify_t_["msg_product_offensive_hide_my"] = "Your product is currently not visible to buyers. It will be visible once it passes Shopee\u0027s manual review within 1 working days.";
+_transify_t_["msg_product_offensive_hide"] = "商品審核中，預計將於48小時內完成審核並重新刊登。";
+_transify_t_["msg_id_free_shipping"] = "Free shipping nationwide via JNE";
+_transify_t_["label_promote_now"] = "點我置頂推廣";
+_transify_t_["label_promoting"] = "置頂推廣中...";
+_transify_t_["msg_deleted_from_your_favorite"] = "已收回讚";
+_transify_t_["msg_free_shipping_ph"] = "Free shipping and COD are supported";
+_transify_t_["msg_free_shipping_vn"] = "支援免運費！";
+_transify_t_["label_promote_in"] = "置頂在";
+_transify_t_["msg_free_shipping_tw"] = "此商品現在滿額享運費補助唷！";
+_transify_t_["msg_free_shipping_sg"] = "現正免運費";
+_transify_t_["label_shipping_promotion_van_my"] = "免運中";
+</script>
+<script type="text/javascript" src="/static/jsutil_min/batch-item-domify.js?3b7597c75514"></script>
+<script>
+_transify_t_["label_show_more"] = "顯示更多";
+_transify_t_["msg_shopee_has_updated_terms_of_service"] = "蝦皮購物已更新此項目相關服務與隱私政策";
+_transify_t_["label_search_shopee"] = "搜尋蝦皮";
+_transify_t_["label_search_c_prod"] = "搜尋 \u0022_{keyword}_\u0022 商品";
+_transify_t_["label_see_more"] = "查看更多";
+_transify_t_["label_show_less"] = "顯示較少";
+_transify_t_["label_update_at"] = "#{time}已更新";
+_transify_t_["label_search_c_shop"] = "搜尋 \u0022_{keyword}_\u0022 賣場";
+</script>
+<script type="text/javascript" src="/static/pagejs_min/home/home_new.js?96e5c481ca5e"></script>
+
+
+
+
+
+
+	<script>
+{
+	var dur = (Date.now ? Date.now() : +new Date()) - QOS_PAGE_START_MS;
+	if(window._track_qos_pageload)
+		_track_qos_pageload(dur);
+	if(window.BI_ANALYTICS)
+		BI_ANALYTICS.qos(QOS_TYPE.HTML, dur);
+}
+
+if(window.__plvNeedSaveAllNodesState__)
+{
+	// __plv_saved_body__ = document.children[0].innerHTML;
+	window.__plv_saved_body__ = document.body.innerHTML;
+}
+</script>
+
+
+
+
+
+</body>
+</html>

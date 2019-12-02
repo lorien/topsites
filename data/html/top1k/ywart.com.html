@@ -1,0 +1,2010 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>艺网_艺术品电商_原创艺术品电商购物平台</title>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="艺网,艺术品电商,原创艺术品" />
+    <meta name="description" content="艺网(ywart.com)-专业的原创艺术品电商购物网站,销售油画、版画、雕塑、摄影等数万件精选原创艺术品;合作代理,专业定价,保真销售,艺网让您体验最满意的艺术品购物服务。" />
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <link href="https://cdn.ywart.com/content/package/fontawesome4.4/font-awesome.min.css" rel="stylesheet" />
+    <link href="/dist/style/Common.min.css" rel="stylesheet" />
+    <link href="/dist/style/page/Auth.Login.min.css?v=20191028" rel="stylesheet" />
+
+    <script>
+        /*@cc_on
+        var b = document.createElement('b');
+        b.innerHTML = '<!--[if lt IE 9.9]><i></i><![endif]-->';
+        if (b.getElementsByTagName('i').length > 0) alert('您的IE浏览器版本太低了，请更换新版浏览器，获得更好的浏览体验！\n推荐chrome浏览器！');
+        @*/
+    </script>
+    
+
+    <link href="/dist/style/page/Home.Index.min.css?v=20191028" rel="stylesheet" />
+
+    <link href="https://cdn.ywart.com/content/package/owl.carousel/assets/owl.carousel.css" rel="stylesheet" />
+
+    <script src="https://cdn.ywart.com/content/package/require/require.js"></script>
+
+<script>
+    var AppPath = '';
+
+    require.config({
+        waitSeconds: 0,
+        paths: {
+            jquery: 'https://cdn.ywart.com/content/package/jquery/jquery-2.2.3.min',
+            knockout: 'https://cdn.ywart.com/content/package/knockout/knockout',
+            komapping: 'https://cdn.ywart.com/content/package/knockout/knockout.mapping',
+            
+            bus: '/dist/script/bus.min.js?v=20191028',
+            common: '/dist/script/common.min.js?v=20191028',
+
+            artdialog: 'https://cdn.ywart.com/content/package/artDialog/6.0.4/dialog-min',
+
+            artdialogplus: 'https://cdn.ywart.com/content/package/artDialog/6.0.4/dialog-plus-min',
+
+            carousel: 'https://cdn.ywart.com/content/package/owl.carousel/owl.carousel.min',
+            arttemplate: 'https://cdn.ywart.com/content/package/template-native/template-native',
+            masonry: 'https://cdn.ywart.com/content/package/masonry/masonry.min',
+            jquery_ui: 'https://cdn.ywart.com/content/package/jquery-ui/jquery-ui.min',
+            asPieProgress: 'https://cdn.ywart.com/content/package/asPieProgress/jquery-asPieProgress.min',
+            blocksit: 'https://cdn.ywart.com/content/package/blocksit/blocksit.min',
+
+            location: 'https://cdn.ywart.com/content/package/Location/Location',
+            areasdata: 'https://cdn.ywart.com/content/package/AreasData/AreasData',
+            areascontrol: 'https://cdn.ywart.com/content/package/AreasData/AreasControl',
+            layer: 'https://cdn.ywart.com/content/package/layer/layer',
+            formatCurrency: 'https://cdn.ywart.com/content/package/formatCurrency/jquery.formatCurrency-1.4.0',
+            jquery_history: 'https://cdn.ywart.com/content/package/jquery-history/jquery.history',
+            jquery_query: 'https://cdn.ywart.com/content/package/jquery-query/jquery.query.min',
+            dotdotdot: 'https://cdn.ywart.com/content/package/jquery.dotdotdot.min.umd',
+            moment: 'https://cdn.ywart.com/content/package/moment/moment.min',
+            imagesloaded: 'https://cdn.ywart.com/content/package/imagesloaded.pkgd.min',
+            lazyload: 'https://cdn.ywart.com/content/package/jquery.lazyload.min',
+            enums: '/dist/script/enums.min.js?v=20191028',
+            semantic: 'https://cdn.ywart.com/content/package/semantic/semantic.min',
+            my97: 'https://cdn.ywart.com/content/package/My97DatePicker/WdatePicker',
+            echarts: 'https://cdn.ywart.com/content/package/echarts.zxt.min',
+            knockout_val: 'https://cdn.ywart.com/content/package/knockout.validation/knockout.validation.min',
+
+            ajaxpager: '/dist/script/jquery.ajaxpager.min.js?v=20191028',
+            ajaxpager_mobile: '/dist/script/jquery.ajaxpager.mobile.min.js?v=20191028',
+            ajaxpager_frontend:'/dist/script/jquery.ajaxpager.frontend.min.js?v=20191028',
+            plupload: '/Content/package/plupload/plupload.full.min.js?v=20191028',
+            cvszoom: 'https://cdn.ywart.com/content/package/cvszoom/cvszoom.min.js?v=1.03)',
+            jweixin: 'https://res.wx.qq.com/open/js/jweixin-1.4.0',
+            wxshare: '/dist/script/weixinshare.min.js?v=20191028',
+
+            swiper: 'https://cdn.ywart.com/content/package/swiper3.4.0/js/swiper.jquery.min',
+            vue: 'https://cdn.ywart.com/content/package/vue/vue2.3.4.min',
+            //vue: 'https://cdn.bootcss.com/vue/2.3.4/vue',
+
+            vuerouter : 'https://unpkg.com/vue-router@2.6.0/dist/vue-router.min',
+
+            Bscroll : 'https://cdn.ywart.com/content/package/bscroll',
+            colpick: 'https://cdn.ywart.com/content/package/colpick/colpick.min',
+
+            prism : 'https://cdn.ywart.com/content/package/prism.min',
+
+            share : 'https://cdn.ywart.com/content/package/share/js/social-share.min',
+            sharemax : 'https://cdn.ywart.com/content/package/share/js/social-share',
+
+            load : 'https://cdn.ywart.com/content/package/load/load',
+			slidernav : 'https://cdn.ywart.com/content/package/slidernav/slidernav',
+            jRange: "https://cdn.ywart.com/content/package/jRange/js/jRange",
+
+
+            lufy: "https://cdn.ywart.com/content/package/lufylegend1.10.1/lufylegend-1.10.1.simple-lsc.min",//改
+            
+            clipboard: "https://cdn.ywart.com/content/package/clipboard/clipboard.min",
+            Hammer: "https://cdn.ywart.com/content/package/hammer",
+            captcha:"https://captcha.luosimao.com/static/dist/captcha.js?v=201907161257"
+        },
+
+        shim: {
+            bus: {
+                deps: ['jquery'],
+                exports: 'bus'
+            },
+            common: {
+                deps: ['jquery', 'bus'],
+                exports: 'common'
+            },
+            artdialog: {
+                deps: ['jquery'],
+                exports: 'artdialog'
+            },
+            artdialogplus: {
+                deps: ['artdialog'],
+                exports: 'artdialogplus'
+            },
+            carousel: {
+                deps: ['jquery'],
+                exports: 'carousel'
+            },
+            masonry: {
+                deps: ['jquery'],
+                exports: 'masonry'
+            },
+            jquery_ui: {
+                deps: ['jquery'],
+                exports: 'jquery-ui'
+            },
+            blocksit: {
+                deps: ['jquery'],
+                exports: 'blocksit'
+            },
+            layer: {
+                deps: ['jquery'],
+                exports: 'layer'
+            },
+            formatCurrency: {
+                deps: ['jquery'],
+                exports: 'formatCurrency'
+            },
+            jquery_history: {
+                deps: ['jquery'],
+                exports: 'jquery_history'
+            },
+            jquery_query: {
+                deps: ['jquery'],
+                exports: 'jquery_query'
+            },
+            lazyload: {
+                deps: ['jquery'],
+                exports: 'lazyload'
+            },
+            dotdotdot: {
+                deps: ['jquery'],
+                exports: 'dotdotdot'
+            },
+            semantic: {
+                deps: ['jquery'],
+                exports: 'semantic'
+            },
+            my97: {
+                exports: 'my97'
+            },
+            asPieProgress: {
+                deps: ['jquery'],
+                exports: 'asPieProgress'
+            },
+            ajaxpager: {
+                deps: ['jquery'],
+                exports: 'ajaxpager'
+            },
+            ajaxpager_mobile: {
+              deps: ['jquery'],
+              exports: 'ajaxpager_mobile'
+            },
+            ajaxpager_frontend: {
+                deps: ['jquery'],
+                exports: 'ajaxpager_frontend'
+            },
+            cvszoom: {
+                deps: ['jquery'],
+                exports: 'cvszoom'
+            },
+            swiper: {
+                deps: ['jquery'],
+                exports: 'swiper'
+            },
+            colpick: {
+                deps: ['jquery'],
+                exports: 'colpick'
+            },
+            imagesloaded: {
+                deps: ['jquery'],
+                exports: 'imagesloaded'
+            },
+            jRange: {
+                deps: ['jquery'],
+                exports: 'jRange'
+            }
+        }
+    });
+</script>
+    
+        <script>
+        //百度统计
+        var _hmt = _hmt || [];
+        //百度统计
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?63bac36ac4816381ad2719317fbc75bd";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+</head>
+<body>
+
+<link href="/dist/style/CommonPC.min.css" rel="stylesheet" />
+<link href="/dist/style/Header.min.css?v=20191028" rel="stylesheet" />
+
+<script>
+var isIndex = false;
+require(["jquery", "common"],
+    function (_$, _common) {
+        $(function () {
+            var searchcat = 1;
+            var searchfunc = function () {
+                var keyword = $('.search_Box input').eq(1).val();
+                if (keyword !== '') {
+                    switch (searchcat) {
+                        case 1:
+                            var url = "/buy?SearchAll=true&keyword=" + encodeURIComponent(keyword);
+                            location.href = url;
+                            break;
+                        case 2:
+                            var url = "/Common/SearchResult?keys=" + encodeURIComponent(keyword);
+                            location.href = url;
+                            break;
+                    }
+                } else {
+                    alert("搜索关键字不能为空，请输入");
+                }
+            }
+
+            $(document).on("click", function (e) {
+                //console.log($(e.target));
+                $(e.target).parents(".choices").length == 0 && $(".choicebox").slideUp();
+            })
+            $(".choosed").click(null, function () {
+                $(".choicebox").slideToggle();
+            });
+            $(".choice").click(function () {
+                if ($(this).text() == "作品") {
+                    searchcat = 1;
+                    $(".choosed").html('作品 <i class="fa fa-caret-down"></i>');
+
+                } else if ($(this).text() == "艺术家") {
+                    searchcat = 2;
+                    $(".choosed").html('艺术家 <i class="fa fa-caret-down"></i>');
+                }
+                $(".choicebox").hide();
+                $(".choice").removeClass('active');
+                $(this).addClass('active');
+            });
+            $('.search_Box input').eq(1).keydown(function (e) {
+                if (e.keyCode == 13) {
+                    searchfunc();
+                }
+            });
+            $(".chooseicon").click(function () {
+                searchfunc();
+            });
+
+            //滚动后头部变化
+            $(window).on("scroll", function () {
+                if( isIndex ){
+                    if ($(window).scrollTop() > 10) {
+                        $('#header').addClass("header_anm");
+                        $('.content_header').stop().fadeOut(100,function(){
+                            $(".content_header2").stop().fadeIn(100);
+                        });
+                        $(".CarShop").stop().fadeOut(100);
+                        $('.header_bottom').css({top:"164px"});
+                    } else {
+                        $('.content_header2').stop().fadeOut(100,function(){
+                            $(".content_header").stop().fadeIn(100);
+                            $(".CarShop").stop().fadeIn(100);
+                        });
+                        $('#header').removeClass("header_anm");
+                        $('.header_bottom').css({top:"200px"});
+                    }
+                }else{
+                    $('.header_bottom').css({top:"auto"});
+                    if ($(window).scrollTop() > 10) {
+                        $('#header').addClass("header_anm");
+                        $('.content_header').stop().fadeOut(100,function(){
+                            $(".content_header2").stop().fadeIn(100);
+                        });
+                        $(".CarShop").stop().fadeOut(100);
+                    } else {
+                        $('.content_header2').stop().fadeOut(100,function(){
+                            $(".content_header").stop().fadeIn(100);
+                            $(".CarShop").stop().fadeIn(100);
+                        });
+                        $('#header').removeClass("header_anm");
+                    }
+                }
+            })
+            $('.icon_name').width($('.icon_name').width());
+            if ($(window).scrollTop() > 200) {
+                $('#header').addClass("header_anm");
+            }
+        })
+        //hoverheader购购物车
+        var cartamouseover = function () {
+            location.href = "/shopping/cart";
+            // console.log('overcart');
+            // if (!$("#cart").is(":visible")) {
+            //     common.checkLogin2(
+            //         function () {
+            //             // $(".header").addClass("active");
+            //             $("#_SideCart").addClass("active");
+            //             cartvm.closeFunc = function () {
+            //                 // $(".header").removeClass("active");
+            //             }
+            //         }
+            //     );
+            // }
+        }
+        // mouseover
+        $(".CarShop,.car").on("click", cartamouseover);
+        $('.Service').click(function(){
+            _MEIQIA('showPanel');
+        });
+        $('.YBHGGH span').click(function(){
+            $('.YBHGGH').hide();
+            $('.header_top').css({top:"0"});
+            $('.header_bottom').css({top:"80px"});
+            isIndex = false;
+            cookie.set("isIndex","true",1);
+        });
+        if( isIndex && !cookie.get("isIndex")){
+            $('.YBHGGH').show();
+            $('.header_top').css({top:"120px"});
+            $('.header_bottom').css({top:"200px"});
+        }else{
+            isIndex = false;
+        }
+        
+    });
+</script>
+<header id="header">
+    <div class="H">
+        <div class="header_top">
+            <div class="logo">
+                <a href="/"><img src="https://cdn.ywart.com/header/logo.png" alt=""></a>
+                <p>— 原创艺术品电商</p>
+            </div>
+            <div class="search">
+                <div class="search_Box">
+                    <div class="choices">
+                        <span class="choosed">作品 <i class="fa fa-caret-down"></i></span>
+                        <div class="choicebox">
+                            <span class="choice active">作品</span>
+                            <span class="choice">艺术家</span>
+                        </div>
+                    </div>
+                    <img class="chooseicon" src="https://www.ywart.com/svg_file?path=/content/image/search.svg&rgb=51,51,51" alt="">
+                    <input type="password" style="display:none;"/>
+                    <input type="text" autocomplete="off"  name="HeaderInput" id="HeaderInput" placeholder="搜索感兴趣的关键字"  />
+                </div>
+            </div>
+            <div class="content_header">
+                <div class="content_Box">
+                        <div class="login">
+                            <a href="/login">
+                                <img src="https://cdn.ywart.com/header/login.png" alt="" class="Img">
+                                <a href="/login" class="a ov">登录 / 注册</a>
+                            </a>
+                        </div>
+                    <div class="MyOrder">
+                        <a href="/user/order">我的订单</a>
+                    </div>
+                    <div class="MyNews">
+                        <a href="/user/usermessage">我的消息</a>
+                    </div>
+                    <div class="Service">
+                        <a href="javascript:;">在线客服</a>
+                    </div>
+                    <div class="download lodeJ">
+                        <a href="javascript:;">手机版</a>
+                        <div class="er">
+                            <h4>使用手机扫一扫</h4>
+                            <img src="https://cdn.ywart.com/content/image/iosDownQRcode.png" alt="">
+                            <span>购买咨询：400-605-7033</span>
+                        </div>
+                        <i></i>
+                    </div>
+                </div>
+            </div>
+            <div class="content_header2">
+                <div class="content_Box">
+                        <div class="login">
+                            <a href="/login">
+                                <img src="https://cdn.ywart.com/header/login.png" alt="" class="Img">
+                            </a>
+                        </div>
+                    <div class="car">
+                        <a href="javascript:common.checkLogin('/shopping/cart')" onclick="_hmt.push(['_trackEvent', '浏览', '购物车']);">
+                            <img src="https://cdn.ywart.com/header/car.png" alt="" class="Img">
+                            
+                        </a>
+                    </div>
+                    <div class="download lodeJ">
+                        <img src="https://cdn.ywart.com/header/SJPC.png" alt="" class="Img">
+                        <div class="er">
+                            <h4>使用手机扫一扫</h4>
+                            <img src="https://cdn.ywart.com/content/image/iosDownQRcode.png" alt="">
+                            <span>购买咨询：400-605-7033</span>
+                        </div>
+                        <i></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header_bottom">
+        <div class="ContentheaderB">
+            <div class="nav">
+                    <div class="ContentNav">
+                        <a href="/" class="active NavA">
+                            <span>首页</span>
+                        </a>
+                    </div>
+                    <div class="ContentNav YSPDH">
+                        <ul class="YSPSlider">
+                            <li>
+                                <a href="/buy">全部</a>
+                            </li>
+                            <li>
+                                <a href="/makeart" onclick="_hmt.push(['_trackEvent', '浏览', '入门收藏']);">
+                                    <span>入门收藏</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/Original" onclick="_hmt.push(['_trackEvent', '浏览', '潜力收藏']);">
+                                    <span>潜力收藏</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/collect/index" onclick="_hmt.push(['_trackEvent', '浏览', '名作收藏']);">
+                                    <span>名作收藏</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <a href="/buy" class=" NavA">
+                            <span>艺术品</span>
+                        </a>
+                    </div>
+                    <div class="ContentNav">
+                        <a href="/artist/app/index" class=" NavA">
+                            <span>艺术家</span>
+                        </a>
+                    </div>
+                    <div class="ContentNav">
+                      
+                        <a href="/topic/ArtService" class=" NavA">
+                            <span>艺术服务</span>
+                        </a>
+                    </div>
+                    <div class="ContentNav">
+                        <a href="/topic/ArtisticVision" class=" NavA">
+                            <span>艺术视野</span>
+                        </a>
+                    </div>
+                        <div class="ContentNav">
+                            <a href="/aiteArtFair" class=" NavA">
+                                <span>艺术博览会</span>
+                            </a>
+                        </div> 
+
+            </div>
+            <div class="CarShop">
+                <img src="https://cdn.ywart.com/header/GWCPC.png" alt="">
+                <a href="javascript:;">购物车</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section id="_SideCart" class="clearfix _hidden">
+    <div v-on:click="closeCart" class="cover abs100"></div>
+    <div class="box f_r">
+        <div class="title">我的购物车<div class="closeBtn" v-on:click="closeCart">✕</div></div>
+        <div class="item" v-for="(item,index) in items" :id="item.ArtworkCode+item.EditionId" v-if="item.IsValidArtwork">
+            <div class="leftinfo">
+                <a :href="'/artworks/'+item.ArtworkCode"><img :src="'https://cdn.ywart.com/yw/'+item.MainimgFilename+'@560h_560w_1e_1c_1wh_90Q'"></a>
+                <div class="info">
+                    <p class="ellipsis artworkname">{{item.ArtworkName}}</p>
+                    <p class="ellipsis artistname">{{item.ArtistName}}</p>
+                    <p class="price">{{item.FormatPriceDiscount}}</p>
+                </div>
+            </div>
+            <div class="check">
+                <div class="checkBtn" v-bind:class="{'active' : item.isChecked }" v-on:click="clickCheck(item)"><img src="https://cdn.ywart.com/content/image/selected.png" /></div>
+            </div>
+        </div>
+        <div class="buybox">
+            <p>{{checkText}}</p>
+            <button class="detailBtn" v-on:click="checkOut">立即购买</button>
+        </div>
+    </div>
+</section>
+
+<script>
+    //暴露 showCart
+    //功能显示侧购物车，参数artworks,closeFunc
+    //closeFunc为关闭购物车后执行的func
+    //artworks为要勾选的商品数组[ArtworkCode，EditionId版号]
+
+    //暴露 cartvm,侧购物车vue对象
+    require(["jquery",  "bus", "common", "vue"],
+        function (_$, _bus, _common, Vue) {
+            window.showCart = function (artworks, closeFunc) {
+                console.log(artworks);
+                var params = {
+                    module: 'Shopping.Cart',
+                    action: 'GetCartItemList',
+                };
+                $.ajax({ data: params }).done(function (result) {
+                    console.log(result);
+                    if (result.Success) {
+                        $("#_SideCart").addClass("active");
+                        var d = [];
+                        var k = 0;
+                        for (var i = 0; i < result.Data.length; i++) {
+                            for (var j = 0; j < result.Data[i].length; j++) {
+                                d[k] = result.Data[i][j];
+                                d[k].isChecked = false;
+                                for (var ai = 0; ai < artworks.length; ai++) {
+                                    if (artworks[ai][0] == d[k].ArtworkCode && (artworks[ai][1] == d[k].EditionId || (artworks[ai][1] == 0 && d[k].EditionId==null))) {
+                                        d[k].isChecked = true;
+                                        break;
+                                    }
+                                }
+                                k++;
+                            }
+                        }
+                        if (result.Data.length == 0) {
+                            $("#_SideCart .buybox button").hide();
+                        }
+                        cartvm.checkText = "";
+                        cartvm.items = d.reverse();
+                        if (typeof closeFunc == "function") {
+                            cartvm.closeFunc = closeFunc;
+                        }
+                    } else {
+                        alert(result.ErrorMsg);
+                    }
+                });
+            }
+   
+            var initCart = function (data) {
+                window.cartvm = new Vue({
+                    el: "#_SideCart",
+                    data: {
+                        items: data,
+                        checkText: "",
+                        worksNameList: []
+                    },
+                    methods: {
+                        clickCheck: function (item) {
+                            item.isChecked = !item.isChecked;
+                        },
+                        checkOut: function () {
+                            var ths = this;
+                            common.checkLogin(function () {
+                                var artworkWithEditionList = ths.getArtworkWithEditionList();
+                                var params = {};
+                                params.module = "Shopping.Cart";
+                                params.action = "CheckoutCart";
+                                params.ArtworkWithEditionList = JSON.stringify(artworkWithEditionList);
+                                console.log(params)
+                                $.ajax({ data: params }).done(function (result) {
+                                    if (result.Success) {
+                                        var encodeOrderID = result.Data;
+                                        if (typeof artworkWithEditionList[0].AgentCode == "string") {
+                                            location.href = "/shopping/order/" + encodeOrderID + "?agentcode=" + artworkWithEditionList[0].AgentCode;
+                                        } else {
+                                            location.href = "/shopping/order/" + encodeOrderID;
+                                        }
+                                        _hmt.push(['_trackEvent', '订单', '立即购买',JSON.stringify(ths.worksNameList)]);
+                                    }
+                                    else {
+                                        alert(result.ErrorMsg);
+                                    }
+                                });
+                            });
+                        },
+                        getArtworkWithEditionList: function () {
+                            var ths = this;
+                            var artworkWithEditionList = [];
+                            this.worksNameList = [];
+                            for (var i = 0; i < ths.items.length; i++) {
+                                var cartItem = ths.items[i];
+                                if (cartItem.isChecked) {
+                                    var artworkWithEdition = {};
+                                    artworkWithEdition.ArtworkCode = cartItem.ArtworkCode;
+                                    artworkWithEdition.EditionId = cartItem.EditionId;
+                                    artworkWithEdition.FrameId = cartItem.FrameId;
+                                    artworkWithEdition.PaddingId = cartItem.PaddingId;
+                                    artworkWithEdition.AgentCode = cartItem.AgentCode;
+                                    artworkWithEdition.price = cartItem.PriceDiscount;
+                                    artworkWithEditionList.push(artworkWithEdition);
+                                    this.worksNameList.push(cartItem.ArtworkName);
+                                }
+                            }
+                            return artworkWithEditionList;
+                        },
+                        closeCart: function () {
+                            console.log("closeCart");
+                            $("#_SideCart").removeClass("active");
+                            if (typeof this.closeFunc == "function") {
+                                cartvm.closeFunc();
+                            }
+                        }
+                    },
+                    updated: function () {
+                        console.log('update');
+                        var notcheck = true;
+                        for (var i = 0; i < this.items.length; i++) {
+                            if (this.items[i].isChecked) {
+                                notcheck = false;
+                                break;
+                            }
+                        }
+                        if (notcheck) {
+                            console.log("nocheck");
+                            $("#_SideCart .detailBtn").attr("disabled", true);
+                            this.checkText = "";
+                        } else {
+                            $("#_SideCart .detailBtn").attr("disabled", false).show();
+                            var artworkWithEditionList = this.getArtworkWithEditionList();
+                            if (artworkWithEditionList.length != 0) {
+
+                                var totalPrice = 0;
+                                for (var i = 0; i < artworkWithEditionList.length; i++) {
+                                    totalPrice += artworkWithEditionList[i].price;
+                                }
+                                var text = "已选择 " + artworkWithEditionList.length + " 件，共计¥" + common.fmoney(totalPrice);
+                                this.checkText = text;
+                            } else {
+                                this.checkText = "";
+                            }
+                        }
+
+                    },
+                    mounted: function () {
+                        console.log('mounted');
+                        var notcheck = true;
+                        for (var i = 0; i < this.items.length; i++) {
+                            if (this.items[i].isChecked) {
+                                notcheck = false;
+                                break;
+                            }
+                        }
+                        if (notcheck) {
+                            console.log("nocheck");
+                            $("#_SideCart .detailBtn").attr("disabled", true);
+                            this.checkText = "";
+                        } else {
+                            $("#_SideCart .detailBtn").attr("disabled", false).show();
+                            var artworkWithEditionList = this.getArtworkWithEditionList();
+                            if (artworkWithEditionList.length != 0) {
+
+                                var totalPrice = 0;
+                                for (var i = 0; i < artworkWithEditionList.length; i++) {
+                                    totalPrice += artworkWithEditionList[i].price;
+                                }
+                                var text = "已选择 " + artworkWithEditionList.length + " 件，共计¥" + common.fmoney(totalPrice);
+                                this.checkText = text;
+                            } else {
+                                this.checkText = "";
+                            }
+                        }
+
+                    }
+                })
+            }
+            initCart([]);
+            var params = {
+                module: 'Shopping.Cart',
+                action: 'GetCartItemList',
+            };
+            $.ajax({ data: params }).done(function (result) {
+                if (result.Success) {
+                    if (result.Data.length == 0) {
+                        $("#_SideCart .buybox button").hide();
+                    }
+                    var d = [];
+                    var k = 0;
+                    for (var i = 0; i < result.Data.length; i++) {
+                        for (var j = 0; j < result.Data[i].length; j++) {
+                            d[k] = result.Data[i][j];
+                            d[k].isChecked = false;
+                            k++;
+                        }
+                    }
+                    cartvm.checkText = "";
+                    cartvm.items = d.reverse();
+                } else {
+                    console.log(result.ErrorMsg);
+                }
+            });
+            ///以上购物车
+
+        });
+</script>
+    
+<section class="hero">
+    <div class="hero_background owl-carousel" id="owl-hero">
+
+<div class="itemapp2 item collect itemapp artyouwant"
+                     style="background-image:url(https://cdn.ywart.com/material/pc/banner/201911201810146355cca3154.jpg)"
+                     a="1">
+                        <a class="abs100" href="https://www.ywart.com/topic/newgift" onclick="_hmt.push(['_trackEvent', '浏览', '首页banner0']);"></a>
+                </div>
+<div class="itemapp2 item collect itemapp artyouwant"
+                     style="background-image:url(https://cdn.ywart.com/material/pc/banner/201911261711453636ce4e287.jpg)"
+                     a="1">
+                        <a class="abs100" href="https://www.ywart.com/topic/ChristmasNewyear/435" onclick="_hmt.push(['_trackEvent', '浏览', '首页banner1']);"></a>
+                </div>
+<div class="itemapp2 item collect itemapp artyouwant"
+                     style="background-image:url(https://cdn.ywart.com/material/pc/banner/20191101151715938cb37f645.jpg)"
+                     a="1">
+                        <a class="abs100" href="https://www.ywart.com/User/BonusMall" onclick="_hmt.push(['_trackEvent', '浏览', '首页banner2']);"></a>
+                </div>
+<div class="itemapp2 item collect itemapp artyouwant"
+                     style="background-image:url(https://cdn.ywart.com/material/pc/banner/2019110118294134881be3728.jpg)"
+                     a="1">
+                        <a class="abs100" href="https://www.ywart.com/topic/jielidou" onclick="_hmt.push(['_trackEvent', '浏览', '首页banner3']);"></a>
+                </div>
+<div class="itemapp2 item collect itemapp artyouwant"
+                     style="background-image:url(https://cdn.ywart.com/material/pc/banner/20191025110656817d5dd4825.jpg)"
+                     a="1">
+                        <a class="abs100" href="https://www.ywart.com/topic/cms?Url=https%3A%2F%2Fpages.ywart.com%2Fwgz-wyy%3Fappview%3D1" onclick="_hmt.push(['_trackEvent', '浏览', '首页banner4']);"></a>
+                </div>
+<div class="itemapp2 item collect itemapp artyouwant"
+                     style="background-image:url(https://cdn.ywart.com/material/pc/banner/201911181758301325a40d480.jpg)"
+                     a="1">
+                        <a class="abs100" href="https://www.ywart.com/AiteArtFair/" onclick="_hmt.push(['_trackEvent', '浏览', '首页banner7']);"></a>
+                </div>
+    </div>
+</section>
+
+
+        <section class="YBHZQ">
+
+            <div class="IMgText">
+                <a href="/AiteArtFair"><img src="https://cdn.ywart.com/AiteArtFair/PC/PCindex/WechatIMG2579.jpeg" alt=""></a>
+                <div class="YBHText">
+                    <h2>AITE ONLINE艺术博览会</h2>
+                    <p>
+                        AITE ONLINE艺术博览会，是中国首个在互联网上展览展示的艺术博览会，AITE ONLINE艺术博览会旨在将传统的艺术博览会模式进行创新，通过互联网模式让当代艺术广泛传播，这将成为传统艺术博览会的重要补充环节,更是艺术博览会未来的发展趋势。<br/>AITE ONLINE艺术博览会，将为您呈现多家艺术机构的知名艺术家作品、联合多位著名策展人策展不同主题的专业展览，联手上千位潜力艺术家展示海量的优秀艺术作品。
+                    </p>
+                    <a href="/aiteArtFair/AiteArtAbout">了解更多</a>
+                </div>
+            </div>
+
+            <ul>
+                <li><a href="/AiteArtFair/MainCompany"></a></li>
+                <li><a href="/AiteArtFair/MainExhibition"></a></li>
+                <li><a href="/AiteArtFair/PublicProject"></a></li>
+                <li><a href="/AiteArtFair/AiteArtSHEDE"></a></li>
+            </ul>
+
+
+        </section> 
+<div class="index_center" draggable="false">
+
+    <section class="NEWS">
+        <div class="title">
+            <h2>推荐 / CATEGORY</h2>
+            <div class="refresh">
+                <img src="https://cdn.ywart.com/content/image/refresh.svg" /><span>换一换</span>
+            </div>
+            <div class="CName">
+                <a href="/buy">查看全部</a>
+            </div>
+            
+            <div class="CName" categoryname="水彩(粉)">水彩<i>/</i></div>
+            <div class="CName" categoryname="水墨">水墨<i>/</i></div>
+            <div class="CName" categoryname=版画>版画<i>/</i></div>
+            <div class="CName active" categoryname="油画">油画<i>/</i></div>
+        </div>
+        <div class="NEWBOX">
+            
+
+                <div class="NEW out">
+                    <div class="front">
+                        <img alt="邓洧 哪吒之四" src="https://cdn.ywart.com/yw/20190816171629378b58e425f.jpg@560h_560w_1e_1c_1wh_90Q"><a href="/artworks/1mx1gn" target="_blank">
+                            <div class="info_box">
+                                <div>
+                                    <h3>邓洧</h3>
+                                    <h4>哪吒之四</h4><span class="info">，2018<br />纸面丙烯 &nbsp;77.0x53.0cm</span>
+                                    <p class="year">2018</p>
+                                    
+        <p class="price">¥20,160</p>
+
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="back AMhide">
+                        <img alt="邓洧 哪吒之四" src="https://cdn.ywart.com/yw/20190816171629378b58e425f.jpg@560h_560w_1e_1c_1wh_90Q"><a href="/artworks/1mx1gn" target="_blank">
+                            <div class="info_box">
+                                <div>
+                                    <h3>邓洧</h3>
+                                    <h4>哪吒之四</h4><span class="info">，2018<br />纸面丙烯 &nbsp;77.0x53.0cm</span>
+                                    <p class="year">2018</p>
+                                    
+        <p class="price">¥20,160</p>
+
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="NEW out">
+                    <div class="front">
+                        <img alt="张巍 公园的傍晚" src="https://cdn.ywart.com/yw/20190816161909479d56faf3a.jpg@560h_560w_1e_1c_1wh_90Q"><a href="/artworks/1v8lgj" target="_blank">
+                            <div class="info_box">
+                                <div>
+                                    <h3>张巍</h3>
+                                    <h4>公园的傍晚</h4><span class="info">，2018<br />纸面丙烯 &nbsp;54.0x39.0cm</span>
+                                    <p class="year">2018</p>
+                                    
+        <p class="price">¥7,160</p>
+
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="back AMhide">
+                        <img alt="张巍 公园的傍晚" src="https://cdn.ywart.com/yw/20190816161909479d56faf3a.jpg@560h_560w_1e_1c_1wh_90Q"><a href="/artworks/1v8lgj" target="_blank">
+                            <div class="info_box">
+                                <div>
+                                    <h3>张巍</h3>
+                                    <h4>公园的傍晚</h4><span class="info">，2018<br />纸面丙烯 &nbsp;54.0x39.0cm</span>
+                                    <p class="year">2018</p>
+                                    
+        <p class="price">¥7,160</p>
+
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="NEW out">
+                    <div class="front">
+                        <img alt="马海波 祥云" src="https://cdn.ywart.com/yw/20190902101343428e3afb04c.JPG@260h_260w_1e_1c_1wh_90Q"><a href="/artworks/1qq6p6" target="_blank">
+                            <div class="info_box">
+                                <div>
+                                    <h3>马海波</h3>
+                                    <h4>祥云</h4><span class="info">，2019<br />布面丙烯 &nbsp;100.0x100.0cm</span>
+                                    <p class="year">2019</p>
+                                    
+        <p class="price">¥12,330</p>
+
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="back AMhide">
+                        <img alt="马海波 祥云" src="https://cdn.ywart.com/yw/20190902101343428e3afb04c.JPG@260h_260w_1e_1c_1wh_90Q"><a href="/artworks/1qq6p6" target="_blank">
+                            <div class="info_box">
+                                <div>
+                                    <h3>马海波</h3>
+                                    <h4>祥云</h4><span class="info">，2019<br />布面丙烯 &nbsp;100.0x100.0cm</span>
+                                    <p class="year">2019</p>
+                                    
+        <p class="price">¥12,330</p>
+
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="NEW out">
+                    <div class="front">
+                        <img alt=" 李仲实 回响" src="https://cdn.ywart.com/yw/2019081717151116652250403.jpg@260h_260w_1e_1c_1wh_90Q"><a href="/artworks/187mlm" target="_blank">
+                            <div class="info_box">
+                                <div>
+                                    <h3> 李仲实</h3>
+                                    <h4>回响</h4><span class="info">，2019<br />布面油画 &nbsp;90.0x120.0cm</span>
+                                    <p class="year">2019</p>
+                                    
+        <p class="price">¥10,650</p>
+
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="back AMhide">
+                        <img alt=" 李仲实 回响" src="https://cdn.ywart.com/yw/2019081717151116652250403.jpg@260h_260w_1e_1c_1wh_90Q"><a href="/artworks/187mlm" target="_blank">
+                            <div class="info_box">
+                                <div>
+                                    <h3> 李仲实</h3>
+                                    <h4>回响</h4><span class="info">，2019<br />布面油画 &nbsp;90.0x120.0cm</span>
+                                    <p class="year">2019</p>
+                                    
+        <p class="price">¥10,650</p>
+
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="NEW out">
+                    <div class="front">
+                        <img alt="张巍 About Bunny（1）" src="https://cdn.ywart.com/yw/20190816162511992314a459a.jpg@260h_260w_1e_1c_1wh_90Q"><a href="/artworks/1o0onm" target="_blank">
+                            <div class="info_box">
+                                <div>
+                                    <h3>张巍</h3>
+                                    <h4>About Bunny（1）</h4><span class="info">，2018<br />木材、丙烯 &nbsp;37.0x37.0x3.0cm</span>
+                                    <p class="year">2018</p>
+                                    
+        <p class="price">¥7,560</p>
+
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="back AMhide">
+                        <img alt="张巍 About Bunny（1）" src="https://cdn.ywart.com/yw/20190816162511992314a459a.jpg@260h_260w_1e_1c_1wh_90Q"><a href="/artworks/1o0onm" target="_blank">
+                            <div class="info_box">
+                                <div>
+                                    <h3>张巍</h3>
+                                    <h4>About Bunny（1）</h4><span class="info">，2018<br />木材、丙烯 &nbsp;37.0x37.0x3.0cm</span>
+                                    <p class="year">2018</p>
+                                    
+        <p class="price">¥7,560</p>
+
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="NEW out">
+                    <div class="front">
+                        <img alt="佘雯雯 祈祷和陪伴" src="https://cdn.ywart.com/yw/20191031175918636cb35acb3.png@260h_260w_1e_1c_1wh_90Q"><a href="/artworks/181no0" target="_blank">
+                            <div class="info_box">
+                                <div>
+                                    <h3>佘雯雯</h3>
+                                    <h4>祈祷和陪伴</h4><span class="info">，2016<br />布面油画 &nbsp;100.0x160.0cm</span>
+                                    <p class="year">2016</p>
+                                    
+        <p class="price">¥12,810</p>
+
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="back AMhide">
+                        <img alt="佘雯雯 祈祷和陪伴" src="https://cdn.ywart.com/yw/20191031175918636cb35acb3.png@260h_260w_1e_1c_1wh_90Q"><a href="/artworks/181no0" target="_blank">
+                            <div class="info_box">
+                                <div>
+                                    <h3>佘雯雯</h3>
+                                    <h4>祈祷和陪伴</h4><span class="info">，2016<br />布面油画 &nbsp;100.0x160.0cm</span>
+                                    <p class="year">2016</p>
+                                    
+        <p class="price">¥12,810</p>
+
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="NEW out">
+                    <div class="front">
+                        <img alt="李帛 古柏行NO.5" src="https://cdn.ywart.com/yw/20190816104147390b5451d73.jpg@260h_260w_1e_1c_1wh_90Q"><a href="/artworks/1o0o8m" target="_blank">
+                            <div class="info_box">
+                                <div>
+                                    <h3>李帛</h3>
+                                    <h4>古柏行NO.5</h4><span class="info">，2018<br />布面油画 &nbsp;140.0x50.0cm</span>
+                                    <p class="year">2018</p>
+                                    
+        <p class="price">¥18,330</p>
+
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="back AMhide">
+                        <img alt="李帛 古柏行NO.5" src="https://cdn.ywart.com/yw/20190816104147390b5451d73.jpg@260h_260w_1e_1c_1wh_90Q"><a href="/artworks/1o0o8m" target="_blank">
+                            <div class="info_box">
+                                <div>
+                                    <h3>李帛</h3>
+                                    <h4>古柏行NO.5</h4><span class="info">，2018<br />布面油画 &nbsp;140.0x50.0cm</span>
+                                    <p class="year">2018</p>
+                                    
+        <p class="price">¥18,330</p>
+
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="NEW out">
+                    <div class="front">
+                        <img alt="黄黎 对话" src="https://cdn.ywart.com/yw/2019081723202951982afba6c.jpg@260h_260w_1e_1c_1wh_90Q"><a href="/artworks/12n2vp" target="_blank">
+                            <div class="info_box">
+                                <div>
+                                    <h3>黄黎</h3>
+                                    <h4>对话</h4><span class="info">，2019<br />布面综合材料 &nbsp;80.0x100.0cm</span>
+                                    <p class="year">2019</p>
+                                    
+        <p class="price">¥40,160</p>
+
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="back AMhide">
+                        <img alt="黄黎 对话" src="https://cdn.ywart.com/yw/2019081723202951982afba6c.jpg@260h_260w_1e_1c_1wh_90Q"><a href="/artworks/12n2vp" target="_blank">
+                            <div class="info_box">
+                                <div>
+                                    <h3>黄黎</h3>
+                                    <h4>对话</h4><span class="info">，2019<br />布面综合材料 &nbsp;80.0x100.0cm</span>
+                                    <p class="year">2019</p>
+                                    
+        <p class="price">¥40,160</p>
+
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="NEW out">
+                    <div class="front">
+                        <img alt="帅子宸 十渡福禄" src="https://cdn.ywart.com/yw/20191008170816969aa55e495.png@260h_260w_1e_1c_1wh_90Q"><a href="/artworks/1ndnl0" target="_blank">
+                            <div class="info_box">
+                                <div>
+                                    <h3>帅子宸</h3>
+                                    <h4>十渡福禄</h4><span class="info">，2019<br />布面油画 &nbsp;50.0x70.0cm</span>
+                                    <p class="year">2019</p>
+                                    
+        <p class="price">¥3,800</p>
+
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="back AMhide">
+                        <img alt="帅子宸 十渡福禄" src="https://cdn.ywart.com/yw/20191008170816969aa55e495.png@260h_260w_1e_1c_1wh_90Q"><a href="/artworks/1ndnl0" target="_blank">
+                            <div class="info_box">
+                                <div>
+                                    <h3>帅子宸</h3>
+                                    <h4>十渡福禄</h4><span class="info">，2019<br />布面油画 &nbsp;50.0x70.0cm</span>
+                                    <p class="year">2019</p>
+                                    
+        <p class="price">¥3,800</p>
+
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="NEW out">
+                    <div class="front">
+                        <img alt="滕亚红 写生于鹅和鸭的农庄 七" src="https://cdn.ywart.com/yw/201604251027081401b6d36aa.jpg@260h_260w_1e_1c_1wh_90Q"><a href="/artworks/1kdmlq" target="_blank">
+                            <div class="info_box">
+                                <div>
+                                    <h3>滕亚红</h3>
+                                    <h4>写生于鹅和鸭的农庄 七</h4><span class="info">，2015<br />布面油画 &nbsp;60.0x60.0cm</span>
+                                    <p class="year">2015</p>
+                                    
+        <p class="price">¥9,170</p>
+
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="back AMhide">
+                        <img alt="滕亚红 写生于鹅和鸭的农庄 七" src="https://cdn.ywart.com/yw/201604251027081401b6d36aa.jpg@260h_260w_1e_1c_1wh_90Q"><a href="/artworks/1kdmlq" target="_blank">
+                            <div class="info_box">
+                                <div>
+                                    <h3>滕亚红</h3>
+                                    <h4>写生于鹅和鸭的农庄 七</h4><span class="info">，2015<br />布面油画 &nbsp;60.0x60.0cm</span>
+                                    <p class="year">2015</p>
+                                    
+        <p class="price">¥9,170</p>
+
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+        <section class="CATEGORYS">
+            <div class="title">
+                <h2>限时抢购 / FLASH SALE</h2>
+            </div>
+
+            <div class="ITEMBOX">
+                <div class="DJS">
+                    <h2>今日</h2>
+                    <p>距离结束剩余</p>
+                    <div class="TimeData">
+                        <span>00</span><i>:</i><span>00</span><i>:</i><span>00</span>
+                    </div>
+                    <a href="/topic/seckill">查看全部</a>
+                </div>
+                    <div class="ITEM">
+                        <a class="imghover" href="/artworks/1v8odj" target="_blank">
+                            <div class="img">
+                                <img src="https://cdn.ywart.com/yw/20190402104649125898c9ea0.png@560h_560w_1e_1c_1wh_90Q">
+                            </div>
+                        </a>
+                        <div class="info_box">
+                            <div>
+                                <a href="/artist/173kgg" target="_blank" class="ellipsis"><h3 class="ellipsis">朱琳</h3></a>
+                                <p class="info">
+                                    <a href="/artworks/1v8odj" class="ellipsis" target="_blank">
+                                        <h4 class="ellipsis">
+                                            花花世界之三
+                                        </h4>
+                                    </a>
+                                    
+                                </p>
+                                
+                                
+        <div class="price">
+            <del style="font-size:13px;color:#999999;">¥9,260</del>
+            <b style="font-weight:normal;">¥8,334</b>
+        </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ITEM">
+                        <a class="imghover" href="/artworks/12nv7p" target="_blank">
+                            <div class="img">
+                                <img src="https://cdn.ywart.com/yw/201906171820174943663b16f.jpg@560h_560w_1e_1c_1wh_90Q">
+                            </div>
+                        </a>
+                        <div class="info_box">
+                            <div>
+                                <a href="/artist/105dpx" target="_blank" class="ellipsis"><h3 class="ellipsis">蔡江南</h3></a>
+                                <p class="info">
+                                    <a href="/artworks/12nv7p" class="ellipsis" target="_blank">
+                                        <h4 class="ellipsis">
+                                            天岸马
+                                        </h4>
+                                    </a>
+                                    
+                                </p>
+                                
+                                
+        <div class="price">
+            <del style="font-size:13px;color:#999999;">¥8,000</del>
+            <b style="font-weight:normal;">¥7,200</b>
+        </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ITEM">
+                        <a class="imghover" href="/artworks/11vvv7" target="_blank">
+                            <div class="img">
+                                <img src="https://cdn.ywart.com/yw/20161130163531697572d94e5.jpg@560h_560w_1e_1c_1wh_90Q">
+                            </div>
+                        </a>
+                        <div class="info_box">
+                            <div>
+                                <a href="/artist/1zno7k" target="_blank" class="ellipsis"><h3 class="ellipsis">刘锚锚</h3></a>
+                                <p class="info">
+                                    <a href="/artworks/11vvv7" class="ellipsis" target="_blank">
+                                        <h4 class="ellipsis">
+                                            动物系列—猴
+                                        </h4>
+                                    </a>
+                                    
+                                </p>
+                                
+                                
+        <div class="price">
+            <del style="font-size:13px;color:#999999;">¥11,700</del>
+            <b style="font-weight:normal;">¥10,530</b>
+        </div>
+
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </section>
+
+    <section class="searchbar">
+        <div id="searchbar">
+            <div class="explore"><span>现在，去探索全新的艺术世界</span></div>
+            <form id="searchbar-form" action="/buy">
+                <div class="saved-search-wrapper">
+                    <label>
+                        <select name="category">
+                            <option value="">类别</option>
+                            <option value="油画">油画</option>
+                            <option value="版画">版画</option>
+                            <option value="水墨">水墨</option>
+                            <option value="水彩(粉)">水彩(粉)</option>
+                            <option value="雕塑">雕塑</option>
+                            <option value="摄影">摄影</option>
+                            <option value="其他">其他</option>
+                        </select>
+                    </label>
+                    <label>
+                        <select name="price">
+                            <option value="">价格</option>
+                            <option value="0～2000">¥ 2,000&nbsp;以下</option>
+                            <option value="2000～8000">¥ 2,000&nbsp;-&nbsp;¥ 8,000</option>
+                            <option value="8000～15000">¥ 8,000&nbsp;-&nbsp;¥ 15,000</option>
+                            <option value="15000～30000">¥ 15,000&nbsp;-&nbsp;¥ 30,000</option>
+                            <option value="30000～max">¥ 30,000&nbsp;以上</option>
+                        </select>
+                    </label>
+                    <label>
+                        <select name="size">
+                            <option value="">尺寸</option>
+                            <option value="0～50cm">50cm以下</option>
+                            <option value="50～100cm">50cm～100cm</option>
+                            <option value="100～150cm">100cm～150cm</option>
+                            <option value="150～200cm">150cm～200cm</option>
+                            <option value="200～max">200cm以上</option>
+                        </select>
+                    </label>
+                    <label>
+                        <select name="style">
+                            <option value="">风格</option>
+                            <option>抽象</option>
+                            <option>具象</option>
+                            <option>观念</option>
+                            <option>卡通</option>
+                            <option>传统国画</option>
+                            <option>实验水墨</option>
+                            <option>其他</option>
+                        </select>
+                    </label>
+                </div>
+                <button type="submit" class="searchbar-submit _hidden"><span>开始</span></button>
+            </form>
+            <p class="moregou">前往<a href='/buy'>全部作品</a>利用更强大的筛选引擎挑选作品 ›</p>
+        </div>
+        <div class="go"><div class="bgblue"></div><div class="text">开始<br />GO</div></div>
+    </section>
+
+    <section class="SPECIALS">
+        <div class="title">
+            <div class="prev">
+                <span></span>
+            </div>
+            <h2>专题 / SPECIAL</h2>
+            <div class="next">
+                <span></span>
+            </div>
+        </div>
+        <div class="SPECIALBOX">
+            <div class="stage">
+                    <div class="SPECIAL" draggable="false" href="https://www.ywart.com/topic/cms?Url=https%3a%2f%2fpages.ywart.com%2fwgz-zzz%3fappview%3d1">
+                        <img alt="持续燃烧的孤独感，谁给我一个熊抱？" src="https://cdn.ywart.com/material/topic_cover/201908021111438041f3ca764.jpg@90q">
+                        <div class="box">
+                            <h3>持续燃烧的孤独感，谁给我一个熊抱？</h3>
+                            <p>艺术的作用从来都不是雪中送炭，
+
+而是锦上添花。</p>
+                        </div>
+                    </div>
+                    <div class="SPECIAL" draggable="false" href="https://www.ywart.com/topic/cms?Url=https%3a%2f%2fpages.ywart.com%2fwgz-llf%3fappview%3d1">
+                        <img alt="艺网微个展 李龙飞 | 理性、哲学、空灵" src="https://cdn.ywart.com/material/topic_cover/20190903141105964d6a05bc8.jpg@90q">
+                        <div class="box">
+                            <h3>艺网微个展 李龙飞 | 理性、哲学、空灵</h3>
+                            <p>”理性、哲学、空灵”——当被媒体问及会用怎样的关键词来概括自己的艺术时，李龙飞这样回答。</p>
+                        </div>
+                    </div>
+                    <div class="SPECIAL" draggable="false" href="https://www.ywart.com/topic/cms?Url=https%3a%2f%2fpages.ywart.com%2fautumnseason%3fappview%3d1">
+                        <img alt="艺礼 | 送给秋天出生的朋友" src="https://cdn.ywart.com/material/topic_cover/20190919163242083bd32c0e8.jpg@90q">
+                        <div class="box">
+                            <h3>艺礼 | 送给秋天出生的朋友</h3>
+                            <p>秋天出生的人儿呀，最是情深意重的人儿！美图佳作配佳人，此物最撩人！</p>
+                        </div>
+                    </div>
+                    <div class="SPECIAL" draggable="false" href="https://www.ywart.com/topic/cms?Url=https%3a%2f%2fpages.ywart.com%2fwgz-gkj%3fappview%3d1">
+                        <img alt="微个展 郭柯君 | 在秋日收获宁静喜悦" src="https://cdn.ywart.com/material/topic_cover/201909201448440622407edd1.png@90q">
+                        <div class="box">
+                            <h3>微个展 郭柯君 | 在秋日收获宁静喜悦</h3>
+                            <p>回想小时候种南瓜、收南瓜的那种喜悦，是艺术家画这些画的初衷。</p>
+                        </div>
+                    </div>
+                    <div class="SPECIAL" draggable="false" href="https://www.ywart.com/topic/cms?Url=https%3a%2f%2fpages.ywart.com%2fnationalday">
+                        <img alt="国风雅韵 |  水墨丹青，盛世繁华" src="https://cdn.ywart.com/material/topic_cover/2019101116565376900a544ca.png@90q">
+                        <div class="box">
+                            <h3>国风雅韵 |  水墨丹青，盛世繁华</h3>
+                            <p>国风颂经典，雅致绘生活；水墨又丹青，笔韵描盛世；一画一世界，水墨皆有灵。</p>
+                        </div>
+                    </div>
+                    <div class="SPECIAL" draggable="false" href="https://www.ywart.com/topic/cms?Url=https%3a%2f%2fpages.ywart.com%2fmarriagegift">
+                        <img alt="艺礼 |  这份新婚礼物 送出满满幸福感" src="https://cdn.ywart.com/material/topic_cover/20191012135038964fa353e5c.jpg@90q">
+                        <div class="box">
+                            <h3>艺礼 |  这份新婚礼物 送出满满幸福感</h3>
+                            <p>爱的种子编织成梦；甜蜜味道 空中飘荡；浪漫婚礼一生铭记；爱意礼物一世收藏。</p>
+                        </div>
+                    </div>
+                    <div class="SPECIAL" draggable="false" href="https://www.ywart.com/topic/cms?Url=https%3a%2f%2fpages.ywart.com%2fwarmautumn%3fappview%3d1">
+                        <img alt="艺礼 | 秋意渐浓 艺术佳作带给您丝丝暖意" src="https://cdn.ywart.com/material/topic_cover/2019102114303321818d7a347.jpg@90q">
+                        <div class="box">
+                            <h3>艺礼 | 秋意渐浓 艺术佳作带给您丝丝暖意</h3>
+                            <p>别过春云夏雨的盎然
+走进秋风冬雪的阑珊
+平淡的日子融入柴米油盐
+真实的人生熬成细水长流</p>
+                        </div>
+                    </div>
+                    <div class="SPECIAL" draggable="false" href="https://www.ywart.com/topic/cms?Url=https%3A%2F%2Fpages.ywart.com%2Fwgz-wyy%3Fappview%3D1">
+                        <img alt="艺网微个展 魏阳阳 | 画中有赋，穿越时空重塑青绿山水" src="https://cdn.ywart.com/material/topic_cover/20191025111411710dd650664.jpg@90q">
+                        <div class="box">
+                            <h3>艺网微个展 魏阳阳 | 画中有赋，穿越时空重塑青绿山水</h3>
+                            <p>魏阳阳的绘画，运用了超现实主义的创作方法，对时间和空间中表现对象的挪移、置换和并置。</p>
+                        </div>
+                    </div>
+                    <div class="SPECIAL" draggable="false" href="https://www.ywart.com/topic/cms?Url=https%3A%2F%2Fpages.ywart.com%2Fwgz-wly%3Fappview%3D1">
+                        <img alt="艺网微个展 吴梁焰 | 与大自然共同呼吸" src="https://cdn.ywart.com/material/topic_cover/201911081329395872820e8c3.jpg@90q">
+                        <div class="box">
+                            <h3>艺网微个展 吴梁焰 | 与大自然共同呼吸</h3>
+                            <p>吴梁焰用雕塑来创造红领巾儿童形象。</p>
+                        </div>
+                    </div>
+                    <div class="SPECIAL" draggable="false" href="https://www.ywart.com/topic/cms?Url=https%3a%2f%2fpages.ywart.com%2fyellow%3fappview%3d1">
+                        <img alt="这抹黄色陪你度过清爽秋日" src="https://cdn.ywart.com/material/topic_cover/20190822155527504c34d87b6.jpg@90q">
+                        <div class="box">
+                            <h3>这抹黄色陪你度过清爽秋日</h3>
+                            <p>别过夏花绚烂，走进秋叶静美，秋天没有了夏天的热烈灿烂，更多的是沉静和内敛。</p>
+                        </div>
+                    </div>
+                    <div class="SPECIAL" draggable="false" href="https://www.ywart.com/topic/cms?Url=https%3a%2f%2fpages.ywart.com%2fwuti">
+                        <img alt="这些作品都叫<br/>《无题》" src="https://cdn.ywart.com/material/topic_cover/notitle.jpg@90q">
+                        <div class="box">
+                            <h3>这些作品都叫<br/>《无题》</h3>
+                            <p>很多艺术家，都有那么几件作品叫「无题」
+灵感来了，由心而作，这种纯粹的艺术感觉
+没有条条框框去束缚，也许就差这么一个机会
+把它带回家，给它一个专属ID</p>
+                        </div>
+                    </div>
+                    <div class="SPECIAL" draggable="false" href="https://www.ywart.com/topic/cms?Url=https%3a%2f%2fpages.ywart.com%2fstar">
+                        <img alt="当星空遇上画笔|给你永恒的灿烂" src="https://cdn.ywart.com/material/topic_cover/2017112818064833218c87b83.jpg@90q">
+                        <div class="box">
+                            <h3>当星空遇上画笔|给你永恒的灿烂</h3>
+                            <p>夜空中最亮的星，摘下来送给你。</p>
+                        </div>
+                    </div>
+                    <div class="SPECIAL" draggable="false" href="https://www.ywart.com/topic/cms?Url=https%3a%2f%2fpages.ywart.com%2ffashion">
+                        <img alt="看艺术家如何大玩时尚元素" src="https://cdn.ywart.com/material/topic_cover/fashion.jpg@90q">
+                        <div class="box">
+                            <h3>看艺术家如何大玩时尚元素</h3>
+                            <p>秀场是时装精的舞台，画布就是艺术家的T台。</p>
+                        </div>
+                    </div>
+                    <div class="SPECIAL" draggable="false" href="https://www.ywart.com/topic/cms?Url=https%3a%2f%2fpages.ywart.com%2ftiaowen-gezi">
+                        <img alt="条纹X格子 | 强迫症的治愈良药" src="https://cdn.ywart.com/material/topic_cover/tiaowengezi.jpg@90q">
+                        <div class="box">
+                            <h3>条纹X格子 | 强迫症的治愈良药</h3>
+                            <p>在众多强迫症中，艺术家是最奇妙的存在，他们将条纹和格子整齐的排列在画布之上，使整个画面都透露着工整严谨，让人看了，只觉舒服无比。</p>
+                        </div>
+                    </div>
+                    <div class="SPECIAL" draggable="false" href="https://www.ywart.com/topic/cms?Url=https%3a%2f%2fpages.ywart.com%2fhungry-love">
+                        <img alt="饥饿与爱<br/>都是不治之症" src="https://cdn.ywart.com/material/topic_cover/hunger_and_love.jpg@90q">
+                        <div class="box">
+                            <h3>饥饿与爱<br/>都是不治之症</h3>
+                            <p>爱情给人的安全感就像吃到好吃的食物一样，可以完全抵消掉焦虑情绪。</p>
+                        </div>
+                    </div>
+                    <div class="SPECIAL" draggable="false" href="https://www.ywart.com/topic/cms?Url=https%3a%2f%2fpages.ywart.com%2fminimalist">
+                        <img alt="认识极简主义，享受精致生活<br/>" src="https://cdn.ywart.com/material/topic_cover/minimalist.jpg@90q">
+                        <div class="box">
+                            <h3>认识极简主义，享受精致生活<br/></h3>
+                            <p>追求 minimalist life 的过程，就是深刻认识精致之美的过程。</p>
+                        </div>
+                    </div>
+                    <div class="SPECIAL" draggable="false" href="https://www.ywart.com/topic/cms?Url=http%3a%2f%2fpages.ywart.com%2fguohua">
+                        <img alt="中国风 | 那些比刺绣还美的国画" src="https://cdn.ywart.com/material/topic_cover/guohua.jpg@90q">
+                        <div class="box">
+                            <h3>中国风 | 那些比刺绣还美的国画</h3>
+                            <p>中国风的至美之物，刺绣算一个。但比绣娘的针更传神的，是画家的笔。真要比起来，刺绣还是仿画而作。</p>
+                        </div>
+                    </div>
+                    <div class="SPECIAL" draggable="false" href="https://www.ywart.com/topic/cms?Url=https%3a%2f%2fwww.ywart.com%2ftopic%2fzen">
+                        <img alt="艺术可通禅<br/> " src="https://cdn.ywart.com/material/topic_cover/zen.jpg@90q">
+                        <div class="box">
+                            <h3>艺术可通禅<br/> </h3>
+                            <p>倘若一个主体兼涉艺术与禅两种客体，则因缘斯起，本无缘之理体与有缘之事体遂达成一种相成的关系。</p>
+                        </div>
+                    </div>
+                    <div class="SPECIAL" draggable="false" href="https://www.ywart.com/topic/cms?Url=https%3a%2f%2fpages.ywart.com%2fwuli">
+                        <img alt="这些作品有点<br/>“污”" src="https://cdn.ywart.com/material/topic_cover/dirt.jpg@90q">
+                        <div class="box">
+                            <h3>这些作品有点<br/>“污”</h3>
+                            <p>在家这样的私密空间里，多点蠢蠢欲动，证明你还很年轻。</p>
+                        </div>
+                    </div>
+                    <div class="SPECIAL" draggable="false" href="https://www.ywart.com/topic/cms?Url=https%3a%2f%2fpages.ywart.com%2fred">
+                        <img alt="红色作品精选 | 我的名字叫红" src="https://cdn.ywart.com/material/topic_cover/wodemingzijiaohong.jpg@90q">
+                        <div class="box">
+                            <h3>红色作品精选 | 我的名字叫红</h3>
+                            <p>选择本身才是最至关重要的。如果你需要一款红色，我们可以为你提供最好的选择。</p>
+                        </div>
+                    </div>
+                    <div class="SPECIAL" draggable="false" href="https://www.ywart.com/topic/cms?Url=https%3a%2f%2fpages.ywart.com%2fplant">
+                        <img alt="诗经 | 美人如诗，草木如织" src="https://cdn.ywart.com/material/topic_cover/zhiwu.jpg@90q">
+                        <div class="box">
+                            <h3>诗经 | 美人如诗，草木如织</h3>
+                            <p>不读《诗经》，不知万物有灵，读过了《诗经》，不妨再看看这如诗之画。</p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ARTISTS">
+        <div class="title">
+            <h2>艺术家 / ARTIST</h2><a href="/Solicitation/step0">作品征集全面开放</a>
+        </div>
+        <div class="ARTISTBOX">
+            <a href="https://www.ywart.com/artist/14542j" target="_blank">
+                <div class="curArtist imghover">
+                    <img class="imgbg" alt=李龙飞 src="https://cdn.ywart.com/material/ArtistRecommend/201910301358489381016a4af.png@320h_450w_1e_1c_1wh_90Q" />
+                    <div class="news_content">
+                        <h3 class="news_title">
+                            李龙飞
+                        </h3>
+                        <div class="news dot-ellipsis dot-resize-update">
+                            <p>出生于广西桂林
+毕业于华中师范大学油画系</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <div class="moreArtist">
+                <p>更多艺术家</p>
+                    <div class="Artist">
+                        <div class="info">
+                            <a href="/artist/135jkz" target="_blank"><p>宿哲</p></a>
+                            <p>11件</p>
+                        </div>
+                        <a href="/artist/135jkz" target="_blank">
+                            <div class="artworks">
+                                        <img src="https://cdn.ywart.com/yw/201907041702411797cadbda4.jpeg@260h_260w_1e_1c_1wh_90Q" />
+                                        <img src="https://cdn.ywart.com/yw/20190704145411826e19af404.jpg@130h_130w_1e_1c_1wh_90Q" />
+                                        <img src="https://cdn.ywart.com/yw/20190704145247200af6b5a11.jpg@86h_86w_1e_1c_1wh_90Q" />
+
+                            </div>
+                        </a>
+                    </div>
+                    <div class="Artist">
+                        <div class="info">
+                            <a href="/artist/1v3v95" target="_blank"><p>魏阳阳</p></a>
+                            <p>12件</p>
+                        </div>
+                        <a href="/artist/1v3v95" target="_blank">
+                            <div class="artworks">
+                                        <img src="https://cdn.ywart.com/yw/20170919154327732ac8b2a4d.jpg@260h_260w_1e_1c_1wh_90Q" />
+                                        <img src="https://cdn.ywart.com/yw/201805071423308023408236f.jpg@130h_130w_1e_1c_1wh_90Q" />
+                                        <img src="https://cdn.ywart.com/yw/20180507142440942a7203d69.jpg@86h_86w_1e_1c_1wh_90Q" />
+
+                            </div>
+                        </a>
+                    </div>
+                    <div class="Artist">
+                        <div class="info">
+                            <a href="/artist/1v37dq" target="_blank"><p>张占占</p></a>
+                            <p>13件</p>
+                        </div>
+                        <a href="/artist/1v37dq" target="_blank">
+                            <div class="artworks">
+                                        <img src="https://cdn.ywart.com/yw/2019062016531506073bd92a8.jpg@260h_260w_1e_1c_1wh_90Q" />
+                                        <img src="https://cdn.ywart.com/yw/20190620165936503814ed471.jpg@130h_130w_1e_1c_1wh_90Q" />
+                                        <img src="https://cdn.ywart.com/yw/20190620170128035d762fc97.jpg@86h_86w_1e_1c_1wh_90Q" />
+
+                            </div>
+                        </a>
+                    </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="WHYUS">
+        <div class="title">
+            <h2>为什么选择艺网 / WHY US</h2>
+        </div>
+        <div class="content">
+            <ul class="clearfix">
+                <li>
+                    <div>
+                        <img class="lazy" data-original="https://cdn.ywart.com/content/image/feature3.svg" alt="保真销售">
+                        <p class="strong">保真销售</p>
+                        <p>艺网出售作品均为艺术家原创作品</p>
+                        <p>绝无仿画及伪作</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img class="lazy" data-original="https://cdn.ywart.com/content/image/feature2.svg" alt="合作代理">
+                        <p class="strong">合作代理</p>
+                        <p>艺网出售的作品均为线上下合作代理</p>
+                        <p>拥有唯一销售权</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img class="lazy" data-original="https://cdn.ywart.com/content/image/feature1.svg" alt="专业定价">
+                        <p class="strong">专业定价</p>
+                        <p>艺网汇聚艺术圈拥有话语权的专家团队</p>
+                        <p>为上线作品进行专业定价</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="imgs">
+            <div class="f_l">
+                <img class="lazy" data-original="https://cdn.ywart.com/material/index/aboutus_201609091826.jpg" alt="关于我们" />
+                <div class="icon">
+                    <img src="https://cdn.ywart.com/content/image/logo_notext.svg">
+                </div>
+            </div>
+            <div class="f_r">
+                <p class="artyouwant">YWART.COM | <b>ART</b>YOUWANT</p>
+                <div class="line"></div>
+                <p class="content">艺网倾力打造的当代原创艺术品电商交易服务平台。旨在推动艺术品消费大众化，依托于专业团队，在全国范围内持续挖掘优秀艺术品，将大量经过严格筛选的高质量原创艺术品通过线上艺术品电商平台带给大众，结合线下的体验空间，形成一整套专业、可信赖的艺术消费服务。</p>
+                <a href="https://pages.ywart.com/aboutus">了解艺网 ›</a>
+            </div>
+        </div>
+    </section>
+    <section class="ASFEATUREDIN">
+        <div class="title">
+            <h2>合作伙伴 / AS FEATURED IN</h2>
+        </div>
+        <div class="contentbox">
+            
+            <img src="https://cdn.ywart.com/content/image/PClogo.png" alt="">
+        </div>
+    </section>
+
+</div>
+
+
+<link href="/dist/style/Footer.min.css" rel="stylesheet" />
+    <footer>
+        <div class="banner">
+            <div class="footer_top clearfix">
+                <div class="top_left">
+                    <img src="/svg_file?path=/content/image/logo_03.svg" alt="艺网logo">
+                </div>
+                <div class="top_right">
+                    <p><a href="https://weibo.com/YWARTCOM" rel="nofollow" target="_blank"><i class="fa fa-weibo"></i></a><i class="fa fa-weixin weixin"></i><img class="weixinShare" src="https://cdn.ywart.com/content/image/weixinQRcode.jpg" alt="weixinQRcode"></p>
+                    <p><i class="fa fa-phone" aria-hidden="true"></i>400-605-7033</p>
+                </div>
+            </div>
+            <div class="row clearfix">
+                <ul>
+                    <li>
+                        <strong>YWART.COM</strong>
+                        <a href="/index">推荐</a>
+                        <a href="/buy">全部作品</a>
+                        <a href="/makeart">入门收藏</a>
+                        <a href="/Original">潜力收藏</a>
+                        <a href="/collect/index">名作收藏</a>
+                        
+                        
+                    </li>
+                    <li>
+                        <strong>了解我们</strong>
+                        <a href="https://pages.ywart.com/aboutus">关于我们</a>
+                        <a href="https://pages.ywart.com/jobs">工作机会</a>
+                        <a href="/Common/WebMap" rel="nofollow">网站地图</a>
+                    </li>
+                    <li>
+                        <strong>支持与帮助</strong>
+                        <a href="https://pages.ywart.com/howtobuy">如何购买</a>
+                        <a href="https://pages.ywart.com/delivery">物流说明</a>
+                        <a href="https://pages.ywart.com/contactus" rel="nofollow">联系我们</a>
+                    </li>
+                    <li>
+                        <strong>合作</strong>
+                        <a href="https://pages.ywart.com/acquisition">作品征集</a>
+                    </li>
+                </ul>
+                <div class="app_download">
+                    <div class="QRcode">
+                        <div class="apple">
+                            <img src="https://cdn.ywart.com/content/image/iosDowndark.png" alt="apple">
+                            <img class="QRcodeimg" src="https://cdn.ywart.com/content/image/iosDownQRcode.png">
+                            <p class="saoyisao">扫一扫，下载app</p>   
+                        </div>
+                        <div class="android">
+                            <img src="https://cdn.ywart.com/content/image/AndroidDowndark.png" alt="android">
+                            <img class="QRcodeimg" src="https://cdn.ywart.com/content/image/AndroidDownQRcode.png">
+                            <p class="saoyisao">扫一扫，下载app</p>   
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p>京ICP备16003461号&nbsp;Copyright © 2015-2019 艺网YWART.COM 版权所有</p>
+                <p class="thrid">
+                    <script>
+                    window.onload = function () {
+                        var a = document.getElementById('footerLink');
+                        a.onclick = function () {
+                            var c = a.parentNode;
+                            var b = c.className;
+                            if (b.indexOf('showlink') > -1) {
+                                c.setAttribute('class', b.replace('showlink', ''));
+                            } else {
+                                c.setAttribute("class", b.concat(" showlink"));
+                            }
+                        }
+                    };
+                    </script>
+                    <i id="footerLink" class="fa fa-sort-desc"></i>
+                    <strong>友情链接</strong>
+                    <span>
+                        <a href="https://www.r021.com" target="_blank">上海论坛</a>
+                        <a href="https://www.zhhdq.com" target="_blank">中华丹青网</a>
+                        <a href="https://www.zh88w.com" target="_blank">书法交易网</a>
+                        <a href="https://news.zxart.cn" target="_blank">艺术资讯</a>
+                        <a href="https://www.pmv.cn" target="_blank">中华收藏网</a>
+                        <a href="https://www.szsao.com" target="_blank">主题酒店设计</a> 
+                        <a href="https://www.sjbb.com" target="_blank">室内设计</a>
+                        <a href="https://www.artyy.org" target="_blank">艺缘网</a>
+                        <a href="https://www.zghrsh.com" target="_blank">中国华人书画网</a>
+                        <a href="https://www.youaila.com/" target="_blank">买购网</a>
+                        <a href="https://www.pifashuhua.com/" target="_blank">字画批发</a>
+                        <a href="https://www.shuhua100.net" target="_blank">中国书画百强网</a>
+                        <a href="https://www.jyzzh.com" target="_blank">集雅斋字画网</a>
+                        <a href="https://www.iwame.cn" target="_blank">画美世界</a> 
+                        <a href="https://www.126ts.com" target="_blank">扣呗网</a>
+                        <a href="https://www.artfon.net" target="_blank">雅风书画网</a>
+                        <a href="https://www.cangyigou.com/" target="_blank">艺术品收藏</a> 
+                        <a href="https://www.gz-cjms.com" target="_blank">广州玻璃钢雕塑</a> 
+                        <a href="https://www.trackingmore.com/" target="_blank">国际快递查询</a>
+                    </span>
+                </p>
+        </div> 
+    </footer>
+    <div class="page_login homeindex Mpage_login _hidden">
+        <div class="page_login_make"></div>
+        <div class="page_login_box">
+            <div class="page_login_logo">
+                <img onclick="" src="https://cdn.ywart.com/content/image/logoAndText.svg">
+            </div>
+            <div class="page_login_dialog">
+                <div class="closelogin" 
+                    style="position:absolute;width:20px;height:20px;top:5px;right:5px">
+                    <img src="https://cdn.ywart.com/content/image/closeInput.svg" />
+                </div>
+                <section class="loginContent">
+                    <div class="switchLogin">
+                        <div class="AccountLoginBtn active">账号登录</div>
+                        <div class="PhoneLoginBtn">手机号登录</div>
+                    </div>
+                    <section class="login_dialog jli">
+                        <div class="account inputdiv">
+                            <p>请输入手机或邮箱</p>
+                            <input type="text" />
+                            <div class="line"></div>
+                            <span class="tip"></span>
+                        </div>
+                        <div class="password inputdiv">
+                            <p>请输入密码</p>
+                            <input type="password" autocomplete="off" />
+                            <div class="line"></div>
+                            <span class="tip"></span>
+                        </div>
+                        <p class="forgetpwbtn">忘记密码</p>
+                        <button class="submit" onclick="">登录</button>
+                        <p class="hasanother">还没有账号？<span onclick="">请注册</span></p>
+                        <div class="graylinebox">
+                            <span class="graylinel"></span>
+                            <span class="huo">或</span>
+                            <span class="grayliner"></span>
+                        </div>
+                        <div class="login_third">
+                            <a href="/Auth/WeiboLogin?" target="_blank" id="weibo">
+                                <i class="fa fa-weibo"></i>
+                            </a>
+                            <a href="/Auth/WeixinLogin?" id="weixin"><i class="fa fa-weixin"></i></a>
+                            
+                        </div>
+                    </section>
+
+                    
+                    <div class="page_login_phone jli">
+                        <section class="register_phone_dialog">
+                            <div class="account inputdiv">
+                                <p>请输入手机号</p>
+                                <input class="phone" type="tel" />
+                                <div class="line"></div>
+                                <span class="tip"></span>
+                            </div>
+                            
+                            <div class="phonecode" style="margin-top:0;">
+                                <input type="text" placeholder="短信验证码" autocomplete="off" />
+                                <button class="codesms">获取短信验证码</button>
+                                <span class="tip"></span>
+                                <div class="_hidden"><span>未收到短信?</span><span class="codephone">获取语音验证</span></div>
+                            </div>
+                            <div id="__nc1">
+                                <div id="nc1" style="height:100%;"></div>
+                            </div>
+                            <button class="submit2">一键登录</button>
+                        </section>
+                    </div>
+                </section>
+                
+                <section class="register_phone_dialog _hidden">
+                    <div class="account inputdiv">
+                        <p>请输入手机号</p>
+                        <input class="phone phonezc" type="tel" />
+                        <div class="line"></div>
+                        <span class="tip"></span>
+                    </div>
+                    
+
+                    
+                    <div class="phonecode">
+                        <input type="text" placeholder="短信验证码" autocomplete="off" />
+                        <button class="code_smszc" type="2">获取短信验证码</button>
+                        <span class="tip"></span>
+                        <div class="_hidden"><span>未收到短信?</span><span class="code_phone">获取语音验证</span></div>
+                    </div>
+                    <div id="__nc3">
+                        <div id="nc3" style="height:100%;"></div>
+                    </div>
+                    <div class="password inputdiv">
+                        <p>请输入6-16位密码</p>
+                        <input type="password" autocomplete="off" />
+                        <div class="line"></div>
+                        <span class="tip"></span>
+                    </div>
+                    <button class="submit">注册</button>
+                    <p class="hasanother">已有账号？<span>请登录</span></p>
+                </section>
+                <section class="forgotpw _hidden">
+                    <div class="account inputdiv">
+                        <p>请输入手机号或邮箱</p>
+                        <input type="text" autocomplete="off" />
+                        <div class="line"></div>
+                        <span class="tip"></span>
+                    </div>
+                    
+                    
+                 
+                    <div class="phonecode">
+                        <input class="WJMMYZ"  type="text" placeholder="短信验证码" autocomplete="off" />
+                        <button class="code_smszc" type="1">获取短信验证码</button>
+                        <span class="tip"></span>
+                        
+                    </div>
+                    <div id="__nc2">
+                        <div id="nc2" style="height:100%;"></div>
+                    </div>
+                    <button class="submit">下一步</button>
+                    <p class="loginbtn">返回登录</p>
+                </section>
+                <section class="forgotpw_phone  _hidden">
+                    <div class="pwd1 inputdiv">
+                        <input type="password" placeholder="设置您的登录密码" autocomplete="off" />
+                        <span class="tip"></span>
+                    </div>
+                    <div class="pwd2 inputdiv">
+                        <input type="password" placeholder="确认密码" autocomplete="off" />
+                        <span class="tip"></span>
+                    </div>
+                    
+                    
+                    
+                    <button class="submit">重置密码</button>
+                    <p class="prev">上一步</p>
+                </section>
+                <section class="forgotpw_success _hidden">
+                    <div class="infobox">
+                        <p class="info"></p>
+                        <p class="emailvalue"></p>
+                    </div>
+                    <button class="submit loginbtn">返回登录</button>
+                </section>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+    var starTime = "2019/12/2 0:00:00";
+    var EndTime = "2019/12/2 23:59:59";
+    var banners = JSON.parse("[{\"ShowDownloadAppIcon\":false,\"DownloadIconStyle\":\"1\",\"Id\":1,\"Name\":\"\",\"Url\":\"https://www.ywart.com/topic/newgift\",\"MobileUrl\":null,\"AppUrl\":null,\"ImgUrl\":\"https://cdn.ywart.com/material/pc/banner/201911201810146355cca3154.jpg\",\"Title\":\"\",\"Subtitle\":\"\",\"Enable\":true},{\"ShowDownloadAppIcon\":false,\"DownloadIconStyle\":\"1\",\"Id\":2,\"Name\":\"\",\"Url\":\"https://www.ywart.com/topic/ChristmasNewyear/435\",\"MobileUrl\":null,\"AppUrl\":null,\"ImgUrl\":\"https://cdn.ywart.com/material/pc/banner/201911261711453636ce4e287.jpg\",\"Title\":\"\",\"Subtitle\":\"\",\"Enable\":true},{\"ShowDownloadAppIcon\":false,\"DownloadIconStyle\":\"1\",\"Id\":3,\"Name\":\"\",\"Url\":\"https://www.ywart.com/User/BonusMall\",\"MobileUrl\":null,\"AppUrl\":null,\"ImgUrl\":\"https://cdn.ywart.com/material/pc/banner/20191101151715938cb37f645.jpg\",\"Title\":\"\",\"Subtitle\":\"\",\"Enable\":true},{\"ShowDownloadAppIcon\":false,\"DownloadIconStyle\":\"1\",\"Id\":4,\"Name\":\"\",\"Url\":\"https://www.ywart.com/topic/jielidou\",\"MobileUrl\":null,\"AppUrl\":null,\"ImgUrl\":\"https://cdn.ywart.com/material/pc/banner/2019110118294134881be3728.jpg\",\"Title\":\"\",\"Subtitle\":\"\",\"Enable\":true},{\"ShowDownloadAppIcon\":false,\"DownloadIconStyle\":\"1\",\"Id\":5,\"Name\":\"\",\"Url\":\"https://www.ywart.com/topic/cms?Url=https%3A%2F%2Fpages.ywart.com%2Fwgz-wyy%3Fappview%3D1\",\"MobileUrl\":null,\"AppUrl\":null,\"ImgUrl\":\"https://cdn.ywart.com/material/pc/banner/20191025110656817d5dd4825.jpg\",\"Title\":\"\",\"Subtitle\":\"\",\"Enable\":true},{\"ShowDownloadAppIcon\":false,\"DownloadIconStyle\":\"1\",\"Id\":6,\"Name\":\"\",\"Url\":\"https://www.ywart.com/topic/cms?Url=https%3A%2F%2Fpages.ywart.com%2Fwgz-llf%3Fappview%3D1\",\"MobileUrl\":null,\"AppUrl\":null,\"ImgUrl\":\"https://cdn.ywart.com/material/pc/banner/201909031356213778323a576.jpg\",\"Title\":\"\",\"Subtitle\":\"\",\"Enable\":false},{\"ShowDownloadAppIcon\":false,\"DownloadIconStyle\":\"1\",\"Id\":7,\"Name\":\"\",\"Url\":\"https://www.ywart.com/topic/cms?Url=https%3A%2F%2Fpages.ywart.com%2Fwgz-wly%3Fappview%3D1\",\"MobileUrl\":null,\"AppUrl\":null,\"ImgUrl\":\"https://cdn.ywart.com/material/pc/banner/2019110813201089245942bdc.jpg\",\"Title\":\"\",\"Subtitle\":\"\",\"Enable\":false},{\"ShowDownloadAppIcon\":false,\"DownloadIconStyle\":\"1\",\"Id\":8,\"Name\":\"\",\"Url\":\"https://www.ywart.com/AiteArtFair/\",\"MobileUrl\":null,\"AppUrl\":null,\"ImgUrl\":\"https://cdn.ywart.com/material/pc/banner/201911181758301325a40d480.jpg\",\"Title\":\"\",\"Subtitle\":\"\",\"Enable\":true},{\"ShowDownloadAppIcon\":false,\"DownloadIconStyle\":\"1\",\"Id\":9,\"Name\":\"\",\"Url\":\"https://www.ywart.com/shopping/BuyVirtualGoods?id=1\",\"MobileUrl\":null,\"AppUrl\":null,\"ImgUrl\":\"https://cdn.ywart.com/material/pc/banner/201911011837110342ea70595.png\",\"Title\":\"\",\"Subtitle\":\"\",\"Enable\":false},{\"ShowDownloadAppIcon\":false,\"DownloadIconStyle\":\"1\",\"Id\":10,\"Name\":\"\",\"Url\":\"https://www.ywart.com/AiteArtFair/SomeExhibition?themeId=1\",\"MobileUrl\":null,\"AppUrl\":null,\"ImgUrl\":\"https://cdn.ywart.com/material/pc/banner/20191018183617815bc75f0e3.jpg\",\"Title\":\"\",\"Subtitle\":\"\",\"Enable\":false},{\"ShowDownloadAppIcon\":false,\"DownloadIconStyle\":\"1\",\"Id\":11,\"Name\":\"\",\"Url\":\"https://www.ywart.com/topic/eleven2019\",\"MobileUrl\":null,\"AppUrl\":null,\"ImgUrl\":\"https://cdn.ywart.com/material/pc/banner/201911150946462550a90507e.jpg\",\"Title\":\"\",\"Subtitle\":\"\",\"Enable\":false},{\"ShowDownloadAppIcon\":false,\"DownloadIconStyle\":\"1\",\"Id\":12,\"Name\":\"\",\"Url\":\"https://www.ywart.com/AiteArtFair/SomeExhibition?themeId=4\",\"MobileUrl\":null,\"AppUrl\":null,\"ImgUrl\":\"https://cdn.ywart.com/material/pc/banner/20191018183744458a7b7dee6.jpg\",\"Title\":\"\",\"Subtitle\":\"\",\"Enable\":false},{\"ShowDownloadAppIcon\":false,\"DownloadIconStyle\":\"1\",\"Id\":13,\"Name\":\"\",\"Url\":\"https://www.ywart.com/topic/cms?Url=https%3A%2F%2Fpages.ywart.com%2Fzp%3Fappview%3D1\",\"MobileUrl\":null,\"AppUrl\":null,\"ImgUrl\":\"https://cdn.ywart.com/material/pc/banner/2019101818270038525b486cf.png\",\"Title\":\"\",\"Subtitle\":\"\",\"Enable\":false},{\"ShowDownloadAppIcon\":false,\"DownloadIconStyle\":\"1\",\"Id\":14,\"Name\":\"\",\"Url\":\"https://pages.ywart.com/nationalday\",\"MobileUrl\":null,\"AppUrl\":null,\"ImgUrl\":\"https://cdn.ywart.com/material/pc/banner/201910111542197201d92b30d.png\",\"Title\":\"\",\"Subtitle\":\"\",\"Enable\":false},{\"ShowDownloadAppIcon\":false,\"DownloadIconStyle\":\"1\",\"Id\":15,\"Name\":\"\",\"Url\":\"https://pages.ywart.com/marriagegift\",\"MobileUrl\":null,\"AppUrl\":null,\"ImgUrl\":\"https://cdn.ywart.com/material/pc/banner/20191012134609292f9c8f993.jpg\",\"Title\":\"\",\"Subtitle\":\"\",\"Enable\":false},{\"ShowDownloadAppIcon\":false,\"DownloadIconStyle\":\"1\",\"Id\":16,\"Name\":\"\",\"Url\":\"https://pages.ywart.com/autumnseason?appview=1\",\"MobileUrl\":null,\"AppUrl\":null,\"ImgUrl\":\"https://cdn.ywart.com/material/pc/banner/20190919160925647819c10cb.jpg\",\"Title\":\"\",\"Subtitle\":\"\",\"Enable\":false},{\"ShowDownloadAppIcon\":false,\"DownloadIconStyle\":\"1\",\"Id\":17,\"Name\":\"\",\"Url\":\"https://www.ywart.com/topic/cms?Url=https%3A%2F%2Fpages.ywart.com%2Fwgz-gkj%3Fappview%3D1\",\"MobileUrl\":null,\"AppUrl\":null,\"ImgUrl\":\"https://cdn.ywart.com/material/pc/banner/20190920142716494bd1001f4.jpg\",\"Title\":\"\",\"Subtitle\":\"\",\"Enable\":false},{\"ShowDownloadAppIcon\":false,\"DownloadIconStyle\":\"1\",\"Id\":18,\"Name\":\"\",\"Url\":\"https://www.ywart.com/topic/cms?Url=https%3A%2F%2Fpages.ywart.com%2Fyws%3Fappview%3D1\",\"MobileUrl\":null,\"AppUrl\":null,\"ImgUrl\":\"https://cdn.ywart.com/material/pc/banner/20190726150217302b7095e04.jpg\",\"Title\":\"\",\"Subtitle\":\"\",\"Enable\":false},{\"ShowDownloadAppIcon\":false,\"DownloadIconStyle\":\"1\",\"Id\":19,\"Name\":\"\",\"Url\":\"https://www.ywart.com/topic/cms?Url=https%3A%2F%2Fpages.ywart.com%2Fmoonfestvial%3Fappview%3D1\",\"MobileUrl\":null,\"AppUrl\":null,\"ImgUrl\":\"https://cdn.ywart.com/material/pc/banner/201909051626402947aad35b6.jpg\",\"Title\":\"\",\"Subtitle\":\"\",\"Enable\":false},{\"ShowDownloadAppIcon\":false,\"DownloadIconStyle\":\"1\",\"Id\":20,\"Name\":\"\",\"Url\":\"https://www.ywart.com/topic/WinCollect/385\",\"MobileUrl\":null,\"AppUrl\":null,\"ImgUrl\":\"https://cdn.ywart.com/material/pc/banner/201909121314348938bbb6821.jpg\",\"Title\":\"\",\"Subtitle\":\"\",\"Enable\":false},{\"ShowDownloadAppIcon\":false,\"DownloadIconStyle\":\"1\",\"Id\":21,\"Name\":\"\",\"Url\":\"https://www.ywart.com/topic/cms?Url=https%3A%2F%2Fpages.ywart.com%2Fhowtoplaywithart%3Fappview%3D1\",\"MobileUrl\":null,\"AppUrl\":null,\"ImgUrl\":\"https://cdn.ywart.com/material/pc/banner/201907121731434555c5ee585.jpg\",\"Title\":\"\",\"Subtitle\":\"\",\"Enable\":false},{\"ShowDownloadAppIcon\":false,\"DownloadIconStyle\":\"1\",\"Id\":22,\"Name\":\"\",\"Url\":\"https://www.ywart.com/topic/cms?Url=https%3A%2F%2Fpages.ywart.com%2Fwgz-zzz%3Fappview%3D1\",\"MobileUrl\":null,\"AppUrl\":null,\"ImgUrl\":\"https://cdn.ywart.com/material/pc/banner/20190802110144012b2e1ad1c.jpg\",\"Title\":\"\",\"Subtitle\":\"\",\"Enable\":false},{\"ShowDownloadAppIcon\":false,\"DownloadIconStyle\":\"1\",\"Id\":23,\"Name\":\"\",\"Url\":\"https://www.ywart.com/topic/cms?Url=https%3A%2F%2Fpages.ywart.com%2Fwgz-lsb-2%3Fappview%3D1\",\"MobileUrl\":null,\"AppUrl\":null,\"ImgUrl\":\"https://cdn.ywart.com/material/pc/banner/20190710110743622cff0c0a6.jpg\",\"Title\":\"\",\"Subtitle\":\"\",\"Enable\":false},{\"ShowDownloadAppIcon\":false,\"DownloadIconStyle\":\"1\",\"Id\":24,\"Name\":\"\",\"Url\":\"https://www.ywart.com/topic/WinCollect?id=371\",\"MobileUrl\":null,\"AppUrl\":null,\"ImgUrl\":\"https://cdn.ywart.com/material/pc/banner/201907091144104714c595aa3.jpg\",\"Title\":\"\",\"Subtitle\":\"\",\"Enable\":false},{\"ShowDownloadAppIcon\":false,\"DownloadIconStyle\":\"1\",\"Id\":25,\"Name\":\"\",\"Url\":\"https://www.ywart.com/topic/cms?Url=https%3A%2F%2Fpages.ywart.com%2Fbeprettybekind%3Fappview%3D1\",\"MobileUrl\":null,\"AppUrl\":null,\"ImgUrl\":\"https://cdn.ywart.com/material/pc/banner/20190719145510332fbbd8a47.jpg\",\"Title\":\"\",\"Subtitle\":\"\",\"Enable\":false},{\"ShowDownloadAppIcon\":false,\"DownloadIconStyle\":\"1\",\"Id\":26,\"Name\":\"\",\"Url\":\"https://www.ywart.com/topic/cms?Url=https%3A%2F%2Fpages.ywart.com%2Fwgz-chsc-2%3Fappview%3D1\",\"MobileUrl\":null,\"AppUrl\":null,\"ImgUrl\":\"https://cdn.ywart.com/material/pc/banner/20190625165633472b22fae00.jpg\",\"Title\":\"\",\"Subtitle\":\"\",\"Enable\":false},{\"ShowDownloadAppIcon\":false,\"DownloadIconStyle\":\"1\",\"Id\":27,\"Name\":\"\",\"Url\":\"https://www.ywart.com/topic/cms?Url=https%3A%2F%2Fpages.ywart.com%2Fwgz-chz-2%3Fappview%3D1\",\"MobileUrl\":null,\"AppUrl\":null,\"ImgUrl\":\"https://cdn.ywart.com/material/pc/banner/2019070416392163168504bd6.jpg\",\"Title\":\"\",\"Subtitle\":\"\",\"Enable\":false},{\"ShowDownloadAppIcon\":false,\"DownloadIconStyle\":\"1\",\"Id\":28,\"Name\":\"\",\"Url\":\"https://www.ywart.com/topic/cms?Url=https%3A%2F%2Fpages.ywart.com%2Fwgz-huangcy%3Fappview%3D1\",\"MobileUrl\":null,\"AppUrl\":null,\"ImgUrl\":\"https://cdn.ywart.com/material/pc/banner/2019070311590719726062c65.jpg\",\"Title\":\"\",\"Subtitle\":\"\",\"Enable\":false},{\"ShowDownloadAppIcon\":false,\"DownloadIconStyle\":\"1\",\"Id\":29,\"Name\":\"\",\"Url\":\"https://www.ywart.com/topic/cms?Url=https%3A%2F%2Fpages.ywart.com%2Fmengxq%3Fappview%3D1\",\"MobileUrl\":null,\"AppUrl\":null,\"ImgUrl\":\"https://cdn.ywart.com/material/pc/banner/2019062815391529168accf8b.jpg\",\"Title\":\"\",\"Subtitle\":\"\",\"Enable\":false},{\"ShowDownloadAppIcon\":false,\"DownloadIconStyle\":\"1\",\"Id\":30,\"Name\":\"\",\"Url\":\"https://www.ywart.com/topic/cms?Url=https%3A%2F%2Fpages.ywart.com%2Frichornot%3Fappview%3D1\",\"MobileUrl\":null,\"AppUrl\":null,\"ImgUrl\":\"https://cdn.ywart.com/material/pc/banner/2019042818231426703772867.jpg\",\"Title\":\"\",\"Subtitle\":\"\",\"Enable\":false},{\"ShowDownloadAppIcon\":false,\"DownloadIconStyle\":\"1\",\"Id\":31,\"Name\":\"\",\"Url\":\"https://www.ywart.com/livable/matchingstyle\",\"MobileUrl\":null,\"AppUrl\":null,\"ImgUrl\":\"https://cdn.ywart.com/material/pc/banner/201810101517224291621a687.jpg\",\"Title\":\"\",\"Subtitle\":\"\",\"Enable\":false},{\"ShowDownloadAppIcon\":false,\"DownloadIconStyle\":\"1\",\"Id\":32,\"Name\":\"\",\"Url\":\"https://www.ywart.com/artworks/1v8r1w\",\"MobileUrl\":null,\"AppUrl\":null,\"ImgUrl\":\"https://cdn.ywart.com/material/pc/banner/201903211531295539e276c4a.jpg\",\"Title\":\"\",\"Subtitle\":\"\",\"Enable\":false},{\"ShowDownloadAppIcon\":false,\"DownloadIconStyle\":\"1\",\"Id\":33,\"Name\":\"\",\"Url\":\"https://www.ywart.com/artworks/1o0ywm\",\"MobileUrl\":null,\"AppUrl\":null,\"ImgUrl\":\"https://cdn.ywart.com/material/pc/banner/201902151806506358aa33119.jpg\",\"Title\":\"\",\"Subtitle\":\"\",\"Enable\":false},{\"ShowDownloadAppIcon\":false,\"DownloadIconStyle\":\"1\",\"Id\":34,\"Name\":\"\",\"Url\":\"https://pages.ywart.com/wgz-csc\",\"MobileUrl\":null,\"AppUrl\":null,\"ImgUrl\":\"https://cdn.ywart.com/material/pc/banner/201905281204441909e31f138.jpg\",\"Title\":\"\",\"Subtitle\":\"\",\"Enable\":false}]");
+    require(['/dist/script/page/Home.Index.min.js?v=20191028']);
+    </script>
+
+    <script id="authloginjs" src="/dist/script/page/Auth.Login.min.js?v=20191028"></script>
+    <section id="vipdialog" style="position:fixed;width:100%;height:100%;top:0;left:0;display:none">
+    <div class="abs100 blackmark" style="background-color:rgba(0, 0, 0, 0.7);z-index:1"></div>
+    
+    <div id="howvipbox" class="" style="width: 710px; height: 360px; background-image:url(https://cdn.ywart.com/material/view1/collect/vipbg.jpg);background-size:100% 100%;position:absolute;z-index:2;left:50%;top:50%;margin-left:-355px;margin-top:-180px" ;>
+        <div class="closeJoinVIP" style="color:#ccb892;-webkit-transform: rotate(-45deg);transform: rotate(-45deg);width:20px;height:20px;padding:10px;cursor:pointer;position:absolute;top:7px;right:25px;font-size:32px;">+</div>
+        
+        <div style="position:absolute;top:131px;left:77px;width:565px;font-size:12px;line-height:1.75;color: rgb(51, 51, 51);">
+            1. 付费成为VIP会员，立即获得 <strong>￥588</strong>优惠券</br>
+            2. 会员在有效期内，每月可以获得价值 <strong>￥600</strong>优惠券</br>
+            3. 单笔订单支付时，可使用会员专享<strong>98折</strong>（特惠作品除外）</br>
+            4. 获艺网 <strong>名作收藏</strong> 板块浏览详情及购买权限</br>
+            5. 专业<strong>艺术顾问</strong>，提供一对一的咨询服务</br>
+            6. 在有效期内，VIP会员享受<strong>双倍积分</strong>权益</br>
+        </div>
+        <a id="gobuyVIP" onclick="_hmt.push(['_trackEvent', 'VIP', '立即成为VIP']);" href="/shopping/BuyVirtualGoods?id=1" style="text-align:center;position:absolute;top: 77.3%;background-color:rgb(204, 184, 146);left:50%;width:248px;line-height:40px;margin-left:-128px;outline:none;border:0;padding:0;cursor:pointer;color:#fff;font-size: 20px;font-weight: 600; letter-spacing: 0.2px;">
+            <span style="position:absolute;left:-12px;top:0;width:0;height:0;border-bottom:20px solid rgba(0,0,0,0);border-top:20px solid rgba(0,0,0,0);border-right:12px solid rgb(204,184,146);"></span>
+            立即成为VIP
+            <span style="position:absolute;right:-12px;top:0;width:0;height:0;border-bottom:20px solid rgba(0,0,0,0);border-top:20px solid rgba(0,0,0,0);border-left:12px solid rgb(204,184,146);"></span>
+        </a>
+    </div>
+</section>
+
+<script>
+    require(["jquery", "common"],
+    function (_$, common) {
+        $(function () {
+            if ($('.joinVIPcshtml_background').length > 0) {
+                $('.closeJoinVIP').click(function () {
+                    common.returnrefererr('/collect/index');
+                });
+            } else {
+                $('.closeJoinVIP').click(function () {
+                    $('#vipdialog').hide();
+                });
+            }
+            $('.howVipbtn').click(function () {
+                $('#vipbox').hide();
+                $('#howvipbox').show();
+            });
+            $('.BackJoinVIP').click(function () {
+                $('#howvipbox').hide();
+                $('#vipbox').show();
+            });
+            $('#vipcodecheck').click(function () {
+                //请求校验vipcode
+                common.checkVipCode(invitecode.value, function () {
+                    $('#vipbox').css({ 'background-image': 'url(https://cdn.ywart.com/material/view1/collect/vipdone.jpg)' }).html('');
+                    $.post('/SessionWriteable/SyncVipLV');
+                    $(document).click(function () {
+                        common.pass('/collect/all');
+                    });
+                })
+            });
+            $('#invitecode').on('input', function (e) {
+                //输入后按钮变化
+                if (e.target.value == "") {
+                    $('#vipbox').css({ "background-image": "url(https://cdn.ywart.com/material/view1/collect/VIP1.jpg)" });
+                } else {
+                    $('#vipbox').css({ "background-image": "url(https://cdn.ywart.com/material/view1/collect/VIP2.jpg)" });
+                }
+            });
+        });
+    });
+</script>
+
+    
+    <script type='text/javascript'>
+        (function (m, ei, q, i, a, j, s) {
+            m[i] = m[i] || function () {
+                (m[i].a = m[i].a || []).push(arguments)
+            };
+            j = ei.createElement(q),
+                s = ei.getElementsByTagName(q)[0];
+            j.async = true;
+            j.charset = 'UTF-8';
+            j.src = 'https://static.meiqia.com/dist/meiqia.js?_=t';
+            s.parentNode.insertBefore(j, s);
+        })(window, document, 'script', '_MEIQIA');
+        _MEIQIA('entId', 24012);
+        //_MEIQIA('allSet', function () {
+        //    document.getElementById("MEIQIA-BTN-TEXT").innerHTML = "购买咨询";
+        //    document.getElementById("MEIQIA-BTN-TEXT").onclick = function () {
+        //        _hmt.push(['_trackEvent', '客服', '客服']);
+        //    }
+        //    document.getElementById("MEIQIA-BTN").style.backgroundColor = "#1f1f1f";
+        //    //document.getElementById("pageChat").querySelector("header").style.backgroundColor = "#1f1f1f";
+        //});
+    </script>
+
+
+
+
+
+<script>
+    //百度自动推送站点地图
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+
+<script type="text/javascript" charset="utf-8" src="//g.alicdn.com/sd/nch5/index.js?t=2015052012"></script>
+<script>
+    window.callbackHK = function(data,scene){
+        require(["jquery", "bus", "common"],function (_$, _bus, _common) {
+            // window.console && console.log(nc_token)
+            // window.console && console.log(data.csessionid)
+            // window.console && console.log(data.sig)
+            // scene
+            // var params = {};
+            // params.module = "Common.VerifyCode";
+            // params.action = "SendVerifyCode2";
+            // params.mobile = "13146258527";
+            // params.captchacode = getNVCVal();
+            // params.verifytype = 1;
+            // params.sceneType = 1;
+            // params.SessionId = data.csessionid;
+            // params.Sig = data.sig;
+            // params.Token = nc_token;
+            // params.Scene = scene;
+            // $.ajax({ data: params }).done(function (result) {
+            //     console.log(result)
+            // })
+            console.log(data,scene);
+        })
+    }
+    window.NVC_Opt = {
+        //无痕配置
+        appkey:'FFFF0N00000000008571',
+        scene:'nvc_message_h5',
+        // renderTo: '#nc',
+        // nvcCallback:function(data){
+        //     console.log(data);
+        // },
+        language: "cn",
+        // customWidth: 300,
+        // popUp:false
+    }
+    window.NoCaptchaFn = function(fnName){
+        window.nc_token = ["FFFF0N00000000008571", (new Date()).getTime(), Math.random()].join(':');
+        window[fnName]=NoCaptcha.init({
+            renderTo: '#'+fnName,
+            appkey: 'FFFF0N00000000008571', 
+            scene: 'nc_message_h5',
+            token: window.nc_token,
+            trans: {"key1": "code200"},
+            elementID: ["usernameID"],
+            is_Opt: 0,
+            language: "cn",
+            timeout: 10000,
+            retryTimes: 5,
+            errorTimes: 5,
+            inline:false,
+            apimap: {
+                // 'analyze': '//a.com/nocaptcha/analyze.jsonp',
+                // 'uab_Url': '//aeu.alicdn.com/js/uac/909.js',
+            },
+            bannerHidden:true,
+            initHidden:true,
+            callback: function (data) {
+                window.callbackHK(data,"nc_message_h5");
+                window[fnName].reset();
+            },
+            error: function (s) {
+            }
+        });
+        NoCaptcha.setEnabled(true);
+        window[fnName].reset();//请务必确保这里调用一次reset()方法
+        NoCaptcha.upLang('cn', {
+            'LOADING':"加载中...",//加载
+            'SLIDER_LABEL': "请向右滑动验证",//等待滑动
+            'CHECK_Y':"验证通过",//通过
+            'ERROR_TITLE':"非常抱歉，这出错了...",//拦截
+            'CHECK_N':"验证未通过", //准备唤醒二次验证
+            'OVERLAY_INFORM':"经检测你当前操作环境存在风险，请输入验证码",//二次验证
+            'TIPS_TITLE':"验证码错误，请重新输入"//验证码输错时的提示
+        });
+    }
+    NoCaptchaFn("nc1");
+</script>
+<script src="//g.alicdn.com/sd/nvc/1.1.112/guide.js"></script>
+
+
+    <script>
+        console.log("%c%s", "color: red; background: yellow; font-size: 24px; font-weight: bold;", "\u5b89\u5168\u8b66\u544a!"), console.log("%c%s", "color: black; font-size: 18px;", "\u8bf7\u52ff\u5728\u6b64\u63a7\u5236\u53f0\u8f93\u5165\u6216\u7c98\u8d34\u4f60\u4e0d\u660e\u767d\u7684\u4ee3\u7801\uff0c\u4ee5\u907f\u514d\u653b\u51fb\u8005\u7a83\u53d6\u4f60\u7684\u4fe1\u606f\u6765\u5192\u5145\u4f60\u3002")
+    </script>
+</body>
+</html>

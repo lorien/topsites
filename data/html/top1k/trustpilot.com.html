@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+    <link rel="preload"
+          href="https://consumer-assets.trustpilot.com/assets/hero-768.jpg"
+          as="image"
+          type="image/jpeg"
+          media="(max-width: 767px)"
+          crossorigin />
+    <link rel="preload"
+          href="https://consumer-assets.trustpilot.com/assets/hero.jpg"
+          as="image"
+          type="image/jpeg"
+          media="(min-width: 768px)"
+          crossorigin />
+
+        <link rel="preconnect" href="https://googleads.g.doubleclick.net/" crossorigin />
+<link rel="preconnect" href="https://www.googleadservices.com/" crossorigin />
+<link rel="preconnect" href="https://www.googletagmanager.com/" crossorigin />
+<link rel="preconnect" href="https://cdn.trustpilot.net/" crossorigin />
+<link rel="preconnect" href="https://api.amplitude.com/" crossorigin />
+<link rel="preconnect" href="//user-images.trustpilot.com/" crossorigin />
+    <link rel="preconnect" href="https://consumer-assets.trustpilot.com" crossorigin />
+
+<script src="https://browser.sentry-cdn.com/4.6.5/bundle.min.js" crossorigin="anonymous"></script>
+<script>
+Sentry.init({
+    dsn: 'https://6f5671770e934b39a447418d18a28092@sentry.io/1425086',
+    sampleRate: 0.03,
+    environment: 'Production',
+    release: 'consumersite-consumersiteweb@4270.0'
+});
+Sentry.configureScope(function(scope) {
+    scope.setTag("route", "");
+    scope.setTag("subdomain", "www");
+});
+</script>
+
+
+                    <link rel="alternate" hreflang="x-default" href="https://www.trustpilot.com/" />
+                    <link rel="alternate" hreflang="de-AT" href="https://at.trustpilot.com/" />
+                    <link rel="alternate" hreflang="de-CH" href="https://ch.trustpilot.com/" />
+                    <link rel="alternate" hreflang="en-AU" href="https://au.trustpilot.com/" />
+                    <link rel="alternate" hreflang="en-CA" href="https://ca.trustpilot.com/" />
+                    <link rel="alternate" hreflang="en-GB" href="https://uk.trustpilot.com/" />
+                    <link rel="alternate" hreflang="en-IE" href="https://ie.trustpilot.com/" />
+                    <link rel="alternate" hreflang="en-NZ" href="https://nz.trustpilot.com/" />
+                    <link rel="alternate" hreflang="fr-BE" href="https://fr-be.trustpilot.com/" />
+                    <link rel="alternate" hreflang="nl-BE" href="https://nl-be.trustpilot.com/" />
+                    <link rel="alternate" hreflang="pt-BR" href="https://br.trustpilot.com/" />
+                    <link rel="alternate" hreflang="da" href="https://dk.trustpilot.com/" />
+                    <link rel="alternate" hreflang="de" href="https://de.trustpilot.com/" />
+                    <link rel="alternate" hreflang="en" href="https://www.trustpilot.com/" />
+                    <link rel="alternate" hreflang="es" href="https://es.trustpilot.com/" />
+                    <link rel="alternate" hreflang="fi" href="https://fi.trustpilot.com/" />
+                    <link rel="alternate" hreflang="fr" href="https://fr.trustpilot.com/" />
+                    <link rel="alternate" hreflang="it" href="https://it.trustpilot.com/" />
+                    <link rel="alternate" hreflang="ja" href="https://jp.trustpilot.com/" />
+                    <link rel="alternate" hreflang="nb" href="https://no.trustpilot.com/" />
+                    <link rel="alternate" hreflang="nl" href="https://nl.trustpilot.com/" />
+                    <link rel="alternate" hreflang="pl" href="https://pl.trustpilot.com/" />
+                    <link rel="alternate" hreflang="pt" href="https://pt.trustpilot.com/" />
+                    <link rel="alternate" hreflang="ru" href="https://ru.trustpilot.com/" />
+                    <link rel="alternate" hreflang="sv" href="https://se.trustpilot.com/" />
+                    <link rel="alternate" hreflang="zh" href="https://cn.trustpilot.com/" />
+            <link rel="canonical" href="https://www.trustpilot.com/" />
+
+
+<script type="text/javascript">
+    
+    (function() { /* 'Disable' Segments Querystring API */
+        var os = location.search;
+        var ns = os.length ? '?'+os.substring(1).split('&').filter(function(param){return !/^ajs_(aid|event|uid)=/i.test(param);}).join('&') : '';
+        if (typeof window.history === 'object' && os !== ns) {
+            window.history.replaceState({}, '', location.pathname + ns)
+        }
+    })();
+    var analytics = analytics || []; (function () { var e = ["identify", "track", "trackLink", "trackForm", "trackClick", "trackSubmit", "page", "pageview", "ab", "alias", "ready", "group"], t = function (e) { return function () { analytics.push([e].concat(Array.prototype.slice.call(arguments, 0))) } }; for (var n = 0; n < e.length; n++) analytics[e[n]] = t(e[n]) })(), analytics.load = function (e) { var t = document.createElement("script"); t.type = "text/javascript", t.async = !0, t.src = ("https:" === document.location.protocol ? "https://" : "http://") + "d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/" + e + "/analytics.min.js"; var n = document.getElementsByTagName("script")[0]; n.parentNode.insertBefore(t, n) };
+    analytics.SNIPPET_VERSION = '3.0.1';
+    analytics.load("8tb69qtawc");
+</script>
+<script type="text/javascript">
+    
+    _atrk_opts = { atrk_acct: "uIxpk1a0Sn00yT", domain: "trustpilot.com", dynamic: true };
+    window.addEventListener('load', function () { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js"; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(as, s); });
+</script>
+
+    <script>
+        (function() {
+            if (location.pathname !== "/error/upgradebrowser") {
+                var n = navigator.appName, ua = navigator.userAgent, tem;
+                var m = ua.match(/(opera|chrome|safari|firefox|msie)\/?\s*(\.?\d+(\.\d+)*)/i);
+                if (m && (tem = ua.match(/version\/([\.\d]+)/i)) != null) m[2] = tem[1];
+                var browserDetails = m ? [m[1], m[2]] : [n, navigator.appVersion, '-?'];
+                var browserDetailsName = browserDetails[0];
+                var browserDetailsVersion = parseInt(browserDetails[1], 10);
+                var redirectUrl = "/error/upgradebrowser?status=browser";
+                var isAndroid = ua.match(/(android)\/?\s*(\.?\d+(\.\d+)*)/i);
+
+                if ((browserDetailsName == "MSIE" && browserDetailsVersion <= 10) ||
+                    (browserDetailsName == "Firefox" && browserDetailsVersion <= 3.6) ||
+                    (browserDetailsName == "Opera" && browserDetailsVersion <= 10.6) ||
+                    (browserDetailsName == "Safari" && browserDetailsVersion <= 9 && !isAndroid)) {
+                    var trackingData = {
+                        userAgent: ua,
+                        referringPath: document.location.pathname
+                    };
+                    window.analytics.track('UnsupportedBrowserDetected', trackingData);
+                    // We set a short time out before redirecting
+                    // to ensure that the analytics.track() request gets time to finish
+                    setTimeout(function() { window.location = redirectUrl; }, 200);
+                }
+            }
+        })();
+    </script>
+ 
+<title>Trustpilot Reviews: Experience the power of customer reviews</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="We&#39;re all about consumer reviews. Get the real inside story from shoppers like you. Read, write and share reviews on Trustpilot today." />
+<link rel="shortcut icon" type="image/x-icon" href="//cdn.trustpilot.net/brand-assets/1.5.0/favicons/favicon.ico">
+
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="Trustpilot">
+<meta name="theme-color" content="#000032">
+<link rel="apple-touch-icon" sizes="180x180" href="//cdn.trustpilot.net/brand-assets/1.5.0/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="//cdn.trustpilot.net/brand-assets/1.5.0/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="//cdn.trustpilot.net/brand-assets/1.5.0/favicons/favicon-16x16.png">
+<link rel="mask-icon" href="//cdn.trustpilot.net/brand-assets/1.9.0/favicons/safari-pinned-tab.svg" color="#00b67a">
+<meta name="apple-mobile-web-app-title" content="Trustpilot">
+<meta name="msapplication-TileColor" content="#000032">
+<meta name="msapplication-config" content="https://consumer-assets.trustpilot.com/assets/browserconfig.xml">
+
+<script type="text/javascript">
+    window._configuration = window._configuration || {};
+    window._configuration.isLoggedIn = false;
+    window._configuration.i18nApiHost = 'https://i18n.trustpilot.com';
+    window._configuration.country = 'US';
+    window._configuration.locale = 'en-US';
+    window._configuration.profileImageMaxSize = 5242880;
+    window._configuration.qandaApiHost = 'trustpilot.com';
+    window._configuration.staticAssetsHost = 'https://consumer-assets.trustpilot.com';
+    window._configuration.baseApiUrl = 'https://api.trustpilot.com';
+    window._configuration.businessAppUrl = 'https://businessapp.b2b.trustpilot.com/';
+</script>
+<script>
+    window.ajaxErrorMessage = 'Oops something went wrong.' + ' Please try again later.';
+</script>
+
+<script type="application/json" data-initial-state="FeatureFlags">
+{"consumer-site-ab-test-consumer-site-invitations":false,"consumer-site-ab-test-home-page-mobile-companies-button":true,"consumer-site-ab-test-service-attributes-in-evaluate-flow":false,"consumer-site-ab-test-service-attributes-on-evaluate-page":false,"consumer-site-activity-page":false,"consumer-site-ask-a-question-step-1":false,"consumer-site-brand-header":true,"consumer-site-brand-review-card":false,"consumer-site-brand-review-submitted":true,"consumer-site-brand-v1":true,"consumer-site-categories-overview":true,"consumer-site-cpp-brand-rollout":false,"consumer-site-deny-page-depth-on-company-profile-page":false,"consumer-site-exclude-visit-this-website":true,"consumer-site-filter-reviews-preserving-ads":true,"consumer-site-half-stars-rollout":true,"consumer-site-homepage-disable-alexa":false,"consumer-site-homepage-disable-segment":false,"consumer-site-invitations":false,"consumer-site-load-business-units-from-dynamo-db":false,"consumer-site-load-json-ld-synchronize":true,"consumer-site-marketing-opt-in":false,"consumer-site-marketing-permissions":true,"consumer-site-new-categories":true,"consumer-site-product-reviews-beta":false,"consumer-site-project-braveheart":true,"consumer-site-review-card-company-reply":false,"consumer-site-show-company-activity-box-in-coc":false,"consumer-site-show-download-consumer-data":true,"consumer-site-test-index-business-units-with-zero-reviews":false,"consumer-site-use-cached-review-statistics-api":true,"consumer-site-use-new-authentication-ui-on-connect-page":true,"consumer-site-use-new-authentication-ui-on-evaluate-page":true,"consumer-site-use-new-external-authentication-ui-on-evaluate-page":true,"consumer-site-use-new-may-2019-google-maps-api-key":true,"consumer-site-use-nomodule-for-polyfills-loading":true,"consumer-site-verification-code-authentication":true,"consumersite-digest-opt-in":true,"consumersite-real-time-feedback-evaluate":false,"consumersite-show-advertisements":true}
+</script>
+
+
+
+<script defer="defer" nomodule src="https://polyfills.trustpilot.com/v2/polyfill.min.js?features=Promise,fetch,Object.assign,Element.prototype.matches,Element.prototype.closest&flags=gated"></script>
+
+<script type="text/javascript">
+    var TP = TP || {};
+    TP.l10n = {
+        legalTextVersions: {"broadmarketing":{"name":"broadmarketing","translationKey":"legaltext/broadmarketing/v3","version":3}},
+    };
+</script>
+<script type="application/json" data-initial-state="l10n">
+{"root":{"search/show_all_results":"Show all results"}}
+</script>
+
+<script defer="defer" type="text/javascript" src="https://consumer-assets.trustpilot.com/lib/jquery-3.1.1-1.min.js"></script>
+<script defer="defer" type="text/javascript" src="https://consumer-assets.trustpilot.com/0-350a595e4baa058540f1-2.js"></script>
+<script defer="defer" type="text/javascript" src="https://consumer-assets.trustpilot.com/1-658e8bcde53a71e0ec82-2.js"></script>
+<script defer="defer" type="text/javascript" src="https://consumer-assets.trustpilot.com/home-brand.page-3e17cd27db4c76cfaf93-2.js"></script>
+
+<link rel="stylesheet" type="text/css" href="https://consumer-assets.trustpilot.com/home-brand.page-3e17cd27db4c76cfaf93-2.css" />
+
+        
+    <script type="application/ld+json">
+        {
+            "@context":"http://schema.org",
+            "@type":"WebSite",
+            "name": "Trustpilot",
+            "url":"https://www.trustpilot.com/",
+            "potentialAction": {
+                "@type":"SearchAction",
+                "target":"https://www.trustpilot.com/search?query={search_term}",
+                "query-input":"required name=search_term"
+            }
+        }
+    </script>
+    <script type="application/ld+json">
+    {
+    "@context":"http://schema.org",
+    "@type":"Organization",
+    "name":"Trustpilot",
+    "url": "https://www.trustpilot.com",
+    "logo":"http://cdn.trustpilot.net/brand-assets/1.5.0/favicons/android-chrome-192x192.png",
+    "sameAs": [ "https://www.facebook.com/Trustpilot/", "https://www.instagram.com/trustpilot/", "https://www.linkedin.com/company/trustpilot", "https://twitter.com/Trustpilot", "https://www.youtube.com/user/trustpilot", "https://en.wikipedia.org/wiki/Trustpilot" ],
+    "contactPoint": [
+    {
+    "@type": "ContactPoint",
+    "telephone": "+1-844-661-9927",
+    "contactType": "sales",
+    "areaServed": [ "US", "CA" ]
+    },
+    {
+    "@type": "ContactPoint",
+    "telephone": "+61-1800-147-508",
+    "contactType": "sales",
+    "areaServed": [ "AU", "NZ" ]
+    },
+    {
+    "@type": "ContactPoint",
+    "telephone": "+44-203-889-8444",
+    "contactType": "sales",
+    "areaServed": [ "GB", "IE" ]
+    },
+    {
+    "@type": "ContactPoint",
+    "telephone": "+45-89-87-15-73",
+    "contactType": "sales",
+    "areaServed": "DK"
+    },
+    {
+    "@type": "ContactPoint",
+    "telephone": "+46-844-68-31-90",
+    "contactType": "sales",
+    "areaServed": "SE"
+    },
+    {
+    "@type": "ContactPoint",
+    "telephone": "+44-203-889-8444",
+    "contactType": "sales",
+    "areaServed": "NO"
+    },
+    {
+    "@type": "ContactPoint",
+    "telephone": " +34-911-236-222",
+    "contactType": "sales",
+    "areaServed": "ES"
+    },
+    {
+    "@type": "ContactPoint",
+    "telephone": "+49-3022-957-328",
+    "contactType": "sales",
+    "areaServed": "DE"
+    },
+    {
+    "@type": "ContactPoint",
+    "telephone": "+31-20-808-3229",
+    "contactType": "sales",
+    "areaServed": "NL"
+    },
+    {
+    "@type": "ContactPoint",
+    "telephone": " +39-06-94802787",
+    "contactType": "sales",
+    "areaServed": "IT"
+    },
+    {
+    "@type": "ContactPoint",
+    "telephone": "+33-184-88-63-49",
+    "contactType": "sales",
+    "areaServed": "FR"
+    }
+    ]
+    }
+</script>
+    
+
+<meta property="og:title" content="Trustpilot Reviews: Experience the power of customer reviews" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.trustpilot.com/" />
+<meta property="og:image" content="https://consumer-assets.trustpilot.com/assets/tp_social_logo.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:description" content="We&#39;re all about consumer reviews. Get the real inside story from shoppers like you. Read, write and share reviews on Trustpilot today." />
+<meta property="og:locale" content="en_US"/>
+<meta property="og:site_name" content="Trustpilot" />
+<meta property="fb:app_id" content="65206056824" />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Trustpilot">
+<meta name="twitter:title" content="Trustpilot Reviews: Experience the power of customer reviews">
+<meta name="twitter:description" content="We&#39;re all about consumer reviews. Get the real inside story from shoppers like you. Read, write and share reviews on Trustpilot today.">
+<meta name="twitter:image" content="https://consumer-assets.trustpilot.com/assets/tp_social_logo.png">
+
+
+    </head>
+    <body>
+        
+<header class="header header--fixed" data-header role="banner">
+    <div class="header__actual">
+        <div class="header__container" data-header-container>
+            <div class="header__wrapper">
+                <div class="logo__container">
+                    <a href="/" title="Trustpilot reviews" class="logo"
+                       data-track-link="{'target': 'Home Page', 'name': 'Trustpilot Logo', 'placement': 'Header'}">
+                        <img class="logo__image" src="//cdn.trustpilot.net/brand-assets/1.1.0/logo-white.svg" alt="Trustpilot reviews" />
+                    </a>
+                </div>
+                <div class="header__search" data-header-search>
+                    <form class="search-form header__search-form" role="search" action="/search" method="get" autocomplete="false" data-header-search-form>
+                        <input type="search" class="search-field header__search-field" name="query" placeholder="Search for a company…" data-header-search-field data-navigation-search-input>
+                        <span class="header__search-icon icon-search" data-header-search-icon></span>
+                    </form>
+                </div>
+                <div class="header__menu" data-header-menu>
+                    <span class="header__menu__line header__menu__line--top"></span>
+                    <span class="header__menu__line header__menu__line--middle"></span>
+                    <span class="header__menu__line header__menu__line--bottom"></span>
+                </div>
+            </div>
+            <nav class="nav" role="navigation">
+                <div class="nav__container" data-navigation>
+                    <a href="/categories" class="nav__categories nav__categories--hidden"
+                       data-track-link="{'target': 'Categories Page', 'name': 'Categories', 'placement': 'Header'}"
+                       data-categories-link data-navigation-categories-link>
+                        Categories
+                    </a>
+                    <div class="nav__user__container nav__user__container--hidden" data-nav-user-container data-navigation-consumer>
+                        <div class="nav__user__links">
+                            <a href="#" class="nav__user-link nav__my-reviews" data-my-reviews data-navigation-consumer-reviews-link
+                               data-track-link="{'target': 'My Reviews Page', 'name': 'My Reviews', 'placement': 'Header'}">
+                                My Reviews
+                            </a>
+                            <a href="/users/settings" class="nav__user-link nav__settings" data-navigation-consumer-settings-link
+                               data-track-link="{'target': 'My Settings Page', 'name': 'My Settings', 'placement': 'Header'}">
+                                My Settings
+                            </a>
+                            <div class="nav__user-link nav__install-app"
+                                 data-track-button="{'action': 'Install App', 'name': 'Install App', 'placement': 'Header'}">
+                                <button
+    type="button"
+    class="btn-install-app"
+    data-install-app
+>
+    Install App
+</button>
+                            </div>
+                            <a rel="noopener" href="https://support.trustpilot.com/hc/categories/200128688-Support-for-Reviewers"
+                               class="nav__user-link nav__help"
+                               target="_blank"
+                               data-track-link="{'target': 'Support Page', 'name': 'Help', 'placement': 'Header'}">
+                                Help
+                            </a>
+                            <a href="#" class="nav__user-link nav__log-out"
+                               data-logout data-navigation-logout-link
+                               data-track-link="{'target': 'Logout', 'name': 'Logout', 'placement': 'Header'}">
+                                Log out
+                            </a>
+                        </div>
+                        <div class="nav__user__info">
+                            <a class="nav__user__info__link" data-user-link>
+                                <img class="nav__user-image" data-user-image data-navigation-consumer-image src="" alt="Alternate Text" />
+                                <span class="nav__user-name" data-user-name data-navigation-consumer-name-label></span>
+                                <span class="nav__user-location" data-user-location></span>
+                            </a>
+                        </div>
+                    </div>
+                    <a href="/users/connect" class="nav__login nav__login--hidden"
+                       data-track-link="{'target': 'Login Page', 'name': 'Login', 'placement': 'Header'}"
+                       data-login-link data-navigation-login-link>
+                        Log in
+                    </a>
+                    <a href="/users/connect?signup=True" class="nav__signup nav__signup--hidden"
+                       data-track-link="{'target': 'Sign Up Page', 'name': 'Sign Up', 'placement': 'Header'}"
+                       data-signup-link data-navigation-signup-link>
+                        Sign up
+                    </a>
+                    <div class="nav__install-app"
+                         data-track-button="{'action': 'Install App', 'name': 'Install App', 'placement': 'Header'}">
+                        <button
+    type="button"
+    class="btn-install-app"
+    data-install-app
+>
+    Install App
+</button>
+                    </div>
+                    <a href="https://us.business.trustpilot.com?utm_medium=consumer&amp;utm_source=for_companies&amp;utm_campaign=consumer_cta" class="nav__for-business"
+                       data-track-link="{'target': 'Business App', 'name': 'For Companies', 'legacyName': 'Header.ForCompaniesButtonClicked', 'placement': 'Header'}">
+                        For companies
+                    </a>
+                </div>
+            </nav>
+        </div>
+        
+
+    </div>
+</header>
+<div class="overlay overlay--hidden" data-overlay></div>
+        <main role="main">
+            
+
+<section class="hero">
+    <div class="hero-container">
+        <h1 class="hero-title">
+            Behind every review is an experience that matters
+        </h1>
+        <h2 class="hero-sub-title">
+            Read reviews. Write reviews. Find companies.
+        </h2>
+        <form class="hero__search-form search-form" role="search" action="/search" method="get" autocomplete="false" data-hero-search-form>
+            <span class="hero__search-form__placeholder-icon icon-search"></span>
+            <input class="hero__search-input search-input" type="search" name="query" data-home-search-input placeholder="Search for a company…" aria-label="Search for a company…" autofocus>
+            <button class="hero__search-form__submit" type="submit" aria-label="Search">
+                <span class="hero__search-form__submit__text">Search</span>
+                <span class="hero__search-form__submit__icon icon-search"></span>
+            </button>
+        </form>
+    </div>
+</section>
+<section class="stream">
+    <h2 class="activity-stream-header">Recent reviews</h2>
+    <div class="activity-stream-wrapper" data-activity-stream>
+        <div class="activity-stream-placeholder-wrapper">
+            <div class="activity-stream-placeholder-column">
+                <div class="placeholder-background activity-stream-placeholder activity-stream-placeholder--small">
+                    <div class="placeholder-background placeholder-masker placeholder-masker__header"></div>
+                    <div class="placeholder-background placeholder-masker placeholder-masker__content-first-line"></div>
+                </div>
+                <div class="placeholder-background activity-stream-placeholder activity-stream-placeholder--large">
+                    <div class="placeholder-background placeholder-masker placeholder-masker__image"></div>
+                    <div class="placeholder-masker placeholder-masker__stars">
+                        <div class="placeholder-masker__star"></div>
+                        <div class="placeholder-masker__star"></div>
+                        <div class="placeholder-masker__star"></div>
+                        <div class="placeholder-masker__star"></div>
+                        <div class="placeholder-masker__star"></div>
+                    </div>
+                    <div class="placeholder-background placeholder-masker placeholder-masker__header"></div>
+                    <div class="placeholder-background placeholder-masker placeholder-masker__content-first-line"></div>
+                    <div class="placeholder-background placeholder-masker placeholder-masker__content-second-line"></div>
+                </div>
+            </div>
+
+            <div class="activity-stream-placeholder-column">
+                <div class="placeholder-background activity-stream-placeholder activity-stream-placeholder--large">
+                    <div class="placeholder-background placeholder-masker placeholder-masker__image"></div>
+                    <div class="placeholder-masker placeholder-masker__stars">
+                        <div class="placeholder-masker__star"></div>
+                        <div class="placeholder-masker__star"></div>
+                        <div class="placeholder-masker__star"></div>
+                        <div class="placeholder-masker__star"></div>
+                        <div class="placeholder-masker__star"></div>
+                    </div>
+                    <div class="placeholder-background placeholder-masker placeholder-masker__header"></div>
+                    <div class="placeholder-background placeholder-masker placeholder-masker__content-first-line"></div>
+                    <div class="placeholder-background placeholder-masker placeholder-masker__content-second-line"></div>
+                </div>
+                <div class="placeholder-background activity-stream-placeholder activity-stream-placeholder--small">
+                    <div class="placeholder-background placeholder-masker placeholder-masker__header"></div>
+                    <div class="placeholder-background placeholder-masker placeholder-masker__content-first-line"></div>
+                </div>
+            </div>
+
+            <div class="activity-stream-placeholder-column">
+                <div class="placeholder-background activity-stream-placeholder activity-stream-placeholder--small">
+                    <div class="placeholder-background placeholder-masker placeholder-masker__header"></div>
+                    <div class="placeholder-background placeholder-masker placeholder-masker__content-first-line"></div>
+                </div>
+                <div class="placeholder-background activity-stream-placeholder activity-stream-placeholder--large">
+                    <div class="placeholder-background placeholder-masker placeholder-masker__image"></div>
+                    <div class="placeholder-masker placeholder-masker__stars">
+                        <div class="placeholder-masker__star"></div>
+                        <div class="placeholder-masker__star"></div>
+                        <div class="placeholder-masker__star"></div>
+                        <div class="placeholder-masker__star"></div>
+                        <div class="placeholder-masker__star"></div>
+                    </div>
+                    <div class="placeholder-background placeholder-masker placeholder-masker__header"></div>
+                    <div class="placeholder-background placeholder-masker placeholder-masker__content-first-line"></div>
+                    <div class="placeholder-background placeholder-masker placeholder-masker__content-second-line"></div>
+                </div>
+            </div>
+
+            <div class="activity-stream-placeholder-column">
+                <div class="placeholder-background activity-stream-placeholder activity-stream-placeholder--large">
+                    <div class="placeholder-background placeholder-masker placeholder-masker__image"></div>
+                    <div class="placeholder-masker placeholder-masker__stars">
+                        <div class="placeholder-masker__star"></div>
+                        <div class="placeholder-masker__star"></div>
+                        <div class="placeholder-masker__star"></div>
+                        <div class="placeholder-masker__star"></div>
+                        <div class="placeholder-masker__star"></div>
+                    </div>
+                    <div class="placeholder-background placeholder-masker placeholder-masker__header"></div>
+                    <div class="placeholder-background placeholder-masker placeholder-masker__content-first-line"></div>
+                    <div class="placeholder-background placeholder-masker placeholder-masker__content-second-line"></div>
+                </div>
+                <div class="placeholder-background activity-stream-placeholder activity-stream-placeholder--medium">
+                    <div class="placeholder-background placeholder-masker placeholder-masker__image"></div>
+                    <div class="placeholder-masker placeholder-masker__stars">
+                        <div class="placeholder-masker__star"></div>
+                        <div class="placeholder-masker__star"></div>
+                        <div class="placeholder-masker__star"></div>
+                        <div class="placeholder-masker__star"></div>
+                        <div class="placeholder-masker__star"></div>
+                    </div>
+                    <div class="placeholder-background placeholder-masker placeholder-masker__header"></div>
+                </div>
+            </div>
+
+            </div>
+        </div>
+</section>
+
+<section class="featured-review" role="region" aria-labelledby="title">
+    <h3 class="featured-review-subheading">Your stories</h3>
+    <h2 class="featured-review-heading" id="title" role="heading">Each review has a personal story</h2>
+    <div class="stack-carousel stack-carousel--fixed-size" data-stack-carousel>
+        <div class="stack-carousel__layer" data-thumbnail="featured-review-green-thumbnail.jpg" data-stack-carousel-layer>
+            <figure class="featured-review__figure">
+                <img class="featured-review__image featured-review__image--green"
+                     role="presentation"
+                     src="https://consumer-assets.trustpilot.com/assets/featured-review-green.jpg"
+                     srcset="https://consumer-assets.trustpilot.com/assets/featured-review-green.jpg 1160w, https://consumer-assets.trustpilot.com/assets/featured-review-green-lowres.jpg 1024w"
+                     alt="A picture of a man sitting on a couch holding popcorn." />
+                <div class="featured-review__review-card-wrapper">
+                    <div class="featured-review__prev-card"></div>
+                    <figcaption class="featured-review__review-card" aria-labelledby="featured-review__green-text">
+                        <div class="review-card__stars">
+                            
+<div class="star-rating star-rating--large">
+    <img src="//cdn.trustpilot.net/brand-assets/4.1.0/stars/stars-5.svg" alt="5 stars: Excellent">
+</div>
+                        </div>
+                        <div class="review-card__text" id="featured-review__green-text">
+                            “Fixed my broke fone. But I still can&#39;t get a date on Tinder.”
+                        </div>
+                        <div class="review-card__author"><span class="experienced">Max</span> experienced <span class="experienced">Re-Tech</span></div>
+                    </figcaption>
+                    <div class="featured-review__next-card"></div>
+                </div>
+            </figure>
+        </div>
+        <div class="stack-carousel__layer" data-thumbnail="featured-review-pink-thumbnail.jpg" data-stack-carousel-layer>
+            <figure class="featured-review__figure">
+                <img class="featured-review__image  featured-review__image--pink"
+                     data-lazyload-src="https://consumer-assets.trustpilot.com/assets/featured-review-pink.jpg"
+                     data-lazyload-srcset="https://consumer-assets.trustpilot.com/assets/featured-review-pink.jpg 1160w, https://consumer-assets.trustpilot.com/assets/featured-review-pink-lowres.jpg 1024w"
+                     alt="A picture of a man holding a wrapped gift behind his back." />
+                <div class="featured-review__review-card-wrapper">
+                    <div class="featured-review__prev-card"></div>
+                    <figcaption class="featured-review__review-card" aria-labelledby="featured-review__pink-text">
+                        <div class="review-card__stars">
+                            
+<div class="star-rating star-rating--large">
+    <img src="//cdn.trustpilot.net/brand-assets/4.1.0/stars/stars-5.svg" alt="5 stars: Excellent">
+</div>
+                        </div>
+                        <div class="review-card__text" id="featured-review__pink-text">
+                            “The first birthday gift my wife didn&#39;t want to return.”
+                        </div>
+                        <div class="review-card__author"><span class="experienced">Robert</span> experienced <span class="experienced">Songfinch</span></div>
+                    </figcaption>
+                    <div class="featured-review__next-card"></div>
+                </div>
+            </figure>
+        </div>
+        <div class="stack-carousel__layer" data-thumbnail="featured-review-blue-thumbnail.jpg" data-stack-carousel-layer>
+            <figure class="featured-review__figure">
+                <img class="featured-review__image  featured-review__image--blue"
+                     data-lazyload-src="https://consumer-assets.trustpilot.com/assets/featured-review-blue.jpg"
+                     data-lazyload-srcset="https://consumer-assets.trustpilot.com/assets/featured-review-blue.jpg 1160w, https://consumer-assets.trustpilot.com/assets/featured-review-blue-lowres.jpg 1024w"
+                     alt="A picture of a woman sitting on a couch surrounded by plants." />
+                <div class="featured-review__review-card-wrapper">
+                    <div class="featured-review__prev-card"></div>
+                    <figcaption class="featured-review__review-card" aria-labelledby="featured-review__blue-text">
+                        <div class="review-card__stars">
+                            
+<div class="star-rating star-rating--large">
+    <img src="//cdn.trustpilot.net/brand-assets/4.1.0/stars/stars-5.svg" alt="5 stars: Excellent">
+</div>
+                        </div>
+                        <div class="review-card__text" id="featured-review__blue-text">
+                            “Gonna love making my flat a small jungle :)”
+                        </div>
+                        <div class="review-card__author"><span class="experienced">Marjori</span> experienced <span class="experienced">Patch</span></div>
+                    </figcaption>
+                    <div class="featured-review__next-card"></div>
+                </div>
+            </figure>
+        </div>
+        <button class="stack-carousel__control stack-carousel__control__prev"
+                data-stack-carousel-button-prev
+                aria-label="View previous featured review"
+                data-track-button="{'name': 'Featured review Previous', 'action': 'Show Previous Featured Review'}"
+        >
+            <div class="stack-carousel__control__thumbnail stack-carousel__control__prev__thumbnail" data-stack-carousel-prev-thumbnail></div>
+        </button>
+        <button class="stack-carousel__control stack-carousel__control__next"
+                data-stack-carousel-button-next
+                aria-label="View next featured review"
+                data-track-button="{'name': 'Featured Review Next', 'action': 'Show Next Featured Review'}">
+            <div class="stack-carousel__control__thumbnail stack-carousel__control__next__thumbnail" data-stack-carousel-next-thumbnail></div>
+        </button>
+    </div>
+</section>
+
+<!--         <div class="stack-carousel__desktop-controls"> -->
+<section class="marketing">
+    <h2 class="marketing-title">
+        Let&#39;s upgrade the world
+    </h2>
+    <p class="marketing-description">
+        Trustpilot is a review platform open to everyone. Share your experiences to help others make better choices, and help companies up their game.
+    </p>
+    <a href="/about" class="marketing-link" data-track-link="{'target': 'About Page', 'name': 'What we stand for'}">
+        What we stand for
+    </a>
+</section>
+        </main>
+        <li class="bot-bait">
+    <a
+       href="/end-of-the-line"
+       data-track-link="{'target': 'Bot Bait', 'name': 'Bot Bait', 'placement': 'Footer'}"
+       rel="nofollow"
+       class="badguys-link-js">are you human?
+    </a>
+</li>
+        
+<footer class="brand-footer" role="contentinfo">
+    <div class="brand-footer__wrapper">
+        <div class="brand-footer__logo-container">
+            <img class="brand-footer__logo"
+                alt="Trustpilot"
+                src="//cdn.trustpilot.net/brand-assets/1.1.0/logo-white.svg" />
+        </div>
+        <section class="brand-footer__country-selector-section" data-new-country-selector>
+            <h3 class="brand-footer__header">Choose country</h3>
+            <div class="brand-footer__country-selector-section__wrapper">
+                <country-selector inline-template
+    v-cloak
+    initial-selected-country-locale="us"
+    initial-selected-country-name="United States">
+    <dl class="country-selector country-selector--new">
+        <dt class="country-selector__btn-wrapper" :class="{'country-selector__btn-wrapper--is-active' : isActive}">
+            <a class="country-selector-link" @click.prevent="toggleDropdown" ref="countryDropdown">
+                <span class="country-selector-link__flag" :class="[selectedCountryLocale]"></span>
+                <span class="country-selector-link__name">{{ selectedCountryName }}</span>
+                <span class="country-selector-link__arrow"></span>
+            </a>
+        </dt>
+        <dd class="country-selector__list-wrapper">
+            <ul class="country-dropdown" :class="{'country-dropdown--is-active' : isActive}">
+                    <li class="country-dropdown__list-item">
+                            <a class="country-dropdown-link" href="" @click.prevent="changeLanguage('Australia', 'au', 'https://au.trustpilot.com')">
+                                <span class="country-dropdown-link__flag au"></span>
+                                <span class="country-dropdown-link__name">Australia</span>
+                            </a>
+                    </li>
+                    <li class="country-dropdown__list-item">
+                            <a class="country-dropdown-link" href="" @click.prevent="changeLanguage('&#214;sterreich', 'at', 'https://at.trustpilot.com')">
+                                <span class="country-dropdown-link__flag at"></span>
+                                <span class="country-dropdown-link__name">&#214;sterreich</span>
+                            </a>
+                    </li>
+                    <li class="country-dropdown__list-item">
+                            <a class="country-dropdown-link" href="" @click.prevent="changeLanguage('Belgique', 'be', 'https://fr-be.trustpilot.com')">
+                                <span class="country-dropdown-link__flag be"></span>
+                                <span class="country-dropdown-link__name">Belgique</span>
+                            </a>
+                            <a class="country-dropdown-link" href="" @click.prevent="changeLanguage('Belgi&#235;', 'be', 'https://nl-be.trustpilot.com')">
+                                <span class="country-dropdown-link__flag be"></span>
+                                <span class="country-dropdown-link__name">Belgi&#235;</span>
+                            </a>
+                    </li>
+                    <li class="country-dropdown__list-item">
+                            <a class="country-dropdown-link" href="" @click.prevent="changeLanguage('Brasil', 'br', 'https://br.trustpilot.com')">
+                                <span class="country-dropdown-link__flag br"></span>
+                                <span class="country-dropdown-link__name">Brasil</span>
+                            </a>
+                    </li>
+                    <li class="country-dropdown__list-item">
+                            <a class="country-dropdown-link" href="" @click.prevent="changeLanguage('Canada', 'ca', 'https://ca.trustpilot.com')">
+                                <span class="country-dropdown-link__flag ca"></span>
+                                <span class="country-dropdown-link__name">Canada</span>
+                            </a>
+                    </li>
+                    <li class="country-dropdown__list-item">
+                            <a class="country-dropdown-link" href="" @click.prevent="changeLanguage('Danmark', 'dk', 'https://dk.trustpilot.com')">
+                                <span class="country-dropdown-link__flag dk"></span>
+                                <span class="country-dropdown-link__name">Danmark</span>
+                            </a>
+                    </li>
+                    <li class="country-dropdown__list-item">
+                            <a class="country-dropdown-link" href="" @click.prevent="changeLanguage('Suomi', 'fi', 'https://fi.trustpilot.com')">
+                                <span class="country-dropdown-link__flag fi"></span>
+                                <span class="country-dropdown-link__name">Suomi</span>
+                            </a>
+                    </li>
+                    <li class="country-dropdown__list-item">
+                            <a class="country-dropdown-link" href="" @click.prevent="changeLanguage('France', 'fr', 'https://fr.trustpilot.com')">
+                                <span class="country-dropdown-link__flag fr"></span>
+                                <span class="country-dropdown-link__name">France</span>
+                            </a>
+                    </li>
+                    <li class="country-dropdown__list-item">
+                            <a class="country-dropdown-link" href="" @click.prevent="changeLanguage('Deutschland', 'de', 'https://de.trustpilot.com')">
+                                <span class="country-dropdown-link__flag de"></span>
+                                <span class="country-dropdown-link__name">Deutschland</span>
+                            </a>
+                    </li>
+                    <li class="country-dropdown__list-item">
+                            <a class="country-dropdown-link" href="" @click.prevent="changeLanguage('Ireland', 'ie', 'https://ie.trustpilot.com')">
+                                <span class="country-dropdown-link__flag ie"></span>
+                                <span class="country-dropdown-link__name">Ireland</span>
+                            </a>
+                    </li>
+                    <li class="country-dropdown__list-item">
+                            <a class="country-dropdown-link" href="" @click.prevent="changeLanguage('Italia', 'it', 'https://it.trustpilot.com')">
+                                <span class="country-dropdown-link__flag it"></span>
+                                <span class="country-dropdown-link__name">Italia</span>
+                            </a>
+                    </li>
+                    <li class="country-dropdown__list-item">
+                            <a class="country-dropdown-link" href="" @click.prevent="changeLanguage('日本', 'jp', 'https://jp.trustpilot.com')">
+                                <span class="country-dropdown-link__flag jp"></span>
+                                <span class="country-dropdown-link__name">日本</span>
+                            </a>
+                    </li>
+                    <li class="country-dropdown__list-item">
+                            <a class="country-dropdown-link" href="" @click.prevent="changeLanguage('Nederland', 'nl', 'https://nl.trustpilot.com')">
+                                <span class="country-dropdown-link__flag nl"></span>
+                                <span class="country-dropdown-link__name">Nederland</span>
+                            </a>
+                    </li>
+                    <li class="country-dropdown__list-item">
+                            <a class="country-dropdown-link" href="" @click.prevent="changeLanguage('New Zealand', 'nz', 'https://nz.trustpilot.com')">
+                                <span class="country-dropdown-link__flag nz"></span>
+                                <span class="country-dropdown-link__name">New Zealand</span>
+                            </a>
+                    </li>
+                    <li class="country-dropdown__list-item">
+                            <a class="country-dropdown-link" href="" @click.prevent="changeLanguage('Norge', 'no', 'https://no.trustpilot.com')">
+                                <span class="country-dropdown-link__flag no"></span>
+                                <span class="country-dropdown-link__name">Norge</span>
+                            </a>
+                    </li>
+                    <li class="country-dropdown__list-item">
+                            <a class="country-dropdown-link" href="" @click.prevent="changeLanguage('Polska', 'pl', 'https://pl.trustpilot.com')">
+                                <span class="country-dropdown-link__flag pl"></span>
+                                <span class="country-dropdown-link__name">Polska</span>
+                            </a>
+                    </li>
+                    <li class="country-dropdown__list-item">
+                            <a class="country-dropdown-link" href="" @click.prevent="changeLanguage('Portugal', 'pt', 'https://pt.trustpilot.com')">
+                                <span class="country-dropdown-link__flag pt"></span>
+                                <span class="country-dropdown-link__name">Portugal</span>
+                            </a>
+                    </li>
+                    <li class="country-dropdown__list-item">
+                            <a class="country-dropdown-link" href="" @click.prevent="changeLanguage('Россия', 'ru', 'https://ru.trustpilot.com')">
+                                <span class="country-dropdown-link__flag ru"></span>
+                                <span class="country-dropdown-link__name">Россия</span>
+                            </a>
+                    </li>
+                    <li class="country-dropdown__list-item">
+                            <a class="country-dropdown-link" href="" @click.prevent="changeLanguage('Espa&#241;a', 'es', 'https://es.trustpilot.com')">
+                                <span class="country-dropdown-link__flag es"></span>
+                                <span class="country-dropdown-link__name">Espa&#241;a</span>
+                            </a>
+                    </li>
+                    <li class="country-dropdown__list-item">
+                            <a class="country-dropdown-link" href="" @click.prevent="changeLanguage('Sverige', 'se', 'https://se.trustpilot.com')">
+                                <span class="country-dropdown-link__flag se"></span>
+                                <span class="country-dropdown-link__name">Sverige</span>
+                            </a>
+                    </li>
+                    <li class="country-dropdown__list-item">
+                            <a class="country-dropdown-link" href="" @click.prevent="changeLanguage('Schweiz', 'ch', 'https://ch.trustpilot.com')">
+                                <span class="country-dropdown-link__flag ch"></span>
+                                <span class="country-dropdown-link__name">Schweiz</span>
+                            </a>
+                    </li>
+                    <li class="country-dropdown__list-item">
+                            <a class="country-dropdown-link" href="" @click.prevent="changeLanguage('United Kingdom', 'gb', 'https://uk.trustpilot.com')">
+                                <span class="country-dropdown-link__flag gb"></span>
+                                <span class="country-dropdown-link__name">United Kingdom</span>
+                            </a>
+                    </li>
+                    <li class="country-dropdown__list-item">
+                            <a class="country-dropdown-link" href="" @click.prevent="changeLanguage('United States', 'us', 'https://www.trustpilot.com')">
+                                <span class="country-dropdown-link__flag us"></span>
+                                <span class="country-dropdown-link__name">United States</span>
+                            </a>
+                    </li>
+            </ul>
+        </dd>
+    </dl>
+</country-selector>
+
+            </div>
+        </section>
+        <section class="brand-footer__section">
+    <h3 class="brand-footer__header">About</h3>
+    <ul class="brand-footer__links">
+        <li class="brand-footer__link">
+            <a href="/about"  data-track-link="{'target': 'About Page', 'name': 'About', 'placement': 'Footer'}">
+                About
+            </a>
+        </li>
+        <li class="brand-footer__link">
+            <a href="https://jobs.trustpilot.com"  data-track-link="{'target': 'Jobs Page', 'name': 'Jobs', 'placement': 'Footer'}">
+                Jobs
+            </a>
+        </li>
+            <li class="brand-footer__link">
+                <a href="/contact" data-track-link="{'target': 'Contact Page', 'name': 'Contact', 'placement': 'Footer'}">
+                    Contact
+                </a>
+            </li>
+        <li class="brand-footer__link">
+            <a href="https://us.business.trustpilot.com/reviews"  data-track-link="{'target': 'Blog Page', 'name': 'Blog', 'placement': 'Footer'}">
+                Blog
+            </a>
+        </li>
+        <li class="brand-footer__link">
+            <a href="http://press.trustpilot.com"  data-track-link="{'target': 'Press Page', 'name': 'Press', 'placement': 'Footer'}">
+                Press
+            </a>
+        </li>
+    </ul>
+</section>
+        <section class="brand-footer__section">
+    <h3 class="brand-footer__header">Community</h3>
+    <ul class="brand-footer__links">
+        <li class="brand-footer__link">
+            <a href="https://www.trustpilot.com/trust"  data-track-link="{'target': 'Trust and Transparency Page', 'name': 'Trust in reviews', 'placement': 'Footer'}">
+                Trust in reviews
+            </a>
+        </li>
+        <li class="brand-footer__link">
+            <a href="https://support.trustpilot.com"  data-track-link="{'target': 'Support Page', 'name': 'Support Center', 'placement': 'Footer'}">
+                Support Center
+            </a>
+        </li>
+        <li class="brand-footer__link">
+            <a href="/users/connect"  data-track-link="{'target': 'Login Page', 'name': 'Login', 'placement': 'Footer'}">
+                Log in
+            </a>
+        </li>
+        <li class="brand-footer__link">
+            <a href="/users/connect?signup=True" rel="nofollow"  data-track-link="{'target': 'Sign Up Page', 'name': 'Sign Up', 'placement': 'Footer'}">
+                Sign up
+            </a>
+        </li>
+        <li
+            class="brand-footer__link"
+            data-track-button="{'action': 'Install App', 'name': 'Install App', 'placement': 'Footer'}"
+        >
+            <button
+    type="button"
+    class="btn-install-app"
+    data-install-app
+>
+    Install App
+</button>
+        </li>
+        <li class="brand-footer__link">
+            <a href="https://chrome.google.com/webstore/detail/trustpilot/meagmjlgkihmljnchdjagbcgfclobkho" rel="noopener" target="_blank"  data-track-link="{'target': 'Chrome App Page', 'name': 'Chrome App', 'placement': 'Footer'}">
+                Chrome App
+            </a>
+        </li>
+    </ul>
+</section>
+        <section class="brand-footer__section">
+    <h3 class="brand-footer__header">Businesses</h3>
+    <ul class="brand-footer__links">
+        <li class="brand-footer__link">
+            <a
+                href="https://us.business.trustpilot.com?utm_medium=consumer&utm_source=footer_link_trustpilot_business_site&utm_campaign=consumer_cta"
+                data-track-link="{'target': 'Business App', 'name': 'Trustpilot Business', 'placement': 'Footer'}"
+            >
+                Trustpilot Business
+            </a>
+        </li>
+        <li class="brand-footer__link">
+            <a
+                href="https://us.business.trustpilot.com/features?utm_medium=consumer&utm_source=footer_link_trustpilot_business_site_product_tour&utm_campaign=consumer_cta"
+                data-track-link="{'target': 'Business App Features Page', 'name': 'Products', 'placement': 'Footer'}"
+            >
+                Products
+            </a>
+        </li>
+        <li class="brand-footer__link">
+            <a
+                href="https://us.business.trustpilot.com/plans?utm_medium=consumer&utm_source=footer_link_trustpilot_business_site_plans&utm_campaign=consumer_cta"
+                data-track-link="{'target': 'Business App Plans Page', 'name': 'Plan', 'placement': 'Footer'}"
+            >
+                Plans &amp; Pricing
+            </a>
+        </li>
+        <li class="brand-footer__link">
+            <a
+                href="https://businessapp.b2b.trustpilot.com/?locale=en-us&utm_medium=consumer&utm_source=footer_link_trustpilot_business_app_login&utm_campaign=consumer_cta"
+                data-track-link="{'target': 'Business App Login Page', 'name': 'Business Login', 'placement': 'Footer'}"
+                rel="nofollow"
+            >
+                Business Login
+            </a>
+        </li>
+    </ul>
+</section>
+        <section class="brand-footer__section brand-footer__social">
+    <h3 class="brand-footer__header">Follow us on</h3>
+    <ul class="brand-footer__links brand-footer__links--large brand-footer__links--horizontal-phone brand-footer__links--large">
+        <li class="brand-footer__link">
+            <a
+                href="https://www.facebook.com/Trustpilot/" aria-label="Facebook" rel="noopener" target="_blank" title="Facebook" class="icon-facebook hoover"
+                data-track-link="{'target': 'Facebook', 'name': 'Facebook', 'placement': 'Footer'}"
+            >
+            </a>
+        </li>
+        <li class="brand-footer__link">
+            <a
+                href="https://twitter.com/Trustpilot" aria-label="Twitter" rel="noopener" target="_blank" title="Twitter" class="icon-twitter hoover"
+                data-track-link="{'target': 'Twitter', 'name': 'Twitter', 'placement': 'Footer'}"
+            >
+            </a>
+        </li>
+        <li class="brand-footer__link">
+            <a
+                href="https://www.linkedin.com/company/trustpilot" aria-label="LinkedIn" rel="noopener" target="_blank" title="LinkedIn" class="icon-linkedin hoover"
+                data-track-link="{'target': 'LinkedIn', 'name': 'LinkedIn', 'placement': 'Footer'}"
+            >
+            </a>
+        </li>
+        <li class="brand-footer__link">
+            <a
+                href="https://www.youtube.com/user/trustpilot" aria-label="YouTube" rel="noopener" target="_blank" title="Youtube" class="icon-youtube hoover"
+                data-track-link="{'target': 'Youtube', 'name': 'Youtube', 'placement': 'Footer'}"
+            >
+            </a>
+        </li>
+    </ul>
+</section>
+        <div class="brand-footer__legal">
+    <ul class="brand-footer__links brand-footer__links--horizontal-when-possible">
+        <li class="brand-footer__link">
+            <a
+                href="https://legal.trustpilot.com/end-user-privacy-terms"
+                data-track-link="{'target': 'End User Privacy Terms', 'name': 'Privacy Policy', 'placement': 'Footer'}"
+            >
+                Privacy Policy
+            </a>
+        </li>
+        <li class="brand-footer__link">
+            <a
+                href="https://legal.trustpilot.com/end-user-terms-and-conditions"
+                data-track-link="{'target': 'End User Terms and Conditions', 'name': 'Terms and Conditions', 'placement': 'Footer'}"
+            >
+                Terms &amp; Conditions
+            </a>
+        </li>
+        <li class="brand-footer__link">
+            <a
+                href="https://legal.trustpilot.com/user-guidelines"
+                data-track-link="{'target': 'User Guidelines', 'name': 'User Guidelines', 'placement': 'Footer'}"
+            >
+                User Guidelines
+            </a>
+        </li>
+        <li class="brand-footer__link">
+            <a
+                href="https://status.trustpilot.com/" target="_blank"
+                data-track-link="{'target': 'System Status', 'name': 'System Status', 'placement': 'Footer'}"
+            >
+                System status
+            </a>
+        </li>
+    </ul>
+    <div class="brand-footer__legal__copyright-text">
+        &copy; 2019 Trustpilot, Inc. All rights reserved.
+    </div>
+</div>
+
+    </div>
+</footer>
+       <aside id="global-modal-container"></aside>
+    </body>
+</html>

@@ -1,0 +1,2641 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+<head>
+    <script type="text/javascript">
+        // console.log('6,20')
+        var GLOBAL = {},
+            EXX = {},
+            ENV = GLOBAL['ENV'] = 'z',
+            LAN = GLOBAL['LAN'] = 'cn',
+            MONEY = GLOBAL['MONEY'] = 'usd',
+            ISLOGIN = GLOBAL['ISLOGIN'] = false,
+            VERSION = GLOBAL['VERSION'] = '1575258979471',
+            DOMAIN_BASE = GLOBAL['DOMAIN_BASE'] = 'www.xt.com',
+            DOMAIN_DEV = GLOBAL['DOMAIN_DEV'] = 'https://www.xt.com',
+            WEBSOCKET = GLOBAL['WEBSOCKET'] = 'wss://ws.xt.com';
+            STYLE_STATIC        = GLOBAL['STYLE_STATIC']       = 'https://assets.xt.com/src';
+            LIB_STATIC        = GLOBAL['LIB_STATIC']       = 'https://assets.xt.com/lib';
+        document.domain = DOMAIN_BASE;
+    </script>
+    <meta charset="utf-8" />
+<meta name="renderer" content="webkit" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="yes" name="apple-touch-fullscreen" />
+<meta content="telephone=no" name="format-detection" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta name="author" content="support@xt.com" />
+<meta name="copyright" content="Copyright &copy;XT.COM 版权所有" />
+<meta name="revisit-after" content="1 days" />
+<link rel="shortcut icon" href="https://assets.xt.com/src/images/favicon/favicon.ico?1575258979471" />
+<link
+  rel="icon"
+  href="https://assets.xt.com/src/images/favicon/favicon.ico"
+  type="image/x-icon"
+/>
+<meta name="viewport" content="width=1100,user-scalable=yes" />
+
+<meta name="keywords" content="XT;XT交易所;数字货币交易网;虚拟货币交易平台;比特币交易平台;以太坊;比特币;莱特币;btc;ltc;BitCoin;itecoin;ltc;ETHereum;ETH;etc" />
+<meta name="description" content="XT交易所，比特币BTC,莱特币ltc，以太坊ETH，etc，数字货币交易平台，虚拟货币交易网，区块链资产交易所,比特币交易平台" />
+
+
+    <meta name="baidu-site-verification" content="4b87de55a498cdb011a90b4a0286b1c1"/>
+    <title>全球领先的数字货币交易网_虚拟货币交易所_比特币交易平台_区块链交易平台-XT交易所</title>
+    <link rel="stylesheet" type="text/css" href="https://assets.xt.com/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://assets.xt.com/src/styles/zbg/css/main.css?1575258979471">
+    <link rel="stylesheet" type="text/css" href="https://assets.xt.com/src/styles/xuleipro.css?1575258979471">
+    <link rel="stylesheet" type="text/css" href="https://assets.xt.com/src/styles/juabox.css?1575258979471">
+    <link href="https://assets.xt.com/src/styles/common/animate.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="https://assets.xt.com/lib/wow/wow.min.js"></script>
+    <script src="https://assets.xt.com/lib/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="https://assets.xt.com/lib/others/sweetalert.min.js"></script>
+    <script type="text/javascript" src="https://assets.xt.com/src/scripts/common/web.lang.js"></script>
+    <script src="https://assets.xt.com/lib/requirejs/require.js"></script>
+    <script type="text/javascript" src="https://assets.xt.com/src/scripts/main.js"></script>
+    <style>
+        body, html, #zbg-index{
+            /*height: 100%;*/
+        }
+        .vertical-bars-1 div{
+            background: #FFBE3F!important;
+        }
+        li{
+            list-style: none;
+        }
+        .header {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 50px;
+            /*padding: 0 168px;*/
+            padding: 0 2%;
+        }
+
+        .header .header-nav .dropdown .dropdown-menu {
+            /*top: calc(80% - 2px);*/
+        }
+
+        .header.sticky {
+            background: #191919;
+            padding: 0 5%;
+            height: 50px;
+        }
+
+        .header.sticky .header-nav .dropdown .dropdown-menu {
+            /*top: calc(100% - 2px);*/
+        }
+
+        .noData {
+            display: flex;
+            justify-content: center;
+            color: #ccc;
+            font-size: 18px;
+            padding: 25px 0;
+        }
+
+        @media (max-width: 330px){
+            .banner{
+                height: 120px!important;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .tab.market-filter-tab{
+                display: none;
+            }
+            .banner{
+                height: 200px!important;
+            }
+        }
+        @media screen and (min-width: 500px) and (max-width: 600px){
+            .banner{
+                height: 250px!important;
+            }
+        }
+        @media screen and (min-width: 600px) and (max-width: 768px){
+            .banner{
+                height: 295px!important;
+            }
+        }
+
+        /*小于 768px */
+        @media (max-width: 768px) {
+            .index-market{
+                padding: 40px 0;
+            }
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1000px){
+            .banner{
+                height: 320px!important;
+            }
+        }
+
+        @media screen and (min-width: 1000px) and (max-width: 1350px){
+            .banner{
+                height: 420px!important;
+            }
+        }
+        @media screen and (min-width: 1350px) and (max-width: 1600px){
+            .banner{
+                height: 420px!important;
+            }
+        }
+
+        .index-market .navContent .usds {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1.8 !important;
+        }
+        .index-market .navContent .usds .dropDownList {
+            position: absolute;
+            bottom: -140px;
+            right: 0;
+            z-index: 9;
+            background-color: white;
+            box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+            border-radius: 3px;
+            width: 72px;
+            font-size: 14px;
+        }
+        .index-market .navContent .usds .dropDownList li {
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #666;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        .index-market .navContent .usds .dropDownList li:hover {
+            background-color: rgba(240, 239, 239, 0.411)
+        }
+
+        .index-market .navContent .usds .dropDown {
+            border:1px solid rgba(236,236,236,1);
+            border-radius: 10px;
+            padding: 0px 20px 0px 12px;
+            height: 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 10px;
+            position: relative;
+            width: 72px;
+
+        }
+        .index-market .navContent .usds.active .dropDown {
+            border-color: #F2A700;
+
+        }
+        .index-market .navContent .usds.active .dropDown::before {
+            border-color: #F2A700 transparent transparent transparent;
+
+        }
+        .index-market .navContent .usds .dropDown::before {
+            position: absolute;
+            display: block;
+            content: '';
+            border-width: 4px 4px 4px 4px;
+            border-style: solid;
+            border-color: rgba(183,195,222,1) transparent transparent transparent;
+            right: 6px;
+            top: 8px;
+            transition: all 0.5s;
+        }
+        .index-market .navContent .usds > .active {
+            border: 1px solid white;
+            color: white;
+        }
+        .index-market .navContent .usds > .active::before {
+            border-color: white transparent transparent transparent;
+        }
+        .otherLink {
+            height: 105px;
+            position:absolute;
+            bottom:45px;
+            left:8%;
+            z-index: 999;
+            display: flex;
+            justify-content: center;
+        }
+
+    </style>
+</head>
+<body class="home">
+    
+<script>
+  // 百度统计
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?f7ca401c1dcd40ddd3cdf756fbdeeeef";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+    
+<style>
+  .header {
+    flex-wrap: wrap;
+  }
+  #header_menu_he .main-nav .dropdown .arrow {
+    color: #4fd3d3;
+  }
+
+  #rolling {
+    height: 25px;
+    line-height: 25px;
+    overflow: hidden;
+  }
+
+  .right-A a {
+    color: #fff;
+  }
+
+  .right-A a:hover {
+    color: #5a7ff5;
+  }
+
+  #header-navigator .active {
+    color: #FFBE40;
+  }
+  .nav {
+    width: 100%;
+    display: flex;
+  }
+  .tip {
+    color: #f5bf59;
+    font-size: 14px;
+    line-height: 14px;
+    width: 100%;
+    display: none;
+    background-color: rgb(26, 25, 20);
+    position: fixed;
+    z-index: 501;
+    line-height: 24px;
+    padding: 0px 40px;
+  }
+  .tip span {
+    float: left;
+  }
+  .tipActive {
+    top: 24px !important;
+  }
+  .closeTip {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    display: block;
+    position: relative;
+    margin: 5px;
+    cursor: pointer;
+  }
+  .closeTip::after {
+    content: '';
+    width: 2px;
+    height: 14px;
+    background-color: #f5bf59;
+    display: block;
+    border-radius: 2px;
+    position: absolute;
+    left: 7px;
+    transform: rotate(45deg);
+  }
+  .closeTip::before {
+    display: block;
+    content: '';
+    width: 2px;
+    height: 14px;
+    background-color: #f5bf59;
+    display: block;
+    border-radius: 2px;
+    position: absolute;
+    left: 7px;
+    transform: rotate(-45deg);
+  }
+
+
+</style>
+<div class="tip">
+  <span>为了您更好的体验，请使用Google Chrome浏览器</span>
+  <span class="closeTip" onclick="closeTip(this)"></span>
+</div>
+<header class="header" onclick="closeMenu();" id="header_menu_he" v-cloak="">
+  <div class="nav ">
+    <a href="/" class="logo">
+      <img src="https://img.xt.com/src/images/2019index/logo.svg" />
+    </a>
+
+    <div class="header-nav" id="header-navigator" v-cloak="">
+      <ul class="user-nav" style="justify-content: flex-start;flex: 0.6">
+        <li class="nav-separate-line">|</li>
+        <li class="dropdown" style="margin-left: 0" >
+           <div class="header-menu-button">
+            <!-- <img src="https://img.xt.com/src/images/2019index/top_more_ico.svg" /> -->
+           </div>
+          <ul class="dropdown-menu">
+            <li>
+              <a
+                      role="button"
+                      href="/LaunchPad"
+                      :class="{active:activeNav=='LaunchPad'}"
+              >
+                <span class="icon">
+                  <img src="https://img.xt.com/src/images/2019index/top_more_down_ico_1.svg" alt="">
+                </span>
+                LaunchPad
+             </a
+              >
+            </li>
+            <li>
+              <a
+                      role="button"
+                      href="/listing"
+                      :class="{active:activeNav=='listing'}"
+              >
+              <span class="icon">
+                <img src="https://img.xt.com/src/images/2019index/top_more_down_ico_2.svg" alt="">
+              </span>
+              上币申请</a
+              >
+            </li>
+            <li>
+              <a
+                      role="button"
+                      href="/systemStatus"
+                      :class="{active:activeNav=='systemStatus'}"
+              >
+              <span class="icon">
+                <img src="https://img.xt.com/src/images/2019index/top_more_down_ico_3.svg" alt="">
+              </span>
+                系统状态
+              </a>
+            </li>
+
+            <li>
+              <a
+                      role="button"
+                      href="/help/coins"
+                      :class="{active:activeNav=='coins'}"
+              >
+              <span class="icon">
+                <img src="https://img.xt.com/src/images/2019index/top_more_down_ico_4.svg" alt="">
+              </span>
+              币种资料</a
+              >
+            </li>
+
+            <!-- <li>
+              <a
+                      role="button"
+                      href="/aboutUs"
+                      :class="{active:activeNav=='aboutUs'}"
+              >
+              <span class="icon">
+                <img src="https://img.xt.com/src/images/2019index/top_more_down_ico_5.svg" alt="">
+              </span>
+                关于XT
+              </a>
+            </li> -->
+
+            <li>
+              <a
+                      role="button"
+                      href="/appstore"
+                      :class="{active:activeNav=='appstore'}"
+              >
+              <span class="icon">
+                <img src="https://img.xt.com/src/images/2019index/top_more_down_ico_6.svg" alt="">
+              </span>
+              APP</a
+              >
+            </li>
+
+          </ul>
+        </li>
+        <li>
+          <a
+            role="button"
+            href="/trade/btc_usdt"
+            id="menu_exchange"
+            :class="{active: activeNav=='trade'}"
+          >
+            币币交易
+          </a>
+        </li>
+        <li>
+          <a
+            role="button"
+            href="/leverage/btc_usdt"
+            id="menu_exchange"
+            :class="{active: activeNav == 'leverage'}"
+          >
+            杠杆交易
+          </a>
+        </li>
+
+
+
+        <li class="dropdown">
+          <p role="button" class="arrow">
+            <span >法币交易</span>
+          </p>
+          <ul class="dropdown-menu center">
+            <li id="otcList">
+              <a href="/otcTrade"  :class="{active:activeNav=='otcTrade'}">
+                OTC交易
+              </a>
+            </li>
+            <li>
+              <a href="/c2c"  :class="{active:activeNav=='c2c'}">
+                C2C交易
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li id="remmound" class="right-A">
+          <a href="/u/recommend" id="menu_asset" onclick="recommend()">
+            超级合伙人
+          </a>
+          <img
+                  class="animated swing infinite"
+                  src="https://img.xt.com/src/images/new.svg"
+                  alt=""
+                  style="width: 39px;"
+          />
+        </li>
+      </ul>
+      <!--<div class="notice-nav" style="visibility: hidden">
+                    <a href="https://xt.zendesk.com/hc/zh-cn" target="_blank" class="title" style="border-right: 1px solid rgba(255,255,255,30%);">
+                        公告
+                    </a>
+                    <div id="rolling">
+                        <ul>
+                        </ul>
+                    </div>
+                </div>-->
+      <ul class="user-nav" id="user-nav">
+
+        <li id="zichanguanli" class="dropdown">
+          <p role="button" class="arrow">
+            <a href="javascript:;" id="menu_asset">
+              资产管理
+            </a>
+          </p>
+          <ul class="dropdown-menu">
+            <!--<li v-if="userInfo.userType == 1" v-cloak><a style="padding-left: 20px;" role="button" href="/u/recommend">推荐分享</a></li>-->
+            <li>
+              <a href="/u/asset">
+                资金
+              </a>
+            </li>
+            <li>
+              <a href="/u/leverage/asset">
+                杠杆资产
+              </a>
+            </li>
+            <li>
+              <a href="/u/payin">
+                充币
+              </a>
+            </li>
+            <li>
+              <a href="/u/payout">
+                提币
+              </a>
+            </li>
+            <li>
+              <a href="/u/bill">
+                综合账单
+              </a>
+            </li>
+            <li>
+              <a href="/u/entrust">
+                委托记录
+              </a>
+            </li>
+            <li>
+              <a href="/u/launchpadLog">
+                LaunchPad记录
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown" id="menu_loginedList" style="display: none;">
+          <p role="button" class="arrow">
+            <span class="icon"></span>
+            <span id="menuUsername">-</span>
+          </p>
+          <ul class="dropdown-menu">
+            <!--<li v-if="userInfo.userType == 1" v-cloak><a style="padding-left: 20px;" role="button" href="/u/recommend">推荐分享</a></li>-->
+            <li>
+              <a href="/u" id="user_center">
+                个人中心
+              </a>
+            </li>
+            <li>
+              <a href="/u/recommend" id="menu_remaned">
+                超级合伙人
+              </a>
+            </li>
+            <li>
+              <a href="/u/ordersManage" id="menu_merchant">
+                OTC
+              </a>
+            </li>
+            <li>
+              <a role="button" href="/u/api" id="menu_api">
+                API设置
+              </a>
+            </li>
+            <li>
+              <a
+                role="button"
+                href="javascript:;"
+                onclick="Methods.logout()"
+                id="menu_loginout"
+              >
+                退出登录
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="signup" id="menu_signInLi">
+          <a role="button" href="/login" id="menu_signin">
+            登录
+          </a>
+        </li>
+        <li class="line" v-if='!ISLOGIN'>
+         |
+        </li>
+        <li id="menu_signUpLi">
+          <a role="button" href="/register" role="button" id="menu_signup">
+            注册
+          </a>
+        </li>
+        <li class="dropdown">
+          <p role="button" class="arrow">
+            <!-- <img src="https://img.xt.com/src/images/icon/language-icon.png" /> -->
+            <span id="menuLanguage">简体中文</span>
+          </p>
+          <ul class="dropdown-menu center">
+            <li class="cn">
+              <a onclick="SetLan('cn')">简体中文 </a>
+            </li>
+            <li class="en">
+              <a onclick="SetLan('en')">English</a>
+            </li>
+            <li class="hk">
+              <a onclick="SetLan('hk')">繁體中文</a>
+            </li>
+            <!-- <li class="jp">
+              <a onclick="SetLan('jp')">日本語</a>
+            </li> -->
+            <li class="kr">
+              <a onclick="SetLan('kr')">한국어</a>
+            </li>
+          </ul>
+        </li>
+       
+      </ul>
+    </div>
+  </div>
+  <div
+    class="header-button"
+    id="header_mobel_button"
+    onclick="SwitchClass(this)"
+  >
+    <span></span>
+  </div>
+</header>
+<script type="application/javascript">
+  var switchClosed = false
+
+  function hasClass(ele, cls) {
+    return ele.className.match(new RegExp('(\\s|^)' + cls + '(\\s|$)'))
+  }
+
+  function addClass(ele, cls) {
+    if (!this.hasClass(ele, cls)) ele.className += ' ' + cls
+  }
+
+  function removeClass(ele, cls) {
+    if (hasClass(ele, cls)) {
+      var reg = new RegExp('(\\s|^)' + cls + '(\\s|$)')
+      ele.className = ele.className.replace(reg, ' ')
+    }
+  }
+
+  function SwitchClass(t) {
+    if (switchClosed) {
+      switchClosed = false
+      removeClass(t, 'close-button')
+      removeClass(document.getElementById('header_menu_he'), 'open')
+    } else {
+      switchClosed = true
+      addClass(t, 'close-button')
+      addClass(document.getElementById('header_menu_he'), 'open')
+    }
+  }
+
+  var language = ['简体中文', 'English', '繁體中文', '日本語', '한국어']
+
+  function setCookie(name, value, time) {
+    var exp = time || new Date()
+    exp.setTime(exp.getTime() + 12 * 60 * 60 * 1000) //12小时
+    let a = DOMAIN_BASE.split('.')
+    let domainBase = [a[a.length - 2], a[a.length - 1]].join('.')
+    window.document.cookie = name + '=' + value + ';path=/;expires=' + exp.toGMTString() + ";domain=." + domainBase;
+    //   window.document.cookie = name + '=' + value + ';path=/;expires=' + exp.toGMTString()
+  }
+
+  //读取cookies
+  function getCookie(name) {
+    var arr,
+      reg = new RegExp('(^| )' + name + '=([^;]*)(;|$)')
+
+    if ((arr = document.cookie.match(reg))) return unescape(arr[2])
+    else return null
+  }
+
+  var isLogin = function() {
+    return (
+      (getCookie('zuname') != null && getCookie('zuname') != 'none') ||
+      (getCookie('wuname') != null && getCookie('wuname') != 'none')
+    )
+  }
+  var lanIndex = 0
+  var langCookie = getCookie('wlan')
+  if (langCookie == null || langCookie == 'none') langCookie = getCookie('zlan')
+  if (langCookie == null || langCookie == 'none') {
+    var lang = navigator.systemLanguage
+      ? navigator.systemLanguage
+      : navigator.language
+    //获取浏览器配置语言 #括号内是个运算，运算过后赋值给lang，当?前的内容为true时把?后的值赋给lang，为False时把:后的值赋给lang
+    var lang = lang.substr(0, 2) //获取lang字符串的前两位
+    if (lang == 'zh') {
+      lanIndex = 0
+      setCookie('wlan', 'cn')
+      setCookie('zlan', 'cn')
+    } else if (lang == 'en') {
+      lanIndex = 1
+      setCookie('wlan', 'en')
+      setCookie('zlan', 'en')
+    } else if (lang == 'hk') {
+      lanIndex = 2
+      setCookie('wlan', 'hk')
+      setCookie('zlan', 'hk')
+    } else if (lang == 'jp') {
+      lanIndex = 3
+      setCookie('wlan', 'jp')
+      setCookie('zlan', 'jp')
+    } else if (lang == 'kr') {
+      lanIndex = 4
+      setCookie('wlan', 'kr')
+      setCookie('zlan', 'kr')
+    }else{
+      lanIndex = 1
+      setCookie('wlan','en')
+      setCookie('zlan','en')
+    }
+    document.getElementById('menuLanguage').innerHTML = language[lanIndex]
+    location.replace(location.href)
+  }
+
+  if (langCookie != null && langCookie != 'none') {
+    if (langCookie == 'cn') lanIndex = 0
+    else if (langCookie == 'en') lanIndex = 1
+    else if (langCookie == 'hk') lanIndex = 2
+    else if (langCookie == 'jp') lanIndex = 3
+    else if (langCookie == 'kr') lanIndex = 4
+    document.getElementById('menuLanguage').innerHTML = language[lanIndex]
+  }
+  if (isLogin()) {
+    var username = getCookie('wuname')
+
+    if (username == null || username == 'none') username = getCookie('zuname')
+
+    var length = username.length
+    if (length <= 6) {
+      var newName = username.substring(0, 3) + '***'
+      document.getElementById('menuUsername').innerHTML = username
+    } else {
+      var newName =
+        username.substring(0, 3) +
+        '***' +
+        username.substring(length - 3, length)
+      document.getElementById('menuUsername').innerHTML = username
+    }
+
+    document.getElementById('zichanguanli').style.display = 'flex'
+    // document.getElementById("otcList").style.display = "flex";
+    document.getElementById('menu_loginedList').style.display = 'flex'
+    document.getElementById('menu_signUpLi').style.display = 'none'
+    document.getElementById('menu_signInLi').style.display = 'none'
+  } else {
+    document.getElementById('zichanguanli').style.display = 'none'
+    // document.getElementById("otcList").style.display = "none";
+    document.getElementById('menu_loginedList').style.display = 'none'
+    document.getElementById('menu_signUpLi').style.display = 'flex'
+    document.getElementById('menu_signInLi').style.display = 'flex'
+  }
+
+  function SetLan(lan) {
+    console.log(1)
+    var name = 'wlan'
+    var name2 = 'zlan'
+
+    setCookie(name, lan)
+    setCookie(name2, lan)
+    
+    location.replace(location.href)
+  }
+
+  var menuArr = [false, false, false, false]
+
+  function closeMenu() {
+    if (menuArr[0]) {
+      menuArr[0] = false
+      document.getElementById('ztmenu_list').style.display = 'none'
+    }
+    if (menuArr[1]) {
+      menuArr[1] = false
+      document.getElementById('dropdown_menuLanguage').style.display = 'none'
+    }
+    if (menuArr[2]) {
+      menuArr[2] = false
+      document.getElementById('dropdown_menuLogin').style.display = 'none'
+    }
+    if (menuArr[3]) {
+      menuArr[3] = false
+      document.getElementById('dropdown_assetsManage').style.display = 'none'
+    }
+  }
+
+  function recommend() {
+    if (!isLogin()) {
+      JuaBox.confirm("您还未登录！", {
+        buttons: {
+          confirm: '去登录'
+        },
+        callback: function() {
+          window.location.href = 'login'
+        }
+      })
+      return
+    }
+    window.location.href = '/u/recommend'
+  }
+
+  function showLoginList(ids, index, event) {
+    if (menuArr[index]) {
+      document.getElementById(ids).style.display = 'none'
+      menuArr[index] = false
+    } else {
+      closeMenu()
+      menuArr[index] = true
+      document.getElementById(ids).style.display = 'block'
+    }
+    event.stopPropagation()
+  }
+</script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    require(['common/methods', 'vue'], function(Methods, Vue) {
+      new Vue({
+        el: '#header_menu_he',
+        data: function() {
+          return {
+            activeNav: ''
+          }
+        },
+        mounted: function() {
+          $(window).click(function(e) {
+            e.stopPropagation()
+            $('#dropdown_menuLogin').hide()
+          })
+        },
+        created() {
+          var href = window.location.href
+          var arr = [
+            'trade',
+            'otcTrade',
+            'newmarket',
+            'appstore',
+            'c2c',
+            'leverage',
+            'LaunchPad',
+            'coins',
+            'aboutUs',
+            'listing',
+            'systemStatus'
+
+          ]
+          var _this = this
+          arr.forEach(function(val) {
+            if (href.indexOf(val) != -1) {
+              _this.activeNav = val
+            }
+          })
+        },
+        methods: {
+          logout: function() {
+            Methods.logout()
+          }
+        }
+      })
+    })
+  })
+
+
+  function IsPC() {
+        var userAgentInfo = navigator.userAgent;
+        var Agents = ["Android", "iPhone",
+                    "SymbianOS", "Windows Phone",
+                    "iPad", "iPod"];
+        var flag = true;
+        for (var v = 0; v < Agents.length; v++) {
+            if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                flag = false;
+                break;
+            }
+        }
+        return flag;
+  }
+
+  if (navigator.appVersion.indexOf('Chrome') == -1 && IsPC()) {
+    if (document.cookie.indexOf('tip') == -1) {
+      let tip = document.getElementsByClassName('tip')[0]
+      let h = document.getElementsByClassName('header')[0]
+      let closeTipEle = document.getElementsByClassName('closeTip')[0]
+      tip.style.display = 'block'
+      h.classList.add('tipActive')
+      function closeTip(e) {
+        e.parentNode.style.display = 'none'
+        let hh = document.getElementsByClassName('header')[0]
+        hh.classList.remove('tipActive')
+        const start = new Date(
+          new Date(new Date().toLocaleDateString()).getTime() +
+            24 * 60 * 60 * 1000 -
+            1
+        )
+        setCookie('tip', 'off', start)
+      }
+    }
+  }
+</script>
+
+    <div id="zbg-index" v-cloak="">
+        <div class="o-preloader">
+            <!--<div class="o-preloader_inner"></div>-->
+            <div class="loader vertical-bars-1">
+                <div class="layer-1 color-1"></div>
+                <div class="layer-2 color-2"></div>
+                <div class="layer-3 color-1"></div>
+                <div class="layer-4 color-2"></div>
+                <div class="layer-5 color-1"></div>
+                <div class="layer-6 color-2"></div>
+                <div class="layer-7 color-1"></div>
+                <div class="layer-8 color-2"></div>
+                <div class="layer-9 color-1"></div>
+                <div class="layer-10 color-2"></div>
+            </div>
+        </div>
+        <section class="banner">
+            <div class="swiper">
+                <div class="item" :class="bgindex == index ? 'active' : '' " v-for=" (el,index) in bannerList"  :key="index">
+                    <a target="_blank" class="banner_img" :href="el.forwardUrl"
+                       :style="{ 'background-image': 'url(//oss.xt.com/'  + el.picture + ')' }">
+                    </a>
+                </div>
+            </div>
+            <!--index -->
+            <div class="point">
+                <span @click="selectIndex(index)" :class="bgindex == index ? 'active' : '' " v-for=" (item,index) in bannerList" :key="index"></span>
+            </div>
+            <div class="notices-container">
+                <span class="icon">
+                    <img src="https://img.xt.com/src/images/2019index/home_banner_notice_ico.svg" alt="">
+                    公告:
+                </span>
+                <ul>
+                    <li :key="item.articleId" v-cloak v-for="item in notices" >
+                            <a :href="'/blog/display?articleId=' + item.articleId" v-text="item.articleTitle" target="_blank"></a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!--市场列表-->
+        <section class="index-market" >
+            <div class="container">
+                <!-- zbg市场 -->
+                <div class="index-market-wrapper" v-show="markerShow=='XT'">
+                    <div class="navWrapper">
+                        <div class="navContent">
+                            <div @click="changeMarketsTab('user')" class="market-nav" :class="{active:navActive=='user'}">
+                                <span class="text">
+                                    自选
+                                </span>
+                            </div>
+                            <div @click="changeMarketsTab('hot')" class="market-nav" :class="{active:navActive=='hot'}">
+                                <span class="text">
+                                    全部
+                                </span>
+                            </div>
+                            <div @click="changeMarketsTab('sxc')" class="market-nav" :class="{active:navActive=='sxc'}">
+                                <span class="text">
+                                    SXC
+                                区
+                                </span>
+                            </div>
+                            <div @click="changeMarketsTab('all')" class="market-nav usds" :class="{active:navActive=='usdt'}">
+                                <span class="text">
+                                        <span>USDⓈ
+                                                区</span>
+                                                <span class="dropDown"  @click.stop='dropDownList = !dropDownList'>{{usdsText}}
+
+                                                        <ul class='dropDownList' v-show="dropDownList">
+                                                                <li @click.stop="changeMarketsTab('all','changeUsd')">ALL</li>
+                                                                <li @click.stop="changeMarketsTab('usdt','changeUsd')">USDT</li>
+                                                                <li @click.stop="changeMarketsTab('tusd','changeUsd')">TUSD</li>
+                                                                <li @click.stop="changeMarketsTab('pax','changeUsd')">PAX</li>
+                                                            </ul>
+
+                                                </span>
+                                </span>
+
+
+                            </div>
+                            <div @click="changeMarketsTab('btc')" class="market-nav" :class="{active:navActive=='btc'}">
+                                <span class="text">
+                                        BTC
+                                        区
+                                </span>
+                            </div>
+                            <div @click="changeMarketsTab('xt')" class="market-nav" :class="{active:navActive=='xt'}">
+                                <span class="text">
+                                        XT
+                                        区
+                                </span>
+                            </div>
+                        </div>
+                        <div class="tab market-filter-tab">
+                            <div class="market-filter">
+                                <input v-model="keyWord" placeholder="搜索币种">
+                                    <img @click="keyWord ? emptySearch() : null" src="https://img.xt.com/src/images/2019index/home_search_gray_ico.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list">
+                        <div class="title">
+                            <ul>
+
+                                <li class="coin-name title">
+                                    交易对
+                                </li>
+                                <li class="collect">
+                                    </li>
+                                <li class="new-price" @click="changeSort('price', $event)">
+                                    最新价
+                                    <span class="caret-wrapper">
+                                        <i class="sort-caret ascending"></i>
+                                        <i class="sort-caret descending"></i>
+                                    </span>
+                                </li>
+                                <li @click="changeSort('rate', $event)">
+                                    24H
+                                    涨跌幅
+                                    <span class="caret-wrapper">
+                                        <i class="sort-caret ascending"></i>
+                                        <i class="sort-caret descending"></i>
+                                    </span>
+                                </li>
+                                <li @click="changeSort('highPrice', $event)">
+                                    24H 高/低
+                                    <span class="caret-wrapper">
+                                        <i class="sort-caret ascending"></i>
+                                        <i class="sort-caret descending"></i>
+                                    </span>
+                                </li>
+                                <li @click="changeSort('volume', $event)">
+                                    24H 成交量
+                                    <span class="caret-wrapper">
+                                        <i class="sort-caret ascending"></i>
+                                        <i class="sort-caret descending"></i>
+                                    </span>
+                                </li>
+                                <li>
+                                    操作
+                                    <em></em>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="body" v-show="displayMarkets.length">
+                            <ul role="button" v-for="(data, index) in displayMarkets" @click="goExchange(1, data.market.replace('/','_'))"
+                                v-cloak="">
+                                <li class="collect" @click="collectOperate(data)">
+                                    <i :class="returnMarketIsCollcet(data.marketId) ?'active' :''"></i>
+                                </li>
+                                <li class="coin-name" :class="'icon-' + data.market.split('_')[0].toLowerCase()">
+                                    <!--<img
+                                            v-if="data.market.split('_')[0] === 'scc' || data.market.split('_')[0] === 'fil' || data.market.split('_')[0] === 'xem' || data.market.split('_')[0] === 'dash' || data.market.split('_')[0] === 'xlm' || data.market.split('_')[0] === 'ada' || data.market.split('_')[0] === 'xwc' || data.market.split('_')[0] === 'xt' || data.market.split('_')[0] === 'doge'|| data.market.split('_')[0] === 'dcr'|| data.market.split('_')[0] === 'sc'|| data.market.split('_')[0] === 'sxc'|| data.market.split('_')[0] === 'xtz'"
+                                        :src="'https://img.xt.com/src/images/icon/coin/' + data.market.split('_')[0] + '.png?1575258979471'" />-->
+                                    <!--<img :src="'https://img.xt.com/src/images/icon/coin/' + data.market.split('_')[0] + '.svg?1575258979471'" />-->
+                                    <span class="pic"></span>
+                                    {{data.market.split('_')[0].toUpperCase()}}
+                                    <span>
+                                        <i>/</i>{{data.market.split('_')[1].toUpperCase()}}</span>
+                                </li>
+                                <li class="new-price">{{showMoney(data.lastPrice, data.market)}}</li>
+                                <li>
+                                    <span :class="data.rate >= 0 ? 'green' : 'red'">{{ data.rate >= 0 ? '+' +
+                                        showRate(data.rate) : '' + showRate(data.rate) }}%</span>
+                                </li>
+                                <li>{{data.highPrice}}/{{data.lowPrice}}</li>
+                                <li>{{data.volume}}</li>
+                                <li style="color:#FFB700">
+                                    <img src="https://img.xt.com/src/images/2019index/home_price_operate.svg" alt="">
+                                </li>
+                            </ul>
+                            <ul class="show-more-button" @click="hideShowMoreButton" v-if="result.length > 10">
+                                        <span>{{ showMoreData ? "收起" : "查看更多" }}
+                                        </span>
+                                        <img v-if='!showMoreData' src="https://img.xt.com/src/images/2019index/home_seemore_ico.svg" alt="">
+                                        <img v-if='showMoreData' src="https://img.xt.com/src/images/2019index/home_seemore_ico_.svg" alt="">
+                            </ul>
+                        </div>
+                        <div class="noData" v-show="!displayMarkets.length">
+                            暂无数据
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="advantage">
+            <div class="content">
+                <div class="left">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </div>
+                <div class="right">
+                    <ul>
+                        <li>
+                            <i class="icon"></i>
+                            <div class="text">
+                                <p class="title">高性能撮合引擎</p>
+                                <p class="content">自主研发的撮合交易引擎，采用先进的分布式集群架构及微服务开发方式 。支持超过300万/秒交易并发。</p>
+                            </div>
+
+                        </li>
+                        <li>
+                            <i class="icon"></i>
+                            <div class="text">
+                                <p class="title">金融级安全防护</p>
+                                <p class="content">无偏性零知识证明隐私保密技术保护用户隐私，采用基于多种签名、离线签名、分层架构等安全设计，采用冷热钱包分离技术。</p>
+                            </div>
+
+                        </li>
+                        <li>
+                            <i class="icon"></i>
+                            <div class="text">
+                                <p class="title">OTC场外交易</p>
+                                <p class="content">支持多种法币交易 平台担保、快速安全</p>
+                            </div>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="new">
+            <div class="consulting">
+                <div class="title">
+                    <span>XT 资讯</span>
+                    <a href="/blog?type=7cZulbgB625">更多 >></a>
+                </div>
+                <div class="list">
+                    <ul>
+                        <li v-for='(item,index) in newsList'>
+                            <a :href="'/blog/display?articleId=' + item.articleId" target="_blank">
+                                <span class="newTitle">{{ item.articleTitle }}</span>
+                                <span class="time">{{ Methods.getDateTime(item.publishTime,'YYYY-MM-DD HH:MM') }}</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="announcement">
+                <div class="title">
+                    <span>XT 公告</span>
+                    <a href="/blog?type=7cZulbgB624">更多 >></a>
+                </div>
+                <div class="list">
+                    <ul>
+                        <li v-for='(item,index) in articleList'>
+                            <a :href="'/blog/display?articleId=' + item.articleId" target="_blank">
+                                <span class="newTitle">{{ item.articleTitle }}</span>
+                                <span class="time">{{ Methods.getDateTime(item.publishTime,'YYYY-MM-DD HH:MM') }}</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="app">
+            <p>
+                全面业务支持的WEB、APP时随地交易。
+            </p>
+            <a href="/appstore" target="_blank" class="button"> 下载APP</a>
+        </section>
+
+        <!-- <section class="advantage">
+            <div class="container">
+                <ul class="row">
+                    <li class="animated fadeInUp col-md-4 item-1" v-cloak="">
+                        <h3 :style="{width: 'cn' == 'en' ? '80%' : '100%', margin: '331px auto 20px auto'}">
+                            高性能撮合引擎
+                        </h3>
+                        <p>
+                            自主研发的撮合交易引擎，采用先进的分布式集群架构及微服务开发方式 。支持超过300万/秒交易并发。
+                        </p>
+                    </li>
+                    <li class="animated fadeInUp item-2 col-md-4" v-cloak="">
+                        <h3>
+                            金融级安全防护
+                        </h3>
+                        <p>
+                            无偏性零知识证明隐私保密技术保护用户隐私，采用基于多种签名、离线签名、分层架构等安全设计，采用冷热钱包分离技术。
+                        </p>
+                    </li>
+                    <li class="animated fadeInUp item-3 col-md-4" v-cloak="">
+                        <h3>
+                            OTC场外交易
+                        </h3>
+                        <p>
+                            支持多种法币交易 平台担保、快速安全
+                        <P>
+                    </li>
+                </ul>
+            </div>
+        </section> -->
+        <!-- End of section -->
+        <!-- <section class="timeLine">
+            <div class="container timeBox">
+                <h2 class="wow fadeIn" data-wow-duration="2.5s" style="text-align: center">
+                    路线图
+                </h2>
+                <p>
+                    XT致力于打造一个全球范围内透明、高效、自治、共享的专业数字资产交易平台及全生态社区
+                </p>
+            </div>
+            <div class="roadmap-container">
+                <div class="no-gutters">
+                    <div class="align-self-start roadmap-label top active">
+                        <div class="text-content">
+                            2018年7月
+                            <span>
+                                XT.COM顶级域名正式成为平台统一对外域名
+                            </span>
+                        </div>
+                    </div>
+                    <div class="align-self-end roadmap-label bottom active">
+                        <div class="text-content">
+                            2018年8月
+                            <span>
+                                项目内测
+                            </span>
+                        </div>
+                    </div>
+                    <div class="align-self-start roadmap-label top active">
+                        <div class="text-content">
+                            2018年10月
+                            <span>
+                                项目开启外测β版本
+                            </span>
+                        </div>
+                    </div>
+                    <div class="align-self-end roadmap-label bottom active">
+                        <div class="text-content">
+                            2018年12月20日
+                            <span>
+                                XT平台重磅上线
+                            </span>
+                        </div>
+                    </div>
+                    <div class="align-self-start roadmap-label top active">
+                        <div class="text-content">
+                            2019年1月
+                            <span>
+                                OTC和C2C模块上线
+                            </span>
+                        </div>
+                    </div>
+                    <div class="align-self-end roadmap-label bottom active now">
+                        <div class="text-content">
+                            2019年2月
+                            <span>
+                                XT平台超级合伙人上线
+                            </span>
+                        </div>
+                    </div>
+                    <div class="align-self-start roadmap-label top">
+                        <div class="text-content">
+                            2019年
+                            <span>
+                                XT2.0升级计划
+                            </span>
+                        </div>
+                    </div>
+                    <div class="align-self-end roadmap-label bottom">
+                        <div class="text-content">
+                            2020年
+                            <span>
+                                XT 平台TOP计划
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+    </div>
+    <div class="otherLink" >
+        <!-- <div  id="coin-360-box"> -->
+            <!-- <iframe src="https://coin360.com/widget/map.html" title="Coin360.com: Cryptocurrency Market State" width="160" height="100"></iframe> -->
+        <!-- </div> -->
+    </div>
+</body>
+</html>
+<script>
+    require(['vue', 'common/methods', 'common/juabox'], function (Vue, Methods, JuaBox) {
+        var homeMarket = new Vue({
+            el: '#zbg-index',
+            data: function () {
+                return {
+                    marketInit: false,
+                    keyWord: '',
+                    sortBy: 'default', //priceDesc：价格降序, priceAsc：价格升序, rateDesc：24小时涨跌幅升序, rateAsc：24小时涨跌幅降序,
+                    assistPrice: null,
+                    markets: [],
+                    marketsTab: 'hot',
+                    marketConfig: {},
+                    showMoreData:false,
+                    assistList: {
+                        'none': {
+                            key: 'none',
+                            name: "默认",
+                            icon: '',
+                            symbol: '฿',
+                            decimal: 6
+                        },
+                        'usd': {
+                            key: 'usd',
+                            name: 'USD',
+                            icon: 'icon-meiyuan',
+                            symbol: '$',
+                            decimal: 3
+                        },
+                        'krw': {
+                            key: 'krw',
+                            name: 'KRW',
+                            icon: '',
+                            symbol: '₩',
+                            decimal: '3'
+                        }
+                    },
+                    websocket: '', //websocket服务,
+                    marketAreaList: [],
+                    navActive: 'hot',
+                    markerShow: "XT",
+                    noticeStart: false, //滚动开关
+                    noticeTimer: null,
+                    notices: [],
+                    bannerList: [],
+                    bgindex: 0,
+                    timeId: null,
+                    userMarketList: [],
+                    dropDownList: false,
+                    usdsText: 'ALL',
+                    articleList: [],//公告
+                    newsList: [],//资讯
+                    result: [],
+                    marketId: false
+                }
+            },
+            computed: {
+                //推荐市场,目前显示全部 (旧逻辑根据某个字段布尔值过滤) -ok
+                hotMarkets: function () {
+                    var _this = this;
+                    var markets = [];
+                    var oriMarkets = this.markets;
+
+                    oriMarkets.forEach(function (item, index) {
+                        if(!_this.marketId) {
+                            _this.marketsIdSwitch();
+                        }
+                        var currMarketName = _this.marketId[item[0]];
+                        if (currMarketName) {
+                            //过滤后的数组
+                            markets.push(item);
+                        }
+                    });
+                    return this.doSortMarket(this.convertMarket(markets));
+                },
+                //过滤要显示的市场
+                displayMarkets: function () {
+                    var type = this.marketsTab;
+                    var keyWord = this.keyWord;
+                    //优先搜索
+                    this.result = [];
+                    if (keyWord != '') {
+                        return this.marketsForKeyWord(keyWord.toLowerCase());
+                    } else {
+                        if (type === 'hot') {
+                            this.result = this.hotMarkets
+                        } else if (type === 'mock') {
+                            this.result= [];
+                        } else if (type === 'user') {
+                            this.result= this.marketsForKeyWord(keyWord.toLowerCase());
+                        } else {
+                            this.result= this.marketsForCoin(type);
+                        }
+                    }
+                    if(this.showMoreData){
+                        return this.result;
+                    }else{
+                        return this.result.slice(0,10);
+                    }
+                },
+            },
+            methods: {
+                // 将市场id转为 市场名字符串 返回对象
+                marketsIdSwitch() {
+                    var marketId = {};
+                    if (this.marketConfig) {
+                        for (var a = 0; a < this.markets.length; a++) {
+                            for (var b = 0; b < this.marketConfig.length; b++) {
+                                if (this.markets[a][0] == this.marketConfig[b].marketId) {
+                                    // if ((this.markets[a][0] + 2) == this.marketConfig[b].marketId){
+                                    marketId[this.marketConfig[b].marketId] = this.marketConfig[b].name; //格式: '1': btc/qtum
+                                }
+                            }
+                        }
+                    }
+                    this.marketId =  marketId;
+                },
+                getArticleList(type,id) {
+                    var that = this;
+                    //公告，资讯列表
+                    let langType;
+                    switch (LAN) {
+                        case 'cn':
+                            langType = 1;
+                            break;
+                        case 'en':
+                            langType = 2;
+                            break;
+                        case 'hk':
+                            langType = 5;
+                            break;
+                        case 'jp':
+                            langType = 4;
+                            break;
+                        case 'kr':
+                            langType = 3;
+                            break;
+                        default:
+                            langType = 2;
+                            break;
+                    }
+                    Methods.ajax({
+                        type: 'GET',
+                        url: DOMAIN_DEV +
+                            `/exchange/support/controller/website/ArticleController/getArticleList?pageIndex=1&pageSize=5&categoryId=${id}&lanType=${langType}`,
+                        success: function (res) {
+                            // let newRes;
+                            // if(res.datas.results[0].publishTime > res.datas.results[res.datas.results.length-1].publishTime) {
+                            //     console.log(res);
+
+                            //     let ress = res.datas.results;
+                            //     newRes = ress.sort((v1,v2)=>{
+                            //         if(v1.publishTime > v2.publishTime) {
+                            //             return 1
+                            //         }else if (v1.publishTime < v2.publishTime) {
+                            //             return 0
+                            //         }else {
+                            //             return -1
+                            //         }
+                            //     })
+                            // }
+                            // console.log(newRes);
+
+                            if(type == 1) {
+                                that.articleList = res.datas.results.slice(0,5);
+                            }else {
+                                that.newsList = res.datas.results.slice(0,5);
+                            }
+
+                        }
+                    })
+                },
+                hideShowMoreButton(){
+                    this.showMoreData = !this.showMoreData;
+                },
+                selectIndex(index){
+                    var that = this
+                    this.bgindex = index
+                    clearInterval(that.timeId)
+                    that.swiper()
+                },
+                swiper(){
+                    var that = this
+                    //轮播图
+                    that.timeId =  setInterval(function () {
+                        that.bgindex ++
+                        if (that.bgindex == that.bannerList.length){
+                            that.bgindex = 0
+                        }
+                    }, 5000)
+                },
+                // 获取公告信息
+                getNoticeList() {
+                    var that = this
+                    var language = getCookie('wlan')
+                    var lanType = {
+                        cn: '1',
+                        en: '2',
+                        kr: '3',
+                        jp: '4',
+                        hk: '5'
+                    } [language]
+                    var data = {
+                        categoryId: '7cZulbgB624',
+                        lanType: lanType
+                    }
+                    Methods.ajax({
+                        type: 'GET',
+                        url: DOMAIN_DEV +
+                            '/exchange/support/controller/website/ArticleController/notices',
+                        data: data,
+                        success: function (res) {
+                            that.notices = res.datas
+                        }
+                    })
+                },
+                getBannerList: function () {
+                    var language = getCookie('wlan')
+                    var lanType = {
+                        cn: '1',
+                        en: '2',
+                        kr: '3',
+                        jp: '4',
+                        hk: '5'
+                    } [language]
+                    Methods.ajax({
+                        type: 'GET',
+                        url: DOMAIN_DEV +
+                            "/exchange/banner/controller/website/BannerController/getByLanType",
+                        data: {
+                            showType: 1, //1：首页，2：帮助中心
+                            platform: 1, //1-web 2-app
+                            lanType: lanType
+                        },
+                        success: function (res) {
+                            this.bannerList = res.datas
+                        }.bind(this)
+                    });
+                },
+                noticesMouseEnter: function ($event) {
+                    clearInterval(this.noticeTimer)
+                },
+                noticesMouseLeave: function ($event) {
+                    this.scrollNotices()
+                },
+                scrollNotices: function () {
+                    var _this = this
+                    clearInterval(_this.noticeTimer)
+                    if(_this.notices.length == 0) {
+                        return false
+                    }
+                    _this.noticeTimer = setInterval(function () {
+                        var tmp = _this.notices.shift()
+                        setTimeout(function () {
+                            _this.notices.push(tmp)
+                        }, 1000)
+                    }, 3000)
+                },
+                emptySearch: function () {
+                    this.keyWord = ''
+                },
+                goExchange: function (type, market) {
+                    Methods.setCookie(ENV + 'ExchangeMode', type, 7);
+                    window.location.href = '/trade/' + market;
+                },
+                changeMarketsTab: function (type,isUsds) {
+                    this.showMoreData = false;
+
+                    this.dropDownList = !this.dropDownList
+                    if(isUsds) {
+                        this.usdsText = type.toUpperCase();
+                    }else {
+                        this.usdsText = 'ALL'
+                    }
+                    this.keyWord = '';
+                    this.marketsTab = type;
+                    if(!isUsds) {
+                        this.navActive = type == 'all' ? 'usdt' : type;
+                    }else {
+                        this.navActive = 'usdt';
+                    }
+                    console.log(this.navActive);
+
+
+                },
+                // 获取市场配置
+                getMarketConfig: function (callback) {
+                    var _this = this;
+                    Methods.ajax({
+                        type: 'GET',
+                        // url: DOMAIN_TRADE + API_PREFIX + 'getMarketConfig',
+                        url: DOMAIN_DEV +
+                            "/exchange/config/controller/website/MarketController/" +
+                            'getByWebId',
+                        success: function (res) {
+                            _this.marketConfig = res.datas;
+                            callback && callback(res.datas);
+                        }
+                    });
+                },
+                //按货币分类 -ok
+                marketsForCoin: function (coin) {
+                    var _this = this;
+                    var markets = [];
+                    var oriMarkets = this.markets;
+
+                    oriMarkets.forEach(function (item, index) {
+                        if (_this.marketId[item[0]]) {
+                            var coinName = _this.marketId[item[0]].split('_')[1];
+                            if(coin == 'all') {
+                                if (coinName == 'usdt' || coinName == 'tusd' || coinName == 'pax') {
+                                    //过滤后的数组
+                                    markets.push(item);
+                                }
+                            }else {
+                                if (coinName == coin) {
+                                    //过滤后的数组
+                                    markets.push(item);
+                                }
+                            }
+
+                        }
+                    });
+                    return this.doSortMarket(this.convertMarket(markets));
+                },
+                // 搜索过滤-ok
+                marketsForKeyWord: function (keyword) {
+                    var _this = this;
+                    var markets = [];
+                    var oriMarkets = this.markets;
+                    var marketsTab = this.marketsTab
+
+                    oriMarkets.forEach(function (item, index) {
+                        var currMarketName = _this.marketId[item[0]];
+                        if (marketsTab == 'hot') {
+                            if (currMarketName.indexOf(keyword) != -1) {
+                                //过滤后的数组
+                                markets.push(item);
+                            }
+                        } else if(marketsTab == 'user') {
+                            if(_this.returnMarketIsCollcet(item[0])) {
+                                markets.push(item);
+                            }
+                        } else {
+                            if (currMarketName.indexOf(keyword) != -1 && currMarketName.indexOf(
+                                    marketsTab) != -1) {
+                                //过滤后的数组
+                                markets.push(item);
+                            }
+                        }
+                    });
+                    return this.doSortMarket(this.convertMarket(markets));
+                },
+                //转换对象市场为数组市场(为了排序) -ok
+                convertMarket: function (result) {
+                    var _this = this;
+                    var resultArray = [];
+
+                    result.forEach(function (item, index) {
+                        var lineData;
+                        try {
+                            lineData = JSON.parse(item[6]);
+                        } catch (e) {
+                            lineData = '';
+                        }
+                        var obj = {
+                            market: _this.marketId[item[0]], //市场名
+                            // 价格
+                            lastPrice: item[1], //最新价
+                            marketId: parseInt(item[0]),
+                            // buyOne : item[4],
+                            // sellOne : item[2],
+                            highPrice: item[2], //最高价
+                            lowPrice: item[3], //最低价
+                            // 成交量
+                            volume: item[4],
+                            //折算交易量为USD排序
+                            convertVolume: _this.getVolumeByAssist(item[4], _this.marketId[
+                                item[0]], 'usd'),
+                            // 走势图
+                            lineData: lineData,
+                            //涨跌幅
+                            rate: item[5]
+                        }
+                        resultArray.push(obj);
+                    });
+
+                    return resultArray;
+                },
+                //排序的方法-ok
+                doSortMarket: function (markets) {
+                    var sortBy = this.sortBy;
+                    var defaultArr = []
+                    if (sortBy == '' || markets.length == 0) {
+                        return markets;
+                    }
+                    if(sortBy == "default") {
+                        var xtArr = markets.filter(function (item, i) {
+                            return item.market.split('_')[0] == 'xt';
+                        }).sort(function(x, y) {
+                            return y.lastPrice - x.lastPrice;
+                        })
+                        var btcArr = markets.filter(function (item, i) {
+                            return item.market.split('_')[0] == 'btc';
+                        }).sort(function(x, y) {
+                            return y.lastPrice - x.lastPrice;
+                        })
+                        var ethArr = markets.filter(function (item, i) {
+                            return item.market.split('_')[0] == 'eth';
+                        }).sort(function(x, y) {
+                            return y.lastPrice - x.lastPrice;
+                        })
+                        var ltcArr = markets.filter(function (item, i) {
+                            return item.market.split('_')[0] == 'ltc';
+                        }).sort(function(x, y) {
+                            return y.lastPrice - x.lastPrice;
+                        })
+                        var etcArr = markets.filter(function (item, i) {
+                            return item.market.split('_')[0] == 'etc';
+                        }).sort(function(x, y) {
+                            return y.lastPrice - x.lastPrice;
+                        })
+                        defaultArr = defaultArr.concat(xtArr, btcArr, ethArr, ltcArr, etcArr);
+                        markets = markets.filter(function (item) {
+                            switch (item.market.split('_')[0]){
+                                case "xt":
+                                    return false
+                                    break;
+                                case "btc":
+                                    return false
+                                    break;
+                                case "eth":
+                                    return false
+                                    break;
+                                case "ltc":
+                                    return false
+                                    break;
+                                case "etc":
+                                    return false
+                                    break;
+                                default:
+                                    return true
+                                    break;
+                            }
+                        })
+                    }
+                    markets.sort(function (x, y) {
+                        if (sortBy == 'priceAsc') {
+                            return x.lastPrice - y.lastPrice;
+                        } else if (sortBy == 'priceDesc') {
+                            return y.lastPrice - x.lastPrice;
+                        } else if (sortBy == 'rateAsc') {
+                            return x.rate - y.rate;
+                        } else if (sortBy == 'rateDesc') {
+                            return y.rate - x.rate;
+                        } else if (sortBy == 'highPriceAsc') {
+                            return x.highPrice - y.highPrice;
+                        } else if (sortBy == 'highPriceDesc') {
+                            return y.highPrice - x.highPrice
+                        } else if (sortBy == 'volumeAsc') {
+                            return x.volume - y.volume;
+                        } else if (sortBy == 'volumeDesc') {
+                            return y.volume - x.volume;
+                        } else if (sortBy == 'default') {
+                            return x.marketId - y.marketId
+                        }
+                    });
+                    if (sortBy == "default") {
+                        return defaultArr.concat(markets)
+                    } else {
+                        return markets
+                    }
+                },
+                changeSort: function (name, e) {
+                    var sortBy = this.sortBy, idx = $(e.target).index();
+                    var swift = function (name, sort) {
+                        if (sort == 'default') {
+                            $(".market-list>.title>ul>li").removeClass("descending ascending").eq(idx).addClass("descending");
+                            return name + 'Desc';
+                        }
+                        if (sort.indexOf(name) != -1) {
+                            if (sort.indexOf('Desc') != -1) {
+                                $(".market-list>.title>ul>li").removeClass("descending ascending").eq(idx).addClass("ascending");
+                                return name + 'Asc';
+                            }
+                            if (sort.indexOf('Asc') != -1) {
+                                $(".market-list>.title>ul>li").removeClass("ascending descending").eq(idx);
+                                return 'default';
+                            }
+                        } else {
+                            //递归
+                            return arguments.callee(name, 'default');
+                        }
+                    }
+                    this.sortBy = swift(name, sortBy);
+                },
+                //获取指定辅助货币的价格 -ok
+                getVolumeByAssist: function (price, market, assist) {
+                    if (!price || price == '' || !market || market == '' || this.assistPrice ==
+                        null) {
+                        return ''
+                    }
+                    var coin = market.split('_')[0];
+                    //优先取指定的assist 默认保留4位小数
+                    var assistCoin = assist || this.assistCoin;
+                    if (assistCoin == 'none' || assistCoin == '') {
+                        return Methods.fixNumber(price, 4);
+                    } else {
+                        return Methods.fixNumber(parseFloat(price) * parseFloat(this.assistPrice[
+                            assistCoin][coin]), 4) || '--';
+                    }
+                },
+                // 获取币价汇率 -ok
+                getPriceRate: function (callback) {
+                    Methods.ajax({
+                        type: 'GET',
+                        url: DOMAIN_DEV +
+                            "/exchange/config/controller/website/PriceController/" +
+                            'getAssistPrice',
+                        success: function (res) {
+                            this.assistPrice = res.datas;
+                            if (typeof callback == 'function') {
+                                callback();
+                            }
+                        }.bind(this),
+                        error: function () {}
+                    });
+                },
+                getHomeMarket: function () {
+                    var _this = this;
+                    var wsUrl = WEBSOCKET + '/websocket';
+                    // var wsUrl = 'ws://192.168.4.95:28080' + '/websocket';
+
+                    //建立握手
+                    if ('WebSocket' in window) {
+                        _this.websocket = new WebSocket(wsUrl);
+                    } else if ('MozWebSocket' in window) {
+                        _this.websocket = new MozWebSocket(wsUrl);
+                    } else {
+                        console.log('Your browser does not support websocket.')
+                        return false;
+                    }
+
+                    _this.websocket.onopen = function (event) {
+                        var marketParam = {
+                            dataType: "ALL_TRADE_STATISTIC_24H",
+                            dataSize: 1,
+                            action: "ADD"
+                        }
+                        _this.websocket.send(JSON.stringify(marketParam));
+                        // console.log('init websocket');
+
+                        //离开或者刷新当前页面时
+                        window.onbeforeunload = function () {
+                            _this.websocket && _this.websocket.close();
+                        }
+                    };
+                    _this.websocket.onmessage = function (event) {
+                        //修改状态
+                        if (!_this.marketInit) {
+                            _this.marketInit = true;
+                        }
+                        // console.log('数据变化了：')
+                        // [ 市场ID, 当前成交价, 最高价，最低价, 24小时成交量，24小时涨跌幅, 分时量（按小时统计）]
+                        var res = JSON.parse(event.data);
+
+                        if (typeof res.trade_statistic == 'object') {
+                            _this.markets = res.trade_statistic;
+                        } else {
+                            _this.markets = [];
+                        }
+                    };
+                    _this.websocket.onerror = function (event) {
+                        //
+                    };
+                },
+                showRate: function (rate) {
+                    return Methods.fixNumber(rate, 2)
+                },
+                showMoney: function (val, market) {
+                    if (isNaN(val)) {
+                        return '--'
+                    } else {
+                        return val;
+                    }
+                },
+                getMarketAreaListByWebId: function () {
+                    Methods.ajax({
+                        type: 'GET',
+                        url: DOMAIN_DEV +
+                            "/exchange/config/controller/website/MarketController/" +
+                            'getMarketAreaListByWebId',
+                        success: function (res) {
+                            this.marketAreaList = res.datas
+                        }.bind(this)
+                    });
+                },
+                webUrlInfo: function (urlGoogle, urlTargetUserId) {
+                    let adimUserWeb = {
+                        googleCode: urlGoogle,
+                        targetUserId: urlTargetUserId
+                    }
+                    return adimUserWeb
+                },
+                returnMarketIsCollcet(marketId) {
+                    for (let market of this.userMarketList) {
+                        if(market.marketId == marketId) {
+                            return true;
+                        }
+                    }
+                    return false;
+                },
+                getCollectList() {
+                    var _this = this
+                    Methods.ajax({
+                        type: 'GET',
+                        url: DOMAIN_DEV +
+                            '/exchange/user/controller/website/UserMarketController/getUserMarket',
+                        success: (res) => {
+                            this.userMarketList = res.datas
+                        }
+                    })
+                },
+                collectOperate(data) {
+                    let e = window.event || event
+                    e.stopPropagation();
+                    if(!ISLOGIN) {
+                        JuaBox.showWrong(EXX.L('账户已过期，请重新登录'));
+                        return
+                    }
+                    if(this.returnMarketIsCollcet(data.marketId)) {
+                        Methods.ajax({
+                            type: 'DELETE',
+                            data: {
+                                marketId: data.marketId,
+                                userId: Methods.getCookie(ENV+"uid"),
+                            },
+                            url: DOMAIN_DEV +
+                                "/exchange/user/controller/website/UserMarketController/deleteUserMarket",
+                            success: res => {
+                                this.getCollectList()
+                            }
+                        });
+                    } else {
+                        Methods.ajax({
+                            type: 'POST',
+                            data: {
+                                marketId: data.marketId,
+                                userId: Methods.getCookie(ENV+"uid")
+                            },
+                            url: DOMAIN_DEV +
+                                "/exchange/user/controller/website/UserMarketController/addUserMarket",
+                            success: res => {
+                                this.getCollectList()
+                            }
+                        });
+                    }
+                }
+            },
+            beforeMount: function () {
+                new WOW().init();
+            },
+            created: function () {
+                this.getMarketConfig(function () {
+                    this.getHomeMarket();
+                    setInterval(this.getPriceRate, 90000);
+                }.bind(this));
+                this.getPriceRate();
+                // this.getMarketAreaListByWebId();
+                //获取banner
+                this.getBannerList()
+                //公告开始
+                this.getNoticeList()
+                this.noticeStart = true
+                this.scrollNotices()
+                //公告
+                this.getArticleList(1,'7cZulbgB624');
+                //资讯
+                this.getArticleList(2,'7cZulbgB625');
+                var queryObj = Methods.parseQueryString();
+                var isTo = queryObj && queryObj.t && queryObj.to && queryObj.u && queryObj.g;
+                if (isTo) {
+                    Methods.deleCookie(ENV + 'ad');
+                    Methods.deleCookie(ENV + 'currentAccountId');
+                    // Methods.deleCookie(ENV + 'token');
+                    Methods.setCookie(ENV + 'ExchangeMode', 1);
+                    Methods.setCookie(ENV + 'TradeTheme', 'dark');
+                    Methods.setCookie(ENV + 'inputPriceMode', 0);
+                    Methods.setCookie(ENV + 'mname', 'none');
+                    Methods.setCookie(ENV + 'uname', 'none');
+                    Methods.setCookie(ENV + 'uid', 'none');
+                    Methods.setCookie(ENV + 'uon', 'none');
+                    window.localStorage.removeItem(ENV + "userInfo");
+                    Methods.ajax({
+                        url: DOMAIN_DEV +
+                            "/exchange/user/controller/admin/UserController/godLogin",
+                        data: JSON.stringify(this.webUrlInfo(queryObj.g, queryObj.u)),
+                        success: function (res) {
+                            this.requestLocked = false;
+                            // window.location.href = '/';
+                            // Methods.deleLocalStorage(ENV + 'noLoginUserInfo');
+                            //存储个人信息
+                            Methods.setLocalUserInfo(res.datas);
+                            //设置登录状态 cookie
+                            Methods.setCookie(ENV + 'uon', 1);
+                            Methods.setCookie(ENV + 'uid', res.datas.userId);
+                            Methods.setCookie(ENV + 'uname', res.datas.loginName);
+                            Methods.setCookie(ENV + 'utoken', res.datas.token);
+                            // loginSuccessUi('/u')
+                            window.location.href = '/u';
+                        },
+                        error: function (res) {
+                            this.requestLocked = false;
+                            var resMsg = res.resMsg;
+                            JuaBox.showWrong(EXX.L(resMsg.code));
+                        }
+                    });
+                }
+                //如果处于已登录状态则查询已加入自选的币种
+                if(ISLOGIN) {
+                    this.getCollectList()
+                }
+            },
+            mounted: function () {
+                this.swiper()
+                document.addEventListener('click', (e)=> {
+                    if (e.target.className != 'dropDownList') {
+                        this.dropDownList = false;
+                    }
+                })
+                jQuery(function ($) {
+                    "use strict";
+                    var _document = $(document),
+                        _window = $(window),
+                        _body = $("body");
+                    _document.on('scroll', function () {
+                        console.log($('#header_menu_he')[0].offsetHeight);
+
+                        if ($(this).scrollTop() >= ($('.banner ')[0].offsetHeight - ($('.banner .notices-container')[0].offsetHeight + $('#header_menu_he')[0].offsetHeight))) {
+                            $('.header').addClass('sticky')
+                        } else {
+                            $('.header').removeClass('sticky')
+                        }
+                    })
+                    //animated navbar-toggler button
+                    _document.on('click', '.navbar .navbar-toggler', function () {
+                        $(this).toggleClass("change");
+                    });
+
+                    _document.on('click', function (e) {
+                        var _navMenu = $('.navbar-nav li');
+                        if ($('.navbar-collapse').hasClass('show')) {
+                            if (!_navMenu.is(e.target) && _navMenu.has(e.target)
+                                .length === 0) {
+                                $('.navbar-collapse').removeClass('show');
+                                $(".navbar-toggler").removeClass('change');
+                            }
+                        }
+                    });
+
+                    function loader(_success) {
+                        var obj = $('.o-preloader'),
+                            inner = $('.o-preloader_inner');
+                        var w = 0,
+                            t = setInterval(function () {
+                                w = w + 1;
+                                inner.text(w + '%');
+                                if (w === 1) {
+                                    obj.addClass('open-page');
+                                    obj.addClass('hide-loader');
+                                    clearInterval(t);
+                                    w = 0;
+                                    if (_success) {
+                                        return _success();
+                                    }
+                                }
+                            }, 20);
+                    }
+                    loader();
+                }(jQuery));
+            }
+        });
+    });
+</script>
+
+<!--<link rel="stylesheet" href="/src/styles/zbg/css/main.css">-->
+<!--<link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/twitter-bootstrap/4.0.0/css/bootstrap.min.css">-->
+<script src="https://assets.xt.com/src/scripts/zbg/js/vendor/fontawesome-all.min.js"></script>
+<style>
+  .container {
+    max-width: 1200px;
+  }
+
+  .social-icons a {
+    display: inline-block;
+    font-size: 15px;
+    line-height: 1;
+    color: #5a7ff5;
+    margin-right: 10px;
+  }
+
+  .social-icons a:last-child {
+    margin-right: 0;
+  }
+
+  .social-icons a:hover {
+    color: #4fd3d3;
+    text-decoration: none;
+  }
+
+  .social-icons a.weixin {
+    position: relative;
+  }
+
+  .page-footer p {
+    font-size: 1.6rem !important;
+    color: #979ca0 !important;
+  }
+
+  .social-icons a.weixin .qrCode {
+    position: absolute;
+    right: calc(100% + 10px);
+    top: 50%;
+    transform: translateY(-50%);
+    width: 150px;
+    max-width: none;
+    display: none;
+  }
+
+  .social-icons a.weixin:hover .qrCode {
+    display: block;
+  }
+
+  .row {
+    width: 100%;
+  }
+
+  .row h5 {
+    font-family: sans-serif;
+    font-weight: 400;
+    color: #fff;
+    font-size: 1.8rem;
+    line-height: normal !important;
+  }
+
+  .container-fluid p {
+    height: 15px;
+    font-family: MicrosoftYaHei;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0px;
+    color: #ffc107;
+  }
+
+  /* -- Footer css
+-------------------------------------- -- */
+  /* html {
+    font-size: 10px !important;
+  } */
+
+  footer {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .radial-bg__footer {
+    bottom: 0;
+    left: 0;
+    -webkit-transform: translate(-50%, 65%);
+    transform: translate(-50%, 65%);
+  }
+
+  /*.page-footer {*/
+  /*padding: 4rem 0 0;*/
+  /*}*/
+
+  .page-footer .logoImg {
+    max-width: 100%;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0;
+    display: inline-block;
+  }
+
+  .page-footer h5 {
+    margin-bottom: 6px;
+    font-size: 18px;
+    line-height: 24px;
+    font-family: sans-serif;
+    font-weight: 400;
+    color: #fff;
+  }
+
+  .page-footer p {
+    font-size: 12px;
+  }
+
+  form.footer-form {
+    position: relative;
+  }
+
+  form.footer-form input[type='email'] {
+    margin-bottom: 3rem;
+    padding-right: 20%;
+  }
+
+  .footer .container::before {
+    content: ' ';
+    height: 0px;
+    background-image: linear-gradient(to right, #c86dd7, #3023ae);
+    background-repeat: repeat-x;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+  }
+
+  .footer-menu {
+    padding: 41px 0px;
+    position: relative;
+    width: 1200px;
+  }
+  .footer-menu .nav-list {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 50px;
+  }
+  .footer-menu .timer {
+    color: #b492e9;
+    margin-left: 50px;
+    font-size: 14px;
+  }
+
+  /*.footer-menu::before {*/
+  /*content: " ";*/
+  /*height: 1px;*/
+  /*background-image: linear-gradient(to right, #C86DD7, #3023AE);*/
+  /*background-repeat: repeat-x;*/
+  /*position: absolute;*/
+  /*top: 40px;*/
+  /*left: 0;*/
+  /*right: 0;*/
+  /*}*/
+
+  .footer-menu p {
+    line-height: 2.4rem;
+    margin-bottom: 0.8rem;
+    color: #e9e7ff;
+  }
+
+  .footer-menu a:hover {
+    text-decoration: none;
+  }
+
+  .footer-nav {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+
+  .footer-nav li a {
+    font-size: 1.4rem;
+    color: #979ca0;
+    font-weight: 300;
+    transition: all 0.3s;
+  }
+
+  .footer-nav li a:hover,
+  .footer-nav li a.active {
+    text-decoration: none;
+    color: #5a7ff5;
+  }
+
+  .footer-bottom {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: between;
+    -moz-justify-content: between;
+    -ms-justify-content: between;
+    justify-content: between;
+    -ms-flex-pack: between;
+    position: relative;
+    padding: 2.6rem 0 2.3rem;
+  }
+
+  .footer-bottom p {
+    margin-bottom: 0;
+  }
+
+  .footer-bottom p a {
+    color: #b492e9;
+  }
+
+  .footer-bottom p a:hover {
+    color: #4fd3d3;
+  }
+
+  .footer-bottom .dropdown-toggle {
+    font-size: 1.6rem;
+    line-height: 3rem;
+    color: #b492e9;
+    font-weight: 300;
+  }
+
+  .footer-bottom .dropdown-toggle::after {
+    display: none;
+  }
+
+  .footer-bottom .dropdown-toggle:hover {
+    text-decoration: none;
+  }
+
+  .footer-bottom .dropdown-toggle span {
+    color: #fff;
+  }
+
+  .footer-bottom .dropdown-toggle svg {
+    color: #fff;
+    font-weight: 300;
+  }
+
+  .footer-bottom .dropdown-menu {
+    position: absolute;
+    right: 0;
+    left: auto !important;
+    -webkit-transform: none !important;
+    -ms-transform: none !important;
+    transform: none !important;
+    bottom: 3rem;
+    top: auto !important;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+  }
+
+  .footer-bottom .dropdown-menu a {
+    display: block;
+    width: 100%;
+    clear: both;
+    font-weight: 300;
+    color: #4039d4;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+    font-size: 14px;
+    /* padding: 0.5rem 1.5rem; */
+    border-bottom: 1px solid #eeeeee;
+  }
+
+  .footer-bottom .dropdown-menu a:last-child {
+    border: none;
+  }
+
+  .footer-bottom .dropdown-menu a:hover {
+    background: #4fd3d3;
+    color: #ffffff;
+  }
+
+  .footer-menu .row {
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .footer-nav li {
+    font-size: 12px;
+    font-weight: 400;
+    color: #8790ac;
+
+    padding: 4px 0px;
+  }
+  .social-icons {
+    font-size: 12px;
+    padding: 4px 0px;
+    color: #8790ac;
+    font-weight: 400;
+  }
+
+  #alternative {
+    width: 110px;
+    height: 102px;
+    background:url('https://alternative.me/crypto/fear-and-greed-index.png') no-repeat left center;
+    background-size: auto 102px;
+    margin: 12px 30px 0px 30px;
+            
+  }
+
+  .footer .d-block {
+    font-size: 14px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer .d-block span {
+    margin-top: 20px;
+  }
+
+
+
+  /* -- Footer css  end!!!--------*/
+</style>
+
+<footer class="footer" id="footer" v-cloak="">
+  <div class="container" style="padding:0px">
+    <div class="page-footer">
+      <div class="footer-menu">
+        <div style="width: 100%;display: flex;">
+          <div
+            style="display: flex;flex-direction: column;justify-content: center;"
+          >
+            <a href="/" class="d-block">
+
+                <img
+                  src="https://img.xt.com/src/images/2019index/bottom_logo_xt.svg"
+                  style="width: 140px; border-radius: 0;"
+                  alt="footer logo"
+                />
+
+                <span>全球首家社交化交易所</span>
+            </a>
+              <!-- <a
+                class="timer"
+                href="#"
+                style="font-weight:400;color:rgba(254,254,254,1);"
+                >基于社区化自治的交易平台</a
+              >
+              <a
+                class="timer"
+                href="#"
+                style="font-weight:400;color:rgba(254,254,254,1);"
+                >买价值币，只上XT</a
+              >
+            </a> -->
+          </div>
+          <div id='alternative'></div>
+          <div class="nav-list">
+            <div>
+              <h5>
+                技术支持
+              </h5>
+              <ul class="footer-nav">
+                <li>
+                  <a href="/appstore" target="_Blank">
+                    APP下载
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/help/restApi" target="_Blank">
+                    API文档
+                  </a>
+                </li>
+                <li>
+                  <a href="https://xt.udesk.cn" target="_Blank">
+                    常见问题
+                  </a>
+                </li>
+                <li>
+                  <a :href="Submission" target="_self">
+                    提交工单
+                  </a>
+                </li>
+                <!--<li>-->
+                <!--<a href="/app" target="_self">APP</a>-->
+                <!--</li>-->
+              </ul>
+            </div>
+            <div>
+              <h5>
+                关于我们
+              </h5>
+              <ul class="footer-nav">
+                <!-- <li>
+                  <a href="/aboutUs" target="_Blank"
+                    >关于XT.COM</a
+                  >
+                </li> -->
+                <li>
+                  <a href="/blog" target="_Blank">官方公告</a>
+                </li>
+                <li>
+                  <a href="/help/coins/" target="_Blank"
+                    >币种资料</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h5>
+                条款协议
+              </h5>
+              <ul class="footer-nav">
+                <li>
+                  <a href="/help/privacy" target="_Blank">
+                    隐私保护
+                  </a>
+                </li>
+                <li>
+                  <a href="/help/agreement" target="_Blank">
+                    用户协议
+                  </a>
+                </li>
+                <li>
+                  <a href="/help/rate" target="_Blank">
+                    费率说明
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h5>
+                联系我们
+              </h5>
+              <div class="social-icons">
+                <a
+                  href="https://www.facebook.com/XT.comexchange/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <img
+                    src="https://img.xt.com/src/images/2019index/bottom_logo_6.svg"
+                    alt=""
+                  />
+                </a>
+                <a
+                  href="https://twitter.com/XTexchange"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <img
+                    src="https://img.xt.com/src/images/2019index/bottom_logo_1.svg"
+                    alt=""
+                  />
+                </a>
+                <a href="https://t.me/XTsupport" target="_blank" rel="noopener">
+                  <img
+                    src="https://img.xt.com/src/images/2019index/bottom_logo_2.svg"
+                    alt=""
+                  />
+                </a>
+                <a
+                  href="https://0.plus/XTsupport"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <img
+                    src="https://img.xt.com/src/images/2019index/bottom_logo_7.svg"
+                    alt=""
+                  />
+                </a>
+                <a
+                  class="weixin"
+                  href="javascript:;"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <img
+                    class="qrCode"
+                    src="https://img.xt.com/src/images/zbg/images/WechatIMG260.jpeg"
+                  />
+
+                  <img
+                    src="https://img.xt.com/src/images/2019index/bottom_logo_5.svg"
+                    alt=""
+                  />
+                </a>
+                <a
+                  class="weixin"
+                  href="javascript:;"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <img
+                    class="qrCode"
+                    src="https://img.xt.com/src/images/zbg/images/xtqq1.jpg"
+                  />
+                  <img
+                    src="https://img.xt.com/src/images/2019index/bottom_logo_4.svg"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <ul class="footer-nav">
+                <li>
+                  支持帮助：support@xt.com
+                </li>
+                <li>
+                  上币：listing@xt.com
+                </li>
+              </ul>
+
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+  $(document).ready(function() {
+    require(['common/methods', 'vue'], function(Methods, Vue) {
+      new Vue({
+        el: '#footer',
+        data: function() {
+          return {
+            Submission:
+              'cn' == 'cn'
+                ? 'https://xt.udesk.cn/hc/submit_a_request'
+                : 'https://xt.udesk.cn/im_client/feedback_tab/new.html?form=4&language=en-us',
+            Faq:
+              'cn' == 'cn'
+                ? 'https://xt.udesk.cn'
+                : 'https://xtenglish.udesk.cn',
+            slogan:
+              'cn' == 'cn'
+                ? 'https://img.xt.com/src/images/slogan-logo.png'
+                : 'cn' == 'jp'
+                ? 'https://img.xt.com/src/images/slogan-jp.png'
+                : 'cn' == 'en'
+                ? 'https://img.xt.com/src/images/slogan-en.png'
+                : 'https://img.xt.com/src/images/slogan-fan.png'
+          }
+        }
+      })
+    })
+  })
+
+  window.onload = function() {
+    var xhr = new XMLHttpRequest()
+    xhr.open('get', 'https://assets.xt.com/src/scripts/udeskInit.js', true)
+    xhr.onreadystatechange = function() {
+      if (xhr.status == 200 || xhr.status == 300 || xhr.status == 304) {
+        var script = document.createElement('script')
+        script.type = 'text/javascript'
+        script.text = xhr.responseText
+        document.body.appendChild(script)
+      }
+    }
+    xhr.send(null)
+
+    // var iframe_box = document.getElementById('coin-360-box')
+    // if (iframe_box) {
+    //     var iframe = document.createElement('iframe');
+    //     iframe.src = "https://coin360.com/widget/map.html";
+    //     iframe.style.width = '160px';
+    //     iframe.style.height = '100px';
+    //     iframe_box.appendChild(iframe);
+    // }
+  }
+</script>
+

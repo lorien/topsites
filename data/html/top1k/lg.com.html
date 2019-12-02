@@ -1,0 +1,1767 @@
+
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+<!-- <html class="no-js no-ie" lang="en" data-continent=""> -->
+<!--[if lt IE 9]><html class="no-js ie lt-ie9" lang="en" data-continent=""><![endif]-->
+<!--[if IE 9]><html class="no-js ie ie9" lang="en" data-continent=""><![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en" data-continent=""><!--<![endif]-->
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="format-detection" content="telephone=no" />
+<title>LG Electronics common.d</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="robots" content="NOODP, NOYDIR">
+<meta name="language" content="english">
+<link rel="canonical" href="http://www.lg.com/common">
+<meta name="HandheldFriendly" content="True">
+
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+
+<!-- Add to homescreen for Chrome on Android -->
+<meta name="mobile-web-app-capable" content="yes">
+
+<!-- For iOS web apps. Delete if not needed. https://github.com/h5bp/mobile-boilerplate/issues/94 -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="">
+
+<!-- Touch Icons -->
+<link rel="apple-touch-icon-precomposed" href="/lg4-common-gp/favicons/152x152.png" sizes="152x152"> <!-- iPad retina touch icon (iOS7) -->
+<link rel="apple-touch-icon-precomposed" href="/lg4-common-gp/favicons/144x144.png" sizes="144x144"> <!-- iPad retina touch icon (iOS6) -->
+<link rel="apple-touch-icon-precomposed" href="/lg4-common-gp/favicons/120x120.png" sizes="120x120"> <!-- iPhone retina touch icon (iOS7) -->
+<link rel="apple-touch-icon-precomposed" href="/lg4-common-gp/favicons/114x114.png" sizes="114x114"> <!-- iPhone retina touch icon (iOS6) -->
+<link rel="apple-touch-icon-precomposed" href="/lg4-common-gp/favicons/72x72.png" sizes="72x72"> <!-- 1st/2nd gen iPads -->
+<link rel="apple-touch-icon-precomposed" href="/lg4-common-gp/favicons/57x57.png"> <!-- web browsers that support png favicon -->
+
+<!-- Favicon PNGs -->
+<link rel="icon" type="image/png" href="/lg4-common-gp/favicons/228x228.png" sizes="228x228"> <!-- Opera Coast icon -->
+<link rel="icon" type="image/png" href="/lg4-common-gp/favicons/195x195.png" sizes="195x195"> <!-- Opera Speed Dial icon -->
+<link rel="icon" type="image/png" href="/lg4-common-gp/favicons/128x128.png" sizes="128x128"> <!-- Chrome Web Store icon -->
+<link rel="icon" type="image/png" href="/lg4-common-gp/favicons/96x96.png" sizes="96x96"> <!-- GoogleTV icon -->
+<link rel="icon" type="image/png" href="/lg4-common-gp/favicons/32x32.png" sizes="32x32"> <!-- web browsers that support png favicon -->
+
+<!-- Favicon ICO -->
+<link rel="shortcut icon" href="/lg4-common-gp/favicons/favicon.ico">
+
+<!-- LGEGMO-1118 Start --inline CSS -->
+<style type= text/css>
+@font-face {
+  font-family: "LG Smart";
+  src: url("/lg3-common/new-gateway/font/LG_Smart_Regular.eot");
+  src: url("/lg3-common/new-gateway/font/LG_Smart_Regular.eot?#iefix") format("embedded-opentype"), url("/lg3-common/new-gateway/font/LG_Smart_Regular.woff") format("woff"), url("/lg3-common/new-gateway/font/LG_Smart_Regular.ttf") format("truetype"), url("/lg3-common/new-gateway/font/LG_Smart_Regular.svg#LG Smart") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "LG Smart";
+  src: url("/lg3-common/new-gateway/font/LG_Smart_Regular_Italic.eot");
+  src: url("/lg3-common/new-gateway/font/LG_Smart_Regular_Italic.eot?#iefix") format("embedded-opentype"), url("/lg3-common/new-gateway/font/LG_Smart_Regular_Italic.woff") format("woff"), url("/lg3-common/new-gateway/font/LG_Smart_Regular_Italic.ttf") format("truetype"), url("/lg3-common/new-gateway/font/LG_Smart_Regular_Italic.svg#LG Smart") format("svg");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: "LG Smart";
+  src: url("/lg3-common/new-gateway/font/LG_Smart_Bold.eot");
+  src: url("/lg3-common/new-gateway/font/LG_Smart_Bold.eot?#iefix") format("embedded-opentype"), url("/lg3-common/new-gateway/font/LG_Smart_Bold.woff") format("woff"), url("/lg3-common/new-gateway/font/LG_Smart_Bold.ttf") format("truetype"), url("/lg3-common/new-gateway/font/LG_Smart_Bold.svg#LG Smart") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: "LG Smart";
+  src: url("/lg3-common/new-gateway/font/LG_Smart_Bold_Italic.eot");
+  src: url("/lg3-common/new-gateway/font/LG_Smart_Bold_Italic.eot?#iefix") format("embedded-opentype"), url("/lg3-common/new-gateway/font/LG_Smart_Bold_Italic.woff") format("woff"), url("/lg3-common/new-gateway/font/LG_Smart_Bold_Italic.ttf") format("truetype"), url("/lg3-common/new-gateway/font/LG_Smart_Bold_Italic.svg#LG Smart") format("svg");
+  font-weight: bold;
+  font-style: italic; }
+
+@font-face {
+  font-family: "LG Smart SemiBold";
+  src: url("/lg3-common/new-gateway/font/LG_Smart_SemiBold.eot");
+  src: url("/lg3-common/new-gateway/font/LG_Smart_SemiBold.eot?#iefix") format("embedded-opentype"), url("/lg3-common/new-gateway/font/LG_Smart_SemiBold.woff") format("woff"), url("/lg3-common/new-gateway/font/LG_Smart_SemiBold.ttf") format("truetype"), url("/lg3-common/new-gateway/font/LG_Smart_SemiBold.svg#LG Smart SemiBold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "LG Smart SemiBold";
+  src: url("/lg3-common/new-gateway/font/LG_Smart_Bold.eot");
+  src: url("/lg3-common/new-gateway/font/LG_Smart_Bold.eot?#iefix") format("embedded-opentype"), url("/lg3-common/new-gateway/font/LG_Smart_Bold.woff") format("woff"), url("/lg3-common/new-gateway/font/LG_Smart_Bold.ttf") format("truetype"), url("/lg3-common/new-gateway/font/LG_Smart_Bold.svg#LG Smart SemiBold") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: "LG Smart SemiBold";
+  src: url("/lg3-common/new-gateway/font/LG_Smart_Bold_Italic.eot");
+  src: url("/lg3-common/new-gateway/font/LG_Smart_Bold_Italic.eot?#iefix") format("embedded-opentype"), url("/lg3-common/new-gateway/font/LG_Smart_Bold_Italic.woff") format("woff"), url("/lg3-common/new-gateway/font/LG_Smart_Bold_Italic.ttf") format("truetype"), url("/lg3-common/new-gateway/font/LG_Smart_Bold_Italic.svg#LG Smart SemiBold") format("svg");
+  font-weight: bold;
+  font-style: italic; }
+
+@font-face {
+  font-family: "LG Smart Light";
+  src: url("/lg3-common/new-gateway/font/LG_Smart_Light.eot");
+  src: url("/lg3-common/new-gateway/font/LG_Smart_Light.eot?#iefix") format("embedded-opentype"), url("/lg3-common/new-gateway/font/LG_Smart_Light.woff") format("woff"), url("/lg3-common/new-gateway/font/LG_Smart_Light.ttf") format("truetype"), url("/lg3-common/new-gateway/font/LG_Smart_Light.svg#LG Smart Light") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "LG Smart Light";
+  src: url("/lg3-common/new-gateway/font/LG_Smart_Regular.eot");
+  src: url("/lg3-common/new-gateway/font/LG_Smart_Regular.eot?#iefix") format("embedded-opentype"), url("/lg3-common/new-gateway/font/LG_Smart_Regular.woff") format("woff"), url("/lg3-common/new-gateway/font/LG_Smart_Regular.ttf") format("truetype"), url("/lg3-common/new-gateway/font/LG_Smart_Regular.svg#LG Smart Light") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: "LG Smart Light";
+  src: url("/lg3-common/new-gateway/font/LG_Smart_Regular_Italic.eot");
+  src: url("/lg3-common/new-gateway/font/LG_Smart_Regular_Italic.eot?#iefix") format("embedded-opentype"), url("/lg3-common/new-gateway/font/LG_Smart_Regular_Italic.woff") format("woff"), url("/lg3-common/new-gateway/font/LG_Smart_Regular_Italic.ttf") format("truetype"), url("/lg3-common/new-gateway/font/LG_Smart_Regular_Italic.svg#LG Smart Light") format("svg");
+  font-weight: bold;
+  font-style: italic; }
+
+body:before { font-family: "LG Smart Light"; content: ''; }
+
+/*# sourceMappingURL=webfonts.css.map */
+html {font-family: sans-serif;
+/* 1 */
+-ms-text-size-adjust: 100%;
+/* 2 */
+-webkit-text-size-adjust: 100%;
+/* 2 */ }
+
+/**
+* Remove default margin.
+*/
+body {
+margin: 0; }
+
+/* HTML5 display definitions
+========================================================================== */
+/**
+* Correct `block` display not defined in IE 8/9.
+*/
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
+
+/**
+* 1. Correct `inline-block` display not defined in IE 8/9.
+* 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+*/
+audio, canvas, progress, video { display: inline-block;
+/* 1 */
+vertical-align: baseline;
+/* 2 */ }
+
+/**
+* Prevent modern browsers from displaying `audio` without controls.
+* Remove excess height in iOS 5 devices.
+*/
+audio:not([controls]) { display: none; height: 0; }
+
+/**
+* Address `[hidden]` styling not present in IE 8/9.
+* Hide the `template` element in IE, Safari, and Firefox < 22.
+*/
+[hidden],
+template { display: none; }
+
+/* Links
+========================================================================== */
+/**
+* Remove the gray background color from active links in IE 10.
+*/
+a { background: transparent; }
+
+/**
+* Improve readability when focused and also mouse hovered in all browsers.
+*/
+a:active, a:hover { outline: 0; }
+
+/* Text-level semantics
+========================================================================== */
+/**
+* Address styling not present in IE 8/9, Safari 5, and Chrome.
+*/
+abbr[title] { border-bottom: 1px dotted; }
+
+/**
+* Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+*/
+b, strong { font-weight: bold; }
+
+/**
+* Address styling not present in Safari 5 and Chrome.
+*/
+dfn { font-style: italic; }
+
+/**
+* Address variable `h1` font-size and margin within `section` and `article`
+* contexts in Firefox 4+, Safari 5, and Chrome.
+*/
+h1 { font-size: 2em; margin: 0.67em 0; }
+
+/**
+* Address styling not present in IE 8/9.
+*/
+mark { background: #ff0; color: #000; }
+
+/**
+* Address inconsistent and variable font size in all browsers.
+*/
+small { font-size: 80%; }
+
+/**
+* Prevent `sub` and `sup` affecting `line-height` in all browsers.
+*/
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+/* Embedded content
+========================================================================== */
+/**
+* Remove border when inside `a` element in IE 8/9.
+*/
+img { border: 0; }
+
+/**
+* Correct overflow displayed oddly in IE 9.
+*/
+svg:not(:root) { overflow: hidden; }
+
+/* Grouping content
+========================================================================== */
+/**
+* Address margin not present in IE 8/9 and Safari 5.
+*/
+figure { margin: 1em 40px; }
+
+/**
+* Address differences between Firefox and other browsers.
+*/
+hr { -moz-box-sizing: content-box; box-sizing: content-box; height: 0; }
+
+/**
+* Contain overflow in all browsers.
+*/
+pre {
+overflow: auto; }
+
+/**
+* Address odd `em`-unit font size rendering in all browsers.
+*/
+code, kbd, pre, samp { font-family: monospace, monospace; font-size: 1em; }
+
+/* Forms
+========================================================================== */
+/**
+* Known limitation: by default, Chrome and Safari on OS X allow very limited
+* styling of `select`, unless a `border` property is set.
+*/
+/**
+* 1. Correct color not being inherited.
+*    Known issue: affects color of disabled elements.
+* 2. Correct font properties not being inherited.
+* 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+*/
+button,
+input,
+optgroup,
+select,
+textarea {
+color: inherit;
+/* 1 */
+font: inherit;
+/* 2 */
+margin: 0;
+/* 3 */ }
+
+/**
+* Address `overflow` set to `hidden` in IE 8/9/10.
+*/
+button { overflow: visible; }
+
+/**
+* Address inconsistent `text-transform` inheritance for `button` and `select`.
+* All other form control elements do not inherit `text-transform` values.
+* Correct `button` style inheritance in Firefox, IE 8+, and Opera
+* Correct `select` style inheritance in Firefox.
+*/
+button, select { text-transform: none; }
+
+/**
+* 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+*    and `video` controls.
+* 2. Correct inability to style clickable `input` types in iOS.
+* 3. Improve usability and consistency of cursor style between image-type
+*    `input` and others.
+*/
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+-webkit-appearance: button;
+/* 2 */
+cursor: pointer;
+/* 3 */ }
+
+/**
+* Re-set default cursor for disabled elements.
+*/
+button[disabled],html input[disabled] { cursor: default; }
+
+/**
+* Remove inner padding and border in Firefox 4+.
+*/
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+
+/**
+* Address Firefox 4+ setting `line-height` on `input` using `!important` in
+* the UA stylesheet.
+*/
+input { line-height: normal; }
+
+/**
+* It's recommended that you don't attempt to style these elements.
+* Firefox's implementation doesn't respect box-sizing, padding, or width.
+*
+* 1. Address box sizing set to `content-box` in IE 8/9/10.
+* 2. Remove excess padding in IE 8/9/10.
+*/
+input[type="checkbox"],
+input[type="radio"] { box-sizing: border-box;
+/* 1 */
+padding: 0;
+/* 2 */ }
+
+/**
+* Fix the cursor style for Chrome's increment/decrement buttons. For certain
+* `font-size` values of the `input`, it causes the cursor style of the
+* decrement button to change from `default` to `text`.
+*/
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button { height: auto; }
+
+/**
+* 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+* 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+*    (include `-moz` to future-proof).
+*/
+input[type="search"] {
+-webkit-appearance: textfield;
+/* 1 */
+-moz-box-sizing: content-box;
+-webkit-box-sizing: content-box;
+/* 2 */
+box-sizing: content-box; }
+
+/**
+* Remove inner padding and search cancel button in Safari and Chrome on OS X.
+* Safari (but not Chrome) clips the cancel button when the search input has
+* padding (and `textfield` appearance).
+*/
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+
+/**
+* Define consistent border, margin, and padding.
+*/
+fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }
+
+/**
+* 1. Correct `color` not being inherited in IE 8/9.
+* 2. Remove padding so people aren't caught out if they zero out fieldsets.
+*/
+legend {
+border: 0;
+/* 1 */
+padding: 0;
+/* 2 */ }
+
+/**
+* Remove default vertical scrollbar in IE 8/9.
+*/
+textarea {overflow: auto; }
+
+/**
+* Don't inherit the `font-weight` (applied by a rule above).
+* NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+*/
+optgroup {font-weight: bold; }
+
+/* Tables
+========================================================================== */
+/**
+* Remove most spacing between table cells.
+*/
+table {border-collapse: collapse;border-spacing: 0; }
+
+td,th {padding: 0; }
+
+.clearfix:after, .cf:after {content: "";display: table;clear: both; }
+
+@font-face {
+font-family: "lg-icon";
+src: url("/lg3-common/new-gateway/font/lg-icon.160119.eot");
+src: url("/lg3-common/new-gateway/font/lg-icon.160119.eot?#iefix") format("embedded-opentype"), url("/lg3-common/new-gateway/font/lg-icon.160119.woff") format("woff"), url("/lg3-common/new-gateway/font/lg-icon.160119.ttf") format("truetype"), url("/lg3-common/new-gateway/font/lg-icon.160119.svg") format("svg");
+font-weight: normal;
+font-style: normal; }
+
+.icon { font-family: "lg-icon"; display: inline-block; vertical-align: middle; line-height: 1; font-weight: normal; font-style: normal; speak: none; text-decoration: inherit; text-transform: none; text-rendering: auto; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+.icon-pagenav-down:before, 
+.common-section .container .country-list > ul > li .btn-continent-toggle:before { content: "\f17f"; }
+.icon-pagenav-up:before, 
+.common-section .container .country-list > ul > li.active .btn-continent-toggle:before { content: "\f181"; } 
+.icon-global_country:before { content: "\f153"; } 
+.icon-close:before { content:"\f144"; } 
+.icon-new-window:before { content:"\f17a"; } 
+[data-icon]:before, 
+[data-icon]:after { font-family: "lg-icon" !important; content: attr(data-icon); font-style: normal !important; font-weight: normal !important; font-variant: normal !important; text-transform: none !important; speak: none; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+[class^="icon-"]:before, 
+[class*=" icon-"]:before, 
+[class^="icon-"]:after, 
+[class*=" icon-"]:after, 
+[class^="slick-"]:before, 
+[class*=" slick-"]:before { font-family: "lg-icon" !important; font-style: normal !important; font-weight: normal !important; font-variant: normal !important; text-transform: none !important; speak: none; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+
+* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+*:before, *:after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+html { font-size: 62.5%; -webkit-tap-highlight-color: transparent; }
+html, button, input, select, textarea { color: #333; -webkit-font-smoothing: antialiased; }
+body { background: #fff; font-family: Arial, sans-serif; font-weight: normal; font-size: 16px; line-height: 1.42857; -webkit-text-size-adjust: none; -ms-text-size-adjust: none; }
+::-moz-selection { background: #b3d4fc; text-shadow: none; }
+::selection { background: #b3d4fc; text-shadow: none; }
+a { color: #a50034; text-decoration: none; } 
+a:hover, a:focus { color: #a50034; text-decoration: underline; } 
+a.no-underline:hover, a.no-underline:focus { text-decoration: none; } 
+a:focus { outline: thin dotted; outline: 5px auto -webkit-focus-ring-color; outline-offset: -2px; }
+input, button, select, textarea { font-family: inherit; font-size: inherit; line-height: inherit; }
+fieldset { border: 0; margin: 0; padding: 0; }
+textarea { resize: vertical; }
+figure { margin: 0; }
+img { max-width: 100%; height: auto; vertical-align: middle; }
+.img-fixed { max-width: none; }
+hr { border: 0; border-bottom: 1px solid #999; }
+.icon { display: inline-block; }
+h1, h2, h3, h4, h5, h6 { margin: 0; padding: 0; font-family: "LG Smart Light", Tahoma, Arial, sans-serif; font-weight: normal; line-height: 1.2em; }
+h1 { font-size: 60px; }
+h2 { font-size: 55px; }
+h3 { font-size: 44px; }
+h4 { font-size: 34px; }
+h5, h6 { font-size: 22px; }
+body{overflow-y:scroll;} 
+.is-mobile h1 { font-size: 28px; }
+.is-mobile h2 { font-size: 26px; }
+.is-mobile h3 { font-size: 23px; }
+.is-mobile h4 { font-size: 20px; }
+.is-mobile h5, h6 { font-size: 14px; }
+.wrapper { width: 100%; text-align: center; position: relative; z-index: 2; padding-top: 64px; } 
+.wrapper * { font-style: normal; } 
+.wrapper .container { max-width: 1240px; margin: 0 auto; padding: 0 1.29032%; text-align: left; } 
+.is-mobile .wrapper { padding-top: 0; z-index: 2; }
+
+.move-top { position: relative; z-index: 100002; } 
+.move-top > a { text-decoration: none; width: 50px; height: 50px; position: fixed; right: 0; bottom: 0; z-index: 9999999; text-align: center; vertical-align: middle; line-height: 57px; font-size: 18px; cursor: pointer !important; } 
+.move-top > a > i.icon { color: #000000; position: relative; } 
+.move-top > a:before { display: block; content: ''; background: #e9ebf0; border: 1px solid #505358; width: 100%; height: 100%; position: absolute; left: 0; top: 0; 
+-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; /* IE 8 */ 
+filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);/* IE 7 and olders */ opacity: 0.5; }
+
+@media print {
+  .skip_nav,
+  #appheader,
+  #app-my-lg,
+  #appfooter,
+  .return-to-compare-button,
+  .module.m15,
+  .move-top,
+  .footer-seo,
+  .column-template:before { display: none !important; }
+  .wrapper { padding-top: 0 !important; } 
+}
+
+@media screen and (max-width: 768px) { 
+  html { -ms-text-size-adjust: none; -webkit-text-size-adjust: none; } 
+}
+.common-header { position: absolute; top: 0; left: 0; min-width: 768px; width: 100%; height: 74px; border-bottom: 10px solid #ae1948; background-color: #333; } 
+.is-mobile .common-header {position: relative; min-width: 320px;}
+
+
+
+
+.common-header .container { height: 74px; max-width: 1240px; margin: 0 auto; text-align: left; }
+
+.common-header .container .logo { display: inline-block; padding-top: 11px; vertical-align: top; }
+.is-mobile .common-header .container .logo {padding-left: 10px;}
+
+.common-section { padding-top: 8px; }
+.is-mobile .common-section { padding-top: 0; } 
+.common-section .container { max-width: 1240px; margin: 0 auto 100px; } 
+.is-mobile .common-section .container { max-width: inherit; margin: 0 0 50px 0; padding:0; } 
+
+.common-section .container > h3 { padding: 34px 0; text-align: center; font-family: "LG Smart SemiBold", Tahoma, Arial, sans-serif; font-size: 30px; color: #a50034; } 
+.common-section .container .country-list ul { margin: 0; padding: 0; list-style: none; } 
+.common-section .container .country-list > ul > li { position: relative; margin-top: -1px; } 
+.common-section .container .country-list > ul > li .rem-choise { display:none; position: absolute; z-index:5; right: 14px; bottom: 30px; font-family: "LG Smart", Tahoma, Arial, sans-serif; font-size: 16px; color: #333; } 
+.common-section .container .country-list > ul > li .btn-continent-toggle { position:relative; z-index:10; display: block; width: 100%; padding: 16px 20px 15px; line-height: 1; font-family: "LG Smart", Tahoma, Arial, sans-serif; color: #333; text-decoration: none; border-top: 1px solid #bbb; border-bottom: 1px solid #bbb; background-color: #f4f5f7; padding: 16px 20px 15px; font-size: 24px; }
+
+.is-mobile .common-section .container .country-list > ul > li .btn-continent-toggle {font-size: 18px;padding:13px 20px 11px}
+
+
+.common-section .container .country-list > ul > li .btn-continent-toggle:before { position: absolute; right: 20px; display: inline-block; width: 21px; height: 11px; font-family:"lg-icon"; vertical-align: middle; color: #666; } 
+.common-section .container .country-list > ul > li .btn-continent-toggle:before { top: 22px; width: 21px; height: 11px; font-size: 20px;} 
+.is-mobile .common-section .container .country-list > ul > li .btn-continent-toggle:before { top: 19px; width: 17px; height: 9px; font-size: 16px;}
+.common-section .container .country-list > ul > li.active .btn-continent-toggle:before { display: inline-block; } 
+.common-section .container .country-list > ul > li img { width: 26px; height: 26px; margin-right: 4px; } /* 변경 */
+.common-section .container .country-list > ul > li .country-content { display: none; padding: 20px 20px 80px 20px; }
+.is-mobile .common-section .container .country-list > ul > li .country-content { display: none; padding: 20px 20px 30px 20px;} 
+.common-section .container .country-list > ul > li .country-content > ul:after { content: ""; display: table; clear: both;} 
+.common-section .container .country-list > ul > li .country-content > ul > li { float: left; width: 25%; padding: 10px 0;}
+
+.is-mobile .common-section .container .country-list > ul > li .country-content > ul > li {width:100%;}
+
+.common-section .container .country-list > ul > li .country-content > ul > li > a { font-family: Tahoma; font-size: 14px; color: #000; line-height: 26px; text-decoration: none;} 
+.is-mobile .common-section .container .country-list > ul > li .country-content > ul > li > a {display: inline-block}
+.common-section .container .country-list > ul > li .country-content > ul > li > a span { display: inline-block; } 
+/* LGEPA-689 20161208 start */
+.common-section .container .country-list > ul > li .country-content > ul > li > a span.country-name { width: 118px; } /*변경*/ 
+/* LGEPA-689 20161208 end */
+.common-section .container .country-list > ul > li .country-content > ul > li.two-language:after { content: ""; display: table; clear: both; }
+.common-section .container .country-list > ul > li .country-content > ul > li.two-language > a { float: left; }
+.common-section .container .country-list > ul > li .country-content > ul > li.two-language > a:first-child:after { content: "|"; color: #424242; margin-left:-4px;} /*변경*/
+.common-section .container .country-list > ul > li .country-content .continent-sub .continent-title { position: relative; padding: 20px 0 14px 35px; line-height:22px;
+background: #ffffff;
+/* Old browsers */
+background: -moz-linear-gradient(bottom, #ffffff 0%, #ededed 5px, #ffffff 6px);
+/* FF3.6-15 */
+background: -webkit-linear-gradient(bottom, #ffffff 0%, #ededed 5px, #ffffff 6px);
+/* Chrome10-25,Safari5.1-6 */
+background: linear, bottom top, #ffffff 0%, #ededed 5px, #ffffff 6px;
+/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 );
+/* IE6-9 */ }
+
+.common-section .container .country-list > ul > li .country-content .continent-sub .continent-title:after{ clear:both; display:block; content:""; } 
+.common-section .container .country-list > ul > li .country-content .continent-sub .continent-title .group-language{ float:left; } 
+.common-section .container .country-list > ul > li .country-content .continent-sub .continent-title .group-language a{ text-decoration:underline; } 
+.common-section .container .country-list > ul > li .country-content .continent-sub .continent-title i { position: absolute; left: 0; top: 50%; margin-top: -10px; font-size: 26px; color: #b6305a; }
+.common-section .container .country-list > ul > li .country-content .continent-sub .continent-title strong,
+.common-section .container .country-list > ul > li .country-content .continent-sub .continent-title a,
+.common-section .container .country-list > ul > li .country-content .continent-sub .continent-title span {display: inline-block; font-family: Tahoma; font-size: 14px; color: #333; } 
+.common-section .container .country-list > ul > li .country-content .continent-sub .continent-title strong { float:left; display: inline-block; margin-right: 29px; font-weight: normal; }
+.common-section .container .country-list > ul > li .country-content .continent-sub .continent-title .bar{ margin:0 5px; }
+.common-section .container .country-list > ul > li .country-content .continent-sub .continent-content { padding: 15px 0; background: #ffffff;
+/* Old browsers */
+background: -moz-linear-gradient(bottom, #ededed 0%, #ffffff 5px, #ffffff 6px);
+/* FF3.6-15 */
+background: -webkit-linear-gradient(bottom, #ededed 0%, #ffffff 5px, #ffffff 6px);
+/* Chrome10-25,Safari5.1-6 */
+background: linear, bottom top, #ededed 0%, #ffffff 5px, #ffffff 6px;
+/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 );
+/* IE6-9 */ }
+.common-section .container .country-list > ul > li .country-content .continent-sub .continent-content ul { padding-left: 36px; } 
+.common-section .container .country-list > ul > li .country-content .continent-sub .continent-content ul:after { content: ""; display: table; clear: both; } 
+.common-section .container .country-list > ul > li .country-content .continent-sub .continent-content ul li { position:relative; float: left; width: 16.666%; padding: 10px 0; }
+.common-section .container .country-list > ul > li .country-content .continent-sub .continent-content ul li a { font-family: Tahoma; font-size: 14px; color: #000; line-height: 26px; text-decoration: none; }
+.common-section .container .country-list > ul > li .country-content .continent-sub .continent-content ul li .language-tooltip{ display:none; position:absolute; bottom:47px; width:150px; padding:10px 25px 10px 10px; border:1px solid #a4a4a4; border-radius:6px; background:#fff; z-index:8; }
+.common-section .container .country-list > ul > li .country-content .continent-sub .continent-content ul li .language-tooltip.active { display:block; }
+.common-section .container .country-list > ul > li .country-content .continent-sub .continent-content ul li .language-tooltip .btn-close-layer { position:absolute; top:10px; right:10px; width:15px; height:15px; margin:0; padding:0; border:0; background:none; }
+.common-section .container .country-list > ul > li .country-content .continent-sub .continent-content ul li .language-tooltip .btn-close-layer i { margin:0; padding:0; font-size:15px; color:#666; vertical-align:top; }
+.common-section .container .country-list > ul > li .country-content .continent-sub .continent-content ul li .language-tooltip .btn-close-layer span { position:inline-block; position:absolute; top:0; left:-9999px; overflow:hidden; width:0; height:0; margin:0; padding:0; font-size:0; line-height:0px; background:none; border:none; }
+.common-section .container .country-list > ul > li .country-content .continent-sub .continent-content ul li .language-tooltip .tooltip-container a:first-child:after{ content: "|"; color: #424242; margin:0 3px; } 
+.common-section .container .country-list > ul > li .country-content .continent-sub .continent-content ul li .language-tooltip:before { position:absolute; display:block; bottom:-12px; left:15px; width:22px; height:12px; content:""; background:url("/lg3-common/new-gateway/img/bg-tooltip-tail02.png") no-repeat; }
+
+@media screen and (max-width: 1024px) { 
+  .common-section .container .country-list > ul > li .country-content > ul > li { width: 33.333%; } 
+  .common-section .container .country-list > ul > li .country-content .continent-sub .continent-content ul li { width: 25%; } 
+}
+.is-mobile .common-section .container .country-list > ul > li .country-content .continent-sub .continent-content ul li {width: 100%;}
+
+.common-footer { width: 100%; min-width: 768px; background-color: #333; } 
+.is-mobile .common-footer {min-width:inherit}
+/* footer modify*/
+.common-footer .container { max-width: 1240px;} 
+.is-mobile .common-footer .container {padding:0; } 
+.common-footer .container:after { content: ""; display: table; clear: both; } 
+.common-footer .container .footer-group { float: left; font-family:Tahoma; font-size: 12px; color: #fff; width:80%;padding:24px 0 0} 
+
+.is-mobile .common-footer .container .footer-group {padding: 22px 20px; }
+
+.common-footer .container .footer-group a { font-family:Tahoma; font-size: 12px; color: #fff; } 
+.common-footer .container .footer-group ul { height: 13px; margin: 0; margin-bottom: 20px; padding: 0; line-height: 13px; list-style: none;float:left; } 
+.common-footer .container .footer-group ul li { float: left; margin-left: 8px; padding-left: 8px; border-left: 1px solid #c9c9c9; } 
+.common-footer .container .footer-group ul li:first-child { margin-left: 0; padding-left: 0; border-left: 0; } 
+.common-footer .container .footer-group .copyright { line-height: 12px; float:right;} 
+/* footer modify*/
+.common-footer .container .footer-banner { float: right; }
+.is-mobile .common-footer .container .footer-banner { float: none; }
+
+.wrapper {min-width: 768px;}
+.is-mobile .wrapper {min-width: inherit;}
+
+/* LGEGMO-5346 20190814 add */
+.common-section .container .country-list > ul > li#asia img {
+	display: none;
+}
+/* //LGEGMO-5346 20190814 add */
+</style>
+<!-- LGEGMO-1118 End  -- inline CSS -->
+	
+	
+	<script src="//assets.adobedtm.com/9df6f1d56aab8e1a23bc5d911dd01089b83d4a51/satelliteLib-c2817b9d6b63dd2fe4df6f56fda47fe3e42273a6.js"></script>
+	
+	
+</head>
+<body>
+	<div class="wrapper">
+		<header class="common-header">
+		    <div class="container">
+		        <a href="/" class="logo"><img src="/lg3-common/new-gateway/img/header-logo.png" alt="LG"/></a>
+		    </div>
+		</header>
+		<div id="content">
+			<!-- for skip to contents links -->
+
+			<div>
+				<div class="common-section">
+				    <div class="container">
+				        <h3>Select Your Region</h3>
+				        <div class="country-list">
+				            <ul>
+				                <li id="asia">
+				                    <a href="#" class="icon btn-continent-toggle"><span>ASIA &amp; PACIFIC</span></a>
+				                    <div class="country-content">
+				                        <ul>
+				                            <li>
+				                                <a href="/au">
+				                                    <img src="/lg3-common/new-gateway/img/country_australia.png" alt="Australia"><span class="country-name">Australia</span><span class="country-language">English</span>
+				                                </a>
+				                            </li>
+				                            <!-- LGEGMO-1697, LGEGMO-5346 -->
+				                            <li>
+				                                <a href="/bd">
+				                                    <img src="/lg3-common/new-gateway/img/country_bangladesh.png" alt="Bangladesh"><span class="country-name">Bangladesh</span><span class="country-language">English</span>
+				                                </a>
+				                            </li>
+				                            <!-- LGEGMO-1697, LGEGMO-5346 End -->
+				                            <li>
+				                                <a href="/cn">
+				                                    <img src="/lg3-common/new-gateway/img/country_china.png" alt="China"><span class="country-name">China</span><span class="country-language">中文</span>
+				                                </a>
+				                            </li>
+				                            <li class="two-language">
+				                                <a href="/hk_en">
+				                                    <img src="/lg3-common/new-gateway/img/country_hongKong.png" alt="Hong Kong"><span class="country-name">Hong Kong</span><span class="country-language">English</span>
+				                                </a>
+				                                <a href="/hk">
+				                                    <span class="country-language">中文</span>
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a href="/in">
+				                                    <img src="/lg3-common/new-gateway/img/country_india.png" alt="India"><span class="country-name">India</span><span class="country-language">English</span>
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a href="/id">
+				                                    <img src="/lg3-common/new-gateway/img/country_indonesia.png" alt="Indonesia"><span class="country-name">Indonesia</span><span class="country-language">Indonesia</span>
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a href="/jp">
+				                                    <img src="/lg3-common/new-gateway/img/country_japan.png" alt="Japan"><span class="country-name">Japan</span><span class="country-language">日本語</span>
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a href="http://www.lge.co.kr">
+				                                    <img src="/lg3-common/new-gateway/img/country_korea.png" alt="Korea"><span class="country-name">Korea</span><span class="country-language">한국어</span>
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a href="/my">
+				                                    <img src="/lg3-common/new-gateway/img/country_malaysia.png" alt="Malaysia"><span class="country-name">Malaysia</span><span class="country-language">English</span>
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a href="/nz">
+				                                    <img src="/lg3-common/new-gateway/img/country_newZealand.png" alt="New Zealand"><span class="country-name">New Zealand</span><span class="country-language">English</span>
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a href="/ph">
+				                                    <img src="/lg3-common/new-gateway/img/country_philippines.png" alt="Philippines"><span class="country-name">Philippines</span><span class="country-language">English</span>
+				                                </a>
+				                            </li>
+				                            <!-- LGEGMO-2364, LGEGMO-5346 -->
+				                            <li>
+				                                <a href="/sg">
+				                                    <img src="/lg3-common/new-gateway/img/country_singapore.png" alt="Singapore"><span class="country-name">Singapore</span><span class="country-language">English</span>
+				                                </a>
+				                            </li>
+				                            <!-- LGEGMO-2364, LGEGMO-5346 End -->
+				                            <li>
+				                                <a href="/lk">
+				                                    <img src="/lg3-common/new-gateway/img/country_sriLanka.png" alt="Sri Lanka"><span class="country-name">Sri Lanka</span><span class="country-language">English</span>
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a href="/tw">
+				                                    <img src="/lg3-common/new-gateway/img/country_taiwan.png" alt="Taiwan"><span class="country-name">Taiwan</span><span class="country-language">中文</span>
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a href="/th">
+				                                    <img src="/lg3-common/new-gateway/img/country_thailand.png" alt="Thailand"><span class="country-name">Thailand</span><span class="country-language">ไทย</span>
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a href="/vn">
+				                                    <img src="/lg3-common/new-gateway/img/country_vietnam.png" alt="Vietnam"><span class="country-name">Vietnam</span><span class="country-language">Việt Nam</span>
+				                                </a>
+				                            </li>
+				                        </ul>
+				                        <!-- LGEGMO-2364, LGEGMO-5346
+		                                <div class="continent-sub">
+		                                      <div class="continent-title"><i class="icon icon-global_country"></i><strong>Singapore</strong><div class="group-language"><a href="/sg">English</a></div></div>
+		                                      <div class="continent-content"> 
+		                                        <ul>
+		                                          <li>
+		                                            <a href="/sg">
+		                                                <img src="/lg3-common/new-gateway/img/country_singapore.png" alt="Singapore"><span class="country-name">Singapore</span>
+		                                            </a>
+		                                          </li>
+		                                          <li>
+		                                            <a href="/sg">
+		                                                  <img src="/lg3-common/new-gateway/img/country_bangladesh.png" alt="Bangladesh"><span class="country-name">Bangladesh</span>
+		                                              </a>
+		                                          </li>
+		                                        </ul>
+		                                      </div>
+		                                    <label for="data-id3" class="rem-choise"><input type="checkbox" id="data-id3"> Remember My Choice</label>
+		                                </div>
+		                                LGEGMO-2364, LGEGMO-5346 End -->
+				                        <label for="data-id1" class="rem-choise"><input type="checkbox" id="data-id1"> Remember My Choice</label>
+				                    </div>
+				                </li>
+				                <!-- LGEGMO-1118 Start -->
+				                <li id="cis">
+				                    <a href="#" class="btn-continent-toggle"><span>CIS</span></a>
+				                    <div class="country-content">
+				                        <ul>
+				                            <!-- <li>
+				                                <a href="/kz">
+				                                    <img src="/lg3-common/new-gateway/img/country_kazakhstan.png" alt="Kazakhstan"><span class="country-name">Kazakhstan</span><span class="country-language">Русский</span>
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a href="/kz">
+				                                    <img src="/lg3-common/new-gateway/img/country_kyrgyzstan.png" alt="Kyrgyzstan"><span class="country-name">Kyrgyzstan</span><span class="country-language">Русский</span>
+				                                </a>
+				                            </li> -->
+				                            <li>
+				                                <a href="/ru">
+				                                    <img src="/lg3-common/new-gateway/img/country_russia.png" alt="Russia"><span class="country-name">Russia</span><span class="country-language">Русский</span>
+				                                </a>
+				                            </li>
+				                            <!-- <li>
+				                                <a href="/kz">
+				                                    <img src="/lg3-common/new-gateway/img/country_tajikistan.png" alt="Tajikistan"><span class="country-name">Tajikistan</span><span class="country-language">Русский</span>
+				                                </a>
+				                            </li> -->
+				                            <!-- LGEGMO-3579 -->
+				                            <li>
+				                                <a href="/ua">
+				                                    <img src="/lg3-common/new-gateway/img/country_ukraine.png" alt="Ukraine"><span class="country-name">Ukraine</span><span class="country-language">Українська</span>
+				                                </a>
+				                            </li>
+				                            <!-- LGEGMO-3579 END -->
+				                            <!-- <li>
+				                                <a href="/kz">
+				                                    <img src="/lg3-common/new-gateway/img/country_uzbekistan.png" alt="Uzbekistan"><span class="country-name">Uzbekistan</span><span class="country-language">Русский</span>
+				                                </a>
+				                            </li> -->
+				                        </ul>
+
+				                  <div class="continent-sub">
+                                  <div class="continent-title"><i class="icon icon-global_country"></i><strong>Central Asia</strong><div class="group-language"><a href="/kz">Русский</a></div></div>
+                                  <div class="continent-content"> 
+                                      <ul>
+                                        <li>
+                                          <a href="/kz">
+                                            <img src="/lg3-common/new-gateway/img/country_kazakhstan.png" alt="Kazakhstan"><span class="country-name">Kazakhstan</span>
+                                          </a>
+                                        </li>
+                                        <li>
+                                          <a href="/kz">
+                                            <img src="/lg3-common/new-gateway/img/country_kyrgyzstan.png" alt="Kyrgyzstan"><span class="country-name">Kyrgyzstan</span>
+                                          </a>
+                                        </li>
+                                        <li>
+                                          <a href="/kz">
+                                            <img src="/lg3-common/new-gateway/img/country_tajikistan.png" alt="Tajikistan"><span class="country-name">Tajikistan</span>
+                                          </a>
+                                        </li>
+                                        <li>
+                                          <a href="/kz">
+                                            <img src="/lg3-common/new-gateway/img/country_uzbekistan.png" alt="Uzbekistan"><span class="country-name">Uzbekistan</span>
+                                          </a>
+                                        </li>
+                                      </ul>
+                                  </div>
+				                  <!-- //LGEGMO-1118 End -->
+				                        
+				                        <label for="data-id2" class="rem-choise"><input type="checkbox" id="data-id2"> Remember My Choice</label>
+				                    </div>
+				                </li>
+				                <li id="europe">
+				                    <a href="#" class="btn-continent-toggle"><span>EUROPE</span></a>
+				                    <div class="country-content">
+				                        <ul>
+				                            <li>
+				                                <a href="/at">
+				                                    <img src="/lg3-common/new-gateway/img/country_austria.png" alt="Austria"><span class="country-name">Austria</span><span class="country-language">Deutsch</span>
+				                                </a>
+				                            </li>
+				                            <li class="two-language">
+				                                <a href="/be_fr">
+				                                    <img src="/lg3-common/new-gateway/img/country_belgium.png" alt="Belgium"><span class="country-name">Belgium</span><span class="country-language">Français</span>
+				                                </a>
+				                                <a href="/nl">
+				                                    <span class="country-language">Dutch</span>
+				                                </a>    
+				                            </li>
+				                            <li>
+				                                <a href="/bg">
+				                                    <img src="/lg3-common/new-gateway/img/country_bulgaria.png" alt="Bulgaria"><span class="country-name">Bulgaria</span><span class="country-language">България</span>
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a href="/hr">
+				                                    <img src="/lg3-common/new-gateway/img/country_croatia.png" alt="Croatia"><span class="country-name">Croatia</span><span class="country-language">Hrvatska</span>
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a href="/cz">
+				                                    <img src="/lg3-common/new-gateway/img/country_czechRepublic.png" alt="Czech Republic"><span class="country-name">Czech Republic</span><span class="country-language">Čeština</span>
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a href="/dk">
+				                                    <img src="/lg3-common/new-gateway/img/country_denmark.png" alt="Denmark"><span class="country-name">Denmark</span><span class="country-language">Dansk</span>
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a href="/ee">
+				                                    <img src="/lg3-common/new-gateway/img/country_estonia.png" alt="Estonia"><span class="country-name">Estonia</span><span class="country-language">Eesti</span>
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a href="/fi">
+				                                    <img src="/lg3-common/new-gateway/img/country_finland.png" alt="Finland"><span class="country-name">Finland</span><span class="country-language">Suomeksi</span>
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a href="/fr">
+				                                    <img src="/lg3-common/new-gateway/img/country_france.png" alt="France"><span class="country-name">France</span><span class="country-language">Francais</span>
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a href="/de">
+				                                    <img src="/lg3-common/new-gateway/img/country_germany.png" alt="Germany"><span class="country-name">Germany</span><span class="country-language">Deutsch</span>
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a href="/gr">
+				                                    <img src="/lg3-common/new-gateway/img/country_greece.png" alt="Greece"><span class="country-name">Greece</span><span class="country-language">Greek</span>
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a href="/hu">
+				                                    <img src="/lg3-common/new-gateway/img/country_hungary.png" alt="Hungary"><span class="country-name">Hungary</span><span class="country-language">Magyar</span>
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a href="/it">
+				                                    <img src="/lg3-common/new-gateway/img/country_italy.png" alt="Italy"><span class="country-name">Italy</span><span class="country-language">Italiano</span>
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a href="/lv">
+				                                    <img src="/lg3-common/new-gateway/img/country_latvia.png" alt="Latvia"><span class="country-name">Latvia</span><span class="country-language">Latviski</span>
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a href="/lt">
+				                                    <img src="/lg3-common/new-gateway/img/country_lithuania.png" alt="Lithuania"><span class="country-name">Lithuania</span><span class="country-language">Lietuva</span>
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a href="/nl">
+				                                    <img src="/lg3-common/new-gateway/img/country_netherlands.png" alt="Netherlands"><span class="country-name">Netherlands</span><span class="country-language">Dutch</span>
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a href="/no">
+				                                    <img src="/lg3-common/new-gateway/img/country_norway.png" alt="Norway"><span class="country-name">Norway</span><span class="country-language">Norsk</span>
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a href="/pl">
+				                                    <img src="/lg3-common/new-gateway/img/country_poland.png" alt="Poland"><span class="country-name">Poland</span><span class="country-language">Polski</span>
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a href="/pt">
+				                                    <img src="/lg3-common/new-gateway/img/country_portugal.png" alt="Portugal"><span class="country-name">Portugal</span><span class="country-language">Português</span>
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a href="/ro">
+				                                    <img src="/lg3-common/new-gateway/img/country_romania.png" alt="Romania"><span class="country-name">Romania</span><span class="country-language">Română</span>
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a href="/rs">
+				                                    <img src="/lg3-common/new-gateway/img/country_serbia.png" alt="Serbia"><span class="country-name">Serbia</span><span class="country-language">Srbija</span>
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a href="/sk">
+				                                    <img src="/lg3-common/new-gateway/img/country_slovakia.png" alt="Slovakia"><span class="country-name">Slovakia</span><span class="country-language">Slovak</span>
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a href="/es">
+				                                    <img src="/lg3-common/new-gateway/img/country_spain.png" alt="Spain"><span class="country-name">Spain</span><span class="country-language">Español</span>
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a href="/se">
+				                                	<!-- LGESE-627 Start-->
+				                                    <img src="/lg3-common/new-gateway/img/country_sweden.png" alt="Sweden"><span class="country-name">Sweden</span><span class="country-language">Svenska</span>
+				                                    <!-- LGESE-627 Start-->
+				                                </a>
+				                            </li>
+				                            <li class="two-language">
+				                                <a href="/ch_de">
+				                                    <img src="/lg3-common/new-gateway/img/country_switzerland.png" alt="Switzerland"><span class="country-name">Switzerland</span><span class="country-language">Deutsch</span>
+				                                </a>
+				                                <a href="/ch_fr">
+				                                    <span class="country-language">Français</span>
+				                                </a>
+				                            </li>
+				                        </ul>
+				                        <div class="continent-sub">
+		                                  <div class="continent-title"><i class="icon icon-global_country"></i><strong>UK</strong><div class="group-language"><a href="/uk">English</a></div></div>
+		                                  <div class="continent-content"> 
+		                                    <ul>
+		                                      <li>
+		                                        <a href="/uk">
+		                                          <img src="/lg3-common/new-gateway/img/country_unitedKingdom.png" alt="United Kingdom"><span class="country-name">United Kingdom</span>
+		                                        </a>
+		                                      </li>
+		                                      <li>
+		                                        <a href="/uk">
+		                                          <img src="/lg3-common/new-gateway/img/country_ireland.png" alt="Ireland"><span class="country-name">Ireland</span>
+		                                        </a>
+		                                      </li>
+		                                    </ul>
+		                                  </div>
+						                        <label for="data-id3" class="rem-choise"><input type="checkbox" id="data-id3"> Remember My Choice</label>
+						                    </div>
+				                        <label for="data-id3" class="rem-choise"><input type="checkbox" id="data-id3"> Remember My Choice</label>
+				                    </div>
+				                </li>
+				                <li id="africa">
+				                    <a href="#" class="btn-continent-toggle"><span>MIDDLE EAST &amp; AFRICA</span></a>
+				                    <div class="country-content">
+				                        <ul>
+                                  <li>
+                                      <a href="/dz">
+                                          <img src="/lg3-common/new-gateway/img/country_algeria.png" alt="Algeria"><span class="country-name">Algeria</span><span class="country-language">Francais</span>
+                                      </a>
+                                  </li>
+                                  <li class="two-language">
+                                      <a href="/eg_en">
+                                          <img src="/lg3-common/new-gateway/img/country_egypt.png" alt="Egypt"><span class="country-name">Egypt</span><span class="country-language">English</span>
+                                      </a>
+                                      <a href="/eg_ar">
+                                          <span class="country-language">العربية</span>
+                                      </a>
+                                  </li>
+                                  <li>
+                                      <a href="/ir">
+                                          <img src="/lg3-common/new-gateway/img/country_iran.png" alt="Iran"><span class="country-name">Iran</span><span class="country-language">فارسی</span>
+                                      </a>
+                                  </li>
+                                  <li>
+                                      <a href="/il">
+                                          <img src="/lg3-common/new-gateway/img/country_israel.png" alt="Israel"><span class="country-name">Israel</span><span class="country-language">Hebrew</span>
+                                      </a>
+                                  </li>
+                                  <li>
+                                      <a href="/ma">
+                                          <img src="/lg3-common/new-gateway/img/country_morocco.png" alt="Morocco"><span class="country-name">Morocco</span><span class="country-language">Francais</span>
+                                      </a>
+                                  </li>
+                                  <!-- LGEGMO-1761 Start -->
+                                  <li class="two-language">
+                                      <a href="/sa_en">
+                                          <img src="/lg3-common/new-gateway/img/country_saudiArabia.png" alt="Saudi Arabia"><span class="country-name">Saudi Arabia</span><span class="country-language">English</span>
+                                      </a>
+                                      <a href="/sa">
+                                          <span class="country-language">لعربية</span>
+                                      </a>
+                                  </li>
+                                  <!-- LGEGMO-1761 End -->
+                                  <li>
+                                      <a href="/za">
+                                          <img src="/lg3-common/new-gateway/img/country_southAfrica.png" alt="South Africa"><span class="country-name">South Africa</span><span class="country-language">English</span>
+                                      </a>
+                                  </li>
+								<!-- LGEGMO-1761 Start -->
+                                  <li>
+                                      <a href="/tn">
+                                          <img src="/lg3-common/new-gateway/img/country_tunisia.png" alt="Tunisia"><span class="country-name">Tunisia</span><span class="country-language">Francais</span>
+                                      </a>
+                                  </li>
+                                <!-- LGEGMO-1761 End -->
+                                  <li>
+                                      <a href="/tr">
+                                          <img src="/lg3-common/new-gateway/img/country_turkey.png" alt="Turkey"><span class="country-name">Turkey</span><span class="country-language">Türkçe</span>
+                                      </a>
+                                  </li>
+                                </ul>
+                                <div class="continent-sub">
+                                    <div class="continent-title"><i class="icon icon-global_country"></i><strong>East Africa</strong><div class="group-language"><a href="/eastafrica">English</a></div></div>
+                                    <div class="continent-content"> 
+                                        <ul>
+                                          <li>
+                                          	<a href="/eastafrica">
+                                              <img src="/lg3-common/new-gateway/img/country_burundi.png" alt="Burundi"><span class="country-name">Burundi</span>
+                                          	</a>
+                                          </li>
+                                          <li>
+                                          	<a href="/eastafrica">
+                                              <img src="/lg3-common/new-gateway/img/country_djibouti.png" alt="Djibouti"><span class="country-name">Djibouti</span>
+                                          </a>
+                                          </li>
+                                          <li>
+                                          	<a href="/eastafrica">
+                                              <img src="/lg3-common/new-gateway/img/country_ethiopia.png" alt="Ethiopia"><span class="country-name">Ethiopia</span>
+                                          </a>
+                                          </li>
+                                          <li>
+                                          		<a href="/eastafrica">
+                                            <img src="/lg3-common/new-gateway/img/country_kenya.png" alt="Kenya"><span class="country-name">Kenya</span>
+                                          </a>
+                                          </li>
+                                          <li>
+                                          		<a href="/eastafrica">		
+                                            <img src="/lg3-common/new-gateway/img/country_malawi.png" alt="Malawi"><span class="country-name">Malawi</span>
+                                          </a>
+                                          </li>
+                                          <li>
+                                          		<a href="/eastafrica">	
+                                            <img src="/lg3-common/new-gateway/img/country_rwanda.png" alt="Rwanda"><span class="country-name">Rwanda</span>
+                                          </a>
+                                          </li>
+                                          <li>
+                                          		<a href="/eastafrica">	
+                                            <img src="/lg3-common/new-gateway/img/country_seychelles.png" alt="Seychelles"><span class="country-name">Seychelles</span>
+                                          </a>
+                                          </li>
+                                          <li>
+                                          		<a href="/eastafrica">	
+                                            <img src="/lg3-common/new-gateway/img/country_somalia.png" alt="Somalia"><span class="country-name">Somalia</span>
+                                          </a>
+                                          </li>
+                                          <li>
+                                          		<a href="/eastafrica">	
+                                            <img src="/lg3-common/new-gateway/img/country_southSudan.png" alt="South Sudan"><span class="country-name">South Sudan</span>
+                                          </a>
+                                          </li>
+                                          <li>
+                                          		<a href="/eastafrica">	
+                                            <img src="/lg3-common/new-gateway/img/country_sudan.png" alt="Sudan"><span class="country-name">Sudan</span>
+                                          </a>
+                                          </li>
+                                          <li>
+                                          		<a href="/eastafrica">	
+                                            <img src="/lg3-common/new-gateway/img/country_tanzania.png" alt="Tanzania"><span class="country-name">Tanzania</span>
+                                          </a>
+                                          </li>
+                                          <li>
+                                          		<a href="/eastafrica">	
+                                            <img src="/lg3-common/new-gateway/img/country_uganda.png" alt="Uganda"><span class="country-name">Uganda</span>
+                                          </a>
+                                          </li>
+                                          <li>
+                                          		<a href="/eastafrica">	
+                                            <img src="/lg3-common/new-gateway/img/country_zambia.png" alt="Zambia"><span class="country-name">Zambia</span>
+                                          </a>
+                                          </li>
+                                          <!-- LGEEASTAF-75 Start -->
+                                          <li>
+                                          		<a href="/eastafrica">	
+                                            <img src="/lg4-common/new-gateway/img/country_eritrea.png" alt="Eritrea"><span class="country-name">Eritrea</span>
+                                          </a>
+                                          </li>
+                                          <li>
+                                          		<a href="/eastafrica">	
+                                            <img src="/lg4-common/new-gateway/img/country_mayotte.png" alt="Mayotte"><span class="country-name">Mayotte</span>
+                                          </a>
+                                          </li>
+                                          <li>
+                                          		<a href="/eastafrica">	
+                                            <img src="/lg4-common/new-gateway/img/country_comoros.png" alt="Comoros"><span class="country-name">Comoros</span>
+                                          </a>
+                                          </li>
+                                          <!-- LGEEASTAF-75 End -->
+                                        </ul>
+                                    </div>
+                                    <div class="continent-sub">
+                                      <div class="continent-title"><i class="icon icon-global_country"></i><strong>Gulf</strong><div class="group-language"><a href="/ae">English</a><span class="bar">/</span><a href="/ae_ar">العربية</a></div></div>
+                                      <div class="continent-content"> 
+                                        <ul>
+                                          <li>
+                                          	<a href="/ae">
+                                            <img src="/lg3-common/new-gateway/img/country_afghanistan.png" alt="Afghanistan"><span class="country-name">Afghanistan</span>
+                                          	</a>
+                                          </li>
+                                          <li>
+                                          	<a href="/ae">
+                                            <img src="/lg3-common/new-gateway/img/country_armenia.png" alt="Armenia"><span class="country-name">Armenia</span>
+                                          </a>
+                                          </li>
+                                          <li>
+                                          	<a href="/ae">
+                                            <img src="/lg3-common/new-gateway/img/country_azerbaijan.png" alt="Azerbaijan"><span class="country-name">Azerbaijan</span>
+                                          </a>
+                                          </li>
+                                          <li>
+                                            <!-- LGEGMO-1118 Start -->                                          
+                                            <a href="#" class="tooltip-btn" title="Please select language">
+                                              <img src="/lg3-common/new-gateway/img/country_bahrain.png" alt="Bahrain"><span class="country-name">Bahrain</span> 
+                                              <!-- LGEGMO-1512 Start --> <!-- i class="icon icon-new-window"></i --> <!-- LGEGMO-1512 End -->
+                                            </a>
+                                            <div class="language-tooltip">
+                                              <div class="tooltip-container">
+                                                <a href="/ae">English</a><a href="/ae_ar">العربية</a>
+                                              </div>
+                                            </div>
+                                            <!-- //LGEGMO-1118 End -->
+                                          </li>
+                                          <li>
+                                          	<a href="/ae">
+                                            <img src="/lg3-common/new-gateway/img/country_georgia.png" alt="Georgia"><span class="country-name">Georgia</span>
+                                          </a>
+                                          </li>
+                                          <li>
+                                          	<a href="#" class="tooltip-btn" title="Please select language">
+                                            <img src="/lg3-common/new-gateway/img/country_kuwait.png" alt="Kuwait"><span class="country-name">Kuwait</span>
+                                            <!-- LGEGMO-1512 Start --> <!-- i class="icon icon-new-window"></i --> <!-- LGEGMO-1512 End -->
+                                          	</a>
+                                            <div class="language-tooltip">
+                                              <div class="tooltip-container">
+                                                <a href="/ae">English</a><a href="/ae_ar">العربية</a>
+                                              </div>
+                                            </div>
+                                          </li>
+                                          <li>
+                                          	<a href="#" class="tooltip-btn" title="Please select language">
+                                            <img src="/lg3-common/new-gateway/img/country_oman.png" alt="Oman"><span class="country-name">Oman</span>
+                                            <!-- LGEGMO-1512 Start --> <!-- i class="icon icon-new-window"></i --> <!-- LGEGMO-1512 End -->
+                                          	</a>
+                                            <div class="language-tooltip">
+                                              <div class="tooltip-container">
+                                                <a href="/ae">English</a><a href="/ae_ar">العربية</a>
+                                              </div>
+                                            </div>
+                                          </li>
+                                          <li>
+                                            <a href="/ae">
+                                            <img src="/lg3-common/new-gateway/img/country_pakistan.png" alt="Pakistan"><span class="country-name">Pakistan</span>
+                                          	</a>
+                                          </li>
+                                          <li>
+                                          	<a href="#" class="tooltip-btn" title="Please select language">
+                                            <img src="/lg3-common/new-gateway/img/country_qatar.png" alt="Qatar"><span class="country-name">Qatar</span>
+                                            <!-- LGEGMO-1512 Start --> <!-- i class="icon icon-new-window"></i --> <!-- LGEGMO-1512 End -->
+                                          	</a>
+                                            <div class="language-tooltip">
+                                              <div class="tooltip-container">
+                                                <a href="/ae">English</a><a href="/ae_ar">العربية</a>
+                                              </div>
+                                            </div>
+                                          </li>
+                                          <li>
+                                          	<a href="#" class="tooltip-btn" title="Please select language">
+                                            <img src="/lg3-common/new-gateway/img/country_uae.png" alt="U.A.E"><span class="country-name">U.A.E</span>
+                                            <!-- LGEGMO-1512 Start --> <!-- i class="icon icon-new-window"></i --> <!-- LGEGMO-1512 End -->
+                                          	</a>
+                                            <div class="language-tooltip">
+                                              <div class="tooltip-container">
+                                                <a href="/ae">English</a><a href="/ae_ar">العربية</a>
+                                              </div>
+                                            </div>
+                                          </li>
+                                          <li>
+                                          	<a href="#" class="tooltip-btn" title="Please select language">
+                                            <img src="/lg3-common/new-gateway/img/country_yemen.png" alt="Yemen"><span class="country-name">Yemen</span>
+                                            <!-- LGEGMO-1512 Start --> <!-- i class="icon icon-new-window"></i --> <!-- LGEGMO-1512 End -->
+                                          	</a>
+                                            <div class="language-tooltip">
+                                              <div class="tooltip-container">
+                                                <a href="/ae">English</a><a href="/ae_ar">العربية</a>
+                                              </div>
+                                            </div>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                    <div class="continent-sub">
+                                      <div class="continent-title"><i class="icon icon-global_country"></i><strong>Levant</strong><div class="group-language"><a href="/levant_en">English</a><span class="bar">/</span><a href="/levant_ar">العربية</a></div></div>
+                                      <div class="continent-content">
+                                        <ul>
+                                          <li>
+                                          	<a href="#" class="tooltip-btn" title="Please select language">
+                                            <img src="/lg3-common/new-gateway/img/country_iraq.png" alt="Iraq"><span class="country-name">Iraq</span>
+                                            <!-- LGEGMO-1512 Start --> <!-- i class="icon icon-new-window"></i --> <!-- LGEGMO-1512 End -->
+                                            </a>
+                                            <div class="language-tooltip">
+                                              <div class="tooltip-container">
+                                                <a href="/levant_en">English</a><a href="/levant_ar">العربية</a>
+                                              </div>
+                                            </div>
+                                          </li>
+                                          <li>
+                                          	<a href="#" class="tooltip-btn" title="Please select language">
+                                            <img src="/lg3-common/new-gateway/img/country_jordan.png" alt="Jordan"><span class="country-name">Jordan</span>
+                                            <!-- LGEGMO-1512 Start --> <!-- i class="icon icon-new-window"></i --> <!-- LGEGMO-1512 End -->
+                                            </a>
+                                            <div class="language-tooltip">
+                                              <div class="tooltip-container">
+                                                <a href="/levant_en">English</a><a href="/levant_ar">العربية</a>
+                                              </div>
+                                            </div>
+                                          </li>
+                                          <li>
+                                          	<a href="#" class="tooltip-btn" title="Please select language">
+                                            <img src="/lg3-common/new-gateway/img/country_lebanon.png" alt="Lebanon"><span class="country-name">Lebanon</span>
+                                            <!-- LGEGMO-1512 Start --> <!-- i class="icon icon-new-window"></i --> <!-- LGEGMO-1512 End -->
+                                            </a>
+                                            <div class="language-tooltip">
+                                              <div class="tooltip-container">
+                                                <a href="/levant_en">English</a><a href="/levant_ar">العربية</a>
+                                              </div>
+                                            </div>
+                                          </li>
+                                          <li>
+                                          	<a href="/levant_ar">
+                                            <img src="/lg3-common/new-gateway/img/country_palestine.png" alt="Palestine"><span class="country-name">Palestine</span>
+                                          	</a>
+                                          </li>
+                                          <li>
+                                          	<a href="#" class="tooltip-btn" title="Please select language">
+                                           	<img src="/lg3-common/new-gateway/img/country_syria.png" alt="Syria"><span class="country-name">Syria</span>
+                                           	<!-- LGEGMO-1512 Start --> <!-- i class="icon icon-new-window"></i --> <!-- LGEGMO-1512 End -->
+                                           	</a>
+                                            <div class="language-tooltip">
+                                              <div class="tooltip-container">
+                                                <a href="/levant_en">English</a><a href="/levant_ar">العربية</a>
+                                              </div>
+                                            </div>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                    <div class="continent-sub">
+                                    <!-- LGEGMO-1761 Start -->  
+                                      <div class="continent-title"><i class="icon icon-global_country"></i><strong>West Africa</strong><div class="group-language"><a href="/africa">English</a></div></div>
+                                    <!-- LGEGMO-1761 End -->
+                                      <div class="continent-content">
+                                      <!-- LGEGMO-1761 Start -->  
+                                        <ul>
+                                          <li>
+                                          	<a href="/africa">
+                                            <img src="/lg3-common/new-gateway/img/country_angola.png" alt="Angola"><span class="country-name">Angola</span>
+                                          	</a>
+                                          </li>
+                                          <li>
+                                          	<a href="/africa">
+                                            <img src="/lg3-common/new-gateway/img/country_cote.png" alt="Côte d'Ivoire"><span class="country-name">Côte d'Ivoire</span>
+                                          	</a>
+                                          </li>
+                                          <li>
+                                          	<a href="/africa">
+                                            <img src="/lg3-common/new-gateway/img/country_nigeria.png" alt="Nigeria"><span class="country-name">Nigeria</span>
+                                          	</a>
+                                          </li>
+                                          <li>
+                                        	<a href="/africa">
+                                            <img src="/lg3-common/new-gateway/img/country_senegal.png" alt="Senegal"><span class="country-name">Senegal</span>
+                                          	</a>
+                                          </li>
+                                          <!-- LGEAE-1165 START -->
+                                          
+                                          <li>
+                                        	<a href="/africa">
+                                            <img src="/lg3-common/new-gateway/img/country_benin.png" alt="Benin"><span class="country-name">Benin</span>
+                                          	</a>
+                                          </li>
+                                          <li>
+                                        	<a href="/africa">
+                                            <img src="/lg3-common/new-gateway/img/country_cameroon.png" alt="Cameroon"><span class="country-name">Cameroon</span>
+                                          	</a>
+                                          </li>
+                                          <li>
+                                        	<a href="/africa">
+                                            <img src="/lg3-common/new-gateway/img/country_DR-Congo.png" alt="DR Congo"><span class="country-name">DR Congo</span>
+                                          	</a>
+                                          </li>
+                                          <li>
+                                        	<a href="/africa">
+                                            <img src="/lg3-common/new-gateway/img/country_Gabon.png" alt="Gabon"><span class="country-name">Gabon</span>
+                                          	</a>
+                                          </li>
+                                          <li>
+                                        	<a href="/africa">
+                                            <img src="/lg3-common/new-gateway/img/country_Gambia.png" alt="Gambia"><span class="country-name">Gambia</span>
+                                          	</a>
+                                          </li>
+                                          <li>
+                                        	<a href="/africa">
+                                            <img src="/lg3-common/new-gateway/img/country_Ghana.png" alt="Ghana"><span class="country-name">Ghana</span>
+                                          	</a>
+                                          </li>
+                                          <li>
+                                        	<a href="/africa">
+                                            <img src="/lg3-common/new-gateway/img/country_Guinea.png" alt="Guinea Conakry"><span class="country-name">Guinea Conakry</span>
+                                          	</a>
+                                          </li>
+                                          <li>
+                                        	<a href="/africa">
+                                            <img src="/lg3-common/new-gateway/img/country_Liberia.png" alt="Liberia"><span class="country-name">Liberia</span>
+                                          	</a>
+                                          </li>
+                                          <li>
+                                        	<a href="/africa">
+                                            <img src="/lg3-common/new-gateway/img/country_Mali.png" alt="Mali"><span class="country-name">Mali</span>
+                                          	</a>
+                                          </li>
+                                          <li>
+                                        	<a href="/africa">
+                                            <img src="/lg3-common/new-gateway/img/country_Mauritania.png" alt="Mauritania"><span class="country-name">Mauritania</span>
+                                          	</a>
+                                          </li>
+                                          <li>
+                                        	<a href="/africa">
+                                            <img src="/lg3-common/new-gateway/img/country_RP-Congo.png" alt="RP Congo"><span class="country-name">RP Congo</span>
+                                          	</a>
+                                          </li>
+                                          <li>
+                                        	<a href="/africa">
+                                            <img src="/lg3-common/new-gateway/img/country_Togo.png" alt="Togo"><span class="country-name">Togo</span>
+                                          	</a>
+                                          </li>                                          
+                                          <!-- li>
+                                          	<a href="/africa">
+                                            <img src="/lg3-common/new-gateway/img/country_africa.png" alt="Africa"><span class="country-name">Africa</span>
+                                          	</a>
+                                          </li -->
+                                          <!-- LGEAE-1165 END -->
+                                        </ul>
+                                     <!-- LGEGMO-1761 End -->
+                                      </div>
+                                    </div>
+                                </div>
+				                        <label for="data-id4" class="rem-choise"><input type="checkbox" id="data-id4"> Remember My Choice</label>
+				                    </div>
+				                </li>
+				                <li id="northamerica">
+				                    <a href="#" class="btn-continent-toggle"><span>NORTH AMERICA</span></a>
+				                    <div class="country-content">
+				                        <ul>
+				                            <li class="two-language">
+				                                <a href="/ca_en">
+				                                    <img src="/lg3-common/new-gateway/img/country_canada.png" alt="Canada"><span class="country-name">Canada</span><span class="country-language">English</span>
+				                                </a>
+				                                <a href="/ca_fr">
+				                                    <span class="country-language">Français</span>
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a href="/mx">
+				                                    <img src="/lg3-common/new-gateway/img/country_mexico.png" alt="Mexico"><span class="country-name">Mexico</span><span class="country-language">Español</span>
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a href="/us">
+				                                    <img src="/lg3-common/new-gateway/img/country_usa.png" alt="U.S.A"><span class="country-name">U.S.A</span><span class="country-language">English</span>
+				                                </a>
+				                            </li>
+				                        </ul>
+				                        <label for="data-id5" class="rem-choise"><input type="checkbox" id="data-id5"> Remember My Choice</label>
+				                    </div>
+				                </li>
+								<!-- LGEPA-689 start -->
+				                <li id="centralamerica">
+				                    <a href="#" class="btn-continent-toggle"><span>CENTRAL AMERICA AND CARIBBEAN</span></a>
+				                    <div class="country-content">				                        
+		                                <ul>
+		                                	<li class="two-language">
+		                                	  	<a href="/pa_en">
+	                                            	<img src="/lg3-common/new-gateway/img/country_barbados.png" alt="Barbados"><span class="country-name">Barbados</span><span class="country-language">English</span>
+	                                            </a>
+	                                            <a href="/pa">
+				                                    <span class="country-language">Español</span>
+				                                </a>
+		                                    </li>
+		                                    <li class="two-language">
+			                                	<a href="/pa_en">
+				                                    <img src="/lg3-common/new-gateway/img/country_costaRica.png" alt="Costa Rica"><span class="country-name">Costa Rica</span><span class="country-language">English</span>
+			                                    </a>
+			                                    <a href="/pa">
+				                                    <span class="country-language">Español</span>
+				                                </a>
+		                                    </li>
+		                                    <li class="two-language">
+			                                	<a href="/pa_en">
+				                                    <img src="/lg3-common/new-gateway/img/country_cuba.png" alt="Cuba"><span class="country-name">Cuba</span><span class="country-language">English</span>
+			                                    </a>
+			                                    <a href="/pa">
+				                                    <span class="country-language">Español</span>
+				                                </a>
+		                                    </li>
+		                                    <li class="two-language">
+			                                	<a href="/pa_en">
+				                                    <img src="/lg3-common/new-gateway/img/country_dominicanRep.png" alt="Dominican Rep."><span class="country-name">Dominican Rep.</span><span class="country-language">English</span>
+			                                    </a>
+			                                    <a href="/pa">
+				                                    <span class="country-language">Español</span>
+				                                </a>
+		                                    </li>
+		                                    <li class="two-language">
+			                                	<a href="/pa_en">
+				                                    <img src="/lg3-common/new-gateway/img/country_elSalvador.png" alt="El Salvador"><span class="country-name">El Salvador</span><span class="country-language">English</span>
+			                                    </a>
+			                                    <a href="/pa">
+				                                    <span class="country-language">Español</span>
+				                                </a>
+		                                    </li>
+		                                    <li class="two-language">
+			                                	<a href="/pa_en">
+		                                            <img src="/lg3-common/new-gateway/img/country_grenada.png" alt="Grenada"><span class="country-name">Grenada</span><span class="country-language">English</span>
+	                                            </a>
+	                                            <a href="/pa">
+				                                    <span class="country-language">Español</span>
+				                                </a>
+		                                    </li>
+		                                    <li class="two-language">
+			                                	<a href="/pa_en">
+				                                    <img src="/lg3-common/new-gateway/img/country_guatemala.png" alt="Guatemala"><span class="country-name">Guatemala</span><span class="country-language">English</span>
+			                                    </a>
+			                                    <a href="/pa">
+				                                    <span class="country-language">Español</span>
+				                                </a>
+		                                    </li>
+		                                    <li class="two-language">
+			                                	<a href="/pa_en">
+				                                    <img src="/lg3-common/new-gateway/img/country_honduras.png" alt="Honduras"><span class="country-name">Honduras</span><span class="country-language">English</span>
+			                                    </a>
+			                                    <a href="/pa">
+				                                    <span class="country-language">Español</span>
+				                                </a>
+		                                    </li>
+		                                    <li class="two-language">
+			                                	<a href="/pa_en"> 
+		                                            <img src="/lg3-common/new-gateway/img/country_jamaica.png" alt="Jamaica"><span class="country-name">Jamaica</span><span class="country-language">English</span>
+	                                            </a>
+	                                            <a href="/pa">
+				                                    <span class="country-language">Español</span>
+				                                </a>
+		                                    </li>
+		                                    <li class="two-language">
+			                                	<a href="/pa_en">
+				                                    <img src="/lg3-common/new-gateway/img/country_nicaragua.png" alt="Nicaragua"><span class="country-name">Nicaragua</span><span class="country-language">English</span>
+			                                    </a>
+			                                    <a href="/pa">
+				                                    <span class="country-language">Español</span>
+				                                </a>
+		                                    </li>
+		                                    <li class="two-language">
+			                                	<a href="/pa_en">
+				                                    <img src="/lg3-common/new-gateway/img/country_panama.png" alt="Panama"><span class="country-name">Panama</span><span class="country-language">English</span>
+				                                </a>
+	                                            <a href="/pa">
+				                                    <span class="country-language">Español</span>
+				                                </a>
+		                                    </li>
+		                                    <li class="two-language">
+			                                	<a href="/pa_en">
+				                                    <img src="/lg3-common/new-gateway/img/country_puertoRico.png" alt="Puerto Rico"><span class="country-name">Puerto Rico</span><span class="country-language">English</span>
+			                                    </a>
+			                                    <a href="/pa">
+				                                    <span class="country-language">Español</span>
+				                                </a>
+		                                    </li>
+		                                    <li class="two-language">
+			                                	<a href="/pa_en"> 
+	                                            	<img src="/lg3-common/new-gateway/img/country_stkitts.png" alt="St. Kitts"><span class="country-name">St. Kitts</span><span class="country-language">English</span>
+                                            	</a>
+                                            	<a href="/pa">
+				                                    <span class="country-language">Español</span>
+				                                </a>
+		                                    </li>
+                                            <li class="two-language">
+			                                	<a href="/pa_en"> 
+	                                            	<img src="/lg3-common/new-gateway/img/country_stlucia.png" alt="St. Lucia"><span class="country-name">St. Lucia</span><span class="country-language">English</span>
+                                            	</a>
+                                            	<a href="/pa">
+				                                    <span class="country-language">Español</span>
+				                                </a>
+		                                    </li>
+                                            <li class="two-language">
+			                                	<a href="/pa_en">
+	                                            	<img src="/lg3-common/new-gateway/img/country_stvincent.png" alt="St. Vincent"><span class="country-name">St. Vincent</span><span class="country-language">English</span>
+                                            	</a>
+                                            	<a href="/pa">
+				                                    <span class="country-language">Español</span>
+				                                </a>
+		                                    </li>
+                                            <li class="two-language">
+			                                	<a href="/pa_en"> 
+	                                            	<img src="/lg3-common/new-gateway/img/country_trinidadytobago.png" alt="Trinidad y Tobago"><span class="country-name">Trinidad y Tobago</span><span class="country-language">English</span>
+	                                            </a>
+	                                            <a href="/pa">
+				                                    <span class="country-language">Español</span>
+				                                </a>
+		                                    </li>		                                    
+		                                </ul>
+				                        <label for="data-id7" class="rem-choise"><input type="checkbox" id="data-id7"> Remember My Choice</label>
+				                    </div>
+				                </li>
+				                <!--// LGEPA-689 end -->
+				                <li id="latinamerica">
+				                    <a href="#" class="btn-continent-toggle"><span>SOUTH AMERICA</span></a>
+				                    <div class="country-content">
+				                        <ul>
+				                            <li>
+				                                <a href="/ar">
+				                                    <img src="/lg3-common/new-gateway/img/country_argentina.png" alt="Argentina"><span class="country-name">Argentina</span><span class="country-language">Español</span>
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a href="/br">
+				                                    <img src="/lg3-common/new-gateway/img/country_brazil.png" alt="Brazil"><span class="country-name">Brazil</span><span class="country-language">Português</span>
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a href="/co">
+				                                    <img src="/lg3-common/new-gateway/img/country_colombia.png" alt="Colombia"><span class="country-name">Colombia</span><span class="country-language">Español</span>
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a href="/ec">
+				                                    <img src="/lg3-common/new-gateway/img/country_ecuador.png" alt="Ecuador"><span class="country-name">Ecuador</span><span class="country-language">Español</span>
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a href="/pe">
+				                                    <img src="/lg3-common/new-gateway/img/country_peru.png" alt="Peru"><span class="country-name">Peru</span><span class="country-language">Español</span>
+				                                </a>
+				                            </li>
+											<!-- LGEPA-689 start -->
+				                            <li>
+			                                	<a href="/pa"> 
+			                                    	<img src="/lg3-common/new-gateway/img/country_venezuela.png" alt="Venezuela"><span class="country-name">Venezuela</span><span class="country-language">Español</span>
+			                                    </a>
+		                                    </li>
+		                                    <!--// LGEPA-689 end -->
+				                        </ul>
+				                        <div class="continent-sub">
+				                            <div class="continent-title"><i class="icon icon-global_country"></i><strong>Chile</strong><div class="group-language"><a href="/cl">Español</a></div></div>
+				                            <div class="continent-content"> 
+				                                <ul>
+				                                    <li>
+				                                      <a href="/cl">
+				                                      <img src="/lg3-common/new-gateway/img/country_bolivia.png" alt="Bolivia"><span class="country-name">Bolivia</span>
+				                                    	</a>
+				                                    </li>
+				                                    <li>
+				                                      <a href="/cl">
+				                                      <img src="/lg3-common/new-gateway/img/country_chile.png" alt="Chile"><span class="country-name">Chile</span>
+				                                    	</a>
+				                                    </li>
+				                                    
+				                                    <li>
+				                                      <a href="/cl">
+				                                      <img src="/lg3-common/new-gateway/img/country_paraguay.png" alt="Paraguay"><span class="country-name">Paraguay</span>
+				                                    	</a>
+				                                    </li>
+				                                    
+				                                    
+				                                    <li>
+				                                      <a href="/cl">
+				                                      <img src="/lg3-common/new-gateway/img/country_Uruguay.png" alt="Uruguay"><span class="country-name">Uruguay</span>
+				                                    	</a>
+				                                    </li>
+				                                    
+				                                </ul>
+				                            </div>
+				                        </div>
+				                        <label for="data-id6" class="rem-choise"><input type="checkbox" id="data-id6"> Remember My Choice</label>
+				                    </div>
+				                </li>
+				                <li id="global">
+				                    <a href="#" class="btn-continent-toggle"><span>GLOBAL</span></a>
+				                    <div class="country-content">
+				                        <!-- LGEGMO-4004 Start -->
+				                        <ul>
+				                            <li>
+				                                <a href="/global/business">
+				                                	<!-- LGEGMO-1512 Start --> 
+				                                    <img src="/lg3-common/new-gateway/img/country_global.png" alt="global"><span class="country-name">LG Business</span><span class="country-language">English</span>
+				                                	<!-- LGEGMO-1512 End --> 
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a href="/global">
+				                                    <img src="/lg3-common/new-gateway/img/country_global.png" alt="global"><span class="country-name">About LG</span><span class="country-language">English</span>
+				                                </a>
+				                            </li>
+				                        </ul>
+				                        <!-- LGEGMO-4004 End -->
+				                    </div>
+				                </li>
+				            </ul>
+				        </div>
+				    </div>
+				</div>
+			</div>
+		</div>
+		<footer class="common-footer">
+		    <div class="container">
+		        <div class="footer-group">
+		            <ul>
+		                <li><a href="/global/about-lg">ABOUT LG</a></li>
+		                <li><a href="/global/investor-relations">INVESTOR RELATIONS</a></li>
+		                <li><a href="/global/legal">LEGAL</a></li>
+		                <li><a href="/global/privacy">PRIVACY</a></li>
+		            </ul>
+		            <!-- LGEGMO-2848 , LGEGMO-3782, LGEGMO-4792 Start -->
+		            <div class="copyright"><span>Copyright &copy; 2009-2019 LG Electronics. All Rights Reserved.</span></div>
+		            <!-- LGEGMO-2848 , LGEGMO-3782, LGEGMO-4792 End -->
+		        </div>
+		        <div class="footer-banner">
+		            <a href="http://ethics.lg.co.kr/main/en.do" class="banner"><img src="/lg3-common/new-gateway/img/d_footer_banner1.jpg" alt=""/></a>
+		        </div>
+		    </div>
+		</footer>
+	</div>
+	<div class="move-top"><a href="#" title="Go to Top"><i class="icon icon-pagenav-up"></i></a></div>
+
+	<script src="/lg3-common/new-gateway/js/jquery.min.js"></script>
+	<!-- LGEGMO-1118 Start --> 
+	<script type="text/javascript">
+	/* variables initializve */
+	var common = $(".common-section");
+    var countryList = common.find(".country-list");
+    var countryToggle = countryList.find(".btn-continent-toggle");
+    var id = $("html").data("continent");
+    var countryLink = countryList.find(".country-content a").not(".language-tooltip a");
+    var tooltipBtn = $(".tooltip-btn");
+
+    function contentToggle(id) {
+        var content = $("#"+id).find(".country-content");
+        var continent = id;
+        var li = $("#"+continent);
+
+        if (content.is(":animated")) {
+            return;
+        }       
+
+        if(!li.hasClass("active")){
+            countryList.find(">ul>li").removeClass("active").find(".country-content").stop().slideUp('fast');
+            li.addClass("active");
+            content.stop().slideDown('fast');
+        }else{
+            li.removeClass("active");
+            content.stop().slideUp('fast');
+        }
+    }
+    function openTooltip($btn){
+        var box = $btn.parent();
+        var tooltipBox = $btn.siblings(".language-tooltip");
+        var firstItem = tooltipBox.find("a").filter(":first");
+        var lastItem = tooltipBox.find("a").filter(":last");
+
+        if($(".language-tooltip").hasClass("active"))
+          $(".language-tooltip").removeClass("active");
+
+        tooltipBox.addClass("active");
+
+        lastItem.on("focusout", function(e) {
+          e.preventDefault();
+          tooltipBox.removeClass("active");
+        });
+
+        box.on("mouseleave", function(e){
+          e.preventDefault();
+          tooltipBox.removeClass("active");
+        });
+    }
+    countryLink.on("focusin", function(e){
+        e.preventDefault();
+        var $this = $(this);
+        if( !$this.siblings(".language-tooltip").is() && $(".language-tooltip").hasClass("active")) {
+          $(".language-tooltip").removeClass("active");
+        }
+    });
+
+    tooltipBtn.on("mouseenter focusin", function(e){
+        e.preventDefault();
+        var $this = $(this);
+        openTooltip($this);
+    });
+    
+    /*LGEJO-411 Start */
+    tooltipBtn.on("mouseenter focusin click", function(e){
+        e.preventDefault();
+        var $this = $(this);
+        openTooltip($this);
+    });
+    /*LGEJO-411 End */
+
+    countryToggle.on("click", function(e){
+        e.preventDefault();
+        var $this = $(this),
+            parent = $this.parent(),
+            id = parent.attr("id");
+        contentToggle(id);
+    });
+
+    if (typeof(id) != 'undefined' && id != ""){
+        contentToggle(id);
+    } else {
+        contentToggle('asia');
+    }
+	</script>
+	<!-- LGEGMO-1118 End -->
+	
+	<script type="text/javascript">_satellite.pageBottom();</script>
+	
+</body>
+</html>

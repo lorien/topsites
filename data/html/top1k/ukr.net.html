@@ -1,0 +1,998 @@
+<!DOCTYPE html><html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>UKR.NET: Всі новини України, останні новини дня в Україні та Світі</title>
+<meta name="description" content="Свіжі новини України, останні новини з-за кордону, новини політики, економіки, спорту, культури, технологій, шоу-бизнесу...">
+<meta name="keywords" content="новини, україна, відео, новини україни, україна новини, політика, економіка, випадки, технології, спорт, здоров'я, культура, за кордоном, курйози, фоторепортаж, фото, відеорепортаж, відео" />
+<meta name="robots" content="all" />
+<meta name="publisher" content="UkrNet //www.ukr.net" />
+<meta http-equiv="reply-to" content="webmaster@ukr.net" />
+<meta name="distribution" content="global" />
+<meta name="revisit-after" content="1 days" />
+<meta name="google-site-verification" content="kxEm_cVhS0eF5tSyTPA6VJqdPWArTl_6s7cAMQR1YRU" />
+<meta name="referrer" content="always"/><meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<script>
+if (document.location.hash) {
+var src = document.location.hash.substr(1);
+var dst = null;
+switch (true) {
+case (dst = src.match(/^news\/(\w+)\/(?:\d+\/)?$/)) !== null:
+case (dst = src.match(/^news\/top[s]?\/(\w+)\/$/)) !== null:
+document.location.href = '/news/'+dst[1]+'.html';
+break;
+case (dst = src.match(/^news\/last\/(\w+)\/$/)) !== null:
+document.location.href = '/news/'+dst[1]+'/index.html';
+break;
+case (dst = src.match(/^news\/blogs\/(\w+)\/$/)) !== null:
+document.location.href = '/news/'+dst[1]+'/blogs.html';
+break;
+case src.match(/^(?:homeDetails|news)\//) !== null:
+document.location.href = '/go/'+src;
+break;
+}
+}
+</script>
+<link rel="stylesheet" href="//upst.fwdcdn.com/css/1574673155/top_links.css">
+<link rel="stylesheet" href="//upst.fwdcdn.com/css/??portal/normalize.css,portal/slick.css,portal/core.css">
+<link rel="stylesheet" href="//upst.fwdcdn.com/css/20/portal/main.css">
+<link rel="icon" href="//upst.fwdcdn.com/favicon-v3.png" type="image/png" />
+<link rel="shortcut icon" href="//upst.fwdcdn.com/favicon-v3.ico" type="'image/x-icon"/>
+<link rel="canonical" href="//www.ukr.net/ua/"><!-- For iPhone 4 Retina display: -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="//upst.fwdcdn.com/ukrnet-icon-144x144.png">
+<!-- For iPad: -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="//upst.fwdcdn.com/ukrnet-icon-72x72.png">
+<!-- For iPhone: -->
+<link rel="apple-touch-icon-precomposed" href="//upst.fwdcdn.com/ukrnet-icon-57x57.png">
+<script src="//upst.fwdcdn.com/js/8/portal/concat.js"></script>
+<script>
+var Core = {
+base : '//www.ukr.net/',
+alts : '//upst.fwdcdn.com/',
+proxy : '//upst.fwdcdn.com/',
+type : 'main',
+lang : 'ua',
+Lang : 'Ua',
+searchlang : 'ua',
+regionsList : null,
+};
+var Bookmarks = {lang : 'ua'};
+var zakl_domain = '//zakladki.ukr.net/';
+var zakl_domain_back = '//zakladki.ukr.net/';
+var zakl_css = false;var brandsActiv = false;
+if(GetCookie('can_https')){
+var fschema = 'https';
+}else{
+var fschema = 'http';
+var chc = document.createElement('script');
+chc.type='text/javascript';
+chc.src = 'https://mail.ukr.net/can_https';
+$('head').append(chc);
+};
+var magicHash = '8|20|8|61';
+var LoginErrors = {"EX_LOGINFAILED":"<div class=\"error-text\">\u041d\u0435\u043f\u0440\u0430\u0432\u0438\u043b\u044c\u043d\u043e \u0432\u043a\u0430\u0437\u0430\u043d\u043e \u043b\u043e\u0433\u0456\u043d \u0447\u0438 \u043f\u0430\u0440\u043e\u043b\u044c. \u0421\u043f\u0440\u043e\u0431\u0443\u0439\u0442\u0435 \u0437\u043d\u043e\u0432\u0443.<\/div><div class=\"error-link\"><a rel=\"nofollow\" href=\"http:\/\/wiki.ukr.net\/Error_auth\">\u0427\u043e\u043c\u0443 \u044f \u043d\u0435 \u043c\u043e\u0436\u0443 \u0443\u0432\u0456\u0439\u0442\u0438 \u0443 \u0441\u0432\u043e\u044e \u043f\u043e\u0448\u0442\u043e\u0432\u0443 \u0441\u043a\u0440\u0438\u043d\u044c\u043a\u0443?<\/a><\/div>","EX_NOCOOKIE":"<div class=\"error-text\">\u0411\u0443\u0434\u044c \u043b\u0430\u0441\u043a\u0430, \u0430\u043a\u0442\u0438\u0432\u0456\u0437\u0443\u0439\u0442\u0435 <a rel=\"nofollow\" href=\"http:\/\/wiki.ukr.net\/Cookiefiles\">cookies<\/a> \u0434\u043b\u044f \u0443\u0441\u043f\u0456\u0448\u043d\u043e\u0433\u043e \u0432\u0438\u043a\u043e\u0440\u0438\u0441\u0442\u0430\u043d\u043d\u044f \u043f\u043e\u0448\u0442\u0438 ukr.net.<\/div>","EX_LOGINFAILED_DISABLED":"<div class=\"error-text\">\u0412\u0430\u0448\u0443 \u043f\u043e\u0448\u0442\u043e\u0432\u0443 \u0441\u043a\u0440\u0438\u043d\u044c\u043a\u0443 \u0437\u0430\u0431\u043b\u043e\u043a\u043e\u0432\u0430\u043d\u043e.<\/div><div class=\"error-link\"><a rel=\"nofollow\" href=\"http:\/\/wiki.ukr.net\/Mailboxblocked\">\u0427\u043e\u043c\u0443 \u044f \u043d\u0435 \u043c\u043e\u0436\u0443 \u0443\u0432\u0456\u0439\u0442\u0438 \u0443 \u0441\u0432\u043e\u044e \u043f\u043e\u0448\u0442\u043e\u0432\u0443 \u0441\u043a\u0440\u0438\u043d\u044c\u043a\u0443?<\/a><\/div>","EX_LOGINFAILED_CANCELLED":"<div class=\"error-text\">\u0426\u044e \u0441\u043a\u0440\u0438\u043d\u044c\u043a\u0443 \u0431\u0443\u043b\u043e \u0432\u0438\u0434\u0430\u043b\u0435\u043d\u043e.<\/div><div class=\"error-link\"><a rel=\"nofollow\" href=\"https:\/\/mail.ukr.net\/q\/password_recovery\">\u0412\u0456\u0434\u043d\u043e\u0432\u0438\u0442\u0438 \u0457\u0457?<\/a><\/div>","EX_LOGINFAILED_NOLOGIN":"<div class=\"error-text\">\u0421\u043a\u0440\u0438\u043d\u044c\u043a\u0443 \u0442\u0438\u043c\u0447\u0430\u0441\u043e\u0432\u043e \u0437\u0430\u0431\u043b\u043e\u043a\u043e\u0432\u0430\u043d\u043e \u0434\u043b\u044f \u043e\u0431\u0441\u043b\u0443\u0433\u043e\u0432\u0443\u0432\u0430\u043d\u043d\u044f. \u0421\u043f\u0440\u043e\u0431\u0443\u0439\u0442\u0435 \u0441\u043a\u043e\u0440\u0438\u0441\u0442\u0430\u0442\u0438\u0441\u044f \u043d\u0435\u044e \u0437\u0430 \u0434\u0435\u043ai\u043b\u044c\u043a\u0430 \u0445\u0432\u0438\u043b\u0438\u043d.<\/div>","EX_LOGINFAILED_MAINTENANCE":"<div class=\"error-text\">\u0421\u043a\u0440\u0438\u043d\u044c\u043a\u0443 \u0442\u0438\u043c\u0447\u0430\u0441\u043e\u0432\u043e \u0437\u0430\u0431\u043b\u043e\u043a\u043e\u0432\u0430\u043d\u043e \u0434\u043b\u044f \u043e\u0431\u0441\u043b\u0443\u0433\u043e\u0432\u0443\u0432\u0430\u043d\u043d\u044f. \u0421\u043f\u0440\u043e\u0431\u0443\u0439\u0442\u0435 \u0441\u043a\u043e\u0440\u0438\u0441\u0442\u0430\u0442\u0438\u0441\u044f \u043d\u0435\u044e \u0437\u0430 \u0434\u0435\u043ai\u043b\u044c\u043a\u0430 \u0445\u0432\u0438\u043b\u0438\u043d.<\/div>","captcha_required":"<div class=\"error-text\">\u041d\u0435 \u0432\u0434\u0430\u043b\u043e\u0441\u044f \u0432\u0438\u043a\u043e\u043d\u0430\u0442\u0438 \u0432\u0445\u0456\u0434. \u041f\u043e\u0432\u0442\u043e\u0440\u0456\u0442\u044c \u0441\u043f\u0440\u043e\u0431\u0443 \u0437 <br\/><a rel=\"nofollow\"  href=\"https:\/\/mail.ukr.net\" style=\"color:#e70000;font-weight: bold;text-decoration: underline;\">\u0446\u0456\u0454\u0457 \u0441\u0442\u043e\u0440\u0456\u043d\u043a\u0438<\/a><\/div>","recaptcha_required":"<div class=\"error-text\">\u041d\u0435 \u0432\u0434\u0430\u043b\u043e\u0441\u044f \u0432\u0438\u043a\u043e\u043d\u0430\u0442\u0438 \u0432\u0445\u0456\u0434. \u041f\u043e\u0432\u0442\u043e\u0440\u0456\u0442\u044c \u0441\u043f\u0440\u043e\u0431\u0443 \u0437 <br\/><a rel=\"nofollow\"  href=\"https:\/\/mail.ukr.net\" style=\"color:#e70000;font-weight: bold;text-decoration: underline;\">\u0446\u0456\u0454\u0457 \u0441\u0442\u043e\u0440\u0456\u043d\u043a\u0438<\/a><\/div>"};
+var fr_text_nonew = 'нових немає';
+var fr_text_new1 = 'новий';
+var fr_text_new2 = 'нових';
+var globalCommercialData = [];
+var adUkrNet;
+var adEcbrStart = 5;
+var adEcbrDone = 0;
+var rootLeft, rootRight, rootFuel;
+var ant = {"c0":"shpjjnfrwqnqwa","c1":"nnjmhnfrkc","c2":"cunfradtkuu","c3":"lanfrxiz","c4":"kfiojpnfrvoc","c5":"fbnfrvoy","c6":"vuquwnfrfonp","c7":"mtnfrsydva","c8":"pgkkconfrydkpkki","c9":"upnfrar","c10":"vadpkfnnfrtrrhik","c11":"mjhcnfrqvlfigv","c12":"bwycqnfrafc","c13":"kcnfryy","c14":"fpnfrzajxxjf","c15":"fwtnfryfxu","c16":"vufnfrvulfp","c17":"tndkehnfrev","c18":"eqzfnfrcm","c19":"hiunfrlgt","c20":"qjbbnfrnputij","c21":"chumrnfrmmjips","c22":"uqcgznfryyrj","c23":"baupktcnfrpgpd","c24":"ypclpnfrwvkv","c25":"sefzznfrhc","c26":"waovnfrrs","c27":"tkksnfrcn","c28":"utkvtpnfrvpxt","c29":"zruplqxnfridvbj","c30":"tenfrmjz","c31":"gqfqnfrqnu","c32":"ajoaggnfrjo","c33":"brnfranyt","c34":"ldznfrsuace","c35":"xunynfrxn","c36":"kfrkpnfroflwc","c37":"abnfrds","c38":"yivtjpnfrwwd","c39":"vknfriafyvix","c40":"seithplnfrrecnfop","c41":"imjnnfryjmkptw","c42":"bcsnjnfrwsg","c43":"evzodinfreu","c44":"pokunfrdfig","c45":"sduvxnfrnwhxmuv","c46":"jlnawimnfrpisstrt","c47":"okrfgxnfrqoaxdae","c48":"wuzdnfrlcg","c49":"ykannfrwea","ad":"ad_1160_91"};
+var basesearchurl = '//search.ukr.net/';
+</script>
+<script src="//upst.fwdcdn.com/js/61/portal/main.js"></script>
+<script src="//zakladki.ukr.net/bookmarks/js/zakladki_v2.min.js"></script>
+<!-- Copy and paste this tag in the <head> section of your HTML -->
+<script> var dayMs = 864e5, cb = parseInt(Date.now() / dayMs), vpbSrc = '//player.adtelligent.com/prebid/wrapper_hb_300016_4947.js?cb=' + cb, gptSrc = '//securepubads.g.doubleclick.net/tag/js/gpt.js', c = document.head || document.body || document.documentElement; function loadScript(src, cb) { var s = document.createElement('script'); s.src = src; c.appendChild(s); s.onload = cb; s.onerror = cb; return s; } loadScript(vpbSrc, function() { loadScript(gptSrc); }) </script>
+<script>
+var __advShowDeferred = $.Deferred();
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+</script>
+<script>
+var useragent = document.getElementsByTagName('html')[0];
+if(useragent.className.indexOf('lt-ie7') < 0){
+var topSlot, topSlot2, topSlot3, topSlot4, topSlot5, brandSlot;
+googletag.cmd.push(function() {var mapping = googletag.sizeMapping()
+.addSize([1360, 0], [[1,1],[120, 600],[160, 600]])
+.addSize([1280, 0], [[1,1],[120, 600]])
+.addSize([0, 0], []). build();if(screen.width >= 1280){
+brandSlot = googletag.defineSlot('/17774365/ukr.net_brend_resize', [[1, 1], [120, 600], [160, 600]], 'div-gpt-ad-1543833870671-0').defineSizeMapping(mapping).addService(googletag.pubads());    
+}
+topSlot = googletag.defineSlot('/17774365/ukr.net_300x250', [[300, 250], [300, 500], [300, 400], [300, 107]], 'div-gpt-ad-1428656525414-0').addService(googletag.pubads());
+topSlot3 = googletag.defineSlot('/17774365/ukr.net_300x145', [300, 145], 'div-gpt-ad-1517581109520-0').addService(googletag.pubads());
+topSlot4 = googletag.defineSlot('/17774365/ukr.net_300x250_ad_unit2_bottom', [[300, 145], [300, 250]], 'div-gpt-ad-1544528258762-0').addService(googletag.pubads());
+topSlot5 = googletag.defineSlot('/17774365/ukr.net_300x250_ad_unit3_bottom', [[300, 600], [300, 250]], 'div-gpt-ad-1544528657150-0').addService(googletag.pubads());
+if(screen.width < 1280){
+topSlot2 = googletag.defineSlot('/17774365/ukr.net_topbanner', [[970, 90], [970, 250]], 'div-gpt-ad-1509975098522-0').addService(googletag.pubads());
+};if (window.location.href.indexOf('brand') != 1) {
+var n = 'brand' + window.location.href.split('=')[1];
+googletag.pubads().setTargeting('page', n);
+}googletag.pubads().enableSingleRequest();
+googletag.pubads().collapseEmptyDivs(true, true);googletag.enableServices();
+});
+}
+</script>
+<!-- Copy and paste these tags in the <body> section of your HTML. Place each tag in the desired location of the associated ad unit -->
+<style>.tenfrmjz{width:690px;float:left;position:relative}.gqfqnfrqnu{width:200px;margin-top:32px;float:left}.tenfrmjz > .feed{float:left;width:490px;padding-top:14px}.ajoaggnfrjo{width:300px;float:right;padding-top:34px;position:relative;}.ldznfrsuace{border-right:1px solid #e9e9e9}.xunynfrxn{padding-bottom:6px;padding-top:5px}.kfrkpnfroflwc{overflow:hidden;line-height:normal;margin-bottom:9px;font-size:13px}.kfrkpnfroflwc .left{width:140px;float:left}.kfrkpnfroflwc .right{width:150px;float:right}.abnfrds{margin-bottom:10px}.abnfrds .region-list{position:relative;font:14px/1 Arial;color:#000;float:left;padding-right:10px;margin-left:2px}.abnfrds .region-list.show .right-tabs__currency--region-list{display:block}.abnfrds .region-list.show .arrow-bottom{transform:rotate(180deg)}.nnjmhnfrkc{padding-bottom:10px;position:relative;border-radius:0 0 5px 5px;z-index:11}.nnjmhnfrkc .lanfrxiz a{display:block;height:35px}.nnjmhnfrkc .kfiojpnfrvoc{position:relative;overflow:hidden;clear:both;background-color:transparent;height:128px!important;background:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YxZjFmMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);background:-moz-linear-gradient(top,#f1f1f1 0%,#fff 100px);background:-webkit-gradient(linear,left top,left bottom,color-stop(0px,#f1f1f1),color-stop(100px,#fff));background:-webkit-linear-gradient(top,#f1f1f1 0px,#fff 100px);background:-o-linear-gradient(top,#f1f1f1 0px,#fff 100px);background:-ms-linear-gradient(top,#f1f1f1 0px,#fff 100px);background:linear-gradient(to bottom,#f1f1f1 0px,#fff 100px)}.nnjmhnfrkc .kfiojpnfrvoc .vuquwnfrfonp{float:left;display:block;width:200px;background-color:transparent;margin-top:9px}.nnjmhnfrkc .kfiojpnfrvoc .vuquwnfrfonp .mtnfrsydva{width:180px;height:95px;margin:auto;box-shadow:0 1px 3px 0 rgba(0,0,0,0.26);position:relative;text-align:center;background-color:#fff;overflow:hidden}.nnjmhnfrkc .kfiojpnfrvoc .vuquwnfrfonp .mtnfrsydva a{text-decoration:none;display:block;zoom:1}.nnjmhnfrkc .kfiojpnfrvoc .vuquwnfrfonp .mtnfrsydva img{height:95px;margin:auto}.nnjmhnfrkc .kfiojpnfrvoc .vuquwnfrfonp .mtnfrsydva span{color:#fff;font:bold 12px/22px Arial;display:block;position:absolute;bottom:0;left:0;background-color:#ec2129;height:22px;padding:0 4px}.nnjmhnfrkc .kfiojpnfrvoc .vuquwnfrfonp .pgkkconfrydkpkki{font:13px/1.2 Arial;width:180px;margin:auto}.nnjmhnfrkc .kfiojpnfrvoc .vuquwnfrfonp .pgkkconfrydkpkki a{display:block;margin-top:7px}.nnjmhnfrkc i.upnfrar{display:block;width:20px;height:20px;position:absolute;top:91px;right:21px;border:1px solid #c0d1de;background-color:#f5fafe;border-radius:3px;cursor:pointer;z-index:10}.nnjmhnfrkc i.vadpkfnnfrtrrhik{display:block;width:20px;height:20px;position:absolute;top:91px;right:0;border:1px solid #c0d1de;border-radius:3px;background-color:#f5fafe;cursor:pointer;z-index:10}.nnjmhnfrkc i.upnfrar::after{content:"";display:block;width:0;height:0;border-top:4px solid transparent;border-right:7px solid #0157a8;border-bottom:4px solid transparent;position:absolute;top:5px;left:4px}.nnjmhnfrkc i.vadpkfnnfrtrrhik::after{content:"";display:block;width:0;height:0;border-top:4px solid transparent;border-left:7px solid #0157a8;border-bottom:4px solid transparent;position:absolute;top:5px;left:6px}.cunfradtkuu{margin-bottom:10px;position:relative;zoom:1}.cunfradtkuu .lanfrxiz a{box-shadow:0 1px 0 0 rgba(135,135,135,0.14)}.cunfradtkuu .lanfrxiz img{height:35px}.cunfradtkuu .fbnfrvoy{position:relative;overflow:hidden;clear:both;background-color:transparent;height:111px!important;background:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YxZjFmMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);background:-moz-linear-gradient(top,#f1f1f1 0%,#fff 100px);background:-webkit-gradient(linear,left top,left bottom,color-stop(0px,#f1f1f1),color-stop(100px,#fff));background:-webkit-linear-gradient(top,#f1f1f1 0px,#fff 100px);background:-o-linear-gradient(top,#f1f1f1 0px,#fff 100px);background:-ms-linear-gradient(top,#f1f1f1 0px,#fff 100px);background:linear-gradient(to bottom,#f1f1f1 0px,#fff 100px)}.cunfradtkuu .dual-block{height:205px!important}.cunfradtkuu .fbnfrvoy .vuquwnfrfonp{float:left;display:block;width:300px;background-color:transparent;margin-top:9px}.cunfradtkuu .fbnfrvoy .vuquwnfrfonp .mtnfrsydva{width:125px;height:95px;box-shadow:0 1px 3px rgba(0,0,0,0.26);float:left;margin:0 10px 0 15px;position:relative;background-color:#fff;text-align:center;overflow:hidden}.cunfradtkuu .fbnfrvoy .vuquwnfrfonp .mtnfrsydva a{text-decoration:none;display:block;zoom:1}.cunfradtkuu .fbnfrvoy .vuquwnfrfonp .mtnfrsydva img{height:95px;margin:auto}.cunfradtkuu .fbnfrvoy .vuquwnfrfonp .pgkkconfrydkpkki{font:13px Arial;margin-right:10px}.cunfradtkuu .fbnfrvoy .vuquwnfrfonp .pgkkconfrydkpkki a{display:block;font:13px/1.2 Arial;margin-left:15px}.cunfradtkuu .fbnfrvoy .vuquwnfrfonp .mtnfrsydva span{display:block;position:absolute;bottom:0;left:0;height:22px;padding:0 8px;font:bold 12px/22px Arial;background-color:#ec2129;color:#fff}.cunfradtkuu i.upnfrar{display:block;width:20px;height:20px;position:absolute;bottom:0;right:21px;border:1px solid #c0d1de;border-radius:3px;background-color:#f5fafe;cursor:pointer;z-index:10}.cunfradtkuu i.vadpkfnnfrtrrhik{display:block;width:20px;height:20px;position:absolute;bottom:0;right:0;border:1px solid #c0d1de;border-radius:3px;background-color:#f5fafe;cursor:pointer;z-index:10}.cunfradtkuu i.upnfrar::after{content:"";display:block;width:0;height:0;border-top:4px solid transparent;border-right:7px solid #0157a8;border-bottom:4px solid transparent;position:absolute;top:5px;left:4px}.cunfradtkuu i.vadpkfnnfrtrrhik::after{content:"";display:block;width:0;height:0;border-top:4px solid transparent;border-left:7px solid #0157a8;border-bottom:4px solid transparent;position:absolute;top:5px;left:6px}.kcnfryy{margin-bottom:10px;position:relative;zoom:1}.kcnfryy .fpnfrzajxxjf a{box-shadow:0 1px 0 0 rgba(135,135,135,0.14)}.kcnfryy .fpnfrzajxxjf img{height:35px;width:300px}.kcnfryy .fwtnfryfxu{position:relative;overflow:hidden;clear:both;background-color:transparent;height:111px!important}.kcnfryy .fwtnfryfxu .vufnfrvulfp{display:block;width:300px;height:111px;float:left;border-radius:0 0 4px 4px;position:relative;overflow:hidden}.kcnfryy .fwtnfryfxu .vufnfrvulfp .tndkehnfrev{height:111px;overflow:hidden}.kcnfryy .fwtnfryfxu .vufnfrvulfp .tndkehnfrev a{text-decoration:none;display:block}.kcnfryy .fwtnfryfxu .vufnfrvulfp .tndkehnfrev img{width:300px;height:111px}.kcnfryy .fwtnfryfxu .vufnfrvulfp .eqzfnfrcm{width:300px;height:30px;background-color:rgba(0,0,0,.5);position:absolute;bottom:0;left:0;right:0;padding:0 7px;border-radius:0 0 4px 4px}.kcnfryy .fwtnfryfxu .vufnfrvulfp .eqzfnfrcm a{display:block;height:30px;font:13px/30px Arial;width:80%;color:#fff}.kcnfryy i.hiunfrlgt{display:block;width:20px;height:20px;position:absolute;bottom:5px;right:26px;border:1px solid #fff;border-radius:3px;background-color:transparent;cursor:pointer;z-index:10}.kcnfryy i.qjbbnfrnputij{display:block;width:20px;height:20px;position:absolute;bottom:5px;right:5px;border:1px solid #fff;border-radius:3px;background-color:transparent;cursor:pointer;z-index:10}.kcnfryy i.hiunfrlgt::after{content:"";display:block;width:0;height:0;border-top:4px solid transparent;border-right:7px solid #fff;border-bottom:4px solid transparent;position:absolute;top:5px;left:4px}.kcnfryy i.qjbbnfrnputij::after{content:"";display:block;width:0;height:0;border-top:4px solid transparent;border-left:7px solid #fff;border-bottom:4px solid transparent;position:absolute;top:5px;left:6px}
+</style></head>
+<body>
+<a href="javascript:void(0)" id="go-top"></a>
+<noscript>
+<section class="noscript"><span class="message">У вас відключено JavaScript. Для відображення порталу, необхідно включити підтримку JavaScript.</span></section>
+<img src="https://counter.ukr.net/lid/789/cnt.php" width="1" height="1" style="display: none;" border="0"/>
+</noscript>
+<!-- Check smart -->
+<section class="wrong-browser" id="check-smart" style="display:none;">
+<span class="message"><a href="javascript:void(0)" onclick="gosmart();">Повернутися на мобільну версію</a></span>
+</section>
+<script type="text/javascript">
+if(GetCookie('un_type')){
+$('#check-smart').show();
+}
+function gosmart(){
+DeleteCookie('un_type');
+window.location.href = Core.base;
+}
+</script>
+<!-- End Check smart -->
+<script type="text/template" id="not-logged">
+</script>
+<script type="text/template" id="logged">
+<div class="login-block--logged">
+<ul class="login-block__servises">
+<%if(GetCookie('zakladki') == 1){%>
+<li class="login-block__bmarks">
+<a class="href" href="javascript:void(0);" onclick="User.bookmarks();">Закладки</a>
+<span></span>
+<div class="bookmarks-block">
+<div class="bookmarks-block-header">
+<b onclick="User.bookmarks();"></b>
+</div>
+<div class="bookmark">
+<div id="favoritesBox">
+<div id="Favorites"></div>
+</div>
+<div id="zakl_body"></div>
+</div>
+</div>
+<div class="b-cl-block"></div>
+</li>
+<%}%>
+</ul>
+</div>
+</script>
+<script type="text/template" id="feed-category-template">
+<%if(typeof(advert) != "undefined"){%>
+<div class="adv-news">
+<div class="text">
+<%=advert.Content%>
+</div>
+<div class="adv-news-img">
+<%if(advert.ShowSign == 1){%>
+реклама
+<%}else if(advert.ShowSign == 2){%>
+анонс
+<%}%>
+</div>
+</div>
+<%}%>
+<h2 class="feed__section--title">
+<a lc="<%=z2%>" href="//www.ukr.net/news/<%=seo%>.html"><%=title%></a>
+</h2>
+<%if(!showTime){%>
+<ul class="feed__section--top">
+<% for(var i in items) { %>
+<li>
+<a nc="<%=items[i].id%>,<%=id%>,<%=items[i].clusterId%>" href="<%=items[i].url%>" target="_blank" rel="nofollow"><%=items[i].title%></a>
+<span>(<%=items[i].partner%>)</span>
+</li>
+<% } %>
+</ul>
+<%}else{%>
+<% for(var i in items) { %>
+<div class="feed__item">
+<time><%=items[i].date%></time>
+<div class="feed__item--title">
+<a nc="<%=items[i].id%>,<%=id%>,<%=items[i].clusterId%>" href="<%=items[i].url%>" target="_blank" rel="nofollow"><%=items[i].title%></a>
+<span>(<%=items[i].partner%>)</span>
+</div>
+</div>
+<% } %>
+<%}%>
+<div class="feed__section--more">
+<a lc="<%=z1%>" href="//www.ukr.net/news/<%=seo%>.html"><%=readMore%></a>
+</div>
+</script>
+<script type="text/template" id="feed-regions-template">
+<div class="feed__section--regions">
+<a href="javascript:void(0)" data-show="show-regions"><%=catTitle%></a>
+<span data-show="show-regions"></span>
+<div class="feed__regions--list">
+<div class="feed__regions--rows d-clear">
+<h2 class="feed__section--title">
+<a href="javascript:void(0)" data-show="hide-regions"><%=catTitle%></a>
+<span data-show="hide-regions"></span>
+<div class="feed__regions--unshadow"></div>
+</h2>
+<%for(var i in regions){%>
+<div<%if(regions[i].id == current){%> class="current"<%}%>>
+<a href="javascript:void(0)" data-id="<%=regions[i].id%>"><%=regions[i].title%></a>
+</div>
+<%}%>
+</div>
+</div>
+</div>
+<%for(var i in items){%>
+<div class="feed__item">
+<time><%=items[i].date%></time>
+<div class="feed__item--title">
+<a rc="<%=items[i].id%>,<%=current%>,<%=items[i].clusterId%>" href="<%=items[i].url%>" target="_blank" rel="nofollow"><%=items[i].title%></a>
+<span>(<%=items[i].partner%>)</span>
+</div>
+</div>
+<%}%>
+<div class="feed__section--more">
+<a lc="<%=cat.z1%>" href="//www.ukr.net/news/<%=catSeo%>.html""><%=cat.readMore%></a>
+</div>
+</script>
+<script type="text/template" id="_currency">
+<div class="region-list">
+<span class="act-region">
+<%=region.title%>
+</span>
+<i class="arrow-bottom"></i>
+<div class="right-tabs__currency--region-list">
+<%for(var i in regions){%>
+<%if(regions[i].id != region.id){%>
+<a href="javascript:void(0)" data-region="<%=regions[i].id%>"><%=regions[i].title%></a>
+<%}%>
+<%}%>
+</div>
+</div>
+<div class="right-tabs__currency--time-update">
+<%=Core.lang == 'ua' ? 'сьогодні '+nowTime : 'сегодня '+nowTime%>
+</div>
+<div class="right-tabs__currency--title-table d-clear">
+<div class="purchase"><%=Core.lang == 'ua' ? 'Купівля' : 'Покупка'%></div>
+<div class="sale"><%=Core.lang == 'ua' ? 'Продаж' : 'Продажа'%></div>
+<div class="nbu">НБУ</div>
+</div>
+<div class="right-tabs__currency--courses d-clear">
+<table width="203" class="d-fl" cellpadding="0" cellspacing="0" border="0">
+<tr class="grey">
+<td class="name">USD</td>
+<td class="purchase"><%if(typeof(currency.USD.bid) != "undefined"){%><%= currency.USD.bid %><%}else{%>--.--<%}%></td>
+<td class="sale"><%if(typeof(currency.USD.ask) != "undefined"){%><%= currency.USD.ask %><%}else{%>--.--<%}%></td>
+<td class="nbu"><%if(typeof(currency.USD.Nbu) != "undefined"){%><%= currency.USD.Nbu %><%}else{%>--.--<%}%></td>
+</tr>
+<tr>
+<td class="name">EUR</td>
+<td class="purchase"><%if(typeof(currency.EUR.bid) != "undefined"){%><%= currency.EUR.bid %><%}else{%>--.--<%}%></td>
+<td class="sale"><%if(typeof(currency.EUR.ask) != "undefined"){%><%= currency.EUR.ask %><%}else{%>--.--<%}%></td>
+<td class="nbu"><%if(typeof(currency.EUR.Nbu) != "undefined"){%><%= currency.EUR.Nbu %><%}else{%>--.--<%}%></td>
+</tr>
+<tr class="grey">
+<td class="name">10 RUB</td>
+<td class="purchase"><%if(typeof(currency.RUB.bid) != "undefined"){%><%= currency.RUB.bid %><%}else{%>--.--<%}%></td>
+<td class="sale"><%if(typeof(currency.RUB.ask) != "undefined"){%><%= currency.RUB.ask %><%}else{%>--.--<%}%></td>
+<td class="nbu"><%if(typeof(currency.RUB.Nbu) != "undefined"){%><%= currency.RUB.Nbu %><%}else{%>--.--<%}%></td>
+</tr>
+</table>
+<div class="right-tabs__currency--logo"><!--a target="_blank" href="http://gdeua.hit.gemius.pl/lshitredir/id=0nI1XSt3OVAY81ftnMd5KZaGj_iRbU7LWppHCSOBBnz.37/fastid=knfjyoigkyszgnbaiijybjjtibkw/stparam=obirblnmsc/url=http://minfin.com.ua/deposits/bonus/?utm_source=uknet&utm_medium=ukrnet_cur_branding&utm_campaign=depositbonus"></a--></div>
+</div>
+<div class="right-tabs__currency--kalc-but">
+<a href="javascript:void(0)"><%=Core.lang == 'ua' ? 'Конвертер валют' : 'Конвертер валют'%></a>
+</div>
+<div id="curr-kalc">
+<ul>
+<li class="grey grn">
+<div class="left">грн</div>
+<div class="right"><input value="<%=value.grn%>" min="0" type="text" id="grn" name="grn" onfocus="if(this.value == 0)this.value = ''" onkeyup="Currency.kalc.grn(this, '<%=currency.RUB.bid%>', '<%=currency.USD.bid%>', '<%=currency.EUR.bid%>')"></div>
+</li>
+<li class="grey">
+<div class="left">rub</div>
+<div class="right"><b><%=(currency.RUB.bid/10).toFixed(2)%></b><input value="<%=value.rub%>" min="0" type="text" id="rub" name="rub" onfocus="if(this.value == 0)this.value = ''" onkeyup="Currency.kalc.rub(this, '<%=currency.RUB.bid%>', '<%=currency.USD.bid%>', '<%=currency.EUR.bid%>')"></div>
+</li>
+<li>
+<div class="left">usd</div>
+<div class="right"><b><%=currency.USD.bid%></b><input value="<%=value.usd%>" min="0" type="text" id="usd" name="usd" onfocus="if(this.value == 0)this.value = ''" onkeyup="Currency.kalc.usd(this, '<%=currency.RUB.bid%>', '<%=currency.USD.bid%>', '<%=currency.EUR.bid%>')"></div>
+</li>
+<li>
+<div class="left">eur</div>
+<div class="right"><b><%=currency.EUR.bid%></b><input value="<%=value.eur%>" min="0" type="text" id="eur" name="eur" onfocus="if(this.value == 0)this.value = ''" onkeyup="Currency.kalc.eur(this, '<%=currency.RUB.bid%>', '<%=currency.USD.bid%>', '<%=currency.EUR.bid%>')"></div>
+</li>
+</ul>
+</div>
+</script>
+<script type="text/template" id="commercial-block-template">
+<section class="<%=(side=='left') ? 'nnjmhnfrkc':'cunfradtkuu'%>">
+<div class="lanfrxiz">
+<%if(hHref){%>
+<a <%if(hCnt){%>bc="<%=hCnt%>"<%}%> href="<%=hHref%>" target="_blank" rel="nofollow">
+<%}%>
+<img height="35" class="lazy" src="<%=Core.alts%>img/grey-pix.gif" data-src="<%=adUkrNet && ext ? getBase64(hImg, true) : hImg%>" alt=""/>
+<%if(hHref){%>
+</a>
+<%}%>
+</div>
+<div class="<%=(side=='left')?'kfiojpnfrvoc':'fbnfrvoy'%> <%if(items.length > 0){%>slider<%}%>">
+<%if(items.length > 1){%>
+<i class="upnfrar"></i>
+<%}%>
+<% for(var i in items){%>
+<div class="vuquwnfrfonp">
+<div class="mtnfrsydva">
+<a <%if(iCnt){%>bc="<%=iCnt%>"<%}%> href="<%=items[i].href%>" target="_blank" title="<%=items[i].fullName%>" rel="nofollow">
+<%if(i == 0){%>
+<img class="lazy" src="<%=Core.alts%>img/grey-pix.gif" data-src="<%=adUkrNet ? getBase64(items[i].img, true) : items[i].img%>" alt="" />
+<%}else{%>
+<img class="" data-lazy="<%=adUkrNet ? getBase64(items[i].img, true) : items[i].img%>" alt="" />
+<%}%>
+<%if(items[i].price){%>
+<span><%=items[i].price%></span>
+<%}%>
+</a>
+</div>
+<div class="pgkkconfrydkpkki">
+<a <%if(iCnt){%>bc="<%=iCnt%>"<%}%> title="<%=items[i].fullName%>" href="<%=items[i].href%>" target="_blank" class="checkthis"  rel="nofollow"><%=items[i].name%></a>
+</div>
+</div>
+<%}%>
+<%if(items.length > 1){%>
+<i class="vadpkfnnfrtrrhik"></i>
+<%}%>
+</div>
+</section>
+</script>
+<script type="text/template" id="commercial-kinoafisha_custom-template">
+<section class="kcnfryy">
+<div class="fpnfrzajxxjf">
+<%if(hHref){%>
+<a bc="<%=hCnt%>" href="<%=hHref%>" target="_blank" rel="nofollow">
+<%}%>
+<img height="35" class="lazy" src="<%=Core.alts%>img/grey-pix.gif" data-src="<%=adUkrNet ? getBase64(hImg, true) : hImg%>" alt=""/>
+<%if(hHref){%>
+</a>
+<%}%>
+</div>
+<div class="fwtnfryfxu <%if(items.length > 0){%>slider<%}%>">
+<%if(items.length > 1){%>
+<i class="hiunfrlgt"></i>
+<%}%>
+<% for(var i in items){%>
+<div class="vufnfrvulfp">
+<div class="tndkehnfrev">
+<a bc="<%=iCnt%>" href="<%=items[i].href%>" target="_blank" title="<%=items[i].fullName%>" rel="nofollow">
+<%if(i == 0){%>
+<img class="lazy" src="<%=Core.alts%>img/grey-pix.gif" data-src="<%=adUkrNet ? getBase64(items[i].img, true) : items[i].img%>" alt="" />
+<%}else{%>
+<img style="display:block !important;visibility: visible!important;" class="" data-lazy="<%=adUkrNet ? getBase64(items[i].img, true) : items[i].img%>" alt="" />
+<%}%>
+</a>
+</div>
+<div class="eqzfnfrcm">
+<a bc="<%=iCnt%>" title="<%=items[i].fullName%>" href="<%=items[i].href%>" target="_blank" class="checkthis"  rel="nofollow"><%=items[i].name%></a>
+</div>
+</div>
+<%}%>
+<%if(items.length > 1){%>
+<i class="qjbbnfrnputij"></i>
+<%}%>
+</div>
+</section>
+</script>
+<script type="text/template" id="commercial-etarg_custom-template">
+<section class="<%=(side=='left') ? 'nnjmhnfrkc':'cunfradtkuu'%> bwycqnfrafc">
+<div class="lanfrxiz">
+<%if(hHref){%>
+<a <%if(hCnt){%>bc="<%=hCnt%>"<%}%> href="<%=hHref%>" target="_blank" rel="nofollow">
+<%}%>
+<img height="35" class="lazy" src="<%=Core.alts%>img/grey-pix.gif" data-src="<%=adUkrNet && ext ? getBase64(hImg, true) : hImg%>" alt=""/>
+<%if(hHref){%>
+</a>
+<%}%>
+</div>
+<div class="<%=(side=='left')?'kfiojpnfrvoc':'fbnfrvoy'%> <%if(items.length > 0){%>slider<%}%>">
+<%if(items.length > 1){%>
+<i class="upnfrar"></i>
+<%}%>
+<% for(var i in items){%>
+<div class="vuquwnfrfonp">
+<div class="mtnfrsydva">
+<a <%if(iCnt){%>bc="<%=iCnt%>"<%}%> href="<%=items[i].href%>" target="_blank" title="<%=items[i].fullName%>" rel="nofollow">
+<div style="background-image: url('<%=adUkrNet ? getBase64(items[i].img, true) : items[i].img%>'); background-size: cover; background-position: center center; width: 178px; height: 95px; position: inherit; box-sizing: content-box;"></div>
+</a>
+</div>
+<div class="pgkkconfrydkpkki">
+<a <%if(iCnt){%>bc="<%=iCnt%>"<%}%> title="<%=items[i].fullName%>" href="<%=items[i].href%>" target="_blank" class="checkthis"  rel="nofollow"><%=items[i].name%></a>
+</div>
+</div>
+<%}%>
+<%if(items.length > 1){%>
+<i class="vadpkfnnfrtrrhik"></i>
+<%}%>
+</div>
+</section>
+</script>
+<div class="wrapper">
+<main id="main" class="main d-clear">
+<div style="overflow: hidden">
+<div id='div-gpt-ad-1509975098522-0' style='width:970px;'>
+<script>
+if(screen.width < 1280){
+googletag.cmd.push(function() {
+googletag.display('div-gpt-ad-1509975098522-0');
+googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+if(event.slot.getAdUnitPath() == '/17774365/ukr.net_topbanner'){
+if(event.isEmpty === false) {
+$('#div-gpt-ad-1509975098522-0').css('margin','10px auto 0px auto');
+}else {
+$('#div-gpt-ad-1509975098522-0').css('margin','0 auto');
+}
+}
+});
+});
+}
+</script>
+</div>
+</div>
+<div class="tenfrmjz">
+<header class="header d-clear">
+<section class="header__logo">
+<a href="//www.ukr.net/"><img src="//upst.fwdcdn.com/temp/holidays/7928/logo_ua.gif" width="235" height="69" alt="Новини України" /></a>
+<h1>Останні новини України</h1>
+<!-- HOLIDAYS BLOCK  -->
+<style>
+.header__logo {height:auto;}
+.gqfqnfrqnu {margin-top:4px;}
+.tenfrmjz > .feed {margin-top:-40px;}
+</style>
+<div class="holidays-img"><img src="//upst.fwdcdn.com/temp/holidays/7928/title_img_ua.gif" width="235" alt="" /></div>
+<script type="text/javascript">
+Holydays.init(
+"\u041e\u0441\u0442\u0430\u043d\u043d\u0456 \u043d\u043e\u0432\u0438\u043d\u0438 \u0423\u043a\u0440\u0430\u0457\u043d\u0438",
+"\u041d\u043e\u0432\u0438\u043d\u0438 \u0423\u043a\u0440\u0430\u0457\u043d\u0438",
+{"TitleUa":"","TitleImgUa":"\/\/upst.fwdcdn.com\/temp\/holidays\/7928\/title_img_ua.gif","LogoUa":"\/\/upst.fwdcdn.com\/temp\/holidays\/7928\/logo_ua.gif","TitleImgHeightUa":40,"HtmlUa":null},false);</script>
+<!-- END HOLIDAYS BLOCK BLOCK  --></section>
+<section class="header__search">
+<form id="search-form" name="search" enctype="application/x-www-form-urlencoded" action="https://www.google.com/search" onsubmit="return go_search();" name="f" method="get" target="_blank">
+<a style="display: none" href="//www.ukr.net/" id="search-href" target="_blank">search</a>
+<div class="form d-clear">
+<input type="text" id="search-input" name="q" tabindex="1" autocomplete="off" />
+<input type="submit" tabindex="2" value="Пошук" />
+</div>
+</form>
+</section>
+</header>
+<div class="gqfqnfrqnu">
+<div class="ldznfrsuace">
+<div id="login-frame-wraper"></div>
+<script>
+var widget = new MailWidget({
+container: document.querySelector('#login-frame-wraper'),
+host: 'https://mail.ukr.net',
+skin: navigator.userAgent.indexOf('MSIE 9.') === -1 ? 'desktop' : 'light',
+lang: GetCookie('un_lang') === 'ua' ? 'uk' : 'ru',
+iframeName: 'mail widget',
+onLogin: function (email) {
+$.ajax({
+url: 'https://mail.ukr.net/settings/bookmark/check_is_enabled?email=' + email,
+dataType: "jsonp",
+'success': function(resp) {
+if (resp.enabled) {
+$('#bookmarks-wraper').show();
+userLoginData = {status:'1'};
+User.render_logoned();
+} else {
+$('#bookmarks-wraper').hide();
+$('#login-frame-wraper').addClass('no-user-bookmarks');
+User.onlogouted();
+}
+}
+})
+},onLogout: function () {
+$('#login-frame-wraper').removeClass('no-user-bookmarks');
+$('#bookmarks-wraper').hide();
+User.onlogouted();
+},onReady: function () {
+__advShowDeferred.resolve();
+}
+});setTimeout(function () {
+__advShowDeferred.resolve();
+}, 5000);
+</script>
+<!--section id="login-block"></section-->
+<div id="bookmarks-wraper" style="display:none;" class="login-block">
+<ul class="login-block__servises">
+<li class="login-block__bmarks">
+<a class="href" href="javascript:void(0);" onclick="User.bookmarks();">Закладки</a>
+<span></span>
+<div class="bookmarks-block">
+<div class="bookmarks-block-header">
+<b onclick="User.bookmarks();"></b>
+</div>
+<div class="bookmark">
+<div id="favoritesBox">
+<div id="Favorites"></div>
+</div>
+<div id="zakl_body"></div>
+</div>
+</div>
+<div class="b-cl-block"></div>
+</li>
+</ul>
+</div><section class="favorites-block">
+<h3 class="favorites-block__h3">Вибране</h3>
+<div class="favorites-block__list d-clear">
+<div class="left"><a class="a0" lc="596" target="_blank" href="https://ua.sinoptik.ua/">Sinoptik</a><a class="a1" lc="582" target="_blank" href="http://orakul.com">Оракул</a><a class="a2" lc="590" target="_blank" href="http://kinoafisha.ua/ua/?utm_source=ukr.net&utm_medium=link&utm_campaign=izbranoe">Кіноафіша</a><!--noindex--><a class="a3" rel="nofollow" lc="223" bc="2948" target="_blank" href="https://www.work.ua/?utm_source=ukr.net&utm_medium=advert&utm_campaign=main_izbrannoe">Work.ua</a><!--/noindex--><!--noindex--><a class="a4" rel="nofollow" lc="311" bc="7703" target="_blank" href="https://www.yves-rocher.ua/control/main/?utm_source=ukr.net&utm_medium=website_partnership&utm_campaign=favourite">Yves Rocher</a><!--/noindex--><!--noindex--><a class="a5" rel="nofollow" lc="217" bc="2308" target="_blank" href="http://www.booking.com/index.html?aid=375206">Booking</a><!--/noindex--></div><div class="right"><!--noindex--><a class="a0" rel="nofollow" lc="826" bc="1978" target="_blank" href="http://rozetka.com.ua/?utm_source=ukr_net_main&utm_medium=banner_logo&utm_campaign=logo_main">Rozetka</a><!--/noindex--><!--noindex--><a class="a1" rel="nofollow" lc="205" bc="7003" target="_blank" href="https://kasta.ua/?utm_campaign=190108_link_new_audience_cac_main_izbrannoe&utm_medium=cpc&utm_source=ukrnet">Kasta</a><!--/noindex--><!--noindex--><a class="a2" rel="nofollow" lc="313" bc="7903" target="_blank" href="https://www.citrus.ua/actions/black-friday?utm_source=ukrnet&utm_medium=cpc&utm_campaign=191115_links-general-blackfriday-2019">Цитрус</a><!--/noindex--><!--noindex--><a class="a3" rel="nofollow" lc="237" bc="3518" target="_blank" href="https://makeup.com.ua/?utm_source=ukr.net&utm_medium=izbrannoe">MakeUp</a><!--/noindex--><!--noindex--><a class="a4" rel="nofollow" lc="302" bc="6791" target="_blank" href="http://lzp.li/CTYj">Answear</a><!--/noindex--><!--noindex--><a class="a5" rel="nofollow" lc="317" bc="8618" target="_blank" href="https://eldorado.ua/?utm_source=ukrnet&utm_medium=logo_link_main&utm_campaign=04102019_logo_main">Eldorado</a><!--/noindex--></div>        </div>
+</section>
+<!--noindex--><section class="categories-block"><div class="categories-block__container" id="153" x-adriver-id="38"><h3 class="categories-block__h3">Автосайти</h3><a rel="nofollow" fc="131,AUTO.RIA - №1 в автопродаже" target="_blank" href="http://auto.ria.com/?utm_source=ukrnet&utm_medium=clikukrnet&utm_campaign=favorites&r_audience=partners_buyers&r_source=ukr.net&r_medium=link&r_campaign=clikukrnet">AUTO.RIA - №1 в автопродажі</a> <a rel="nofollow" fc="1577,Машины продают на сайте RST" target="_blank" href="http://rst.ua/">Машини продають на сайтi RST</a> <a rel="nofollow" fc="8073,Тест-драйв новой Camry Hybrid" target="_blank" href="https://toyota-ua.com/ua/avtomobili/camry">Тест-драйв нової Camry Hybrid</a> <a rel="nofollow" fc="8288,Corolla и шины в добавок" target="_blank" href="https://toyota-ua.com/ua/avtomobili/corolla">Corolla та шини на додачу </a> <a rel="nofollow" fc="992,InfoCar.ua - новые авто" target="_blank" href="http://www.infocar.ua/?utm_source=ukr.net&utm_medium=newauto&utm_campaign=newauto">InfoCar.ua - нові авто</a> <a rel="nofollow" fc="8313,Илта - б/у авто после лизинга" target="_blank" href="https://ilta.ua/usedauto/?utm_source=ukr.net&utm_medium=referral&utm_campaign=link">Ілта - б/у авто після лізингу</a> <a rel="nofollow" fc="8063,Авто из США в Украине" target="_blank" href="http://atlanticexpress.com.ua/?utm_source=ukr_net&utm_medium=url_top&utm_campaign=auto_us_ukr_net&utm_term=avto_iz_ssha&utm_content=atlantic_express_1">Авто з США в Україні</a> <a rel="nofollow" fc="656,Avtosale - авто по лучшей цене" target="_blank" href="http://avtosale.ua/new_tender/">Avtosale - авто за кращою ціною</a> <a rel="nofollow" fc="4893,Электронный полис Осаго" target="_blank" href="http://osaggo.com.ua/">Електронний поліс Осаго</a> <a rel="nofollow" fc="8698,Peugeot 508 от 688 500 грн" target="_blank" href="https://peugeot-vidi.com.ua/models/cars/508/">Peugeot 508 від 688 500 грн</a> <a rel="nofollow" fc="8703,Citroёn С3 от 318 000 грн" target="_blank" href="http://citroen-vidi.com.ua/models/passenger_cars/new-c3/">Citroёn С3 від 318 000 грн</a> <a rel="nofollow" fc="8713,Аукцион авто США" target="_blank" href="https://sweetcars.com.ua/avto-iz-ssha">Аукціон авто США</a> <a rel="nofollow" fc="7713,Suzuki Vitara от 389 000 грн" target="_blank" href="https://testdrive.suzuki.ua/?utm_source=UkrNet&utm_medium=link&utm_campaign=SX4-VITARA">Suzuki Vitara від 389 000 грн</a></div><div class="categories-block__container" id="3" x-adriver-id="34"><h3 class="categories-block__h3">Нерухомість</h3><a rel="nofollow" fc="44,DOM.ria проверенные квартиры" target="_blank" href="http://dom.ria.com/?utm_source=ukrnet&utm_medium=clikukrnet&utm_campaign=favorites&r_audience=partners_buyers&r_source=ukr.net&r_medium=link&r_campaign=clikukrnet">DOM.RIA Перевірені квартири</a> <a rel="nofollow" fc="3603,ЛУН - Все новостройки" target="_blank" href="https://novostroyki.lun.ua/все-новостройки-киева">ЛУН - Всі новобудови</a> <a rel="nofollow" fc="8283,522 новостройки Киева" target="_blank" href="https://vn.com.ua/catalog/kievskaya-oblast/kiev">522 новобудови Києва</a> <a rel="nofollow" fc="8748,Квартиры в кредит" target="_blank" href="https://ozernyi-gatne.com.ua/press/shares/2019/sovmestnaya-programma-s-ukrgazbankom-/?utm_source=ukr.net&utm_medium=promo&utm_campaign=credit">Квартири у кредит</a> <a rel="nofollow" fc="8753,Скидки на квартиры до 9%" target="_blank" href="https://teremki-bud.com.ua/events/skidk%D1%96-do-9-na-kvartiry?utm_source=ukr.net&utm_medium=promo&utm_campaign=9%25off">Знижки на квартири до 9%</a> <a rel="nofollow" fc="8758,Квартиры со скидкой 200 тыс.грн" target="_blank" href="https://akadem-kvartal.com.ua/ua/2019/03/29/znyzhky-na-kvartyry-do-200-000-gryven/?utm_source=ukr.net&utm_medium=promo&utm_campaign=200k_discount">Квартири зі знижкою 200 тис. грн</a> <a rel="nofollow" fc="8793,Квартиры у моря" target="_blank" href="http://novosel-odessa.com.ua">Квартири у моря</a> <a rel="nofollow" fc="5983,DOM.RIA - Новостройки Киева" target="_blank" href="http://dom.ria.com/novostroyki/kiev/?utm_source=ukrnet&utm_medium=clikukrnet_newbuilds&utm_campaign=newbuildings&r_audience=partners_buyers&r_source=ukr.net&r_medium=link&r_campaign=clikukrnet">DOM.RIA - Новобудови Києва</a></div><div class="categories-block__container" id="15" x-adriver-id="42"><h3 class="categories-block__h3">Бізнес та Фінанси</h3><a rel="nofollow" fc="1512,Успей получить 25000 грн.!" target="_blank" href="https://www.instaforex.com/ua/no_deposit_bonus?x=EOYVD">Встигни отримати 25000 грн.!</a> <a rel="nofollow" fc="8478,Депозиты Укрэксимбанка" target="_blank" href="https://www.eximb.com/ua/business/pryvatnym-klientam/pryvatnym-klientam-depozyty/?utm_source=ukr.net&utm_medium=link&utm_campaign=Deposit">Депозити Укрексімбанку</a> <a rel="nofollow" fc="8483,Финансирование бизнеса" target="_blank" href="https://www.eximb.com/ua/business/klientam-msb/msb-specialni-propozyciyi/perevagy-dlya-rozvytku-vashogo-biznesu-razom-z-at-ukreksimbank.html?utm_source=ukr.net&utm_medium=link&utm_campaign=SMB">Фінансування бізнесу</a> <a rel="nofollow" fc="8563,Торгуй на Forex в гривнах" target="_blank" href="https://ad.adriver.ru/cgi-bin/click.cgi?sid=1&ad=672539&bt=103&pid=2842067&bid=6379315&bn=6379315&rnd=1470566198">Торгуй на Forex в гривнях</a> <a rel="nofollow" fc="8783,Кредит онлайн на карту" target="_blank" href="http://track.eurogroshi.com.ua/click?pid=21&offer_id=2&sub1=ukrnet">Кредит онлайн на карту</a> <a rel="nofollow" fc="8673,За 15 минут -  до 7000 грн" target="_blank" href="http://track.gofingo.com.ua/click?pid=24&offer_id=1&sub1=ukrnet">За 15 хвилин -  до 7000 грн</a> <a rel="nofollow" fc="8773,Кредит онлайн на карту 24/7" target="_blank" href="https://globalcredit.ua/?utm_source=ukr.net&utm_medium=cpc&utm_campaign=ukrnet">Кредит онлайн на картку 24/7</a> <a rel="nofollow" fc="8808,Кредит до 12000грн под 0,01%" target="_blank" href="http://bit.ly/339vSXs">Кредит до 12000грн під 0,01%</a></div><div class="categories-block__container" id="8" x-adriver-id="39"><h3 class="categories-block__h3">Жінкам</h3><a rel="nofollow" fc="6908,Парфюмерия" target="_blank" href="https://makeup.com.ua/categorys/3/">Парфумерія</a> <a rel="nofollow" fc="5923,Туры на шоппинг в Европу" target="_blank" href="https://www.accordtour.com/avtobusnyye_shoping-tury">Тури на шопінг в Європу</a> <a rel="nofollow" fc="8208,Комфортная обувь" target="_blank" href="http://bit.ly/2UUsNuz">Комфортне взуття</a> <a rel="nofollow" fc="4428,Знакомства OnOna.ua" target="_blank" href="http://onona.ua/">Знайомства OnOna.ua</a></div><div class="categories-block__container" id="4" x-adriver-id="35"><h3 class="categories-block__h3">Подорожі</h3><a rel="nofollow" fc="1242,100% туров на Otpusk.com" target="_blank" href="http://www.otpusk.com/?utm_source=ukr.net&utm_medium=cpc&utm_content=general&utm_campaign=ukr.net">100% турів на Otpusk.com</a> <a rel="nofollow" fc="1047,Booking - бронирование отелей" target="_blank" href="http://www.booking.com/index.html?aid=338493">Booking - бронювання готелів</a> <a rel="nofollow" fc="3053,APL Travel - Отдых в Египте" target="_blank" href="https://www.apltravel.ua/airtour/sale/egypt?utm_source=ukrnet&utm_medium=cpc&utm_campaign=egypt">APL Travel. Відпочинок в Єгипті</a> <a rel="nofollow" fc="5813,Туры на море, отдых с детьми" target="_blank" href="https://www.accordtour.com/vse_avtobusnyye_tury">Тури, відпочинок з дітьми</a> <a rel="nofollow" fc="8643,Отель Panorama De Luxe" target="_blank" href="https://panoramadeluxe.com/">Готель Panorama De Luxe</a> <a rel="nofollow" fc="8628,Сравнение цен на отели" target="_blank" href="http://www.hotelscombined.com/?a_aid=143217">Порівняння цін на готелі</a> <a rel="nofollow" fc="1237,Отель в Карпатах, Вежа" target="_blank" href="http://vv-hotel.com/">Готель в Карпатах, Вежа</a></div><div class="categories-block__container" id="20" x-adriver-id="44"><h3 class="categories-block__h3">Інтернет магазини</h3><a rel="nofollow" fc="8613,Lampa.ua: люстры, светильники" target="_blank" href="https://www.lampa.kiev.ua?utm_source=ukr.net&utm_medium=referral&utm_campaign=shop">Lampa.ua: люстри, світильники</a> <a rel="nofollow" fc="1231,Магазин электроники" target="_blank" href="http://rozetka.com.ua/?utm_source=ukrnet&utm_medium=links&utm_campaign=rozetka">Магазин електронiки</a> <a rel="nofollow" fc="8813,Доставка блюд из лосося Киев" target="_blank" href="https://bagatolososia.kiev.ua/?utm_source=ukrnet&utm_medium=txt&utm_campaign=ukrnet_bizl_txt">Доставка страв з лосося Київ</a> <a rel="nofollow" fc="491,Cекс-шоп заказать анонимно" target="_blank" href="https://sex-shop.ua/">Секс-шоп замовити анонімно</a></div><div class="categories-block__container" id="1203"><h3 class="categories-block__h3">Робота та Освіта</h3><a rel="nofollow" fc="999,WORK.ua – №1 в Украине" target="_blank" href="http://work.ua/?utm_source=ukr.net&utm_medium=advert&utm_campaign=main_rabota">WORK.ua – №1 в Україні</a> <a rel="nofollow" fc="1011,Работа - RABOTA.ua" target="_blank" href="https://rabota.ua/ua?utm_source=ukr.net&utm_medium=cpc&utm_campaign=main&utm_content=rabota_i_osvita">Робота - RABOTA.ua</a> <a rel="nofollow" fc="8058,HH.ua – лучших ищут тут" target="_blank" href="http://hh.ua/?utm_source=ukrnet&utm_medium=link&utm_campaign=main_page">HH.ua – кращих шукають тут</a> <a rel="nofollow" fc="8083,KABANCHIK.ua - работа" target="_blank" href="https://kabanchik.ua/rabota?utm_source=ukr.net&utm_medium=referral&utm_campaign=ukr.net_01.03.2019_rabota">KABANCHIK.ua - робота</a> <a rel="nofollow" fc="7578,Learning.ua - математика" target="_blank" href="https://learning.ua/?utm_source=ukrnet&utm_medium=clikukrnet&utm_campaign=favorites">Learning.ua - математика</a></div><div class="categories-block__container" id="49" x-adriver-id="47"><h3 class="categories-block__h3">Медицина</h3><a rel="nofollow" fc="4513,Medicina.ua - портал здоровья" target="_blank" href="http://medicina.ua/">Medicina.ua - портал здоров'я</a> <a rel="nofollow" fc="8128,Медицинский магазин" target="_blank" href="https://med-magazin.ua/?utm_source=ukrnetmedtovary">Медичний магазин</a> <a rel="nofollow" fc="8133,Ортопедические товары" target="_blank" href="https://ortocomfort.ua/?utm_source=ukrnetortopedtovary">Ортопедичні товари</a> <a rel="nofollow" fc="7393,Lisod лечение рака" target="_blank" href="https://www.lissod.com.ua/?f=ukr.net">Lisod лікування раку</a> <a rel="nofollow" fc="8363,Профилактика йододефицита" target="_blank" href="http://healthyway.com.ua/ru/profilaktika-jododeficita/">Профілактика йододефіциту</a> <a rel="nofollow" fc="8738,Стоматология в Киеве и Одессе" target="_blank" href="https://dent-art.com.ua/">Стоматологія у Києві та Одессі</a></div><div class="categories-block__container" id="39" x-adriver-id="46"><h3 class="categories-block__h3">Послуги</h3><a rel="nofollow" fc="8548,Уборка квартир" target="_blank" href="https://kabanchik.ua/category/uborka-kvartir?utm_source=ukr.net&utm_medium=refferal&utm_campaign=ukr.net_22.10.2019_uborka">Прибирання квартир</a> <a rel="nofollow" fc="8553,Установка бойлера" target="_blank" href="https://kabanchik.ua/category/podklyuchenie-bojlera?utm_source=ukr.net&utm_medium=refferal&utm_campaign=ukr.net_22.10.2019_bojler">Установка бойлера</a> <a rel="nofollow" fc="8558,Поклейка обоев" target="_blank" href="https://kabanchik.ua/category/pokleyka-oboev?utm_source=ukr.net&utm_medium=refferal&utm_campaign=ukr.net_22.10.2019_pokleyka-oboev">Поклейка шпалер</a> <a rel="nofollow" fc="8708,Ремонт ноутбуков" target="_blank" href="https://kabanchik.ua/category/remont-noutbukov?utm_source=ukr.net&utm_medium=refferal&utm_campaign=ukr.net_22.10.2019_noutbuk">Ремонт ноутбуків</a> <i>&nbsp;</i> <a rel="nofollow" fc="8663,Услуги мужа на час" target="_blank" href="https://kabanchik.ua/category/muzh-na-chas?utm_source=ukr.net&utm_medium=refferal&utm_campaign=ukr.net_22.10.2019_muzh-na-chas">Чоловік на годину</a> <a rel="nofollow" fc="8778,Охрана квартир в Киеве" target="_blank" href="http://exgroup1.com.ua">Охорона квартир у Києві</a></div><div class="categories-block__container" id="5" x-adriver-id="36"><h3 class="categories-block__h3">Інтернет</h3><a rel="nofollow" fc="83,Домены и Хостинг Hvosting.ua" target="_blank" href="http://hvosting.ua/">Домени і Хостинг Hvosting.ua</a> <a rel="nofollow" fc="557,NIC.ua - домены и хостинг" target="_blank" href="http://nic.ua">NIC.ua - домени і хостинг</a> <a rel="nofollow" fc="642,Хостинг, VDS, аренда сервера" target="_blank" href="http://www.besthosting.ua/">Хостинг, VPS, оренда сервера</a> <a rel="nofollow" fc="677,СМИ - InternetUA" target="_blank" href="http://internetua.com/">СМИ - InternetUA</a> <a rel="nofollow" fc="8798,Интернет-магазин за 87 грн" target="_blank" href="https://www.insales.com.ua/?utm_source=ukrnet&utm_medium=link&utm_campaign=favorites&utm_content=87">Інтернет-магазин за 87 грн</a> <a rel="nofollow" fc="8823,Хостинг Pan.Host от 15 грн" target="_blank" href="https://pan.host/">Хостинг Pan.Host від 15 грн</a></div><div class="categories-block__container" id="9" x-adriver-id="40"><h3 class="categories-block__h3">Спорт</h3><a rel="nofollow" fc="985,Футбол на Спорт.ua" target="_blank" href="https://sport.ua/football?utm_source=ukrnet-mainpage&utm_medium=ukrnet-link">Футбол на Спорт.ua</a> <a rel="nofollow" fc="6646,ФаворитСпорт - ставки на спорт" target="_blank" href="https://analyticsq.com/fav/?serial=1170&creative_id=835&anid=sport_favorit">ФаворитСпорт - ставки на спорт</a> <a rel="nofollow" fc="5808,Туры на футбольные матчи" target="_blank" href="https://www.accordtour.com/avtobusnyye_tury_futbolnyye_matchi">Тури на футбольні матчі</a> <a rel="nofollow" fc="4068,Теннис ФТУ" target="_blank" href="http://www.ukrtennis.com">Теніс ФТУ</a></div><div class="categories-block__container" id="14" x-adriver-id="41"><h3 class="categories-block__h3">Держава</h3><a rel="nofollow" fc="276,Верховна Рада Украины" target="_blank" href="http://rada.gov.ua">Верховна Рада України</a> <a rel="nofollow" fc="287,Президент Украины" target="_blank" href="https://www.president.gov.ua/">Президент України</a> <a rel="nofollow" fc="436,Верховный Суд" target="_blank" href="https://court.gov.ua/">Верховний Суд</a> <a rel="nofollow" fc="435,Кабинет Министров Украины" target="_blank" href="https://www.kmu.gov.ua">Кабінет Міністрів України</a> <a rel="nofollow" fc="437,Нацбанк" target="_blank" href="http://www.bank.gov.ua/">Нацбанк</a> <i>&nbsp;</i> <a rel="nofollow" fc="5918,iGov - портал гос. услуг" target="_blank" href="http://igov.org.ua">iGov - портал державних послуг</a></div></section>
+<!--/noindex-->                    </div>                    
+<!--noindex-->        
+<div seithplnfrrecnfop="left" imjnnfryjmkptw="ecbr-4048" >            <script>
+$('['+ant.c41+'="ecbr-4048"]').addClass('mjhcnfrqvlfigv');
+</script>
+<section class="nnjmhnfrkc">
+<a style="display: block!important;" _xc_="1" bc="8733" href="https://www.citrus.ua/bilsheholyky/?utm_source=ukrnet&utm_medium=banner&utm_campaign=191101_banner_200x145_bilsheholyky" target="_blank" rel="nofollow"><img style="display: block!important;visibility:visible!important;" width="200" height="145" class="lazy" src="//upst.fwdcdn.com/img/grey-pix.gif" data-src="//upst.fwdcdn.com/temp/blocks/4/4048/head.2.gif" alt=""/><noscript><img src="//upst.fwdcdn.com/temp/blocks/4/4048/head.2.gif"  alt=""/></noscript></a></section>
+<script>        
+collectCommercialData('4048', null, null, null);
+</script>
+</div>        
+<div seithplnfrrecnfop="left" imjnnfryjmkptw="ecbr-4118" >            <script>
+$('['+ant.c41+'="ecbr-4118"]').addClass('mjhcnfrqvlfigv');
+</script>
+<section class="nnjmhnfrkc">
+<a style="display: block!important;" _xc_="1" bc="7153" href="https://kasta.ua/market/odezhda/?21=17&6=804&6=805&utm_campaign=191121_new_audience_cac_market_dzhemper_leftblock_&utm_medium=banner&utm_source=ukrnet" target="_blank" rel="nofollow"><img style="display: block!important;visibility:visible!important;" width="200" height="145" class="lazy" src="//upst.fwdcdn.com/img/grey-pix.gif" data-src="//upst.fwdcdn.com/temp/blocks/4/4118/head.2.gif" alt=""/><noscript><img src="//upst.fwdcdn.com/temp/blocks/4/4118/head.2.gif"  alt=""/></noscript></a></section>
+<script>        
+collectCommercialData('4118', null, null, null);
+</script>
+</div>        
+<div seithplnfrrecnfop="left" imjnnfryjmkptw="ecbr-1618" >            <script>
+ecbrStart('1618', '//recreativ.ru/tizers.php?bn=Bimhhn4Y1R', '');
+collectCommercialData('1618', null, '//recreativ.ru/tizers.php?bn=Bimhhn4Y1R', '', 'wss://recreativ.ru/tizers.php?bn=Bimhhn4Y1R');
+</script>
+</div>        
+<div seithplnfrrecnfop="left" imjnnfryjmkptw="ecbr-4103" >            <script>
+$('['+ant.c41+'="ecbr-4103"]').addClass('mjhcnfrqvlfigv');
+</script>
+<section class="nnjmhnfrkc">
+<a style="display: block!important;" _xc_="1" bc="1300" href="https://www.europe-stomatolog-centre.com.ua/" target="_blank" rel="nofollow"><img style="display: block!important;visibility:visible!important;" width="200" height="145" class="lazy" src="//upst.fwdcdn.com/img/grey-pix.gif" data-src="//upst.fwdcdn.com/temp/blocks/4/4103/head.1.jpg" alt=""/><noscript><img src="//upst.fwdcdn.com/temp/blocks/4/4103/head.1.jpg"  alt=""/></noscript></a></section>
+<script>        
+collectCommercialData('4103', null, null, null);
+</script>
+</div>        
+<div seithplnfrrecnfop="left" imjnnfryjmkptw="ecbr-4073" >            <script>
+$('['+ant.c41+'="ecbr-4073"]').addClass('mjhcnfrqvlfigv');
+</script>
+<section class="nnjmhnfrkc">
+<a style="display: block!important;" _xc_="1" bc="7923" href="https://kiev.karabas.com/ua/tayemnici-novorichnih-igrashok-iz-zirkami" target="_blank" rel="nofollow"><img style="display: block!important;visibility:visible!important;" width="200" height="145" class="lazy" src="//upst.fwdcdn.com/img/grey-pix.gif" data-src="//upst.fwdcdn.com/temp/blocks/4/4073/head.4.jpg" alt=""/><noscript><img src="//upst.fwdcdn.com/temp/blocks/4/4073/head.4.jpg"  alt=""/></noscript></a></section>
+<script>        
+collectCommercialData('4073', null, null, null);
+</script>
+</div>        
+<div seithplnfrrecnfop="left" imjnnfryjmkptw="ecbr-1623" >            <script>
+ecbrStart('1623', '//s.mixadvert.com/show_json/?id=1559', '');
+collectCommercialData('1623', null, '//s.mixadvert.com/show_json/?id=1559', '', '');
+</script>
+</div>        
+<div seithplnfrrecnfop="left" imjnnfryjmkptw="ecbr-1891" >            <script>
+ecbrStart('1891', '//c.v-biz.com.ua/un/4410/', 'etarg');
+collectCommercialData('1891', null, '//c.v-biz.com.ua/un/4410/', 'etarg', '');
+</script>
+</div>        
+<div seithplnfrrecnfop="left" imjnnfryjmkptw="ecbr-763" >        <script>
+Services.commercial({"id":"763","hHref":"http:\/\/kinoafisha.ua\/","hImg":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/763\/head.25.jpg","hCnt":"4198","iCnt":"1645","items":[{"href":"https:\/\/kinoafisha.ua\/films\/valhalla-tor-ragnar-k?utm_source=ukr.net&utm_medium=informer&utm_campaign=%D0%92%D0%B0%D0%BB%D1%8C%D1%85%D0%B0%D0%BB%D0%BB%D0%B0%3A+%D0%A2%D0%BE%D1%80+%D0%A0%D0%B0%D0%B3%D0%BD%D0%B0%D1%80%D1%91%D0%BA","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/763\/4d\/8d\/7ac498bfa7d548fef800c003f06f.jpg","name":"\u0412\u0430\u043b\u044c\u00ad\u0445\u0430\u043b\u00ad\u043b\u0430: \u0422\u043e\u0440 \u0420\u0430\u00ad\u0433\u00ad\u043d\u0430\u00ad\u0440\u0451\u043a","fullName":"\u0412\u0430\u043b\u044c\u0445\u0430\u043b\u043b\u0430: \u0422\u043e\u0440 \u0420\u0430\u0433\u043d\u0430\u0440\u0451\u043a","price":"\u043a\u0443\u043f\u0438\u0442\u044c \u0431\u0438\u043b\u0435\u0442"},{"href":"https:\/\/kinoafisha.ua\/films\/svadebni-god?utm_source=ukr.net&utm_medium=informer&utm_campaign=%D0%A1%D0%B2%D0%B0%D0%B4%D0%B5%D0%B1%D0%BD%D1%8B%D0%B9+%D0%B3%D0%BE%D0%B4","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/763\/c3\/54\/08d588858abeddc92a3cfdf5040c.jpg","name":"\u0421\u0432\u0430\u00ad\u0434\u0435\u0431\u00ad\u043d\u044b\u0439 \u0433\u043e\u0434","fullName":"\u0421\u0432\u0430\u0434\u0435\u0431\u043d\u044b\u0439 \u0433\u043e\u0434","price":"\u043a\u0443\u043f\u0438\u0442\u044c \u0431\u0438\u043b\u0435\u0442"},{"href":"https:\/\/kinoafisha.ua\/films\/abbatstvo-daunton?utm_source=ukr.net&utm_medium=informer&utm_campaign=%D0%90%D0%B1%D0%B1%D0%B0%D1%82%D1%81%D1%82%D0%B2%D0%BE+%D0%94%D0%B0%D1%83%D0%BD%D1%82%D0%BE%D0%BD","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/763\/5f\/a9\/3a680879316b776183a4c1ae02ef.jpg","name":"\u0410\u0431\u00ad\u0431\u0430\u0442\u00ad\u0441\u0442\u0432\u043e \u0414\u0430\u00ad\u0443\u043d\u00ad\u0442\u043e\u043d","fullName":"\u0410\u0431\u0431\u0430\u0442\u0441\u0442\u0432\u043e \u0414\u0430\u0443\u043d\u0442\u043e\u043d","price":"\u043a\u0443\u043f\u0438\u0442\u044c \u0431\u0438\u043b\u0435\u0442"},{"href":"https:\/\/kinoafisha.ua\/films\/horoshii-ljec?utm_source=ukr.net&utm_medium=informer&utm_campaign=%D0%98%D0%B4%D0%B5%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F+%D0%BB%D0%BE%D0%B6%D1%8C","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/763\/4d\/6c\/15d7c99eaaa6a2a793a0b2a58bd3.jpg","name":"\u0418\u0434\u0435\u00ad\u0430\u043b\u044c\u00ad\u043d\u0430\u044f \u043b\u043e\u0436\u044c","fullName":"\u0418\u0434\u0435\u0430\u043b\u044c\u043d\u0430\u044f \u043b\u043e\u0436\u044c","price":"\u043a\u0443\u043f\u0438\u0442\u044c \u0431\u0438\u043b\u0435\u0442"},{"href":"https:\/\/kinoafisha.ua\/films\/kontrakt-na-luabov?utm_source=ukr.net&utm_medium=informer&utm_campaign=%D0%9E%D1%82%D0%B5%D0%BB%D1%8C+%D0%AD%D0%B4%D0%B5%D0%BB%D1%8C%D0%B2%D0%B5%D0%B9%D1%81","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/763\/ff\/46\/247f64c7d5066705883a74a38d48.jpg","name":"\u041e\u0442\u0435\u043b\u044c \u042d\u0434\u0435\u043b\u044c\u00ad\u0432\u0435\u0439\u0441","fullName":"\u041e\u0442\u0435\u043b\u044c \u042d\u0434\u0435\u043b\u044c\u0432\u0435\u0439\u0441","price":"\u043a\u0443\u043f\u0438\u0442\u044c \u0431\u0438\u043b\u0435\u0442"},{"href":"https:\/\/kinoafisha.ua\/films\/begusxii-po-lezviua-2?utm_source=ukr.net&utm_medium=informer&utm_campaign=%D0%91%D0%B5%D0%B3%D1%83%D1%89%D0%B8%D0%B9+%D0%BF%D0%BE+%D0%BB%D0%B5%D0%B7%D0%B2%D0%B8%D1%8E","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/763\/bd\/e9\/2d438165667cf8b23b18cd040d17.jpg","name":"\u0411\u0435\u00ad\u0433\u0443\u00ad\u0449\u0438\u0439 \u043f\u043e \u043b\u0435\u0437\u00ad\u0432\u0438\u044e","fullName":"\u0411\u0435\u0433\u0443\u0449\u0438\u0439 \u043f\u043e \u043b\u0435\u0437\u0432\u0438\u044e","price":"\u043a\u0443\u043f\u0438\u0442\u044c \u0431\u0438\u043b\u0435\u0442"},{"href":"https:\/\/kinoafisha.ua\/films\/obratni-otscset?utm_source=ukr.net&utm_medium=informer&utm_campaign=%D0%9E%D0%B1%D1%80%D0%B0%D1%82%D0%BD%D1%8B%D0%B9+%D0%BE%D1%82%D1%81%D1%87%D0%B5%D1%82","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/763\/7d\/b7\/84500477ba6c49270dbec0f55f64.jpg","name":"\u041e\u0431\u00ad\u0440\u0430\u0442\u00ad\u043d\u044b\u0439 \u043e\u0442\u00ad\u0441\u0447\u0435\u0442","fullName":"\u041e\u0431\u0440\u0430\u0442\u043d\u044b\u0439 \u043e\u0442\u0441\u0447\u0435\u0442","price":"\u043a\u0443\u043f\u0438\u0442\u044c \u0431\u0438\u043b\u0435\u0442"},{"href":"https:\/\/kinoafisha.ua\/films\/garet-djons?utm_source=ukr.net&utm_medium=informer&utm_campaign=%D0%A6%D0%B5%D0%BD%D0%B0+%D0%BF%D1%80%D0%B0%D0%B2%D0%B4%D1%8B","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/763\/f6\/6d\/dd52e2c69d1925f6df818d332fc6.jpg","name":"\u0426\u0435\u00ad\u043d\u0430 \u043f\u0440\u0430\u0432\u00ad\u0434\u044b","fullName":"\u0426\u0435\u043d\u0430 \u043f\u0440\u0430\u0432\u0434\u044b","price":"\u043a\u0443\u043f\u0438\u0442\u044c \u0431\u0438\u043b\u0435\u0442"},{"href":"https:\/\/kinoafisha.ua\/films\/21-most?utm_source=ukr.net&utm_medium=informer&utm_campaign=21+%D0%BC%D0%BE%D1%81%D1%82","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/763\/8d\/53\/24fc74f830784eb33304626cd0f6.jpg","name":"21 \u043c\u043e\u0441\u0442","fullName":"21 \u043c\u043e\u0441\u0442","price":"\u043a\u0443\u043f\u0438\u0442\u044c \u0431\u0438\u043b\u0435\u0442"}]});
+collectCommercialData('763', {"id":"763","hHref":"http:\/\/kinoafisha.ua\/","hImg":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/763\/head.25.jpg","hCnt":"4198","iCnt":"1645","items":[{"href":"https:\/\/kinoafisha.ua\/films\/valhalla-tor-ragnar-k?utm_source=ukr.net&utm_medium=informer&utm_campaign=%D0%92%D0%B0%D0%BB%D1%8C%D1%85%D0%B0%D0%BB%D0%BB%D0%B0%3A+%D0%A2%D0%BE%D1%80+%D0%A0%D0%B0%D0%B3%D0%BD%D0%B0%D1%80%D1%91%D0%BA","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/763\/4d\/8d\/7ac498bfa7d548fef800c003f06f.jpg","name":"\u0412\u0430\u043b\u044c\u00ad\u0445\u0430\u043b\u00ad\u043b\u0430: \u0422\u043e\u0440 \u0420\u0430\u00ad\u0433\u00ad\u043d\u0430\u00ad\u0440\u0451\u043a","fullName":"\u0412\u0430\u043b\u044c\u0445\u0430\u043b\u043b\u0430: \u0422\u043e\u0440 \u0420\u0430\u0433\u043d\u0430\u0440\u0451\u043a","price":"\u043a\u0443\u043f\u0438\u0442\u044c \u0431\u0438\u043b\u0435\u0442"},{"href":"https:\/\/kinoafisha.ua\/films\/svadebni-god?utm_source=ukr.net&utm_medium=informer&utm_campaign=%D0%A1%D0%B2%D0%B0%D0%B4%D0%B5%D0%B1%D0%BD%D1%8B%D0%B9+%D0%B3%D0%BE%D0%B4","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/763\/c3\/54\/08d588858abeddc92a3cfdf5040c.jpg","name":"\u0421\u0432\u0430\u00ad\u0434\u0435\u0431\u00ad\u043d\u044b\u0439 \u0433\u043e\u0434","fullName":"\u0421\u0432\u0430\u0434\u0435\u0431\u043d\u044b\u0439 \u0433\u043e\u0434","price":"\u043a\u0443\u043f\u0438\u0442\u044c \u0431\u0438\u043b\u0435\u0442"},{"href":"https:\/\/kinoafisha.ua\/films\/abbatstvo-daunton?utm_source=ukr.net&utm_medium=informer&utm_campaign=%D0%90%D0%B1%D0%B1%D0%B0%D1%82%D1%81%D1%82%D0%B2%D0%BE+%D0%94%D0%B0%D1%83%D0%BD%D1%82%D0%BE%D0%BD","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/763\/5f\/a9\/3a680879316b776183a4c1ae02ef.jpg","name":"\u0410\u0431\u00ad\u0431\u0430\u0442\u00ad\u0441\u0442\u0432\u043e \u0414\u0430\u00ad\u0443\u043d\u00ad\u0442\u043e\u043d","fullName":"\u0410\u0431\u0431\u0430\u0442\u0441\u0442\u0432\u043e \u0414\u0430\u0443\u043d\u0442\u043e\u043d","price":"\u043a\u0443\u043f\u0438\u0442\u044c \u0431\u0438\u043b\u0435\u0442"},{"href":"https:\/\/kinoafisha.ua\/films\/horoshii-ljec?utm_source=ukr.net&utm_medium=informer&utm_campaign=%D0%98%D0%B4%D0%B5%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F+%D0%BB%D0%BE%D0%B6%D1%8C","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/763\/4d\/6c\/15d7c99eaaa6a2a793a0b2a58bd3.jpg","name":"\u0418\u0434\u0435\u00ad\u0430\u043b\u044c\u00ad\u043d\u0430\u044f \u043b\u043e\u0436\u044c","fullName":"\u0418\u0434\u0435\u0430\u043b\u044c\u043d\u0430\u044f \u043b\u043e\u0436\u044c","price":"\u043a\u0443\u043f\u0438\u0442\u044c \u0431\u0438\u043b\u0435\u0442"},{"href":"https:\/\/kinoafisha.ua\/films\/kontrakt-na-luabov?utm_source=ukr.net&utm_medium=informer&utm_campaign=%D0%9E%D1%82%D0%B5%D0%BB%D1%8C+%D0%AD%D0%B4%D0%B5%D0%BB%D1%8C%D0%B2%D0%B5%D0%B9%D1%81","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/763\/ff\/46\/247f64c7d5066705883a74a38d48.jpg","name":"\u041e\u0442\u0435\u043b\u044c \u042d\u0434\u0435\u043b\u044c\u00ad\u0432\u0435\u0439\u0441","fullName":"\u041e\u0442\u0435\u043b\u044c \u042d\u0434\u0435\u043b\u044c\u0432\u0435\u0439\u0441","price":"\u043a\u0443\u043f\u0438\u0442\u044c \u0431\u0438\u043b\u0435\u0442"},{"href":"https:\/\/kinoafisha.ua\/films\/begusxii-po-lezviua-2?utm_source=ukr.net&utm_medium=informer&utm_campaign=%D0%91%D0%B5%D0%B3%D1%83%D1%89%D0%B8%D0%B9+%D0%BF%D0%BE+%D0%BB%D0%B5%D0%B7%D0%B2%D0%B8%D1%8E","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/763\/bd\/e9\/2d438165667cf8b23b18cd040d17.jpg","name":"\u0411\u0435\u00ad\u0433\u0443\u00ad\u0449\u0438\u0439 \u043f\u043e \u043b\u0435\u0437\u00ad\u0432\u0438\u044e","fullName":"\u0411\u0435\u0433\u0443\u0449\u0438\u0439 \u043f\u043e \u043b\u0435\u0437\u0432\u0438\u044e","price":"\u043a\u0443\u043f\u0438\u0442\u044c \u0431\u0438\u043b\u0435\u0442"},{"href":"https:\/\/kinoafisha.ua\/films\/obratni-otscset?utm_source=ukr.net&utm_medium=informer&utm_campaign=%D0%9E%D0%B1%D1%80%D0%B0%D1%82%D0%BD%D1%8B%D0%B9+%D0%BE%D1%82%D1%81%D1%87%D0%B5%D1%82","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/763\/7d\/b7\/84500477ba6c49270dbec0f55f64.jpg","name":"\u041e\u0431\u00ad\u0440\u0430\u0442\u00ad\u043d\u044b\u0439 \u043e\u0442\u00ad\u0441\u0447\u0435\u0442","fullName":"\u041e\u0431\u0440\u0430\u0442\u043d\u044b\u0439 \u043e\u0442\u0441\u0447\u0435\u0442","price":"\u043a\u0443\u043f\u0438\u0442\u044c \u0431\u0438\u043b\u0435\u0442"},{"href":"https:\/\/kinoafisha.ua\/films\/garet-djons?utm_source=ukr.net&utm_medium=informer&utm_campaign=%D0%A6%D0%B5%D0%BD%D0%B0+%D0%BF%D1%80%D0%B0%D0%B2%D0%B4%D1%8B","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/763\/f6\/6d\/dd52e2c69d1925f6df818d332fc6.jpg","name":"\u0426\u0435\u00ad\u043d\u0430 \u043f\u0440\u0430\u0432\u00ad\u0434\u044b","fullName":"\u0426\u0435\u043d\u0430 \u043f\u0440\u0430\u0432\u0434\u044b","price":"\u043a\u0443\u043f\u0438\u0442\u044c \u0431\u0438\u043b\u0435\u0442"},{"href":"https:\/\/kinoafisha.ua\/films\/21-most?utm_source=ukr.net&utm_medium=informer&utm_campaign=21+%D0%BC%D0%BE%D1%81%D1%82","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/763\/8d\/53\/24fc74f830784eb33304626cd0f6.jpg","name":"21 \u043c\u043e\u0441\u0442","fullName":"21 \u043c\u043e\u0441\u0442","price":"\u043a\u0443\u043f\u0438\u0442\u044c \u0431\u0438\u043b\u0435\u0442"}]}, null, '');
+</script></div>        
+<div seithplnfrrecnfop="left" imjnnfryjmkptw="ecbr-163" >        <script>
+Services.commercial({"id":"163","hHref":"http:\/\/avtosale.ua\/?utm_source=ukr.net&utm_medium=Logo&utm_campaign=informers","hImg":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/163\/head.16.jpg","hCnt":"","iCnt":"","items":[{"href":"http:\/\/avtosale.ua\/new_tender\/?markId=1569&modelId=1577&utm_source=ukr.net&utm_medium=KIA_Rio&utm_campaign=informers","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/163\/61\/0a\/cfae9572b4aa46f8280c7098ece1.jpg","name":"KIA Rio","fullName":"KIA Rio","price":"\u043e\u0442 374 400 \u0433\u0440\u043d"},{"href":"http:\/\/avtosale.ua\/new_tender\/?markId=1435&modelId=1461&utm_source=ukr.net&utm_medium=Volkswagen_Touareg&utm_campaign=informers","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/163\/90\/e0\/11ee372947b1598135abeccbff1f.jpg","name":"Volkswagen Touareg","fullName":"Volkswagen Touareg","price":"\u043e\u0442 1 837 954 \u0433\u0440\u043d"},{"href":"http:\/\/avtosale.ua\/new_tender\/?markId=1872&modelId=1889&utm_source=ukr.net&utm_medium=Mazda_3&utm_campaign=informers","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/163\/c1\/aa\/d9ff322160bda92fd7e2747937e5.jpg","name":"Mazda 3","fullName":"Mazda 3","price":"\u043e\u0442 540 000 \u0433\u0440\u043d"},{"href":"http:\/\/avtosale.ua\/new_tender\/?markId=1522&modelId=33152&utm_source=ukr.net&utm_medium=Nissan_Juke&utm_campaign=informers","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/163\/70\/4e\/a1fea6a6b65f3098be7f6f36a34c.jpg","name":"Nissan Juke","fullName":"Nissan Juke","price":"\u043e\u0442 379 990 \u0433\u0440\u043d"},{"href":"http:\/\/avtosale.ua\/new_tender\/?markId=1522&modelId=33043&utm_source=ukr.net&utm_medium=Nissan_Qashqai&utm_campaign=informers","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/163\/fa\/cd\/6d45e9cb6b1d749d9225237b304d.jpg","name":"Nissan Qashqai","fullName":"Nissan Qashqai","price":"\u043e\u0442 491 790 \u0433\u0440\u043d"},{"href":"http:\/\/avtosale.ua\/new_tender\/?markId=1826&modelId=5202&utm_source=ukr.net&utm_medium=Renault_Logan&utm_campaign=informers","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/163\/78\/a5\/d6c73b23d384df1a686bd2a4d3b4.jpg","name":"Renault Logan","fullName":"Renault Logan","price":"\u043e\u0442 357 892 \u0433\u0440\u043d"},{"href":"http:\/\/avtosale.ua\/new_tender\/?markId=431&modelId=33153&utm_source=ukr.net&utm_medium=Suzuki_Vitara&utm_campaign=informers","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/163\/dd\/4b\/d5705f9b656939dd90f59b86d359.jpg","name":"Suzuki Vitara","fullName":"Suzuki Vitara","price":"\u043e\u0442 463 000 \u0433\u0440\u043d"},{"href":"http:\/\/avtosale.ua\/new_tender\/?markId=1872&modelId=1886&utm_source=ukr.net&utm_medium=Mazda_6&utm_campaign=informers","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/163\/81\/63\/5fea719487b96c117ab774504775.jpg","name":"Mazda 6","fullName":"Mazda 6","price":"\u043e\u0442 599 000 \u0433\u0440\u043d"},{"href":"http:\/\/avtosale.ua\/new_tender\/?markId=1723&modelId=1766&utm_source=ukr.net&utm_medium=Ford_Fiesta&utm_campaign=informers","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/163\/96\/86\/b6cc1d0383eabb1e882ef4294887.jpg","name":"Ford Fiesta","fullName":"Ford Fiesta","price":"\u043e\u0442 409 770 \u0433\u0440\u043d"},{"href":"http:\/\/avtosale.ua\/new_tender\/?markId=1723&modelId=2237&utm_source=ukr.net&utm_medium=Ford_Kuga&utm_campaign=informers","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/163\/10\/cf\/2e21fa07d8dfc6d9a4076bc7db49.jpg","name":"Ford Kuga","fullName":"Ford Kuga","price":"\u043e\u0442 657 852 \u0433\u0440\u043d"},{"href":"http:\/\/avtosale.ua\/new_tender\/?markId=1081&modelId=33228&utm_source=ukr.net&utm_medium=Skoda_Kodiaq&utm_campaign=informers","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/163\/2f\/41\/6745911473ac470bbd8a2ee2e1fc.jpg","name":"Skoda Kodiaq","fullName":"Skoda Kodiaq","price":"\u043e\u0442 806 640 \u0433\u0440\u043d"},{"href":"http:\/\/avtosale.ua\/new_tender\/?markId=1872&modelId=32725&utm_source=ukr.net&utm_medium=Mazda_CX-5&utm_campaign=informers","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/163\/7b\/4b\/f1cccdd2a7fb532bcd2e1c4a9114.jpg","name":"Mazda CX-5","fullName":"Mazda CX-5","price":"\u043e\u0442 671 000 \u0433\u0440\u043d"},{"href":"http:\/\/avtosale.ua\/new_tender\/?markId=1569&modelId=1593&utm_source=ukr.net&utm_medium=KIA_Ceed&utm_campaign=informers","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/163\/c3\/49\/03b9c7a23448353e31c1465a184d.jpg","name":"KIA Ceed","fullName":"KIA Ceed","price":"\u043e\u0442 556 110 \u0433\u0440\u043d"},{"href":"http:\/\/avtosale.ua\/new_tender\/?markId=1435&modelId=1438&utm_source=ukr.net&utm_medium=Volkswagen_Golf&utm_campaign=informers","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/163\/9d\/1e\/8febfea2e29b09d3dd5e1ad228b0.jpg","name":"Volkswagen Golf","fullName":"Volkswagen Golf","price":"\u043e\u0442 501 058 \u0433\u0440\u043d"},{"href":"http:\/\/avtosale.ua\/new_tender\/?markId=927&modelId=947&utm_source=ukr.net&utm_medium=Hyundai_Tucson&utm_campaign=informers","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/163\/c9\/b3\/5e9967ff9fc92008887486c73e7d.jpg","name":"Hyundai Tucson","fullName":"Hyundai Tucson","price":"\u043e\u0442 633 600 \u0433\u0440\u043d"},{"href":"http:\/\/avtosale.ua\/new_tender\/?markId=927&modelId=946&utm_source=ukr.net&utm_medium=Hyundai_Elantra&utm_campaign=informers","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/163\/e4\/7f\/7a0311daff0a1370751bfe1a96b5.jpg","name":"Hyundai Elantra","fullName":"Hyundai Elantra","price":"\u043e\u0442 458 200 \u0433\u0440\u043d"},{"href":"http:\/\/avtosale.ua\/new_tender\/?markId=1826&modelId=5203&utm_source=ukr.net&utm_medium=Renault_Logan_MCV&utm_campaign=informers","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/163\/de\/3a\/445a60a60f98f9fede8b221b1083.jpg","name":"Renault Logan MCV","fullName":"Renault Logan MCV","price":"\u043e\u0442 397 280 \u0433\u0440\u043d"},{"href":"http:\/\/avtosale.ua\/new_tender\/?markId=1569&modelId=1570&utm_source=ukr.net&utm_medium=KIA_Sportage&utm_campaign=informers","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/163\/9b\/ff\/41bb7008203c5cedb3771b3d0aee.jpg","name":"KIA Sportage","fullName":"KIA Sportage","price":"\u043e\u0442 624 375 \u0433\u0440\u043d"},{"href":"http:\/\/avtosale.ua\/new_tender\/?markId=431&modelId=4947&utm_source=ukr.net&utm_medium=Suzuki_SX4&utm_campaign=informers","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/163\/14\/65\/46b75aaa233568e997fbb7b96c04.jpg","name":"Suzuki SX4","fullName":"Suzuki SX4","price":"\u043e\u0442 469 000 \u0433\u0440\u043d"},{"href":"http:\/\/avtosale.ua\/new_tender\/?markId=1594&modelId=1618&utm_source=ukr.net&utm_medium=Toyota_Camry&utm_campaign=informers","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/163\/4f\/6d\/4810cce5e314a264c870a06c1458.jpg","name":"Toyota Camry","fullName":"Toyota Camry","price":"\u043e\u0442 822 500 \u0433\u0440\u043d"},{"href":"http:\/\/avtosale.ua\/new_tender\/?markId=1594&modelId=1598&utm_source=ukr.net&utm_medium=Toyota_RAV4&utm_campaign=informers","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/163\/b1\/00\/25df7ec276d167d452cd10c35dbd.jpg","name":"Toyota RAV 4","fullName":"Toyota RAV 4","price":"\u043e\u0442 693 433 \u0433\u0440\u043d"},{"href":"http:\/\/avtosale.ua\/new_tender\/?markId=469&modelId=33107&utm_source=ukr.net&utm_medium=BMW_i3&utm_campaign=informers","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/163\/4f\/a8\/c61a99efc46c7c0ddb7ba169fe9e.jpg","name":"BMW i3 \u043e\u0442 989 835 \u0433\u0440\u043d","fullName":"BMW i3 \u043e\u0442 989 835 \u0433\u0440\u043d","price":"\u043e\u0442 989 835 \u0433\u0440\u043d"},{"href":"http:\/\/avtosale.ua\/new_tender\/?markId=1723&modelId=1764&utm_source=ukr.net&utm_medium=Ford_Mondeo&utm_campaign=informers","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/163\/14\/58\/2b2cf010fe8484ebc88478bcd582.jpg","name":"Ford Mondeo","fullName":"Ford Mondeo","price":"\u043e\u0442 779 746 \u0433\u0440\u043d"},{"href":"http:\/\/avtosale.ua\/new_tender\/?markId=1081&modelId=32970&utm_source=ukr.net&utm_medium=Skoda_Octavia&utm_campaign=informers","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/163\/12\/78\/a3fc4be360f8b5e337de2a958bf0.jpg","name":"Skoda Octavia","fullName":"Skoda Octavia","price":"\u043e\u0442 469 321 \u0433\u0440\u043d"},{"href":"http:\/\/avtosale.ua\/new_tender\/?markId=1826&modelId=32630&utm_source=ukr.net&utm_medium=Renault_Sandero_Stepway&utm_campaign=informers","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/163\/e2\/6f\/86b00ce88431623e3c6a93f71d80.jpg","name":"Renault Sandero Stepway","fullName":"Renault Sandero Stepway","price":"\u043e\u0442 405 577 \u0433\u0440\u043d"}]});
+collectCommercialData('163', {"id":"163","hHref":"http:\/\/avtosale.ua\/?utm_source=ukr.net&utm_medium=Logo&utm_campaign=informers","hImg":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/163\/head.16.jpg","hCnt":"","iCnt":"","items":[{"href":"http:\/\/avtosale.ua\/new_tender\/?markId=1569&modelId=1577&utm_source=ukr.net&utm_medium=KIA_Rio&utm_campaign=informers","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/163\/61\/0a\/cfae9572b4aa46f8280c7098ece1.jpg","name":"KIA Rio","fullName":"KIA Rio","price":"\u043e\u0442 374 400 \u0433\u0440\u043d"},{"href":"http:\/\/avtosale.ua\/new_tender\/?markId=1435&modelId=1461&utm_source=ukr.net&utm_medium=Volkswagen_Touareg&utm_campaign=informers","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/163\/90\/e0\/11ee372947b1598135abeccbff1f.jpg","name":"Volkswagen Touareg","fullName":"Volkswagen Touareg","price":"\u043e\u0442 1 837 954 \u0433\u0440\u043d"},{"href":"http:\/\/avtosale.ua\/new_tender\/?markId=1872&modelId=1889&utm_source=ukr.net&utm_medium=Mazda_3&utm_campaign=informers","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/163\/c1\/aa\/d9ff322160bda92fd7e2747937e5.jpg","name":"Mazda 3","fullName":"Mazda 3","price":"\u043e\u0442 540 000 \u0433\u0440\u043d"},{"href":"http:\/\/avtosale.ua\/new_tender\/?markId=1522&modelId=33152&utm_source=ukr.net&utm_medium=Nissan_Juke&utm_campaign=informers","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/163\/70\/4e\/a1fea6a6b65f3098be7f6f36a34c.jpg","name":"Nissan Juke","fullName":"Nissan Juke","price":"\u043e\u0442 379 990 \u0433\u0440\u043d"},{"href":"http:\/\/avtosale.ua\/new_tender\/?markId=1522&modelId=33043&utm_source=ukr.net&utm_medium=Nissan_Qashqai&utm_campaign=informers","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/163\/fa\/cd\/6d45e9cb6b1d749d9225237b304d.jpg","name":"Nissan Qashqai","fullName":"Nissan Qashqai","price":"\u043e\u0442 491 790 \u0433\u0440\u043d"},{"href":"http:\/\/avtosale.ua\/new_tender\/?markId=1826&modelId=5202&utm_source=ukr.net&utm_medium=Renault_Logan&utm_campaign=informers","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/163\/78\/a5\/d6c73b23d384df1a686bd2a4d3b4.jpg","name":"Renault Logan","fullName":"Renault Logan","price":"\u043e\u0442 357 892 \u0433\u0440\u043d"},{"href":"http:\/\/avtosale.ua\/new_tender\/?markId=431&modelId=33153&utm_source=ukr.net&utm_medium=Suzuki_Vitara&utm_campaign=informers","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/163\/dd\/4b\/d5705f9b656939dd90f59b86d359.jpg","name":"Suzuki Vitara","fullName":"Suzuki Vitara","price":"\u043e\u0442 463 000 \u0433\u0440\u043d"},{"href":"http:\/\/avtosale.ua\/new_tender\/?markId=1872&modelId=1886&utm_source=ukr.net&utm_medium=Mazda_6&utm_campaign=informers","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/163\/81\/63\/5fea719487b96c117ab774504775.jpg","name":"Mazda 6","fullName":"Mazda 6","price":"\u043e\u0442 599 000 \u0433\u0440\u043d"},{"href":"http:\/\/avtosale.ua\/new_tender\/?markId=1723&modelId=1766&utm_source=ukr.net&utm_medium=Ford_Fiesta&utm_campaign=informers","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/163\/96\/86\/b6cc1d0383eabb1e882ef4294887.jpg","name":"Ford Fiesta","fullName":"Ford Fiesta","price":"\u043e\u0442 409 770 \u0433\u0440\u043d"},{"href":"http:\/\/avtosale.ua\/new_tender\/?markId=1723&modelId=2237&utm_source=ukr.net&utm_medium=Ford_Kuga&utm_campaign=informers","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/163\/10\/cf\/2e21fa07d8dfc6d9a4076bc7db49.jpg","name":"Ford Kuga","fullName":"Ford Kuga","price":"\u043e\u0442 657 852 \u0433\u0440\u043d"},{"href":"http:\/\/avtosale.ua\/new_tender\/?markId=1081&modelId=33228&utm_source=ukr.net&utm_medium=Skoda_Kodiaq&utm_campaign=informers","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/163\/2f\/41\/6745911473ac470bbd8a2ee2e1fc.jpg","name":"Skoda Kodiaq","fullName":"Skoda Kodiaq","price":"\u043e\u0442 806 640 \u0433\u0440\u043d"},{"href":"http:\/\/avtosale.ua\/new_tender\/?markId=1872&modelId=32725&utm_source=ukr.net&utm_medium=Mazda_CX-5&utm_campaign=informers","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/163\/7b\/4b\/f1cccdd2a7fb532bcd2e1c4a9114.jpg","name":"Mazda CX-5","fullName":"Mazda CX-5","price":"\u043e\u0442 671 000 \u0433\u0440\u043d"},{"href":"http:\/\/avtosale.ua\/new_tender\/?markId=1569&modelId=1593&utm_source=ukr.net&utm_medium=KIA_Ceed&utm_campaign=informers","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/163\/c3\/49\/03b9c7a23448353e31c1465a184d.jpg","name":"KIA Ceed","fullName":"KIA Ceed","price":"\u043e\u0442 556 110 \u0433\u0440\u043d"},{"href":"http:\/\/avtosale.ua\/new_tender\/?markId=1435&modelId=1438&utm_source=ukr.net&utm_medium=Volkswagen_Golf&utm_campaign=informers","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/163\/9d\/1e\/8febfea2e29b09d3dd5e1ad228b0.jpg","name":"Volkswagen Golf","fullName":"Volkswagen Golf","price":"\u043e\u0442 501 058 \u0433\u0440\u043d"},{"href":"http:\/\/avtosale.ua\/new_tender\/?markId=927&modelId=947&utm_source=ukr.net&utm_medium=Hyundai_Tucson&utm_campaign=informers","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/163\/c9\/b3\/5e9967ff9fc92008887486c73e7d.jpg","name":"Hyundai Tucson","fullName":"Hyundai Tucson","price":"\u043e\u0442 633 600 \u0433\u0440\u043d"},{"href":"http:\/\/avtosale.ua\/new_tender\/?markId=927&modelId=946&utm_source=ukr.net&utm_medium=Hyundai_Elantra&utm_campaign=informers","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/163\/e4\/7f\/7a0311daff0a1370751bfe1a96b5.jpg","name":"Hyundai Elantra","fullName":"Hyundai Elantra","price":"\u043e\u0442 458 200 \u0433\u0440\u043d"},{"href":"http:\/\/avtosale.ua\/new_tender\/?markId=1826&modelId=5203&utm_source=ukr.net&utm_medium=Renault_Logan_MCV&utm_campaign=informers","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/163\/de\/3a\/445a60a60f98f9fede8b221b1083.jpg","name":"Renault Logan MCV","fullName":"Renault Logan MCV","price":"\u043e\u0442 397 280 \u0433\u0440\u043d"},{"href":"http:\/\/avtosale.ua\/new_tender\/?markId=1569&modelId=1570&utm_source=ukr.net&utm_medium=KIA_Sportage&utm_campaign=informers","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/163\/9b\/ff\/41bb7008203c5cedb3771b3d0aee.jpg","name":"KIA Sportage","fullName":"KIA Sportage","price":"\u043e\u0442 624 375 \u0433\u0440\u043d"},{"href":"http:\/\/avtosale.ua\/new_tender\/?markId=431&modelId=4947&utm_source=ukr.net&utm_medium=Suzuki_SX4&utm_campaign=informers","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/163\/14\/65\/46b75aaa233568e997fbb7b96c04.jpg","name":"Suzuki SX4","fullName":"Suzuki SX4","price":"\u043e\u0442 469 000 \u0433\u0440\u043d"},{"href":"http:\/\/avtosale.ua\/new_tender\/?markId=1594&modelId=1618&utm_source=ukr.net&utm_medium=Toyota_Camry&utm_campaign=informers","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/163\/4f\/6d\/4810cce5e314a264c870a06c1458.jpg","name":"Toyota Camry","fullName":"Toyota Camry","price":"\u043e\u0442 822 500 \u0433\u0440\u043d"},{"href":"http:\/\/avtosale.ua\/new_tender\/?markId=1594&modelId=1598&utm_source=ukr.net&utm_medium=Toyota_RAV4&utm_campaign=informers","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/163\/b1\/00\/25df7ec276d167d452cd10c35dbd.jpg","name":"Toyota RAV 4","fullName":"Toyota RAV 4","price":"\u043e\u0442 693 433 \u0433\u0440\u043d"},{"href":"http:\/\/avtosale.ua\/new_tender\/?markId=469&modelId=33107&utm_source=ukr.net&utm_medium=BMW_i3&utm_campaign=informers","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/163\/4f\/a8\/c61a99efc46c7c0ddb7ba169fe9e.jpg","name":"BMW i3 \u043e\u0442 989 835 \u0433\u0440\u043d","fullName":"BMW i3 \u043e\u0442 989 835 \u0433\u0440\u043d","price":"\u043e\u0442 989 835 \u0433\u0440\u043d"},{"href":"http:\/\/avtosale.ua\/new_tender\/?markId=1723&modelId=1764&utm_source=ukr.net&utm_medium=Ford_Mondeo&utm_campaign=informers","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/163\/14\/58\/2b2cf010fe8484ebc88478bcd582.jpg","name":"Ford Mondeo","fullName":"Ford Mondeo","price":"\u043e\u0442 779 746 \u0433\u0440\u043d"},{"href":"http:\/\/avtosale.ua\/new_tender\/?markId=1081&modelId=32970&utm_source=ukr.net&utm_medium=Skoda_Octavia&utm_campaign=informers","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/163\/12\/78\/a3fc4be360f8b5e337de2a958bf0.jpg","name":"Skoda Octavia","fullName":"Skoda Octavia","price":"\u043e\u0442 469 321 \u0433\u0440\u043d"},{"href":"http:\/\/avtosale.ua\/new_tender\/?markId=1826&modelId=32630&utm_source=ukr.net&utm_medium=Renault_Sandero_Stepway&utm_campaign=informers","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/3\/163\/e2\/6f\/86b00ce88431623e3c6a93f71d80.jpg","name":"Renault Sandero Stepway","fullName":"Renault Sandero Stepway","price":"\u043e\u0442 405 577 \u0433\u0440\u043d"}]}, null, '');
+</script></div><script>
+if($('.wrapper').is(':visible'))Columns.check();
+</script><!--/noindex-->                </div>
+<article class="feed" id="feed"></article>
+</div>
+<div class="ajoaggnfrjo">
+<section class="top-bar">
+<nav class="top-bar__nav">
+<span class="act-lang" id="act-lang">Українською</span>
+<div class="dropdown">
+<span>Українською</span>
+<a href="//www.ukr.net/ru/">на Русском</a>
+</div>
+</nav>
+<div class="top-bar__username"></div>
+<div class="top-bar__logout" onclick="User.logout();">Вийти</div>
+</section>
+<div class="brnfranyt">
+<!--noindex-->
+<section class="abnfrds">
+<ul class="right-tabs__nav d-clear">
+<li lc="823" data-tab="sinoptik" class="sinoptik current">Погода</li>
+<li lc="763" data-tab="currency" class="currency">Валюта</li>
+<li lc="224" data-tab="fuel" class="fuel">Пальне</li>
+<li lc="764" data-tab="orakul" class="orakul">Гороскопи</li>
+</ul>
+<div class="tabs-blocks">
+<div class="right-tabs__tab-body sinoptik" id="sinoptik" style="display: block;">
+<noscript><iframe width="300" height="112" scrolling="no" frameborder="0" name="weather widget" src="//pinformer.sinoptik.ua/pinformer4.php?lang=ua" marginheight="0" marginwidth="0" id="sinoptik_container" rel="nofollow"></iframe></noscript>
+</div>
+<script type="text/javascript">
+$('#sinoptik').html('<iframe width="300" height="112" scrolling="no" name="weather widget" frameborder="0" src="//pinformer.sinoptik.ua/pinformer4.php?lang=ua&pcity='+GetCookie('pcity')+'&rnd='+Date.now()+'" marginheight="0" marginwidth="0" id="sinoptik_container" rel="nofollow"></iframe>');
+</script>
+<div class="right-tabs__tab-body right-tabs__currency" id="currency"></div>
+<div class="right-tabs__tab-body" id="fuel" style="display: none;">
+<div class="region-list"><span class="act-region"></span><i></i>
+<div class="list"></div>
+</div>
+<div class="time-update"></div>
+<div class="table d-clear">
+<div class="fuel-banner" style="display: none;">
+<a bc="3723" rel="nofollow" target="_blank" href="http://rezina.cc/?utm_source=ukr.net&amp;utm_medium=cpd&amp;utm_campaign=banner_shiny-diski_brendirovanie-toplivo&amp;utm_content=120-77"><img src="//upst.fwdcdn.com/img/commercial/fuels-banner-ua.png"></a>
+</div>
+<div class="table-titles">
+<div class="name">Пальне</div>
+<div class="average-price">Середня</div>
+<div class="price-pump">Ціна на заправках</div>
+</div>
+<ul class="fuels"></ul>
+<ul class="prices"></ul>
+</div>
+<div class="fuel-bottom-banner"><a rel="nofollow" target="_blank" bc="3723" href="http://rezina.cc/?utm_source=ukr.net&amp;utm_medium=cpd&amp;utm_campaign=banner_shiny-diski_brendirovanie-toplivo&amp;utm_content=120-77"><img src="//upst.fwdcdn.com/img/commercial/fuels-banner-bottom-ua.png"></a></div>
+</div>
+<div class="right-tabs__tab-body" id="orakul" style="display: none;">
+<ul>
+<li class="ram" style="width:69px;">
+<div style="width:69px;">
+<a title="Овен (21.03 - 20.04)" alt="Aries" href="http://orakul.com/horoscope/astrologic/general/aries/today.html" target="_blank" lc="581">Овен</a>
+</div>
+</li>
+<li class="taurus">
+<div style="width:69px;">
+<a title="Телець (21.04 - 21.05)" alt="Taurus" href="http://orakul.com/horoscope/astrologic/general/taurus/today.html" target="_blank" lc="581">Телець</a>
+</div>
+</li>
+<li class="gemini">
+<div>
+<a title="Близнюки (22.05 - 21.06)" alt="Gemini" href="http://orakul.com/horoscope/astrologic/general/gemini/today.html" target="_blank" lc="581">Близнюки</a>
+</div>
+</li>
+<li class="cancer">
+<div>
+<a title="Рак (22.06 - 23.07)" alt="Cancer" href="http://orakul.com/horoscope/astrologic/general/cancer/today.html" target="_blank" lc="581">Рак</a>
+</div>
+</li>
+<li class="lion" style="width:69px;">
+<div>
+<a title="Лев (24.07 - 23.08)" alt="Lion" href="http://orakul.com/horoscope/astrologic/general/lion/today.html" target="_blank" lc="581">Лев</a>
+</div>
+</li>
+<li class="virgin">
+<div>
+<a title="Дiва (24.08 - 23.09)" alt="Virgo" href="http://orakul.com/horoscope/astrologic/general/virgo/today.html" target="_blank" lc="581">Дiва</a>
+</div>
+</li>
+<li class="scales">
+<div style="width:69px;">
+<a title="Терези (24.09 - 23.10)" alt="Libra" href="http://orakul.com/horoscope/astrologic/general/libra/today.html" target="_blank" lc="581">Терези</a>
+</div>
+</li>
+<li class="scorpion">
+<div>
+<a title="Скорпiон (24.10 - 22.11)" alt="Scorpio" href="http://orakul.com/horoscope/astrologic/general/scorpio/today.html" target="_blank" lc="581">Скорпiон</a>
+</div>
+</li>
+<li class="sagittarius" style="width:69px;">
+<div>
+<a title="Стрiлець (23.11 - 21.12)" alt="Sagittarius" href="http://orakul.com/horoscope/astrologic/general/sagittarius/today.html" target="_blank" lc="581">Стрiлець</a>
+</div>
+</li>
+<li class="capricorn">
+<div>
+<a title="Козоріг (22.12 - 20.01)" alt="Capricorn" href="http://orakul.com/horoscope/astrologic/general/capricorn/today.html" target="_blank" lc="581">Козоріг</a>
+</div>
+</li>
+<li class="aquarius">
+<div>
+<a title="Водолій (21.01 - 19.02)" alt="Aquarius" href="http://orakul.com/horoscope/astrologic/general/aquarius/today.html" target="_blank" lc="581">Водолій</a>
+</div>
+</li>
+<li class="fish">
+<div>
+<a title="Риби (20.02 - 20.03)" alt="Pisces" href="http://orakul.com/horoscope/astrologic/general/pisces/today.html" target="_blank" lc="581">Риби</a>
+</div>
+</li>
+</ul>
+<div class="title" style="zoom:1;overflow:hidden;">
+<a href="http://testoteka.ukr.net/" class="tests" target="_blank" lc="581">Тести</a>
+<a href="http://orakul.com/sonnik/" target="_blank" lc="581">Сонник</a>
+<a href="http://orakul.com/imena/" target="_blank" lc="581">Тлумачення імен</a>
+<a href="http://orakul.com/taro/" target="_blank" lc="581">Таро</a>
+</div>
+</div>
+</div>
+</section>
+<!--/noindex--><script type="text/javascript"></script>
+<!--/noindex-->
+<!-- top ad -->
+<div id="div-gpt-ad-1428656525414-0">
+<script>
+googletag.cmd.push(function() {
+googletag.display('div-gpt-ad-1428656525414-0');
+googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+if(event.slot.getAdUnitPath() == '/17774365/ukr.net_300x250'){
+if(event.isEmpty === false) {
+//Block load
+$('#div-gpt-ad-1428656525414-0').css('margin','0 0 10px 0');
+}else {
+// Block empty
+$('#div-gpt-ad-1428656525414-0').css('margin','0');
+}
+}
+});
+});
+</script>
+</div><!-- /17774365/ukr.net_300x145 -->
+<div id='div-gpt-ad-1517581109520-0'>
+<script>
+googletag.cmd.push(function() {
+googletag.display('div-gpt-ad-1517581109520-0');
+googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+if(event.slot.getAdUnitPath() == '/17774365/ukr.net_300x145'){
+if(event.isEmpty === false) {
+//Block load
+$('#div-gpt-ad-1517581109520-0').css('margin','0 0 10px 0');
+}else {
+// Block empty
+$('#div-gpt-ad-1517581109520-0').css('margin','0');
+}
+}
+});
+});
+</script>
+</div></div>
+<!--noindex--><section class="xunynfrxn"><div class="kfrkpnfroflwc" id="88"><h3 class="market-block__section--title">Чорна п'ятниця 2019</h3><div class="left"><div><a rel="nofollow" target="_blank" href="https://www.citrus.ua/actions/black-friday?utm_source=ukrnet&utm_medium=cpc&utm_campaign=191115_links-general-blackfriday-2019" mc="6908,Black Friday -70%">Black Friday -70%</a></div> <div><a rel="nofollow" target="_blank" href="https://kasta.ua/?utm_campaign=191118_link_new_audience_cac_main_text2&utm_medium=cpc&utm_source=ukrnet" mc="6923,Чорная пятниця -90%">Чорна п'ятниця -90%</a></div> <div><a rel="nofollow" target="_blank" href="https://www.citrus.ua/shares/black-friday-playstation?utm_source=ukrnet&utm_medium=cpc&utm_campaign=191122_links-playstation-blackfriday-2019" mc="6913,Play Station -70%">Play Station -70%</a></div> <div><a rel="nofollow" target="_blank" href="https://www.citrus.ua/televizory/tn_chernaya-pyatnitsa/?utm_source=ukrnet&utm_medium=cpc&utm_campaign=191115_links-televizory-blackfriday-2019" mc="6918,Телевизоры -35%">Телевізори -35%</a></div> </div><div class="right"><div><a rel="nofollow" target="_blank" href="https://kasta.ua/?utm_campaign=191118_link_new_audience_cac_main_text1&utm_medium=cpc&utm_source=ukrnet" mc="6883,Черная пятница Kasta">Чорна п'ятниця Kasta</a></div> <div><a rel="nofollow" target="_blank" href="https://kasta.ua/?utm_campaign=191118_link_new_audience_cac_main_text3&utm_medium=cpc&utm_source=ukrnet" mc="6888,-90% на одежду и обувь">-90% на одяг та взуття</a></div> <div><a rel="nofollow" target="_blank" href="https://panama.ua/" mc="6903,Детские товары -60%">Дитячі товари -60%</a></div> <div><a rel="nofollow" target="_blank" href="https://makeup.com.ua/categorys/1244873/" mc="6898,Распродажа косметики">Розпродаж косметики</a></div> </div></div><div class="kfrkpnfroflwc" id="16" x-adriver-id="22"><h3 class="market-block__section--title">Авто</h3><div class="left"><div><a rel="nofollow" target="_blank" href="http://avtosale.ua/avtovykup/?utm_source=ukr.net&utm_medium=ukrnetmarket&utm_campaign=links" mc="3558,Автовыкуп">Автовикуп</a></div> <div><a rel="nofollow" target="_blank" href="https://www.zapchast.com.ua" mc="1327,Поиск запчастей">Пошук запчастин</a></div> <div><a rel="nofollow" target="_blank" href="https://americamotors.com/" mc="6788,Авто из США">Авто з США</a></div> <div><a rel="nofollow" target="_blank" href="https://pokraska.diskservice.com.ua/" mc="6718,Покраска автодисков">Фарбування автодисків</a></div> <div><a rel="nofollow" target="_blank" href="https://shinadiski.com.ua/" mc="6778,Шины для авто и диски">Шини для авто, диски</a></div> <div><a rel="nofollow" target="_blank" href="http://kiaparts.com.ua" mc="6328,Запчасти SsangYong">Запчастини SsangYong</a></div> <div><a rel="nofollow" target="_blank" href="http://kiaparts.com.ua/product/search" mc="5698,Запчасти Hyundai">Запчастини Hyundai</a></div> <div><a rel="nofollow" target="_blank" href="https://kiaparts.com.ua/product/search" mc="6493,Запчасти KIA">Запчастини KIA</a></div> </div><div class="right"><div><a rel="nofollow" target="_blank" href="http://avtosale.ua/" mc="1996,Новые и б/у авто">Нові та б/в авто</a></div> <div><a rel="nofollow" target="_blank" href="http://osaggo.com.ua/?utm_source=ukr.net&utm_medium=link&utm_campaign=market" mc="3748,ОСАГО онлайн">ОСАГО онлайн</a></div> <div><a rel="nofollow" target="_blank" href="https://autoshini.com/?utm_source=ukr.net" mc="2268,Шины и диски">Шини та диски</a></div> <div><a rel="nofollow" target="_blank" href="http://rezina.cc/?utm_source=ukr.net&utm_medium=cpc&utm_campaign=link_shiny-diski_ssylka-na-glavnoy&utm_content=text" mc="3288,Авторезина и диски">Авторезина та диски</a></div> <div><a rel="nofollow" target="_blank" href="http://avtosale.ua/add_car/" mc="3893,Продать авто">Продати авто</a></div> <div><a rel="nofollow" target="_blank" href="http://avtosale.ua/car/?CarAdvertType=0&Perform=1&page=1&markId=431" mc="6478,Suzuki от 460 000 грн">Suzuki від 460 000 грн</a></div> <div><a rel="nofollow" target="_blank" href="http://transshina.com.ua" mc="4683,Автошины и диски">Автошини та диски</a></div> </div></div><div class="kfrkpnfroflwc" id="83"><h3 class="market-block__section--title">Гаджети та електроніка</h3><div class="left"><div><a rel="nofollow" target="_blank" href="http://goldnomer.com/vip?utm_source=ukr.net" mc="3128,Золотые номера 77777">Золоті номери 77777</a></div> </div><div class="right"><div><a rel="nofollow" target="_blank" href="http://www.aks.ua/" mc="784,Аксессуары, запчасти">Аксесуари, запчастини</a></div> </div></div><div class="kfrkpnfroflwc" id="18" x-adriver-id="23"><h3 class="market-block__section--title">Дитячі товари</h3><div class="left"><div><a rel="nofollow" target="_blank" href="https://panama.ua/categorys/76271/" mc="5663,Игрушки">Іграшки</a></div> <div><a rel="nofollow" target="_blank" href="https://panama.ua/categorys/77413/" mc="5673,Детская обувь">Дитяче взуття</a></div> <div><a rel="nofollow" target="_blank" href="https://panama.ua/categorys/76454/" mc="5683,Канцтовары детям">Канцтовари дітям</a></div> </div><div class="right"><div><a rel="nofollow" target="_blank" href="https://panama.ua/categorys/76341/" mc="5668,Детская одежда">Дитячий одяг</a></div> <div><a rel="nofollow" target="_blank" href="https://panama.ua/categorys/76311/" mc="5678,Гигиена малыша">Гігієна малюка</a></div> </div></div><div class="kfrkpnfroflwc" id="31" x-adriver-id="27"><h3 class="market-block__section--title">Дім та інтер'єр</h3><div class="left"><div><a rel="nofollow" target="_blank" href="https://www.lampa.kiev.ua/katalog/lyustry/filter:/221/page1.html?utm_source=ukr.net&utm_medium=referral&utm_campaign=lyustry" mc="974,Люстры, светильники">Люстри, світильники</a></div> <div><a rel="nofollow" target="_blank" href="https://delavega.ua/divani/?utm_source=ukr&utm_medium=baner&utm_campaign=new&utm_term=sofas" mc="2038,Мягкая мебель">М'які меблі</a></div> <div><a rel="nofollow" target="_blank" href="https://diaton.ua/ua/korisna_informacija/broneplivka-dlya-vikon_ss.html" mc="3928,Бронепленка для окон- diaton">Бронеплівка для вікон- diaton</a></div> </div><div class="right"><div><a rel="nofollow" target="_blank" href="https://www.lampa.kiev.ua/katalog/svetilniki_tochechnye/filter:/221/page1.html?utm_source=ukr.net&utm_medium=referral&utm_campaign=tochki" mc="1023,Точечные светильники">Точкові світильники</a></div> <div><a rel="nofollow" target="_blank" href="http://lascala.ua/index.php?utm_source=ukr_netdom&utm_medium=link&utm_campaign=ukr_netdom" mc="470,Постельное белье 1+1=3">Постільна білизна 1+1=3</a></div> <div><a rel="nofollow" target="_blank" href="http://www.m-stelya.com.ua/" mc="6873,Натяжные потолки">Натяжні стелі</a></div> </div></div><div class="kfrkpnfroflwc" id="29" x-adriver-id="25"><h3 class="market-block__section--title">Подарунки</h3><div class="left"><div><a rel="nofollow" target="_blank" href="https://www.u-f-l.net" mc="1835,Доставка цветов UFL">Доставка квітів UFL</a></div> <div><a rel="nofollow" target="_blank" href="https://buketland.com.ua" mc="6293,Доставка цветов">Доставка квітів</a></div> <div><a rel="nofollow" target="_blank" href="http://isex.com.ua/?utm_source=ukr.net&utm_medium=link&utm_campaign=podarki" mc="2278,Интим гипермаркет">Інтим гіпермакет</a></div> </div><div class="right"><div><a rel="nofollow" target="_blank" href="http://flowers.ua" mc="6648,Доставка Flowers">Flowers-доставка квiти</a></div> <div><a rel="nofollow" target="_blank" href="https://www.accordtour.com/avtobusni_tury_plyazh_i_more" mc="4488,Туры, отдых на море">Тури, подорожі, море</a></div> <div><a rel="nofollow" target="_blank" href="http://e-posud.com.ua/category/termosu-i-termokryjki/?filter=122=1084&count=50" mc="5303,Термокружки">Термокружки</a></div> </div></div>        <!-- topSlot4 -->
+<div id="div-gpt-ad-1544528258762-0">
+<script>
+googletag.cmd.push(function() {
+googletag.display('div-gpt-ad-1544528258762-0');
+googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+if(event.slot.getAdUnitPath() == '/17774365/ukr.net_300x250_ad_unit2_bottom'){
+if(event.isEmpty === false) {
+//Block load
+$('#div-gpt-ad-1544528258762-0').css('margin','0 0 10px 0');
+} else {
+// Block empty
+$('#div-gpt-ad-1544528258762-0').css('margin','0');
+}
+}
+});
+});
+</script>
+</div>
+<div class="kfrkpnfroflwc" id="37" x-adriver-id="28"><h3 class="market-block__section--title">Одяг, Косметика</h3><div class="left"><div><a rel="nofollow" target="_blank" href="https://sex-shop.ua/catalog/seksi_beljo" mc="350,Эротическое белье">Еротична білизна</a></div> <div><a rel="nofollow" target="_blank" href="https://makeup.com.ua/" mc="5648,Косметика">Косметика</a></div> </div><div class="right"><div><a rel="nofollow" target="_blank" href="http://isex.com.ua/?utm_source=ukr.net&utm_medium=link&utm_campaign=odejda" mc="2288,Сексуальное белье">Сексуальна білизна</a></div> <div><a rel="nofollow" target="_blank" href="https://med-magazin.ua/?utm_source=ukrnetmainpage&utm_campaign=medmag" mc="6473,Товары для здоровья">Товари для здоров'я</a></div> </div></div><div class="kfrkpnfroflwc" id="30" x-adriver-id="26"><h3 class="market-block__section--title">Спорт і Туризм</h3><div class="left"><div><a rel="nofollow" target="_blank" href="https://www.accordtour.com/where2buy.php" mc="4503,Туры и путевки">Тури та путівки</a></div> </div><div class="right"><div><a rel="nofollow" target="_blank" href="https://www.optics-pro.com.ua/?utm_source=ukrnet&utm_medium=links&utm_campaign=optica" mc="6178,Оптика для охоты">Оптика для полювання</a></div> </div></div></section><!--/noindex-->                <!--noindex-->        
+<div seithplnfrrecnfop="right" imjnnfryjmkptw="ecbr-1628" >        <script>
+ecbrStart('1628', '//trafmag.com/jsarrayposters.php?type=ukrnet&count=10', '');
+collectCommercialData('1628', null, '//trafmag.com/jsarrayposters.php?type=ukrnet&count=10', '', 'wss://trafmag.com:8041/jsarrayposters.php?type=ukrnet&count=3&ref=urlencodedref');
+</script>
+</div>        
+<div seithplnfrrecnfop="right" imjnnfryjmkptw="ecbr-943" ><script>Services.commercial({"id":"943","hHref":"http:\/\/makeup.com.ua\/?utm_source=ukr.net&utm_medium=banner&utm_content=header&utm_campaign=makeup_prime_block12","hImg":"\/\/upst.fwdcdn.com\/temp\/blocks\/1\/943\/head.10.jpg","hCnt":"1472","iCnt":"1473","items":[{"href":"https:\/\/makeup.com.ua\/product\/91251\/?utm_source=ukr.net&utm_medium=banner&utm_campaign=makeup_prime_block12","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/1\/943\/b9\/8a\/c6229d0ae5cd9a559bfa1c000351.jpg","name":"\u041c\u0438\u00ad\u0446\u0435\u043b\u00ad\u043b\u044f\u0440\u00ad\u043d\u0430\u044f \u0432\u043e\u00ad\u0434\u0430 \u0434\u043b\u044f \u0432\u0441\u0435\u0445 \u0442\u0438\u00ad\u043f\u043e\u0432 \u043a\u043e\u00ad\u0436\u0438 - Garnier Skin Naturals","fullName":"\u041c\u0438\u0446\u0435\u043b\u043b\u044f\u0440\u043d\u0430\u044f \u0432\u043e\u0434\u0430 \u0434\u043b\u044f \u0432\u0441\u0435\u0445 \u0442\u0438\u043f\u043e\u0432 \u043a\u043e\u0436\u0438 - Garnier Skin Naturals","price":"35 \u0433\u0440\u043d"},{"href":"https:\/\/makeup.com.ua\/product\/70337\/?utm_source=ukr.net&utm_medium=banner&utm_campaign=makeup_prime_block12","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/1\/943\/e6\/80\/d49b1d4810923baa39c654dfa528.jpg","name":"\u0422\u0443\u0448\u044c \u0441\u043e \u0441\u0446\u0435\u00ad\u043d\u0438\u00ad\u0447\u0435\u00ad\u0441\u043a\u0438\u043c \u044d\u0444\u00ad\u0444\u0435\u043a\u00ad\u0442\u043e\u043c - Vivienne Sabo Cabaret","fullName":"\u0422\u0443\u0448\u044c \u0441\u043e \u0441\u0446\u0435\u043d\u0438\u0447\u0435\u0441\u043a\u0438\u043c \u044d\u0444\u0444\u0435\u043a\u0442\u043e\u043c - Vivienne Sabo Cabaret","price":"111 \u0433\u0440\u043d"},{"href":"https:\/\/makeup.com.ua\/product\/16346\/?utm_source=ukr.net&utm_medium=banner&utm_campaign=makeup_prime_block12","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/1\/943\/67\/8c\/6d40b6ece18e87fb3780b7a034aa.jpg","name":"\u0421\u0442\u043e\u0439\u00ad\u043a\u0430\u044f \u043a\u0440\u0435\u043c-\u043a\u0440\u0430\u0441\u00ad\u043a\u0430 \u0434\u043b\u044f \u0432\u043e\u00ad\u043b\u043e\u0441 - Matrix Socolor Beauty","fullName":"\u0421\u0442\u043e\u0439\u043a\u0430\u044f \u043a\u0440\u0435\u043c-\u043a\u0440\u0430\u0441\u043a\u0430 \u0434\u043b\u044f \u0432\u043e\u043b\u043e\u0441 - Matrix Socolor Beauty","price":"94 \u0433\u0440\u043d"},{"href":"https:\/\/makeup.com.ua\/product\/250055\/?utm_source=ukr.net&utm_medium=banner&utm_campaign=makeup_prime_block12","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/1\/943\/e8\/c9\/76e50dd2dffff37e6cea387b9d60.jpg","name":"\u0413\u0438\u0434\u00ad\u0440\u043e\u00ad\u0433\u0435\u043b\u0435\u00ad\u0432\u044b\u0435 \u043f\u0430\u0442\u00ad\u0447\u0438 \u0434\u043b\u044f \u0433\u043b\u0430\u0437 \u0441 \u0437\u043e\u00ad\u043b\u043e\u00ad\u0442\u043e\u043c \u0438 \u0447\u0435\u0440\u00ad\u043d\u044b\u043c \u0436\u0435\u043c\u00ad\u0447\u0443\u00ad\u0433\u043e\u043c - Petitfee&amp;Koelf...","fullName":"\u0413\u0438\u0434\u0440\u043e\u0433\u0435\u043b\u0435\u0432\u044b\u0435 \u043f\u0430\u0442\u0447\u0438 \u0434\u043b\u044f \u0433\u043b\u0430\u0437 \u0441 \u0437\u043e\u043b\u043e\u0442\u043e\u043c \u0438 \u0447\u0435\u0440\u043d\u044b\u043c \u0436\u0435\u043c\u0447\u0443\u0433\u043e\u043c - Petitfee&amp;Koelf Black Pearl&amp;Gold Hydrogel Eye Patch","price":"231 \u0433\u0440\u043d"},{"href":"https:\/\/makeup.com.ua\/product\/616671\/?utm_source=ukr.net&utm_medium=banner&utm_campaign=makeup_prime_block12","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/1\/943\/bb\/dd\/0e7455aaf171e650bb4974bf07ab.jpg","name":"\u0413\u0443\u0431\u00ad\u043d\u0430\u044f \u043f\u043e\u00ad\u043c\u0430\u00ad\u0434\u0430 \u0443\u0432\u043b\u0430\u0436\u00ad\u043d\u044f\u00ad\u044e\u00ad\u0449\u0430\u044f HB-87 - Ruby Rose Vitamin E &amp; Long Lasting...","fullName":"\u0413\u0443\u0431\u043d\u0430\u044f \u043f\u043e\u043c\u0430\u0434\u0430 \u0443\u0432\u043b\u0430\u0436\u043d\u044f\u044e\u0449\u0430\u044f HB-87 - Ruby Rose Vitamin E &amp; Long Lasting Moisture Lipstik","price":"9 \u0433\u0440\u043d"},{"href":"https:\/\/makeup.com.ua\/product\/194727\/?utm_source=ukr.net&utm_medium=banner&utm_campaign=makeup_prime_block12","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/1\/943\/b8\/79\/85122e9a717b83492af52125246f.jpg","name":"\u0423\u0441\u043f\u043e\u00ad\u043a\u0430\u00ad\u0438\u00ad\u0432\u0430\u00ad\u044e\u00ad\u0449\u0438\u0439 \u0438 \u0443\u0432\u043b\u0430\u0436\u00ad\u043d\u044f\u00ad\u044e\u00ad\u0449\u0438\u0439 \u0433\u0435\u043b\u044c \u0441 \u0430\u043b\u043e\u044d - Holika Holika Aloe 99% Soothing Gel","fullName":"\u0423\u0441\u043f\u043e\u043a\u0430\u0438\u0432\u0430\u044e\u0449\u0438\u0439 \u0438 \u0443\u0432\u043b\u0430\u0436\u043d\u044f\u044e\u0449\u0438\u0439 \u0433\u0435\u043b\u044c \u0441 \u0430\u043b\u043e\u044d - Holika Holika Aloe 99% Soothing Gel","price":"78 \u0433\u0440\u043d"},{"href":"https:\/\/makeup.com.ua\/product\/605209\/?utm_source=ukr.net&utm_medium=banner&utm_campaign=makeup_prime_block12","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/1\/943\/31\/91\/4204f18d9d7b9b887eaafcf98b80.jpg","name":"\u0416\u0438\u0434\u00ad\u043a\u0438\u0435 \u0442\u0435\u00ad\u043d\u0438 \u0434\u043b\u044f \u0432\u0435\u043a - Luxvisage Metal Hype Liquid Eyeshadow","fullName":"\u0416\u0438\u0434\u043a\u0438\u0435 \u0442\u0435\u043d\u0438 \u0434\u043b\u044f \u0432\u0435\u043a - Luxvisage Metal Hype Liquid Eyeshadow","price":"49 \u0433\u0440\u043d"},{"href":"https:\/\/makeup.com.ua\/product\/309899\/?utm_source=ukr.net&utm_medium=banner&utm_campaign=makeup_prime_block12","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/1\/943\/86\/5f\/33d915e3f957c45ca41876c8ca52.jpg","name":"\u0416\u0438\u0434\u00ad\u043a\u0430\u044f \u043c\u0430\u00ad\u0442\u043e\u00ad\u0432\u0430\u044f \u043f\u043e\u00ad\u043c\u0430\u00ad\u0434\u0430 \u0434\u043b\u044f \u0433\u0443\u0431 - Relouis Nude Matte Complimenti","fullName":"\u0416\u0438\u0434\u043a\u0430\u044f \u043c\u0430\u0442\u043e\u0432\u0430\u044f \u043f\u043e\u043c\u0430\u0434\u0430 \u0434\u043b\u044f \u0433\u0443\u0431 - Relouis Nude Matte Complimenti","price":"65 \u0433\u0440\u043d"},{"href":"https:\/\/makeup.com.ua\/product\/317067\/?utm_source=ukr.net&utm_medium=banner&utm_campaign=makeup_prime_block12","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/1\/943\/8c\/c7\/ffecf010ed88fdf6e6652131a0e6.jpg","name":"\u0413\u0435\u043b\u044c-\u0444\u0438\u043a\u00ad\u0441\u0430\u00ad\u0442\u043e\u0440 \u0434\u043b\u044f \u0431\u0440\u043e\u00ad\u0432\u0435\u0439 - Luxvisage Brow Fixing","fullName":"\u0413\u0435\u043b\u044c-\u0444\u0438\u043a\u0441\u0430\u0442\u043e\u0440 \u0434\u043b\u044f \u0431\u0440\u043e\u0432\u0435\u0439 - Luxvisage Brow Fixing","price":"42 \u0433\u0440\u043d"},{"href":"https:\/\/makeup.com.ua\/product\/145825\/?utm_source=ukr.net&utm_medium=banner&utm_campaign=makeup_prime_block12","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/1\/943\/37\/56\/2a548fb87660154c4a14b96e7898.jpg","name":"\u0422\u0443\u0448\u044c \u0441\u043e \u0441\u0446\u0435\u00ad\u043d\u0438\u00ad\u0447\u0435\u00ad\u0441\u043a\u0438\u043c \u044d\u0444\u00ad\u0444\u0435\u043a\u00ad\u0442\u043e\u043c - Vivienne Sabo Cabaret Premiere","fullName":"\u0422\u0443\u0448\u044c \u0441\u043e \u0441\u0446\u0435\u043d\u0438\u0447\u0435\u0441\u043a\u0438\u043c \u044d\u0444\u0444\u0435\u043a\u0442\u043e\u043c - Vivienne Sabo Cabaret Premiere","price":"64 \u0433\u0440\u043d"},{"href":"https:\/\/makeup.com.ua\/product\/10029\/?utm_source=ukr.net&utm_medium=banner&utm_campaign=makeup_prime_block12","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/1\/943\/ed\/ae\/aa6f18361933555a439e716a84f3.jpg","name":"\u041a\u0440\u0430\u0441\u00ad\u043a\u0430 \u0434\u043b\u044f \u0432\u043e\u00ad\u043b\u043e\u0441 - L'Oreal Paris Casting Creme Gloss","fullName":"\u041a\u0440\u0430\u0441\u043a\u0430 \u0434\u043b\u044f \u0432\u043e\u043b\u043e\u0441 - L'Oreal Paris Casting Creme Gloss","price":"95 \u0433\u0440\u043d"},{"href":"https:\/\/makeup.com.ua\/product\/297779\/?utm_source=ukr.net&utm_medium=banner&utm_campaign=makeup_prime_block12","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/1\/943\/b8\/16\/5ec638e5fcae39f1784accfbf00c.jpg","name":"\u0421\u044b\u00ad\u0432\u043e\u00ad\u0440\u043e\u0442\u00ad\u043a\u0430 \u0433\u0438\u00ad\u0430\u00ad\u043b\u0443\u00ad\u0440\u043e\u00ad\u043d\u043e\u00ad\u0432\u0430\u044f 97% - Elizavecca Face Care Hell-Pore Control Hyaluronic...","fullName":"\u0421\u044b\u0432\u043e\u0440\u043e\u0442\u043a\u0430 \u0433\u0438\u0430\u043b\u0443\u0440\u043e\u043d\u043e\u0432\u0430\u044f 97% - Elizavecca Face Care Hell-Pore Control Hyaluronic Acid 97%","price":"210 \u0433\u0440\u043d"},{"href":"https:\/\/makeup.com.ua\/product\/659087\/?utm_source=ukr.net&utm_medium=banner&utm_campaign=makeup_prime_block12","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/1\/943\/ba\/bc\/05eb03e2629fe7c2b1103434698e.jpg","name":"\u0412\u043e\u0434\u00ad\u043d\u044b\u0435 \u043d\u0430\u00ad\u043a\u043b\u0435\u0439\u00ad\u043a\u0438 \u0434\u043b\u044f \u043d\u043e\u0433\u00ad\u0442\u0435\u0439, STZ - Vizavi Professional","fullName":"\u0412\u043e\u0434\u043d\u044b\u0435 \u043d\u0430\u043a\u043b\u0435\u0439\u043a\u0438 \u0434\u043b\u044f \u043d\u043e\u0433\u0442\u0435\u0439, STZ - Vizavi Professional","price":"8 \u0433\u0440\u043d"},{"href":"https:\/\/makeup.com.ua\/product\/159015\/?utm_source=ukr.net&utm_medium=banner&utm_campaign=makeup_prime_block12","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/1\/943\/a2\/a1\/5aee82eb8101dfcc98b2f1c3cc8b.jpg","name":"\u0422\u0443\u0448\u044c \u0434\u043b\u044f \u0440\u0435\u0441\u00ad\u043d\u0438\u0446 - Maybelline Lash Sensational","fullName":"\u0422\u0443\u0448\u044c \u0434\u043b\u044f \u0440\u0435\u0441\u043d\u0438\u0446 - Maybelline Lash Sensational","price":"151 \u0433\u0440\u043d"},{"href":"https:\/\/makeup.com.ua\/product\/331121\/?utm_source=ukr.net&utm_medium=banner&utm_campaign=makeup_prime_block12","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/1\/943\/b7\/e4\/5949a8a926fbe872246859faec2a.jpg","name":"\u041c\u0430\u00ad\u0442\u043e\u00ad\u0432\u0430\u044f \u043f\u043e\u00ad\u043c\u0430\u00ad\u0434\u0430 \u0434\u043b\u044f \u0433\u0443\u0431 - Luxvisage Pin Up Ultra Matt Lipstick","fullName":"\u041c\u0430\u0442\u043e\u0432\u0430\u044f \u043f\u043e\u043c\u0430\u0434\u0430 \u0434\u043b\u044f \u0433\u0443\u0431 - Luxvisage Pin Up Ultra Matt Lipstick","price":"55 \u0433\u0440\u043d"},{"href":"https:\/\/makeup.com.ua\/product\/482473\/?utm_source=ukr.net&utm_medium=banner&utm_campaign=makeup_prime_block12","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/1\/943\/e7\/c6\/710de3e403f8b1c44ca301183bcf.jpg","name":"\u041a\u0430\u00ad\u0440\u0430\u043d\u00ad\u0434\u0430\u0448 \u0434\u043b\u044f \u0433\u0443\u0431 \u0441 \u0442\u043e\u00ad\u0447\u0438\u043b\u00ad\u043a\u043e\u0439 - Ruby Rose Sweet Lips","fullName":"\u041a\u0430\u0440\u0430\u043d\u0434\u0430\u0448 \u0434\u043b\u044f \u0433\u0443\u0431 \u0441 \u0442\u043e\u0447\u0438\u043b\u043a\u043e\u0439 - Ruby Rose Sweet Lips","price":"9 \u0433\u0440\u043d"},{"href":"https:\/\/makeup.com.ua\/product\/403937\/?utm_source=ukr.net&utm_medium=banner&utm_campaign=makeup_prime_block12","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/1\/943\/37\/5d\/9fed4b9ed14ac79a55cc91d93f2b.jpg","name":"\u041c\u0430\u0441\u00ad\u043a\u0430 \u0434\u043b\u044f \u043b\u0438\u00ad\u0446\u0430 \"\u0421 \u0444\u0438\u043b\u044c\u00ad\u0442\u0440\u0430\u00ad\u0442\u043e\u043c \u0443\u043b\u0438\u0442\u00ad\u043a\u0438\" - Via Beauty Placenta-Collagen...","fullName":"\u041c\u0430\u0441\u043a\u0430 \u0434\u043b\u044f \u043b\u0438\u0446\u0430 \"\u0421 \u0444\u0438\u043b\u044c\u0442\u0440\u0430\u0442\u043e\u043c \u0443\u043b\u0438\u0442\u043a\u0438\" - Via Beauty Placenta-Collagen Face Mask","price":"14 \u0433\u0440\u043d"},{"href":"https:\/\/makeup.com.ua\/product\/203445\/?utm_source=ukr.net&utm_medium=banner&utm_campaign=makeup_prime_block12","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/1\/943\/25\/7e\/5905b0d1712020d84735dfa7a62f.jpg","name":"BB \u043a\u0440\u0435\u043c \u0434\u043b\u044f \u043b\u0438\u00ad\u0446\u0430 Photoshop-\u042d\u0444\u00ad\u0444\u0435\u043a\u0442 - Bielita Belita Young BB Cream","fullName":"BB \u043a\u0440\u0435\u043c \u0434\u043b\u044f \u043b\u0438\u0446\u0430 Photoshop-\u042d\u0444\u0444\u0435\u043a\u0442 - Bielita Belita Young BB Cream","price":"44 \u0433\u0440\u043d"},{"href":"https:\/\/makeup.com.ua\/product\/598073\/?utm_source=ukr.net&utm_medium=banner&utm_campaign=makeup_prime_block12","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/1\/943\/e3\/58\/a4563156b1b20ba5dcf72c3f7924.jpg","name":"\u0421\u043a\u0440\u0430\u0431 \u0434\u043b\u044f \u043e\u0447\u0438\u00ad\u0449\u0435\u00ad\u043d\u0438\u044f \u043a\u043e\u00ad\u0436\u0438 \u043b\u0438\u00ad\u0446\u0430 \u0441 \u043f\u0438\u00ad\u0449\u0435\u00ad\u0432\u043e\u0439 \u0441\u043e\u00ad\u0434\u043e\u0439 - Etude House Baking Powder Crunch...","fullName":"\u0421\u043a\u0440\u0430\u0431 \u0434\u043b\u044f \u043e\u0447\u0438\u0449\u0435\u043d\u0438\u044f \u043a\u043e\u0436\u0438 \u043b\u0438\u0446\u0430 \u0441 \u043f\u0438\u0449\u0435\u0432\u043e\u0439 \u0441\u043e\u0434\u043e\u0439 - Etude House Baking Powder Crunch Pore Scrub","price":"16 \u0433\u0440\u043d"},{"href":"https:\/\/makeup.com.ua\/product\/12855\/?utm_source=ukr.net&utm_medium=banner&utm_campaign=makeup_prime_block12","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/1\/943\/7d\/2d\/b81954c91a35c6b8cbcaea0009d2.jpg","name":"\u041a\u0440\u0435\u043c-\u043a\u0440\u0430\u0441\u00ad\u043a\u0430 \u0431\u0435\u0437 \u0430\u043c\u00ad\u043c\u0438\u00ad\u0430\u00ad\u043a\u0430 - Matrix Color Sync","fullName":"\u041a\u0440\u0435\u043c-\u043a\u0440\u0430\u0441\u043a\u0430 \u0431\u0435\u0437 \u0430\u043c\u043c\u0438\u0430\u043a\u0430 - Matrix Color Sync","price":"101 \u0433\u0440\u043d"}]})
+collectCommercialData('943', {"id":"943","hHref":"http:\/\/makeup.com.ua\/?utm_source=ukr.net&utm_medium=banner&utm_content=header&utm_campaign=makeup_prime_block12","hImg":"\/\/upst.fwdcdn.com\/temp\/blocks\/1\/943\/head.10.jpg","hCnt":"1472","iCnt":"1473","items":[{"href":"https:\/\/makeup.com.ua\/product\/91251\/?utm_source=ukr.net&utm_medium=banner&utm_campaign=makeup_prime_block12","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/1\/943\/b9\/8a\/c6229d0ae5cd9a559bfa1c000351.jpg","name":"\u041c\u0438\u00ad\u0446\u0435\u043b\u00ad\u043b\u044f\u0440\u00ad\u043d\u0430\u044f \u0432\u043e\u00ad\u0434\u0430 \u0434\u043b\u044f \u0432\u0441\u0435\u0445 \u0442\u0438\u00ad\u043f\u043e\u0432 \u043a\u043e\u00ad\u0436\u0438 - Garnier Skin Naturals","fullName":"\u041c\u0438\u0446\u0435\u043b\u043b\u044f\u0440\u043d\u0430\u044f \u0432\u043e\u0434\u0430 \u0434\u043b\u044f \u0432\u0441\u0435\u0445 \u0442\u0438\u043f\u043e\u0432 \u043a\u043e\u0436\u0438 - Garnier Skin Naturals","price":"35 \u0433\u0440\u043d"},{"href":"https:\/\/makeup.com.ua\/product\/70337\/?utm_source=ukr.net&utm_medium=banner&utm_campaign=makeup_prime_block12","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/1\/943\/e6\/80\/d49b1d4810923baa39c654dfa528.jpg","name":"\u0422\u0443\u0448\u044c \u0441\u043e \u0441\u0446\u0435\u00ad\u043d\u0438\u00ad\u0447\u0435\u00ad\u0441\u043a\u0438\u043c \u044d\u0444\u00ad\u0444\u0435\u043a\u00ad\u0442\u043e\u043c - Vivienne Sabo Cabaret","fullName":"\u0422\u0443\u0448\u044c \u0441\u043e \u0441\u0446\u0435\u043d\u0438\u0447\u0435\u0441\u043a\u0438\u043c \u044d\u0444\u0444\u0435\u043a\u0442\u043e\u043c - Vivienne Sabo Cabaret","price":"111 \u0433\u0440\u043d"},{"href":"https:\/\/makeup.com.ua\/product\/16346\/?utm_source=ukr.net&utm_medium=banner&utm_campaign=makeup_prime_block12","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/1\/943\/67\/8c\/6d40b6ece18e87fb3780b7a034aa.jpg","name":"\u0421\u0442\u043e\u0439\u00ad\u043a\u0430\u044f \u043a\u0440\u0435\u043c-\u043a\u0440\u0430\u0441\u00ad\u043a\u0430 \u0434\u043b\u044f \u0432\u043e\u00ad\u043b\u043e\u0441 - Matrix Socolor Beauty","fullName":"\u0421\u0442\u043e\u0439\u043a\u0430\u044f \u043a\u0440\u0435\u043c-\u043a\u0440\u0430\u0441\u043a\u0430 \u0434\u043b\u044f \u0432\u043e\u043b\u043e\u0441 - Matrix Socolor Beauty","price":"94 \u0433\u0440\u043d"},{"href":"https:\/\/makeup.com.ua\/product\/250055\/?utm_source=ukr.net&utm_medium=banner&utm_campaign=makeup_prime_block12","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/1\/943\/e8\/c9\/76e50dd2dffff37e6cea387b9d60.jpg","name":"\u0413\u0438\u0434\u00ad\u0440\u043e\u00ad\u0433\u0435\u043b\u0435\u00ad\u0432\u044b\u0435 \u043f\u0430\u0442\u00ad\u0447\u0438 \u0434\u043b\u044f \u0433\u043b\u0430\u0437 \u0441 \u0437\u043e\u00ad\u043b\u043e\u00ad\u0442\u043e\u043c \u0438 \u0447\u0435\u0440\u00ad\u043d\u044b\u043c \u0436\u0435\u043c\u00ad\u0447\u0443\u00ad\u0433\u043e\u043c - Petitfee&amp;Koelf...","fullName":"\u0413\u0438\u0434\u0440\u043e\u0433\u0435\u043b\u0435\u0432\u044b\u0435 \u043f\u0430\u0442\u0447\u0438 \u0434\u043b\u044f \u0433\u043b\u0430\u0437 \u0441 \u0437\u043e\u043b\u043e\u0442\u043e\u043c \u0438 \u0447\u0435\u0440\u043d\u044b\u043c \u0436\u0435\u043c\u0447\u0443\u0433\u043e\u043c - Petitfee&amp;Koelf Black Pearl&amp;Gold Hydrogel Eye Patch","price":"231 \u0433\u0440\u043d"},{"href":"https:\/\/makeup.com.ua\/product\/616671\/?utm_source=ukr.net&utm_medium=banner&utm_campaign=makeup_prime_block12","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/1\/943\/bb\/dd\/0e7455aaf171e650bb4974bf07ab.jpg","name":"\u0413\u0443\u0431\u00ad\u043d\u0430\u044f \u043f\u043e\u00ad\u043c\u0430\u00ad\u0434\u0430 \u0443\u0432\u043b\u0430\u0436\u00ad\u043d\u044f\u00ad\u044e\u00ad\u0449\u0430\u044f HB-87 - Ruby Rose Vitamin E &amp; Long Lasting...","fullName":"\u0413\u0443\u0431\u043d\u0430\u044f \u043f\u043e\u043c\u0430\u0434\u0430 \u0443\u0432\u043b\u0430\u0436\u043d\u044f\u044e\u0449\u0430\u044f HB-87 - Ruby Rose Vitamin E &amp; Long Lasting Moisture Lipstik","price":"9 \u0433\u0440\u043d"},{"href":"https:\/\/makeup.com.ua\/product\/194727\/?utm_source=ukr.net&utm_medium=banner&utm_campaign=makeup_prime_block12","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/1\/943\/b8\/79\/85122e9a717b83492af52125246f.jpg","name":"\u0423\u0441\u043f\u043e\u00ad\u043a\u0430\u00ad\u0438\u00ad\u0432\u0430\u00ad\u044e\u00ad\u0449\u0438\u0439 \u0438 \u0443\u0432\u043b\u0430\u0436\u00ad\u043d\u044f\u00ad\u044e\u00ad\u0449\u0438\u0439 \u0433\u0435\u043b\u044c \u0441 \u0430\u043b\u043e\u044d - Holika Holika Aloe 99% Soothing Gel","fullName":"\u0423\u0441\u043f\u043e\u043a\u0430\u0438\u0432\u0430\u044e\u0449\u0438\u0439 \u0438 \u0443\u0432\u043b\u0430\u0436\u043d\u044f\u044e\u0449\u0438\u0439 \u0433\u0435\u043b\u044c \u0441 \u0430\u043b\u043e\u044d - Holika Holika Aloe 99% Soothing Gel","price":"78 \u0433\u0440\u043d"},{"href":"https:\/\/makeup.com.ua\/product\/605209\/?utm_source=ukr.net&utm_medium=banner&utm_campaign=makeup_prime_block12","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/1\/943\/31\/91\/4204f18d9d7b9b887eaafcf98b80.jpg","name":"\u0416\u0438\u0434\u00ad\u043a\u0438\u0435 \u0442\u0435\u00ad\u043d\u0438 \u0434\u043b\u044f \u0432\u0435\u043a - Luxvisage Metal Hype Liquid Eyeshadow","fullName":"\u0416\u0438\u0434\u043a\u0438\u0435 \u0442\u0435\u043d\u0438 \u0434\u043b\u044f \u0432\u0435\u043a - Luxvisage Metal Hype Liquid Eyeshadow","price":"49 \u0433\u0440\u043d"},{"href":"https:\/\/makeup.com.ua\/product\/309899\/?utm_source=ukr.net&utm_medium=banner&utm_campaign=makeup_prime_block12","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/1\/943\/86\/5f\/33d915e3f957c45ca41876c8ca52.jpg","name":"\u0416\u0438\u0434\u00ad\u043a\u0430\u044f \u043c\u0430\u00ad\u0442\u043e\u00ad\u0432\u0430\u044f \u043f\u043e\u00ad\u043c\u0430\u00ad\u0434\u0430 \u0434\u043b\u044f \u0433\u0443\u0431 - Relouis Nude Matte Complimenti","fullName":"\u0416\u0438\u0434\u043a\u0430\u044f \u043c\u0430\u0442\u043e\u0432\u0430\u044f \u043f\u043e\u043c\u0430\u0434\u0430 \u0434\u043b\u044f \u0433\u0443\u0431 - Relouis Nude Matte Complimenti","price":"65 \u0433\u0440\u043d"},{"href":"https:\/\/makeup.com.ua\/product\/317067\/?utm_source=ukr.net&utm_medium=banner&utm_campaign=makeup_prime_block12","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/1\/943\/8c\/c7\/ffecf010ed88fdf6e6652131a0e6.jpg","name":"\u0413\u0435\u043b\u044c-\u0444\u0438\u043a\u00ad\u0441\u0430\u00ad\u0442\u043e\u0440 \u0434\u043b\u044f \u0431\u0440\u043e\u00ad\u0432\u0435\u0439 - Luxvisage Brow Fixing","fullName":"\u0413\u0435\u043b\u044c-\u0444\u0438\u043a\u0441\u0430\u0442\u043e\u0440 \u0434\u043b\u044f \u0431\u0440\u043e\u0432\u0435\u0439 - Luxvisage Brow Fixing","price":"42 \u0433\u0440\u043d"},{"href":"https:\/\/makeup.com.ua\/product\/145825\/?utm_source=ukr.net&utm_medium=banner&utm_campaign=makeup_prime_block12","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/1\/943\/37\/56\/2a548fb87660154c4a14b96e7898.jpg","name":"\u0422\u0443\u0448\u044c \u0441\u043e \u0441\u0446\u0435\u00ad\u043d\u0438\u00ad\u0447\u0435\u00ad\u0441\u043a\u0438\u043c \u044d\u0444\u00ad\u0444\u0435\u043a\u00ad\u0442\u043e\u043c - Vivienne Sabo Cabaret Premiere","fullName":"\u0422\u0443\u0448\u044c \u0441\u043e \u0441\u0446\u0435\u043d\u0438\u0447\u0435\u0441\u043a\u0438\u043c \u044d\u0444\u0444\u0435\u043a\u0442\u043e\u043c - Vivienne Sabo Cabaret Premiere","price":"64 \u0433\u0440\u043d"},{"href":"https:\/\/makeup.com.ua\/product\/10029\/?utm_source=ukr.net&utm_medium=banner&utm_campaign=makeup_prime_block12","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/1\/943\/ed\/ae\/aa6f18361933555a439e716a84f3.jpg","name":"\u041a\u0440\u0430\u0441\u00ad\u043a\u0430 \u0434\u043b\u044f \u0432\u043e\u00ad\u043b\u043e\u0441 - L'Oreal Paris Casting Creme Gloss","fullName":"\u041a\u0440\u0430\u0441\u043a\u0430 \u0434\u043b\u044f \u0432\u043e\u043b\u043e\u0441 - L'Oreal Paris Casting Creme Gloss","price":"95 \u0433\u0440\u043d"},{"href":"https:\/\/makeup.com.ua\/product\/297779\/?utm_source=ukr.net&utm_medium=banner&utm_campaign=makeup_prime_block12","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/1\/943\/b8\/16\/5ec638e5fcae39f1784accfbf00c.jpg","name":"\u0421\u044b\u00ad\u0432\u043e\u00ad\u0440\u043e\u0442\u00ad\u043a\u0430 \u0433\u0438\u00ad\u0430\u00ad\u043b\u0443\u00ad\u0440\u043e\u00ad\u043d\u043e\u00ad\u0432\u0430\u044f 97% - Elizavecca Face Care Hell-Pore Control Hyaluronic...","fullName":"\u0421\u044b\u0432\u043e\u0440\u043e\u0442\u043a\u0430 \u0433\u0438\u0430\u043b\u0443\u0440\u043e\u043d\u043e\u0432\u0430\u044f 97% - Elizavecca Face Care Hell-Pore Control Hyaluronic Acid 97%","price":"210 \u0433\u0440\u043d"},{"href":"https:\/\/makeup.com.ua\/product\/659087\/?utm_source=ukr.net&utm_medium=banner&utm_campaign=makeup_prime_block12","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/1\/943\/ba\/bc\/05eb03e2629fe7c2b1103434698e.jpg","name":"\u0412\u043e\u0434\u00ad\u043d\u044b\u0435 \u043d\u0430\u00ad\u043a\u043b\u0435\u0439\u00ad\u043a\u0438 \u0434\u043b\u044f \u043d\u043e\u0433\u00ad\u0442\u0435\u0439, STZ - Vizavi Professional","fullName":"\u0412\u043e\u0434\u043d\u044b\u0435 \u043d\u0430\u043a\u043b\u0435\u0439\u043a\u0438 \u0434\u043b\u044f \u043d\u043e\u0433\u0442\u0435\u0439, STZ - Vizavi Professional","price":"8 \u0433\u0440\u043d"},{"href":"https:\/\/makeup.com.ua\/product\/159015\/?utm_source=ukr.net&utm_medium=banner&utm_campaign=makeup_prime_block12","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/1\/943\/a2\/a1\/5aee82eb8101dfcc98b2f1c3cc8b.jpg","name":"\u0422\u0443\u0448\u044c \u0434\u043b\u044f \u0440\u0435\u0441\u00ad\u043d\u0438\u0446 - Maybelline Lash Sensational","fullName":"\u0422\u0443\u0448\u044c \u0434\u043b\u044f \u0440\u0435\u0441\u043d\u0438\u0446 - Maybelline Lash Sensational","price":"151 \u0433\u0440\u043d"},{"href":"https:\/\/makeup.com.ua\/product\/331121\/?utm_source=ukr.net&utm_medium=banner&utm_campaign=makeup_prime_block12","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/1\/943\/b7\/e4\/5949a8a926fbe872246859faec2a.jpg","name":"\u041c\u0430\u00ad\u0442\u043e\u00ad\u0432\u0430\u044f \u043f\u043e\u00ad\u043c\u0430\u00ad\u0434\u0430 \u0434\u043b\u044f \u0433\u0443\u0431 - Luxvisage Pin Up Ultra Matt Lipstick","fullName":"\u041c\u0430\u0442\u043e\u0432\u0430\u044f \u043f\u043e\u043c\u0430\u0434\u0430 \u0434\u043b\u044f \u0433\u0443\u0431 - Luxvisage Pin Up Ultra Matt Lipstick","price":"55 \u0433\u0440\u043d"},{"href":"https:\/\/makeup.com.ua\/product\/482473\/?utm_source=ukr.net&utm_medium=banner&utm_campaign=makeup_prime_block12","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/1\/943\/e7\/c6\/710de3e403f8b1c44ca301183bcf.jpg","name":"\u041a\u0430\u00ad\u0440\u0430\u043d\u00ad\u0434\u0430\u0448 \u0434\u043b\u044f \u0433\u0443\u0431 \u0441 \u0442\u043e\u00ad\u0447\u0438\u043b\u00ad\u043a\u043e\u0439 - Ruby Rose Sweet Lips","fullName":"\u041a\u0430\u0440\u0430\u043d\u0434\u0430\u0448 \u0434\u043b\u044f \u0433\u0443\u0431 \u0441 \u0442\u043e\u0447\u0438\u043b\u043a\u043e\u0439 - Ruby Rose Sweet Lips","price":"9 \u0433\u0440\u043d"},{"href":"https:\/\/makeup.com.ua\/product\/403937\/?utm_source=ukr.net&utm_medium=banner&utm_campaign=makeup_prime_block12","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/1\/943\/37\/5d\/9fed4b9ed14ac79a55cc91d93f2b.jpg","name":"\u041c\u0430\u0441\u00ad\u043a\u0430 \u0434\u043b\u044f \u043b\u0438\u00ad\u0446\u0430 \"\u0421 \u0444\u0438\u043b\u044c\u00ad\u0442\u0440\u0430\u00ad\u0442\u043e\u043c \u0443\u043b\u0438\u0442\u00ad\u043a\u0438\" - Via Beauty Placenta-Collagen...","fullName":"\u041c\u0430\u0441\u043a\u0430 \u0434\u043b\u044f \u043b\u0438\u0446\u0430 \"\u0421 \u0444\u0438\u043b\u044c\u0442\u0440\u0430\u0442\u043e\u043c \u0443\u043b\u0438\u0442\u043a\u0438\" - Via Beauty Placenta-Collagen Face Mask","price":"14 \u0433\u0440\u043d"},{"href":"https:\/\/makeup.com.ua\/product\/203445\/?utm_source=ukr.net&utm_medium=banner&utm_campaign=makeup_prime_block12","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/1\/943\/25\/7e\/5905b0d1712020d84735dfa7a62f.jpg","name":"BB \u043a\u0440\u0435\u043c \u0434\u043b\u044f \u043b\u0438\u00ad\u0446\u0430 Photoshop-\u042d\u0444\u00ad\u0444\u0435\u043a\u0442 - Bielita Belita Young BB Cream","fullName":"BB \u043a\u0440\u0435\u043c \u0434\u043b\u044f \u043b\u0438\u0446\u0430 Photoshop-\u042d\u0444\u0444\u0435\u043a\u0442 - Bielita Belita Young BB Cream","price":"44 \u0433\u0440\u043d"},{"href":"https:\/\/makeup.com.ua\/product\/598073\/?utm_source=ukr.net&utm_medium=banner&utm_campaign=makeup_prime_block12","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/1\/943\/e3\/58\/a4563156b1b20ba5dcf72c3f7924.jpg","name":"\u0421\u043a\u0440\u0430\u0431 \u0434\u043b\u044f \u043e\u0447\u0438\u00ad\u0449\u0435\u00ad\u043d\u0438\u044f \u043a\u043e\u00ad\u0436\u0438 \u043b\u0438\u00ad\u0446\u0430 \u0441 \u043f\u0438\u00ad\u0449\u0435\u00ad\u0432\u043e\u0439 \u0441\u043e\u00ad\u0434\u043e\u0439 - Etude House Baking Powder Crunch...","fullName":"\u0421\u043a\u0440\u0430\u0431 \u0434\u043b\u044f \u043e\u0447\u0438\u0449\u0435\u043d\u0438\u044f \u043a\u043e\u0436\u0438 \u043b\u0438\u0446\u0430 \u0441 \u043f\u0438\u0449\u0435\u0432\u043e\u0439 \u0441\u043e\u0434\u043e\u0439 - Etude House Baking Powder Crunch Pore Scrub","price":"16 \u0433\u0440\u043d"},{"href":"https:\/\/makeup.com.ua\/product\/12855\/?utm_source=ukr.net&utm_medium=banner&utm_campaign=makeup_prime_block12","img":"\/\/upst.fwdcdn.com\/temp\/blocks\/1\/943\/7d\/2d\/b81954c91a35c6b8cbcaea0009d2.jpg","name":"\u041a\u0440\u0435\u043c-\u043a\u0440\u0430\u0441\u00ad\u043a\u0430 \u0431\u0435\u0437 \u0430\u043c\u00ad\u043c\u0438\u00ad\u0430\u00ad\u043a\u0430 - Matrix Color Sync","fullName":"\u041a\u0440\u0435\u043c-\u043a\u0440\u0430\u0441\u043a\u0430 \u0431\u0435\u0437 \u0430\u043c\u043c\u0438\u0430\u043a\u0430 - Matrix Color Sync","price":"101 \u0433\u0440\u043d"}]}, null, '');
+</script> </div>        
+<div seithplnfrrecnfop="right" imjnnfryjmkptw="ecbr-4133" >    <script>
+$('['+ant.c41+'="ecbr-4133"]').addClass('mjhcnfrqvlfigv');
+</script>
+<section class="cunfradtkuu">
+<a style="display: block!important;" _xc_="1"  bc="6568" href="http://lzp.li/CDMA" target="_blank" rel="nofollow"><img style="display: block!important;visibility:visible!important;" width="300" height="145" class="lazy" src="//upst.fwdcdn.com/img/grey-pix.gif" data-src="//upst.fwdcdn.com/temp/blocks/2/4133/head.1.gif" alt=""/><noscript><img src="//upst.fwdcdn.com/temp/blocks/2/4133/head.1.gif"  alt=""/></noscript></a></section>
+<script>
+collectCommercialData('4133', null, null, null);
+</script>
+</div>        
+<div seithplnfrrecnfop="right" imjnnfryjmkptw="ecbr-4123" >    <script>
+$('['+ant.c41+'="ecbr-4123"]').addClass('mjhcnfrqvlfigv');
+</script>
+<section class="cunfradtkuu">
+<a style="display: block!important;" _xc_="1"  bc="8728" href="https://sneakerstudio.com.ua/rus_m_%D0%91%D1%80%D0%B5%D0%BD%D0%B4%D1%8B-747.html" target="_blank" rel="nofollow"><img style="display: block!important;visibility:visible!important;" width="300" height="145" class="lazy" src="//upst.fwdcdn.com/img/grey-pix.gif" data-src="//upst.fwdcdn.com/temp/blocks/2/4123/head.1.gif" alt=""/><noscript><img src="//upst.fwdcdn.com/temp/blocks/2/4123/head.1.gif"  alt=""/></noscript></a></section>
+<script>
+collectCommercialData('4123', null, null, null);
+</script>
+</div>        
+<div seithplnfrrecnfop="right" imjnnfryjmkptw="ecbr-4088" >    <script>
+$('['+ant.c41+'="ecbr-4088"]').addClass('mjhcnfrqvlfigv');
+</script>
+<section class="cunfradtkuu">
+<a style="display: block!important;" _xc_="1"  bc="8788" href="https://www.aviasales.ua/?utm_source=search&utm_medium=cpa&utm_campaign=ukr-net&utm_content=aviasales-ua&utm_nooverride=1" target="_blank" rel="nofollow"><img style="display: block!important;visibility:visible!important;" width="300" height="145" class="lazy" src="//upst.fwdcdn.com/img/grey-pix.gif" data-src="//upst.fwdcdn.com/temp/blocks/2/4088/head.2.jpg" alt=""/><noscript><img src="//upst.fwdcdn.com/temp/blocks/2/4088/head.2.jpg"  alt=""/></noscript></a></section>
+<script>
+collectCommercialData('4088', null, null, null);
+</script>
+</div>        
+<div seithplnfrrecnfop="right" imjnnfryjmkptw="ecbr-4128" >    <script>
+$('['+ant.c41+'="ecbr-4128"]').addClass('mjhcnfrqvlfigv');
+</script>
+<section class="cunfradtkuu">
+<a style="display: block!important;" _xc_="1"  bc="8818" href="http://bagatolososia.kiev.ua/?utm_source=ukrnet&utm_medium=banner&utm_campaign=ukrnet_poke_ban" target="_blank" rel="nofollow"><img style="display: block!important;visibility:visible!important;" width="300" height="145" class="lazy" src="//upst.fwdcdn.com/img/grey-pix.gif" data-src="//upst.fwdcdn.com/temp/blocks/2/4128/head.1.jpg" alt=""/><noscript><img src="//upst.fwdcdn.com/temp/blocks/2/4128/head.1.jpg"  alt=""/></noscript></a></section>
+<script>
+collectCommercialData('4128', null, null, null);
+</script>
+</div>        
+<div seithplnfrrecnfop="right" imjnnfryjmkptw="ecbr-1648" >        <script>
+ecbrStart('1648', '//servicer.mgid.com/359022/1', '');
+collectCommercialData('1648', null, '//servicer.mgid.com/359022/1', '', '');
+</script>
+</div>        
+<div seithplnfrrecnfop="right" imjnnfryjmkptw="ecbr-1926"  data-as="1">            <script>
+$('['+ant.c41+'="ecbr-1926"]').addClass('temp');
+</script>
+<div id="div-gpt-ad-1544528657150-0">
+<script>
+googletag.cmd.push(function() {
+googletag.display('div-gpt-ad-1544528657150-0');
+googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+if(event.slot.getAdUnitPath() == '/17774365/ukr.net_300x250_ad_unit3_bottom'){
+if(event.isEmpty === false) {
+//Block load
+$('#div-gpt-ad-1544528657150-0').css('margin','0 0 10px 0');
+}else {
+// Block empty
+$('#div-gpt-ad-1544528657150-0').css('margin','0');
+}
+}
+});
+});
+</script>
+</div></div><script>
+if($('.wrapper').is(':visible'))Columns.check();
+</script><!--/noindex-->            </div><footer>
+<span style="color:#22579e;">UKR.NET</span>&nbsp;&nbsp;>&nbsp;&nbsp;<span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="//www.ukr.net/ua/#main" itemprop="url"><span itemprop="title">Новини</span></a></span><span>&nbsp;&nbsp;•&nbsp;&nbsp;</span><a href="//www.ukr.net/contacts/">Підтримка користувачів</a><span>&nbsp;&nbsp;&bull;&nbsp;&nbsp;</span><!--<span>&nbsp;&nbsp;&bull;&nbsp;&nbsp;</span--><a href="//www.ukr.net/terms/">Конфіденційність</a><span>&nbsp;&nbsp;&bull;&nbsp;&nbsp;</span><a href="//www.ukr.net/news/terms.html">Про стрічку новин</a><span>&nbsp;&nbsp;&bull;&nbsp;&nbsp;</span><a href="//www.ukr.net/add_to_feed/">Підключення до стрічки новин</a><span>&nbsp;&nbsp;&bull;&nbsp;&nbsp;</span><!--noindex--><a rel="nofollow" href="http://adline.kiev.ua/" target="_blank">Реклама на порталі</a><!--/noindex-->
+</footer>
+</main>
+</div><!-- BRANDING -->
+<script type="text/javascript">
+var bgURL1280, bgURL1366, bgURL1600, back_color_1280, back_color_1366, back_color_1600, brand_exist = false, brand_href = '', crash=1;
+function brandsActivion(){
+brand_href = document.getElementById('google_ads_iframe_/17774365/ukr.net_brend_resize_0__container__').querySelector('iframe').contentWindow.brand_href;
+if (brand_href) {
+bgURL1280 = document.getElementById('google_ads_iframe_/17774365/ukr.net_brend_resize_0__container__').querySelector('iframe').contentWindow.bgURL1280;
+bgURL1366 = document.getElementById('google_ads_iframe_/17774365/ukr.net_brend_resize_0__container__').querySelector('iframe').contentWindow.bgURL1366;
+bgURL1600 = document.getElementById('google_ads_iframe_/17774365/ukr.net_brend_resize_0__container__').querySelector('iframe').contentWindow.bgURL1600;
+back_color_1280 = document.getElementById('google_ads_iframe_/17774365/ukr.net_brend_resize_0__container__').querySelector('iframe').contentWindow.back_color_1280;
+back_color_1366 = document.getElementById('google_ads_iframe_/17774365/ukr.net_brend_resize_0__container__').querySelector('iframe').contentWindow.back_color_1366;
+back_color_1600 = document.getElementById('google_ads_iframe_/17774365/ukr.net_brend_resize_0__container__').querySelector('iframe').contentWindow.back_color_1600;
+if(brandsActiv && (screen.width >= 1280)){var param = brandsParameters(bgURL1280, bgURL1366, bgURL1600, back_color_1280, back_color_1366, back_color_1600);
+$('body').append('<div id="brands"></div>');
+var brands = $('#brands');
+brands.css({'display':'block', 'height':'2000px','background':'url(' + param[0] + ') no-repeat center top'});
+$('body').css('background',param[1]);
+$('.main').css('z-index','10');var link_DFP = document.createElement('a');
+link_DFP.setAttribute('href', brand_href);
+link_DFP.setAttribute('id', 'takeover_Skin');
+link_DFP.setAttribute('target', '_blank');
+link_DFP.setAttribute('style', 'position: fixed; top:0px; left:0px; bottom:0px; height:100%; width: 100%; z-index:1;')
+document.body.appendChild(link_DFP);window.onresize = function(){
+if (!brandsActiv) return;
+param = brandsParameters(bgURL1280, bgURL1366, bgURL1600, back_color_1280, back_color_1366, back_color_1600);
+brands.css('background' , 'url(' + param[0] + ') no-repeat center top');
+$('body').css('background',param[1]);
+}
+};} else {
+setTimeout(function(){
+if (crash > 50) return;
+crash++;
+brandsActivion();
+}, 100);
+}
+}
+function brandsParameters(bgURL1280, bgURL1366, bgURL1600, back_color_1280, back_color_1366, back_color_1600){
+var ww = window.innerWidth;
+var result = [];
+if(ww < 1366){
+result = [bgURL1280, back_color_1280];
+}else if(ww >= 1366 && ww < 1600){
+result = [(bgURL1366 ? bgURL1366 : bgURL1280), back_color_1366];
+}else if(ww >= 1600){
+result = [bgURL1600 ? bgURL1600 : (bgURL1366 ? bgURL1366 : bgURL1280), back_color_1600];
+}
+return result;
+}function setbrandsActivion () {
+brandsActiv = true;
+if (!brand_exist) {
+brand_exist = true;
+setTimeout(brandsActivion, 750);
+}
+};
+</script>
+<!-- END BRANDING --><div id="panel_modal_bg" class="panel_modal_bg" style="display:none;"></div>
+<div id="panel_windowsModal">
+<!--noindex-->
+<style type="text/css">.g-off, .off {display:none;}</style>
+<div class="panel_modal panel_modal-special off" id="panel_modal-block">
+<div class="wrap-tl">
+<div class="wrap-tr">
+<div id="panel_modal_t-login_box" class="off title">
+<a rel="nofollow" class="close" title="" href="#" onclick="panel_CloseModal('login_box'); return false;">&nbsp;</a>
+Вход для пользователей
+</div>
+</div>
+</div>
+<div class="wrap">
+<div id="panel_modal-login_box" class="wrap-h off">
+<div class="wrap_cc">
+<form action="https://mail.ukr.net/q/splash" method="post" onsubmit="return login('panel_modal-loginForm');" id="panel_modal-loginForm">
+<input type="hidden" value="#BACK_URL#" id="panel_modal-backURL" name="backURL"/>
+<input type="hidden" value="{login-serial-md5}" id="panel_modal-Challenge" name="Challenge"/>
+<input type="hidden" name="Submit" value="Submit">
+<noscript><div class="g-cl"></div><div class="error"><b>Пожалуйста, включите JavaScript для успешного использования<br/>почты ukr.net.</b></div><div class="g-cl"></div></noscript>
+<div class="row"><div class="t">Логин:</div><input class="txt" type="text" name="Login" id="panel_modal-Login" /><div class="b">@ukr.net</div></div>
+<div class="row"><div class="t">Пароль:</div><input class="txt" type="password" maxlength="16" name="Password" id="panel_modal-Password" /><div class="b"><input type="submit" class="login-bt" value="Войти" /></div></div>
+<div class="rem"><input type="checkbox" value="2" id="level2" name="level" /> <label for="level2">Чужой компьютер</label></div>
+</form>
+<div class="bottom-links"><div class="forget"><a rel="nofollow" href="https://mail.ukr.net/q/password_recovery">Забыли пароль?</a></div><div class="reg"><a rel="nofollow" target="_blank" href="https://mail.ukr.net/q/reg">Регистрация</a></div></div>
+<div class="g-cl">&nbsp;</div>
+</div>
+</div>
+</div>
+<div class="wrap-bl"><div class="wrap-br"></div></div>
+</div>
+<!--/noindex-->
+</div><div id="zakl_modals"></div>
+<script type="text/javascript">
+zakl_$('zakl_modals').innerHTML = zakl_html;
+</script>
+<div id="zakl_contextMenu" class="zakl_context_menu contextmenu-folder g-off"></div><!--noindex--><!-- COUNTER -->
+<script language="JavaScript" type="text/javascript">
+//<!--
+d=document;
+n=navigator;var a='';a+='&r='+escape(d.referrer);
+a+='&p='+escape(window.location.href);
+d.cookie="co=1;path=/"; a+="&c="+(d.cookie?'y':'n');
+d.cookie="co=1; expires=Thu, 01-Jan-70 00:00:01 GMT";
+fr=(self!=top)?'y':'n';
+a+='&fr='+fr;
+tz=(new Date()).getTimezoneOffset();
+a+='&tz='+tz;
+a+='&j='+(n.javaEnabled()?'y':'n');
+s=screen;
+a+='&s='+s.width+'*'+s.height;
+a+='&d='+(s.colorDepth?s.colorDepth:s.pixelDepth);
+a+='&js=y';
+d.write('<script src="https://counter.ukr.net/c5/cnt.php?rand='+Math.random()+a+'"><\/script>');
+d.write('<script src="https://counter.ukr.net/aid/portal/cnt.php?rand='+Math.random()+a+'"><\/script>');
+//-->
+</script>
+<noscript>
+<img src="https://counter.ukr.net/c5/cnt.php?js=n" width="1" height="1" border="0"/>
+</noscript>
+<!-- /COUNTER -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-5903420-1']);
+_gaq.push(['_setCustomVar', 1, 'Users', GetCookie('freemail') ? 'Registered':'Unregistered', 1]);
+_gaq.push(['_setCustomVar', 2, 'Gender', GetCookie('g') ? (GetCookie('g')=='0' ? 'm':'f'):'n', 1]);
+_gaq.push(['_setCustomVar', 3, 'Age', GetCookie('a') ? GetCookie('a'):'0', 1]);
+_gaq.push(['_trackPageview']);
+_gaq.push(['_trackPageLoadTime']);(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script><!-- Брендирование/Баннер-небоскреб левый -->
+<script type='text/javascript'>var wd = window.innerWidth; 
+var size; 
+if (wd >= 1340) { 
+size = 0; 
+} else if (wd >= 1280 && wd < 1340) { 
+size = 1; 
+} else { 
+size = 2; 
+}function go(){ 
+} window.addEventListener('resize', go); </script> <div id='div-gpt-ad-1543833870671-0' style='position: fixed; left: 50%; top: 89px; height: 600px; width: 160px; margin-left: -670px; text-align: right;'>
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1543833870671-0'); });
+</script>
+</div>
+</body>
+</html>
